@@ -13,11 +13,11 @@ export default {
     return {
       titleTemplate: 'Contact — %s',
       meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: 'Meta description à venir…'
-        }
+        { hid: 'description', name: 'description', content: '' },
+        { hid: 'og:title', name: 'og:title', content: '' },
+        { hid: 'og:description', name: 'og:description', content: '' },
+        { hid: 'og:image', name: 'og:image', content: '' },
+        { hid: 'og:image:secure_url', name: 'og:image:secure_url', content: '' }
       ]
     }
   }

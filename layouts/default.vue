@@ -16,6 +16,7 @@ export default {
     return {
       link: [
         {
+          hid: 'canonical',
           rel: 'canonical',
           href: `https://www.univerweb.dz${this.$route.path}`
         }
