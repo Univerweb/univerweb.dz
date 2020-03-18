@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <main class="container">
     <div>
       <h1 v-if="error.statusCode === 404">404</h1>
       <h1 v-else>Une erreur s'est produite</h1>
@@ -8,7 +8,7 @@
         <nuxt-link to="/">Retour à la page d'accueil</nuxt-link>
       </p>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>

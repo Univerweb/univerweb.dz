@@ -1,10 +1,10 @@
 <template>
-  <div class="container">
+  <main class="container">
     <div>
       <h1>Prestations</h1>
       <p>Contenu à venir…</p>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
