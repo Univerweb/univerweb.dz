@@ -30,6 +30,16 @@ export default {
 </script>
 
 <style>
+@media (min-width: 576px) {
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1800px) {
+}
 :root {
   --blue: #50c8f0;
   --dark-blue: #28285a;
@@ -69,40 +79,25 @@ body {
 
 main {
   background: var(--white);
+  padding-top: 200px;
 }
 
 .container {
   padding-right: calc(50% - var(--container-width) / 2);
   padding-left: calc(50% - var(--container-width) / 2);
-}
-
-@media (min-width: 576px) {
-}
-
-@media (min-width: 768px) {
-  .container {
-    display: flex;
-    padding-right: calc(50% - var(--container-width) / 2);
-    padding-left: calc(50% - var(--container-width) / 2);
-  }
-
-  .container div {
-    width: 48.5%;
-  }
-}
-
-@media (min-width: 992px) {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 @media (min-width: 1200px) {
   .container {
-    --container-width: 1200px;
+    --container-width: 1000px;
   }
 }
 
 @media (min-width: 1800px) {
   .container {
-    --container-width: 1200px;
+    --container-width: 1600px;
   }
 }
 
@@ -116,12 +111,27 @@ main {
 h1,
 .h1 {
   font-family: Objectivity;
-  font-size: 84px;
+  font-size: 48px;
   font-weight: 800;
-  line-height: 1;
+  line-height: 52px;
   letter-spacing: -0.05em;
   word-spacing: -0.05em;
-  margin: 0;
+  margin-top: 0;
+}
+
+@media (min-width: 1200px) {
+  .h1,
+  h1 {
+    font-size: 60px;
+    line-height: 64px;
+  }
+}
+@media (min-width: 1800px) {
+  .h1,
+  h1 {
+    font-size: 84px;
+    line-height: 88px;
+  }
 }
 
 h2,
@@ -129,9 +139,31 @@ h2,
   font-family: Objectivity;
   font-size: 36px;
   line-height: 42px;
-  letter-spacing: -0.05em;
-  word-spacing: -0.05em;
   margin-top: 0;
+}
+
+a {
+  color: var(--dark);
+  text-decoration: none;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+a.btn {
+  display: inline-block;
+  background: var(--dark-blue);
+  color: var(--blue);
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  width: fit-content;
+  height: 55px;
+  padding: 15px 30px;
+}
+
+a.btn:hover {
+  background: var(--blue);
+  color: var(--dark-blue);
 }
 
 p {
@@ -143,6 +175,10 @@ p:last-child {
   margin-bottom: 0;
 }
 
+.bold {
+  font-weight: 500;
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
@@ -152,7 +188,17 @@ p:last-child {
   word-wrap: normal;
 }
 
-.bold {
-  font-weight: 500;
+.grid {
+  display: grid;
+  grid-column-gap: 15px;
+}
+
+@media (min-width: 768px) {
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 </style>

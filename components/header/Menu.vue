@@ -17,21 +17,21 @@
         </nuxt-link>
       </li>
     </ul>
-    <nuxt-link to="/contact" class="contact">Contact</nuxt-link>
+    <nuxt-link to="/contact" class="btn">Contact</nuxt-link>
   </nav>
 </template>
 
 <style>
 .menu {
-  display: flex;
-  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr auto;
   align-items: center;
 }
 
 .menu ul {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
   justify-content: space-around;
-  flex-grow: 1;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -54,10 +54,7 @@
   padding: 15px 30px;
 }
 
-.menu a {
-}
-
-.menu a::after {
+.menu li a::after {
   position: absolute;
   display: block;
   content: '';
@@ -67,8 +64,8 @@
   transition: width 0.3s;
 }
 
-.menu a:hover::after,
-.menu a.nuxt-link-active::after {
+.menu li a:hover::after,
+.menu li a.nuxt-link-active::after {
   width: 25%;
 }
 </style>

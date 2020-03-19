@@ -1,9 +1,14 @@
 <template>
-  <main class="container">
-    <div>
-      <h1>UWS4</h1>
-      <p>Contenu à venir…</p>
-    </div>
+  <main>
+    <section class="container hero">
+      <div>
+        <h1>Nous créons des sites web.</h1>
+        <p class="h2">
+          Nous concevons des sites web qui répondent précisément à vos attentes
+          et qui respectent intégralement votre image de marque.
+        </p>
+      </div>
+    </section>
   </main>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header id="header" class="header">
     <Logo />
     <Toggler />
     <Menu />
@@ -16,15 +16,47 @@ export default {
     Logo,
     Toggler,
     Menu
+  },
+  mounted() {
+    this.$nextTick(function() {
+      window.addEventListener('scroll', function() {
+        const header = document.getElementById('header')
+        const headerClasses = header.classList
+        if (document.documentElement.scrollTop >= 1) {
+          if (headerClasses.contains('scrolled') === false) {
+            headerClasses.toggle('scrolled')
+          }
+        } else if (headerClasses.contains('scrolled') === true) {
+          headerClasses.toggle('scrolled')
+        }
+      })
+    })
   }
 }
 </script>
 
 <style>
 header {
-  background: var(--white);
-  display: flex;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: center;
-  padding: 30px;
+
+  background: var(--white);
+  padding: 50px 100px;
+  transition: padding 0.3s;
+}
+
+.header.scrolled {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+header.scrolled:not(.opened-menu) {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 </style>

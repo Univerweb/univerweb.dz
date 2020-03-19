@@ -1,14 +1,19 @@
 <template>
   <main class="container">
     <div>
-      <h1>Contact</h1>
-      <p>Contenu à venir…</p>
+      <h1 class="h2">Contact</h1>
+      <about />
     </div>
   </main>
 </template>
 
 <script>
+import About from '~/components/footer/About.vue'
+
 export default {
+  components: {
+    About
+  },
   head() {
     return {
       titleTemplate: 'Contact — %s',

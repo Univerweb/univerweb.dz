@@ -7,8 +7,6 @@
 <style>
 footer a {
   color: var(--white);
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
 }
 
 footer a:hover {

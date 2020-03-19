@@ -1,13 +1,11 @@
 <template>
-  <main class="container">
-    <div>
+  <main class="container hero error">
+    <section>
       <h1 v-if="error.statusCode === 404">404</h1>
       <h1 v-else>Une erreur s'est produite</h1>
-      <p>Oups… pas de bol.</p>
-      <p>
-        <nuxt-link to="/">Retour à la page d'accueil</nuxt-link>
-      </p>
-    </div>
+      <p class="h2">Oups… pas de bol.</p>
+      <nuxt-link to="/" class="btn">Retour à la page d'accueil</nuxt-link>
+    </section>
   </main>
 </template>
 
@@ -41,3 +39,10 @@ export default {
   }
 }
 </script>
+
+<style>
+.hero.error {
+  justify-content: center;
+  text-align: center;
+}
+</style>

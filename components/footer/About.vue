@@ -15,7 +15,6 @@
 footer .about p {
   font-weight: 600;
   width: 310px;
-  margin: 0 0 30px;
 }
 
 .link {
@@ -28,15 +27,5 @@ footer .about p {
 
 .link:hover {
   color: var(--blue);
-}
-
-.link::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 100%;
-  height: 2px;
-  background-color: currentColor;
 }
 </style>
