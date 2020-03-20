@@ -1,7 +1,7 @@
 <template>
   <main class="container">
     <div>
-      <h1>Prestations</h1>
+      <h1>{{ title }}</h1>
       <p>Contenu à venir…</p>
     </div>
   </main>
@@ -9,15 +9,41 @@
 
 <script>
 export default {
+  data() {
+    return {
+      title: 'Prestations',
+      description: 'Contenu à venir…'
+    }
+  },
   head() {
     return {
-      titleTemplate: 'Prestations — %s',
+      titleTemplate: `${this.title} — %s`,
       meta: [
-        { hid: 'description', name: 'description', content: '' },
-        { hid: 'og:title', name: 'og:title', content: '' },
-        { hid: 'og:description', name: 'og:description', content: '' },
-        { hid: 'og:image', name: 'og:image', content: '' },
-        { hid: 'og:image:secure_url', name: 'og:image:secure_url', content: '' }
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.title
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.description
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: ''
+        },
+        {
+          hid: 'og:image:secure_url',
+          property: 'og:image:secure_url',
+          content: ''
+        }
       ]
     }
   }

@@ -14,15 +14,41 @@
 
 <script>
 export default {
+  data() {
+    return {
+      title: 'Création de sites web',
+      description: 'Contenu à venir…'
+    }
+  },
   head() {
     return {
-      titleTemplate: 'Univerweb — Création de sites web',
+      titleTemplate: `%s — ${this.title}`,
       meta: [
-        { hid: 'description', name: 'description', content: '' },
-        { hid: 'og:title', name: 'og:title', content: '' },
-        { hid: 'og:description', name: 'og:description', content: '' },
-        { hid: 'og:image', name: 'og:image', content: '' },
-        { hid: 'og:image:secure_url', name: 'og:image:secure_url', content: '' }
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.title
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.description
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: ''
+        },
+        {
+          hid: 'og:image:secure_url',
+          property: 'og:image:secure_url',
+          content: ''
+        }
       ]
     }
   }

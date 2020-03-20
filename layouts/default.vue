@@ -17,6 +17,13 @@ export default {
   },
   head() {
     return {
+      meta: [
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: `https://www.univerweb.dz${this.$route.path}`
+        }
+      ],
       link: [
         {
           hid: 'canonical',
@@ -79,7 +86,7 @@ body {
 
 main {
   background: var(--white);
-  padding-top: 200px;
+  margin-top: 155px;
 }
 
 .container {

@@ -1,3 +1,5 @@
+const pkg = require('./package')
+
 export default {
   mode: 'universal',
   /*
@@ -5,9 +7,9 @@ export default {
    */
   pwa: {
     manifest: {
-      name: process.env.npm_package_name || '',
-      short_name: process.env.npm_package_name || '',
-      description: process.env.npm_package_description || '',
+      name: pkg.author,
+      short_name: pkg.author,
+      description: pkg.description,
       icons: [
         {
           src: '/android-chrome-192x192.png',
@@ -32,34 +34,23 @@ export default {
    */
   head: {
     htmlAttrs: { lang: 'fr' },
-    title: process.env.npm_package_name || '',
+    title: pkg.author,
     meta: [
       { charset: 'utf-8' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: pkg.description
       },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'msapplication-TileColor', content: '#50c8f0' },
       { name: 'theme-color', content: '#50c8f0' },
-      { name: 'og:locale', content: 'fr_DZ' },
-      { name: 'og:type', content: 'website' },
-      {
-        hid: 'og:title',
-        name: 'og:title',
-        content: 'Meta description à venir…'
-      },
-      {
-        hid: 'og:description',
-        name: 'og:description',
-        content: process.env.npm_package_description || ''
-      },
-      { name: 'og:site_name', content: process.env.npm_package_name || '' },
-      { hid: 'og:image', name: 'og:image', content: '' },
-      { hid: 'og:image:secure_url', name: 'og:image:secure_url', content: '' },
-      { name: 'og:image:width', content: '' },
-      { name: 'og:image:height', content: '' }
+      { property: 'og:locale', content: 'fr_DZ' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:site_name', content: pkg.author },
+      { hid: 'og:image', property: 'og:image', content: '' },
+      { property: 'og:image:width', content: '' },
+      { property: 'og:image:height', content: '' }
     ],
     link: [
       {
@@ -79,7 +70,11 @@ export default {
         sizes: '16x16',
         href: '/favicon-16x16.png'
       },
-      { rel: 'mask-icon', type: '/safari-pinned-tab.svg', color: '#50c8f0' }
+      {
+        rel: 'mask-icon',
+        type: '/safari-pinned-tab.svg',
+        color: '#50c8f0'
+      }
     ]
   },
   /*
