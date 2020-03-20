@@ -1,5 +1,5 @@
 <template>
-  <a href="https://goo.gl/maps/MmadgQgZRBv" target="_blank" rel="nofollow">
+  <a href="https://goo.gl/maps/MmadgQgZRBv" target="_blank" rel="noopener">
     Obtenir un itinéraire
   </a>
 </template>

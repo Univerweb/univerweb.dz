@@ -52,6 +52,7 @@ export default {
   --dark-blue: #28285a;
   --dark: #111111;
   --light: #fafafa;
+  --dark-light: #f2f2f2;
   --white: #fff;
   --container-padding: 15px;
   --container-width: calc(100% - var(--container-padding) * 2);
@@ -152,13 +153,24 @@ h2,
 a {
   color: var(--dark);
   text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  border: 0;
+  cursor: pointer;
+}
+
+a,
+button {
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-a.btn {
+.btn {
   display: inline-block;
   background: var(--dark-blue);
-  color: var(--blue);
+  color: var(--blue) !important;
   font-weight: 600;
   line-height: 25px;
   letter-spacing: -0.02em;
@@ -166,11 +178,14 @@ a.btn {
   width: fit-content;
   height: 55px;
   padding: 15px 30px;
+  font-family: inherit;
+  font-size: inherit;
+  border: 0;
 }
 
-a.btn:hover {
+.btn:hover {
   background: var(--blue);
-  color: var(--dark-blue);
+  color: var(--dark-blue) !important;
 }
 
 p {
@@ -197,15 +212,19 @@ p:last-child {
 
 .grid {
   display: grid;
-  grid-column-gap: 15px;
+  grid-column-gap: 45px;
+  justify-content: space-between;
 }
 
 @media (min-width: 768px) {
   .grid-2 {
     grid-template-columns: repeat(2, 1fr);
   }
+  .grid-3 {
+    grid-template-columns: repeat(3, auto);
+  }
   .grid-4 {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, auto);
   }
 }
 </style>
