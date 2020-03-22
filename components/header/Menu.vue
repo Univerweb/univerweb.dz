@@ -24,17 +24,36 @@
 <style>
 .menu {
   display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
+  grid-template-columns: auto;
+  grid-row-gap: 45px;
+  justify-content: space-around;
+}
+
+a.toggler.nuxt-link-active ~ .menu {
+  background: red;
+}
+
+@media (min-width: 992px) {
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
 }
 
 .menu ul {
   display: grid;
-  grid-template-columns: repeat(3, auto);
-  justify-content: space-around;
+  grid-row-gap: 20px;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+@media (min-width: 992px) {
+  .menu ul {
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-around;
+  }
 }
 
 .menu a {
@@ -44,6 +63,7 @@
   font-weight: 600;
   line-height: 25px;
   letter-spacing: -0.02em;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
 }
