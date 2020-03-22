@@ -1,9 +1,7 @@
 <template>
   <main class="container">
-    <div>
-      <h1>{{ title }}</h1>
-      <p>Contenu à venir…</p>
-    </div>
+    <h1>{{ title }}</h1>
+    <p>Contenu à venir…</p>
   </main>
 </template>
 
