@@ -131,7 +131,7 @@ textarea {
   display: grid;
   width: 100%;
   height: 45px;
-  background-color: var(--dark-light);
+  background-color: var(--light);
   font-family: inherit;
   color: var(--dark);
   font-size: 10px;
@@ -154,6 +154,6 @@ textarea {
 
 input:focus,
 textarea:focus {
-  border-color: var(--dark);
+  border-color: var(--blue);
 }
 </style>
