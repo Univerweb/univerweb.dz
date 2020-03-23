@@ -80,14 +80,13 @@ body {
 }
 
 .wrapper {
-  background: var(--dark-blue);
+  display: grid;
   min-height: 100vh;
   height: 100%;
 }
 
 main {
-  background: var(--white);
-  margin-top: 155px;
+  margin-top: 115px;
 }
 
 .container {
@@ -171,7 +170,7 @@ button {
   display: inline-block;
   background: var(--dark-blue);
   color: var(--blue) !important;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 25px;
   letter-spacing: -0.02em;
   text-transform: uppercase;
@@ -212,7 +211,7 @@ p:last-child {
 
 .grid {
   display: grid;
-  grid-column-gap: 45px;
+  column-gap: 45px;
   justify-content: space-between;
 }
 
@@ -220,11 +219,17 @@ p:last-child {
   .grid-2 {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+@media (min-width: 992px) {
   .grid-3 {
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, 1fr);
   }
+}
+
+@media (min-width: 1200px) {
   .grid-4 {
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 </style>

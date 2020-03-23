@@ -54,7 +54,7 @@
 footer ul {
   display: grid;
   grid-template-columns: repeat(3, auto);
-  grid-column-gap: 15px;
+  column-gap: 15px;
   justify-content: start;
   margin: 0;
   padding: 0;

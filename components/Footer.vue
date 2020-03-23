@@ -34,8 +34,7 @@ export default {
 <style>
 footer {
   display: grid;
-  grid-column-gap: 15px;
-  grid-row-gap: 45px;
+  gap: 45px 15px;
   background: var(--dark-blue);
   color: var(--light);
   padding: 120px 15px;
