@@ -70,20 +70,15 @@
   grid-template-columns: min-content;
   row-gap: 30px;
   margin: 0;
-  padding: 0;
+  padding: 45px 0 0;
   list-style: none;
-}
-
-@media (max-width: 1024px) {
-  .menu ul {
-    padding-top: 45px;
-  }
 }
 
 @media (min-width: 1024px) {
   .menu ul {
     grid-template-columns: repeat(3, auto);
     justify-content: space-around;
+    padding: 0;
   }
 }
 
@@ -91,6 +86,7 @@
   position: relative;
   display: block;
   color: var(--dark);
+  font-size: 24px;
   font-weight: 500;
   line-height: 25px;
   letter-spacing: -0.02em;
@@ -98,14 +94,9 @@
   text-transform: uppercase;
 }
 
-@media (max-width: 1024px) {
-  .menu li a {
-    font-size: 24px;
-  }
-}
-
 @media (min-width: 1024px) {
   .menu a {
+    font-size: inherit;
     text-align: center;
   }
 }
@@ -129,12 +120,29 @@
   width: 25%;
 }
 
-@media (max-width: 1024px) {
+.menu .btn {
+  font-size: initial;
+  height: 25px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+@media (min-width: 1024px) {
   .menu .btn {
-    text-align: center;
-    height: 25px;
-    margin: 0 auto;
-    padding: 0;
+    height: 55px;
+    padding: 15px 30px;
+  }
+}
+
+.menu .btn:hover {
+  background: var(--dark-blue);
+  color: var(--blue) !important;
+}
+
+@media (min-width: 1024px) {
+  .menu .btn:hover {
+    background: var(--blue);
+    color: var(--dark-blue) !important;
   }
 }
 </style>
