@@ -2,7 +2,7 @@
   <header
     id="header"
     class="scrolled"
-    :class="$store.state.open ? 'menu--opened' : 'menu--closed'"
+    :class="$store.state.open & isMobile ? 'menu--opened' : 'menu--closed'"
   >
     <Logo />
     <Toggler />
@@ -20,23 +20,38 @@ export default {
     Logo,
     Toggler,
     Menu
-  }
+  },
 
-  // mounted() {
-  //   this.$nextTick(function() {
-  //     window.addEventListener('scroll', function() {
-  //       const headerScrolled = document.getElementById('header')
-  //       const headerClasses = headerScrolled.classList
-  //       if (document.documentElement.scrollTop >= 1) {
-  //         if (headerClasses.contains('scrolled') === false) {
-  //           headerClasses.toggle('scrolled')
-  //         }
-  //       } else if (headerClasses.contains('scrolled') === true) {
-  //         headerClasses.toggle('scrolled')
-  //       }
-  //     })
-  //   })
-  // }
+  data() {
+    return {
+      windowWidth: ''
+    }
+  },
+  mounted() {
+    window.addEventListener('resize', () => {
+      this.windowWidth = window.innerWidth
+    })
+
+    // Code ringard pour le redimensionnement du padding à scrollTop = 0
+    this.$nextTick(function() {
+      window.addEventListener('scroll', function() {
+        const headerScrolled = document.getElementById('header')
+        const headerClasses = headerScrolled.classList
+        if (document.documentElement.scrollTop >= 1) {
+          if (headerClasses.contains('scrolled') === false) {
+            headerClasses.toggle('scrolled')
+          }
+        } else if (headerClasses.contains('scrolled') === true) {
+          headerClasses.toggle('scrolled')
+        }
+      })
+    })
+  },
+  computed: {
+    isMobile() {
+      return this.windowWidth < 1024
+    }
+  }
 }
 </script>
 

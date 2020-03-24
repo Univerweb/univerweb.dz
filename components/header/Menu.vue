@@ -33,7 +33,6 @@
 <style>
 .menu {
   display: grid;
-
   position: fixed;
   top: 0;
   left: 0;
