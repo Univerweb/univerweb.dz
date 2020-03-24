@@ -22,12 +22,6 @@ export default {
     Menu
   }
 
-  // data() {
-  //   return {
-  //     open: false
-  //   }
-  // }
-
   // mounted() {
   //   this.$nextTick(function() {
   //     window.addEventListener('scroll', function() {
@@ -55,6 +49,7 @@ header {
   display: grid;
   grid-template-columns: auto auto;
   justify-content: space-between;
+  align-items: center;
   background: var(--white);
   padding: 45px 15px;
   transition: padding 0.3s;
@@ -64,7 +59,6 @@ header {
 @media (min-width: 1024px) {
   header {
     grid-template-columns: auto 1fr;
-    align-items: center;
     padding: 45px 135px;
   }
 }
@@ -73,20 +67,5 @@ header {
   padding-top: 10px;
   padding-bottom: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.toggler.btn {
-  height: 25px;
-  padding: 0 10px;
-  font-size: 13px;
-}
-
-@media (min-width: 1024px) {
-  .toggler.btn {
-    display: none;
-  }
-  .toggler.btn:hover {
-    background: var(--dark-blue);
-  }
 }
 </style>

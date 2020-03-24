@@ -12,8 +12,19 @@
 <script></script>
 
 <style>
-@media (min-width: 992px) {
-  .toggler {
+.toggler.btn {
+  height: 25px;
+  margin: 15px 0;
+  padding: 0 10px;
+  font-size: 13px;
+}
+
+.menu--opened .toggler {
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .toggler.btn {
     display: none;
   }
 }
