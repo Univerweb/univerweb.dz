@@ -1,5 +1,10 @@
 <template>
-  <nuxt-link to="/" title="Retour à l’accueil" class="logo">
+  <nuxt-link
+    to="/"
+    title="Retour à l’accueil"
+    class="logo"
+    @click.native="$store.commit('increment')"
+  >
     <svg
       xmlns="http://www.w3.org/2000/svg"
       role="img"
@@ -57,5 +62,13 @@
 .logo svg {
   display: block;
   height: 25px;
+}
+
+.logo svg g:first-child {
+  transition: fill 0.3s;
+}
+
+.menu--opened .logo svg g:first-child {
+  fill: #fff;
 }
 </style>

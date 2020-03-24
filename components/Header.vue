@@ -1,5 +1,9 @@
 <template>
-  <header id="header" class="header">
+  <header
+    id="header"
+    class="scrolled"
+    :class="$store.state.open ? 'menu--opened' : 'menu--closed'"
+  >
     <Logo />
     <Toggler />
     <Menu />
@@ -16,22 +20,29 @@ export default {
     Logo,
     Toggler,
     Menu
-  },
-  mounted() {
-    this.$nextTick(function() {
-      window.addEventListener('scroll', function() {
-        const headerScrolled = document.getElementById('header')
-        const headerClasses = headerScrolled.classList
-        if (document.documentElement.scrollTop >= 1) {
-          if (headerClasses.contains('scrolled') === false) {
-            headerClasses.toggle('scrolled')
-          }
-        } else if (headerClasses.contains('scrolled') === true) {
-          headerClasses.toggle('scrolled')
-        }
-      })
-    })
   }
+
+  // data() {
+  //   return {
+  //     open: false
+  //   }
+  // }
+
+  // mounted() {
+  //   this.$nextTick(function() {
+  //     window.addEventListener('scroll', function() {
+  //       const headerScrolled = document.getElementById('header')
+  //       const headerClasses = headerScrolled.classList
+  //       if (document.documentElement.scrollTop >= 1) {
+  //         if (headerClasses.contains('scrolled') === false) {
+  //           headerClasses.toggle('scrolled')
+  //         }
+  //       } else if (headerClasses.contains('scrolled') === true) {
+  //         headerClasses.toggle('scrolled')
+  //       }
+  //     })
+  //   })
+  // }
 }
 </script>
 
@@ -42,30 +53,40 @@ header {
   top: 0;
   left: 0;
   display: grid;
-  grid-row-gap: 45px;
-  justify-content: space-around;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
   background: var(--white);
-  padding: 50px 15px;
+  padding: 45px 15px;
   transition: padding 0.3s;
-  /* height: 100vh;
-  z-index: 1; */
+  z-index: 1;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   header {
     grid-template-columns: auto 1fr;
     align-items: center;
-    padding: 50px 100px;
-    /* height: initial; */
+    padding: 45px 135px;
   }
+}
 
-  .header.scrolled {
-    padding-top: 10px;
-    padding-bottom: 10px;
+.menu--closed.scrolled {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.toggler.btn {
+  height: 25px;
+  padding: 0 10px;
+  font-size: 13px;
+}
+
+@media (min-width: 1024px) {
+  .toggler.btn {
+    display: none;
   }
-
-  header.scrolled:not(.opened-menu) {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  .toggler.btn:hover {
+    background: var(--dark-blue);
   }
 }
 </style>
