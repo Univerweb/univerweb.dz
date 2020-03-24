@@ -40,7 +40,7 @@ footer {
   padding: 45px 15px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   footer {
     grid-template-columns: repeat(2, auto);
     justify-content: space-between;
@@ -48,13 +48,13 @@ footer {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   footer {
     padding: 180px 270px;
   }
 }
 
-@media (min-width: 1800px) {
+@media (min-width: 1920px) {
   footer {
     grid-template-columns: repeat(4, auto);
   }

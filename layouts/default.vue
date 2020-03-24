@@ -37,16 +37,6 @@ export default {
 </script>
 
 <style>
-@media (min-width: 576px) {
-}
-@media (min-width: 768px) {
-}
-@media (min-width: 992px) {
-}
-@media (min-width: 1200px) {
-}
-@media (min-width: 1800px) {
-}
 :root {
   --blue: #50c8f0;
   --dark-blue: #28285a;
@@ -89,6 +79,16 @@ main {
   margin-top: 115px;
 }
 
+/* 
+
+xs	<768px
+sm	≥768px
+md	≥1024px
+lg	≥1440px
+xl	≥1920px
+
+*/
+
 .container {
   padding-right: calc(50% - var(--container-width) / 2);
   padding-left: calc(50% - var(--container-width) / 2);
@@ -96,15 +96,27 @@ main {
   padding-bottom: 100px;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .container {
-    --container-width: 1000px;
+    --container-width: 738px;
   }
 }
 
-@media (min-width: 1800px) {
+@media (min-width: 1024px) {
   .container {
-    --container-width: 1600px;
+    --container-width: 934px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    --container-width: 1040px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    --container-width: 1220px;
   }
 }
 
@@ -126,14 +138,14 @@ h1,
   margin-top: 0;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   .h1,
   h1 {
     font-size: 60px;
     line-height: 64px;
   }
 }
-@media (min-width: 1800px) {
+@media (min-width: 1920px) {
   .h1,
   h1 {
     font-size: 84px;
@@ -221,13 +233,13 @@ p:last-child {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   .grid-3 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   .grid-4 {
     grid-template-columns: repeat(4, 1fr);
   }
