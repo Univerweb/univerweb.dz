@@ -15,6 +15,7 @@
 footer .about p {
   font-weight: 600;
   width: 310px;
+  margin-top: 0;
 }
 
 .link {

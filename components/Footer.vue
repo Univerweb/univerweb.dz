@@ -34,30 +34,29 @@ export default {
 <style>
 footer {
   display: grid;
-  gap: 45px 15px;
+  gap: 45px;
   background: var(--dark-blue);
   color: var(--light);
-  padding: 120px 15px;
+  padding: 45px 15px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   footer {
-    padding: 120px 60px;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2, auto);
     justify-content: space-between;
+    padding: 135px 135px;
   }
 }
 
 @media (min-width: 1200px) {
   footer {
-    padding: 120px;
-    grid-template-columns: auto auto auto;
+    padding: 180px 270px;
   }
 }
 
 @media (min-width: 1800px) {
   footer {
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(4, auto);
   }
 }
 </style>
