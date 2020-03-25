@@ -27,6 +27,13 @@ export default {
       windowWidth: ''
     }
   },
+
+  computed: {
+    isMobile() {
+      return this.windowWidth < 1024
+    }
+  },
+
   mounted() {
     window.addEventListener('resize', () => {
       this.windowWidth = window.innerWidth
@@ -46,11 +53,6 @@ export default {
         }
       })
     })
-  },
-  computed: {
-    isMobile() {
-      return this.windowWidth < 1024
-    }
   }
 }
 </script>
