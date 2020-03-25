@@ -122,7 +122,7 @@ xl	≥1920px
 
 .hero {
   min-height: calc(100vh - 115px);
-  flex-wrap: wrap;
+  display: grid;
   align-content: center;
   justify-content: space-between;
 }
