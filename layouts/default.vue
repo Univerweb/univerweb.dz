@@ -76,7 +76,7 @@ body {
 }
 
 main {
-  margin-top: 115px;
+  margin-top: 145px;
 }
 
 /* 
