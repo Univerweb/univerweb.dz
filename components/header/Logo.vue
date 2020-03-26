@@ -68,7 +68,7 @@
   transition: fill 0.3s;
 }
 
-.menu--opened .logo svg g:first-child {
+.opened .logo svg g:first-child {
   fill: #fff;
 }
 </style>

@@ -2,7 +2,7 @@
   <header
     class="header"
     :class="{
-      'menu--opened': $store.state.open && isMobile === true
+      opened: $store.state.open && isMobile === true
     }"
   >
     <Logo />
@@ -69,7 +69,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background: var(--white);
-  padding: 45px 15px;
+  padding: 15px;
   transition: padding 0.3s;
   z-index: 1;
 }
@@ -81,9 +81,13 @@ header {
   }
 }
 
-.menu--closed.scrolled {
-  padding-top: 10px;
-  padding-bottom: 10px;
+.scrolled:not(.opened) {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1024px) {
+  .scrolled {
+    padding: 15px 135px;
+  }
 }
 </style>

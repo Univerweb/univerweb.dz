@@ -39,7 +39,7 @@
   transition: opacity 0.3s;
 }
 
-.menu--opened .menu {
+.opened .menu {
   background: var(--dark-blue);
   opacity: 1;
   pointer-events: auto;
@@ -93,7 +93,7 @@
   }
 }
 
-.menu--opened .menu a {
+.opened .menu a {
   color: var(--white);
 }
 
