@@ -1,7 +1,6 @@
 <template>
   <header
-    id="header"
-    class="scrolled"
+    class="header"
     :class="$store.state.open & isMobile ? 'menu--opened' : 'menu--closed'"
   >
     <Logo />
@@ -42,7 +41,7 @@ export default {
     // Code ringard pour le redimensionnement du padding à scrollTop = 0
     this.$nextTick(function() {
       window.addEventListener('scroll', function() {
-        const headerScrolled = document.getElementById('header')
+        const headerScrolled = document.querySelector('header')
         const headerClasses = headerScrolled.classList
         if (document.documentElement.scrollTop >= 1) {
           if (headerClasses.contains('scrolled') === false) {
