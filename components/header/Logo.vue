@@ -3,7 +3,7 @@
     to="/"
     title="Retour à l’accueil"
     class="logo"
-    @click.native="$store.commit('increment')"
+    @click.native="$store.commit('close')"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"

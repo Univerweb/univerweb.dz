@@ -1,7 +1,9 @@
 <template>
   <header
     class="header"
-    :class="$store.state.open & isMobile ? 'menu--opened' : 'menu--closed'"
+    :class="{
+      'menu--opened': $store.state.open && isMobile === true
+    }"
   >
     <Logo />
     <Toggler />
@@ -23,7 +25,7 @@ export default {
 
   data() {
     return {
-      windowWidth: ''
+      windowWidth: null
     }
   },
 

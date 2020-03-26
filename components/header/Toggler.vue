@@ -3,7 +3,7 @@
     type="button"
     aria-label="Ouvrir le menu"
     class="toggler btn"
-    @click="$store.commit('increment')"
+    @click.prevent="$store.commit('open')"
   >
     Menu
   </button>

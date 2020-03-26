@@ -2,29 +2,22 @@
   <nav class="menu">
     <ul>
       <li>
-        <nuxt-link
-          to="/realisations"
-          @click.native="$store.commit('increment')"
-        >
+        <nuxt-link to="/realisations" @click.native="$store.commit('close')">
           Réalisations
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/prestations" @click.native="$store.commit('increment')">
+        <nuxt-link to="/prestations" @click.native="$store.commit('close')">
           Prestations
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/agence" @click.native="$store.commit('increment')">
+        <nuxt-link to="/agence" @click.native="$store.commit('close')">
           L'agence
         </nuxt-link>
       </li>
     </ul>
-    <nuxt-link
-      to="/contact"
-      class="btn"
-      @click.native="$store.commit('increment')"
-    >
+    <nuxt-link to="/contact" class="btn" @click.native="$store.commit('close')">
       Contact
     </nuxt-link>
   </nav>
