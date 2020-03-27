@@ -1,4 +1,4 @@
-const pkg = require('./package')
+import pkg from './package'
 
 export default {
   mode: 'universal',
@@ -72,7 +72,7 @@ export default {
       },
       {
         rel: 'mask-icon',
-        type: '/safari-pinned-tab.svg',
+        href: '/safari-pinned-tab.svg',
         color: '#50c8f0'
       }
     ]
