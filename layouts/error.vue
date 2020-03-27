@@ -1,5 +1,5 @@
 <template>
-  <main class="container hero error">
+  <main id="main" class="container hero error">
     <section>
       <h1 v-if="error.statusCode === 404">{{ title }}</h1>
       <h1 v-else>Une erreur s'est produite</h1>

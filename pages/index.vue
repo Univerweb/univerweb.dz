@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main id="main">
     <section class="container hero">
       <div>
         <h1>Nous créons des sites web.</h1>

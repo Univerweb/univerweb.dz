@@ -1,14 +1,4 @@
 <template>
-  <!-- <div> -->
-  <!-- <button
-      type="button"
-      aria-label="Ouvrir le menu"
-      class="toggler btn"
-      @click.prevent="$store.commit('open')"
-    >
-      Menu
-    </button> -->
-
   <button
     type="button"
     aria-label="Ouvrir le menu"
@@ -17,19 +7,17 @@
   >
     <span class="toggler-icon"></span>
   </button>
-  <!-- </div> -->
 </template>
-
-<script></script>
 
 <style>
 .toggler {
   background: transparent;
-  width: 25px;
-  height: 25px;
+  width: 45px;
+  height: 45px;
   margin: 0;
-  padding: 0;
+  padding: 10px;
   text-align: left;
+  outline: none;
 }
 
 @media (min-width: 1024px) {
@@ -39,17 +27,16 @@
 }
 
 .toggler:focus {
-  outline: none;
+  background: var(--dark-blue);
+}
+
+.opened .toggler:focus {
+  background: var(--blue);
 }
 
 .toggler-icon {
   display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
   vertical-align: middle;
-  content: '';
-  background: no-repeat center center;
-  background-size: 100% 100%;
 }
 
 .toggler-icon,
@@ -65,6 +52,12 @@
 .toggler-icon:after {
   content: '';
   display: block;
+}
+
+.opened .toggler:focus .toggler-icon,
+.opened .toggler:focus .toggler-icon:before,
+.opened .toggler:focus .toggler-icon:after {
+  background: var(--dark-blue);
 }
 
 @keyframes CollapseCenter {
@@ -137,7 +130,7 @@
   }
 }
 
-.opened .toggler .toggler-icon:before {
+.opened .toggler-icon:before {
   animation: CollapseShowBefore 0.5s forwards;
 }
 
@@ -189,7 +182,7 @@
   }
 }
 
-.opened .toggler .toggler-icon:after {
+.opened .toggler-icon:after {
   animation: CollapseShowAfter 0.5s forwards;
 }
 </style>

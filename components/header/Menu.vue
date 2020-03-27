@@ -25,7 +25,7 @@
 
 <style>
 .menu {
-  display: grid;
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -40,6 +40,7 @@
 }
 
 .opened .menu {
+  display: grid;
   background: var(--dark-blue);
   opacity: 1;
   pointer-events: auto;
@@ -47,6 +48,7 @@
 
 @media (min-width: 1024px) {
   .menu {
+    display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
     position: initial;
@@ -82,7 +84,6 @@
   font-weight: 500;
   line-height: 25px;
   letter-spacing: -0.02em;
-  text-decoration: none;
   text-transform: uppercase;
 }
 

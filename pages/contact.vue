@@ -1,5 +1,5 @@
 <template>
-  <main class="container">
+  <main id="main" class="container">
     <div class="grid grid-2">
       <div>
         <h1 class="h2">{{ title }}</h1>

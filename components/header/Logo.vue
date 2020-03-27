@@ -1,10 +1,11 @@
 <template>
   <nuxt-link
     to="/"
-    title="Retour à l’accueil"
+    title="Accueil"
     class="logo"
     @click.native="$store.commit('close')"
   >
+    <span class="visually-hidden">Accueil</span>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       role="img"
@@ -69,6 +70,6 @@
 }
 
 .opened .logo svg g:first-child {
-  fill: #fff;
+  fill: var(--white);
 }
 </style>

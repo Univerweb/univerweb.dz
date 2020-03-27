@@ -1,5 +1,5 @@
 <template>
-  <main class="container">
+  <main id="main" class="container">
     <h1>{{ title }}</h1>
     <p>Contenu à venir…</p>
   </main>

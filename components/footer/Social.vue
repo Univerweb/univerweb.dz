@@ -5,8 +5,8 @@
         <span class="visually-hidden">Rejoignez-nous sur Twitter</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
           role="img"
+          aria-hidden="true"
           viewBox="0 0 512 512"
         >
           <path
@@ -20,8 +20,8 @@
         <span class="visually-hidden">Rejoignez-nous sur Facebook</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
           role="img"
+          aria-hidden="true"
           viewBox="0 0 512 512"
         >
           <path
@@ -37,8 +37,8 @@
         <span class="visually-hidden">Rejoignez-nous sur GitHub</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
           role="img"
+          aria-hidden="true"
           viewBox="0 0 512 512"
         >
           <path
@@ -62,8 +62,7 @@ footer ul {
 }
 
 footer ul a {
-  display: block;
-  height: 20px;
+  display: grid;
 }
 
 footer svg {

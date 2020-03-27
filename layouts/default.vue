@@ -1,5 +1,6 @@
 <template>
   <div class="wrapper">
+    <SkipLinks />
     <UWSHeader />
     <nuxt />
     <UWSFooter />
@@ -7,11 +8,13 @@
 </template>
 
 <script>
+import SkipLinks from '~/components/SkipLinks.vue'
 import UWSHeader from '~/components/Header.vue'
 import UWSFooter from '~/components/Footer.vue'
 
 export default {
   components: {
+    SkipLinks,
     UWSHeader,
     UWSFooter
   },
