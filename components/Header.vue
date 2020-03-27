@@ -3,7 +3,7 @@
     id="header"
     class="header"
     :class="{
-      opened: $store.state.open && isMobile === true
+      opened: $store.state.isOpen && isMobile === true
     }"
   >
     <Logo />

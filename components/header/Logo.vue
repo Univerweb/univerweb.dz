@@ -1,10 +1,5 @@
 <template>
-  <nuxt-link
-    to="/"
-    title="Accueil"
-    class="logo"
-    @click.native="$store.commit('close')"
-  >
+  <nuxt-link to="/" title="Accueil" class="logo" @click.native="close">
     <span class="visually-hidden">Accueil</span>
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -58,6 +53,14 @@
     </svg>
   </nuxt-link>
 </template>
+
+<script>
+import { mapActions } from 'vuex'
+
+export default {
+  methods: mapActions(['close'])
+}
+</script>
 
 <style>
 .logo svg {

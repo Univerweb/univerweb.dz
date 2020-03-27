@@ -3,11 +3,19 @@
     type="button"
     aria-label="Ouvrir le menu"
     class="toggler"
-    @click.prevent="$store.commit('open')"
+    @click.prevent="open"
   >
     <span class="toggler-icon"></span>
   </button>
 </template>
+
+<script>
+import { mapActions } from 'vuex'
+
+export default {
+  methods: mapActions(['open'])
+}
+</script>
 
 <style>
 .toggler {

@@ -2,26 +2,34 @@
   <nav class="menu">
     <ul>
       <li>
-        <nuxt-link to="/realisations" @click.native="$store.commit('close')">
+        <nuxt-link to="/realisations" @click.native="close">
           Réalisations
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/prestations" @click.native="$store.commit('close')">
+        <nuxt-link to="/prestations" @click.native="close">
           Prestations
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/agence" @click.native="$store.commit('close')">
+        <nuxt-link to="/agence" @click.native="close">
           L'agence
         </nuxt-link>
       </li>
     </ul>
-    <nuxt-link to="/contact" class="btn" @click.native="$store.commit('close')">
+    <nuxt-link to="/contact" class="btn" @click.native="close">
       Contact
     </nuxt-link>
   </nav>
 </template>
+
+<script>
+import { mapActions } from 'vuex'
+
+export default {
+  methods: mapActions(['close'])
+}
+</script>
 
 <style>
 .menu {
