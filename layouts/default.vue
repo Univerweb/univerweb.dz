@@ -18,6 +18,15 @@ export default {
     UWSHeader,
     UWSFooter
   },
+
+  mounted() {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+
+      setTimeout(() => this.$nuxt.$loading.finish(), 500)
+    })
+  },
+
   head() {
     return {
       meta: [
@@ -91,14 +100,12 @@ main {
   margin-top: 145px;
 }
 
-/* 
-
+/*
 xs	<768px
 sm	≥768px
 md	≥1024px
 lg	≥1440px
 xl	≥1920px
-
 */
 
 .container {
