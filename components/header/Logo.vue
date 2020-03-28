@@ -68,11 +68,11 @@ export default {
   height: 25px;
 }
 
-.logo svg g:first-child {
+.logo svg g:last-child {
   transition: fill 0.3s;
 }
 
-.opened .logo svg g:first-child {
+.opened .logo svg g:last-child {
   fill: var(--white);
 }
 </style>
