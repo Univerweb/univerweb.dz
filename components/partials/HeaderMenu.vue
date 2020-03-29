@@ -3,22 +3,22 @@
     <ul>
       <li>
         <nuxt-link to="/realisations" @click.native="close">
-          Réalisations
+          {{ realisations }}
         </nuxt-link>
       </li>
       <li>
         <nuxt-link to="/prestations" @click.native="close">
-          Prestations
+          {{ prestations }}
         </nuxt-link>
       </li>
       <li>
         <nuxt-link to="/agence" @click.native="close">
-          L'agence
+          {{ agence }}
         </nuxt-link>
       </li>
     </ul>
     <nuxt-link to="/contact" class="btn" @click.native="close">
-      Contact
+      {{ contact }}
     </nuxt-link>
   </nav>
 </template>
@@ -27,6 +27,15 @@
 import { mapActions } from 'vuex'
 
 export default {
+  data() {
+    return {
+      realisations: 'Réalisations',
+      prestations: 'Prestations',
+      agence: "L'agence",
+      contact: 'Contact'
+    }
+  },
+
   methods: mapActions(['close'])
 }
 </script>

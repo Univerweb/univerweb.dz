@@ -1,22 +1,22 @@
 <template>
   <div class="wrapper">
-    <SkipLinks />
-    <UWSHeader />
+    <uni-skip-links />
+    <uni-header />
     <nuxt />
-    <UWSFooter />
+    <uni-footer />
   </div>
 </template>
 
 <script>
-import SkipLinks from '~/components/SkipLinks.vue'
-import UWSHeader from '~/components/Header.vue'
-import UWSFooter from '~/components/Footer.vue'
+import uniSkipLinks from '@/components/partials/SkipLinks'
+import uniHeader from '@/components/partials/Header'
+import uniFooter from '@/components/partials/Footer'
 
 export default {
   components: {
-    SkipLinks,
-    UWSHeader,
-    UWSFooter
+    uniSkipLinks,
+    uniHeader,
+    uniFooter
   },
 
   mounted() {

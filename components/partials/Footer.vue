@@ -1,32 +1,32 @@
 <template>
   <footer id="footer">
     <div>
-      <Address />
-      <Maps />
-      <Phone />
+      <uni-address />
+      <uni-maps />
+      <uni-phone />
     </div>
-    <About />
-    <Social />
-    <Copy />
+    <uniAbout />
+    <uniSocial />
+    <uniCopy />
   </footer>
 </template>
 
 <script>
-import Address from '~/components/footer/Address.vue'
-import Maps from '~/components/footer/Maps.vue'
-import Phone from '~/components/footer/Phone.vue'
-import About from '~/components/footer/About.vue'
-import Social from '~/components/footer/Social.vue'
-import Copy from '~/components/footer/Copy.vue'
+import uniAddress from '@/components/partials/FooterAddress'
+import uniMaps from '@/components/partials/FooterMaps'
+import uniPhone from '@/components/partials/FooterPhone'
+import uniAbout from '@/components/partials/FooterAbout'
+import uniSocial from '@/components/partials/FooterSocial'
+import uniCopy from '@/components/partials/FooterCopy'
 
 export default {
   components: {
-    Address,
-    Maps,
-    Phone,
-    About,
-    Social,
-    Copy
+    uniAddress,
+    uniMaps,
+    uniPhone,
+    uniAbout,
+    uniSocial,
+    uniCopy
   }
 }
 </script>

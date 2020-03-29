@@ -1,15 +1,13 @@
 <template>
-  <main id="main">
-    <section class="container hero">
-      <div>
-        <h1>Nous créons des sites web.</h1>
-        <p class="h2">
-          Nous concevons des sites web qui répondent précisément à vos attentes
-          et qui respectent intégralement votre image de marque.
-        </p>
-      </div>
-    </section>
-  </main>
+  <uni-main>
+    <uni-container class="hero">
+      <h1>Nous créons des sites web.</h1>
+      <p class="h2">
+        Nous concevons des sites web qui répondent précisément à vos attentes et
+        qui respectent intégralement votre image de marque.
+      </p>
+    </uni-container>
+  </uni-main>
 </template>
 
 <script>

@@ -1,9 +1,9 @@
 <template>
-  <main id="main" class="container">
-    <div class="grid grid-2">
+  <uni-main>
+    <uni-container class="grid grid-2">
       <div>
         <h1 class="h2">{{ title }}</h1>
-        <about />
+        <uni-about />
       </div>
       <form method="post" action="">
         <label for="fullname" class="visually-hidden">
@@ -49,8 +49,8 @@
         ></textarea>
         <button type="submit" class="btn">Soumettre</button>
       </form>
-    </div>
-    <div class="">
+    </uni-container>
+    <uni-container>
       <h2>Autres moyens de nous contacter</h2>
       <div class="grid grid-3">
         <div class="block">
@@ -72,16 +72,16 @@
           </a>
         </div>
       </div>
-    </div>
-  </main>
+    </uni-container>
+  </uni-main>
 </template>
 
 <script>
-import About from '~/components/footer/About.vue'
+import uniAbout from '@/components/partials/FooterAbout'
 
 export default {
   components: {
-    About
+    uniAbout
   },
   data() {
     return {

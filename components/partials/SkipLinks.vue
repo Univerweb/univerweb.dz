@@ -1,6 +1,6 @@
 <template>
   <div class="skip-links">
-    <nuxt-link to="#header" :class="null">Aller au menu</nuxt-link>
+    <nuxt-link to="#header">Aller au menu</nuxt-link>
     <nuxt-link to="#main">Aller au contenu</nuxt-link>
     <nuxt-link to="#footer">Aller au contact</nuxt-link>
   </div>

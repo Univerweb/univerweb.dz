@@ -6,22 +6,22 @@
       opened: $store.state.isOpen && isMobile === true
     }"
   >
-    <Logo />
-    <Toggler />
-    <Menu />
+    <uniLogo />
+    <uniToggler />
+    <uniMenu />
   </header>
 </template>
 
 <script>
-import Logo from '~/components/header/Logo.vue'
-import Toggler from '~/components/header/Toggler.vue'
-import Menu from '~/components/header/Menu.vue'
+import uniLogo from '@//components/partials/HeaderLogo'
+import uniToggler from '@//components/partials/HeaderToggler'
+import uniMenu from '@//components/partials/HeaderMenu'
 
 export default {
   components: {
-    Logo,
-    Toggler,
-    Menu
+    uniLogo,
+    uniToggler,
+    uniMenu
   },
 
   data() {

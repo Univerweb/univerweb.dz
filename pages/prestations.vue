@@ -1,10 +1,10 @@
 <template>
-  <main id="main" class="container">
-    <div>
+  <uni-main>
+    <uni-container class="hero">
       <h1>{{ title }}</h1>
-      <p>Contenu à venir…</p>
-    </div>
-  </main>
+      <p class="h2">Contenu à venir…</p>
+    </uni-container>
+  </uni-main>
 </template>
 
 <script>

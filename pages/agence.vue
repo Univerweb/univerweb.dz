@@ -1,6 +1,6 @@
 <template>
-  <main id="main">
-    <section class="container grid grid-2">
+  <uni-main>
+    <uni-container class="grid grid-2">
       <h1>{{ title }}</h1>
       <div>
         <h2>
@@ -16,8 +16,8 @@
           attentes et qui respectent votre image de marque.
         </p>
       </div>
-    </section>
-    <section class="container">
+    </uni-container>
+    <uni-container>
       <h2 class="h1 grid grid-4">Notre méthode de travail</h2>
       <div class="grid grid-4">
         <div>
@@ -52,8 +52,8 @@
           </p>
         </div>
       </div>
-    </section>
-  </main>
+    </uni-container>
+  </uni-main>
 </template>
 
 <script>

@@ -11,5 +11,3 @@
     </a>
   </p>
 </template>
-
-<style></style>
