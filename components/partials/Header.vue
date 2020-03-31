@@ -7,20 +7,20 @@
     }"
   >
     <uniLogo />
-    <uniToggler />
+    <uniToggle />
     <uniMenu />
   </header>
 </template>
 
 <script>
 import uniLogo from '@//components/partials/HeaderLogo'
-import uniToggler from '@//components/partials/HeaderToggler'
+import uniToggle from '@//components/partials/HeaderToggle'
 import uniMenu from '@//components/partials/HeaderMenu'
 
 export default {
   components: {
     uniLogo,
-    uniToggler,
+    uniToggle,
     uniMenu
   },
 

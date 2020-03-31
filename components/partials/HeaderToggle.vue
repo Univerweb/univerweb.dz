@@ -2,10 +2,10 @@
   <button
     type="button"
     aria-label="Ouvrir le menu"
-    class="toggler"
+    class="toggle"
     @click.prevent="open"
   >
-    <span class="toggler-icon"></span>
+    <span class="toggle-icon"></span>
   </button>
 </template>
 
@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style>
-.toggler {
+.toggle {
   background: transparent;
   width: 45px;
   height: 45px;
@@ -29,42 +29,42 @@ export default {
 }
 
 @media (min-width: 1024px) {
-  .toggler {
+  .toggle {
     display: none;
   }
 }
 
-.toggler:focus {
+.toggle:focus {
   background: var(--dark-blue);
 }
 
-.opened .toggler:focus {
+.opened .toggle:focus {
   background: var(--blue);
 }
 
-.toggler-icon {
+.toggle-icon {
   display: inline-block;
   vertical-align: middle;
 }
 
-.toggler-icon,
-.toggler-icon:before,
-.toggler-icon:after {
+.toggle-icon,
+.toggle-icon:before,
+.toggle-icon:after {
   background: var(--blue);
   height: 3px;
   border-radius: 3px;
   transition: all 0.3s;
 }
 
-.toggler-icon:before,
-.toggler-icon:after {
+.toggle-icon:before,
+.toggle-icon:after {
   content: '';
   display: block;
 }
 
-.opened .toggler:focus .toggler-icon,
-.opened .toggler:focus .toggler-icon:before,
-.opened .toggler:focus .toggler-icon:after {
+.opened .toggle:focus .toggle-icon,
+.opened .toggle:focus .toggle-icon:before,
+.opened .toggle:focus .toggle-icon:after {
   background: var(--dark-blue);
 }
 
@@ -80,7 +80,7 @@ export default {
   }
 }
 
-.toggler-icon {
+.toggle-icon {
   animation: CollapseCenter 0.5s forwards;
 }
 
@@ -96,7 +96,7 @@ export default {
   }
 }
 
-.opened .toggler .toggler-icon {
+.opened .toggle .toggle-icon {
   animation: CollapseShowCenter 0.5s forwards;
 }
 
@@ -117,7 +117,7 @@ export default {
   }
 }
 
-.toggler-icon:before {
+.toggle-icon:before {
   animation: CollapseBefore 0.5s forwards;
 }
 
@@ -138,7 +138,7 @@ export default {
   }
 }
 
-.opened .toggler-icon:before {
+.opened .toggle-icon:before {
   animation: CollapseShowBefore 0.5s forwards;
 }
 
@@ -164,7 +164,7 @@ export default {
   }
 }
 
-.toggler-icon:after {
+.toggle-icon:after {
   animation: CollapseAfter 0.5s forwards;
 }
 
@@ -190,7 +190,7 @@ export default {
   }
 }
 
-.opened .toggler-icon:after {
+.opened .toggle-icon:after {
   animation: CollapseShowAfter 0.5s forwards;
 }
 </style>
