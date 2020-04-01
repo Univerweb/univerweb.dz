@@ -1,8 +1,7 @@
-
 const { join, basename } = require('path')
 const globby = require('globby')
 
-export default async function () {
+export default async function() {
   const { options } = this.nuxt
 
   const dir = options.dir.components || 'components'
