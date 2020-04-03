@@ -29,6 +29,7 @@ export default {
 
   head() {
     return {
+      htmlAttrs: { lang: this.$t('iso'), dir: this.$t('dir') },
       meta: [
         {
           hid: 'og:url',
@@ -262,5 +263,21 @@ p:last-child {
   .grid-4 {
     grid-template-columns: repeat(4, 1fr);
   }
+}
+
+[lang='ar'] body,
+[lang='ar'] h1,
+[lang='ar'] h2,
+[lang='ar'] .h2 {
+  font-family: 'Almarai', sans-serif;
+}
+
+[lang='ar'] input,
+[lang='ar'] textarea {
+  font-weight: 800;
+  letter-spacing: 0;
+}
+[lang='ar'] .btn {
+  font-weight: 800;
 }
 </style>

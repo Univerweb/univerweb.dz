@@ -1,15 +1,16 @@
 <template>
-  <a href="https://goo.gl/maps/MmadgQgZRBv" target="_blank" rel="noopener">
-    Obtenir un itinéraire
+  <a
+    class="maps"
+    href="https://goo.gl/maps/MmadgQgZRBv"
+    target="_blank"
+    rel="noopener"
+  >
+    {{ $t('footer.maps') }}
   </a>
 </template>
 
 <style>
-footer a {
-  color: var(--white);
-}
-
-footer a:hover {
-  color: var(--blue);
+.maps {
+  margin: 0;
 }
 </style>

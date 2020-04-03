@@ -1,8 +1,11 @@
 <template>
-  <address title="Adresse postale">
-    <strong>Univerweb Eurl</strong><br />
-    62, coopérative El Mebniya<br />
-    Birkhadem 16 330, Alger
+  <address class="address" title="Adresse postale">
+    <strong>{{ $t('footer.address.name') }}</strong
+    ><br />
+    {{ $t('footer.address.streetAddress') }}<br />
+    {{ $t('footer.address.addressLocality') }}
+    {{ $t('footer.address.postalCode') }},
+    {{ $t('footer.address.addressCity') }}
   </address>
 </template>
 

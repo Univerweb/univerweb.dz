@@ -1,5 +1,11 @@
 <template>
-  <nuxt-link to="/" title="Accueil" class="logo" @click.native="close">
+  <nuxt-link
+    :to="$i18n.path('')"
+    title="Accueil"
+    class="logo"
+    exact
+    @click.native="close"
+  >
     <span class="visually-hidden">Accueil</span>
     <uni-univerweb />
   </nuxt-link>

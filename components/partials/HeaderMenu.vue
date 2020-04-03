@@ -2,23 +2,28 @@
   <nav class="menu">
     <ul>
       <li>
-        <nuxt-link to="/realisations" @click.native="close">
-          {{ realisations }}
+        <nuxt-link :to="$i18n.path('realisations')" exact @click.native="close">
+          {{ $t('links.works') }}
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/prestations" @click.native="close">
-          {{ prestations }}
+        <nuxt-link :to="$i18n.path('prestations')" exact @click.native="close">
+          {{ $t('links.prestations') }}
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/agence" @click.native="close">
-          {{ agence }}
+        <nuxt-link :to="$i18n.path('agence')" exact @click.native="close">
+          {{ $t('links.agence') }}
         </nuxt-link>
       </li>
     </ul>
-    <nuxt-link to="/contact" class="btn" @click.native="close">
-      {{ contact }}
+    <nuxt-link
+      :to="$i18n.path('contact')"
+      exact
+      class="btn"
+      @click.native="close"
+    >
+      {{ $t('links.contact') }}
     </nuxt-link>
   </nav>
 </template>
@@ -27,15 +32,6 @@
 import { mapActions } from 'vuex'
 
 export default {
-  data() {
-    return {
-      realisations: 'Réalisations',
-      prestations: 'Prestations',
-      agence: "L'agence",
-      contact: 'Contact'
-    }
-  },
-
   methods: mapActions(['close'])
 }
 </script>

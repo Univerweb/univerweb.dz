@@ -1,20 +1,20 @@
 <template>
-  <ul>
+  <ul class="social">
     <li>
       <a href="https://twitter.com/Univerweb">
-        <span class="visually-hidden">Rejoignez-nous sur Twitter</span>
+        <span class="visually-hidden">{{ $t('footer.social.twitter') }}</span>
         <uni-twitter />
       </a>
     </li>
     <li>
       <a href="https://www.facebook.com/Univerweb">
-        <span class="visually-hidden">Rejoignez-nous sur Facebook</span>
+        <span class="visually-hidden">{{ $t('footer.social.facebook') }}</span>
         <uni-facebook />
       </a>
     </li>
     <li>
       <a href="https://github.com/Univerweb">
-        <span class="visually-hidden">Rejoignez-nous sur GitHub</span>
+        <span class="visually-hidden">{{ $t('footer.social.github') }}</span>
         <uni-github />
       </a>
     </li>
@@ -36,11 +36,16 @@ export default {
 </script>
 
 <style>
+.social {
+  justify-content: space-between;
+  width: 275px;
+  margin-top: 20px;
+}
+
 footer ul {
   display: grid;
   grid-template-columns: repeat(3, auto);
   column-gap: 15px;
-  justify-content: start;
   margin: 0;
   padding: 0;
   list-style: none;

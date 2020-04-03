@@ -1,7 +1,9 @@
 export const state = () => ({
   isOpen: false,
 
-  works: []
+  works: [],
+  locales: ['fr', 'en', 'ar'],
+  locale: 'fr'
 })
 
 export const getters = {}
@@ -24,5 +26,11 @@ export const mutations = {
     state.isOpen = false
   },
 
-  SET_POST: (state, works) => (state.works = works)
+  SET_POST: (state, works) => (state.works = works),
+
+  SET_LANG(state, locale) {
+    if (state.locales.includes(locale)) {
+      state.locale = locale
+    }
+  }
 }

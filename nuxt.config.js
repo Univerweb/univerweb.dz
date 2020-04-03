@@ -33,7 +33,6 @@ export default {
    ** Headers of the page
    */
   head: {
-    htmlAttrs: { lang: 'fr' },
     title: pkg.author,
     meta: [
       { charset: 'utf-8' },
@@ -74,9 +73,16 @@ export default {
         rel: 'mask-icon',
         href: '/safari-pinned-tab.svg',
         color: '#50c8f0'
+      },
+
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css2?family=Almarai:wght@400;800&display=swap'
       }
     ]
   },
+
   /*
    ** Customize the progress-bar color
    */
@@ -90,7 +96,12 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+
+  router: {
+    middleware: 'i18n'
+  },
+
+  plugins: ['~/plugins/i18n.js'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -98,9 +109,7 @@ export default {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/stylelint-module
-    '@nuxtjs/stylelint-module',
-
-    '~/modules/components/'
+    '@nuxtjs/stylelint-module'
   ],
   /*
    ** Nuxt.js modules
