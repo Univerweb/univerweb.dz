@@ -1,4 +1,4 @@
 <script>
-import About from '~/pages/_lang/agence'
-export default About
+import Agence from '~/pages/_lang/agence'
+export default Agence
 </script>

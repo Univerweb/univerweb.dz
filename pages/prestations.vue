@@ -1,4 +1,4 @@
 <script>
-import Index from '~/pages/_lang/prestations'
-export default Index
+import Prestations from '~/pages/_lang/prestations'
+export default Prestations
 </script>

@@ -1,4 +1,4 @@
 <script>
-import About from '~/pages/_lang/realisations/_id'
-export default About
+import RealisationsId from '~/pages/_lang/realisations/_id'
+export default RealisationsId
 </script>
