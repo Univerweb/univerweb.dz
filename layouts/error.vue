@@ -1,15 +1,15 @@
 <template>
   <main id="main" class="hero error">
-    <uni-container v-if="error.statusCode === 404">
+    <div v-if="error.statusCode === 404">
       <h1>{{ title }}</h1>
       <p class="h2">Oups… pas de bol.</p>
       <nuxt-link to="/" class="btn">Retour à l'accueil</nuxt-link>
-    </uni-container>
-    <uni-container v-else>
+    </div>
+    <div v-else>
       <h1>Une erreur s'est produite</h1>
       <p class="h2">Oups… pas de bol.</p>
       <nuxt-link to="/" class="btn">Retour à l'accueil</nuxt-link>
-    </uni-container>
+    </div>
   </main>
 </template>
 
