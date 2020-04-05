@@ -7,17 +7,20 @@
     @click.native="close"
   >
     <span class="visually-hidden">Accueil</span>
-    <uni-univerweb />
+    <uni-univerweb-ar v-if="$i18n.locale === 'ar'" />
+    <uni-univerweb v-else />
   </nuxt-link>
 </template>
 
 <script>
 import { mapActions } from 'vuex'
 import uniUniverweb from '@/components/svg/Univerweb'
+import uniUniverwebAr from '@/components/svg/UniverwebAr'
 
 export default {
   components: {
-    uniUniverweb
+    uniUniverweb,
+    uniUniverwebAr
   },
 
   methods: mapActions(['close'])
