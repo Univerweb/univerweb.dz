@@ -29,7 +29,7 @@ export default {
 
   head() {
     return {
-      htmlAttrs: { lang: this.$t('iso'), dir: this.$t('dir') },
+      htmlAttrs: { lang: this.$i18n.locale, dir: this.$t('dir') },
       meta: [
         {
           hid: 'og:url',
@@ -265,19 +265,19 @@ p:last-child {
   }
 }
 
-[lang='ar'] body,
-[lang='ar'] h1,
-[lang='ar'] h2,
-[lang='ar'] .h2 {
+[dir='rtl'] body,
+[dir='rtl'] h1,
+[dir='rtl'] h2,
+[dir='rtl'] .h2 {
   font-family: 'Almarai', sans-serif;
 }
 
-[lang='ar'] input,
-[lang='ar'] textarea {
+[dir='rtl'] input,
+[dir='rtl'] textarea {
   font-weight: 800;
   letter-spacing: 0;
 }
-[lang='ar'] .btn {
+[dir='rtl'] .btn {
   font-weight: 800;
 }
 </style>

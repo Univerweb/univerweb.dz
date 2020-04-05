@@ -28,6 +28,10 @@ export default {
   outline: none;
 }
 
+[dir='rtl'] .toggle {
+  text-align: right;
+}
+
 @media (min-width: 1024px) {
   .toggle {
     display: none;

@@ -18,7 +18,7 @@
   }
 }
 
-[lang='ar'] .arrow {
+[dir='rtl'] .arrow {
   margin-left: 0;
   margin-right: -1rem;
 }

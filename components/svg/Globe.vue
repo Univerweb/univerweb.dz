@@ -18,7 +18,7 @@
   }
 }
 
-[lang='ar'] .globe {
+[dir='rtl'] .globe {
   margin-right: 0;
   margin-left: -1rem;
 }
