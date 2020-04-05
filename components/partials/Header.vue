@@ -13,9 +13,9 @@
 </template>
 
 <script>
-import uniLogo from '@//components/partials/HeaderLogo'
-import uniToggle from '@//components/partials/HeaderToggle'
-import uniMenu from '@//components/partials/HeaderMenu'
+import uniLogo from '@/components/partials/HeaderLogo'
+import uniToggle from '@/components/partials/HeaderToggle'
+import uniMenu from '@/components/partials/HeaderMenu'
 
 export default {
   components: {
