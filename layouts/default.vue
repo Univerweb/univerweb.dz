@@ -50,6 +50,28 @@ export default {
 </script>
 
 <style>
+@font-face {
+  font-family: 'Almarai';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Almarai'), local('Almarai-Regular'),
+    url(/fonts/almarai-regular.woff2) format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41,
+    U+FB50-FDFF, U+FE80-FEFC;
+}
+
+@font-face {
+  font-family: 'Almarai';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: local('Almarai ExtraBold'), local('Almarai-ExtraBold'),
+    url(/fonts/almarai-bold.woff2) format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41,
+    U+FB50-FDFF, U+FE80-FEFC;
+}
+
 :root {
   --blue: #50c8f0;
   --dark-blue: #28285a;
@@ -82,6 +104,10 @@ body {
   margin: 0;
 }
 
+[dir='rtl'] body {
+  font-family: 'Almarai', sans-serif;
+}
+
 .page-enter-active,
 .page-leave-active {
   transition: opacity 0.3s;
@@ -100,14 +126,6 @@ body {
 main {
   margin-top: 145px;
 }
-
-/*
-xs	<768px
-sm	≥768px
-md	≥1024px
-lg	≥1440px
-xl	≥1920px
-*/
 
 .container {
   padding-right: calc(50% - var(--container-width) / 2);
@@ -158,6 +176,11 @@ h1,
   margin-top: 0;
 }
 
+[dir='rtl'] h1,
+[dir='rtl'] .h1 {
+  font-family: 'Almarai', sans-serif;
+}
+
 @media (min-width: 1440px) {
   .h1,
   h1 {
@@ -179,6 +202,11 @@ h2,
   font-size: 36px;
   line-height: 42px;
   margin-top: 0;
+}
+
+[dir='rtl'] h2,
+[dir='rtl'] .h2 {
+  font-family: 'Almarai', sans-serif;
 }
 
 a {
@@ -212,6 +240,10 @@ button {
   font-family: inherit;
   font-size: inherit;
   border: 0;
+}
+
+[dir='rtl'] .btn {
+  font-weight: 800;
 }
 
 .btn:hover {
@@ -263,21 +295,5 @@ p:last-child {
   .grid-4 {
     grid-template-columns: repeat(4, 1fr);
   }
-}
-
-[dir='rtl'] body,
-[dir='rtl'] h1,
-[dir='rtl'] h2,
-[dir='rtl'] .h2 {
-  font-family: 'Almarai', sans-serif;
-}
-
-[dir='rtl'] input,
-[dir='rtl'] textarea {
-  font-weight: 800;
-  letter-spacing: 0;
-}
-[dir='rtl'] .btn {
-  font-weight: 800;
 }
 </style>

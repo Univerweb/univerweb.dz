@@ -73,12 +73,6 @@ export default {
         rel: 'mask-icon',
         href: '/safari-pinned-tab.svg',
         color: '#50c8f0'
-      },
-
-      {
-        rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css2?family=Almarai:wght@400;800&display=swap'
       }
     ]
   },

@@ -103,6 +103,11 @@ export default {
   text-transform: uppercase;
 }
 
+[dir='rtl'] .menu a {
+  font-family: 'Almarai', sans-serif;
+  font-weight: 800;
+}
+
 @media (min-width: 1024px) {
   .menu a {
     font-size: inherit;

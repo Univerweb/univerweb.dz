@@ -74,6 +74,10 @@ export default {
   outline: 0;
 }
 
+[dir='rtl'] .lang select {
+  font-weight: 800;
+}
+
 @media (min-width: 1024px) {
   .lang select {
     color: var(--blue);

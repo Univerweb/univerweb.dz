@@ -140,6 +140,12 @@ textarea {
   transition: border-color 0.3s;
 }
 
+[dir='rtl'] input,
+[dir='rtl'] textarea {
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
 textarea {
   resize: none;
   line-height: 20px;
