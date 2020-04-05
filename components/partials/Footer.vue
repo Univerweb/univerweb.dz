@@ -10,7 +10,6 @@
       <uniEmail />
       <uniSocial />
     </div>
-    <uniLang />
     <uniCopy />
   </footer>
 </template>
@@ -22,7 +21,6 @@ import uniPhone from '@/components/partials/FooterPhone'
 import uniAbout from '@/components/partials/FooterAbout'
 import uniEmail from '@/components/partials/FooterEmail'
 import uniSocial from '@/components/partials/FooterSocial'
-import uniLang from '@/components/partials/FooterLang'
 import uniCopy from '@/components/partials/FooterCopy'
 
 export default {
@@ -33,7 +31,6 @@ export default {
     uniAbout,
     uniEmail,
     uniSocial,
-    uniLang,
     uniCopy
   }
 }
@@ -42,7 +39,7 @@ export default {
 <style>
 footer {
   display: grid;
-  grid-template-areas: 'address-container' 'about-container' 'lang' 'copy';
+  grid-template-areas: 'address-container' 'about-container' 'copy';
   gap: 45px;
   background: var(--dark-blue);
   color: var(--light);
@@ -51,7 +48,7 @@ footer {
 
 @media (min-width: 1024px) {
   footer {
-    grid-template-areas: 'address-container about-container' 'lang copy';
+    grid-template-areas: 'address-container about-container' 'copy about-container';
     justify-content: space-between;
     padding: 135px 135px;
   }
@@ -60,7 +57,7 @@ footer {
 @media (min-width: 1440px) {
   footer {
     grid-template-columns: auto auto 180px;
-    grid-template-areas: 'address-container about-container lang' 'address-container about-container copy';
+    grid-template-areas: 'address-container about-container copy' 'address-container about-container copy';
     padding: 180px 270px;
   }
 }

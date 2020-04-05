@@ -78,6 +78,12 @@ header {
 @media (min-width: 1024px) {
   header {
     grid-template-columns: auto 1fr;
+    padding: 45px;
+  }
+}
+
+@media (min-width: 1440px) {
+  header {
     padding: 45px 135px;
   }
 }
@@ -88,7 +94,8 @@ header {
 
 @media (min-width: 1024px) {
   .scrolled {
-    padding: 15px 135px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 }
 </style>

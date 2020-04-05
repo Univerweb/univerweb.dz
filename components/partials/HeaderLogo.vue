@@ -1,6 +1,6 @@
 <template>
   <nuxt-link
-    :to="$i18n.path('')"
+    :to="localePath('/')"
     title="Accueil"
     class="logo"
     exact

@@ -96,12 +96,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-
-  router: {
-    middleware: 'i18n'
-  },
-
-  plugins: ['~/plugins/i18n.js'],
+  plugins: [],
   /*
    ** Nuxt.js dev-modules
    */
@@ -119,7 +114,8 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    'nuxt-i18n'
   ],
   /*
    ** Axios module configuration
@@ -134,5 +130,27 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  i18n: {
+    locales: [
+      {
+        code: 'fr',
+        name: 'Français',
+        file: 'fr.json'
+      },
+      {
+        code: 'en',
+        name: 'English',
+        file: 'en.json'
+      },
+      {
+        code: 'ar',
+        name: 'العربية',
+        file: 'ar.json'
+      }
+    ],
+    defaultLocale: 'fr',
+    lazy: true,
+    langDir: 'locales/'
   }
 }

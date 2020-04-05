@@ -2,36 +2,39 @@
   <nav class="menu">
     <ul>
       <li>
-        <nuxt-link :to="$i18n.path('realisations')" exact @click.native="close">
+        <nuxt-link :to="localePath('realisations')" exact @click.native="close">
           {{ $t('links.works') }}
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link :to="$i18n.path('prestations')" exact @click.native="close">
+        <nuxt-link :to="localePath('prestations')" exact @click.native="close">
           {{ $t('links.prestations') }}
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link :to="$i18n.path('agence')" exact @click.native="close">
+        <nuxt-link :to="localePath('agence')" exact @click.native="close">
           {{ $t('links.agence') }}
         </nuxt-link>
       </li>
+      <li>
+        <nuxt-link :to="localePath('contact')" exact @click.native="close">
+          {{ $t('links.contact') }}
+        </nuxt-link>
+      </li>
     </ul>
-    <nuxt-link
-      :to="$i18n.path('contact')"
-      exact
-      class="btn"
-      @click.native="close"
-    >
-      {{ $t('links.contact') }}
-    </nuxt-link>
+    <uniLang />
   </nav>
 </template>
 
 <script>
 import { mapActions } from 'vuex'
+import uniLang from '@/components/partials/HeaderLang'
 
 export default {
+  components: {
+    uniLang
+  },
+
   methods: mapActions(['close'])
 }
 </script>
@@ -83,7 +86,7 @@ export default {
 
 @media (min-width: 1024px) {
   .menu ul {
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(4, auto);
     justify-content: space-around;
     padding: 0;
   }
@@ -124,31 +127,5 @@ export default {
 .menu li a:hover::after,
 .menu li a.nuxt-link-active::after {
   width: 25%;
-}
-
-.menu .btn {
-  font-size: initial;
-  height: 25px;
-  margin: 0 auto;
-  padding: 0;
-}
-
-@media (min-width: 1024px) {
-  .menu .btn {
-    height: 55px;
-    padding: 15px 30px;
-  }
-}
-
-.menu .btn:hover {
-  background: var(--dark-blue);
-  color: var(--blue) !important;
-}
-
-@media (min-width: 1024px) {
-  .menu .btn:hover {
-    background: var(--blue);
-    color: var(--dark-blue) !important;
-  }
 }
 </style>
