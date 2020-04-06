@@ -1,7 +1,7 @@
 <template>
   <main id="main">
     <section class="container hero">
-      <h1>{{ $t('realisations.acodim.title') }}</h1>
+      <h1>{{ work.name }}</h1>
       <p class="h2">{{ work.content }}</p>
     </section>
   </main>

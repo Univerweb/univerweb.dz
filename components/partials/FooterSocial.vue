@@ -3,34 +3,34 @@
     <li>
       <a href="https://twitter.com/Univerweb">
         <span class="visually-hidden">{{ $t('footer.social.twitter') }}</span>
-        <uni-twitter />
+        <social-twitter />
       </a>
     </li>
     <li>
       <a href="https://www.facebook.com/Univerweb">
         <span class="visually-hidden">{{ $t('footer.social.facebook') }}</span>
-        <uni-facebook />
+        <social-facebook />
       </a>
     </li>
     <li>
       <a href="https://github.com/Univerweb">
         <span class="visually-hidden">{{ $t('footer.social.github') }}</span>
-        <uni-github />
+        <social-github />
       </a>
     </li>
   </ul>
 </template>
 
 <script>
-import uniTwitter from '@/components/svg/Twitter'
-import uniFacebook from '@/components/svg/Facebook'
-import uniGithub from '@/components/svg/Github'
+import SocialTwitter from '@/components/svg/SocialTwitter'
+import SocialFacebook from '@/components/svg/SocialFacebook'
+import SocialGithub from '@/components/svg/SocialGithub'
 
 export default {
   components: {
-    uniTwitter,
-    uniFacebook,
-    uniGithub
+    SocialTwitter,
+    SocialFacebook,
+    SocialGithub
   }
 }
 </script>

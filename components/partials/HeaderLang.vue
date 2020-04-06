@@ -1,6 +1,6 @@
 <template>
   <div class="lang">
-    <uniGlobe />
+    <lang-globe />
     <select v-model="selectedValue" @change="onChange(selectedValue)">
       <option
         v-for="(locale, index) in $i18n.locales"
@@ -10,18 +10,18 @@
         {{ locale.name }}
       </option>
     </select>
-    <uniArrow />
+    <lang-arrow />
   </div>
 </template>
 
 <script>
-import uniGlobe from '@/components/svg/Globe'
-import uniArrow from '@/components/svg/Arrow'
+import LangGlobe from '@/components/svg/LangGlobe'
+import LangArrow from '@/components/svg/LangArrow'
 
 export default {
   components: {
-    uniGlobe,
-    uniArrow
+    LangGlobe,
+    LangArrow
   },
   data() {
     return {

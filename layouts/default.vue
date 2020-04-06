@@ -1,22 +1,22 @@
 <template>
   <div class="wrapper">
-    <uni-skip-links />
-    <uni-header />
+    <the-skiplinks />
+    <the-header />
     <nuxt />
-    <uni-footer />
+    <the-footer />
   </div>
 </template>
 
 <script>
-import uniSkipLinks from '@/components/partials/SkipLinks'
-import uniHeader from '@/components/partials/Header'
-import uniFooter from '@/components/partials/Footer'
+import TheSkiplinks from '@/components/partials/TheSkiplinks'
+import TheHeader from '@/components/partials/TheHeader'
+import TheFooter from '@/components/partials/TheFooter'
 
 export default {
   components: {
-    uniSkipLinks,
-    uniHeader,
-    uniFooter
+    TheSkiplinks,
+    TheHeader,
+    TheFooter
   },
 
   mounted() {

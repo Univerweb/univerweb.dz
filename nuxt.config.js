@@ -130,17 +130,17 @@ export default {
       {
         code: 'fr',
         name: 'Français',
-        file: 'fr.json'
+        file: 'fr.js'
       },
       {
         code: 'en',
         name: 'English',
-        file: 'en.json'
+        file: 'en.js'
       },
       {
         code: 'ar',
         name: 'العربية',
-        file: 'ar.json'
+        file: 'ar.js'
       }
     ],
     defaultLocale: 'fr',

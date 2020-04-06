@@ -12,8 +12,8 @@
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link :to="localePath('agence')" exact @click.native="close">
-          {{ $t('links.agence') }}
+        <nuxt-link :to="localePath('agency')" exact @click.native="close">
+          {{ $t('links.agency') }}
         </nuxt-link>
       </li>
       <li>
@@ -22,17 +22,17 @@
         </nuxt-link>
       </li>
     </ul>
-    <uniLang />
+    <header-lang />
   </nav>
 </template>
 
 <script>
 import { mapActions } from 'vuex'
-import uniLang from '@/components/partials/HeaderLang'
+import HeaderLang from '@/components/partials/HeaderLang'
 
 export default {
   components: {
-    uniLang
+    HeaderLang
   },
 
   methods: mapActions(['close'])

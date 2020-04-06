@@ -1,37 +1,37 @@
 <template>
   <footer id="footer">
     <div class="address-container">
-      <uni-address />
-      <uni-maps />
-      <uni-phone />
+      <footer-address />
+      <footer-maps />
+      <footer-phone />
     </div>
     <div class="about-container">
-      <uniAbout />
-      <uniEmail />
-      <uniSocial />
+      <footer-about />
+      <footer-email />
+      <footer-social />
     </div>
-    <uniCopy />
+    <footer-copy />
   </footer>
 </template>
 
 <script>
-import uniAddress from '@/components/partials/FooterAddress'
-import uniMaps from '@/components/partials/FooterMaps'
-import uniPhone from '@/components/partials/FooterPhone'
-import uniAbout from '@/components/partials/FooterAbout'
-import uniEmail from '@/components/partials/FooterEmail'
-import uniSocial from '@/components/partials/FooterSocial'
-import uniCopy from '@/components/partials/FooterCopy'
+import FooterAddress from '@/components/partials/FooterAddress'
+import FooterMaps from '@/components/partials/FooterMaps'
+import FooterPhone from '@/components/partials/FooterPhone'
+import FooterAbout from '@/components/partials/FooterAbout'
+import FooterEmail from '@/components/partials/FooterEmail'
+import FooterSocial from '@/components/partials/FooterSocial'
+import FooterCopy from '@/components/partials/FooterCopy'
 
 export default {
   components: {
-    uniAddress,
-    uniMaps,
-    uniPhone,
-    uniAbout,
-    uniEmail,
-    uniSocial,
-    uniCopy
+    FooterAddress,
+    FooterMaps,
+    FooterPhone,
+    FooterAbout,
+    FooterEmail,
+    FooterSocial,
+    FooterCopy
   }
 }
 </script>

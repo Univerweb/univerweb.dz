@@ -2,11 +2,12 @@
   <main id="main">
     <section class="container">
       <h1>{{ $t('works.title') }}</h1>
-
       <div class="grid works">
         <div v-for="(work, index) in works" :key="index" class="work">
           <nuxt-link
-            :to="{ name: 'realisations-id', params: { id: work.slug } }"
+            :to="
+              localePath({ name: 'realisations-id', params: { id: work.slug } })
+            "
           >
             <img :src="work.thumbnail" :alt="work.name" />
             <h2 class="h3">{{ work.name }}</h2>
@@ -24,13 +25,13 @@ export default {
       {
         name: 'Acodim',
         content: 'Contenu à venir…',
-        thumbnail: 'https://picsum.photos/750/800?random=1"',
+        thumbnail: 'https://picsum.photos/750/800?random=1',
         slug: 'acodim'
       },
       {
         name: 'Botanique Algérie',
         content: 'Contenu à venir…',
-        thumbnail: 'https://picsum.photos/750/800?random=2"',
+        thumbnail: 'https://picsum.photos/750/800?random=2',
         slug: 'botanique-algerie'
       },
       {

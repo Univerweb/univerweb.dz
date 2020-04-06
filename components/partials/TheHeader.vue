@@ -6,22 +6,22 @@
       opened: $store.state.isOpen && isMobile === true
     }"
   >
-    <uniLogo />
-    <uniToggle />
-    <uniMenu />
+    <header-logo />
+    <header-toggle />
+    <header-menu />
   </header>
 </template>
 
 <script>
-import uniLogo from '@/components/partials/HeaderLogo'
-import uniToggle from '@/components/partials/HeaderToggle'
-import uniMenu from '@/components/partials/HeaderMenu'
+import HeaderLogo from '@/components/partials/HeaderLogo'
+import HeaderToggle from '@/components/partials/HeaderToggle'
+import HeaderMenu from '@/components/partials/HeaderMenu'
 
 export default {
   components: {
-    uniLogo,
-    uniToggle,
-    uniMenu
+    HeaderLogo,
+    HeaderToggle,
+    HeaderMenu
   },
 
   data() {
