@@ -129,17 +129,14 @@ export default {
     locales: [
       {
         code: 'fr',
-        name: 'Français',
         file: 'fr.js'
       },
       {
         code: 'en',
-        name: 'English',
         file: 'en.js'
       },
       {
         code: 'ar',
-        name: 'العربية',
         file: 'ar.js'
       }
     ],

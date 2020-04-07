@@ -7,7 +7,7 @@
         :key="index"
         :value="locale.code"
       >
-        {{ locale.name }}
+        {{ locale.code }}
       </option>
     </select>
     <lang-arrow />
@@ -46,7 +46,7 @@ export default {
   align-items: center;
   background: var(--blue);
   width: fit-content;
-  padding: 0 15px;
+  padding: 0 20px;
   border-radius: 50px;
 }
 
@@ -62,12 +62,11 @@ export default {
   appearance: none;
   padding-left: 1.5rem;
   padding-right: 2rem;
-  height: 55px;
+  height: 50px;
   border: 0;
   font-family: inherit;
   font-size: initial;
   font-weight: 500;
-  line-height: 25px;
   letter-spacing: -0.02em;
   text-transform: uppercase;
   cursor: pointer;
