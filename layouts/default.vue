@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper" :class="{ scrolled: scrolled }">
     <the-skiplinks />
     <the-header />
     <nuxt />
@@ -19,12 +19,34 @@ export default {
     TheFooter
   },
 
+  data() {
+    return {
+      scrolled: false
+    }
+  },
+
+  beforeMount() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+
   mounted() {
+    this.scrolled = window.scrollY > 0
+
     this.$nextTick(() => {
       this.$nuxt.$loading.start()
 
       setTimeout(() => this.$nuxt.$loading.finish(), 500)
     })
+  },
+
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
+
+  methods: {
+    handleScroll() {
+      this.scrolled = window.scrollY > 0
+    }
   },
 
   head() {
@@ -124,7 +146,14 @@ body {
 }
 
 main {
-  margin-top: 145px;
+  margin-top: 75px;
+  transition: margin-top 0.3s;
+}
+
+@media (min-width: 1024px) {
+  main {
+    margin-top: 140px;
+  }
 }
 
 .container {
@@ -159,10 +188,21 @@ main {
 }
 
 .hero {
-  min-height: calc(100vh - 115px);
+  min-height: calc(100vh - 75px);
   display: grid;
   align-content: center;
   justify-content: space-between;
+  transition: min-height 0.3s;
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    min-height: calc(100vh - 140px);
+  }
+
+  .scrolled .hero {
+    min-height: calc(100vh - 75px);
+  }
 }
 
 h1,
@@ -235,11 +275,12 @@ button {
   letter-spacing: -0.02em;
   text-transform: uppercase;
   width: fit-content;
-  height: 55px;
-  padding: 15px 30px;
+  height: 50px;
+  padding: 0 30px;
   font-family: inherit;
   font-size: inherit;
   border: 0;
+  border-radius: 50px;
 }
 
 [dir='rtl'] .btn {

@@ -40,21 +40,6 @@ export default {
     window.addEventListener('resize', () => {
       this.windowWidth = window.innerWidth
     })
-
-    // Code ringard pour le redimensionnement du padding à scrollTop = 0
-    this.$nextTick(function() {
-      window.addEventListener('scroll', function() {
-        const headerScrolled = document.querySelector('header')
-        const headerClasses = headerScrolled.classList
-        if (document.documentElement.scrollTop >= 1) {
-          if (headerClasses.contains('scrolled') === false) {
-            headerClasses.toggle('scrolled')
-          }
-        } else if (headerClasses.contains('scrolled') === true) {
-          headerClasses.toggle('scrolled')
-        }
-      })
-    })
   }
 }
 </script>
@@ -88,12 +73,12 @@ header {
   }
 }
 
-.scrolled:not(.opened) {
+.scrolled header:not(.opened) {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 @media (min-width: 1024px) {
-  .scrolled {
+  .scrolled header {
     padding-top: 15px;
     padding-bottom: 15px;
   }
