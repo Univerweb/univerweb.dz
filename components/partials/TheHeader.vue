@@ -7,21 +7,21 @@
     }"
   >
     <header-logo />
-    <header-toggle />
     <header-menu />
+    <header-toggle />
   </header>
 </template>
 
 <script>
 import HeaderLogo from '@/components/partials/HeaderLogo'
-import HeaderToggle from '@/components/partials/HeaderToggle'
 import HeaderMenu from '@/components/partials/HeaderMenu'
+import HeaderToggle from '@/components/partials/HeaderToggle'
 
 export default {
   components: {
     HeaderLogo,
-    HeaderToggle,
-    HeaderMenu
+    HeaderMenu,
+    HeaderToggle
   },
 
   data() {
