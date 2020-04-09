@@ -271,7 +271,7 @@ button {
   background: var(--dark-blue);
   color: var(--blue) !important;
   font-weight: 500;
-  line-height: 25px;
+  line-height: 50px;
   letter-spacing: -0.02em;
   text-transform: uppercase;
   width: fit-content;
