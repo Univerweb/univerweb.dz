@@ -2,6 +2,20 @@
   <main id="main">
     <section class="container">
       <h1>{{ $t('works.title') }}</h1>
+
+      <!-- <div class="grid works">
+        <div
+          v-for="(work, index) in $t('works.work')"
+          :key="work.id"
+          :index="index"
+        >
+          <nuxt-link :to="localePath('/realisations/' + work.slug)">
+            <img :src="work.thumbnail" :alt="work.name" />
+            <h2 class="h3">{{ work.name }}</h2>
+          </nuxt-link>
+        </div>
+      </div> -->
+
       <div class="grid works">
         <div v-for="(work, index) in works" :key="index" class="work">
           <nuxt-link
@@ -60,15 +74,10 @@ export default {
       }
     ])
     return {
-      works: store.state.works
+      works: store.state.works.slice(0, 6)
     }
   },
-  data() {
-    return {
-      title: 'Réalisations',
-      description: 'Contenu à venir…'
-    }
-  },
+
   head() {
     return {
       titleTemplate: `${this.$t('works.title')} — ${this.$t('name')}`,

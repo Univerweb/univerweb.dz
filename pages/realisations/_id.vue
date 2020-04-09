@@ -54,6 +54,7 @@ export default {
       work: store.state.works.find((work) => work.slug === route.params.id)
     }
   },
+
   head() {
     return {
       titleTemplate: `${this.work.name} — %s`,
