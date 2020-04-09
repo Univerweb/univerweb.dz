@@ -24,7 +24,23 @@
 
   "works": {
     "title": "Réalisations",
-    "description": "Contenu à venir…"
+    "description": "Contenu à venir…",
+    "work": [
+      {
+        "id": "1",
+        "name": "Acodim",
+        "content": "Contenu à venir…",
+        "thumbnail": "https://picsum.photos/750/800?random=1",
+        "slug": "acodim"
+      },
+      {
+        "id": "2",
+        "name": "Botanique",
+        "content": "Contenu à venir…",
+        "thumbnail": "https://picsum.photos/750/800?random=2",
+        "slug": "botanique"
+      }
+    ]
   },
 
   "prestations": {

@@ -1,14 +1,12 @@
 <template>
   <main id="main" class="hero error">
     <div v-if="error.statusCode === 404">
-      <h1>{{ title }}</h1>
-      <p class="h2">Oups… pas de bol.</p>
-      <nuxt-link to="/" class="btn">Retour à l'accueil</nuxt-link>
+      <h1>{{ $t('error.message_1') }}</h1>
+      <nuxt-link to="/" class="btn">{{ $t('error.btn') }}</nuxt-link>
     </div>
     <div v-else>
-      <h1>Une erreur s'est produite</h1>
-      <p class="h2">Oups… pas de bol.</p>
-      <nuxt-link to="/" class="btn">Retour à l'accueil</nuxt-link>
+      <h1>{{ $t('error.message_2') }}</h1>
+      <nuxt-link to="/" class="btn">{{ $t('error.btn') }}</nuxt-link>
     </div>
   </main>
 </template>
@@ -19,12 +17,6 @@ export default {
     error: {
       type: Object,
       default: null
-    }
-  },
-  data() {
-    return {
-      title: 'Page non trouvée',
-      description: 'Page non trouvée, pas de bol.'
     }
   },
   head() {

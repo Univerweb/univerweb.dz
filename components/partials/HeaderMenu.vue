@@ -12,7 +12,7 @@
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link :to="localePath('agency')" exact @click.native="close">
+        <nuxt-link :to="localePath('agence')" exact @click.native="close">
           {{ $t('links.agency') }}
         </nuxt-link>
       </li>

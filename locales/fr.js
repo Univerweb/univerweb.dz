@@ -24,7 +24,51 @@ export default (context) => {
 
       works: {
         title: 'Réalisations',
-        description: 'Contenu à venir…'
+        description: 'Contenu à venir…',
+        work: [
+          {
+            id: '1',
+            name: 'Acodim',
+            content: 'Contenu à venir…',
+            thumbnail: 'https://picsum.photos/750/800?random=1',
+            slug: 'acodim'
+          },
+          {
+            id: '2',
+            name: 'Botanique Algérie',
+            content: 'Contenu à venir…',
+            thumbnail: 'https://picsum.photos/750/800?random=2',
+            slug: 'botanique-algerie'
+          },
+          {
+            id: '3',
+            name: 'TPBL',
+            content: 'Contenu à venir…',
+            thumbnail: 'https://picsum.photos/750/800?random=3',
+            slug: 'tpbl'
+          },
+          {
+            id: '4',
+            name: 'infoElec',
+            content: 'Contenu à venir…',
+            thumbnail: 'https://picsum.photos/750/800?random=4',
+            slug: 'infoelec'
+          },
+          {
+            id: '5',
+            name: 'Soprofort',
+            content: 'Contenu à venir…',
+            thumbnail: 'https://picsum.photos/750/800?random=5',
+            slug: 'soprofort'
+          },
+          {
+            id: '6',
+            name: 'Corim',
+            content: 'Contenu à venir…',
+            thumbnail: 'https://picsum.photos/750/800?random=6',
+            slug: 'Corim'
+          }
+        ]
       },
 
       prestations: {
@@ -32,18 +76,16 @@ export default (context) => {
         description: 'Contenu à venir…'
       },
 
-      agence: {
+      agency: {
         title: "L'agence",
         description: 'Contenu à venir…',
-        'agence-web': {
+        webAgency: {
           title:
             'Nous sommes une agence web spécialisée dans la création, l’hébergement et le référencement de sites web.',
-          text: {
-            '1':
-              'Installée depuis 2011 à Alger, nous avons une équipe créative, dynamique et passionnée par son travail.',
-            '2':
-              'Notre métier consiste à concevoir des sites web qui répondent à vos attentes et qui respectent votre image de marque.'
-          }
+          text_1:
+            'Installée depuis 2011 à Alger, nous avons une équipe créative, dynamique et passionnée par son travail.',
+          text_2:
+            'Notre métier consiste à concevoir des sites web qui répondent à vos attentes et qui respectent votre image de marque.'
         },
         methode: {
           title: 'Notre méthode de travail',
@@ -94,6 +136,12 @@ export default (context) => {
             email: 'webmaster@univerweb.dz'
           }
         }
+      },
+
+      error: {
+        message_1: 'Oups… pas de bol.',
+        message_2: "Une erreur s'est produite",
+        btn: "Retour à l'accueil"
       },
 
       footer: {

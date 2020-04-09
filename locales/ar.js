@@ -24,7 +24,51 @@ export default (context) => {
 
       works: {
         title: 'اخر الاعمال',
-        description: 'محتوى قادم ...'
+        description: 'محتوى قادم ...',
+        work: [
+          {
+            id: '1',
+            name: 'Acodim',
+            content: 'Contenu à venir…',
+            thumbnail: 'https://picsum.photos/750/800?random=1',
+            slug: 'acodim'
+          },
+          {
+            id: '2',
+            name: 'Botanique Algérie',
+            content: 'Contenu à venir…',
+            thumbnail: 'https://picsum.photos/750/800?random=2',
+            slug: 'botanique-algerie'
+          },
+          {
+            id: '3',
+            name: 'TPBL',
+            content: 'Contenu à venir…',
+            thumbnail: 'https://picsum.photos/750/800?random=3',
+            slug: 'tpbl'
+          },
+          {
+            id: '4',
+            name: 'infoElec',
+            content: 'Contenu à venir…',
+            thumbnail: 'https://picsum.photos/750/800?random=4',
+            slug: 'infoelec'
+          },
+          {
+            id: '5',
+            name: 'Soprofort',
+            content: 'Contenu à venir…',
+            thumbnail: 'https://picsum.photos/750/800?random=5',
+            slug: 'soprofort'
+          },
+          {
+            id: '6',
+            name: 'Corim',
+            content: 'Contenu à venir…',
+            thumbnail: 'https://picsum.photos/750/800?random=6',
+            slug: 'Corim'
+          }
+        ]
       },
 
       prestations: {
@@ -32,17 +76,15 @@ export default (context) => {
         description: 'محتوى قادم ...'
       },
 
-      agence: {
+      agency: {
         title: 'الوكالة',
         description: 'محتوى قادم ...',
-        'agence-web': {
+        webAgency: {
           title: 'نحن وكالة ويب متخصصة في إنشاء واستضافة ومراجع مواقع الويب.',
-          text: {
-            '1':
-              'تأسست منذ 2011 في الجزائر العاصمة ، لدينا فريق مبدع وديناميكي وعاطفي لعملهم.',
-            '2':
-              'مهمتنا هي تصميم مواقع الويب التي تلبي توقعاتك وتحترم صورة علامتك التجارية.'
-          }
+          text_1:
+            'تأسست منذ 2011 في الجزائر العاصمة ، لدينا فريق مبدع وديناميكي وعاطفي لعملهم.',
+          text_2:
+            'مهمتنا هي تصميم مواقع الويب التي تلبي توقعاتك وتحترم صورة علامتك التجارية.'
         },
         methode: {
           title: 'طريقة عملنا',
@@ -92,6 +134,12 @@ export default (context) => {
             email: 'webmaster@univerweb.dz'
           }
         }
+      },
+
+      error: {
+        message_1: 'Oups… pas de bol.',
+        message_2: "Une erreur s'est produite",
+        btn: "Retour à l'accueil"
       },
 
       footer: {

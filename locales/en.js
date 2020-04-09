@@ -24,7 +24,51 @@ export default (context) => {
 
       works: {
         title: 'Latest work',
-        description: 'Content to come ...'
+        description: 'Content to come ...',
+        work: [
+          {
+            id: '1',
+            name: 'Acodim',
+            content: 'Contenu à venir…',
+            thumbnail: 'https://picsum.photos/750/800?random=1',
+            slug: 'acodim'
+          },
+          {
+            id: '2',
+            name: 'Botanique Algérie',
+            content: 'Contenu à venir…',
+            thumbnail: 'https://picsum.photos/750/800?random=2',
+            slug: 'botanique-algerie'
+          },
+          {
+            id: '3',
+            name: 'TPBL',
+            content: 'Contenu à venir…',
+            thumbnail: 'https://picsum.photos/750/800?random=3',
+            slug: 'tpbl'
+          },
+          {
+            id: '4',
+            name: 'infoElec',
+            content: 'Contenu à venir…',
+            thumbnail: 'https://picsum.photos/750/800?random=4',
+            slug: 'infoelec'
+          },
+          {
+            id: '5',
+            name: 'Soprofort',
+            content: 'Contenu à venir…',
+            thumbnail: 'https://picsum.photos/750/800?random=5',
+            slug: 'soprofort'
+          },
+          {
+            id: '6',
+            name: 'Corim',
+            content: 'Contenu à venir…',
+            thumbnail: 'https://picsum.photos/750/800?random=6',
+            slug: 'Corim'
+          }
+        ]
       },
 
       prestations: {
@@ -32,18 +76,16 @@ export default (context) => {
         description: 'Content to come ...'
       },
 
-      agence: {
+      agency: {
         title: 'Agency',
         description: 'Content to come ...',
-        'agence-web': {
+        webAgency: {
           title:
             'We are a web agency specializing in the creation, hosting and referencing of websites.',
-          text: {
-            '1':
-              'Established since 2011 in Algiers, we have a creative, dynamic and passionate team for their work.',
-            '2':
-              'Our job is to design websites that meet your expectations and that respect your brand image.'
-          }
+          text_1:
+            'Established since 2011 in Algiers, we have a creative, dynamic and passionate team for their work.',
+          text_2:
+            'Our job is to design websites that meet your expectations and that respect your brand image.'
         },
         methode: {
           title: 'Our working method',
@@ -93,6 +135,12 @@ export default (context) => {
             email: 'webmaster@univerweb.dz'
           }
         }
+      },
+
+      error: {
+        message_1: 'Oups… pas de bol.',
+        message_2: "Une erreur s'est produite",
+        btn: "Retour à l'accueil"
       },
 
       footer: {
