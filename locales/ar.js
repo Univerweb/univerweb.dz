@@ -9,7 +9,8 @@ export default (context) => {
         works: 'اخر الاعمال',
         prestations: 'الخدمات',
         agency: 'الوكالة',
-        contact: 'اتصل'
+        contact: 'اتصل',
+        ariaLabel: 'افتح القائمة'
       },
 
       home: {
@@ -28,45 +29,45 @@ export default (context) => {
         work: [
           {
             id: '1',
-            name: 'Acodim',
-            content: 'Contenu à venir…',
+            name: 'أكوديم',
+            content: 'محتوى قادم ...',
             thumbnail: 'https://picsum.photos/750/800?random=1',
             slug: 'acodim'
           },
           {
             id: '2',
-            name: 'Botanique Algérie',
-            content: 'Contenu à venir…',
+            name: 'بوتانيك الجزائر',
+            content: 'محتوى قادم ...',
             thumbnail: 'https://picsum.photos/750/800?random=2',
             slug: 'botanique-algerie'
           },
           {
             id: '3',
-            name: 'TPBL',
-            content: 'Contenu à venir…',
+            name: 'تي بي بي أل',
+            content: 'محتوى قادم ...',
             thumbnail: 'https://picsum.photos/750/800?random=3',
             slug: 'tpbl'
           },
           {
             id: '4',
-            name: 'infoElec',
-            content: 'Contenu à venir…',
+            name: 'إنفو إيليك',
+            content: 'محتوى قادم ...',
             thumbnail: 'https://picsum.photos/750/800?random=4',
             slug: 'infoelec'
           },
           {
             id: '5',
-            name: 'Soprofort',
-            content: 'Contenu à venir…',
+            name: 'صوبروفور',
+            content: 'محتوى قادم ...',
             thumbnail: 'https://picsum.photos/750/800?random=5',
             slug: 'soprofort'
           },
           {
             id: '6',
-            name: 'Corim',
-            content: 'Contenu à venir…',
+            name: 'كوريم',
+            content: 'محتوى قادم ...',
             thumbnail: 'https://picsum.photos/750/800?random=6',
-            slug: 'Corim'
+            slug: 'corim'
           }
         ]
       },

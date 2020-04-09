@@ -9,7 +9,8 @@ export default (context) => {
         works: 'Latest work',
         prestations: 'Services',
         agency: 'Agency',
-        contact: 'Contact'
+        contact: 'Contact',
+        ariaLabel: 'Open menu'
       },
 
       home: {
@@ -36,35 +37,35 @@ export default (context) => {
           {
             id: '2',
             name: 'Botanique Algérie',
-            content: 'Contenu à venir…',
+            description: 'Content to come ...',
             thumbnail: 'https://picsum.photos/750/800?random=2',
             slug: 'botanique-algerie'
           },
           {
             id: '3',
             name: 'TPBL',
-            content: 'Contenu à venir…',
+            description: 'Content to come ...',
             thumbnail: 'https://picsum.photos/750/800?random=3',
             slug: 'tpbl'
           },
           {
             id: '4',
             name: 'infoElec',
-            content: 'Contenu à venir…',
+            description: 'Content to come ...',
             thumbnail: 'https://picsum.photos/750/800?random=4',
             slug: 'infoelec'
           },
           {
             id: '5',
             name: 'Soprofort',
-            content: 'Contenu à venir…',
+            description: 'Content to come ...',
             thumbnail: 'https://picsum.photos/750/800?random=5',
             slug: 'soprofort'
           },
           {
             id: '6',
             name: 'Corim',
-            content: 'Contenu à venir…',
+            description: 'Content to come ...',
             thumbnail: 'https://picsum.photos/750/800?random=6',
             slug: 'Corim'
           }

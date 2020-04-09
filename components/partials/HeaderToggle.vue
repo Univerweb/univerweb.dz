@@ -1,7 +1,7 @@
 <template>
   <button
     type="button"
-    aria-label="Ouvrir le menu"
+    :aria-label="$t('links.ariaLabel')"
     class="toggle"
     @click.prevent="open"
   >

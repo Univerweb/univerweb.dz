@@ -9,7 +9,8 @@ export default (context) => {
         works: 'Réalisations',
         prestations: 'Prestations',
         agency: "L'agence",
-        contact: 'Contact'
+        contact: 'Contact',
+        ariaLabel: 'Ouvrir le menu'
       },
 
       home: {

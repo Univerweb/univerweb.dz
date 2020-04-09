@@ -1,7 +1,7 @@
 <template>
   <nuxt-link
     :to="localePath('/')"
-    title="Accueil"
+    :title="$t('links.home')"
     class="logo"
     exact
     @click.native="close"
