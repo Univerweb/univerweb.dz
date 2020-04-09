@@ -74,6 +74,49 @@ export default {
         href: '/safari-pinned-tab.svg',
         color: '#50c8f0'
       }
+    ],
+    /*
+     ** JSON-LD Data structured
+     */
+    __dangerouslyDisableSanitizers: ['script'],
+    script: [
+      {
+        type: 'application/ld+json',
+        innerHTML: JSON.stringify({
+          '@context': 'http://schema.org',
+          '@type': 'Organization',
+          name: 'Univerweb',
+          url: 'https://www.univerweb.dz',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://www.univerweb.dz/logo.svg',
+            width: '256px',
+            height: '256px'
+          },
+          email: 'info@univerweb.dz',
+          telephone: '+213 551 90 46 22',
+          faxNumber: '+213 21 44 08 11',
+          sameAs: [
+            'https://twitter.com/univerweb',
+            'https://www.facebook.com/Univerweb'
+          ],
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '62, coopérative El Mebniya',
+            postalCode: '16 330',
+            addressLocality: 'Alger',
+            addressCountry: 'Algérie'
+          },
+          contactPoint: {
+            '@type': 'ContactPoint',
+            contactType: 'technical support',
+            telephone: '+213 21 44 08 11',
+            email: 'webmaster@univerweb.dz',
+            areaServed: 'DZ',
+            availableLanguage: ['French', 'Arabic']
+          }
+        })
+      }
     ]
   },
 
@@ -125,6 +168,9 @@ export default {
      */
     extend(config, ctx) {}
   },
+  /*
+   ** i18n
+   */
   i18n: {
     locales: [
       {
