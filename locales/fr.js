@@ -140,8 +140,9 @@ export default (context) => {
       },
 
       error: {
-        message_1: 'Oups… pas de bol.',
-        message_2: "Une erreur s'est produite",
+        title_1: 'Page non trouvée',
+        title_2: "Une erreur s'est produite",
+        description: 'Page non trouvée, pas de bol.',
         btn: "Retour à l'accueil"
       },
 

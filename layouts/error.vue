@@ -1,11 +1,11 @@
 <template>
   <main id="main" class="hero error">
     <div v-if="error.statusCode === 404">
-      <h1>{{ $t('error.message_1') }}</h1>
+      <h1>{{ $t('error.title_1') }}</h1>
       <nuxt-link to="/" class="btn">{{ $t('error.btn') }}</nuxt-link>
     </div>
     <div v-else>
-      <h1>{{ $t('error.message_2') }}</h1>
+      <h1>{{ $t('error.title_2') }}</h1>
       <nuxt-link to="/" class="btn">{{ $t('error.btn') }}</nuxt-link>
     </div>
   </main>
@@ -21,7 +21,7 @@ export default {
   },
   head() {
     return {
-      titleTemplate: `${this.title} — %s`,
+      titleTemplate: `${this.$t('error.title_1')} — ${this.$t('name')}`,
       meta: [
         {
           name: 'robots',
@@ -30,7 +30,7 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: this.description
+          content: this.$t('error.description')
         },
         {
           hid: 'og:title',
@@ -40,7 +40,7 @@ export default {
         {
           hid: 'og:description',
           name: 'og:description',
-          content: this.description
+          content: this.$t('error.description')
         },
         {
           hid: 'og:image',
