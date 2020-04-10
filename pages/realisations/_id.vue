@@ -57,7 +57,7 @@ export default {
 
   head() {
     return {
-      titleTemplate: `${this.work.name} — %s`,
+      titleTemplate: `${this.work.name} — ${this.$t('name')}`,
       meta: [
         {
           hid: 'description',
