@@ -1,10 +1,9 @@
 <template>
   <main id="main">
-    <section class="container grid grid-2">
-      <div>
-        <h1 class="h2">{{ $t('contact.title') }}</h1>
-        <uni-about />
-      </div>
+    <div class="container grid">
+      <h1 class="h2">{{ $t('contact.title') }}</h1>
+      <footer-about />
+      <footer-email />
       <form method="post" action="">
         <label for="fullname" class="visually-hidden">
           {{ $t('contact.form.fullname') }}
@@ -51,40 +50,32 @@
           {{ $t('contact.form.submit') }}
         </button>
       </form>
-    </section>
-    <section class="container">
+    </div>
+
+    <div class="container grid">
       <h2>{{ $t('contact.other.title') }}</h2>
-      <div class="grid grid-3">
-        <div class="block">
-          <h6>{{ $t('contact.other.direction.title') }}</h6>
-          <a
-            :href="'mailto:' + $t('contact.other.direction.email')"
-            class="link"
-          >
-            {{ $t('contact.other.direction.email') }}
-          </a>
-        </div>
-        <div class="block">
-          <h6>{{ $t('contact.other.technique.title') }}</h6>
-          <a
-            :href="'mailto:' + $t('contact.other.technique.email')"
-            class="link"
-          >
-            {{ $t('contact.other.technique.email') }}
-          </a>
-        </div>
-      </div>
-    </section>
+      <h3 class="h6">{{ $t('contact.other.direction.title') }}</h3>
+      <a :href="'mailto:' + $t('contact.other.direction.email')" class="link">
+        {{ $t('contact.other.direction.email') }}
+      </a>
+      <h3 class="h6">{{ $t('contact.other.technique.title') }}</h3>
+      <a :href="'mailto:' + $t('contact.other.technique.email')" class="link">
+        {{ $t('contact.other.technique.email') }}
+      </a>
+    </div>
   </main>
 </template>
 
 <script>
-import uniAbout from '@/components/partials/FooterAbout'
+import FooterAbout from '@/components/partials/FooterAbout'
+import FooterEmail from '@/components/partials/FooterEmail'
 
 export default {
   components: {
-    uniAbout
+    FooterAbout,
+    FooterEmail
   },
+
   head() {
     return {
       titleTemplate: `${this.$t('contact.title')} — ${this.$t('name')}`,
@@ -120,7 +111,36 @@ export default {
 }
 </script>
 
-<style coped>
+<style>
+@media (min-width: 1024px) {
+  .container {
+    --container-width: 934px;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-auto-flow: column;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid:nth-child(1) :nth-child(4) {
+    grid-row: 1 / 5;
+  }
+
+  .grid:nth-child(2) :nth-child(1) {
+    max-width: 80%;
+  }
+
+  .grid:nth-child(2) :nth-child(4) {
+    grid-row: 2 / 3;
+  }
+
+  .grid:nth-child(2) :nth-child(5) {
+    grid-row: 3 / 3;
+  }
+}
+
 input,
 textarea {
   display: grid;
