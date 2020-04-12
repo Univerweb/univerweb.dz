@@ -64,17 +64,14 @@ export default {
   padding-right: 2rem;
   height: 50px;
   border: 0;
-  font-family: inherit;
+  font-family: Gotham;
   font-size: initial;
   font-weight: 500;
   letter-spacing: -0.02em;
   text-transform: uppercase;
   cursor: pointer;
   outline: 0;
-}
-
-[dir='rtl'] .lang select {
-  font-weight: 800;
+  z-index: 2;
 }
 
 @media (min-width: 1024px) {
