@@ -240,8 +240,18 @@ h2,
 .h2 {
   font-family: Objectivity;
   font-size: 36px;
+  font-weight: 800;
   line-height: 42px;
+  letter-spacing: -0.05em;
+  word-spacing: -0.05em;
   margin-top: 0;
+}
+
+h6,
+.h6 {
+  font-family: Objectivity;
+  font-size: 11px;
+  font-weight: 800;
 }
 
 [dir='rtl'] h2,
@@ -263,7 +273,7 @@ button {
 
 a,
 button {
-  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .btn {
