@@ -96,17 +96,17 @@ export default (context) => {
               'Afin de mieux vous connaitre, nous essaierons de comprendre des éléments essentiels tels que votre activité, votre philosophie, vos objectifs et vos contraintes.'
           },
           recherche: {
-            title: 'Écoute',
+            title: 'Recherche',
             text:
               'Après avoir mieux fait connaissance et cerner votre projet, nous trouverons des solutions adaptées à vos besoins tout en respectant votre image de marque.'
           },
           creation: {
-            title: 'Écoute',
+            title: 'Création',
             text:
               'En vous consultant et informant étape par étape, votre projet commence à avoir un visage, le votre tout simplement.'
           },
           suivi: {
-            title: 'Écoute',
+            title: 'Suivi et maintenance',
             text:
               "Après la publication du site web, nous vous accompagnerons dans la maintenance et mise à jour du site, dans la formation et le référencement et dans l'analyse du trafic."
           }
