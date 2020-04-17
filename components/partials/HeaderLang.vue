@@ -44,6 +44,7 @@ export default {
   display: grid;
   grid-template-columns: repeat(3, auto);
   align-items: center;
+  width: fit-content;
   background: var(--blue);
   padding: 0 20px;
   border-radius: 50px;
