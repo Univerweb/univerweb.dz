@@ -30,42 +30,42 @@ export default (context) => {
           {
             id: '1',
             name: 'Acodim',
-            content: 'Contenu à venir…',
+            description: 'Contenu à venir…',
             thumbnail: 'https://picsum.photos/750/800?random=1',
             slug: 'acodim'
           },
           {
             id: '2',
             name: 'Botanique Algérie',
-            content: 'Contenu à venir…',
+            description: 'Contenu à venir…',
             thumbnail: 'https://picsum.photos/750/800?random=2',
             slug: 'botanique-algerie'
           },
           {
             id: '3',
             name: 'TPBL',
-            content: 'Contenu à venir…',
+            description: 'Contenu à venir…',
             thumbnail: 'https://picsum.photos/750/800?random=3',
             slug: 'tpbl'
           },
           {
             id: '4',
             name: 'infoElec',
-            content: 'Contenu à venir…',
+            description: 'Contenu à venir…',
             thumbnail: 'https://picsum.photos/750/800?random=4',
             slug: 'infoelec'
           },
           {
             id: '5',
             name: 'Soprofort',
-            content: 'Contenu à venir…',
+            description: 'Contenu à venir…',
             thumbnail: 'https://picsum.photos/750/800?random=5',
             slug: 'soprofort'
           },
           {
             id: '6',
             name: 'Corim',
-            content: 'Contenu à venir…',
+            description: 'Contenu à venir…',
             thumbnail: 'https://picsum.photos/750/800?random=6',
             slug: 'Corim'
           }
@@ -106,9 +106,32 @@ export default (context) => {
               'En vous consultant et informant étape par étape, votre projet commence à avoir un visage, le votre tout simplement.'
           },
           suivi: {
-            title: 'Suivi et maintenance',
+            title: 'Suivi',
             text:
               "Après la publication du site web, nous vous accompagnerons dans la maintenance et mise à jour du site, dans la formation et le référencement et dans l'analyse du trafic."
+          }
+        },
+        choisir: {
+          title: 'Pourquoi nous choisir',
+          prestation: {
+            title: 'Une prestation complète',
+            text:
+              'Du choix de votre nom de domaine à la configuration de votre messagerie professionnelle, en passant par la création, l’hébergement et le référencement de votre site web, nous vous offrirons un service complet.'
+          },
+          pointe: {
+            title: 'À la pointe de la technique',
+            text:
+              'Nous utilisons les dernières techniques et langages du web (HTML5, CSS3 et JavaScript), afin de vous offrir le meilleur service possible.'
+          },
+          projet: {
+            title: 'Un projet qui vous ressemble',
+            text:
+              'Nous concevons des sites web qui vous ressemblent et qui sont adaptés à votre budget.'
+          },
+          design: {
+            title: 'Un design innovant',
+            text:
+              'Nous concevons un design sur mesure afin de refléter au mieux l’identité de votre entreprise.'
           }
         }
       },

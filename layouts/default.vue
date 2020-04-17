@@ -73,12 +73,47 @@ export default {
 
 <style>
 @font-face {
+  font-family: 'Objectivity';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/objectivity-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Objectivity';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/objectivity-medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Objectivity';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/fonts/objectivity-bold.woff2') format('woff2');
+}
+
+@font-face {
   font-family: 'Almarai';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: local('Almarai'), local('Almarai-Regular'),
-    url(/fonts/almarai-regular.woff2) format('woff2');
+    url('/fonts/almarai-regular.woff2') format('woff2');
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41,
+    U+FB50-FDFF, U+FE80-FEFC;
+}
+
+@font-face {
+  font-family: 'Almarai';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Almarai Bold'), local('Almarai-Bold'),
+    url('/fonts/almarai-medium.woff2') format('woff2');
   unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41,
     U+FB50-FDFF, U+FE80-FEFC;
 }
@@ -94,7 +129,15 @@ export default {
     U+FB50-FDFF, U+FE80-FEFC;
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 :root {
+  --font: 'Objectivity', sans-serif;
+  --font-arabe: 'Almarai', sans-serif;
   --blue: #50c8f0;
   --dark-blue: #28285a;
   --dark: #111111;
@@ -103,12 +146,6 @@ export default {
   --white: #fff;
   --container-padding: 15px;
   --container-width: calc(100% - var(--container-padding) * 2);
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
 }
 
 html {
@@ -120,14 +157,15 @@ html {
 
 body {
   color: var(--dark);
-  font-family: Gotham;
+  font-family: var(--font);
+  font-weight: 400;
   font-size: 1rem;
   line-height: 1.5;
   margin: 0;
 }
 
 [dir='rtl'] body {
-  font-family: 'Almarai', sans-serif;
+  font-family: var(--font-arabe);
 }
 
 .page-enter-active,
@@ -157,10 +195,10 @@ main {
 }
 
 .container {
-  padding-right: calc(50% - var(--container-width) / 2);
-  padding-left: calc(50% - var(--container-width) / 2);
-  padding-top: 100px;
-  padding-bottom: 100px;
+  margin-right: calc(50% - var(--container-width) / 2);
+  margin-left: calc(50% - var(--container-width) / 2);
+  padding-top: 140px;
+  padding-bottom: 140px;
 }
 
 @media (min-width: 768px) {
@@ -187,6 +225,23 @@ main {
   }
 }
 
+main .container:nth-child(n + 2) {
+  border-top: 1px solid var(--dark-light);
+}
+
+.grid {
+  display: grid;
+  gap: 35px;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 70px;
+  }
+}
+
 .hero {
   min-height: calc(100vh - 75px);
   display: grid;
@@ -207,18 +262,23 @@ main {
 
 h1,
 .h1 {
-  font-family: Objectivity;
   font-size: 48px;
   font-weight: 800;
   line-height: 52px;
   letter-spacing: -0.05em;
   word-spacing: -0.05em;
-  margin-top: 0;
+  margin: 0 0 30px;
 }
 
-[dir='rtl'] h1,
-[dir='rtl'] .h1 {
-  font-family: 'Almarai', sans-serif;
+@media (min-width: 768px) {
+  .h1,
+  h1 {
+    margin: 0 0 100px;
+  }
+
+  .h1 {
+    max-width: 25%;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -228,6 +288,7 @@ h1,
     line-height: 64px;
   }
 }
+
 @media (min-width: 1920px) {
   .h1,
   h1 {
@@ -238,42 +299,56 @@ h1,
 
 h2,
 .h2 {
-  font-family: Objectivity;
   font-size: 36px;
-  font-weight: 800;
+  font-weight: 500;
   line-height: 42px;
   letter-spacing: -0.05em;
   word-spacing: -0.05em;
-  margin-top: 0;
+  margin: 0 0 20px;
+}
+
+@media (min-width: 1440px) {
+  .h2,
+  h2 {
+    font-size: 48px;
+    line-height: 54px;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  margin: 20px 0 0;
+}
+
+@media (min-width: 1440px) {
+  .h3,
+  h3 {
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: -1px;
+  }
 }
 
 h6,
 .h6 {
-  font-family: Objectivity;
   font-size: 11px;
   font-weight: 800;
-}
-
-[dir='rtl'] h2,
-[dir='rtl'] .h2 {
-  font-family: 'Almarai', sans-serif;
 }
 
 a {
   color: var(--dark);
   text-decoration: none;
+  transition: color 0.3s ease-in-out;
 }
 
 button {
   font-family: inherit;
   font-size: inherit;
-  border: 0;
+  border: none;
   cursor: pointer;
-}
-
-a,
-button {
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .btn {
@@ -282,19 +357,11 @@ button {
   color: var(--blue) !important;
   font-weight: 500;
   line-height: 50px;
-  letter-spacing: -0.02em;
   text-transform: uppercase;
-  width: fit-content;
   height: 50px;
   padding: 0 30px;
-  font-family: inherit;
-  font-size: inherit;
-  border: 0;
   border-radius: 50px;
-}
-
-[dir='rtl'] .btn {
-  font-weight: 800;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .btn:hover {
@@ -303,7 +370,7 @@ button {
 }
 
 p {
-  margin-top: 10px;
+  margin-top: 0;
   margin-bottom: 10px;
 }
 
@@ -311,8 +378,9 @@ p:last-child {
   margin-bottom: 0;
 }
 
-.bold {
-  font-weight: 500;
+img {
+  width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
@@ -322,29 +390,5 @@ p:last-child {
   height: 1px;
   width: 1px;
   word-wrap: normal;
-}
-
-.grid {
-  display: grid;
-  column-gap: 45px;
-  justify-content: space-between;
-}
-
-@media (min-width: 768px) {
-  .grid-2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .grid-3 {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 1440px) {
-  .grid-4 {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
 </style>

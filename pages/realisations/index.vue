@@ -1,34 +1,52 @@
 <template>
   <main id="main">
-    <section class="container">
+    <div class="container works">
       <h1>{{ $t('works.title') }}</h1>
 
-      <!-- <div class="grid works">
+      <div class="grid">
         <div
           v-for="(work, index) in $t('works.work')"
           :key="work.id"
           :index="index"
+          class="item"
         >
+          <h2 class="h3">
+            <nuxt-link :to="localePath('/realisations/' + work.slug)">
+              {{ work.name }}
+            </nuxt-link>
+          </h2>
           <nuxt-link :to="localePath('/realisations/' + work.slug)">
             <img :src="work.thumbnail" :alt="work.name" />
-            <h2 class="h3">{{ work.name }}</h2>
+            <p>{{ work.description }}</p>
           </nuxt-link>
         </div>
-      </div> -->
+      </div>
 
-      <div class="grid works">
-        <div v-for="(work, index) in works" :key="index" class="work">
+      <!-- <div class="grid">
+        <div v-for="(work, index) in works" :key="index" class="item">
+          <h2 class="h3">
+            <nuxt-link
+              :to="
+                localePath({
+                  name: 'realisations-id',
+                  params: { id: work.slug }
+                })
+              "
+            >
+              {{ work.name }}
+            </nuxt-link>
+          </h2>
           <nuxt-link
             :to="
               localePath({ name: 'realisations-id', params: { id: work.slug } })
             "
           >
             <img :src="work.thumbnail" :alt="work.name" />
-            <h2 class="h3">{{ work.name }}</h2>
+            <p>{{ work.description }}</p>
           </nuxt-link>
         </div>
-      </div>
-    </section>
+      </div> -->
+    </div>
   </main>
 </template>
 
@@ -38,37 +56,37 @@ export default {
     await store.dispatch('all', [
       {
         name: 'Acodim',
-        content: 'Contenu à venir…',
+        description: 'Contenu à venir…',
         thumbnail: 'https://picsum.photos/750/800?random=1',
         slug: 'acodim'
       },
       {
         name: 'Botanique Algérie',
-        content: 'Contenu à venir…',
+        description: 'Contenu à venir…',
         thumbnail: 'https://picsum.photos/750/800?random=2',
         slug: 'botanique-algerie'
       },
       {
         name: 'TPBL',
-        content: 'Contenu à venir…',
+        description: 'Contenu à venir…',
         thumbnail: 'https://picsum.photos/750/800?random=3',
         slug: 'tpbl'
       },
       {
         name: 'infoElec',
-        content: 'Contenu à venir…',
+        description: 'Contenu à venir…',
         thumbnail: 'https://picsum.photos/750/800?random=4',
         slug: 'infoelec'
       },
       {
         name: 'Soprofort',
-        content: 'Contenu à venir…',
+        description: 'Contenu à venir…',
         thumbnail: 'https://picsum.photos/750/800?random=5',
         slug: 'soprofort'
       },
       {
         name: 'Corim',
-        content: 'Contenu à venir…',
+        description: 'Contenu à venir…',
         thumbnail: 'https://picsum.photos/750/800?random=6',
         slug: 'corim'
       }
@@ -114,18 +132,39 @@ export default {
 </script>
 
 <style>
-.works {
-  grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
-}
-img {
-  width: 100%;
-  height: auto;
+@media (min-width: 768px) {
+  .works .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-.h3 {
-  font-size: 24px;
-  line-height: 32px;
-  margin: 20px 0 0;
+.works .item {
+  display: grid;
+  align-content: start;
+}
+
+.works h2 {
+  order: 1;
+}
+
+.works .item > a {
+  position: relative;
+  display: grid;
+}
+
+.works a p {
+  display: grid;
+  align-items: end;
+  background: var(--blue);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.works a:hover p {
+  opacity: 1;
 }
 </style>

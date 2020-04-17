@@ -30,42 +30,42 @@ export default (context) => {
           {
             id: '1',
             name: 'أكوديم',
-            content: 'محتوى قادم ...',
+            description: 'محتوى قادم ...',
             thumbnail: 'https://picsum.photos/750/800?random=1',
             slug: 'acodim'
           },
           {
             id: '2',
             name: 'بوتانيك الجزائر',
-            content: 'محتوى قادم ...',
+            description: 'محتوى قادم ...',
             thumbnail: 'https://picsum.photos/750/800?random=2',
             slug: 'botanique-algerie'
           },
           {
             id: '3',
             name: 'تي بي بي أل',
-            content: 'محتوى قادم ...',
+            description: 'محتوى قادم ...',
             thumbnail: 'https://picsum.photos/750/800?random=3',
             slug: 'tpbl'
           },
           {
             id: '4',
             name: 'إنفو إيليك',
-            content: 'محتوى قادم ...',
+            description: 'محتوى قادم ...',
             thumbnail: 'https://picsum.photos/750/800?random=4',
             slug: 'infoelec'
           },
           {
             id: '5',
             name: 'صوبروفور',
-            content: 'محتوى قادم ...',
+            description: 'محتوى قادم ...',
             thumbnail: 'https://picsum.photos/750/800?random=5',
             slug: 'soprofort'
           },
           {
             id: '6',
             name: 'كوريم',
-            content: 'محتوى قادم ...',
+            description: 'محتوى قادم ...',
             thumbnail: 'https://picsum.photos/750/800?random=6',
             slug: 'corim'
           }
@@ -105,9 +105,30 @@ export default (context) => {
               'من خلال التشاور وإعلامك خطوة بخطوة ، يبدأ مشروعك في أن يكون له وجه ، ببساطة هو وجهك.'
           },
           suivi: {
-            title: 'المراقبة والصيانة',
+            title: 'مراقبة',
             text:
               'بعد نشر الموقع ، سنرافقك في صيانة وتحديث الموقع ، في التدريب والمراجع وتحليل حركة المرور.'
+          }
+        },
+        choisir: {
+          title: 'لماذا تختارنا',
+          prestation: {
+            title: 'خدمة كاملة',
+            text:
+              'من اختيار اسم النطاق الخاص بك إلى تكوين الرسائل المهنية الخاصة بك ، بما في ذلك إنشاء موقعك واستضافته والإشارة إليه ، سنقدم لك خدمة كاملة.'
+          },
+          pointe: {
+            title: 'في طليعة التكنولوجيا',
+            text:
+              'نحن نستخدم أحدث تقنيات ولغات الويب (إتش تي إم إل 5 و سي إس إس 3 وجافا سكريبت) ، لنقدم لك أفضل خدمة ممكنة.'
+          },
+          projet: {
+            title: 'مشروع يشبهك',
+            text: 'نحن نصمم مواقع ويب تشبهك ومصممة خصيصًا لميزانيتك.'
+          },
+          design: {
+            title: 'تصميم مبتكر',
+            text: 'ننشئ تصميمًا مخصصًا ليعكس هوية عملك بشكل أفضل.'
           }
         }
       },

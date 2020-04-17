@@ -30,7 +30,7 @@ export default (context) => {
           {
             id: '1',
             name: 'Acodim',
-            content: 'Contenu à venir…',
+            description: 'Content to come ...',
             thumbnail: 'https://picsum.photos/750/800?random=1',
             slug: 'acodim'
           },
@@ -106,9 +106,32 @@ export default (context) => {
               'By consulting and informing you step by step, your project begins to have a face, yours simply.'
           },
           suivi: {
-            title: 'Monitoring and maintenance',
+            title: 'Monitoring',
             text:
               'After the publication of the website, we will accompany you in the maintenance and updating of the site, in training and referencing and in traffic analysis.'
+          }
+        },
+        choisir: {
+          title: 'Why choose us',
+          prestation: {
+            title: 'A complete service',
+            text:
+              'From the choice of your domain name to the configuration of your professional messaging, including the creation, hosting and referencing of your website, we will offer you a complete service.'
+          },
+          pointe: {
+            title: 'At the cutting edge of technology',
+            text:
+              'We use the latest techniques and languages of the web (HTML5, CSS3 and JavaScript), in order to offer you the best possible service.'
+          },
+          projet: {
+            title: 'A project that looks like you',
+            text:
+              'We design websites that look like you and are tailored to your budget.'
+          },
+          design: {
+            title: 'Innovative design',
+            text:
+              'We create a custom design to best reflect the identity of your business.'
           }
         }
       },

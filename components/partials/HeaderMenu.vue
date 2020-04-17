@@ -98,14 +98,7 @@ export default {
   color: var(--dark);
   font-size: 24px;
   font-weight: 500;
-  line-height: 25px;
-  letter-spacing: -0.02em;
   text-transform: uppercase;
-}
-
-[dir='rtl'] .menu a {
-  font-family: 'Almarai', sans-serif;
-  font-weight: 800;
 }
 
 @media (min-width: 1024px) {

@@ -1,67 +1,82 @@
 <template>
   <main id="main">
-    <div class="container grid">
-      <h1 class="h2">{{ $t('contact.title') }}</h1>
-      <footer-about />
-      <footer-email />
-      <form method="post" action="">
-        <label for="fullname" class="visually-hidden">
-          {{ $t('contact.form.fullname') }}
-        </label>
-        <input
-          id="fullname"
-          type="text"
-          name="fullname"
-          :placeholder="$t('contact.form.fullname')"
-          required
-        />
-        <label for="company" class="visually-hidden">
-          {{ $t('contact.form.company') }}
-        </label>
-        <input
-          id="company"
-          type="text"
-          name="company"
-          :placeholder="$t('contact.form.company')"
-          required
-        />
-        <label for="email" class="visually-hidden">
-          {{ $t('contact.form.email') }}
-        </label>
-        <input
-          id="email"
-          type="email"
-          name="email"
-          :placeholder="$t('contact.form.email')"
-          required
-        />
-        <label for="message" class="visually-hidden">
-          {{ $t('contact.form.message') }}
-        </label>
-        <textarea
-          id="message"
-          name="message"
-          :placeholder="$t('contact.form.message')"
-          cols="40"
-          rows="10"
-          required
-        ></textarea>
-        <button type="submit" class="btn">
-          {{ $t('contact.form.submit') }}
-        </button>
-      </form>
+    <div class="container contact grid">
+      <div class="item">
+        <h1 class="h2">{{ $t('contact.title') }}</h1>
+        <footer-about />
+        <footer-email />
+      </div>
+      <div class="item">
+        <form method="post" action="">
+          <label for="fullname" class="visually-hidden">
+            {{ $t('contact.form.fullname') }}
+          </label>
+          <input
+            id="fullname"
+            type="text"
+            name="fullname"
+            :placeholder="$t('contact.form.fullname')"
+            required
+          />
+          <label for="company" class="visually-hidden">
+            {{ $t('contact.form.company') }}
+          </label>
+          <input
+            id="company"
+            type="text"
+            name="company"
+            :placeholder="$t('contact.form.company')"
+            required
+          />
+          <label for="email" class="visually-hidden">
+            {{ $t('contact.form.email') }}
+          </label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            :placeholder="$t('contact.form.email')"
+            required
+          />
+          <label for="message" class="visually-hidden">
+            {{ $t('contact.form.message') }}
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            :placeholder="$t('contact.form.message')"
+            cols="40"
+            rows="10"
+            required
+          ></textarea>
+          <button type="submit" class="btn">
+            {{ $t('contact.form.submit') }}
+          </button>
+        </form>
+      </div>
     </div>
-
-    <div class="container grid">
+    <div class="container other">
       <h2>{{ $t('contact.other.title') }}</h2>
-      <h3 class="h6">{{ $t('contact.other.direction.title') }}</h3>
-      <a :href="'mailto:' + $t('contact.other.direction.email')" class="link">
-        {{ $t('contact.other.direction.email') }}
-      </a>
-      <h3 class="h6">{{ $t('contact.other.technique.title') }}</h3>
-      <a :href="'mailto:' + $t('contact.other.technique.email')" class="link">
-        {{ $t('contact.other.technique.email') }}
-      </a>
+      <div class="grid">
+        <div class="item">
+          <h3 class="h6">{{ $t('contact.other.direction.title') }}</h3>
+          <a
+            :href="'mailto:' + $t('contact.other.direction.email')"
+            class="link"
+          >
+            {{ $t('contact.other.direction.email') }}
+          </a>
+        </div>
+        <div class="item">
+          <h3 class="h6">{{ $t('contact.other.technique.title') }}</h3>
+          <a
+            :href="'mailto:' + $t('contact.other.technique.email')"
+            class="link"
+          >
+            {{ $t('contact.other.technique.email') }}
+          </a>
+        </div>
+      </div>
     </div>
   </main>
 </template>
@@ -113,31 +128,9 @@ export default {
 
 <style>
 @media (min-width: 1024px) {
-  .container {
+  .contact,
+  .other {
     --container-width: 934px;
-  }
-}
-
-@media (min-width: 768px) {
-  .grid {
-    grid-auto-flow: column;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .grid:nth-child(1) :nth-child(4) {
-    grid-row: 1 / 5;
-  }
-
-  .grid:nth-child(2) :nth-child(1) {
-    max-width: 80%;
-  }
-
-  .grid:nth-child(2) :nth-child(4) {
-    grid-row: 2 / 3;
-  }
-
-  .grid:nth-child(2) :nth-child(5) {
-    grid-row: 3 / 3;
   }
 }
 
@@ -147,10 +140,10 @@ textarea {
   width: 100%;
   height: 45px;
   background-color: var(--light);
-  font-family: inherit;
   color: var(--dark);
-  font-size: 10px;
+  font-family: inherit;
   font-weight: 500;
+  font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 4px;
   margin: 0 0 15px;
@@ -162,7 +155,6 @@ textarea {
 
 [dir='rtl'] input,
 [dir='rtl'] textarea {
-  font-weight: 800;
   letter-spacing: 0;
 }
 
@@ -176,5 +168,11 @@ textarea {
 input:focus,
 textarea:focus {
   border-color: var(--blue);
+}
+
+@media (min-width: 768px) {
+  .other h2 {
+    max-width: 25%;
+  }
 }
 </style>

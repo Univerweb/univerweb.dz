@@ -45,7 +45,6 @@ export default {
   grid-template-columns: repeat(3, auto);
   align-items: center;
   background: var(--blue);
-  width: fit-content;
   padding: 0 20px;
   border-radius: 50px;
 }
@@ -64,9 +63,9 @@ export default {
   padding-right: 2rem;
   height: 50px;
   border: 0;
-  font-family: Gotham;
-  font-size: initial;
+  font-family: var(--font);
   font-weight: 500;
+  font-size: initial;
   letter-spacing: -0.02em;
   text-transform: uppercase;
   cursor: pointer;

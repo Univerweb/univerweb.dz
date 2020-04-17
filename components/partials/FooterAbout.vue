@@ -6,7 +6,7 @@
 
 <style>
 footer .about {
-  font-weight: 600;
+  font-weight: 500;
   width: 310px;
   margin-top: 0;
 }

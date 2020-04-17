@@ -2,7 +2,7 @@
   <main id="main">
     <section class="container hero">
       <h1>{{ work.name }}</h1>
-      <p class="h2">{{ work.content }}</p>
+      <p class="h2">{{ work.description }}</p>
     </section>
   </main>
 </template>
@@ -14,37 +14,37 @@ export default {
       await store.dispatch('all', [
         {
           name: 'Acodim',
-          content: 'Contenu à venir…',
+          description: 'Contenu à venir…',
           thumbnail: 'https://picsum.photos/750/800?random=1"',
           slug: 'acodim'
         },
         {
           name: 'Botanique Algérie',
-          content: 'Contenu à venir…',
+          description: 'Contenu à venir…',
           thumbnail: 'https://picsum.photos/750/800?random=2"',
           slug: 'botanique-algerie'
         },
         {
           name: 'TPBL',
-          content: 'Contenu à venir…',
+          description: 'Contenu à venir…',
           thumbnail: 'https://picsum.photos/750/800?random=3',
           slug: 'tpbl'
         },
         {
           name: 'infoElec',
-          content: 'Contenu à venir…',
+          description: 'Contenu à venir…',
           thumbnail: 'https://picsum.photos/750/800?random=4',
           slug: 'infoelec'
         },
         {
           name: 'Soprofort',
-          content: 'Contenu à venir…',
+          description: 'Contenu à venir…',
           thumbnail: 'https://picsum.photos/750/800?random=5',
           slug: 'soprofort'
         },
         {
           name: 'Corim',
-          content: 'Contenu à venir…',
+          description: 'Contenu à venir…',
           thumbnail: 'https://picsum.photos/750/800?random=6',
           slug: 'corim'
         }
