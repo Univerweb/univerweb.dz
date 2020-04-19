@@ -14,19 +14,19 @@
     <div class="container working">
       <h2 class="h1">{{ $t('agency.methode.title') }}</h2>
       <ol class="grid">
-        <li>
+        <li class="item">
           <h3 class="h2">{{ $t('agency.methode.ecoute.title') }}</h3>
           <p>{{ $t('agency.methode.ecoute.text') }}</p>
         </li>
-        <li>
+        <li class="item">
           <h3 class="h2">{{ $t('agency.methode.recherche.title') }}</h3>
           <p>{{ $t('agency.methode.recherche.text') }}</p>
         </li>
-        <li>
+        <li class="item">
           <h3 class="h2">{{ $t('agency.methode.creation.title') }}</h3>
           <p>{{ $t('agency.methode.creation.text') }}</p>
         </li>
-        <li>
+        <li class="item">
           <h3 class="h2">{{ $t('agency.methode.suivi.title') }}</h3>
           <p>{{ $t('agency.methode.suivi.text') }}</p>
         </li>
@@ -36,19 +36,19 @@
     <div class="container">
       <h2 class="h1">{{ $t('agency.choisir.title') }}</h2>
       <div class="grid">
-        <div>
+        <div class="item">
           <h3 class="h2">{{ $t('agency.choisir.prestation.title') }}</h3>
           <p>{{ $t('agency.choisir.prestation.text') }}</p>
         </div>
-        <div>
+        <div class="item">
           <h3 class="h2">{{ $t('agency.choisir.pointe.title') }}</h3>
           <p>{{ $t('agency.choisir.pointe.text') }}</p>
         </div>
-        <div>
+        <div class="item">
           <h3 class="h2">{{ $t('agency.choisir.projet.title') }}</h3>
           <p>{{ $t('agency.choisir.projet.text') }}</p>
         </div>
-        <div>
+        <div class="item">
           <h3 class="h2">{{ $t('agency.choisir.design.title') }}</h3>
           <p>{{ $t('agency.choisir.design.text') }}</p>
         </div>
@@ -94,8 +94,8 @@ export default {
 }
 </script>
 
-<style>
-@media (min-width: 1024px) {
+<style lang="scss">
+@media (min-width: $lg) {
   .working .grid {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -106,15 +106,15 @@ ol {
   padding: 0;
   list-style: none;
   counter-reset: counterName;
-}
 
-ol li:before {
-  counter-increment: counterName;
-  content: counters(counterName, '-', decimal-leading-zero);
-  color: var(--blue);
-  font-weight: 800;
-  font-size: 84px;
-  line-height: 84px;
+  & li:before {
+    counter-increment: counterName;
+    content: counters(counterName, '-', decimal-leading-zero);
+    color: var(--blue);
+    font-weight: 800;
+    font-size: 84px;
+    line-height: 84px;
+  }
 }
 
 .working h3 {

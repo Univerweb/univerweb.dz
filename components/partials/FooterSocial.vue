@@ -35,33 +35,27 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .social {
-  justify-content: space-between;
-  width: 275px;
-  margin-top: 20px;
-}
-
-footer ul {
   display: grid;
   grid-template-columns: repeat(3, auto);
   column-gap: 15px;
-  margin: 0;
+  justify-content: space-between;
+  width: 275px;
+  margin: 20px 0 0;
   padding: 0;
   list-style: none;
-}
+  & a {
+    display: grid;
+    & svg {
+      height: 20px;
+      fill: $blue;
+      transition: opacity $transition;
 
-footer ul a {
-  display: grid;
-}
-
-footer svg {
-  height: 20px;
-  fill: var(--blue);
-  transition: opacity 0.3s ease-in-out;
-}
-
-footer svg:hover {
-  opacity: 0.5;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
 }
 </style>

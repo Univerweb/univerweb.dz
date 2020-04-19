@@ -39,44 +39,44 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .lang {
   display: grid;
   grid-template-columns: repeat(3, auto);
   align-items: center;
   width: fit-content;
-  background: var(--blue);
+  background: $blue;
   padding: 0 20px;
   border-radius: 50px;
-}
-
-@media (min-width: 1024px) {
-  .lang {
-    background: var(--dark-blue);
+  @media (min-width: $md) {
+    & {
+      background: $dark-blue;
+    }
   }
-}
-
-.lang select {
-  background-color: transparent;
-  color: var(--dark-blue);
-  appearance: none;
-  padding-left: 1.5rem;
-  padding-right: 2rem;
-  height: 50px;
-  border: 0;
-  font-family: var(--font);
-  font-weight: 500;
-  font-size: initial;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
-  cursor: pointer;
-  outline: 0;
-  z-index: 2;
-}
-
-@media (min-width: 1024px) {
-  .lang select {
-    color: var(--blue);
+  & select {
+    background-color: transparent;
+    color: $dark-blue;
+    appearance: none;
+    padding-left: 1.5rem;
+    padding-right: 2rem;
+    height: 50px;
+    border: 0;
+    font-family: $font;
+    font-weight: 500;
+    font-size: initial;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: 0;
+    z-index: 2;
+    @media (min-width: $md) {
+      & {
+        color: $blue;
+      }
+    }
+    & option {
+      color: initial;
+    }
   }
 }
 </style>

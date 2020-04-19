@@ -6,20 +6,20 @@
   </svg>
 </template>
 
-<style>
+<style lang="scss">
 .globe {
   margin-right: -1rem;
-  fill: var(--dark-blue);
-}
+  fill: $dark-blue;
 
-@media (min-width: 1024px) {
-  .globe {
-    fill: var(--blue);
+  [dir='rtl'] & {
+    margin-right: 0;
+    margin-left: -1rem;
   }
-}
 
-[dir='rtl'] .globe {
-  margin-right: 0;
-  margin-left: -1rem;
+  @media (min-width: $md) {
+    & {
+      fill: $blue;
+    }
+  }
 }
 </style>

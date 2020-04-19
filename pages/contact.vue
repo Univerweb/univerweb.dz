@@ -126,8 +126,8 @@ export default {
 }
 </script>
 
-<style>
-@media (min-width: 1024px) {
+<style lang="scss">
+@media (min-width: $md) {
   .contact,
   .other {
     --container-width: 934px;
@@ -139,8 +139,8 @@ textarea {
   display: grid;
   width: 100%;
   height: 45px;
-  background-color: var(--light);
-  color: var(--dark);
+  background-color: $light;
+  color: $dark;
   font-family: inherit;
   font-weight: 500;
   font-size: 10px;
@@ -151,11 +151,14 @@ textarea {
   border: 1px solid transparent;
   outline: 0;
   transition: border-color 0.3s;
-}
 
-[dir='rtl'] input,
-[dir='rtl'] textarea {
-  letter-spacing: 0;
+  [dir='rtl'] & {
+    letter-spacing: 0;
+  }
+
+  &:focus {
+    border-color: $blue;
+  }
 }
 
 textarea {
@@ -165,12 +168,7 @@ textarea {
   padding: 15px;
 }
 
-input:focus,
-textarea:focus {
-  border-color: var(--blue);
-}
-
-@media (min-width: 768px) {
+@media (min-width: $sm) {
   .other h2 {
     max-width: 25%;
   }

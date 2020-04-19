@@ -17,7 +17,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .toggle {
   background: transparent;
   width: 45px;
@@ -26,24 +26,21 @@ export default {
   padding: 10px;
   text-align: left;
   outline: none;
-}
-
-[dir='rtl'] .toggle {
-  text-align: right;
-}
-
-@media (min-width: 1024px) {
-  .toggle {
-    display: none;
+  [dir='rtl'] & {
+    text-align: right;
   }
-}
+  @media (min-width: $md) {
+    & {
+      display: none;
+    }
+  }
+  &:focus {
+    background: $dark-blue;
 
-.toggle:focus {
-  background: var(--dark-blue);
-}
-
-.opened .toggle:focus {
-  background: var(--blue);
+    .opened & {
+      background: $blue;
+    }
+  }
 }
 
 .toggle-icon {
@@ -54,7 +51,7 @@ export default {
 .toggle-icon,
 .toggle-icon:before,
 .toggle-icon:after {
-  background: var(--blue);
+  background: $blue;
   height: 3px;
   border-radius: 3px;
   transition: all 0.3s;
@@ -69,7 +66,7 @@ export default {
 .opened .toggle:focus .toggle-icon,
 .opened .toggle:focus .toggle-icon:before,
 .opened .toggle:focus .toggle-icon:after {
-  background: var(--dark-blue);
+  background: $dark-blue;
 }
 
 @keyframes CollapseCenter {

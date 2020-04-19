@@ -8,7 +8,7 @@
   </address>
 </template>
 
-<style>
+<style lang="scss">
 address {
   font-style: normal;
 }

@@ -39,7 +39,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .menu {
   display: none;
   position: fixed;
@@ -53,77 +53,67 @@ export default {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s;
-}
-
-.opened .menu {
-  display: grid;
-  background: var(--dark-blue);
-  opacity: 1;
-  pointer-events: auto;
-}
-
-@media (min-width: 1024px) {
-  .menu {
+  .opened & {
     display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    position: initial;
-    height: initial;
-    padding: 0;
+    background: $dark-blue;
     opacity: 1;
     pointer-events: auto;
   }
-}
-
-.menu ul {
-  display: grid;
-  grid-template-columns: min-content;
-  row-gap: 30px;
-  margin: 0;
-  padding: 45px 0 0;
-  list-style: none;
-}
-
-@media (min-width: 1024px) {
-  .menu ul {
-    grid-template-columns: repeat(4, auto);
-    justify-content: space-around;
-    padding: 0;
+  @media (min-width: $md) {
+    & {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      position: initial;
+      height: initial;
+      padding: 0;
+      opacity: 1;
+      pointer-events: auto;
+    }
   }
-}
-
-.menu a {
-  position: relative;
-  display: block;
-  color: var(--dark);
-  font-size: 24px;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
-@media (min-width: 1024px) {
-  .menu a {
-    font-size: inherit;
-    text-align: center;
+  & ul {
+    display: grid;
+    grid-template-columns: min-content;
+    row-gap: 30px;
+    margin: 0;
+    padding: 45px 0 0;
+    list-style: none;
+    @media (min-width: $md) {
+      & {
+        grid-template-columns: repeat(4, auto);
+        justify-content: space-around;
+        padding: 0;
+      }
+    }
   }
-}
-
-.opened .menu a {
-  color: var(--white);
-}
-
-.menu li a::after {
-  position: absolute;
-  display: block;
-  content: '';
-  color: var(--blue);
-  border-top: 3px solid;
-  width: 0%;
-  transition: width 0.3s;
-}
-
-.menu li a:hover::after,
-.menu li a.nuxt-link-active::after {
-  width: 25%;
+  & a {
+    position: relative;
+    display: block;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    .opened & {
+      color: $white;
+    }
+    @media (min-width: $md) {
+      & {
+        font-size: 1rem;
+        text-align: center;
+      }
+    }
+    &::after {
+      position: absolute;
+      display: block;
+      content: '';
+      color: $blue;
+      border-top: 3px solid;
+      width: 0%;
+      transition: width 0.3s;
+    }
+    &:hover::after,
+    &.nuxt-link-active::after {
+      width: 25%;
+    }
+  }
 }
 </style>

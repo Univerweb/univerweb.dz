@@ -1,9 +1,9 @@
 <template>
   <main id="main">
-    <section class="container hero">
+    <div class="container hero">
       <h1>{{ $t('prestations.title') }}</h1>
-      <p class="h2">{{ $t('prestations.description') }}</p>
-    </section>
+      <p class="lead">{{ $t('prestations.description') }}</p>
+    </div>
   </main>
 </template>
 

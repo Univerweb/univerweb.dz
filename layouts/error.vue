@@ -70,7 +70,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .hero.error {
   justify-content: center;
   text-align: center;

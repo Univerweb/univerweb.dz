@@ -44,7 +44,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 header {
   position: fixed;
   width: 100%;
@@ -54,33 +54,29 @@ header {
   grid-template-columns: auto auto;
   justify-content: space-between;
   align-items: center;
-  background: var(--white);
-  padding: 15px;
+  background: $white;
+  padding: 15px 15px;
   transition: padding 0.3s;
   z-index: 1;
-}
-
-@media (min-width: 1024px) {
-  header {
-    grid-template-columns: auto 1fr;
-    padding: 45px;
+  .scrolled & {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
-}
-
-@media (min-width: 1440px) {
-  header {
-    padding: 45px 135px;
+  @media (min-width: $md) {
+    & {
+      grid-template-columns: auto 1fr;
+      padding: 45px 45px;
+    }
+    .scrolled & {
+      padding: 15px 45px;
+    }
   }
-}
-
-.scrolled header:not(.opened) {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-@media (min-width: 1024px) {
-  .scrolled header {
-    padding-top: 15px;
-    padding-bottom: 15px;
+  @media (min-width: $lg) {
+    & {
+      padding: 45px 135px;
+    }
+    .scrolled & {
+      padding: 15px 135px;
+    }
   }
 }
 </style>

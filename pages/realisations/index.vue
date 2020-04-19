@@ -131,8 +131,14 @@ export default {
 }
 </script>
 
-<style>
-@media (min-width: 768px) {
+<style lang="scss">
+@media (min-width: $sm) {
+  .works .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: $md) {
   .works .grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -141,30 +147,30 @@ export default {
 .works .item {
   display: grid;
   align-content: start;
-}
 
-.works h2 {
-  order: 1;
-}
+  & h2 {
+    order: 1;
+  }
 
-.works .item > a {
-  position: relative;
-  display: grid;
-}
+  & > a {
+    position: relative;
+    display: grid;
 
-.works a p {
-  display: grid;
-  align-items: end;
-  background: var(--blue);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  padding: 15px;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
+    & p {
+      display: grid;
+      align-items: end;
+      background: $blue;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding: 15px;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
 
-.works a:hover p {
-  opacity: 1;
+    &:hover p {
+      opacity: 1;
+    }
+  }
 }
 </style>

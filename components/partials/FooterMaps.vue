@@ -9,7 +9,7 @@
   </a>
 </template>
 
-<style>
+<style lang="scss">
 .maps {
   margin: 0;
 }

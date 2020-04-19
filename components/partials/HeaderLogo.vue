@@ -27,17 +27,19 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .logo svg {
   display: block;
   height: 25px;
-}
-
-.logo svg g:last-child {
-  transition: fill 0.3s;
-}
-
-.opened .logo svg g:last-child {
-  fill: var(--white);
+  g:first-child {
+    fill: $blue;
+  }
+  g:last-child {
+    fill: $dark-blue;
+    transition: fill $transition;
+    .opened & {
+      fill: $white;
+    }
+  }
 }
 </style>

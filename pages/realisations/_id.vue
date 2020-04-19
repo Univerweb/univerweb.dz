@@ -1,9 +1,9 @@
 <template>
   <main id="main">
-    <section class="container hero">
+    <div class="container hero">
       <h1>{{ work.name }}</h1>
       <p class="h2">{{ work.description }}</p>
-    </section>
+    </div>
   </main>
 </template>
 

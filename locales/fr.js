@@ -19,7 +19,7 @@ export default (context) => {
         create: {
           title: 'Nous créons des sites web.',
           text:
-            'Nous concevons des sites web qui répondent précisément à vos attentes et qui respectent intégralement votre image de marque.'
+            'Nous concevons des sites web qui répondent précisément à vos attentes et qui respectent intégralement votre image de marque. Lorem, ipsum dolor sit amet consectetur adipisicing elit.'
         }
       },
 

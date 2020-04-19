@@ -71,7 +71,10 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+/*
+** @font-face
+*/
 @font-face {
   font-family: 'Objectivity';
   font-style: normal;
@@ -129,23 +132,34 @@ export default {
     U+FB50-FDFF, U+FE80-FEFC;
 }
 
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/sofiapro-regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/sofiapro-medium.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('/fonts/sofiapro-bold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+}
+
 *,
 *:before,
 *:after {
   box-sizing: border-box;
-}
-
-:root {
-  --font: 'Objectivity', sans-serif;
-  --font-arabe: 'Almarai', sans-serif;
-  --blue: #50c8f0;
-  --dark-blue: #28285a;
-  --dark: #111111;
-  --light: #fafafa;
-  --dark-light: #f2f2f2;
-  --white: #fff;
-  --container-padding: 15px;
-  --container-width: calc(100% - var(--container-padding) * 2);
 }
 
 html {
@@ -155,145 +169,158 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
+/*
+** Body
+*/
 body {
-  color: var(--dark);
-  font-family: var(--font);
-  font-weight: 400;
+  color: $dark;
+  font-family: $font;
   font-size: 1rem;
+  font-weight: 400;
   line-height: 1.5;
   margin: 0;
+  [dir='rtl'] & {
+    font-family: $font-arabe;
+  }
 }
 
-[dir='rtl'] body {
-  font-family: var(--font-arabe);
-}
-
+/*
+** Page Transition
+*/
 .page-enter-active,
 .page-leave-active {
-  transition: opacity 0.3s;
+  transition: opacity $transition;
 }
 .page-enter,
 .page-leave-active {
   opacity: 0;
 }
 
+/*
+** Wrapper
+*/
 .wrapper {
   display: grid;
   min-height: 100vh;
   height: 100%;
 }
 
+/*
+** Main
+*/
 main {
   margin-top: 75px;
-  transition: margin-top 0.3s;
-}
-
-@media (min-width: 1024px) {
-  main {
-    margin-top: 140px;
+  transition: margin-top $transition;
+  @media (min-width: $md) {
+    & {
+      margin-top: 140px;
+    }
   }
 }
 
+/*
+** Container
+*/
 .container {
-  margin-right: calc(50% - var(--container-width) / 2);
-  margin-left: calc(50% - var(--container-width) / 2);
-  padding-top: 140px;
-  padding-bottom: 140px;
-}
-
-@media (min-width: 768px) {
-  .container {
-    --container-width: 738px;
+  margin: 0 auto;
+  padding: 140px 15px;
+  @media (min-width: $md) {
+    & {
+      max-width: calc(#{$md} - 90px);
+    }
+  }
+  @media (min-width: $lg) {
+    & {
+      max-width: calc(#{$lg} - 400px);
+    }
+  }
+  @media (min-width: $xl) {
+    & {
+      max-width: calc(#{$xl} - 700px);
+    }
+  }
+  main &:nth-child(n + 2) {
+    border-top: 1px solid $dark-light;
   }
 }
 
-@media (min-width: 1024px) {
-  .container {
-    --container-width: 934px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .container {
-    --container-width: 1040px;
-  }
-}
-
-@media (min-width: 1920px) {
-  .container {
-    --container-width: 1220px;
-  }
-}
-
-main .container:nth-child(n + 2) {
-  border-top: 1px solid var(--dark-light);
-}
-
+/*
+** Grid
+*/
 .grid {
   display: grid;
-  gap: 35px;
+  gap: 30px;
   justify-content: space-between;
-}
-
-@media (min-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 70px;
+  @media (min-width: $sm) {
+    & {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 45px;
+    }
+  }
+  @media (min-width: $md) {
+    & {
+      gap: 70px;
+    }
   }
 }
 
+/*
+** Hero
+*/
 .hero {
   min-height: calc(100vh - 75px);
   display: grid;
   align-content: center;
   justify-content: space-between;
-  transition: min-height 0.3s;
-}
-
-@media (min-width: 1024px) {
-  .hero {
-    min-height: calc(100vh - 140px);
-  }
-
-  .scrolled .hero {
-    min-height: calc(100vh - 75px);
+  transition: min-height $transition;
+  @media (min-width: $md) {
+    & {
+      min-height: calc(100vh - 140px);
+      .scrolled & {
+        min-height: calc(100vh - 75px);
+      }
+    }
   }
 }
 
-h1,
-.h1 {
-  font-size: 48px;
+/*
+** Headings
+*/
+.h1,
+h1 {
+  font-size: 2.5rem;
   font-weight: 800;
-  line-height: 52px;
+  line-height: 1;
   letter-spacing: -0.05em;
-  word-spacing: -0.05em;
-  margin: 0 0 30px;
-}
-
-@media (min-width: 768px) {
-  .h1,
-  h1 {
-    margin: 0 0 100px;
+  margin: 0 0 30px 0;
+  max-width: 680px;
+  .hero & {
+    margin-bottom: 15px;
   }
-
-  .h1 {
-    max-width: 25%;
+  @media (min-width: $sm) {
+    & {
+      font-size: 3.5rem;
+      margin-bottom: 45px;
+    }
   }
-}
-
-@media (min-width: 1440px) {
-  .h1,
-  h1 {
-    font-size: 60px;
-    line-height: 64px;
+  @media (min-width: $md) {
+    & {
+      font-size: 4.5rem;
+      margin-bottom: 70px;
+      .hero & {
+        margin-bottom: 30px;
+      }
+    }
   }
-}
-
-@media (min-width: 1920px) {
-  .h1,
-  h1 {
-    font-size: 84px;
-    line-height: 88px;
+  @media (min-width: $lg) {
+    & {
+      font-size: 5.5rem;
+    }
+  }
+  @media (min-width: $xl) {
+    & {
+      font-size: 6rem;
+    }
   }
 }
 
@@ -305,14 +332,10 @@ h2,
   letter-spacing: -0.05em;
   word-spacing: -0.05em;
   margin: 0 0 20px;
-}
 
-@media (min-width: 1440px) {
-  .h2,
-  h2 {
-    font-size: 48px;
-    line-height: 54px;
-  }
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
 h3,
@@ -321,27 +344,40 @@ h3,
   font-weight: 500;
   line-height: 32px;
   margin: 20px 0 0;
+
+  font-size: 1.75rem;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
-@media (min-width: 1440px) {
-  .h3,
-  h3 {
-    font-size: 36px;
-    line-height: 42px;
-    letter-spacing: -1px;
-  }
+h4,
+.h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h5,
+.h5 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
 h6,
 .h6 {
   font-size: 11px;
   font-weight: 800;
+
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
 a {
-  color: var(--dark);
+  color: $dark;
   text-decoration: none;
-  transition: color 0.3s ease-in-out;
+  transition: color $transition;
 }
 
 button {
@@ -353,34 +389,37 @@ button {
 
 .btn {
   display: inline-block;
-  background: var(--dark-blue);
-  color: var(--blue) !important;
+  background: $dark-blue;
+  color: $blue;
   font-weight: 500;
   line-height: 50px;
   text-transform: uppercase;
   height: 50px;
   padding: 0 30px;
   border-radius: 50px;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-.btn:hover {
-  background: var(--blue);
-  color: var(--dark-blue) !important;
-}
-
-p {
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-
-p:last-child {
-  margin-bottom: 0;
+  transition: background-color $transition, color $transition;
+  &:hover {
+    background: $blue;
+    color: $dark-blue;
+  }
 }
 
 img {
   width: 100%;
   height: auto;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 10px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.lead {
+  font-size: 1.75rem;
+  max-width: 680px;
 }
 
 .visually-hidden {

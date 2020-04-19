@@ -6,20 +6,20 @@
   </svg>
 </template>
 
-<style>
+<style lang="scss">
 .arrow {
   margin-left: -1rem;
-  fill: var(--dark-blue);
-}
+  fill: $dark-blue;
 
-@media (min-width: 1024px) {
-  .arrow {
-    fill: var(--blue);
+  [dir='rtl'] & {
+    margin-left: 0;
+    margin-right: -1rem;
   }
-}
 
-[dir='rtl'] .arrow {
-  margin-left: 0;
-  margin-right: -1rem;
+  @media (min-width: $md) {
+    & {
+      fill: $blue;
+    }
+  }
 }
 </style>

@@ -1,13 +1,14 @@
 <template>
-  <p class="about">
+  <p class="about lead">
     {{ $t('contact.text') }}
   </p>
 </template>
 
-<style>
+<style lang="scss">
 footer .about {
+  font-size: inherit;
+  line-height: inherit;
   font-weight: 500;
-  width: 310px;
-  margin-top: 0;
+  max-width: 310px;
 }
 </style>

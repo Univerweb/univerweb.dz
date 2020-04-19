@@ -36,45 +36,41 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 footer {
   display: grid;
-  grid-template-areas: 'address-container' 'about-container' 'copy';
   gap: 45px;
-  background: var(--dark-blue);
-  color: var(--light);
+  background: $dark-blue;
+  color: $light;
   padding: 45px 15px;
-}
-
-@media (min-width: 1024px) {
-  footer {
-    grid-template-areas: 'address-container about-container' 'copy about-container';
-    justify-content: space-between;
-    padding: 135px 135px;
+  @media (min-width: $sm) {
+    & {
+      padding: 135px 135px;
+    }
   }
-}
-
-@media (min-width: 1440px) {
-  footer {
-    grid-template-columns: auto auto 180px;
-    grid-template-areas: 'address-container about-container copy' 'address-container about-container copy';
-    padding: 180px 270px;
+  @media (min-width: $md) {
+    & {
+      grid-template-columns: auto auto;
+      justify-content: space-between;
+      .address-container {
+        grid-row: 1 / 1;
+      }
+      .about-container {
+        grid-row: 1 / 3;
+      }
+    }
   }
-}
-
-.address-container {
-  grid-area: address-container;
-}
-
-.about-container {
-  grid-area: about-container;
-}
-
-footer a {
-  color: var(--white);
-}
-
-footer a:hover {
-  color: var(--blue);
+  @media (min-width: $lg) {
+    & {
+      grid-template-columns: auto auto 160px;
+      padding: 180px 270px;
+    }
+  }
+  & a {
+    color: $white;
+    &:hover {
+      color: $blue;
+    }
+  }
 }
 </style>

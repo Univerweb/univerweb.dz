@@ -5,16 +5,14 @@
   </a>
 </template>
 
-<style>
+<style lang="scss">
 .link {
+  font-family: $font;
   justify-self: start;
-  font-family: var(--font);
+  font-size: 1.75rem;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 32px;
-}
-
-.link:hover {
-  color: var(--blue);
+  &:hover {
+    color: $blue;
+  }
 }
 </style>
