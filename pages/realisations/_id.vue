@@ -2,7 +2,7 @@
   <main id="main">
     <div class="container hero">
       <h1>{{ work.name }}</h1>
-      <p class="h2">{{ work.description }}</p>
+      <p class="lead">{{ work.description }}</p>
     </div>
   </main>
 </template>
