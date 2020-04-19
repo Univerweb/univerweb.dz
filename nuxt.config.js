@@ -124,7 +124,7 @@ export default {
    ** Customize the progress-bar color
    */
   loading: {
-    color: 'var(--blue)'
+    color: '#50c8f0'
   },
   /*
    ** Global CSS
