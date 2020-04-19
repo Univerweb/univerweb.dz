@@ -41,7 +41,7 @@ export default {
   grid-template-columns: repeat(3, auto);
   column-gap: 15px;
   justify-content: space-between;
-  width: 275px;
+  max-width: 295px;
   margin: 20px 0 0;
   padding: 0;
   list-style: none;
