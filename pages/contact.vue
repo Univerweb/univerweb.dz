@@ -1,6 +1,6 @@
 <template>
-  <main id="main">
-    <div class="container contact grid">
+  <main id="main" class="contact">
+    <div class="container grid">
       <div class="item">
         <h1 class="h2">{{ $t('contact.title') }}</h1>
         <footer-about />
@@ -55,7 +55,7 @@
         </form>
       </div>
     </div>
-    <div class="container other">
+    <div class="container">
       <h2>{{ $t('contact.other.title') }}</h2>
       <div class="grid">
         <div class="item">
@@ -128,9 +128,8 @@ export default {
 
 <style lang="scss">
 @media (min-width: $md) {
-  .contact,
-  .other {
-    --container-width: 934px;
+  .contact .container {
+    max-width: calc(1024px - 90px);
   }
 }
 
@@ -151,26 +150,17 @@ textarea {
   border: 1px solid transparent;
   outline: 0;
   transition: border-color 0.3s;
-
   [dir='rtl'] & {
     letter-spacing: 0;
   }
-
+  &:not(input) {
+    resize: none;
+    line-height: 20px;
+    min-height: 90px;
+    padding: 15px;
+  }
   &:focus {
     border-color: $blue;
-  }
-}
-
-textarea {
-  resize: none;
-  line-height: 20px;
-  min-height: 90px;
-  padding: 15px;
-}
-
-@media (min-width: $sm) {
-  .other h2 {
-    max-width: 25%;
   }
 }
 </style>

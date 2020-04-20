@@ -1,6 +1,6 @@
 <template>
-  <main id="main">
-    <div class="container works">
+  <main id="main" class="works">
+    <div class="container">
       <h1>{{ $t('works.title') }}</h1>
 
       <div class="grid">
@@ -132,12 +132,6 @@ export default {
 </script>
 
 <style lang="scss">
-@media (min-width: $sm) {
-  .works .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 @media (min-width: $md) {
   .works .grid {
     grid-template-columns: repeat(3, 1fr);
@@ -147,15 +141,12 @@ export default {
 .works .item {
   display: grid;
   align-content: start;
-
   & h2 {
     order: 1;
   }
-
   & > a {
     position: relative;
     display: grid;
-
     & p {
       display: grid;
       align-items: end;
@@ -167,7 +158,6 @@ export default {
       opacity: 0;
       transition: opacity 0.3s ease-in-out;
     }
-
     &:hover p {
       opacity: 1;
     }

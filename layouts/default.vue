@@ -326,28 +326,19 @@ h1 {
 
 h2,
 .h2 {
-  font-size: 36px;
-  font-weight: 500;
-  line-height: 42px;
-  letter-spacing: -0.05em;
-  word-spacing: -0.05em;
-  margin: 0 0 20px;
-
   font-size: 2rem;
   font-weight: 500;
   line-height: 1.2;
+  letter-spacing: -0.05em;
+  margin: 0 0 20px;
 }
 
 h3,
 .h3 {
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 32px;
-  margin: 20px 0 0;
-
   font-size: 1.75rem;
   font-weight: 500;
   line-height: 1.2;
+  margin: 20px 0 0;
 }
 
 h4,
@@ -366,11 +357,8 @@ h5,
 
 h6,
 .h6 {
-  font-size: 11px;
-  font-weight: 800;
-
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 800;
   line-height: 1.2;
 }
 
