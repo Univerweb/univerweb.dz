@@ -1,14 +1,17 @@
 <template>
   <main id="main">
-    <div class="container hero">
-      <h1>{{ $t('home.create.title') }}</h1>
-      <p class="lead">{{ $t('home.create.text') }}</p>
-    </div>
+    <home-welcome />
   </main>
 </template>
 
 <script>
+import homeWelcome from '@/components/partials/home/welcome'
+
 export default {
+  components: {
+    homeWelcome
+  },
+
   head() {
     return {
       titleTemplate: `${this.$t('name')} — ${this.$t('home.title')}`,
