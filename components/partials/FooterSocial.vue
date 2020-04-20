@@ -51,7 +51,6 @@ export default {
       height: 20px;
       fill: $blue;
       transition: opacity $transition;
-
       &:hover {
         opacity: 0.5;
       }

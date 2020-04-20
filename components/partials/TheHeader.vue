@@ -65,17 +65,17 @@ header {
     & {
       grid-template-columns: auto 1fr;
       padding: 45px 45px;
-    }
-    .scrolled & {
-      padding: 15px 45px;
+      .scrolled & {
+        padding: 15px 45px;
+      }
     }
   }
   @media (min-width: $lg) {
     & {
       padding: 45px 135px;
-    }
-    .scrolled & {
-      padding: 15px 135px;
+      .scrolled & {
+        padding: 15px 135px;
+      }
     }
   }
 }
