@@ -47,7 +47,7 @@ export default {
       { property: 'og:locale', content: 'fr_DZ' },
       { property: 'og:type', content: 'website' },
       { property: 'og:site_name', content: pkg.author },
-      { hid: 'og:image', property: 'og:image', content: '' },
+      { property: 'og:image:type', content: '' },
       { property: 'og:image:width', content: '' },
       { property: 'og:image:height', content: '' }
     ],
@@ -130,14 +130,12 @@ export default {
    ** Global CSS
    */
   css: [],
-
   /*
    ** Style Resources
    */
   styleResources: {
     scss: '@/assets/scss/var.scss'
   },
-
   /*
    ** Plugins to load before mounting the App
    */
