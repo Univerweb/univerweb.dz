@@ -106,18 +106,13 @@ ol {
   padding: 0;
   list-style: none;
   counter-reset: counterName;
-
   & li:before {
     counter-increment: counterName;
     content: counters(counterName, '-', decimal-leading-zero);
-    color: var(--blue);
+    color: $blue;
     font-weight: 800;
     font-size: 84px;
     line-height: 84px;
   }
-}
-
-.working h3 {
-  margin-top: 40px;
 }
 </style>
