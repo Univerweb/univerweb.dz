@@ -162,9 +162,10 @@ export default (context) => {
       },
 
       error: {
-        message_1: 'Oups… pas de bol.',
-        message_2: "Une erreur s'est produite",
-        btn: "Retour à l'accueil"
+        title_1: 'Page not found',
+        title_2: 'An error has occurred',
+        description: 'Page not found, no bowl.',
+        btn: 'Back to Home'
       },
 
       footer: {

@@ -159,9 +159,10 @@ export default (context) => {
       },
 
       error: {
-        message_1: 'Oups… pas de bol.',
-        message_2: "Une erreur s'est produite",
-        btn: "Retour à l'accueil"
+        title_1: 'الصفحة غير موجودة',
+        title_2: 'وقع خطأ ما',
+        description: 'لم يتم العثور على الصفحة ، بدون وعاء.',
+        btn: 'عودة إلى الإستقبال'
       },
 
       footer: {
