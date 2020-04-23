@@ -1,25 +1,35 @@
 <template>
-  <svg width="14" height="8" xmlns="http://www.w3.org/2000/svg" class="arrow">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.71 15" class="arrow">
     <path
-      d="M6.35416667 7.825L.1875 1.70833333C-.00833333 1.5125-.00833333 1.19583333.1875 1l.825-.825c.19583333-.19583333.5125-.19583333.70833333 0l4.9875 4.9375L11.6958333.175c.1958334-.19583333.5125-.19583333.7083334 0l.825.825c.1958333.19583333.1958333.5125 0 .70833333L7.0625 7.825c-.19583333.19583333-.5125.19583333-.70833333 0z"
+      d="M0,2.361L2.361,0l10.495,10.495L23.35,0l2.361,2.361L13.071,15l-0.216-0.216L12.639,15L0,2.361z"
     ></path>
   </svg>
 </template>
 
 <style lang="scss">
 .arrow {
-  margin-left: -1rem;
-  fill: $dark-blue;
-
-  [dir='rtl'] & {
-    margin-left: 0;
-    margin-right: -1rem;
-  }
-
-  @media (min-width: $md) {
-    & {
-      fill: $blue;
+  .lang & {
+    height: 8px;
+    margin-left: -1rem;
+    fill: $dark-blue;
+    [dir='rtl'] & {
+      margin-left: 0;
+      margin-right: -1rem;
     }
+    @media (min-width: $md) {
+      & {
+        fill: $blue;
+      }
+    }
+  }
+  .hero & {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25.71px;
+    height: 15px;
+    cursor: pointer;
   }
 }
 </style>

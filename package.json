@@ -25,7 +25,8 @@
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/pwa": "^3.0.0-0",
     "nuxt": "^2.12.0",
-    "nuxt-i18n": "^6.8.1"
+    "nuxt-i18n": "^6.8.1",
+    "vue-scrollto": "^2.18.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",

@@ -239,9 +239,6 @@ main {
       max-width: calc(#{$xl} - 700px);
     }
   }
-  main &:nth-child(n + 2) {
-    border-top: 1px solid $dark-light;
-  }
 }
 
 /*
@@ -271,7 +268,6 @@ main {
   min-height: calc(100vh - 75px);
   display: grid;
   align-content: center;
-  justify-content: space-between;
   transition: min-height $transition;
   @media (min-width: $md) {
     & {
@@ -408,6 +404,7 @@ p {
 .lead {
   font-size: 1.75rem;
   max-width: 680px;
+  margin: 0;
 }
 
 .visually-hidden {
@@ -417,5 +414,10 @@ p {
   height: 1px;
   width: 1px;
   word-wrap: normal;
+}
+
+::selection {
+  color: $dark-blue;
+  background: $blue;
 }
 </style>

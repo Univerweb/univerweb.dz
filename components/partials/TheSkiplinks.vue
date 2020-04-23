@@ -1,8 +1,8 @@
 <template>
   <div class="skip-links">
-    <nuxt-link to="#header">Aller au menu</nuxt-link>
-    <nuxt-link to="#main">Aller au contenu</nuxt-link>
-    <nuxt-link to="#footer">Aller au contact</nuxt-link>
+    <button v-scroll-to="'#header'">Aller au menu</button>
+    <button v-scroll-to="'#main'">Aller au contenu</button>
+    <button v-scroll-to="'#footer'">Aller au contact</button>
   </div>
 </template>
 
@@ -10,7 +10,7 @@
 .skip-links {
   position: absolute;
   z-index: 10;
-  & a {
+  & button {
     position: absolute;
     clip: rect(1px, 1px, 1px, 1px);
     background: $blue;
