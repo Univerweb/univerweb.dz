@@ -1,5 +1,5 @@
 <template>
-  <footer id="footer">
+  <footer>
     <div class="address-container">
       <footer-address />
       <footer-maps />

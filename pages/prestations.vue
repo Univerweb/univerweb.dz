@@ -1,5 +1,5 @@
 <template>
-  <main id="main">
+  <main>
     <div class="container hero">
       <h1>{{ $t('prestations.title') }}</h1>
       <p class="lead">{{ $t('prestations.description') }}</p>

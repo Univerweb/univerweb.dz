@@ -1,11 +1,5 @@
 <template>
-  <header
-    id="header"
-    class="header"
-    :class="{
-      opened: $store.state.isOpen && isMobile === true
-    }"
-  >
+  <header :class="{ opened: $store.state.isOpen && isMobile === true }">
     <header-logo />
     <header-menu />
     <header-toggle />

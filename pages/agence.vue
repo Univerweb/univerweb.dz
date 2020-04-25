@@ -1,5 +1,5 @@
 <template>
-  <main id="main">
+  <main>
     <div class="container grid">
       <div class="item">
         <h1>{{ $t('agency.title') }}</h1>

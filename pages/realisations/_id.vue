@@ -1,5 +1,5 @@
 <template>
-  <main id="main">
+  <main>
     <div class="container hero">
       <h1>{{ work.name }}</h1>
       <p class="lead">{{ work.description }}</p>

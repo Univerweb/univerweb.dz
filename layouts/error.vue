@@ -1,5 +1,5 @@
 <template>
-  <main id="main" class="hero error">
+  <main class="hero error">
     <div v-if="error.statusCode === 404">
       <h1>{{ $t('error.title_1') }}</h1>
       <nuxt-link to="/" class="btn">{{ $t('error.btn') }}</nuxt-link>

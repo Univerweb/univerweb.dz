@@ -1,5 +1,5 @@
 <template>
-  <main id="main" class="contact">
+  <main>
     <div class="container grid">
       <div class="item">
         <h1 class="h2">{{ $t('contact.title') }}</h1>
@@ -93,6 +93,7 @@ export default {
 
   head() {
     return {
+      bodyAttrs: { class: 'contact' },
       titleTemplate: `${this.$t('contact.title')} — ${this.$t('name')}`,
       meta: [
         {
