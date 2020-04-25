@@ -1,26 +1,21 @@
 <template>
-  <main id="main">
-    <home-welcome id="welcome" />
-    <div id="works" class="container">
-      <h1>{{ $t('works.title') }}</h1>
-      <div class="lead">
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia non
-          incidunt quo dolor praesentium culpa neque quam, quis ullam?
-          Reprehenderit quis facilis voluptas quod molestiae vitae et error
-          adipisci natus?
-        </p>
-      </div>
-    </div>
+  <main>
+    <home-welcome />
+    <section class="container works">
+      <h2 class="h1">{{ $t('works.title') }}</h2>
+      <home-works />
+    </section>
   </main>
 </template>
 
 <script>
 import homeWelcome from '@/components/partials/home/welcome'
+import homeWorks from '@/components/partials/home/works'
 
 export default {
   components: {
-    homeWelcome
+    homeWelcome,
+    homeWorks
   },
 
   head() {
