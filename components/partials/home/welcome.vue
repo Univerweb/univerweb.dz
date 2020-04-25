@@ -1,9 +1,9 @@
 <template>
-  <div class="container hero">
+  <section class="container hero">
     <h1>{{ $t('home.create.title') }}</h1>
     <p class="lead">{{ $t('home.create.text') }}</p>
-    <lang-arrow v-scroll-to="'#works'" />
-  </div>
+    <lang-arrow v-scroll-to="'.works'" />
+  </section>
 </template>
 
 <script>
