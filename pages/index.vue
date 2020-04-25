@@ -1,10 +1,7 @@
 <template>
   <main>
     <home-welcome />
-    <section class="container works">
-      <h2 class="h1">{{ $t('works.title') }}</h2>
-      <home-works />
-    </section>
+    <home-works />
   </main>
 </template>
 

@@ -1,9 +1,6 @@
 <template>
   <main>
-    <div class="container">
-      <h1>{{ $t('works.title') }}</h1>
-      <works />
-    </div>
+    <works />
   </main>
 </template>
 
