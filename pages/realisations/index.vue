@@ -98,30 +98,4 @@ export default {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
-.works .item {
-  display: grid;
-  align-content: start;
-  & h2 {
-    order: 1;
-  }
-  & > a {
-    position: relative;
-    display: grid;
-    & p {
-      display: grid;
-      align-items: end;
-      background: $blue;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      padding: 15px;
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-    }
-    &:hover p {
-      opacity: 1;
-    }
-  }
-}
 </style>
