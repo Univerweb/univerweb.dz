@@ -1,8 +1,5 @@
 <template>
-  <section
-    v-if="$route.name === `index___${this.$i18n.locale}`"
-    class="container works"
-  >
+  <section v-if="$route.name === home" class="container works">
     <h2 class="h1">{{ $t('works.title') }}</h2>
     <div class="grid">
       <div
@@ -70,6 +67,16 @@
     </div>
   </div> -->
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      home: `index___${this.$i18n.locale}`
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 .works .item {
