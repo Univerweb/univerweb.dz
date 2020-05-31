@@ -6,7 +6,7 @@
       <div class="grid">
         <div v-for="work in works.data" :key="work.id" class="item">
           <h2 class="h3">
-            <NuxtLink :to="localePath('/realisations/' + work.id)">
+            <NuxtLink :to="localePath(`/realisations/${work.attributes.slug}`)">
               {{ work.attributes.title }}
             </NuxtLink>
           </h2>

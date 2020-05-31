@@ -17,15 +17,17 @@ export default {
   async asyncData({ params, error, app }) {
     const locale = app.i18n.locale
 
-    const url = `https://api.univerweb.dz/${locale}/v1/works/${params.id}`
+    const url = `https://api.univerweb.dz/${locale}/v1/works`
 
     try {
       const {
-        data: {
-          data: { attributes }
-        }
+        data: { data }
       } = await axios.get(url)
-      return { work: attributes }
+
+      return {
+        work: data.find(({ attributes: { slug } }) => slug === params.id)
+          .attributes
+      }
     } catch (e) {
       error({ message: 'Page non trouvée', statusCode: 404 })
     }
