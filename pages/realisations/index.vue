@@ -1,59 +1,42 @@
 <template>
-  <main>
-    <works />
+  <main id="main" class="works">
+    <!-- <works /> -->
+    <div class="container">
+      <h1>{{ $t('works.title') }}</h1>
+      <div class="grid">
+        <div v-for="work in works.data" :key="work.id" class="item">
+          <h2 class="h3">
+            <NuxtLink :to="localePath('/realisations/' + work.id)">
+              {{ work.attributes.title }}
+            </NuxtLink>
+          </h2>
+          <!-- <nuxt-link :to="localePath('/realisations/' + work.id)">
+            <img :src="work.thumbnailurl" :alt="work.title" />
+            <p>{{ work.body }}</p>
+          </nuxt-link> -->
+        </div>
+      </div>
+    </div>
   </main>
 </template>
 
 <script>
-import works from '@/components/partials/home/works'
+// import works from '@/components/partials/home/works'
+
+import axios from 'axios'
 
 export default {
   components: {
-    works
+    // works
   },
 
-  async asyncData({ store }) {
-    await store.dispatch('all', [
-      {
-        name: 'Acodim',
-        description: 'Contenu à venir…',
-        thumbnail: 'https://picsum.photos/750/800?random=1',
-        slug: 'acodim'
-      },
-      {
-        name: 'Botanique Algérie',
-        description: 'Contenu à venir…',
-        thumbnail: 'https://picsum.photos/750/800?random=2',
-        slug: 'botanique-algerie'
-      },
-      {
-        name: 'TPBL',
-        description: 'Contenu à venir…',
-        thumbnail: 'https://picsum.photos/750/800?random=3',
-        slug: 'tpbl'
-      },
-      {
-        name: 'infoElec',
-        description: 'Contenu à venir…',
-        thumbnail: 'https://picsum.photos/750/800?random=4',
-        slug: 'infoelec'
-      },
-      {
-        name: 'Soprofort',
-        description: 'Contenu à venir…',
-        thumbnail: 'https://picsum.photos/750/800?random=5',
-        slug: 'soprofort'
-      },
-      {
-        name: 'Corim',
-        description: 'Contenu à venir…',
-        thumbnail: 'https://picsum.photos/750/800?random=6',
-        slug: 'corim'
-      }
-    ])
-    return {
-      works: store.state.works.slice(0, 6)
-    }
+  async asyncData({ app }) {
+    const locale = app.i18n.locale
+
+    const { data } = await axios.get(
+      'https://api.univerweb.dz/' + locale + '/v1/works'
+    )
+    return { works: data }
   },
 
   head() {

@@ -1,63 +1,35 @@
 <template>
-  <main>
-    <div class="container hero">
-      <h1>{{ work.name }}</h1>
+  <main id="main">
+    <div class="container">
+      <h1>{{ id }}</h1>
       <p class="lead">{{ work.description }}</p>
+      <!-- <p class="lead">{{ work.description }} {{ description }}</p> -->
     </div>
   </main>
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
-  async asyncData({ store, route }) {
-    if (!store.state.works.length) {
-      await store.dispatch('all', [
-        {
-          name: 'Acodim',
-          description: 'Contenu à venir…',
-          thumbnail: 'https://picsum.photos/750/800?random=1"',
-          slug: 'acodim'
-        },
-        {
-          name: 'Botanique Algérie',
-          description: 'Contenu à venir…',
-          thumbnail: 'https://picsum.photos/750/800?random=2"',
-          slug: 'botanique-algerie'
-        },
-        {
-          name: 'TPBL',
-          description: 'Contenu à venir…',
-          thumbnail: 'https://picsum.photos/750/800?random=3',
-          slug: 'tpbl'
-        },
-        {
-          name: 'infoElec',
-          description: 'Contenu à venir…',
-          thumbnail: 'https://picsum.photos/750/800?random=4',
-          slug: 'infoelec'
-        },
-        {
-          name: 'Soprofort',
-          description: 'Contenu à venir…',
-          thumbnail: 'https://picsum.photos/750/800?random=5',
-          slug: 'soprofort'
-        },
-        {
-          name: 'Corim',
-          description: 'Contenu à venir…',
-          thumbnail: 'https://picsum.photos/750/800?random=6',
-          slug: 'corim'
-        }
-      ])
-    }
-    return {
-      work: store.state.works.find((work) => work.slug === route.params.id)
+  validate({ params }) {
+    return !isNaN(+params.id)
+  },
+  async asyncData({ params, error, app }) {
+    const locale = app.i18n.locale
+    try {
+      const { data } = await axios.get(
+        'https://api.univerweb.dz/' + locale + `/v1/works/${+params.work.id}`
+      )
+      return { data }
+    } catch (e) {
+      error({ message: 'Page non trouvée', statusCode: 404 })
     }
   },
 
   head() {
     return {
-      titleTemplate: `${this.work.name} — ${this.$t('name')}`,
+      // titleTemplate: `${this.work.name} — ${this.$t('name')}`,
       meta: [
         {
           hid: 'description',

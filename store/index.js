@@ -1,16 +1,12 @@
 export const state = () => ({
-  isOpen: false,
-  works: []
+  isOpen: false
 })
 
 export const getters = {}
 
 export const actions = {
   open: ({ commit }) => commit('open'),
-  close: ({ commit }) => commit('close'),
-  async all({ commit }, works) {
-    await commit('SET_POST', works)
-  }
+  close: ({ commit }) => commit('close')
 }
 
 export const mutations = {
@@ -19,6 +15,5 @@ export const mutations = {
   },
   close(state) {
     state.isOpen = false
-  },
-  SET_POST: (state, works) => (state.works = works)
+  }
 }
