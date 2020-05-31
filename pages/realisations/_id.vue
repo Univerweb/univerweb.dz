@@ -1,9 +1,8 @@
 <template>
   <main id="main">
     <div class="container">
-      <h1>{{ id }}</h1>
-      <p class="lead">{{ work.description }}</p>
-      <!-- <p class="lead">{{ work.description }} {{ description }}</p> -->
+      <h1>{{ work.title }}</h1>
+      <p class="lead">{{ work.body.value }}</p>
     </div>
   </main>
 </template>
@@ -17,11 +16,16 @@ export default {
   },
   async asyncData({ params, error, app }) {
     const locale = app.i18n.locale
+
+    const url = `https://api.univerweb.dz/${locale}/v1/works/${params.id}`
+
     try {
-      const { data } = await axios.get(
-        'https://api.univerweb.dz/' + locale + `/v1/works/${+params.id}`
-      )
-      return { data }
+      const {
+        data: {
+          data: { attributes }
+        }
+      } = await axios.get(url)
+      return { work: attributes }
     } catch (e) {
       error({ message: 'Page non trouvée', statusCode: 404 })
     }
