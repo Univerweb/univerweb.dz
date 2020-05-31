@@ -13,7 +13,7 @@ import axios from 'axios'
 
 export default {
   validate({ params }) {
-    return !isNaN(+params.id)
+    return Boolean(params.id)
   },
   async asyncData({ params, error, app }) {
     const locale = app.i18n.locale
