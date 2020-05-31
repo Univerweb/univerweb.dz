@@ -19,7 +19,7 @@ export default {
     const locale = app.i18n.locale
     try {
       const { data } = await axios.get(
-        'https://api.univerweb.dz/' + locale + `/v1/works/${+params.work.id}`
+        'https://api.univerweb.dz/' + locale + `/v1/works/${+params.id}`
       )
       return { data }
     } catch (e) {
