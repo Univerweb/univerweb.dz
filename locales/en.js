@@ -25,51 +25,7 @@ export default (context) => {
 
       works: {
         title: 'Latest work',
-        description: 'Content to come ...',
-        work: [
-          {
-            id: '1',
-            name: 'Acodim',
-            description: 'Content to come ...',
-            thumbnail: 'https://picsum.photos/750/800?random=1',
-            slug: 'acodim'
-          },
-          {
-            id: '2',
-            name: 'Botanique Algérie',
-            description: 'Content to come ...',
-            thumbnail: 'https://picsum.photos/750/800?random=2',
-            slug: 'botanique-algerie'
-          },
-          {
-            id: '3',
-            name: 'TPBL',
-            description: 'Content to come ...',
-            thumbnail: 'https://picsum.photos/750/800?random=3',
-            slug: 'tpbl'
-          },
-          {
-            id: '4',
-            name: 'infoElec',
-            description: 'Content to come ...',
-            thumbnail: 'https://picsum.photos/750/800?random=4',
-            slug: 'infoelec'
-          },
-          {
-            id: '5',
-            name: 'Soprofort',
-            description: 'Content to come ...',
-            thumbnail: 'https://picsum.photos/750/800?random=5',
-            slug: 'soprofort'
-          },
-          {
-            id: '6',
-            name: 'Corim',
-            description: 'Content to come ...',
-            thumbnail: 'https://picsum.photos/750/800?random=6',
-            slug: 'Corim'
-          }
-        ]
+        description: 'Content to come ...'
       },
 
       prestations: {

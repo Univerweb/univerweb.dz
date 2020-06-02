@@ -25,51 +25,7 @@ export default (context) => {
 
       works: {
         title: 'اخر الاعمال',
-        description: 'محتوى قادم ...',
-        work: [
-          {
-            id: '1',
-            name: 'أكوديم',
-            description: 'محتوى قادم ...',
-            thumbnail: 'https://picsum.photos/750/800?random=1',
-            slug: 'acodim'
-          },
-          {
-            id: '2',
-            name: 'بوتانيك الجزائر',
-            description: 'محتوى قادم ...',
-            thumbnail: 'https://picsum.photos/750/800?random=2',
-            slug: 'botanique-algerie'
-          },
-          {
-            id: '3',
-            name: 'تي بي بي أل',
-            description: 'محتوى قادم ...',
-            thumbnail: 'https://picsum.photos/750/800?random=3',
-            slug: 'tpbl'
-          },
-          {
-            id: '4',
-            name: 'إنفو إيليك',
-            description: 'محتوى قادم ...',
-            thumbnail: 'https://picsum.photos/750/800?random=4',
-            slug: 'infoelec'
-          },
-          {
-            id: '5',
-            name: 'صوبروفور',
-            description: 'محتوى قادم ...',
-            thumbnail: 'https://picsum.photos/750/800?random=5',
-            slug: 'soprofort'
-          },
-          {
-            id: '6',
-            name: 'كوريم',
-            description: 'محتوى قادم ...',
-            thumbnail: 'https://picsum.photos/750/800?random=6',
-            slug: 'corim'
-          }
-        ]
+        description: 'محتوى قادم ...'
       },
 
       prestations: {

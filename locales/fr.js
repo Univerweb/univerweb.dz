@@ -25,51 +25,7 @@ export default (context) => {
 
       works: {
         title: 'Réalisations',
-        description: 'Contenu à venir…',
-        work: [
-          {
-            id: '1',
-            name: 'Acodim',
-            description: 'Contenu à venir…',
-            thumbnail: 'https://picsum.photos/750/800?random=1',
-            slug: 'acodim'
-          },
-          {
-            id: '2',
-            name: 'Botanique Algérie',
-            description: 'Contenu à venir…',
-            thumbnail: 'https://picsum.photos/750/800?random=2',
-            slug: 'botanique-algerie'
-          },
-          {
-            id: '3',
-            name: 'TPBL',
-            description: 'Contenu à venir…',
-            thumbnail: 'https://picsum.photos/750/800?random=3',
-            slug: 'tpbl'
-          },
-          {
-            id: '4',
-            name: 'infoElec',
-            description: 'Contenu à venir…',
-            thumbnail: 'https://picsum.photos/750/800?random=4',
-            slug: 'infoelec'
-          },
-          {
-            id: '5',
-            name: 'Soprofort',
-            description: 'Contenu à venir…',
-            thumbnail: 'https://picsum.photos/750/800?random=5',
-            slug: 'soprofort'
-          },
-          {
-            id: '6',
-            name: 'Corim',
-            description: 'Contenu à venir…',
-            thumbnail: 'https://picsum.photos/750/800?random=6',
-            slug: 'Corim'
-          }
-        ]
+        description: 'Contenu à venir…'
       },
 
       prestations: {
