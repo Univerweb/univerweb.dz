@@ -16,9 +16,6 @@
 import axios from 'axios'
 
 export default {
-  validate({ params }) {
-    return Boolean(params.id)
-  },
   async asyncData({ params, error, app }) {
     const locale = app.i18n.locale
     const url =
@@ -28,15 +25,14 @@ export default {
       '?' +
       '&fields[file--file]=uri'
 
-    try {
-      const {
-        data: { data }
-      } = await axios.get(url)
-
-      return data.find(({ slug }) => slug === params.id)
-    } catch (e) {
+    const {
+      data: { data }
+    } = await axios.get(url)
+    const work = data.find(({ slug }) => slug === params.id)
+    if (!work) {
       error({ message: 'Page non trouvée', statusCode: 404 })
     }
+    return work
   },
 
   head() {
