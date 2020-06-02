@@ -1,8 +1,13 @@
 <template>
   <main id="main">
     <div class="container">
-      <h1>{{ work.title }}</h1>
-      <p class="lead">{{ work.body.value }}</p>
+      <h1>{{ title }}</h1>
+      <p class="lead">
+        <img
+          :src="'https://api.univerweb.dz/' + thumbnail.uri.url"
+          :alt="title"
+        />
+      </p>
     </div>
   </main>
 </template>
@@ -16,18 +21,19 @@ export default {
   },
   async asyncData({ params, error, app }) {
     const locale = app.i18n.locale
-
-    const url = `https://api.univerweb.dz/${locale}/v1/works`
+    const url =
+      'https://api.univerweb.dz/' +
+      locale +
+      '/v1/works' +
+      '?' +
+      '&fields[file--file]=uri'
 
     try {
       const {
         data: { data }
       } = await axios.get(url)
 
-      return {
-        work: data.find(({ attributes: { slug } }) => slug === params.id)
-          .attributes
-      }
+      return data.find(({ slug }) => slug === params.id)
     } catch (e) {
       error({ message: 'Page non trouvée', statusCode: 404 })
     }
@@ -35,7 +41,7 @@ export default {
 
   head() {
     return {
-      titleTemplate: `${this.work.title} — ${this.$t('name')}`,
+      titleTemplate: `${this.title} — ${this.$t('name')}`,
       meta: [
         {
           hid: 'description',

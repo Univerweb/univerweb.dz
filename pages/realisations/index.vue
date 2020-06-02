@@ -4,16 +4,19 @@
     <div class="container">
       <h1>{{ $t('works.title') }}</h1>
       <div class="grid">
-        <div v-for="work in works.data" :key="work.id" class="item">
+        <div v-for="work in works" :key="work.id" class="item">
           <h2 class="h3">
-            <NuxtLink :to="localePath(`/realisations/${work.attributes.slug}`)">
-              {{ work.attributes.title }}
+            <NuxtLink :to="localePath(`/realisations/${work.slug}`)">
+              {{ work.title }}
             </NuxtLink>
           </h2>
-          <!-- <nuxt-link :to="localePath('/realisations/' + work.id)">
-            <img :src="work.thumbnailurl" :alt="work.title" />
-            <p>{{ work.body }}</p>
-          </nuxt-link> -->
+          <nuxt-link :to="localePath('/realisations/' + work.slug)">
+            <img
+              :src="'https://api.univerweb.dz/' + work.thumbnail.uri.url"
+              :alt="work.title"
+            />
+            <p>{{ work.title }}</p>
+          </nuxt-link>
         </div>
       </div>
     </div>
@@ -32,10 +35,18 @@ export default {
 
   async asyncData({ app }) {
     const locale = app.i18n.locale
+    const url =
+      'https://api.univerweb.dz/' +
+      locale +
+      '/v1/works' +
+      '?' +
+      'sort=-nid' +
+      '&' +
+      '&fields[file--file]=uri'
 
-    const { data } = await axios.get(
-      'https://api.univerweb.dz/' + locale + '/v1/works'
-    )
+    const {
+      data: { data }
+    } = await axios.get(url)
     return { works: data }
   },
 
