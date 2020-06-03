@@ -10,7 +10,9 @@ export default (context) => {
         prestations: 'الخدمات',
         agency: 'الوكالة',
         contact: 'اتصل',
-        ariaLabel: 'افتح القائمة'
+        ariaLabel: 'افتح القائمة',
+        previous: 'السابق',
+        next: 'التالي'
       },
 
       home: {

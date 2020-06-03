@@ -10,7 +10,9 @@ export default (context) => {
         prestations: 'Prestations',
         agency: "L'agence",
         contact: 'Contact',
-        ariaLabel: 'Ouvrir le menu'
+        ariaLabel: 'Ouvrir le menu',
+        previous: 'Précédent',
+        next: 'Suivant'
       },
 
       home: {
