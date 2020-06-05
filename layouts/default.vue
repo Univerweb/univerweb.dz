@@ -373,6 +373,7 @@ button {
 
 .btn {
   display: inline-block;
+  text-align: center;
   background: $dark-blue;
   color: $blue;
   font-weight: 500;
