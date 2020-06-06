@@ -2,8 +2,6 @@ export default (context) => {
   return new Promise(function(resolve) {
     resolve({
       name: 'يونيفارواب',
-      dir: 'rtl',
-
       links: {
         home: 'الصفحة الرئيسية',
         works: 'اخر الاعمال',

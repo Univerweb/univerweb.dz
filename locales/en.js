@@ -2,8 +2,6 @@ export default (context) => {
   return new Promise(function(resolve) {
     resolve({
       name: 'Univerweb',
-      dir: 'ltr',
-
       links: {
         home: 'Home',
         works: 'Latest work',

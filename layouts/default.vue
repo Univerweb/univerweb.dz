@@ -50,20 +50,24 @@ export default {
   },
 
   head() {
+    let DIR = 'rtl'
+    if (this.$i18n.locale !== 'ar') {
+      DIR = 'ltr'
+    }
     return {
-      htmlAttrs: { lang: this.$i18n.locale, dir: this.$t('dir') },
-      meta: [
-        {
-          hid: 'og:url',
-          property: 'og:url',
-          content: `https://www.univerweb.dz${this.$route.path}`
-        }
-      ],
+      htmlAttrs: { lang: this.$i18n.locale, dir: DIR },
       link: [
         {
           hid: 'canonical',
           rel: 'canonical',
           href: `https://www.univerweb.dz${this.$route.path}`
+        }
+      ],
+      meta: [
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: `https://www.univerweb.dz${this.$route.path}`
         }
       ]
     }
