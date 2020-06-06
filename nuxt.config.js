@@ -197,5 +197,11 @@ export default {
     defaultLocale: 'fr',
     lazy: true,
     langDir: 'locales/'
+  },
+  /*
+   ** env
+   */
+  env: {
+    URL_API: process.env.URL_API || 'https://api.univerweb.dz'
   }
 }
