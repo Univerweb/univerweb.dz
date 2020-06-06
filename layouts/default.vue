@@ -60,14 +60,14 @@ export default {
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: `https://www.univerweb.dz${this.$route.path}`
+          href: process.env.URL + `${this.$route.path}`
         }
       ],
       meta: [
         {
           hid: 'og:url',
           property: 'og:url',
-          content: `https://www.univerweb.dz${this.$route.path}`
+          content: process.env.URL + `${this.$route.path}`
         }
       ]
     }
