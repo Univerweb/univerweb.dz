@@ -16,15 +16,6 @@
           </nuxt-link>
         </div>
       </div>
-
-      <div class="grid pagination">
-        <nuxt-link :to="localePath('/realisations')" class="btn previous">
-          <lang-arrow />
-        </nuxt-link>
-        <nuxt-link :to="localePath('/realisations')" class="btn next">
-          <lang-arrow />
-        </nuxt-link>
-      </div>
     </div>
   </main>
 </template>
@@ -32,12 +23,10 @@
 <script>
 import axios from 'axios'
 // import works from '@/components/partials/home/works'
-import LangArrow from '@/components/svg/LangArrow'
 
 export default {
   components: {
     // works,
-    LangArrow
   },
 
   async asyncData({ app }) {
@@ -46,9 +35,8 @@ export default {
     const SORT_WORKS = 'sort=-nid'
     const FIELD_WORKS = 'fields[node--work]=title,slug,thumbnail'
     const FILE_WORKS = 'fields[file--file]=uri'
-    const LIMIT_WORKS = 'page[limit]=6'
     const { data } = await axios.get(
-      `${URL_API}/${PATH_API}?${SORT_WORKS}&${FIELD_WORKS}&${FILE_WORKS}&${LIMIT_WORKS}`
+      `${URL_API}/${PATH_API}?${SORT_WORKS}&${FIELD_WORKS}&${FILE_WORKS}`
     )
     return {
       works: data.data,
@@ -97,27 +85,6 @@ export default {
 @media (min-width: $md) {
   .works .grid {
     grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.works .pagination {
-  grid-template-columns: repeat(2, auto);
-  margin-top: 70px;
-}
-
-.previous,
-.next {
-  width: 50px;
-  padding: 0;
-  & .arrow {
-    fill: currentColor;
-    height: 5px;
-  }
-  &:not(.next) .arrow {
-    transform: rotate(90deg);
-  }
-  &:not(.previous) .arrow {
-    transform: rotate(-90deg);
   }
 }
 </style>
