@@ -60,14 +60,14 @@ export default {
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: process.env.URL + `${this.$route.path}`
+          href: process.env.baseUrl + `${this.$route.path}`
         }
       ],
       meta: [
         {
           hid: 'og:url',
           property: 'og:url',
-          content: process.env.URL + `${this.$route.path}`
+          content: process.env.baseUrl + `${this.$route.path}`
         }
       ]
     }

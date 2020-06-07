@@ -128,8 +128,8 @@ export default {
 
   /* Environment */
   env: {
-    URL: process.env.URL || 'https://www.univerweb.dz',
-    URL_API: process.env.URL_API || 'https://api.univerweb.dz'
+    baseUrl: process.env.BASE_URL || 'https://www.univerweb.dz',
+    apiUrl: process.env.API_URL || 'https://api.univerweb.dz'
   },
 
   /* Manifest */
