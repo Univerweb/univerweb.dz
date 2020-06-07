@@ -102,7 +102,8 @@ export default {
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
     '@nuxtjs/style-resources',
-    'vue-scrollto/nuxt'
+    'vue-scrollto/nuxt',
+    '@nuxt/http'
   ],
 
   /* Internationalisation */
