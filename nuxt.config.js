@@ -2,45 +2,11 @@ import pkg from './package'
 
 export default {
   mode: 'universal',
-  /*
-   ** Manifest
-   */
-  pwa: {
-    manifest: {
-      name: pkg.author,
-      short_name: pkg.author,
-      description: pkg.description,
-      icons: [
-        {
-          src: '/android-chrome-192x192.png',
-          sizes: '192x192',
-          type: 'image/png'
-        },
-        {
-          src: '/android-chrome-512x512.png',
-          sizes: '512x512',
-          type: 'image/png'
-        }
-      ],
-      start_url: '/?standalone=true',
-      display: 'standalone',
-      background_color: '#50c8f0',
-      theme_color: '#50c8f0',
-      lang: 'fr'
-    }
-  },
-  /*
-   ** Headers of the page
-   */
+
+  /* Headers of the page */
   head: {
-    title: pkg.author,
     meta: [
       { charset: 'utf-8' },
-      {
-        hid: 'description',
-        name: 'description',
-        content: pkg.description
-      },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'msapplication-TileColor', content: '#50c8f0' },
       { name: 'theme-color', content: '#50c8f0' },
@@ -75,9 +41,7 @@ export default {
         color: '#50c8f0'
       }
     ],
-    /*
-     ** JSON-LD Data structured
-     */
+    /* JSON-LD Data structured */
     __dangerouslyDisableSanitizers: ['script'],
     script: [
       {
@@ -85,7 +49,7 @@ export default {
         innerHTML: JSON.stringify({
           '@context': 'http://schema.org',
           '@type': 'Organization',
-          name: 'Univerweb',
+          name: pkg.author,
           url: 'https://www.univerweb.dz',
           logo: {
             '@type': 'ImageObject',
@@ -120,65 +84,28 @@ export default {
     ]
   },
 
-  /*
-   ** Customize the progress-bar color
-   */
-  loading: {
-    color: '#50c8f0'
-  },
-  /*
-   ** Global CSS
-   */
-  css: [],
-  /*
-   ** Style Resources
-   */
+  /* Style Resources */
   styleResources: {
     scss: '@/assets/scss/var.scss'
   },
-  /*
-   ** Plugins to load before mounting the App
-   */
+
+  /* Plugins to load before mounting the App */
   plugins: [],
-  /*
-   ** Nuxt.js dev-modules
-   */
-  buildModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module',
-    // Doc: https://github.com/nuxt-community/stylelint-module
-    '@nuxtjs/stylelint-module'
-  ],
-  /*
-   ** Nuxt.js modules
-   */
+
+  /* Nuxt.js dev-modules */
+  buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/stylelint-module'],
+
+  /* Nuxt.js modules */
   modules: [
-    // Doc: https://axios.nuxtjs.org/usage
+    'nuxt-i18n',
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
-    'nuxt-i18n',
     '@nuxtjs/style-resources',
     'vue-scrollto/nuxt'
   ],
-  /*
-   ** Axios module configuration
-   ** See https://axios.nuxtjs.org/options
-   */
-  axios: {},
-  /*
-   ** Build configuration
-   */
-  build: {
-    /*
-     ** You can extend webpack config here
-     */
-    extend(config, ctx) {}
-  },
-  /*
-   ** i18n
-   */
+
+  /* Internationalisation */
   i18n: {
     locales: [
       {
@@ -198,10 +125,39 @@ export default {
     lazy: true,
     langDir: 'locales/'
   },
-  /*
-   ** env
-   */
+
+  /* Environment */
   env: {
+    URL: process.env.URL || 'https://www.univerweb.dz',
     URL_API: process.env.URL_API || 'https://api.univerweb.dz'
+  },
+
+  /* Manifest */
+  manifest: {
+    name: pkg.author,
+    short_name: pkg.author,
+    description: pkg.description,
+    icons: [
+      {
+        src: '/android-chrome-192x192.png',
+        sizes: '192x192',
+        type: 'image/png'
+      },
+      {
+        src: '/android-chrome-512x512.png',
+        sizes: '512x512',
+        type: 'image/png'
+      }
+    ],
+    start_url: '/?standalone=true',
+    display: 'standalone',
+    background_color: '#50c8f0',
+    theme_color: '#50c8f0',
+    lang: 'fr'
+  },
+
+  /* Progress-bar color */
+  loading: {
+    color: '#50c8f0'
   }
 }
