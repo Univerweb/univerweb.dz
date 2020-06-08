@@ -3,7 +3,25 @@
     <!-- <works /> -->
     <div class="container">
       <h1>{{ $t('works.title') }}</h1>
-      <div class="grid">
+
+      <div v-if="$fetchState.pending" class="grid">
+        <content-placeholders>
+          <content-placeholders-img />
+          <content-placeholders-text :lines="1" />
+        </content-placeholders>
+
+        <content-placeholders>
+          <content-placeholders-img />
+          <content-placeholders-text :lines="1" />
+        </content-placeholders>
+
+        <content-placeholders>
+          <content-placeholders-img />
+          <content-placeholders-text :lines="1" />
+        </content-placeholders>
+      </div>
+
+      <div v-else class="grid">
         <div v-for="(work, index) in works" :key="index" class="item">
           <h2 class="h3">
             <NuxtLink :to="localePath(`/realisations/${work.slug}`)">
@@ -21,7 +39,6 @@
 </template>
 
 <script>
-import axios from 'axios'
 // import works from '@/components/partials/home/works'
 
 export default {
@@ -29,15 +46,19 @@ export default {
     // works,
   },
 
-  async asyncData({ app }) {
-    const API_PATH = app.i18n.locale + '/v1/works'
+  async fetch() {
+    const API_PATH = this.$i18n.locale + '/v1/works'
     const FILTERS =
       'sort=-nid&fields[node--work]=title,slug,thumbnail&fields[file--file]=uri'
-    const { data } = await axios.get(
-      process.env.apiUrl + `/${API_PATH}?${FILTERS}`
-    )
+
+    this.works = await this.$http
+      .$get(process.env.apiUrl + `/${API_PATH}?${FILTERS}`)
+      .then((works) => works.data)
+  },
+
+  data() {
     return {
-      works: data.data,
+      works: [],
       API_URL: process.env.apiUrl
     }
   },

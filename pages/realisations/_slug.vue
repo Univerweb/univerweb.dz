@@ -1,58 +1,73 @@
 <template>
   <main id="main" class="work">
     <div class="container">
-      <nuxt-link :to="localePath('realisations')" class="link">
-        <lang-arrow /> {{ $t('works.title') }}
-      </nuxt-link>
-      <h1>{{ work.title }}</h1>
+      <div v-if="$fetchState.pending">
+        <content-placeholders>
+          <content-placeholders-heading />
+          <content-placeholders-text :lines="10" />
+        </content-placeholders>
+      </div>
 
-      <div class="grid work-navigation">
-        <nuxt-link
-          :to="
-            localePath({
-              name: 'realisations-slug',
-              params: { slug }
-            })
-          "
-          class="link"
-          :data-text="$t('links.previous')"
-        >
-          {{ work.id }}
-        </nuxt-link>
+      <div v-else-if="$fetchState.error" class="hero error">
+        <h1>{{ $t('error.title_1') }}</h1>
+        <nuxt-link to="/" class="btn">{{ $t('error.btn') }}</nuxt-link>
+      </div>
 
-        <nuxt-link
-          :to="
-            localePath({
-              name: 'realisations-slug',
-              params: { slug }
-            })
-          "
-          class="link"
-          :data-text="$t('links.next')"
-        >
-          {{ work.id }}
+      <div v-else>
+        <nuxt-link :to="localePath('realisations')" class="link">
+          <lang-arrow /> {{ $t('works.title') }}
         </nuxt-link>
+        <h1>{{ work.title }}</h1>
+
+        <div class="grid work-navigation">
+          <nuxt-link
+            :to="
+              localePath({
+                name: 'realisations-slug',
+                params: { slug }
+              })
+            "
+            class="link"
+            :data-text="$t('links.previous')"
+          >
+            {{ work.id }}
+          </nuxt-link>
+
+          <nuxt-link
+            :to="
+              localePath({
+                name: 'realisations-slug',
+                params: { slug }
+              })
+            "
+            class="link"
+            :data-text="$t('links.next')"
+          >
+            {{ work.id }}
+          </nuxt-link>
+        </div>
       </div>
     </div>
   </main>
 </template>
 
 <script>
-import axios from 'axios'
-
 export default {
-  async asyncData({ params, error, app }) {
-    const API_PATH = app.i18n.locale + '/v1/works'
-    const FILTERS = 'fields[node--work]=title,slug,thumbnail'
+  validate() {
+    return true
+  },
 
-    const { data } = await axios.get(
+  async fetch() {
+    const API_PATH = this.$i18n.locale + '/v1/works'
+    const FILTERS = 'fields[node--work]=title,slug,thumbnail'
+    const SLUG = await this.$http.$get(
       process.env.apiUrl + `/${API_PATH}?${FILTERS}`
     )
-    const work = data.data.find(({ slug }) => slug === params.slug)
-    if (!work) {
-      error({ message: 'Page non trouvée', statusCode: 404 })
-    }
-    return { work, API_URL: process.env.apiUrl }
+    this.work = SLUG.data.find(({ slug }) => slug === this.$route.params.slug)
+  },
+
+  data() {
+    return { work: {} }
   },
 
   head() {
