@@ -93,7 +93,11 @@ export default {
   plugins: ['@/plugins/vue-placeholders.js'],
 
   /* Nuxt.js dev-modules */
-  buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/stylelint-module'],
+  buildModules: [
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/stylelint-module',
+    '@nuxtjs/svg'
+  ],
 
   /* Nuxt.js modules */
   modules: [
