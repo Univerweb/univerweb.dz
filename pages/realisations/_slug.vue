@@ -42,10 +42,10 @@ import axios from 'axios'
 
 export default {
   async asyncData({ params, error, app }) {
-    const URL_API = process.env.URL_API
+    const API_URL = process.env.apiUrl
     const PATH_API = app.i18n.locale + '/v1/works'
     const FIELD_WORKS = 'fields[node--work]=title,slug,thumbnail'
-    const { data } = await axios.get(`${URL_API}/${PATH_API}?${FIELD_WORKS}`)
+    const { data } = await axios.get(`${API_URL}/${PATH_API}?${FIELD_WORKS}`)
     const work = data.data.find(({ slug }) => slug === params.slug)
     if (!work) {
       error({ message: 'Page non trouvée', statusCode: 404 })

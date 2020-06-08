@@ -11,7 +11,7 @@
             </NuxtLink>
           </h2>
           <nuxt-link :to="localePath('/realisations/' + work.slug)">
-            <img :src="URL_API + work.thumbnail.uri.url" :alt="work.title" />
+            <img :src="API_URL + work.thumbnail.uri.url" :alt="work.title" />
             <p>{{ work.title }}</p>
           </nuxt-link>
         </div>
@@ -30,18 +30,18 @@ export default {
   },
 
   async asyncData({ app }) {
-    const URL_API = process.env.URL_API
+    const API_URL = process.env.apiUrl
     const PATH_API = app.i18n.locale + '/v1/works'
     const SORT_WORKS = 'sort=-nid'
     const FIELD_WORKS = 'fields[node--work]=title,slug,thumbnail'
     const FILE_WORKS = 'fields[file--file]=uri'
     const { data } = await axios.get(
-      `${URL_API}/${PATH_API}?${SORT_WORKS}&${FIELD_WORKS}&${FILE_WORKS}`
+      `${API_URL}/${PATH_API}?${SORT_WORKS}&${FIELD_WORKS}&${FILE_WORKS}`
     )
     return {
       works: data.data,
       pagination: data.links,
-      URL_API
+      API_URL
     }
   },
 
