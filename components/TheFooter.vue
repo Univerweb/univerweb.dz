@@ -92,27 +92,21 @@ footer {
   color: $light;
   padding: 45px 15px;
   @media (min-width: $sm) {
-    & {
-      padding: 135px 135px;
-    }
+    padding: 135px 135px;
   }
   @media (min-width: $md) {
-    & {
-      grid-template-columns: auto auto;
-      justify-content: space-between;
-      .address-container {
-        grid-row: 1 / 1;
-      }
-      .about-container {
-        grid-row: 1 / 3;
-      }
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    .address-container {
+      grid-row: 1 / 1;
+    }
+    .about-container {
+      grid-row: 1 / 3;
     }
   }
   @media (min-width: $lg) {
-    & {
-      grid-template-columns: auto auto 160px;
-      padding: 180px 270px;
-    }
+    grid-template-columns: auto auto 160px;
+    padding: 180px 270px;
   }
   & a {
     color: $white;

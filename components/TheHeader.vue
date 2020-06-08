@@ -117,20 +117,16 @@ header {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   @media (min-width: $md) {
-    & {
-      grid-template-columns: auto 1fr;
-      padding: 45px 45px;
-      .scrolled & {
-        padding: 15px 45px;
-      }
+    grid-template-columns: auto 1fr;
+    padding: 45px 45px;
+    .scrolled & {
+      padding: 15px 45px;
     }
   }
   @media (min-width: $lg) {
-    & {
-      padding: 45px 135px;
-      .scrolled & {
-        padding: 15px 135px;
-      }
+    padding: 45px 135px;
+    .scrolled & {
+      padding: 15px 135px;
     }
   }
 }
@@ -170,16 +166,14 @@ header {
     pointer-events: auto;
   }
   @media (min-width: $md) {
-    & {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: center;
-      position: initial;
-      height: initial;
-      padding: 0;
-      opacity: 1;
-      pointer-events: auto;
-    }
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    position: initial;
+    height: initial;
+    padding: 0;
+    opacity: 1;
+    pointer-events: auto;
   }
   & ul {
     display: grid;
@@ -189,11 +183,9 @@ header {
     padding: 45px 0 0;
     list-style: none;
     @media (min-width: $md) {
-      & {
-        grid-template-columns: repeat(4, auto);
-        justify-content: space-around;
-        padding: 0;
-      }
+      grid-template-columns: repeat(4, auto);
+      justify-content: space-around;
+      padding: 0;
     }
   }
   & a {
@@ -206,10 +198,8 @@ header {
       color: $white;
     }
     @media (min-width: $md) {
-      & {
-        font-size: 1rem;
-        text-align: center;
-      }
+      font-size: 1rem;
+      text-align: center;
     }
     &::after {
       position: absolute;
@@ -236,9 +226,7 @@ header {
   padding: 0 20px;
   border-radius: 50px;
   @media (min-width: $md) {
-    & {
-      background: $dark-blue;
-    }
+    background: $dark-blue;
   }
   & .globe {
     margin-right: -1rem;
@@ -248,9 +236,7 @@ header {
       margin-left: -1rem;
     }
     @media (min-width: $md) {
-      & {
-        fill: $blue;
-      }
+      fill: $blue;
     }
   }
   & select {
@@ -270,9 +256,7 @@ header {
     outline: 0;
     z-index: 2;
     @media (min-width: $md) {
-      & {
-        color: $blue;
-      }
+      color: $blue;
     }
     & option {
       color: initial;
@@ -287,9 +271,7 @@ header {
       margin-right: -1rem;
     }
     @media (min-width: $md) {
-      & {
-        fill: $blue;
-      }
+      fill: $blue;
     }
   }
 }

@@ -216,9 +216,7 @@ main {
   margin-top: 75px;
   transition: margin-top $transition;
   @media (min-width: $md) {
-    & {
-      margin-top: 140px;
-    }
+    margin-top: 140px;
   }
 }
 
@@ -229,19 +227,13 @@ main {
   margin: 0 auto;
   padding: 140px 15px;
   @media (min-width: $md) {
-    & {
-      max-width: calc(#{$md} - 90px);
-    }
+    max-width: calc(#{$md} - 90px);
   }
   @media (min-width: $lg) {
-    & {
-      max-width: calc(#{$lg} - 400px);
-    }
+    max-width: calc(#{$lg} - 400px);
   }
   @media (min-width: $xl) {
-    & {
-      max-width: calc(#{$xl} - 700px);
-    }
+    max-width: calc(#{$xl} - 700px);
   }
 }
 
@@ -253,15 +245,11 @@ main {
   gap: 30px;
   justify-content: space-between;
   @media (min-width: $sm) {
-    & {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 45px;
-    }
+    grid-template-columns: repeat(2, 1fr);
+    gap: 45px;
   }
   @media (min-width: $md) {
-    & {
-      gap: 70px;
-    }
+    gap: 70px;
   }
 }
 
@@ -307,29 +295,21 @@ h1 {
     margin-bottom: 15px;
   }
   @media (min-width: $sm) {
-    & {
-      font-size: 3.5rem;
-      margin-bottom: 45px;
-    }
+    font-size: 3.5rem;
+    margin-bottom: 45px;
   }
   @media (min-width: $md) {
-    & {
-      font-size: 4.5rem;
-      margin-bottom: 70px;
-      .hero & {
-        margin-bottom: 30px;
-      }
+    font-size: 4.5rem;
+    margin-bottom: 70px;
+    .hero & {
+      margin-bottom: 30px;
     }
   }
   @media (min-width: $lg) {
-    & {
-      font-size: 5.5rem;
-    }
+    font-size: 5.5rem;
   }
   @media (min-width: $xl) {
-    & {
-      font-size: 6rem;
-    }
+    font-size: 6rem;
   }
 }
 
