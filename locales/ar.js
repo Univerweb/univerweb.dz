@@ -4,9 +4,9 @@ export default (context) => {
       name: 'يونيفارواب',
       links: {
         home: 'الصفحة الرئيسية',
-        works: 'اخر الاعمال',
+        realisations: 'اخر الاعمال',
         prestations: 'الخدمات',
-        agency: 'الوكالة',
+        agence: 'الوكالة',
         contact: 'اتصل',
         ariaLabel: 'افتح القائمة',
         previous: 'السابق',

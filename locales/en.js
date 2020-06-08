@@ -4,9 +4,9 @@ export default (context) => {
       name: 'Univerweb',
       links: {
         home: 'Home',
-        works: 'Latest work',
+        realisations: 'Latest work',
         prestations: 'Services',
-        agency: 'Agency',
+        agence: 'Agency',
         contact: 'Contact',
         ariaLabel: 'Open menu',
         previous: 'Previous',
