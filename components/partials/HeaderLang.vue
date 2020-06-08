@@ -16,7 +16,7 @@
 
 <script>
 import LangGlobe from '@/assets/icons/globe.svg?inline'
-import LangArrow from '@/components/svg/LangArrow'
+import LangArrow from '@/assets/icons/arrow.svg?inline'
 
 export default {
   components: {
@@ -53,6 +53,19 @@ export default {
       background: $dark-blue;
     }
   }
+  & .globe {
+    margin-right: -1rem;
+    fill: $dark-blue;
+    [dir='rtl'] & {
+      margin-right: 0;
+      margin-left: -1rem;
+    }
+    @media (min-width: $md) {
+      & {
+        fill: $blue;
+      }
+    }
+  }
   & select {
     background-color: transparent;
     color: $dark-blue;
@@ -78,18 +91,18 @@ export default {
       color: initial;
     }
   }
-}
-
-.globe {
-  margin-right: -1rem;
-  fill: $dark-blue;
-  [dir='rtl'] & {
-    margin-right: 0;
+  & .arrow {
+    height: 8px;
     margin-left: -1rem;
-  }
-  @media (min-width: $md) {
-    & {
-      fill: $blue;
+    fill: $dark-blue;
+    [dir='rtl'] & {
+      margin-left: 0;
+      margin-right: -1rem;
+    }
+    @media (min-width: $md) {
+      & {
+        fill: $blue;
+      }
     }
   }
 }

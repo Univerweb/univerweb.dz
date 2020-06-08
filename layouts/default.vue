@@ -281,6 +281,15 @@ main {
       }
     }
   }
+  & .arrow {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25.71px;
+    height: 15px;
+    cursor: pointer;
+  }
 }
 
 /*
