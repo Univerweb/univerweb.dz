@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import LangGlobe from '@/components/svg/LangGlobe'
+import LangGlobe from '@/assets/icons/globe.svg?inline'
 import LangArrow from '@/components/svg/LangArrow'
 
 export default {
@@ -76,6 +76,20 @@ export default {
     }
     & option {
       color: initial;
+    }
+  }
+}
+
+.globe {
+  margin-right: -1rem;
+  fill: $dark-blue;
+  [dir='rtl'] & {
+    margin-right: 0;
+    margin-left: -1rem;
+  }
+  @media (min-width: $md) {
+    & {
+      fill: $blue;
     }
   }
 }
