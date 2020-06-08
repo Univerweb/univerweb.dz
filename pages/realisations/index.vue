@@ -1,6 +1,6 @@
 <template>
   <main id="main" class="works">
-    <!-- <works /> -->
+    <!-- <home-works /> -->
     <div class="container">
       <h1>{{ $t('works.title') }}</h1>
 
@@ -39,11 +39,11 @@
 </template>
 
 <script>
-// import works from '@/components/partials/home/works'
+// import HomeWelcome from '@/components/partials/home/HomeWelcome'
 
 export default {
   components: {
-    // works,
+    // HomeWelcome,
   },
 
   async fetch() {

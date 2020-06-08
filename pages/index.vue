@@ -6,13 +6,13 @@
 </template>
 
 <script>
-import homeWelcome from '@/components/partials/home/welcome'
-import homeWorks from '@/components/partials/home/works'
+import HomeWelcome from '@/components/partials/home/HomeWelcome'
+import HomeWorks from '@/components/partials/home/HomeWorks'
 
 export default {
   components: {
-    homeWelcome,
-    homeWorks
+    HomeWelcome,
+    HomeWorks
   },
 
   head() {
