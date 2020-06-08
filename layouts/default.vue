@@ -9,7 +9,7 @@
 
 <script>
 import TheSkiplinks from '@/components/TheSkiplinks'
-import TheHeader from '@/components/partials/TheHeader'
+import TheHeader from '@/components/TheHeader'
 import TheFooter from '@/components/TheFooter'
 
 export default {
