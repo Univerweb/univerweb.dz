@@ -14,8 +14,8 @@
 
 <script>
 import { mapActions } from 'vuex'
-import LogoLatin from '@/components/svg/LogoLatin'
-import LogoArabe from '@/components/svg/LogoArabe'
+import LogoLatin from '@/static/logos/univerweb.svg?inline'
+import LogoArabe from '@/static/logos/univerweb-ar.svg?inline'
 
 export default {
   components: {
