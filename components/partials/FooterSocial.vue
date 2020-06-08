@@ -1,36 +1,46 @@
 <template>
   <ul class="social">
-    <li>
-      <a href="https://twitter.com/Univerweb">
-        <span class="visually-hidden">{{ $t('footer.social.twitter') }}</span>
-        <social-twitter />
-      </a>
-    </li>
-    <li>
-      <a href="https://www.facebook.com/Univerweb">
-        <span class="visually-hidden">{{ $t('footer.social.facebook') }}</span>
-        <social-facebook />
-      </a>
-    </li>
-    <li>
-      <a href="https://github.com/Univerweb">
-        <span class="visually-hidden">{{ $t('footer.social.github') }}</span>
-        <social-github />
+    <li v-for="(social, index) in socials" :key="index">
+      <a :href="social.link">
+        <span class="visually-hidden">{{ social.JoinUs }}</span>
+        <component :is="social.slug + '-icon'" />
       </a>
     </li>
   </ul>
 </template>
 
 <script>
-import SocialTwitter from '@/components/svg/SocialTwitter'
-import SocialFacebook from '@/components/svg/SocialFacebook'
-import SocialGithub from '@/components/svg/SocialGithub'
+import TwitterIcon from '@/assets/icons/twitter.svg?inline'
+import FacebookIcon from '@/assets/icons/facebook.svg?inline'
+import GithubIcon from '@/assets/icons/github.svg?inline'
 
 export default {
   components: {
-    SocialTwitter,
-    SocialFacebook,
-    SocialGithub
+    TwitterIcon,
+    FacebookIcon,
+    GithubIcon
+  },
+
+  data() {
+    return {
+      socials: [
+        {
+          link: 'https://twitter.com/Univerweb',
+          JoinUs: this.$t('footer.social.twitter'),
+          slug: 'twitter'
+        },
+        {
+          link: 'https://www.facebook.com/Univerweb',
+          JoinUs: this.$t('footer.social.facebook'),
+          slug: 'facebook'
+        },
+        {
+          link: 'https://github.com/Univerweb',
+          JoinUs: this.$t('footer.social.github'),
+          slug: 'github'
+        }
+      ]
+    }
   }
 }
 </script>
