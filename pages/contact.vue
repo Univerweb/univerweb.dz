@@ -3,8 +3,8 @@
     <div class="container grid">
       <div class="item">
         <h1 class="h2">{{ $t('contact.title') }}</h1>
-        <footer-about />
-        <footer-email />
+        <app-about />
+        <app-mail />
       </div>
       <div class="item">
         <form method="post" action="">
@@ -82,13 +82,13 @@
 </template>
 
 <script>
-import FooterAbout from '@/components/partials/FooterAbout'
-import FooterEmail from '@/components/partials/FooterEmail'
+import AppAbout from '@/components/common/AppAbout'
+import AppMail from '@/components/common/AppMail'
 
 export default {
   components: {
-    FooterAbout,
-    FooterEmail
+    AppAbout,
+    AppMail
   },
 
   head() {
