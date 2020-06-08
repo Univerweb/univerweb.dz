@@ -30,17 +30,15 @@ export default {
   },
 
   async asyncData({ app }) {
-    const API_URL = process.env.apiUrl
-    const PATH_API = app.i18n.locale + '/v1/works'
-    const SORT_WORKS = 'sort=-nid'
-    const FIELD_WORKS = 'fields[node--work]=title,slug,thumbnail'
-    const FILE_WORKS = 'fields[file--file]=uri'
+    const API_PATH = app.i18n.locale + '/v1/works'
+    const FILTERS =
+      'sort=-nid&fields[node--work]=title,slug,thumbnail&fields[file--file]=uri'
     const { data } = await axios.get(
-      `${API_URL}/${PATH_API}?${SORT_WORKS}&${FIELD_WORKS}&${FILE_WORKS}`
+      process.env.apiUrl + `/${API_PATH}?${FILTERS}`
     )
     return {
       works: data.data,
-      API_URL
+      API_URL: process.env.apiUrl
     }
   },
 

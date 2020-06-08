@@ -4,7 +4,7 @@
       <nuxt-link :to="localePath('realisations')" class="link">
         <lang-arrow /> {{ $t('works.title') }}
       </nuxt-link>
-      <h1>{{ title }}</h1>
+      <h1>{{ work.title }}</h1>
 
       <div class="grid work-navigation">
         <nuxt-link
@@ -17,7 +17,7 @@
           class="link"
           :data-text="$t('links.previous')"
         >
-          {{ id }}
+          {{ work.id }}
         </nuxt-link>
 
         <nuxt-link
@@ -30,7 +30,7 @@
           class="link"
           :data-text="$t('links.next')"
         >
-          {{ id }}
+          {{ work.id }}
         </nuxt-link>
       </div>
     </div>
@@ -42,20 +42,22 @@ import axios from 'axios'
 
 export default {
   async asyncData({ params, error, app }) {
-    const API_URL = process.env.apiUrl
-    const PATH_API = app.i18n.locale + '/v1/works'
-    const FIELD_WORKS = 'fields[node--work]=title,slug,thumbnail'
-    const { data } = await axios.get(`${API_URL}/${PATH_API}?${FIELD_WORKS}`)
+    const API_PATH = app.i18n.locale + '/v1/works'
+    const FILTERS = 'fields[node--work]=title,slug,thumbnail'
+
+    const { data } = await axios.get(
+      process.env.apiUrl + `/${API_PATH}?${FILTERS}`
+    )
     const work = data.data.find(({ slug }) => slug === params.slug)
     if (!work) {
       error({ message: 'Page non trouvée', statusCode: 404 })
     }
-    return work
+    return { work, API_URL: process.env.apiUrl }
   },
 
   head() {
     return {
-      titleTemplate: `${this.title} — ${this.$t('name')}`,
+      titleTemplate: `${this.work.title} — ${this.$t('name')}`,
       meta: [
         {
           hid: 'description',
