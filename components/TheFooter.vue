@@ -35,7 +35,9 @@
       <ul class="social">
         <li v-for="(social, index) in socials" :key="index">
           <a :href="social.link">
-            <span class="visually-hidden">{{ social.JoinUs }}</span>
+            <span class="visually-hidden">
+              {{ $t('footer.social.' + social.slug) }}
+            </span>
             <component :is="social.slug + '-icon'" />
           </a>
         </li>
@@ -66,17 +68,14 @@ export default {
       socials: [
         {
           link: 'https://twitter.com/Univerweb',
-          JoinUs: this.$t('footer.social.twitter'),
           slug: 'twitter'
         },
         {
           link: 'https://www.facebook.com/Univerweb',
-          JoinUs: this.$t('footer.social.facebook'),
           slug: 'facebook'
         },
         {
           link: 'https://github.com/Univerweb',
-          JoinUs: this.$t('footer.social.github'),
           slug: 'github'
         }
       ]
