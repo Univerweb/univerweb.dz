@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import TheSkiplinks from '@/components/partials/TheSkiplinks'
+import TheSkiplinks from '@/components/TheSkiplinks'
 import TheHeader from '@/components/partials/TheHeader'
 import TheFooter from '@/components/TheFooter'
 
