@@ -40,7 +40,6 @@ export default {
     )
     return {
       works: data.data,
-      pagination: data.links,
       API_URL
     }
   },
