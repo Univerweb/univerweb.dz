@@ -38,7 +38,9 @@
       class="toggle"
       @click.prevent="open"
     >
-      <span class="toggle-icon"></span>
+      <span class="top"></span>
+      <span class="middle"></span>
+      <span class="bottom"></span>
     </button>
   </header>
 </template>
@@ -292,180 +294,147 @@ header {
   }
 }
 
+@keyframes CollapseMiddle {
+  0% {
+    width: 0;
+  }
+  75% {
+    width: 0;
+  }
+  100% {
+    width: 15px;
+  }
+}
+@keyframes CollapseShowMiddle {
+  0% {
+    width: 15px;
+  }
+  25% {
+    width: 0;
+  }
+  100% {
+    width: 0;
+  }
+}
+@keyframes CollapseTop {
+  0% {
+    transform: translateY(11px) rotate(-45deg);
+    width: 25px;
+  }
+  25% {
+    transform: translateY(11px) rotate(0);
+  }
+  50% {
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+    width: 25px;
+  }
+}
+@keyframes CollapseShowTop {
+  0% {
+    transform: translateY(0) rotate(0);
+    width: 25px;
+  }
+  50% {
+    transform: translateY(0) rotate(0);
+  }
+  75% {
+    transform: translateY(11px) rotate(0);
+  }
+  100% {
+    transform: translateY(11px) rotate(-45deg);
+    width: 25px;
+  }
+}
+@keyframes CollapseBottom {
+  0% {
+    transform: translateY(-11px) rotate(45deg);
+    width: 25px;
+  }
+  25% {
+    transform: translateY(-11px) rotate(0);
+  }
+  50% {
+    transform: translateY(0) rotate(0);
+    width: 25px;
+  }
+  75% {
+    transform: translateY(0) rotate(0);
+    width: 20px;
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+    width: 20px;
+  }
+}
+@keyframes CollapseShowBottom {
+  0% {
+    transform: translateY(0) rotate(0);
+    width: 20px;
+  }
+  25% {
+    transform: translateY(0) rotate(0);
+    width: 20px;
+  }
+  50% {
+    transform: translateY(0) rotate(0);
+    width: 25px;
+  }
+  75% {
+    transform: translateY(-11px) rotate(0);
+  }
+  100% {
+    transform: translateY(-11px) rotate(45deg);
+    width: 25px;
+  }
+}
+
 .toggle {
+  display: grid;
+  align-content: space-between;
   background: transparent;
   width: 45px;
   height: 45px;
   margin: 0;
   padding: 10px;
-  text-align: left;
   outline: none;
-  [dir='rtl'] & {
-    text-align: right;
-  }
   @media (min-width: $md) {
-    & {
-      display: none;
-    }
+    display: none;
   }
   &:focus {
     background: $dark-blue;
-
     .opened & {
       background: $blue;
     }
   }
-}
-
-.toggle-icon {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.toggle-icon,
-.toggle-icon:before,
-.toggle-icon:after {
-  background: $blue;
-  height: 3px;
-  border-radius: 3px;
-  transition: all 0.3s;
-}
-
-.toggle-icon:before,
-.toggle-icon:after {
-  content: '';
-  display: block;
-}
-
-.opened .toggle:focus .toggle-icon,
-.opened .toggle:focus .toggle-icon:before,
-.opened .toggle:focus .toggle-icon:after {
-  background: $dark-blue;
-}
-
-@keyframes CollapseCenter {
-  0% {
-    width: 0;
+  & span {
+    background: $blue;
+    height: 3px;
+    border-radius: 3px;
+    transition: all $transition;
   }
-  75% {
-    width: 0;
+  .opened &:focus span {
+    background: $dark-blue;
   }
-  100% {
-    width: 15px;
+  & .middle {
+    animation: CollapseMiddle $animation;
+    .opened & {
+      animation: CollapseShowMiddle $animation;
+    }
   }
-}
-
-.toggle-icon {
-  animation: CollapseCenter 0.5s forwards;
-}
-
-@keyframes CollapseShowCenter {
-  0% {
-    width: 15px;
+  & .top {
+    animation: CollapseTop $animation;
+    .opened & {
+      animation: CollapseShowTop $animation;
+    }
   }
-  25% {
-    width: 0;
+  & .bottom {
+    animation: CollapseBottom $animation;
+    .opened & {
+      animation: CollapseShowBottom $animation;
+    }
   }
-  100% {
-    width: 0;
-  }
-}
-
-.opened .toggle .toggle-icon {
-  animation: CollapseShowCenter 0.5s forwards;
-}
-
-@keyframes CollapseBefore {
-  0% {
-    transform: translateY(0) rotate(-45deg);
-    width: 25px;
-  }
-  25% {
-    transform: translateY(0) rotate(0);
-  }
-  50% {
-    transform: translateY(-10px) rotate(0);
-  }
-  100% {
-    transform: translateY(-10px) rotate(0);
-    width: 25px;
-  }
-}
-
-.toggle-icon:before {
-  animation: CollapseBefore 0.5s forwards;
-}
-
-@keyframes CollapseShowBefore {
-  0% {
-    transform: translateY(-10px) rotate(0);
-    width: 25px;
-  }
-  50% {
-    transform: translateY(-10px) rotate(0);
-  }
-  75% {
-    transform: translateY(0) rotate(0);
-  }
-  100% {
-    transform: translateY(0) rotate(-45deg);
-    width: 25px;
-  }
-}
-
-.opened .toggle-icon:before {
-  animation: CollapseShowBefore 0.5s forwards;
-}
-
-@keyframes CollapseAfter {
-  0% {
-    transform: translateY(-3px) rotate(45deg);
-    width: 25px;
-  }
-  25% {
-    transform: translateY(-3px) rotate(0);
-  }
-  50% {
-    transform: translateY(7px) rotate(0);
-    width: 25px;
-  }
-  75% {
-    transform: translateY(7px) rotate(0);
-    width: 20px;
-  }
-  100% {
-    transform: translateY(7px) rotate(0);
-    width: 20px;
-  }
-}
-
-.toggle-icon:after {
-  animation: CollapseAfter 0.5s forwards;
-}
-
-@keyframes CollapseShowAfter {
-  0% {
-    transform: translateY(7px) rotate(0);
-    width: 20px;
-  }
-  25% {
-    transform: translateY(7px) rotate(0);
-    width: 20px;
-  }
-  50% {
-    transform: translateY(7px) rotate(0);
-    width: 25px;
-  }
-  75% {
-    transform: translateY(-3px) rotate(0);
-  }
-  100% {
-    transform: translateY(-3px) rotate(45deg);
-    width: 25px;
-  }
-}
-
-.opened .toggle-icon:after {
-  animation: CollapseShowAfter 0.5s forwards;
 }
 </style>
