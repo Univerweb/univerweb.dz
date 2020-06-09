@@ -1,6 +1,5 @@
 <template>
   <main id="main" class="works">
-    <!-- <home-works /> -->
     <div class="container">
       <h1>{{ $t('works.title') }}</h1>
 
@@ -39,13 +38,7 @@
 </template>
 
 <script>
-// import HomeWelcome from '@/components/partials/home/HomeWelcome'
-
 export default {
-  components: {
-    // HomeWelcome,
-  },
-
   async fetch() {
     const API_PATH = this.$i18n.locale + '/v1/works'
     const FILTERS =
@@ -103,6 +96,33 @@ export default {
 @media (min-width: $md) {
   .works .grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.works .item {
+  display: grid;
+  align-content: start;
+  & h3,
+  & .h3 {
+    order: 1;
+  }
+  & > a {
+    position: relative;
+    display: grid;
+    & p {
+      display: grid;
+      align-items: end;
+      background: $blue;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding: 15px;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+    &:hover p {
+      opacity: 1;
+    }
   }
 }
 </style>

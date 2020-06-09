@@ -1,107 +1,77 @@
 <template>
-  <section v-if="$route.name === home" class="container works">
+  <section class="container works">
     <h2 class="h1">{{ $t('works.title') }}</h2>
+
     <div class="grid">
-      <div
-        v-for="(work, index) in $t('works.work')"
-        :key="work.id"
-        :index="index"
-        class="item"
-      >
+      <div v-for="(work, index) in works" :key="index" class="item">
         <h3>
-          <nuxt-link :to="localePath('/realisations/' + work.slug)">
-            {{ work.name }}
-          </nuxt-link>
+          <NuxtLink :to="localePath(`/realisations/${work.slug}`)">
+            {{ work.title }}
+          </NuxtLink>
         </h3>
-
         <nuxt-link :to="localePath('/realisations/' + work.slug)">
-          <img :src="work.thumbnail" :alt="work.name" />
-          <p>{{ work.description }}</p>
+          <img :src="API_URL + work.thumbnail.uri.url" :alt="work.title" />
+          <p>{{ work.title }}</p>
         </nuxt-link>
       </div>
     </div>
-  </section>
 
-  <section v-else class="container">
-    <h1>{{ $t('works.title') }}</h1>
-    <div class="grid">
-      <div
-        v-for="(work, index) in $t('works.work')"
-        :key="work.id"
-        :index="index"
-        class="item"
-      >
-        <h2 class="h3">
-          <nuxt-link :to="localePath('/realisations/' + work.slug)">
-            {{ work.name }}
-          </nuxt-link>
-        </h2>
-
-        <nuxt-link :to="localePath('/realisations/' + work.slug)">
-          <img :src="work.thumbnail" :alt="work.name" />
-          <p>{{ work.description }}</p>
-        </nuxt-link>
-      </div>
-    </div>
-  </section>
-  <!-- <div class="grid">
-    <div v-for="(work, index) in works" :key="index" class="item">
-      <h2 class="h3">
-        <nuxt-link
-          :to="
-            localePath({
-              name: 'realisations-id',
-              params: { id: work.slug }
-            })
-          "
-        >
-          {{ work.name }}
-        </nuxt-link>
-      </h2>
-      <nuxt-link
-        :to="localePath({ name: 'realisations-id', params: { id: work.slug } })"
-      >
-        <img :src="work.thumbnail" :alt="work.name" />
-        <p>{{ work.description }}</p>
+    <div class="more">
+      <nuxt-link :to="localePath('realisations')" class="btn">
+        {{ $t('works.title') }}
+        <home-arrow />
       </nuxt-link>
     </div>
-  </div> -->
+  </section>
 </template>
 
 <script>
+import HomeArrow from '@/assets/icons/arrow.svg?inline'
+
 export default {
+  components: {
+    HomeArrow
+  },
+
+  async fetch() {
+    const API_PATH = this.$i18n.locale + '/v1/works'
+    const FILTERS =
+      'sort=-nid&fields[node--work]=title,slug,thumbnail&fields[file--file]=uri'
+    this.works = await this.$http
+      .$get(process.env.apiUrl + `/${API_PATH}?${FILTERS}`)
+      .then((works) => works.data.slice(0, 6))
+  },
+
   data() {
     return {
-      home: `index___${this.$i18n.locale}`
+      works: [],
+      API_URL: process.env.apiUrl
     }
   }
 }
 </script>
 
 <style lang="scss">
-.works .item {
+.more {
   display: grid;
-  align-content: start;
-  & h3,
-  & .h3 {
-    order: 1;
+  justify-content: end;
+  margin-top: 30px;
+  @media (min-width: $sm) {
+    margin-top: 45px;
   }
-  & > a {
-    position: relative;
-    display: grid;
-    & p {
-      display: grid;
-      align-items: end;
-      background: $blue;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      padding: 15px;
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-    }
-    &:hover p {
-      opacity: 1;
+  @media (min-width: $md) {
+    margin-top: 70px;
+  }
+  & .arrow {
+    fill: currentColor;
+    height: 5px;
+    transform: rotate(-90deg);
+    margin-left: 10px;
+    margin-bottom: 2px;
+    [dir='rtl'] & {
+      transform: rotate(90deg);
+      margin-left: 0;
+      margin-right: 10px;
     }
   }
 }
