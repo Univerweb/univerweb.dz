@@ -15,7 +15,8 @@
 
       <div v-else>
         <nuxt-link :to="localePath('realisations')" class="link">
-          <lang-arrow /> {{ $t('works.title') }}
+          <work-arrow />
+          {{ $t('works.title') }}
         </nuxt-link>
         <h1>{{ work.title }}</h1>
 
@@ -52,7 +53,13 @@
 </template>
 
 <script>
+import WorkArrow from '@/assets/icons/arrow.svg?inline'
+
 export default {
+  components: {
+    WorkArrow
+  },
+
   validate() {
     return true
   },
