@@ -1,5 +1,3 @@
-import pkg from './package'
-
 export default {
   mode: 'universal',
 
@@ -12,7 +10,7 @@ export default {
       { name: 'theme-color', content: '#50c8f0' },
       { property: 'og:locale', content: 'fr_DZ' },
       { property: 'og:type', content: 'website' },
-      { property: 'og:site_name', content: pkg.author },
+      { property: 'og:site_name', content: 'Univerweb' },
       { property: 'og:image:type', content: '' },
       { property: 'og:image:width', content: '' },
       { property: 'og:image:height', content: '' }
@@ -49,7 +47,7 @@ export default {
         innerHTML: JSON.stringify({
           '@context': 'http://schema.org',
           '@type': 'Organization',
-          name: pkg.author,
+          name: 'Univerweb',
           url: 'https://www.univerweb.dz',
           logo: {
             '@type': 'ImageObject',
@@ -96,19 +94,14 @@ export default {
   buildModules: [
     '@nuxtjs/eslint-module',
     '@nuxtjs/stylelint-module',
-    '@nuxtjs/svg'
+    '@nuxtjs/svg',
+    '@nuxtjs/style-resources',
+    '@nuxtjs/pwa',
+    'vue-scrollto/nuxt'
   ],
 
   /* Nuxt.js modules */
-  modules: [
-    'nuxt-i18n',
-    '@nuxtjs/axios',
-    '@nuxtjs/pwa',
-    '@nuxtjs/dotenv',
-    '@nuxtjs/style-resources',
-    'vue-scrollto/nuxt',
-    '@nuxt/http'
-  ],
+  modules: ['nuxt-i18n', '@nuxt/http'],
 
   /* Internationalisation */
   i18n: {
@@ -139,9 +132,6 @@ export default {
 
   /* Manifest */
   manifest: {
-    name: pkg.author,
-    short_name: pkg.author,
-    description: pkg.description,
     icons: [
       {
         src: '/android-chrome-192x192.png',
@@ -154,10 +144,7 @@ export default {
         type: 'image/png'
       }
     ],
-    start_url: '/?standalone=true',
-    display: 'standalone',
     background_color: '#50c8f0',
-    theme_color: '#50c8f0',
     lang: 'fr'
   },
 
