@@ -108,7 +108,7 @@ export default {
     locales: [
       {
         code: 'fr',
-        file: 'fr.json'
+        file: 'fr.js'
       },
       {
         code: 'en',
