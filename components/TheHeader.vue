@@ -12,7 +12,7 @@
     </nuxt-link>
     <nav class="menu">
       <ul>
-        <li v-for="(link, index) in headerLinks" :key="index">
+        <li v-for="(link, index) in menu" :key="index">
           <nuxt-link :to="localePath(link.slug)" @click.native="show = false">
             {{ $t('links.' + link.slug) }}
           </nuxt-link>
@@ -20,7 +20,7 @@
       </ul>
       <div class="lang">
         <lang-globe />
-        <select v-model="selectedValue" @change="onChange(selectedValue)">
+        <select v-model="lang" @change="onChange(lang)">
           <option
             v-for="(locale, index) in $i18n.locales"
             :key="index"
@@ -62,31 +62,18 @@ export default {
   data() {
     return {
       show: false,
-      windowWidth: null,
-      selectedValue: '',
-      headerLinks: [
+      menu: [
         { slug: 'realisations' },
         { slug: 'prestations' },
         { slug: 'agence' },
         { slug: 'contact' }
-      ]
+      ],
+      lang: ''
     }
-  },
-
-  computed: {
-    isMobile() {
-      return this.windowWidth < 1024
-    }
-  },
-
-  mounted() {
-    window.addEventListener('resize', () => {
-      this.windowWidth = window.innerWidth
-    })
   },
 
   created() {
-    this.selectedValue = this.$i18n.locale
+    this.lang = this.$i18n.locale
   },
 
   methods: {
@@ -143,6 +130,9 @@ header {
     transition: fill $transition;
     .show & {
       fill: $white;
+      @media (min-width: $md) {
+        fill: $dark-blue;
+      }
     }
   }
 }
@@ -167,6 +157,7 @@ header {
     pointer-events: auto;
   }
   @media (min-width: $md) {
+    background: $white !important;
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
@@ -199,6 +190,7 @@ header {
       color: $white;
     }
     @media (min-width: $md) {
+      color: $dark !important;
       font-size: 1rem;
       text-align: center;
     }
