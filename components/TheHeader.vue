@@ -1,10 +1,10 @@
 <template>
-  <header :class="{ opened: $store.state.isOpen && isMobile === true }">
+  <header :class="{ show: show }">
     <nuxt-link
       :to="localePath('/')"
       :title="$t('links.home')"
       class="logo"
-      @click.native="close"
+      @click.native="show = false"
     >
       <span class="visually-hidden">Accueil</span>
       <logo-arabe v-if="$i18n.locale === 'ar'" />
@@ -13,7 +13,7 @@
     <nav class="menu">
       <ul>
         <li v-for="(link, index) in headerLinks" :key="index">
-          <nuxt-link :to="localePath(link.slug)" @click.native="close">
+          <nuxt-link :to="localePath(link.slug)" @click.native="show = false">
             {{ $t('links.' + link.slug) }}
           </nuxt-link>
         </li>
@@ -36,7 +36,7 @@
       type="button"
       :aria-label="$t('links.ariaLabel')"
       class="toggle"
-      @click.prevent="open"
+      @click="isShow"
     >
       <span class="top"></span>
       <span class="middle"></span>
@@ -46,7 +46,6 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
 import LogoLatin from '@/static/logos/univerweb.svg?inline'
 import LogoArabe from '@/static/logos/univerweb-ar.svg?inline'
 import LangGlobe from '@/assets/icons/globe.svg?inline'
@@ -62,6 +61,7 @@ export default {
 
   data() {
     return {
+      show: false,
       windowWidth: null,
       selectedValue: '',
       headerLinks: [
@@ -90,11 +90,12 @@ export default {
   },
 
   methods: {
+    isShow() {
+      this.show = !this.show
+    },
     onChange(event) {
       this.$router.replace(this.switchLocalePath(event))
-    },
-    ...mapActions(['close']),
-    ...mapActions(['open'])
+    }
   }
 }
 </script>
@@ -140,7 +141,7 @@ header {
   g:last-child {
     fill: $dark-blue;
     transition: fill $transition;
-    .opened & {
+    .show & {
       fill: $white;
     }
   }
@@ -159,7 +160,7 @@ header {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s;
-  .opened & {
+  .show & {
     display: grid;
     background: $dark-blue;
     opacity: 1;
@@ -194,7 +195,7 @@ header {
     font-size: 24px;
     font-weight: 500;
     text-transform: uppercase;
-    .opened & {
+    .show & {
       color: $white;
     }
     @media (min-width: $md) {
@@ -387,7 +388,7 @@ header {
   }
   &:focus {
     background: $dark-blue;
-    .opened & {
+    .show & {
       background: $blue;
     }
   }
@@ -397,24 +398,24 @@ header {
     border-radius: 3px;
     transition: all $transition;
   }
-  .opened &:focus span {
+  .show &:focus span {
     background: $dark-blue;
   }
   & .middle {
     animation: CollapseMiddle $animation;
-    .opened & {
+    .show & {
       animation: CollapseShowMiddle $animation;
     }
   }
   & .top {
     animation: CollapseTop $animation;
-    .opened & {
+    .show & {
       animation: CollapseShowTop $animation;
     }
   }
   & .bottom {
     animation: CollapseBottom $animation;
-    .opened & {
+    .show & {
       animation: CollapseShowBottom $animation;
     }
   }

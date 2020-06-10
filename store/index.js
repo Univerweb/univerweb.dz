@@ -1,19 +1,7 @@
-export const state = () => ({
-  isOpen: false
-})
+export const state = () => ({})
 
 export const getters = {}
 
-export const actions = {
-  open: ({ commit }) => commit('open'),
-  close: ({ commit }) => commit('close')
-}
+export const actions = {}
 
-export const mutations = {
-  open(state) {
-    state.isOpen = !state.isOpen
-  },
-  close(state) {
-    state.isOpen = false
-  }
-}
+export const mutations = {}
