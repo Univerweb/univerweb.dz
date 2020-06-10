@@ -88,7 +88,7 @@ export default {
   },
 
   /* Plugins to load before mounting the App */
-  plugins: ['@/plugins/vue-placeholders.js'],
+  plugins: ['@/plugins/vue-placeholders.js', '@/plugins/vue-lazyload'],
 
   /* Nuxt.js dev-modules */
   buildModules: [
@@ -108,7 +108,7 @@ export default {
     locales: [
       {
         code: 'fr',
-        file: 'fr.js'
+        file: 'fr.json'
       },
       {
         code: 'en',

@@ -28,7 +28,12 @@
             </NuxtLink>
           </h2>
           <nuxt-link :to="localePath('/realisations/' + work.slug)">
-            <img :src="API_URL + work.thumbnail.uri.url" :alt="work.title" />
+            <div class="card">
+              <img
+                v-lazy="API_URL + work.thumbnail.uri.url"
+                :alt="work.title"
+              />
+            </div>
             <p>{{ work.title }}</p>
           </nuxt-link>
         </div>
@@ -124,5 +129,24 @@ export default {
       opacity: 1;
     }
   }
+}
+
+.card {
+  display: grid;
+  background: $light;
+}
+
+img[lazy='error'] {
+  background: red;
+}
+
+img[lazy='loading'] {
+  background: $light;
+  opacity: 0;
+  transition: opacity $transition;
+}
+
+img[lazy='loaded'] {
+  opacity: 1;
 }
 </style>
