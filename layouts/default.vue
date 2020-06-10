@@ -79,6 +79,9 @@ export default {
 /*
 ** @font-face
 */
+/*
+** @font-face
+*/
 @font-face {
   font-family: 'Objectivity';
   font-style: normal;
@@ -227,13 +230,13 @@ main {
   margin: 0 auto;
   padding: 140px 15px;
   @media (min-width: $md) {
-    max-width: calc(#{$md} - 90px);
+    max-width: calc(#{$md});
   }
   @media (min-width: $lg) {
-    max-width: calc(#{$lg} - 400px);
+    max-width: calc(#{$lg} - 360px);
   }
   @media (min-width: $xl) {
-    max-width: calc(#{$xl} - 700px);
+    max-width: calc(#{$xl} - 640px);
   }
 }
 
