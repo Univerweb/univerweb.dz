@@ -79,31 +79,28 @@ export default {
 /*
 ** @font-face
 */
-/*
-** @font-face
-*/
 @font-face {
-  font-family: 'Objectivity';
+  font-family: 'Sofia Pro';
+  src: url('/fonts/sofiapro-regular.woff2') format('woff2');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('/fonts/objectivity-regular.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Objectivity';
+  font-family: 'Sofia Pro';
+  src: url('/fonts/sofiapro-medium.woff2') format('woff2');
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url('/fonts/objectivity-medium.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Objectivity';
+  font-family: 'Sofia Pro';
+  src: url('/fonts/sofiapro-bold.woff2') format('woff2');
   font-style: normal;
   font-weight: 800;
   font-display: swap;
-  src: url('/fonts/objectivity-bold.woff2') format('woff2');
 }
 
 @font-face {
@@ -137,30 +134,6 @@ export default {
     url(/fonts/almarai-bold.woff2) format('woff2');
   unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41,
     U+FB50-FDFF, U+FE80-FEFC;
-}
-
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/sofiapro-regular.woff2') format('woff2');
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/sofiapro-medium.woff2') format('woff2');
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('/fonts/sofiapro-bold.woff2') format('woff2');
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
 }
 
 *,
