@@ -3,7 +3,7 @@
     <h2 class="h1">{{ $t('works.title') }}</h2>
 
     <div class="grid">
-      <div v-for="(work, index) in works" :key="index" class="item">
+      <div v-for="(work, index) in works.slice(0, 6)" :key="index" class="item">
         <h3>
           <NuxtLink :to="localePath(`/realisations/${work.slug}`)">
             {{ work.title }}
@@ -39,7 +39,7 @@ export default {
       'sort=-nid&fields[node--work]=title,slug,thumbnail&fields[file--file]=uri'
     this.works = await this.$http
       .$get(process.env.apiUrl + `/${API_PATH}?${FILTERS}`)
-      .then((works) => works.data.slice(0, 6))
+      .then((works) => works.data)
   },
 
   data() {
