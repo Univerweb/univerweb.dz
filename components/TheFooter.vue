@@ -130,7 +130,10 @@ address {
   [dir='rtl'] & {
     font-family: $font-arabe;
   }
-  font-size: 1.75rem;
+  font-size: 1.25rem;
+  @media (min-width: $sm) {
+    font-size: 1.75rem;
+  }
   font-weight: 500;
   &:hover {
     color: $blue;
