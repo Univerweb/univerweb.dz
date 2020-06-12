@@ -13,7 +13,7 @@
     <div class="nav">
       <div class="container grid">
         <nuxt-link
-          v-if="workIndexOf < worksLength - 1"
+          v-if="currentIndex < count - 1"
           :to="localePath('/realisations/' + previus[0].slug)"
           class="link previous"
           :data-text="$t('links.previous')"
@@ -23,7 +23,7 @@
         </nuxt-link>
 
         <nuxt-link
-          v-if="workIndexOf > 0"
+          v-if="currentIndex > 0"
           :to="localePath('/realisations/' + next[0].slug)"
           class="link next"
           :data-text="$t('links.next')"
@@ -51,16 +51,16 @@ export default {
     const works = this.$t('WorksItem')
     const slug = this.$route.params.slug
     const work = works.find((work) => work.slug === slug)
-    const worksLength = works.length
-    const workIndexOf = works.indexOf(work)
-    const next = works.slice(workIndexOf - 1, workIndexOf)
-    const previus = works.slice(workIndexOf + 1, workIndexOf + 2)
+    const count = works.length
+    const currentIndex = works.indexOf(work)
+    const next = works.slice(currentIndex - 1, currentIndex)
+    const previus = works.slice(currentIndex + 1, currentIndex + 2)
     const data = {
       work,
       next,
       previus,
-      workIndexOf,
-      worksLength
+      currentIndex,
+      count
     }
     return data
   },
