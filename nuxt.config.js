@@ -121,7 +121,10 @@ export default {
     ],
     defaultLocale: 'fr',
     lazy: true,
-    langDir: 'locales/'
+    langDir: 'locales/',
+    vuex: {
+      syncMessages: true
+    }
   },
 
   /* Manifest */

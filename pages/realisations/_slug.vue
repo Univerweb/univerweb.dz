@@ -44,8 +44,10 @@ export default {
     WorkArrow
   },
 
-  validate() {
-    return true
+  validate({ params, store }) {
+    return store.state.i18n.messages.worksItem.some(
+      (item) => item.slug === params.slug
+    )
   },
 
   data() {
