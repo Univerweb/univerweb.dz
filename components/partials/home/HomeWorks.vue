@@ -5,9 +5,9 @@
     <div class="grid">
       <div v-for="(work, index) in works.slice(0, 6)" :key="index" class="item">
         <h3>
-          <NuxtLink :to="localePath(`/realisations/${work.slug}`)">
+          <nuxt-link :to="localePath('/realisations/' + work.slug)">
             {{ work.title }}
-          </NuxtLink>
+          </nuxt-link>
         </h3>
         <nuxt-link :to="localePath('/realisations/' + work.slug)">
           <img :src="API_URL + work.thumbnail.uri.url" :alt="work.title" />
