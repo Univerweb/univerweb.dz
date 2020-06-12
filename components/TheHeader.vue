@@ -6,7 +6,7 @@
       class="logo"
       @click.native="show = false"
     >
-      <span class="visually-hidden">Accueil</span>
+      <span class="visually-hidden">{{ $t('links.home') }}</span>
       <logo-arabe v-if="$i18n.locale === 'ar'" />
       <logo-latin v-else />
     </nuxt-link>
