@@ -2,25 +2,7 @@
   <main id="main" class="works">
     <div class="container">
       <h1>{{ $t('works.title') }}</h1>
-
-      <div v-if="$fetchState.pending" class="grid">
-        <content-placeholders>
-          <content-placeholders-img />
-          <content-placeholders-text :lines="1" />
-        </content-placeholders>
-
-        <content-placeholders>
-          <content-placeholders-img />
-          <content-placeholders-text :lines="1" />
-        </content-placeholders>
-
-        <content-placeholders>
-          <content-placeholders-img />
-          <content-placeholders-text :lines="1" />
-        </content-placeholders>
-      </div>
-
-      <div v-else class="grid">
+      <div class="grid">
         <div v-for="(work, index) in works" :key="index" class="item">
           <h2 class="h3">
             <NuxtLink :to="localePath(`/realisations/${work.slug}`)">

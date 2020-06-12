@@ -88,7 +88,7 @@ export default {
   },
 
   /* Plugins to load before mounting the App */
-  plugins: ['@/plugins/vue-placeholders.js', '@/plugins/vue-lazyload'],
+  plugins: ['@/plugins/vue-lazyload'],
 
   /* Nuxt.js dev-modules */
   buildModules: [

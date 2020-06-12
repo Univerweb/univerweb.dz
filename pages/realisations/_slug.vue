@@ -1,52 +1,38 @@
 <template>
   <main id="main" class="work">
     <div class="container">
-      <div v-if="$fetchState.pending">
-        <content-placeholders>
-          <content-placeholders-heading />
-          <content-placeholders-text :lines="10" />
-        </content-placeholders>
-      </div>
+      <nuxt-link :to="localePath('realisations')" class="link">
+        <work-arrow />
+        {{ $t('works.title') }}
+      </nuxt-link>
+      <h1>{{ work.title }}</h1>
 
-      <div v-else-if="$fetchState.error" class="hero error">
-        <h1>{{ $t('error.title_1') }}</h1>
-        <nuxt-link to="/" class="btn">{{ $t('error.btn') }}</nuxt-link>
-      </div>
-
-      <div v-else>
-        <nuxt-link :to="localePath('realisations')" class="link">
-          <work-arrow />
-          {{ $t('works.title') }}
+      <div class="grid work-navigation">
+        <nuxt-link
+          :to="
+            localePath({
+              name: 'realisations-slug',
+              params: { slug }
+            })
+          "
+          class="link"
+          :data-text="$t('links.previous')"
+        >
+          {{ work.id }}
         </nuxt-link>
-        <h1>{{ work.title }}</h1>
 
-        <div class="grid work-navigation">
-          <nuxt-link
-            :to="
-              localePath({
-                name: 'realisations-slug',
-                params: { slug }
-              })
-            "
-            class="link"
-            :data-text="$t('links.previous')"
-          >
-            {{ work.id }}
-          </nuxt-link>
-
-          <nuxt-link
-            :to="
-              localePath({
-                name: 'realisations-slug',
-                params: { slug }
-              })
-            "
-            class="link"
-            :data-text="$t('links.next')"
-          >
-            {{ work.id }}
-          </nuxt-link>
-        </div>
+        <nuxt-link
+          :to="
+            localePath({
+              name: 'realisations-slug',
+              params: { slug }
+            })
+          "
+          class="link"
+          :data-text="$t('links.next')"
+        >
+          {{ work.id }}
+        </nuxt-link>
       </div>
     </div>
   </main>
