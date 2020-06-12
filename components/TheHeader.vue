@@ -12,9 +12,9 @@
     </nuxt-link>
     <nav class="menu">
       <ul>
-        <li v-for="(link, index) in menu" :key="index">
+        <li v-for="(link, index) in $t('menu')" :key="index">
           <nuxt-link :to="localePath(link.slug)" @click.native="show = false">
-            {{ $t('links.' + link.slug) }}
+            {{ link.name }}
           </nuxt-link>
         </li>
       </ul>
@@ -62,12 +62,6 @@ export default {
   data() {
     return {
       show: false,
-      menu: [
-        { slug: 'realisations' },
-        { slug: 'prestations' },
-        { slug: 'agence' },
-        { slug: 'contact' }
-      ],
       lang: ''
     }
   },
