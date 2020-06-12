@@ -1,37 +1,35 @@
 <template>
   <main id="main" class="work">
     <div class="container">
-      <nuxt-link :to="localePath('realisations')" class="link">
+      <nuxt-link :to="localePath('realisations')" class="back">
         <work-arrow />
         {{ $t('works.title') }}
       </nuxt-link>
-      <h1>{{ title }}</h1>
-
-      <div class="grid work-navigation">
+      <h1>{{ work.title }}</h1>
+      <div class="card">
+        <img v-lazy="'/works/' + work.slug + '.jpg'" :alt="work.title" />
+      </div>
+    </div>
+    <div class="nav">
+      <div class="container grid">
         <nuxt-link
-          :to="
-            localePath({
-              name: 'realisations-slug',
-              params: { slug }
-            })
-          "
-          class="link"
+          v-if="workIndexOf < worksLength - 1"
+          :to="localePath('/realisations/' + previus[0].slug)"
+          class="link previous"
           :data-text="$t('links.previous')"
         >
-          {{ id }}
+          <work-arrow />
+          {{ previus[0].title }}
         </nuxt-link>
 
         <nuxt-link
-          :to="
-            localePath({
-              name: 'realisations-slug',
-              params: { slug }
-            })
-          "
-          class="link"
+          v-if="workIndexOf > 0"
+          :to="localePath('/realisations/' + next[0].slug)"
+          class="link next"
           :data-text="$t('links.next')"
         >
-          {{ id }}
+          {{ next[0].title }}
+          <work-arrow />
         </nuxt-link>
       </div>
     </div>
@@ -53,12 +51,23 @@ export default {
     const works = this.$t('workItem')
     const slug = this.$route.params.slug
     const work = works.find((work) => work.slug === slug)
-    return work
+    const worksLength = works.length
+    const workIndexOf = works.indexOf(work)
+    const next = works.slice(workIndexOf - 1, workIndexOf)
+    const previus = works.slice(workIndexOf + 1, workIndexOf + 2)
+    const data = {
+      work,
+      next,
+      previus,
+      workIndexOf,
+      worksLength
+    }
+    return data
   },
 
   head() {
     return {
-      titleTemplate: `${this.title} — ${this.$t('name')}`,
+      titleTemplate: `${this.work.title} — ${this.$t('name')}`,
       meta: [
         {
           hid: 'description',
@@ -92,18 +101,53 @@ export default {
 </script>
 
 <style lang="scss">
-.work .link {
-  display: inline-block;
-  margin-bottom: 30px;
-  font-size: 0.8rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  [dir='rtl'] & {
-    font-family: $font-arabe;
+.work {
+  & .back {
+    display: inline-block;
+    margin-bottom: 30px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    [dir='rtl'] & {
+      font-family: $font-arabe;
+    }
+  }
+  & .nav {
+    background: $blue;
+  }
+  & .grid {
+    grid-template-columns: repeat(2, auto);
+    padding-top: 70px;
+    padding-bottom: 45px;
+  }
+  & .next,
+  & .previous {
+    position: relative;
+    color: $dark-blue;
+    &:hover {
+      color: $white;
+    }
+    &::before {
+      content: attr(data-text);
+      position: absolute;
+      color: $dark-blue;
+      top: -15px;
+      left: 40px;
+      font-size: 12px;
+      font-size: 0.8rem;
+      pointer-events: none;
+    }
+    &:not(.previous) {
+      grid-column: 2;
+      text-align: right;
+      &::before {
+        right: 40px;
+      }
+    }
   }
   & .arrow {
     fill: currentColor;
-    height: 5px;
+    height: 13px;
     transform: rotate(90deg);
     margin-right: 10px;
     margin-bottom: 2px;
@@ -113,30 +157,18 @@ export default {
       margin-left: 10px;
     }
   }
-}
-
-.work-navigation {
-  grid-template-columns: repeat(2, auto);
-  background: $dark-blue;
-  padding: 70px;
-}
-
-.work-navigation a {
-  position: relative;
-  color: $blue;
-}
-
-.work-navigation a::before {
-  content: attr(data-text);
-  position: absolute;
-  top: -20px;
-  width: 21px;
-  height: 36px;
-  color: $white;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 22px;
-  letter-spacing: 0;
-  pointer-events: none;
+  & .next .arrow {
+    margin-right: 0;
+    margin-left: 10px;
+    transform: rotate(-90deg);
+    [dir='rtl'] & {
+      transform: rotate(90deg);
+      margin-right: 10px;
+      margin-left: 0;
+    }
+  }
+  & .back .arrow {
+    height: 5px;
+  }
 }
 </style>
