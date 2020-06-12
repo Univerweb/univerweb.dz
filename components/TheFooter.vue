@@ -127,6 +127,9 @@ address {
 
 .link {
   font-family: $font;
+  [dir='rtl'] & {
+    font-family: $font-arabe;
+  }
   font-size: 1.75rem;
   font-weight: 500;
   &:hover {
