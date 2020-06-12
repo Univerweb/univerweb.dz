@@ -2,12 +2,16 @@ export default (context) => {
   return new Promise(function(resolve) {
     resolve({
       name: 'يونيفارواب',
+
+      menu: [
+        { name: 'اخر الاعمال', slug: 'realisations' },
+        { name: 'الخدمات', slug: 'prestations' },
+        { name: 'الوكالة', slug: 'agence' },
+        { name: 'اتصل', slug: 'contact' }
+      ],
+
       links: {
         home: 'الصفحة الرئيسية',
-        realisations: 'اخر الاعمال',
-        prestations: 'الخدمات',
-        agence: 'الوكالة',
-        contact: 'اتصل',
         ariaLabel: 'افتح القائمة',
         previous: 'السابق',
         next: 'التالي'
@@ -27,6 +31,129 @@ export default (context) => {
         title: 'اخر الاعمال',
         description: 'محتوى قادم ...'
       },
+
+      workitem: [
+        {
+          title: 'Acodim',
+          slug: 'acodim',
+          thumbnail:
+            'https://api.univerweb.dz/sites/default/files/images/works/acodim.jpg'
+        },
+        {
+          title: 'ETS Ouar',
+          slug: 'ets-ouar',
+          thumbnail:
+            'https://api.univerweb.dz/sites/default/files/images/works/ets-ouar.jpg'
+        },
+        {
+          title: 'TPBL',
+          slug: 'tpbl',
+          thumbnail:
+            'https://api.univerweb.dz/sites/default/files/images/works/tpbl.jpg'
+        },
+        {
+          title: 'Botanique Algérie',
+          slug: 'botanique-algerie',
+          thumbnail:
+            'https://api.univerweb.dz/sites/default/files/images/works/botanique-algerie.jpg'
+        },
+        {
+          title: 'Corim',
+          slug: 'corim',
+          thumbnail:
+            'https://api.univerweb.dz/sites/default/files/images/works/corim.jpg'
+        },
+        {
+          title: 'We Service',
+          slug: 'we-service',
+          thumbnail:
+            'https://api.univerweb.dz/sites/default/files/images/works/weservice.jpg'
+        },
+        {
+          title: 'infoElec',
+          slug: 'infoelec',
+          thumbnail:
+            'https://api.univerweb.dz/sites/default/files/images/works/infoelec.jpg'
+        },
+        {
+          title: 'Optimum Transmission',
+          slug: 'optimum-transmission',
+          thumbnail:
+            'https://api.univerweb.dz/sites/default/files/images/works/optimum-transmission.jpg'
+        },
+        {
+          title: 'Soprofort',
+          slug: 'soprofort',
+          thumbnail:
+            'https://api.univerweb.dz/sites/default/files/images/works/soprofort.jpg'
+        },
+        {
+          title: 'Microtel Training Institute',
+          slug: 'microtel-training-institute',
+          thumbnail:
+            'https://api.univerweb.dz/sites/default/files/images/works/microtel-training-institute.jpg'
+        },
+        {
+          title: 'Integral',
+          slug: 'integral',
+          thumbnail:
+            'https://api.univerweb.dz/sites/default/files/images/works/integral.jpg'
+        },
+        {
+          title: 'Epiza',
+          slug: 'epiza',
+          thumbnail:
+            'https://api.univerweb.dz/sites/default/files/images/works/epiza.jpg'
+        },
+        {
+          title: 'Pibo',
+          slug: 'pibo',
+          thumbnail:
+            'https://api.univerweb.dz/sites/default/files/images/works/pibo.jpg'
+        },
+        {
+          title: 'Intermat',
+          slug: 'intermat',
+          thumbnail:
+            'https://api.univerweb.dz/sites/default/files/images/works/intermat.jpg'
+        },
+        {
+          title: 'BN Electric Company',
+          slug: 'bn-electric-company',
+          thumbnail:
+            'https://api.univerweb.dz/sites/default/files/images/works/bn-electric-company.jpg'
+        },
+        {
+          title: 'Cinquelec',
+          slug: 'cinquelec',
+          thumbnail:
+            'https://api.univerweb.dz/sites/default/files/images/works/cinquelec.jpg'
+        },
+        {
+          title: 'Spheretec',
+          slug: 'spheretec',
+          thumbnail:
+            'https://api.univerweb.dz/sites/default/files/images/works/spheretec.jpg'
+        },
+        {
+          title: 'Clinique Sonya',
+          slug: 'clinique-sonya',
+          thumbnail:
+            'https://api.univerweb.dz/sites/default/files/images/works/clinique-sonya.jpg'
+        },
+        {
+          title: 'Clinique Aya',
+          slug: 'clinique-aya',
+          thumbnail:
+            'https://api.univerweb.dz/sites/default/files/images/works/clinique-aya.jpg'
+        },
+        {
+          title: 'RCelec',
+          slug: 'rcelec',
+          thumbnail:
+            'https://api.univerweb.dz/sites/default/files/images/works/rcelec.jpg'
+        }
+      ],
 
       prestations: {
         title: 'الخدمات',
