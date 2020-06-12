@@ -124,12 +124,6 @@ export default {
     langDir: 'locales/'
   },
 
-  /* Environment */
-  env: {
-    baseUrl: process.env.BASE_URL || 'https://www.univerweb.dz',
-    apiUrl: process.env.API_URL || 'https://api.univerweb.dz'
-  },
-
   /* Manifest */
   manifest: {
     icons: [
