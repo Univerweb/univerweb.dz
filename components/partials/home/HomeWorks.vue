@@ -4,7 +4,7 @@
 
     <div class="grid">
       <div
-        v-for="(work, index) in $t('WorksItem').slice(0, 6)"
+        v-for="(work, index) in $t('worksItem').slice(0, 6)"
         :key="index"
         class="item"
       >

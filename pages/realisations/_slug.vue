@@ -47,8 +47,9 @@ export default {
   validate() {
     return true
   },
+
   data() {
-    const works = this.$t('WorksItem')
+    const works = this.$t('worksItem')
     const slug = this.$route.params.slug
     const work = works.find((work) => work.slug === slug)
     const count = works.length

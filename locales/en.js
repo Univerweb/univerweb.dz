@@ -32,7 +32,7 @@ export default (context) => {
         description: 'Content to come ...'
       },
 
-      WorksItem: [
+      worksItem: [
         {
           title: 'Acodim',
           slug: 'acodim'
