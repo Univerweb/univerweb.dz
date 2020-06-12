@@ -5,11 +5,11 @@
       <div class="grid">
         <div v-for="(work, index) in works" :key="index" class="item">
           <h2 class="h3">
-            <NuxtLink :to="localePath(`/realisations/${work.slug}`)">
+            <nuxt-link :to="localePath($route.path + '/' + work.slug)">
               {{ work.title }}
-            </NuxtLink>
+            </nuxt-link>
           </h2>
-          <nuxt-link :to="localePath('/realisations/' + work.slug)">
+          <nuxt-link :to="localePath($route.path + '/' + work.slug)">
             <div class="card">
               <img
                 v-lazy="API_URL + work.thumbnail.uri.url"
