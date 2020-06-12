@@ -48,7 +48,7 @@ export default {
     return true
   },
   data() {
-    const works = this.$t('workItem')
+    const works = this.$t('WorksItem')
     const slug = this.$route.params.slug
     const work = works.find((work) => work.slug === slug)
     const worksLength = works.length

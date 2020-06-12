@@ -3,7 +3,7 @@
     <div class="container">
       <h1>{{ $t('works.title') }}</h1>
       <div class="grid">
-        <div v-for="(work, index) in $t('workItem')" :key="index" class="item">
+        <div v-for="(work, index) in $t('WorksItem')" :key="index" class="item">
           <h2 class="h3">
             <nuxt-link :to="localePath('/realisations/' + work.slug)">
               {{ work.title }}
