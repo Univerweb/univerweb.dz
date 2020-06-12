@@ -5,7 +5,7 @@
         <work-arrow />
         {{ $t('works.title') }}
       </nuxt-link>
-      <h1>{{ work.title }}</h1>
+      <h1>{{ title }}</h1>
 
       <div class="grid work-navigation">
         <nuxt-link
@@ -18,7 +18,7 @@
           class="link"
           :data-text="$t('links.previous')"
         >
-          {{ work.id }}
+          {{ id }}
         </nuxt-link>
 
         <nuxt-link
@@ -31,7 +31,7 @@
           class="link"
           :data-text="$t('links.next')"
         >
-          {{ work.id }}
+          {{ id }}
         </nuxt-link>
       </div>
     </div>
@@ -49,23 +49,16 @@ export default {
   validate() {
     return true
   },
-
-  async fetch() {
-    const API_PATH = this.$i18n.locale + '/v1/works'
-    const FILTERS = 'fields[node--work]=title,slug,thumbnail'
-    const SLUG = await this.$http.$get(
-      process.env.apiUrl + `/${API_PATH}?${FILTERS}`
-    )
-    this.work = SLUG.data.find(({ slug }) => slug === this.$route.params.slug)
-  },
-
   data() {
-    return { work: {} }
+    const works = this.$t('workItem')
+    const slug = this.$route.params.slug
+    const work = works.find((work) => work.slug === slug)
+    return work
   },
 
   head() {
     return {
-      titleTemplate: `${this.work.title} — ${this.$t('name')}`,
+      titleTemplate: `${this.title} — ${this.$t('name')}`,
       meta: [
         {
           hid: 'description',

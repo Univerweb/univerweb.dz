@@ -3,14 +3,18 @@
     <h2 class="h1">{{ $t('works.title') }}</h2>
 
     <div class="grid">
-      <div v-for="(work, index) in works.slice(0, 6)" :key="index" class="item">
+      <div
+        v-for="(work, index) in $t('workItem').slice(0, 6)"
+        :key="index"
+        class="item"
+      >
         <h3>
           <nuxt-link :to="localePath('/realisations/' + work.slug)">
             {{ work.title }}
           </nuxt-link>
         </h3>
         <nuxt-link :to="localePath('/realisations/' + work.slug)">
-          <img :src="API_URL + work.thumbnail.uri.url" :alt="work.title" />
+          <img v-lazy="'/works/' + work.slug + '.jpg'" :alt="work.title" />
           <p>{{ work.title }}</p>
         </nuxt-link>
       </div>
@@ -31,22 +35,6 @@ import HomeArrow from '@/assets/icons/arrow.svg?inline'
 export default {
   components: {
     HomeArrow
-  },
-
-  async fetch() {
-    const API_PATH = this.$i18n.locale + '/v1/works'
-    const FILTERS =
-      'sort=-nid&fields[node--work]=title,slug,thumbnail&fields[file--file]=uri'
-    this.works = await this.$http
-      .$get(process.env.apiUrl + `/${API_PATH}?${FILTERS}`)
-      .then((works) => works.data)
-  },
-
-  data() {
-    return {
-      works: [],
-      API_URL: process.env.apiUrl
-    }
   }
 }
 </script>

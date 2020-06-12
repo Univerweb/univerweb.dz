@@ -3,7 +3,7 @@
     <div class="container">
       <h1>{{ $t('works.title') }}</h1>
       <div class="grid">
-        <div v-for="(work, index) in works" :key="index" class="item">
+        <div v-for="(work, index) in $t('workItem')" :key="index" class="item">
           <h2 class="h3">
             <nuxt-link :to="localePath($route.path + '/' + work.slug)">
               {{ work.title }}
@@ -11,10 +11,7 @@
           </h2>
           <nuxt-link :to="localePath($route.path + '/' + work.slug)">
             <div class="card">
-              <img
-                v-lazy="API_URL + work.thumbnail.uri.url"
-                :alt="work.title"
-              />
+              <img v-lazy="'/works/' + work.slug + '.jpg'" :alt="work.title" />
             </div>
             <p>{{ work.title }}</p>
           </nuxt-link>
@@ -26,23 +23,6 @@
 
 <script>
 export default {
-  async fetch() {
-    const API_PATH = this.$i18n.locale + '/v1/works'
-    const FILTERS =
-      'sort=-nid&fields[node--work]=title,slug,thumbnail&fields[file--file]=uri'
-
-    this.works = await this.$http
-      .$get(process.env.apiUrl + `/${API_PATH}?${FILTERS}`)
-      .then((works) => works.data)
-  },
-
-  data() {
-    return {
-      works: [],
-      API_URL: process.env.apiUrl
-    }
-  },
-
   head() {
     return {
       bodyAttrs: { class: 'works' },
