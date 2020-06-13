@@ -7,13 +7,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'msapplication-TileColor', content: '#50c8f0' },
-      { name: 'theme-color', content: '#50c8f0' },
-      { property: 'og:locale', content: 'fr_DZ' },
-      { property: 'og:type', content: 'website' },
-      { property: 'og:site_name', content: 'Univerweb' },
-      { property: 'og:image:type', content: '' },
-      { property: 'og:image:width', content: '' },
-      { property: 'og:image:height', content: '' }
+      { name: 'theme-color', content: '#50c8f0' }
     ],
     link: [
       {
