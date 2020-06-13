@@ -127,9 +127,6 @@ address {
 
 .link {
   font-family: $font;
-  [lang='ar'] & {
-    font-family: $font-arabe;
-  }
   font-size: 1.25rem;
   @media (min-width: $sm) {
     font-size: 1.75rem;

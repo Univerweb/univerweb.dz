@@ -122,6 +122,9 @@ export default {
   & .previous {
     position: relative;
     color: $dark-blue;
+    [lang='ar'] & {
+      font-family: $font-arabe;
+    }
     &:hover {
       color: $white;
     }
@@ -131,6 +134,10 @@ export default {
       color: $dark-blue;
       top: -15px;
       left: 40px;
+      [lang='ar'] & {
+        left: 0;
+        right: 40px;
+      }
       font-size: 12px;
       font-size: 0.8rem;
       pointer-events: none;
@@ -140,6 +147,10 @@ export default {
       text-align: right;
       &::before {
         right: 40px;
+        [lang='ar'] & {
+          left: 40px;
+          text-align: left;
+        }
       }
     }
   }
