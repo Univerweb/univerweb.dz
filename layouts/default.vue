@@ -31,10 +31,8 @@ export default {
 
   mounted() {
     this.scrolled = window.scrollY > 0
-
     this.$nextTick(() => {
       this.$nuxt.$loading.start()
-
       setTimeout(() => this.$nuxt.$loading.finish(), 500)
     })
   },
@@ -54,20 +52,42 @@ export default {
     if (this.$i18n.locale !== 'ar') {
       DIR = 'ltr'
     }
+    let path = this.$route.path
+    if (this.$i18n.locale !== 'fr') {
+      path = this.$route.path.slice(3)
+    }
+    const link = [
+      {
+        rel: 'canonical',
+        href: `https://www.univerweb.dz${this.$route.path}`
+      },
+
+      {
+        rel: 'alternate',
+        hreflang: 'fr',
+        href: 'https://www.univerweb.dz' + path
+      },
+      {
+        rel: 'alternate',
+        hreflang: 'en',
+        href: 'https://www.univerweb.dz/en' + path
+      },
+      {
+        rel: 'alternate',
+        hreflang: 'ar',
+        href: 'https://www.univerweb.dz/ar' + path
+      }
+    ]
     return {
       htmlAttrs: { lang: this.$i18n.locale, dir: DIR },
-      link: [
-        {
-          hid: 'canonical',
-          rel: 'canonical',
-          href: process.env.baseUrl + `${this.$route.path}`
-        }
-      ],
+      link,
       meta: [
+        { hid: 'og:type', property: 'og:type', content: 'website' },
+        { hid: 'og:site_name', property: 'og:site_name', content: 'Univerweb' },
         {
           hid: 'og:url',
           property: 'og:url',
-          content: process.env.baseUrl + `${this.$route.path}`
+          content: `https://www.univerweb.dz${this.$route.path}`
         }
       ]
     }
@@ -159,7 +179,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   margin: 0;
-  [dir='rtl'] & {
+  [lang='ar'] & {
     font-family: $font-arabe;
   }
 }

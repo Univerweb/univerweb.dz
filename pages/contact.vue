@@ -115,11 +115,6 @@ export default {
           hid: 'og:image',
           property: 'og:image',
           content: ''
-        },
-        {
-          hid: 'og:image:secure_url',
-          property: 'og:image:secure_url',
-          content: ''
         }
       ]
     }
@@ -151,7 +146,7 @@ textarea {
   border: 1px solid transparent;
   outline: 0;
   transition: border-color 0.3s;
-  [dir='rtl'] & {
+  [lang='ar'] & {
     letter-spacing: 0;
   }
   &:not(input) {

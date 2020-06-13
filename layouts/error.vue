@@ -48,11 +48,6 @@ export default {
           content: ''
         },
         {
-          hid: 'og:image:secure_url',
-          property: 'og:image:secure_url',
-          content: ''
-        },
-        {
           hid: 'og:url',
           property: 'og:url',
           content: null

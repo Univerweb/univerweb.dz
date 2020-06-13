@@ -32,11 +32,6 @@ export default {
           hid: 'og:image',
           property: 'og:image',
           content: ''
-        },
-        {
-          hid: 'og:image:secure_url',
-          property: 'og:image:secure_url',
-          content: ''
         }
       ]
     }

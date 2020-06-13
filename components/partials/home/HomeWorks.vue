@@ -56,7 +56,7 @@ export default {
     transform: rotate(-90deg);
     margin-left: 10px;
     margin-bottom: 2px;
-    [dir='rtl'] & {
+    [lang='ar'] & {
       transform: rotate(90deg);
       margin-left: 0;
       margin-right: 10px;

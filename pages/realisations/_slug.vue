@@ -91,11 +91,6 @@ export default {
           hid: 'og:image',
           property: 'og:image',
           content: ''
-        },
-        {
-          hid: 'og:image:secure_url',
-          property: 'og:image:secure_url',
-          content: ''
         }
       ]
     }
@@ -111,7 +106,7 @@ export default {
     font-size: 0.8rem;
     font-weight: 800;
     text-transform: uppercase;
-    [dir='rtl'] & {
+    [lang='ar'] & {
       font-family: $font-arabe;
     }
   }
@@ -154,7 +149,7 @@ export default {
     transform: rotate(90deg);
     margin-right: 10px;
     margin-bottom: 2px;
-    [dir='rtl'] & {
+    [lang='ar'] & {
       transform: rotate(-90deg);
       margin-right: 0;
       margin-left: 10px;
@@ -164,7 +159,7 @@ export default {
     margin-right: 0;
     margin-left: 10px;
     transform: rotate(-90deg);
-    [dir='rtl'] & {
+    [lang='ar'] & {
       transform: rotate(90deg);
       margin-right: 10px;
       margin-left: 0;

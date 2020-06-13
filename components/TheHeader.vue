@@ -218,7 +218,7 @@ header {
   & .globe {
     margin-right: -1rem;
     fill: $dark-blue;
-    [dir='rtl'] & {
+    [lang='ar'] & {
       margin-right: 0;
       margin-left: -1rem;
     }
@@ -253,7 +253,7 @@ header {
     height: 8px;
     margin-left: -1rem;
     fill: $dark-blue;
-    [dir='rtl'] & {
+    [lang='ar'] & {
       margin-left: 0;
       margin-right: -1rem;
     }
