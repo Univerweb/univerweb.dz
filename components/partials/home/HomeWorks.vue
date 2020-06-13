@@ -41,8 +41,7 @@ export default {
 
 <style lang="scss">
 .more {
-  display: grid;
-  justify-content: end;
+  text-align: end;
   margin-top: 30px;
   @media (min-width: $sm) {
     margin-top: 45px;
