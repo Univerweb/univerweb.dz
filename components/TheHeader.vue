@@ -179,7 +179,6 @@ header {
     display: block;
     font-size: 24px;
     font-weight: 500;
-    text-transform: uppercase;
     .show & {
       color: $white;
     }
@@ -189,13 +188,13 @@ header {
       text-align: center;
     }
     &::after {
-      position: absolute;
-      display: block;
       content: '';
-      color: $blue;
-      border-top: 3px solid;
+      display: block;
+      position: absolute;
+      background: $blue;
       width: 0%;
-      transition: width 0.3s;
+      height: 3px;
+      transition: width $transition;
     }
     &:hover::after,
     &.nuxt-link-active::after {
