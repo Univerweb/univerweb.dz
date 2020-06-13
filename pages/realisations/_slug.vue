@@ -6,9 +6,9 @@
         {{ $t('works.title') }}
       </nuxt-link>
       <h1>{{ work.title }}</h1>
-      <div class="card">
-        <img v-lazy="'/works/' + work.slug + '.jpg'" :alt="work.title" />
-      </div>
+    </div>
+    <div class="card">
+      <img v-lazy="'/works/' + work.slug + '.jpg'" :alt="work.title" />
     </div>
     <div class="nav">
       <div class="container grid">
