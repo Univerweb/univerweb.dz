@@ -343,7 +343,7 @@ h5,
 h6,
 .h6 {
   font-size: 1rem;
-  font-weight: 800;
+  font-weight: 500;
   line-height: 1.2;
 }
 
