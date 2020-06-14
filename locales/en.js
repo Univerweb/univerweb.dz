@@ -133,47 +133,27 @@ export default (context) => {
         },
         methode: {
           title: 'Our working method',
-          ecoute: {
-            title: 'Listen',
-            text:
-              'In order to know you better, we will try to understand essential elements such as your activity, your philosophy, your objectives and your constraints.'
-          },
-          recherche: {
-            title: 'Research',
-            text:
-              'After getting to know each other better and understanding your project, we will find solutions adapted to your needs while respecting your brand image.'
-          },
-          creation: {
-            title: 'Creation',
-            text:
-              'By consulting and informing you step by step, your project begins to have a face, yours simply.'
-          },
-          suivi: {
-            title: 'Monitoring',
-            text:
+          list: {
+            Listen:
+              'In order to know you better, we will try to understand essential elements such as your activity, your philosophy, your objectives and your constraints.',
+            Research:
+              'After getting to know each other better and understanding your project, we will find solutions adapted to your needs while respecting your brand image.',
+            Creation:
+              'By consulting and informing you step by step, your project begins to have a face, yours simply.',
+            Monitoring:
               'After the publication of the website, we will accompany you in the maintenance and updating of the site, in training and referencing and in traffic analysis.'
           }
         },
         choisir: {
           title: 'Why choose us',
-          prestation: {
-            title: 'A complete service',
-            text:
-              'From the choice of your domain name to the configuration of your professional messaging, including the creation, hosting and referencing of your website, we will offer you a complete service.'
-          },
-          pointe: {
-            title: 'At the cutting edge of technology',
-            text:
-              'We use the latest techniques and languages of the web (HTML5, CSS3 and JavaScript), in order to offer you the best possible service.'
-          },
-          projet: {
-            title: 'A project that looks like you',
-            text:
-              'We design websites that look like you and are tailored to your budget.'
-          },
-          design: {
-            title: 'Innovative design',
-            text:
+          list: {
+            'A complete service':
+              'From the choice of your domain name to the configuration of your professional messaging, including the creation, hosting and referencing of your website, we will offer you a complete service.',
+            'At the cutting edge of technology':
+              'We use the latest techniques and languages of the web (HTML5, CSS3 and JavaScript), in order to offer you the best possible service.',
+            'A project that looks like you':
+              'We design websites that look like you and are tailored to your budget.',
+            'Innovative design':
               'We create a custom design to best reflect the identity of your business.'
           }
         }

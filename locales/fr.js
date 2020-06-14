@@ -133,47 +133,27 @@ export default (context) => {
         },
         methode: {
           title: 'Notre méthode de travail',
-          ecoute: {
-            title: 'Écoute',
-            text:
-              'Afin de mieux vous connaitre, nous essaierons de comprendre des éléments essentiels tels que votre activité, votre philosophie, vos objectifs et vos contraintes.'
-          },
-          recherche: {
-            title: 'Recherche',
-            text:
-              'Après avoir mieux fait connaissance et cerner votre projet, nous trouverons des solutions adaptées à vos besoins tout en respectant votre image de marque.'
-          },
-          creation: {
-            title: 'Création',
-            text:
-              'En vous consultant et informant étape par étape, votre projet commence à avoir un visage, le votre tout simplement.'
-          },
-          suivi: {
-            title: 'Suivi',
-            text:
+          list: {
+            Écoute:
+              'Afin de mieux vous connaitre, nous essaierons de comprendre des éléments essentiels tels que votre activité, votre philosophie, vos objectifs et vos contraintes.',
+            Recherche:
+              'Après avoir mieux fait connaissance et cerner votre projet, nous trouverons des solutions adaptées à vos besoins tout en respectant votre image de marque.',
+            Création:
+              'En vous consultant et informant étape par étape, votre projet commence à avoir un visage, le votre tout simplement.',
+            Suivi:
               "Après la publication du site web, nous vous accompagnerons dans la maintenance et mise à jour du site, dans la formation et le référencement et dans l'analyse du trafic."
           }
         },
         choisir: {
           title: 'Pourquoi nous choisir',
-          prestation: {
-            title: 'Une prestation complète',
-            text:
-              'Du choix de votre nom de domaine à la configuration de votre messagerie professionnelle, en passant par la création, l’hébergement et le référencement de votre site web, nous vous offrirons un service complet.'
-          },
-          pointe: {
-            title: 'À la pointe de la technique',
-            text:
-              'Nous utilisons les dernières techniques et langages du web (HTML5, CSS3 et JavaScript), afin de vous offrir le meilleur service possible.'
-          },
-          projet: {
-            title: 'Un projet qui vous ressemble',
-            text:
-              'Nous concevons des sites web qui vous ressemblent et qui sont adaptés à votre budget.'
-          },
-          design: {
-            title: 'Un design innovant',
-            text:
+          list: {
+            'Une prestation complète':
+              'Du choix de votre nom de domaine à la configuration de votre messagerie professionnelle, en passant par la création, l’hébergement et le référencement de votre site web, nous vous offrirons un service complet.',
+            'À la pointe de la technique':
+              'Nous utilisons les dernières techniques et langages du web (HTML5, CSS3 et JavaScript), afin de vous offrir le meilleur service possible.',
+            'Un projet qui vous ressemble':
+              'Nous concevons des sites web qui vous ressemblent et qui sont adaptés à votre budget.',
+            'Un design innovant':
               'Nous concevons un design sur mesure afin de refléter au mieux l’identité de votre entreprise.'
           }
         }
