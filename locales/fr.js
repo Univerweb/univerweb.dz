@@ -174,13 +174,9 @@ export default (context) => {
         },
         other: {
           title: 'Autres moyens de nous contacter',
-          direction: {
-            title: 'Direction générale',
-            email: 'h.nedjar@univerweb.dz'
-          },
-          technique: {
-            title: 'Service technique',
-            email: 'webmaster@univerweb.dz'
+          list: {
+            'h.nedjar@univerweb.dz': 'Direction générale',
+            'webmaster@univerweb.dz': 'Service technique'
           }
         }
       },

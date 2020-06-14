@@ -58,22 +58,14 @@
     <div class="container">
       <h2>{{ $t('contact.other.title') }}</h2>
       <div class="grid">
-        <div class="item">
-          <h3 class="h6">{{ $t('contact.other.direction.title') }}</h3>
-          <a
-            :href="'mailto:' + $t('contact.other.direction.email')"
-            class="link"
-          >
-            {{ $t('contact.other.direction.email') }}
-          </a>
-        </div>
-        <div class="item">
-          <h3 class="h6">{{ $t('contact.other.technique.title') }}</h3>
-          <a
-            :href="'mailto:' + $t('contact.other.technique.email')"
-            class="link"
-          >
-            {{ $t('contact.other.technique.email') }}
+        <div
+          v-for="(name, value) in $t('contact.other.list')"
+          :key="value"
+          class="item"
+        >
+          <h3 class="h6">{{ name }}</h3>
+          <a :href="'mailto:' + value" class="link">
+            {{ value }}
           </a>
         </div>
       </div>
