@@ -33,15 +33,18 @@
         </nuxt-link>
       </div>
     </div>
+    <work-request />
   </main>
 </template>
 
 <script>
 import WorkArrow from '@/assets/icons/arrow.svg?inline'
+import WorkRequest from '@/components/common/AppRequest'
 
 export default {
   components: {
-    WorkArrow
+    WorkArrow,
+    WorkRequest
   },
 
   validate({ params, store }) {
