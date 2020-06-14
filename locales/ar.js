@@ -3,12 +3,12 @@ export default (context) => {
     resolve({
       name: 'يونيفارواب',
 
-      menu: [
-        { name: 'اخر الاعمال', slug: 'realisations' },
-        { name: 'الخدمات', slug: 'prestations' },
-        { name: 'الوكالة', slug: 'agence' },
-        { name: 'اتصل', slug: 'contact' }
-      ],
+      menu: {
+        realisations: 'اخر الاعمال',
+        prestations: 'الخدمات',
+        agence: 'الوكالة',
+        contact: 'اتصل'
+      },
 
       links: {
         home: 'الصفحة الرئيسية',

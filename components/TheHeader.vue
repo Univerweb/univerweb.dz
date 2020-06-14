@@ -12,9 +12,9 @@
     </nuxt-link>
     <nav class="menu">
       <ul>
-        <li v-for="(link, index) in $t('menu')" :key="index">
-          <nuxt-link :to="localePath(link.slug)" @click.native="show = false">
-            {{ link.name }}
+        <li v-for="(name, value, index) in $t('menu')" :key="index">
+          <nuxt-link :to="localePath(value)" @click.native="show = false">
+            {{ name }}
           </nuxt-link>
         </li>
       </ul>

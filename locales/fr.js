@@ -3,12 +3,12 @@ export default (context) => {
     resolve({
       name: 'Univerweb',
 
-      menu: [
-        { name: 'Réalisations', slug: 'realisations' },
-        { name: 'Prestations', slug: 'prestations' },
-        { name: "L'agence", slug: 'agence' },
-        { name: 'Contact', slug: 'contact' }
-      ],
+      menu: {
+        realisations: 'Réalisations',
+        prestations: 'Prestations',
+        agence: "L'agence",
+        contact: 'Contact'
+      },
 
       links: {
         home: 'Accueil',
