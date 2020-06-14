@@ -2,17 +2,15 @@
   <div class="container grid request">
     <div class="item">
       <h3 class="h5">
-        {{ $t('request.text') }}
+        {{ $t('request.title') }}
       </h3>
       <nuxt-link :to="localePath('contact')" class="h1">
-        {{ $t('request.link') }} {{ home }}
+        {{ $t('request.link') }}
       </nuxt-link>
     </div>
     <div class="item">
       <p class="lead">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero earum
-        maxime sunt quia sint iusto similique nulla blanditiis laudantium
-        officiis in, fugit eligendi ipsum dicta ratione laboriosam.
+        {{ $t('request.text') }}
       </p>
     </div>
   </div>

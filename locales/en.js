@@ -238,6 +238,13 @@ export default (context) => {
           github: 'Join us on GitHub'
         },
         copy: 'Copyright 2020 Univerweb. All rights reserved.'
+      },
+
+      request: {
+        title: 'Got a Project in Mind?',
+        link: 'Get in Touch',
+        text:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?'
       }
     })
   })

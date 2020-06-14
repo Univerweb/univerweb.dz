@@ -2,7 +2,7 @@
   <section class="request">
     <div class="container">
       <h3 class="h5">
-        {{ $t('request.text') }}
+        {{ $t('request.title') }}
       </h3>
       <nuxt-link :to="localePath('contact')" class="h1">
         {{ $t('request.link') }} {{ home }}

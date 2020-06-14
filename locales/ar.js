@@ -235,6 +235,13 @@ export default (context) => {
           github: 'انضم إلينا على جيث هوب'
         },
         copy: 'حقوق النشر 2020 يونيفارواب. جميع الحقوق محفوظة. '
+      },
+
+      request: {
+        title: 'لديك مشروع في الاعتبار ؟',
+        link: 'اتصل بنا',
+        text:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?'
       }
     })
   })
