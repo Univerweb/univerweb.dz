@@ -1,10 +1,7 @@
 <template>
   <main id="main" class="work">
     <div class="container">
-      <nuxt-link :to="localePath('realisations')" class="back">
-        <work-arrow />
-        {{ $t('works.title') }}
-      </nuxt-link>
+      <work-back />
       <h1>{{ work.title }}</h1>
     </div>
     <div class="card">
@@ -39,11 +36,13 @@
 
 <script>
 import WorkArrow from '@/assets/icons/arrow.svg?inline'
+import WorkBack from '@/components/partials/work/WorkBack'
 import WorkRequest from '@/components/common/AppRequest'
 
 export default {
   components: {
     WorkArrow,
+    WorkBack,
     WorkRequest
   },
 
