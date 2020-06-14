@@ -34,84 +34,84 @@ export default (context) => {
 
       worksItem: [
         {
-          title: 'Acodim',
-          slug: 'acodim'
+          slug: 'acodim',
+          title: 'Acodim'
         },
         {
-          title: 'ETS Ouar',
-          slug: 'ets-ouar'
+          slug: 'ets-ouar',
+          title: 'ETS Ouar'
         },
         {
-          title: 'TPBL',
-          slug: 'tpbl'
+          slug: 'tpbl',
+          title: 'TPBL'
         },
         {
-          title: 'Botanique Algérie',
-          slug: 'botanique-algerie'
+          slug: 'botanique-algerie',
+          title: 'Botanique Algérie'
         },
         {
-          title: 'Corim',
-          slug: 'corim'
+          slug: 'corim',
+          title: 'Corim'
         },
         {
-          title: 'We Service',
-          slug: 'we-service'
+          slug: 'we-service',
+          title: 'We Service'
         },
         {
-          title: 'infoElec',
-          slug: 'infoelec'
+          slug: 'infoelec',
+          title: 'infoElec'
         },
         {
-          title: 'Optimum Transmission',
-          slug: 'optimum-transmission'
+          slug: 'optimum-transmission',
+          title: 'Optimum Transmission'
         },
         {
-          title: 'Soprofort',
-          slug: 'soprofort'
+          slug: 'soprofort',
+          title: 'Soprofort'
         },
         {
-          title: 'Microtel Training Institute',
-          slug: 'microtel-training-institute'
+          slug: 'microtel-training-institute',
+          title: 'Microtel Training Institute'
         },
         {
-          title: 'Integral',
-          slug: 'integral'
+          slug: 'integral',
+          title: 'Integral'
         },
         {
-          title: 'Epiza',
-          slug: 'epiza'
+          slug: 'epiza',
+          title: 'Epiza'
         },
         {
-          title: 'Pibo',
-          slug: 'pibo'
+          slug: 'pibo',
+          title: 'Pibo'
         },
         {
-          title: 'Intermat',
-          slug: 'intermat'
+          slug: 'intermat',
+          title: 'Intermat'
         },
         {
-          title: 'BN Electric Company',
-          slug: 'bn-electric-company'
+          slug: 'bn-electric-company',
+          title: 'BN Electric Company'
         },
         {
-          title: 'Cinquelec',
-          slug: 'cinquelec'
+          slug: 'cinquelec',
+          title: 'Cinquelec'
         },
         {
-          title: 'Spheretec',
-          slug: 'spheretec'
+          slug: 'spheretec',
+          title: 'Spheretec'
         },
         {
-          title: 'Clinique Sonya',
-          slug: 'clinique-sonya'
+          slug: 'clinique-sonya',
+          title: 'Clinique Sonya'
         },
         {
-          title: 'Clinique Aya',
-          slug: 'clinique-aya'
+          slug: 'clinique-aya',
+          title: 'Clinique Aya'
         },
         {
-          title: 'RCelec',
-          slug: 'rcelec'
+          slug: 'rcelec',
+          title: 'RCelec'
         }
       ],
 

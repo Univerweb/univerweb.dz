@@ -34,84 +34,84 @@ export default (context) => {
 
       worksItem: [
         {
-          title: 'أكوديم',
-          slug: 'acodim'
+          slug: 'acodim',
+          title: 'أكوديم'
         },
         {
-          title: 'أو تي أس عور',
-          slug: 'ets-ouar'
+          slug: 'ets-ouar',
+          title: 'أو تي أس عور'
         },
         {
-          title: 'تي بي بي أل',
-          slug: 'tpbl'
+          slug: 'tpbl',
+          title: 'تي بي بي أل'
         },
         {
-          title: 'بوتانيك الجزائر',
-          slug: 'botanique-algerie'
+          slug: 'botanique-algerie',
+          title: 'بوتانيك الجزائر'
         },
         {
-          title: 'كوريم',
-          slug: 'corim'
+          slug: 'corim',
+          title: 'كوريم'
         },
         {
-          title: 'وي سرفيس',
-          slug: 'we-service'
+          slug: 'we-service',
+          title: 'وي سرفيس'
         },
         {
-          title: 'إنفو إيليك',
-          slug: 'infoelec'
+          slug: 'infoelec',
+          title: 'إنفو إيليك'
         },
         {
-          title: 'أوبتيموم ترانسميسيون',
-          slug: 'optimum-transmission'
+          slug: 'optimum-transmission',
+          title: 'أوبتيموم ترانسميسيون'
         },
         {
-          title: 'صوبروفور',
-          slug: 'soprofort'
+          slug: 'soprofort',
+          title: 'صوبروفور'
         },
         {
-          title: 'ميكروتال تراينينغ إنستيتيوت',
-          slug: 'microtel-training-institute'
+          slug: 'microtel-training-institute',
+          title: 'ميكروتال تراينينغ إنستيتيوت'
         },
         {
-          title: 'إنتيغرال',
-          slug: 'integral'
+          slug: 'integral',
+          title: 'إنتيغرال'
         },
         {
-          title: 'إبيزا',
-          slug: 'epiza'
+          slug: 'epiza',
+          title: 'إبيزا'
         },
         {
-          title: 'بيبو',
-          slug: 'pibo'
+          slug: 'pibo',
+          title: 'بيبو'
         },
         {
-          title: 'إنترمات',
-          slug: 'intermat'
+          slug: 'intermat',
+          title: 'إنترمات'
         },
         {
-          title: 'BN Electric Company',
-          slug: 'bn-electric-company'
+          slug: 'bn-electric-company',
+          title: 'BN Electric Company'
         },
         {
-          title: 'سانكيليك',
-          slug: 'cinquelec'
+          slug: 'cinquelec',
+          title: 'سانكيليك'
         },
         {
-          title: 'سفارتيك',
-          slug: 'spheretec'
+          slug: 'spheretec',
+          title: 'سفارتيك'
         },
         {
-          title: 'عيادة صونيا',
-          slug: 'clinique-sonya'
+          slug: 'clinique-sonya',
+          title: 'عيادة صونيا'
         },
         {
-          title: 'عيادة أياة',
-          slug: 'clinique-aya'
+          slug: 'clinique-aya',
+          title: 'عيادة أياة'
         },
         {
-          title: 'ارسي ايلك',
-          slug: 'rcelec'
+          slug: 'rcelec',
+          title: 'ارسي ايلك'
         }
       ],
 
