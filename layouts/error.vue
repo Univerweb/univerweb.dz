@@ -3,7 +3,7 @@
     <h1>{{ $t('error.404') }}</h1>
     <nuxt-link to="/" class="btn">{{ $t('error.btn') }}</nuxt-link>
   </main>
-  <main v-else>
+  <main v-else class="hero error">
     <h1>{{ $t('error.500') }}</h1>
     <nuxt-link to="/" class="btn">{{ $t('error.btn') }}</nuxt-link>
   </main>
@@ -70,6 +70,7 @@ export default {
 
 <style lang="scss">
 .hero.error {
+  text-align: center;
   justify-items: center;
 }
 </style>
