@@ -5,7 +5,7 @@
         {{ $t('request.title') }}
       </h3>
       <nuxt-link :to="localePath('contact')" class="h1">
-        {{ $t('request.link') }} {{ home }}
+        {{ $t('request.link') }}
       </nuxt-link>
     </div>
   </section>
