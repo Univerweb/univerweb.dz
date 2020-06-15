@@ -1,13 +1,11 @@
 <template>
-  <main class="hero error">
-    <div v-if="error.statusCode === 404">
-      <h1>{{ $t('error.title_1') }}</h1>
-      <nuxt-link to="/" class="btn">{{ $t('error.btn') }}</nuxt-link>
-    </div>
-    <div v-else>
-      <h1>{{ $t('error.title_2') }}</h1>
-      <nuxt-link to="/" class="btn">{{ $t('error.btn') }}</nuxt-link>
-    </div>
+  <main v-if="error.statusCode === 404" class="hero error">
+    <h1>{{ $t('error.404') }}</h1>
+    <nuxt-link to="/" class="btn">{{ $t('error.btn') }}</nuxt-link>
+  </main>
+  <main v-else>
+    <h1>{{ $t('error.500') }}</h1>
+    <nuxt-link to="/" class="btn">{{ $t('error.btn') }}</nuxt-link>
   </main>
 </template>
 
@@ -20,8 +18,13 @@ export default {
     }
   },
   head() {
+    let titleTemplate = this.$t('error.500')
+    if (this.error.statusCode === 404) {
+      titleTemplate = this.$t('error.404')
+    }
+    const description = titleTemplate + ', ' + this.$t('error.description')
     return {
-      titleTemplate: `${this.$t('error.title_1')} — ${this.$t('name')}`,
+      titleTemplate: titleTemplate + ` — ${this.$t('name')}`,
       meta: [
         {
           name: 'robots',
@@ -30,7 +33,7 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: this.$t('error.description')
+          content: description
         },
         {
           hid: 'og:title',
@@ -40,7 +43,7 @@ export default {
         {
           hid: 'og:description',
           name: 'og:description',
-          content: this.$t('error.description')
+          content: description
         },
         {
           hid: 'og:image',
@@ -67,7 +70,6 @@ export default {
 
 <style lang="scss">
 .hero.error {
-  justify-content: center;
-  text-align: center;
+  justify-items: center;
 }
 </style>
