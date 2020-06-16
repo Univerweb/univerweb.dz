@@ -38,9 +38,11 @@
       class="toggle"
       @click="isShow"
     >
-      <span class="top"></span>
-      <span class="middle"></span>
-      <span class="bottom"></span>
+      <span>
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span
+      ></span>
     </button>
   </header>
 </template>
@@ -360,48 +362,51 @@ header {
 }
 
 .toggle {
-  display: grid;
-  align-content: space-between;
   background: transparent;
-  width: 45px;
-  height: 45px;
   margin: 0;
-  padding: 10px;
+  padding: 0;
   outline: none;
   @media (min-width: $md) {
     display: none;
   }
-  &:focus {
-    background: $dark-blue;
-    .show & {
+
+  & > span {
+    display: grid;
+    align-content: space-between;
+    height: 25px;
+
+    &:focus {
+      background: $dark-blue;
+      .show & {
+        background: $blue;
+      }
+    }
+    & span {
       background: $blue;
+      height: 3px;
+      border-radius: 3px;
+      transition: all $transition;
     }
-  }
-  & span {
-    background: $blue;
-    height: 3px;
-    border-radius: 3px;
-    transition: all $transition;
-  }
-  .show &:focus span {
-    background: $dark-blue;
-  }
-  & .middle {
-    animation: CollapseMiddle $animation;
-    .show & {
-      animation: CollapseShowMiddle $animation;
+    .show &:focus span {
+      background: $dark-blue;
     }
-  }
-  & .top {
-    animation: CollapseTop $animation;
-    .show & {
-      animation: CollapseShowTop $animation;
+    & .middle {
+      animation: CollapseMiddle $animation;
+      .show & {
+        animation: CollapseShowMiddle $animation;
+      }
     }
-  }
-  & .bottom {
-    animation: CollapseBottom $animation;
-    .show & {
-      animation: CollapseShowBottom $animation;
+    & .top {
+      animation: CollapseTop $animation;
+      .show & {
+        animation: CollapseShowTop $animation;
+      }
+    }
+    & .bottom {
+      animation: CollapseBottom $animation;
+      .show & {
+        animation: CollapseShowBottom $animation;
+      }
     }
   }
 }
