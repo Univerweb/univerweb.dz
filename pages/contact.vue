@@ -134,7 +134,7 @@ textarea {
   padding: 0 15px;
   border: 1px solid transparent;
   outline: 0;
-  transition: border-color 0.3s;
+  transition: border-color $transition;
   [lang='ar'] & {
     letter-spacing: 0;
   }
