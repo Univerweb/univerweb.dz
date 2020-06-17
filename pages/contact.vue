@@ -4,7 +4,6 @@
       <div class="item">
         <h1 class="h2">{{ $t('contact.title') }}</h1>
         <app-about />
-        <app-mail />
       </div>
       <div class="item">
         <form method="post" action="">
@@ -75,12 +74,10 @@
 
 <script>
 import AppAbout from '@/components/common/AppAbout'
-import AppMail from '@/components/common/AppMail'
 
 export default {
   components: {
-    AppAbout,
-    AppMail
+    AppAbout
   },
 
   head() {
