@@ -1,7 +1,9 @@
 <template>
   <section class="container hero">
-    <h1>{{ $t('home.create.title') }}</h1>
-    <p class="lead">{{ $t('home.create.text') }}</p>
+    <div class="holder">
+      <h1>{{ $t('home.create.title') }}</h1>
+      <p class="lead">{{ $t('home.create.text') }}</p>
+    </div>
     <home-arrow v-scroll-to="'.works'" />
   </section>
 </template>
@@ -15,3 +17,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+@media (min-width: $sm) {
+  .home .holder {
+    max-width: 775px;
+  }
+}
+</style>
