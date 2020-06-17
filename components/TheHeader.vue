@@ -95,7 +95,7 @@ header {
   align-items: center;
   background: $white;
   padding: 15px 15px;
-  transition: padding 0.3s;
+  transition: padding $transition;
   z-index: 1;
   .scrolled & {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -145,7 +145,7 @@ header {
   z-index: -1;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s;
+  transition: opacity $transition;
   .show & {
     display: grid;
     background: $dark-blue;
