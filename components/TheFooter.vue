@@ -31,7 +31,6 @@
     </div>
     <div class="about-container">
       <app-about />
-      <app-mail />
       <ul class="social">
         <li v-for="(social, index) in socials" :key="index">
           <a :href="social.link">
@@ -49,7 +48,6 @@
 
 <script>
 import AppAbout from '@/components/common/AppAbout'
-import AppMail from '@/components/common/AppMail'
 import TwitterIcon from '@/assets/icons/twitter.svg?inline'
 import FacebookIcon from '@/assets/icons/facebook.svg?inline'
 import GithubIcon from '@/assets/icons/github.svg?inline'
@@ -57,7 +55,6 @@ import GithubIcon from '@/assets/icons/github.svg?inline'
 export default {
   components: {
     AppAbout,
-    AppMail,
     TwitterIcon,
     FacebookIcon,
     GithubIcon
