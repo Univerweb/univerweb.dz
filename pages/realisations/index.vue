@@ -80,7 +80,7 @@ export default {
       height: 100%;
       padding: 15px;
       opacity: 0;
-      transition: opacity 0.3s ease-in-out;
+      transition: opacity $transition;
     }
     &:hover p {
       opacity: 1;
