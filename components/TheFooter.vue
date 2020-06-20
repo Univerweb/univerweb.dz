@@ -87,13 +87,14 @@ footer {
   gap: 45px;
   background: $dark-blue;
   color: $light;
-  padding: 45px 15px;
+  padding: 65px 45px;
   @media (min-width: $sm) {
-    padding: 135px 135px;
-  }
-  @media (min-width: $md) {
     grid-template-columns: auto auto;
     justify-content: space-between;
+    padding: 100px 60px;
+  }
+  @media (min-width: $md) {
+    padding: 150px 90px;
     .address-container {
       grid-row: 1 / 1;
     }
@@ -103,7 +104,7 @@ footer {
   }
   @media (min-width: $lg) {
     grid-template-columns: auto auto 160px;
-    padding: 180px 270px;
+    padding: 150px 185px;
   }
   & a {
     color: $white;
