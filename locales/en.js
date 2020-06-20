@@ -6,7 +6,7 @@ export default (context) => {
       menu: {
         realisations: 'Latest work',
         prestations: 'Services',
-        agence: 'Agency',
+        agence: 'The agency',
         contact: 'Contact'
       },
 
@@ -19,7 +19,7 @@ export default (context) => {
 
       home: {
         title: 'Website Design',
-        description: 'Content to come ...',
+        description: 'Content to come…',
         create: {
           title: 'We create websites.',
           text:
@@ -29,7 +29,7 @@ export default (context) => {
 
       works: {
         title: 'Latest work',
-        description: 'Content to come ...'
+        description: '@:home.description'
       },
 
       worksItem: [
@@ -117,12 +117,12 @@ export default (context) => {
 
       prestations: {
         title: 'Services',
-        description: 'Content to come ...'
+        description: '@:home.description'
       },
 
       agency: {
-        title: 'Agency',
-        description: 'Content to come ...',
+        title: 'The agency',
+        description: '@:home.description',
         webAgency: {
           title:
             'We are a web agency specializing in the creation, hosting and referencing of websites.',
@@ -181,9 +181,9 @@ export default (context) => {
       },
 
       error: {
-        title_1: 'Page not found',
-        title_2: 'An error has occurred',
-        description: 'Page not found, no bowl.',
+        404: 'Page not found',
+        500: 'An error has occurred',
+        description: 'no bowl.',
         btn: 'Back to Home'
       },
 

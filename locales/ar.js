@@ -4,10 +4,10 @@ export default (context) => {
       name: 'يونيفارواب',
 
       menu: {
-        realisations: 'اخر الاعمال',
+        realisations: 'آخر الأعمال',
         prestations: 'الخدمات',
         agence: 'الوكالة',
-        contact: 'اتصل'
+        contact: 'إتصل بنا'
       },
 
       links: {
@@ -19,7 +19,7 @@ export default (context) => {
 
       home: {
         title: 'تصميم مواقع الويب',
-        description: 'محتوى قادم ...',
+        description: 'محتوى قادم…',
         create: {
           title: 'نقوم بإنشاء مواقع الويب.',
           text:
@@ -28,8 +28,8 @@ export default (context) => {
       },
 
       works: {
-        title: 'اخر الاعمال',
-        description: 'محتوى قادم ...'
+        title: 'آخر الأعمال',
+        description: '@:home.description'
       },
 
       worksItem: [
@@ -117,12 +117,12 @@ export default (context) => {
 
       prestations: {
         title: 'الخدمات',
-        description: 'محتوى قادم ...'
+        description: '@:home.description'
       },
 
       agency: {
         title: 'الوكالة',
-        description: 'محتوى قادم ...',
+        description: '@:home.description',
         webAgency: {
           title: 'نحن وكالة ويب متخصصة في إنشاء واستضافة ومراجع مواقع الويب.',
           text_1:
@@ -157,7 +157,7 @@ export default (context) => {
       },
 
       contact: {
-        title: 'اتصل',
+        title: 'إتصل بنا',
         description: 'أخبرنا عن احتياجاتك ، ونود العمل معك.',
         text:
           'إنشاء مواقع احترافية هو ما نقوم به. أخبرنا عن احتياجاتك ، ونود العمل معك.',
@@ -178,9 +178,9 @@ export default (context) => {
       },
 
       error: {
-        title_1: 'الصفحة غير موجودة',
-        title_2: 'وقع خطأ ما',
-        description: 'لم يتم العثور على الصفحة ، بدون وعاء.',
+        404: 'الصفحة غير موجودة',
+        500: 'وقع خطأ ما',
+        description: 'بدون وعاء.',
         btn: 'عودة إلى الإستقبال'
       },
 

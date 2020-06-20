@@ -29,7 +29,7 @@ export default (context) => {
 
       works: {
         title: 'Réalisations',
-        description: 'Contenu à venir…'
+        description: '@:home.description'
       },
 
       worksItem: [
@@ -117,12 +117,12 @@ export default (context) => {
 
       prestations: {
         title: 'Prestations',
-        description: 'Contenu à venir…'
+        description: '@:home.description'
       },
 
       agency: {
         title: "L'agence",
-        description: 'Contenu à venir…',
+        description: '@:home.description',
         webAgency: {
           title:
             'Nous sommes une agence web spécialisée dans la création, l’hébergement et le référencement de sites web.',
@@ -182,9 +182,9 @@ export default (context) => {
       },
 
       error: {
-        title_1: 'Page non trouvée',
-        title_2: "Une erreur s'est produite",
-        description: 'Page non trouvée, pas de bol.',
+        404: 'Page non trouvée',
+        500: "Une erreur s'est produite",
+        description: 'pas de bol.',
         btn: "Retour à l'accueil"
       },
 
