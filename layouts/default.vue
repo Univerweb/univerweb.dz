@@ -240,13 +240,16 @@ main {
 */
 .grid {
   display: grid;
-  gap: 30px;
+  gap: 45px;
   justify-content: space-between;
   @media (min-width: $sm) {
     grid-template-columns: repeat(2, 1fr);
-    gap: 45px;
+    column-gap: 15px;
   }
   @media (min-width: $md) {
+    gap: 45px;
+  }
+  @media (min-width: $lg) {
     gap: 70px;
   }
 }
