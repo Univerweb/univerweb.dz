@@ -94,7 +94,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background: $white;
-  padding: 15px 15px;
+  padding: 30px 15px;
   transition: padding $transition;
   z-index: 1;
   .scrolled & {
@@ -108,9 +108,9 @@ header {
     }
   }
   @media (min-width: $lg) {
-    padding: 45px 135px;
+    padding: 45px 140px;
     .scrolled & {
-      padding: 15px 135px;
+      padding: 15px 140px;
     }
   }
 }
