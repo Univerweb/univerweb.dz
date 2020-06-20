@@ -1,5 +1,5 @@
 <template>
-  <main class="home">
+  <main>
     <home-welcome />
     <home-works />
     <home-request />
@@ -20,6 +20,7 @@ export default {
 
   head() {
     return {
+      bodyAttrs: { class: 'home' },
       titleTemplate: `${this.$t('name')} — ${this.$t('home.title')}`,
       meta: [
         {
