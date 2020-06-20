@@ -56,8 +56,8 @@ export default {
   background: $blue;
   & .grid {
     grid-template-columns: repeat(2, auto);
-    padding-top: 70px;
-    padding-bottom: 45px;
+    padding-top: 45px;
+    padding-bottom: 30px;
   }
   & .next,
   & .previous {
