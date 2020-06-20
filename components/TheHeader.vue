@@ -165,7 +165,7 @@ header {
   }
   & ul {
     display: grid;
-    grid-auto-rows: max-content;
+    grid-auto-columns: max-content;
     row-gap: 30px;
     margin: 0;
     padding: 45px 0 0;
