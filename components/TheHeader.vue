@@ -102,15 +102,15 @@ header {
   }
   @media (min-width: $md) {
     grid-template-columns: auto 1fr;
-    padding: 45px 45px;
+    padding: 45px 30px;
     .scrolled & {
-      padding: 15px 45px;
+      padding: 15px 30px;
     }
   }
   @media (min-width: $lg) {
-    padding: 45px 140px;
+    padding: 45px 150px;
     .scrolled & {
-      padding: 15px 140px;
+      padding: 15px 150px;
     }
   }
 }
