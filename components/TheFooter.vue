@@ -94,7 +94,7 @@ footer {
     padding: 100px 60px;
   }
   @media (min-width: $md) {
-    padding: 150px 90px;
+    padding: 150px 75px;
     .address-container {
       grid-row: 1 / 1;
     }
@@ -104,7 +104,7 @@ footer {
   }
   @media (min-width: $lg) {
     grid-template-columns: auto auto 160px;
-    padding: 150px 185px;
+    padding: 150px 195px;
   }
   & a {
     color: $white;
