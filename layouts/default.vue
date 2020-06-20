@@ -223,16 +223,15 @@ main {
 ** Container
 */
 .container {
-  margin: 0 auto;
-  padding: 140px 15px;
+  margin: 45px auto;
+  padding: 0 15px;
   @media (min-width: $md) {
     max-width: calc(#{$md});
+    margin: 90px auto;
   }
   @media (min-width: $lg) {
-    max-width: calc(#{$lg} - 360px);
-  }
-  @media (min-width: $xl) {
-    max-width: calc(#{$xl} - 640px);
+    max-width: calc(#{$lg} - 160px);
+    margin: 180px auto;
   }
 }
 
