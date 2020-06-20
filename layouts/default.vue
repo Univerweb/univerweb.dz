@@ -289,31 +289,16 @@ main {
 .h1,
 h1 {
   font-size: 2.5rem;
+  @media (min-width: $md) {
+    font-size: 3.5rem;
+  }
+  @media (min-width: $lg) {
+    font-size: 4.5rem;
+  }
   font-weight: 800;
   line-height: 1;
   letter-spacing: -0.05em;
-  margin: 0 0 30px 0;
-  max-width: 680px;
-  .hero & {
-    margin-bottom: 15px;
-  }
-  @media (min-width: $sm) {
-    font-size: 3.5rem;
-    margin-bottom: 45px;
-  }
-  @media (min-width: $md) {
-    font-size: 4.5rem;
-    margin-bottom: 70px;
-    .hero & {
-      margin-bottom: 30px;
-    }
-  }
-  @media (min-width: $lg) {
-    font-size: 5.5rem;
-  }
-  @media (min-width: $xl) {
-    font-size: 6rem;
-  }
+  margin: 0 0 10px;
 }
 
 h2,
@@ -322,7 +307,7 @@ h2,
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: -0.05em;
-  margin: 0 0 20px;
+  margin: 0 0 10px;
 }
 
 h3,
@@ -330,7 +315,8 @@ h3,
   font-size: 1.75rem;
   font-weight: 500;
   line-height: 1.2;
-  margin: 20px 0 0;
+  letter-spacing: -0.05em;
+  margin: 0 0 10px;
 }
 
 h4,
