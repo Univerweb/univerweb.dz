@@ -256,15 +256,17 @@ main {
 ** Hero
 */
 .hero {
-  min-height: calc(100vh - 75px);
+  min-height: calc(100vh - 85px);
   display: grid;
   align-content: center;
+  margin-top: 0;
+  margin-bottom: 0;
   transition: min-height $transition;
   @media (min-width: $md) {
     & {
       min-height: calc(100vh - 140px);
       .scrolled & {
-        min-height: calc(100vh - 75px);
+        min-height: calc(100vh - 80px);
       }
     }
   }
