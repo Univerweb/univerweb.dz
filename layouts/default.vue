@@ -397,9 +397,12 @@ p {
 }
 
 .lead {
-  font-size: 1.75rem;
-  max-width: 680px;
   margin: 0;
+  @media (min-width: $sm) {
+    & {
+      font-size: 1.75rem;
+    }
+  }
 }
 
 .visually-hidden {
