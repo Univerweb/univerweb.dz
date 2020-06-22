@@ -112,12 +112,6 @@ export default {
 </script>
 
 <style lang="scss">
-@media (min-width: $md) {
-  .contact .container {
-    max-width: calc(1024px - 90px);
-  }
-}
-
 input,
 textarea {
   display: grid;
