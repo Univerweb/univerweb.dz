@@ -21,7 +21,7 @@ export default (context) => {
         title: 'Création de sites web',
         description: 'Contenu à venir…',
         create: {
-          title: 'Nous créons des sites web.',
+          title: 'Nous concevons des sites web professionnels.',
           text:
             'Nous concevons des sites web qui répondent précisément à vos attentes et qui respectent intégralement votre image de marque.'
         }

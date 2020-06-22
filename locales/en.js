@@ -21,7 +21,7 @@ export default (context) => {
         title: 'Website Design',
         description: 'Content to come…',
         create: {
-          title: 'We create websites.',
+          title: 'We design professional websites.',
           text:
             'We design websites that precisely meet your expectations and that fully respect your brand image.'
         }
