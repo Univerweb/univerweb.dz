@@ -17,7 +17,6 @@
   color: $dark-blue;
   text-align: center;
   margin: 0;
-  padding: 15px 0;
   & a {
     display: inline-block;
     margin: 0;
