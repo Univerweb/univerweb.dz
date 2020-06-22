@@ -16,7 +16,6 @@
   background: $blue;
   color: $dark-blue;
   text-align: center;
-  margin: 0;
   & a {
     display: inline-block;
     margin: 0;
