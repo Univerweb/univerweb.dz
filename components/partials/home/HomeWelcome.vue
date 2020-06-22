@@ -1,6 +1,6 @@
 <template>
   <section class="container hero">
-    <div class="holder">
+    <div class="intro">
       <h1>{{ $t('home.create.title') }}</h1>
       <p class="lead">{{ $t('home.create.text') }}</p>
     </div>
@@ -18,10 +18,4 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@media (min-width: $sm) {
-  .home .holder {
-    max-width: 775px;
-  }
-}
-</style>
+<style lang="scss"></style>
