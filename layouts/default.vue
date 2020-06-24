@@ -245,9 +245,15 @@ main {
     grid-column: 1 / 12;
     @media (min-width: $sm) {
       grid-column: 1 / 10;
+      &:not(h1) {
+        grid-column: 1 / 8;
+      }
     }
     @media (min-width: $md) {
       grid-column: 1 / 9;
+      &:not(h1) {
+        grid-column: 1 / 7;
+      }
     }
   }
 }
