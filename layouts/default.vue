@@ -306,11 +306,17 @@ h1,
 
 h2,
 .h2 {
-  font-size: 2rem;
+  @include size(32);
   font-weight: 500;
-  line-height: 1.2;
   letter-spacing: -0.05em;
-  margin: 0 0 10px;
+  margin-top: 0;
+  margin-bottom: 12px;
+  @media (min-width: $sm) {
+    @include size(42);
+  }
+  @media (min-width: $md) {
+    @include size(56);
+  }
 }
 
 h3,
