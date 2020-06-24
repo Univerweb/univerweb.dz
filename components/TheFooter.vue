@@ -114,6 +114,7 @@ footer {
   & .about {
     font-size: inherit;
     font-weight: 500;
+    color: $white;
     max-width: 310px;
   }
 }
