@@ -344,10 +344,11 @@ h2,
 h3,
 .h3 {
   font-size: 1.75rem;
+  @include size(20);
   font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: -0.05em;
-  margin: 0 0 10px;
+  letter-spacing: -0.02em;
+  margin-top: 0;
+  margin-bottom: 12px;
 }
 
 h4,
