@@ -223,15 +223,15 @@ main {
   ** Container
   */
 .container {
-  padding: 65px 15px;
+  padding: 48px 24px;
   @media (min-width: $sm) {
-    padding: 100px 45px;
+    padding: 96px 48px;
   }
   @media (min-width: $md) {
-    padding: 150px calc(50% - 934px / 2);
+    padding: 144px calc(50% - 934px / 2);
   }
   @media (min-width: $lg) {
-    padding: 150px calc(50% - 980px / 2);
+    padding: 144px calc(50% - 980px / 2);
   }
 }
 
