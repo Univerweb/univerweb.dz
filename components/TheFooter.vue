@@ -84,17 +84,17 @@ export default {
 <style lang="scss">
 footer {
   display: grid;
-  gap: 45px;
+  gap: 48px;
   background: $dark-blue;
   color: $light;
-  padding: 65px 15px;
+  padding: 48px 24px;
   @media (min-width: $sm) {
     grid-template-columns: auto auto;
     justify-content: space-between;
-    padding: 100px 45px;
+    padding: 96px 48px;
   }
   @media (min-width: $md) {
-    padding: 150px 60px;
+    padding: 144px 96px;
     .address-container {
       grid-row: 1 / 1;
     }
@@ -104,7 +104,6 @@ footer {
   }
   @media (min-width: $lg) {
     grid-template-columns: auto auto 160px;
-    padding: 150px 195px;
   }
   & a {
     color: $white;
