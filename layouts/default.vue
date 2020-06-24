@@ -394,12 +394,8 @@ p {
 }
 
 .lead {
-  margin: 0;
-  @media (min-width: $sm) {
-    & {
-      font-size: 1.75rem;
-    }
-  }
+  @include size(20);
+  font-weight: 500;
 }
 
 .visually-hidden {
