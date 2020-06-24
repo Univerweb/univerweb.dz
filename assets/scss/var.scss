@@ -19,3 +19,8 @@ $font-arabe: 'Almarai', sans-serif;
 
 $transition: 0.3s ease-in-out;
 $animation: 0.5s forwards;
+
+@mixin size($number) {
+  font-size: #{$number + 'px'};
+  line-height: #{($number + 4) / $number};
+}
