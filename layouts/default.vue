@@ -412,6 +412,7 @@ p {
 .lead {
   @include size(20);
   font-weight: 500;
+  color: $black-light;
 }
 
 .visually-hidden {
