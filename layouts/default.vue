@@ -97,8 +97,8 @@ export default {
 
 <style lang="scss">
 /*
-** @font-face
-*/
+  ** @font-face
+  */
 @font-face {
   font-family: 'Sofia Pro';
   src: url('/fonts/sofiapro-regular.woff2') format('woff2');
@@ -170,8 +170,8 @@ html {
 }
 
 /*
-** Body
-*/
+  ** Body
+  */
 body {
   color: $dark;
   font-family: $font;
@@ -185,8 +185,8 @@ body {
 }
 
 /*
-** Page Transition
-*/
+  ** Page Transition
+  */
 .page-enter-active,
 .page-leave-active {
   transition: opacity $transition;
@@ -197,8 +197,8 @@ body {
 }
 
 /*
-** Wrapper
-*/
+  ** Wrapper
+  */
 .wrapper {
   display: grid;
   min-height: 100vh;
@@ -206,8 +206,8 @@ body {
 }
 
 /*
-** Main
-*/
+  ** Main
+  */
 main {
   margin-top: 85px;
   transition: margin-top $transition;
@@ -220,8 +220,8 @@ main {
 }
 
 /*
-** Container
-*/
+  ** Container
+  */
 .container {
   padding: 65px 15px;
   @media (min-width: $sm) {
@@ -236,8 +236,25 @@ main {
 }
 
 /*
-** Grid
-*/
+  ** Intro
+  */
+.intro {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  & * {
+    grid-column: 1 / 12;
+    @media (min-width: $sm) {
+      grid-column: 1 / 10;
+    }
+    @media (min-width: $md) {
+      grid-column: 1 / 9;
+    }
+  }
+}
+
+/*
+  ** Grid
+  */
 .grid {
   display: grid;
   gap: 45px;
@@ -255,8 +272,8 @@ main {
 }
 
 /*
-** Hero
-*/
+  ** Hero
+  */
 .hero {
   min-height: calc(100vh - 85px);
   display: grid;
@@ -284,8 +301,8 @@ main {
 }
 
 /*
-** Headings
-*/
+  ** Headings
+  */
 h1,
 .h1 {
   @include size(44);
