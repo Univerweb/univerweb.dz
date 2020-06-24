@@ -124,12 +124,9 @@ export default (context) => {
         title: 'The agency',
         description: '@:home.description',
         webAgency: {
-          title:
-            'We are a web agency specializing in the creation, hosting and referencing of websites.',
-          text_1:
-            'Established since 2011 in Algiers, we have a creative, dynamic and passionate team for their work.',
-          text_2:
-            'Our job is to design websites that meet your expectations and that respect your brand image.'
+          title: 'We are a web agency.',
+          text:
+            'We are a web agency specializing in the creation, hosting and referencing of websites. Established since 2011 in Algiers, we have a creative, dynamic and passionate team for their work. Our job is to design websites that meet your expectations and that respect your brand image.'
         },
         methode: {
           title: 'Our working method',

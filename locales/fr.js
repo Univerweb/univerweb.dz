@@ -124,12 +124,9 @@ export default (context) => {
         title: "L'agence",
         description: '@:home.description',
         webAgency: {
-          title:
-            'Nous sommes une agence web spécialisée dans la création, l’hébergement et le référencement de sites web.',
-          text_1:
-            'Installée depuis 2011 à Alger, nous avons une équipe créative, dynamique et passionnée par son travail.',
-          text_2:
-            'Notre métier consiste à concevoir des sites web qui répondent à vos attentes et qui respectent votre image de marque.'
+          title: 'Nous sommes une agence web.',
+          text:
+            'Nous sommes une agence web spécialisée dans la création, l’hébergement et le référencement de sites web. Installée depuis 2011 à Alger, nous avons une équipe créative, dynamique et passionnée par son travail. Notre métier consiste à concevoir des sites web qui répondent à vos attentes et qui respectent votre image de marque.'
         },
         methode: {
           title: 'Notre méthode de travail',
