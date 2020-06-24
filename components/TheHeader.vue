@@ -179,7 +179,7 @@ header {
       color: $white;
     }
     @media (min-width: $md) {
-      color: $dark !important;
+      color: $black !important;
       font-size: 1rem;
       line-height: 1.5;
       text-align: center;

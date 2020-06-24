@@ -173,7 +173,7 @@ html {
   ** Body
   */
 body {
-  color: $dark;
+  color: $black;
   font-family: $font;
   font-size: 1rem;
   font-weight: 400;
@@ -366,7 +366,7 @@ h6,
 }
 
 a {
-  color: $dark;
+  color: $black;
   text-decoration: none;
   transition: color $transition;
 }
