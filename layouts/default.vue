@@ -209,12 +209,12 @@ body {
   ** Main
   */
 main {
-  margin-top: 85px;
+  margin-top: 72px;
   transition: margin-top $transition;
   @media (min-width: $md) {
-    margin-top: 140px;
+    margin-top: 144px;
     .scrolled & {
-      margin-top: 80px;
+      margin-top: 72px;
     }
   }
 }
