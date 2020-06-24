@@ -286,19 +286,22 @@ main {
 /*
 ** Headings
 */
-.h1,
-h1 {
-  font-size: 2.5rem;
-  @media (min-width: $md) {
-    font-size: 3.5rem;
-  }
-  @media (min-width: $lg) {
-    font-size: 4.5rem;
-  }
+h1,
+.h1 {
+  @include size(44);
   font-weight: 800;
-  line-height: 1;
   letter-spacing: -0.05em;
-  margin: 0 0 10px;
+  margin-top: 0;
+  margin-bottom: 24px;
+  @media (min-width: $sm) {
+    @include size(56);
+    margin-bottom: 36px;
+  }
+  @media (min-width: $md) {
+    @include size(80);
+    margin-bottom: 48px;
+    letter-spacing: -0.05em;
+  }
 }
 
 h2,
