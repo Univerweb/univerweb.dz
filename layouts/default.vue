@@ -419,6 +419,7 @@ p {
 .lead {
   @include size(20);
   font-weight: 500;
+  letter-spacing: -0.02em;
   color: $black-light;
 }
 
