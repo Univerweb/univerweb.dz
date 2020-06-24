@@ -387,7 +387,7 @@ img {
 
 p {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   &:last-child {
     margin-bottom: 0;
   }
