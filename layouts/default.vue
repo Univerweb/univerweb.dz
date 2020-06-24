@@ -259,6 +259,27 @@ main {
 }
 
 /*
+  ** Details
+  */
+.details {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  row-gap: 36px;
+  & .item:nth-child(odd),
+  & .item:nth-child(even) {
+    grid-column: 1 / 12;
+  }
+  @media (min-width: $sm) {
+    & .item:nth-child(odd) {
+      grid-column: 1 / 6;
+    }
+    & .item:nth-child(even) {
+      grid-column: 7 / 12;
+    }
+  }
+}
+
+/*
   ** Grid
   */
 .grid {
