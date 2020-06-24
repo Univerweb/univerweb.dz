@@ -275,7 +275,7 @@ main {
   ** Hero
   */
 .hero {
-  min-height: calc(100vh - 85px);
+  min-height: calc(100vh - 72px);
   display: grid;
   align-content: center;
   margin-top: 0;
@@ -283,19 +283,18 @@ main {
   transition: min-height $transition;
   @media (min-width: $md) {
     & {
-      min-height: calc(100vh - 140px);
+      min-height: calc(100vh - 144px);
       .scrolled & {
-        min-height: calc(100vh - 80px);
+        min-height: calc(100vh - 72px);
       }
     }
   }
   & .arrow {
     position: absolute;
-    bottom: 30px;
+    bottom: 24px;
     left: 50%;
     transform: translateX(-50%);
-    width: 25.71px;
-    height: 15px;
+    height: 12px;
     cursor: pointer;
   }
 }
