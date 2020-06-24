@@ -1,10 +1,10 @@
 <template>
-  <div class="container grid request">
+  <div class="container details request">
     <div class="item">
-      <h3 class="h5">
+      <h2 class="h3">
         {{ $t('request.title') }}
-      </h3>
-      <nuxt-link :to="localePath('contact')" class="h1">
+      </h2>
+      <nuxt-link :to="localePath('contact')" class="h2">
         {{ $t('request.link') }}
       </nuxt-link>
     </div>
@@ -17,27 +17,22 @@
 </template>
 
 <style lang="scss">
-.request {
-  & h3 {
-    margin: 0 0 20px;
+.request a {
+  position: relative;
+  color: $dark-blue;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $blue;
+    width: 25%;
+    height: 5px;
+    transition: width $transition;
   }
-  & a {
-    position: relative;
-    color: $dark-blue;
-    &::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: $blue;
-      width: 25%;
-      height: 5px;
-      transition: width $transition;
-    }
-    &:hover:before {
-      width: 100%;
-    }
+  &:hover:before {
+    width: 100%;
   }
 }
 </style>

@@ -1,9 +1,9 @@
 <template>
   <section class="request">
     <div class="container">
-      <h3 class="h5">
+      <h2 class="h3">
         {{ $t('request.title') }}
-      </h3>
+      </h2>
       <nuxt-link :to="localePath('contact')" class="h1">
         {{ $t('request.link') }}
       </nuxt-link>
