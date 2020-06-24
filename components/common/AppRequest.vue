@@ -19,7 +19,9 @@
 <style lang="scss">
 .request a {
   position: relative;
+  display: inline-block;
   color: $dark-blue;
+  margin: 0;
   &::before {
     content: '';
     position: absolute;
