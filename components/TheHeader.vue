@@ -94,7 +94,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background: $white;
-  padding: 30px 15px;
+  padding: 24px;
   transition: padding $transition;
   z-index: 1;
   .scrolled & {
@@ -102,16 +102,16 @@ header {
   }
   @media (min-width: $md) {
     grid-template-columns: auto 1fr;
-    padding: 45px 45px;
+    padding: 48px;
     .scrolled & {
-      padding: 15px 45px;
+      padding: 12px 48px;
     }
   }
 }
 
 .logo svg {
   display: block;
-  height: 25px;
+  height: 24px;
   g:first-child {
     fill: $blue;
   }
@@ -135,7 +135,7 @@ header {
   width: 100%;
   height: 100vh;
   align-content: space-between;
-  padding: 115px 15px 45px;
+  padding: 72px 24px 24px;
   z-index: -1;
   opacity: 0;
   pointer-events: none;
@@ -160,9 +160,9 @@ header {
   & ul {
     display: grid;
     grid-auto-columns: max-content;
-    row-gap: 30px;
+    row-gap: 24px;
     margin: 0;
-    padding: 45px 0 0;
+    padding: 48px 0 0;
     list-style: none;
     @media (min-width: $md) {
       grid-template-columns: repeat(4, auto);
@@ -173,7 +173,7 @@ header {
   & a {
     position: relative;
     display: block;
-    font-size: 24px;
+    @include size(20);
     font-weight: 500;
     .show & {
       color: $white;
@@ -181,6 +181,7 @@ header {
     @media (min-width: $md) {
       color: $dark !important;
       font-size: 1rem;
+      line-height: 1.5;
       text-align: center;
     }
     &::after {
@@ -227,7 +228,7 @@ header {
     appearance: none;
     padding-left: 1.5rem;
     padding-right: 2rem;
-    height: 50px;
+    height: 48px;
     border: 0;
     font-family: $font;
     font-weight: 500;
@@ -266,12 +267,12 @@ header {
     width: 0;
   }
   100% {
-    width: 15px;
+    width: 12px;
   }
 }
 @keyframes CollapseShowMiddle {
   0% {
-    width: 15px;
+    width: 12px;
   }
   25% {
     width: 0;
@@ -283,7 +284,7 @@ header {
 @keyframes CollapseTop {
   0% {
     transform: translateY(11px) rotate(-45deg);
-    width: 25px;
+    width: 24px;
   }
   25% {
     transform: translateY(11px) rotate(0);
@@ -293,13 +294,13 @@ header {
   }
   100% {
     transform: translateY(0) rotate(0);
-    width: 25px;
+    width: 24px;
   }
 }
 @keyframes CollapseShowTop {
   0% {
     transform: translateY(0) rotate(0);
-    width: 25px;
+    width: 24px;
   }
   50% {
     transform: translateY(0) rotate(0);
@@ -309,49 +310,49 @@ header {
   }
   100% {
     transform: translateY(11px) rotate(-45deg);
-    width: 25px;
+    width: 24px;
   }
 }
 @keyframes CollapseBottom {
   0% {
     transform: translateY(-11px) rotate(45deg);
-    width: 25px;
+    width: 24px;
   }
   25% {
     transform: translateY(-11px) rotate(0);
   }
   50% {
     transform: translateY(0) rotate(0);
-    width: 25px;
+    width: 24px;
   }
   75% {
     transform: translateY(0) rotate(0);
-    width: 20px;
+    width: 18px;
   }
   100% {
     transform: translateY(0) rotate(0);
-    width: 20px;
+    width: 18px;
   }
 }
 @keyframes CollapseShowBottom {
   0% {
     transform: translateY(0) rotate(0);
-    width: 20px;
+    width: 18px;
   }
   25% {
     transform: translateY(0) rotate(0);
-    width: 20px;
+    width: 18px;
   }
   50% {
     transform: translateY(0) rotate(0);
-    width: 25px;
+    width: 24px;
   }
   75% {
     transform: translateY(-11px) rotate(0);
   }
   100% {
     transform: translateY(-11px) rotate(45deg);
-    width: 25px;
+    width: 24px;
   }
 }
 
@@ -363,11 +364,10 @@ header {
   @media (min-width: $md) {
     display: none;
   }
-
   & > span {
     display: grid;
     align-content: space-between;
-    height: 25px;
+    height: 24px;
 
     &:focus {
       background: $dark-blue;
