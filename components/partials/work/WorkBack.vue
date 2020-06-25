@@ -20,7 +20,7 @@ export default {
   display: inline-block;
   font-size: 0.8rem;
   font-weight: 800;
-  line-height: 1.953;
+  line-height: 1.875;
   text-transform: uppercase;
   margin-bottom: 12px;
   [lang='ar'] & {
