@@ -18,10 +18,11 @@ export default {
 <style lang="scss">
 .back {
   display: inline-block;
-  margin-bottom: 30px;
   font-size: 0.8rem;
   font-weight: 800;
+  line-height: 1.953;
   text-transform: uppercase;
+  margin-bottom: 12px;
   [lang='ar'] & {
     font-family: $font-arabe;
   }
@@ -32,12 +33,12 @@ export default {
     fill: currentColor;
     height: 5px;
     transform: rotate(90deg);
-    margin-right: 10px;
+    margin-right: 6px;
     margin-bottom: 2px;
     [lang='ar'] & {
       transform: rotate(-90deg);
       margin-right: 0;
-      margin-left: 10px;
+      margin-left: 6px;
     }
   }
 }
