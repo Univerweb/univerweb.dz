@@ -1,6 +1,6 @@
 <template>
-  <div class="about lead">
-    <p>
+  <div class="about">
+    <p class="lead">
       {{ $t('contact.text') }}
     </p>
     <a :href="'mailto:' + $t('footer.email.mailto')" class="link">
