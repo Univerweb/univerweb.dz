@@ -56,8 +56,8 @@ export default {
   background: $blue;
   & .grid {
     grid-template-columns: repeat(2, auto);
-    padding-top: 45px;
-    padding-bottom: 30px;
+    padding-top: 72px;
+    padding-bottom: 48px;
   }
   & .next,
   & .previous {
@@ -73,13 +73,14 @@ export default {
       content: attr(data-text);
       position: absolute;
       color: $dark-blue;
-      top: -15px;
+      top: -24px;
       left: 40px;
       [lang='ar'] & {
         left: 0;
         right: 40px;
       }
       font-size: 0.8rem;
+      line-height: 1.875;
       pointer-events: none;
     }
     &:not(.previous) {
@@ -96,23 +97,23 @@ export default {
   }
   & .arrow {
     fill: currentColor;
-    height: 13px;
+    height: 12px;
     transform: rotate(90deg);
-    margin-right: 10px;
+    margin-right: 12px;
     margin-bottom: 2px;
     [lang='ar'] & {
       transform: rotate(-90deg);
       margin-right: 0;
-      margin-left: 10px;
+      margin-left: 12px;
     }
   }
   & .next .arrow {
     margin-right: 0;
-    margin-left: 10px;
+    margin-left: 12px;
     transform: rotate(-90deg);
     [lang='ar'] & {
       transform: rotate(90deg);
-      margin-right: 10px;
+      margin-right: 12px;
       margin-left: 0;
     }
   }
