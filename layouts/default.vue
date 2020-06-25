@@ -412,11 +412,11 @@ button {
   background: $dark-blue;
   color: $blue;
   font-weight: 500;
-  line-height: 50px;
+  line-height: 48px;
   text-transform: uppercase;
-  height: 50px;
-  padding: 0 30px;
-  border-radius: 50px;
+  height: 48px;
+  padding: 0 24px;
+  border-radius: 2em;
   transition: background-color $transition, color $transition;
   &:hover {
     background: $blue;
