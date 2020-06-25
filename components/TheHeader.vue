@@ -206,8 +206,8 @@ header {
   align-items: center;
   width: fit-content;
   background: $blue;
-  padding: 0 20px;
-  border-radius: 50px;
+  padding: 0 24px;
+  border-radius: 2em;
   @media (min-width: $md) {
     background: $dark-blue;
   }
@@ -226,14 +226,12 @@ header {
     background-color: transparent;
     color: $dark-blue;
     appearance: none;
-    padding-left: 1.5rem;
-    padding-right: 2rem;
+    padding: 0 24px;
     height: 48px;
     border: 0;
     font-family: $font;
     font-weight: 500;
     font-size: initial;
-    letter-spacing: -0.02em;
     text-transform: uppercase;
     cursor: pointer;
     outline: 0;
