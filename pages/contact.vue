@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div class="container grid">
+    <div class="container details">
       <div class="item">
         <h1 class="h2">{{ $t('contact.title') }}</h1>
         <app-about />
@@ -55,8 +55,10 @@
       </div>
     </div>
     <div class="container">
-      <h2>{{ $t('contact.other.title') }}</h2>
-      <div class="grid">
+      <div class="intro">
+        <h2>{{ $t('contact.other.title') }}</h2>
+      </div>
+      <div class="details">
         <div
           v-for="(name, value) in $t('contact.other.list')"
           :key="value"
@@ -116,7 +118,7 @@ input,
 textarea {
   display: grid;
   width: 100%;
-  height: 45px;
+  height: 48px;
   background-color: $light;
   color: $black;
   font-family: inherit;
@@ -124,8 +126,8 @@ textarea {
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 4px;
-  margin: 0 0 15px;
-  padding: 0 15px;
+  margin: 0 0 12px;
+  padding: 0 12px;
   border: 1px solid transparent;
   outline: 0;
   transition: border-color $transition;
@@ -134,9 +136,9 @@ textarea {
   }
   &:not(input) {
     resize: none;
-    line-height: 20px;
-    min-height: 90px;
-    padding: 15px;
+    line-height: 24px;
+    min-height: 96px;
+    padding: 12px;
   }
   &:focus {
     border-color: $blue;
