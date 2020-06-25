@@ -170,8 +170,8 @@ html {
 }
 
 /*
-  ** Body
-  */
+** Body
+*/
 body {
   color: $black;
   font-family: $font;
@@ -185,8 +185,8 @@ body {
 }
 
 /*
-  ** Page Transition
-  */
+** Page Transition
+*/
 .page-enter-active,
 .page-leave-active {
   transition: opacity $transition;
@@ -197,8 +197,8 @@ body {
 }
 
 /*
-  ** Wrapper
-  */
+** Wrapper
+*/
 .wrapper {
   display: grid;
   min-height: 100vh;
@@ -206,8 +206,8 @@ body {
 }
 
 /*
-  ** Main
-  */
+** Main
+*/
 main {
   margin-top: 72px;
   transition: margin-top $transition;
@@ -220,8 +220,8 @@ main {
 }
 
 /*
-  ** Container
-  */
+** Container
+*/
 .container {
   padding: 48px 24px;
   @media (min-width: $sm) {
@@ -236,8 +236,8 @@ main {
 }
 
 /*
-  ** Intro
-  */
+** Intro
+*/
 .intro {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -259,8 +259,8 @@ main {
 }
 
 /*
-    ** Details
-    */
+** Details
+*/
 .details {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -280,8 +280,8 @@ main {
 }
 
 /*
-  ** Grid
-  */
+** Grid
+*/
 .grid {
   display: grid;
   gap: 45px;
@@ -299,8 +299,8 @@ main {
 }
 
 /*
-  ** Hero
-  */
+** Hero
+*/
 .hero {
   min-height: calc(100vh - 72px);
   display: grid;
@@ -327,8 +327,8 @@ main {
 }
 
 /*
-  ** Headings
-  */
+** Headings
+*/
 h1,
 .h1 {
   @include size(44);
