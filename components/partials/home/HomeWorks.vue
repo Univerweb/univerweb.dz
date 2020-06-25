@@ -1,8 +1,7 @@
 <template>
   <section class="container works">
     <h2 class="h1">{{ $t('works.title') }}</h2>
-
-    <div class="grid">
+    <div class="details">
       <div
         v-for="(work, index) in $t('worksItem').slice(0, 6)"
         :key="index"
@@ -19,7 +18,6 @@
         </nuxt-link>
       </div>
     </div>
-
     <div class="more">
       <nuxt-link :to="localePath('realisations')" class="btn">
         {{ $t('works.title') }}
@@ -42,23 +40,17 @@ export default {
 <style lang="scss">
 .more {
   text-align: end;
-  margin-top: 30px;
-  @media (min-width: $sm) {
-    margin-top: 45px;
-  }
-  @media (min-width: $md) {
-    margin-top: 70px;
-  }
+  margin-top: 48px;
   & .arrow {
     fill: currentColor;
     height: 5px;
     transform: rotate(-90deg);
-    margin-left: 10px;
+    margin-left: 12px;
     margin-bottom: 2px;
     [lang='ar'] & {
       transform: rotate(90deg);
       margin-left: 0;
-      margin-right: 10px;
+      margin-right: 12px;
     }
   }
 }
