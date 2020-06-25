@@ -43,14 +43,14 @@ export default {
   margin-top: 48px;
   & .arrow {
     fill: currentColor;
-    height: 5px;
+    height: 8px;
     transform: rotate(-90deg);
-    margin-left: 12px;
+    margin-left: 6px;
     margin-bottom: 2px;
     [lang='ar'] & {
       transform: rotate(90deg);
       margin-left: 0;
-      margin-right: 12px;
+      margin-right: 6px;
     }
   }
 }
