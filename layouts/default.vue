@@ -259,15 +259,15 @@ main {
 }
 
 /*
-  ** Details
-  */
+    ** Details
+    */
 .details {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  row-gap: 36px;
+  row-gap: 24px;
   & .item:nth-child(odd),
   & .item:nth-child(even) {
-    grid-column: 1 / 12;
+    grid-column: 1 / 13;
   }
   @media (min-width: $sm) {
     & .item:nth-child(odd) {
