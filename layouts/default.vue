@@ -372,13 +372,6 @@ h3,
   margin-bottom: 12px;
 }
 
-h5,
-.h5 {
-  font-size: 1.25rem;
-  font-weight: 500;
-  line-height: 1.2;
-}
-
 h6,
 .h6 {
   font-size: 1rem;
