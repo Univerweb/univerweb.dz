@@ -390,7 +390,8 @@ h6,
 .h6 {
   font-size: 1rem;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.5;
+  margin: 0;
 }
 
 a {
