@@ -111,11 +111,11 @@ footer {
       color: $blue;
     }
   }
-  & .about {
-    font-size: inherit;
-    font-weight: 500;
+  & .about .lead {
     color: $white;
-    max-width: 310px;
+    @media (min-width: $sm) {
+      max-width: 310px;
+    }
   }
 }
 
@@ -124,11 +124,10 @@ address {
 }
 
 .link {
+  display: inline-block;
   font-family: $font;
-  font-size: 1.25rem;
-  @media (min-width: $sm) {
-    font-size: 1.75rem;
-  }
+  @include size(28);
+  line-height: 1.286;
   font-weight: 500;
   &:hover {
     color: $blue;
