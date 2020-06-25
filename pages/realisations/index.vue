@@ -66,7 +66,6 @@ export default {
       grid-column: 7 / 13;
     }
   }
-
   @media (min-width: $md) {
     & .item:nth-child(3n + 1) {
       grid-column: 1 / 5;
