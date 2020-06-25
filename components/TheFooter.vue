@@ -137,16 +137,15 @@ address {
 .social {
   display: grid;
   grid-template-columns: repeat(3, auto);
-  column-gap: 15px;
   justify-content: space-between;
   max-width: 295px;
-  margin: 20px 0 0;
+  margin: 12px 0 0;
   padding: 0;
   list-style: none;
   & a {
     display: grid;
     & svg {
-      height: 20px;
+      height: 24px;
       fill: $blue;
       transition: opacity $transition;
       &:hover {
@@ -158,5 +157,6 @@ address {
 
 .copy {
   font-size: 0.8rem;
+  line-height: 1.875;
 }
 </style>
