@@ -2,7 +2,7 @@
   <main>
     <div class="container">
       <h1>{{ $t('works.title') }}</h1>
-      <div class="grid">
+      <div class="details">
         <div v-for="(work, index) in $t('worksItem')" :key="index" class="item">
           <h2 class="h3">
             <nuxt-link :to="localePath('/realisations/' + work.slug)">
@@ -55,9 +55,28 @@ export default {
 </script>
 
 <style lang="scss">
-@media (min-width: $md) {
-  .works .grid {
-    grid-template-columns: repeat(3, 1fr);
+.works .details {
+  row-gap: 48px;
+  @media (min-width: $sm) {
+    column-gap: 48px;
+    & .item:nth-child(odd) {
+      grid-column: 1 / 7;
+    }
+    & .item:nth-child(even) {
+      grid-column: 7 / 13;
+    }
+  }
+
+  @media (min-width: $md) {
+    & .item:nth-child(3n + 1) {
+      grid-column: 1 / 5;
+    }
+    & .item:nth-child(3n + 2) {
+      grid-column: 5 / 9;
+    }
+    & .item:nth-child(3n + 3) {
+      grid-column: 9 / 13;
+    }
   }
 }
 
@@ -66,6 +85,8 @@ export default {
   align-content: start;
   & h3,
   & .h3 {
+    margin-top: 12px;
+    margin-bottom: 0;
     order: 1;
   }
   & > a {
@@ -78,7 +99,7 @@ export default {
       position: absolute;
       width: 100%;
       height: 100%;
-      padding: 15px;
+      padding: 12px;
       opacity: 0;
       transition: opacity $transition;
     }
