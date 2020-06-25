@@ -353,7 +353,7 @@ h2,
   font-weight: 500;
   letter-spacing: -0.05em;
   margin-top: 0;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
   @media (min-width: $sm) {
     @include size(42);
   }
