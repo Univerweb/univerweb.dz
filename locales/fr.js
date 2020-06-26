@@ -29,7 +29,8 @@ export default (context) => {
 
       works: {
         title: 'Réalisations',
-        description: '@:home.description'
+        description: '@:home.description',
+        headline: 'Découvrez nos toutes dernières créations.'
       },
 
       worksItem: [

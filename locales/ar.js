@@ -29,7 +29,8 @@ export default (context) => {
 
       works: {
         title: 'آخر الأعمال',
-        description: '@:home.description'
+        description: '@:home.description',
+        headline: 'اكتشف أحدث إبداعاتنا.'
       },
 
       worksItem: [

@@ -1,7 +1,9 @@
 <template>
   <main>
     <div class="container">
-      <h1>{{ $t('works.title') }}</h1>
+      <div class="intro">
+        <h1>{{ $t('works.headline') }}</h1>
+      </div>
       <div class="details">
         <div v-for="(work, index) in $t('worksItem')" :key="index" class="item">
           <h2 class="h3">
