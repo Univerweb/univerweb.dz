@@ -56,11 +56,11 @@
     </div>
     <div class="container">
       <div class="intro">
-        <h2>{{ $t('contact.other.title') }}</h2>
+        <h2>{{ $t('contact.other.headline') }}</h2>
       </div>
       <div class="details">
         <div
-          v-for="(name, value) in $t('contact.other.list')"
+          v-for="(name, value) in $t('contact.other.body')"
           :key="value"
           class="item"
         >

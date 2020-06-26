@@ -20,16 +20,14 @@ export default (context) => {
       home: {
         title: 'Création de sites web',
         description: 'Contenu à venir…',
-        create: {
-          title: 'Nous concevons des sites web professionnels.',
-          text:
-            'Nous concevons des sites web qui répondent précisément à vos attentes et qui respectent intégralement votre image de marque.'
-        }
+        headline: 'Nous concevons des sites web professionnels.',
+        body:
+          'Nous concevons des sites web qui répondent précisément à vos attentes et qui respectent intégralement votre image de marque.'
       },
 
       works: {
         title: 'Réalisations',
-        description: '@:home.description',
+        description: 'Contenu à venir…',
         headline: 'Découvrez nos toutes dernières créations.'
       },
 
@@ -118,20 +116,21 @@ export default (context) => {
 
       prestations: {
         title: 'Prestations',
-        description: '@:home.description'
+        description: 'Contenu à venir…',
+        headline: 'Lorem ipsum, dolor sit amet elit.',
+        body:
+          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum omnis provident deserunt saepe laborum, fugiat soluta blanditiis mollitia quia ratione! Non fuga debitis aspernatur accusamus voluptatem minus voluptate, amet suscipit?'
       },
 
       agency: {
         title: "L'agence",
-        description: '@:home.description',
-        webAgency: {
-          title: 'Nous sommes une agence web.',
-          text:
-            'Nous sommes une agence web spécialisée dans la création, l’hébergement et le référencement de sites web. Installée depuis 2011 à Alger, nous avons une équipe créative, dynamique et passionnée par son travail. Notre métier consiste à concevoir des sites web qui répondent à vos attentes et qui respectent votre image de marque.'
-        },
-        methode: {
-          title: 'Notre méthode de travail',
-          list: {
+        description: 'Contenu à venir…',
+        headline: 'Nous sommes une agence web.',
+        body:
+          'Nous sommes une agence web spécialisée dans la création, l’hébergement et le référencement de sites web. Installée depuis 2011 à Alger, nous avons une équipe créative, dynamique et passionnée par son travail. Notre métier consiste à concevoir des sites web qui répondent à vos attentes et qui respectent votre image de marque.',
+        method: {
+          headline: 'Notre méthode de travail',
+          body: {
             Écoute:
               'Afin de mieux vous connaitre, nous essaierons de comprendre des éléments essentiels tels que votre activité, votre philosophie, vos objectifs et vos contraintes.',
             Recherche:
@@ -142,9 +141,9 @@ export default (context) => {
               "Après la publication du site web, nous vous accompagnerons dans la maintenance et mise à jour du site, dans la formation et le référencement et dans l'analyse du trafic."
           }
         },
-        choisir: {
-          title: 'Pourquoi nous choisir',
-          list: {
+        choose: {
+          headline: 'Pourquoi nous choisir',
+          body: {
             'Une prestation complète':
               'Du choix de votre nom de domaine à la configuration de votre messagerie professionnelle, en passant par la création, l’hébergement et le référencement de votre site web, nous vous offrirons un service complet.',
             'À la pointe de la technique':
@@ -161,7 +160,7 @@ export default (context) => {
         title: 'Contact',
         description:
           'Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.',
-        text:
+        body:
           "Créer des sites web professionnels, c'est ce que nous faisons. Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
         form: {
           fullname: 'Votre nom',
@@ -171,8 +170,8 @@ export default (context) => {
           submit: 'Soumettre'
         },
         other: {
-          title: 'Autres moyens de nous contacter',
-          list: {
+          headline: 'Autres moyens de nous contacter',
+          body: {
             'h.nedjar@univerweb.dz': 'Direction générale',
             'webmaster@univerweb.dz': 'Service technique'
           }
@@ -216,10 +215,10 @@ export default (context) => {
       },
 
       request: {
-        title: 'Vous avez un projet en tête ?',
-        link: 'Contactez-nous',
-        text:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?'
+        headline: 'Vous avez un projet en tête ?',
+        body:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+        link: 'Contactez-nous'
       }
     })
   })

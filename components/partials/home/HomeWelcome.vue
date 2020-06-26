@@ -1,8 +1,8 @@
 <template>
   <section class="container hero">
     <div class="intro">
-      <h1>{{ $t('home.create.title') }}</h1>
-      <p class="lead">{{ $t('home.create.text') }}</p>
+      <h1>{{ $t('home.headline') }}</h1>
+      <p class="lead">{{ $t('home.body') }}</p>
     </div>
     <home-arrow v-scroll-to="'.works'" />
   </section>

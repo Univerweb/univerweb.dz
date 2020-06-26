@@ -1,18 +1,18 @@
 <template>
   <main>
     <div class="container intro">
-      <h1>{{ $t('agency.webAgency.title') }}</h1>
+      <h1>{{ $t('agency.headline') }}</h1>
       <p class="lead">
-        {{ $t('agency.webAgency.text') }}
+        {{ $t('agency.body') }}
       </p>
     </div>
     <div class="container">
       <div class="intro">
-        <h2 class="h1">{{ $t('agency.methode.title') }}</h2>
+        <h2 class="h1">{{ $t('agency.method.headline') }}</h2>
       </div>
       <ol class="details">
         <li
-          v-for="(name, value) in $t('agency.methode.list')"
+          v-for="(name, value) in $t('agency.method.body')"
           :key="value"
           class="item"
         >
@@ -23,11 +23,11 @@
     </div>
     <div class="container">
       <div class="intro">
-        <h2 class="h1">{{ $t('agency.choisir.title') }}</h2>
+        <h2 class="h1">{{ $t('agency.choose.headline') }}</h2>
       </div>
       <div class="details">
         <div
-          v-for="(name, value) in $t('agency.choisir.list')"
+          v-for="(name, value) in $t('agency.choose.body')"
           :key="value"
           class="item"
         >

@@ -20,16 +20,14 @@ export default (context) => {
       home: {
         title: 'تصميم مواقع الويب',
         description: 'محتوى قادم…',
-        create: {
-          title: 'نقوم بتصميم مواقع ويب احترافية.',
-          text:
-            'نقوم بتصميم مواقع الويب التي تلبي توقعاتك بدقة وتحترم تمامًا صورة علامتك التجارية.'
-        }
+        headline: 'نقوم بتصميم مواقع ويب احترافية.',
+        body:
+          'نقوم بتصميم مواقع الويب التي تلبي توقعاتك بدقة وتحترم تمامًا صورة علامتك التجارية.'
       },
 
       works: {
         title: 'آخر الأعمال',
-        description: '@:home.description',
+        description: 'محتوى قادم…',
         headline: 'اكتشف أحدث إبداعاتنا.'
       },
 
@@ -118,20 +116,21 @@ export default (context) => {
 
       prestations: {
         title: 'الخدمات',
-        description: '@:home.description'
+        description: 'محتوى قادم…',
+        headline: 'Lorem ipsum, dolor sit amet elit.',
+        body:
+          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum omnis provident deserunt saepe laborum, fugiat soluta blanditiis mollitia quia ratione! Non fuga debitis aspernatur accusamus voluptatem minus voluptate, amet suscipit?'
       },
 
       agency: {
         title: 'الوكالة',
-        description: '@:home.description',
-        webAgency: {
-          title: 'نحن وكالة ويب.',
-          text:
-            'نحن وكالة ويب متخصصة في إنشاء واستضافة ومراجع مواقع الويب. تأسست منذ 2011 في الجزائر العاصمة ، لدينا فريق مبدع وديناميكي وعاطفي لعملهم. مهمتنا هي تصميم مواقع الويب التي تلبي توقعاتك وتحترم صورة علامتك التجارية.'
-        },
-        methode: {
-          title: 'طريقة عملنا',
-          list: {
+        description: 'محتوى قادم…',
+        headline: 'نحن وكالة ويب.',
+        body:
+          'نحن وكالة ويب متخصصة في إنشاء واستضافة ومراجع مواقع الويب. تأسست منذ 2011 في الجزائر العاصمة ، لدينا فريق مبدع وديناميكي وعاطفي لعملهم. مهمتنا هي تصميم مواقع الويب التي تلبي توقعاتك وتحترم صورة علامتك التجارية.',
+        method: {
+          headline: 'طريقة عملنا',
+          body: {
             استمع:
               'للتعرف عليك بشكل أفضل ، سنحاول فهم العناصر الأساسية مثل نشاطك وفلسفتك وأهدافك وقيودك.',
             البحث:
@@ -142,9 +141,9 @@ export default (context) => {
               'بعد نشر الموقع ، سنرافقك في صيانة وتحديث الموقع ، في التدريب والمراجع وتحليل حركة المرور.'
           }
         },
-        choisir: {
-          title: 'لماذا تختارنا',
-          list: {
+        choose: {
+          headline: 'لماذا تختارنا',
+          body: {
             'خدمة كاملة':
               'من اختيار اسم النطاق الخاص بك إلى تكوين الرسائل المهنية الخاصة بك ، بما في ذلك إنشاء موقعك واستضافته والإشارة إليه ، سنقدم لك خدمة كاملة.',
             'في طليعة التكنولوجيا':
@@ -158,7 +157,7 @@ export default (context) => {
       contact: {
         title: 'إتصل بنا',
         description: 'أخبرنا عن احتياجاتك ، ونود العمل معك.',
-        text:
+        body:
           'إنشاء مواقع احترافية هو ما نقوم به. أخبرنا عن احتياجاتك ، ونود العمل معك.',
         form: {
           fullname: 'اسمك',
@@ -168,8 +167,8 @@ export default (context) => {
           submit: 'إرسال'
         },
         other: {
-          title: 'طرق أخرى للاتصال بنا',
-          list: {
+          headline: 'طرق أخرى للاتصال بنا',
+          body: {
             'h.nedjar@univerweb.dz': 'إدارة عامة',
             'webmaster@univerweb.dz': 'خدمة تقنية'
           }
@@ -213,10 +212,10 @@ export default (context) => {
       },
 
       request: {
-        title: 'لديك مشروع في الاعتبار ؟',
-        link: 'اتصل بنا',
-        text:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?'
+        headline: 'لديك مشروع في الاعتبار ؟',
+        body:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+        link: 'اتصل بنا'
       }
     })
   })

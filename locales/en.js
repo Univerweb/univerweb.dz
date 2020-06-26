@@ -20,16 +20,14 @@ export default (context) => {
       home: {
         title: 'Website Design',
         description: 'Content to come…',
-        create: {
-          title: 'We design professional websites.',
-          text:
-            'We design websites that precisely meet your expectations and that fully respect your brand image.'
-        }
+        headline: 'We design professional websites.',
+        body:
+          'We design websites that precisely meet your expectations and that fully respect your brand image.'
       },
 
       works: {
         title: 'Latest work',
-        description: '@:home.description',
+        description: 'Content to come…',
         headline: 'Discover our latest creations.'
       },
 
@@ -118,20 +116,21 @@ export default (context) => {
 
       prestations: {
         title: 'Services',
-        description: '@:home.description'
+        description: 'Content to come…',
+        headline: 'Lorem ipsum, dolor sit amet elit.',
+        body:
+          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum omnis provident deserunt saepe laborum, fugiat soluta blanditiis mollitia quia ratione! Non fuga debitis aspernatur accusamus voluptatem minus voluptate, amet suscipit?'
       },
 
       agency: {
         title: 'The agency',
-        description: '@:home.description',
-        webAgency: {
-          title: 'We are a web agency.',
-          text:
-            'We are a web agency specializing in the creation, hosting and referencing of websites. Established since 2011 in Algiers, we have a creative, dynamic and passionate team for their work. Our job is to design websites that meet your expectations and that respect your brand image.'
-        },
-        methode: {
-          title: 'Our working method',
-          list: {
+        description: 'Content to come…',
+        headline: 'We are a web agency.',
+        body:
+          'We are a web agency specializing in the creation, hosting and referencing of websites. Established since 2011 in Algiers, we have a creative, dynamic and passionate team for their work. Our job is to design websites that meet your expectations and that respect your brand image.',
+        method: {
+          headline: 'Our working method',
+          body: {
             Listen:
               'In order to know you better, we will try to understand essential elements such as your activity, your philosophy, your objectives and your constraints.',
             Research:
@@ -142,9 +141,9 @@ export default (context) => {
               'After the publication of the website, we will accompany you in the maintenance and updating of the site, in training and referencing and in traffic analysis.'
           }
         },
-        choisir: {
-          title: 'Why choose us',
-          list: {
+        choose: {
+          headline: 'Why choose us',
+          body: {
             'A complete service':
               'From the choice of your domain name to the configuration of your professional messaging, including the creation, hosting and referencing of your website, we will offer you a complete service.',
             'At the cutting edge of technology':
@@ -160,7 +159,7 @@ export default (context) => {
       contact: {
         title: 'Contact',
         description: "Tell us about your needs, we'd love to work with you.",
-        text:
+        body:
           "Creating professional websites is what we do. Tell us about your needs, we'd love to work with you.",
         form: {
           fullname: 'Your name',
@@ -170,8 +169,8 @@ export default (context) => {
           submit: 'Submit'
         },
         other: {
-          title: 'Other ways to contact us',
-          list: {
+          headline: 'Other ways to contact us',
+          body: {
             'h.nedjar@univerweb.dz': 'Executive management',
             'webmaster@univerweb.dz': 'Technical service'
           }
@@ -215,10 +214,10 @@ export default (context) => {
       },
 
       request: {
-        title: 'Got a Project in Mind?',
-        link: 'Get in Touch',
-        text:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?'
+        headline: 'Got a Project in Mind?',
+        body:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+        link: 'Get in Touch'
       }
     })
   })

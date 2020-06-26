@@ -1,8 +1,10 @@
 <template>
   <main>
     <div class="container hero">
-      <h1>{{ $t('prestations.title') }}</h1>
-      <p class="lead">{{ $t('prestations.description') }}</p>
+      <div class="intro">
+        <h1>{{ $t('prestations.headline') }}</h1>
+        <p class="lead">{{ $t('prestations.body') }}</p>
+      </div>
     </div>
   </main>
 </template>
