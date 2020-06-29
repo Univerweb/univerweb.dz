@@ -13,7 +13,10 @@
           </nuxt-link>
         </h3>
         <nuxt-link :to="localePath('/realisations/' + work.slug)">
-          <img v-lazy="'/works/' + work.slug + '.jpg'" :alt="work.title" />
+          <img
+            v-lazy="'/works/' + work.slug + '/' + work.slug + '_thumbnail.jpg'"
+            :alt="work.title"
+          />
           <p>{{ work.title }}</p>
         </nuxt-link>
       </div>
