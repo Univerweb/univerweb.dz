@@ -35,84 +35,112 @@ export default (context) => {
       work: [
         {
           slug: 'acodim',
-          title: 'Acodim'
-        },
-        {
-          slug: 'ets-ouar',
-          title: 'ETS Ouar'
-        },
-        {
-          slug: 'tpbl',
-          title: 'TPBL'
-        },
-        {
-          slug: 'botanique-algerie',
-          title: 'Botanique Algérie'
-        },
-        {
-          slug: 'corim',
-          title: 'Corim'
-        },
-        {
-          slug: 'we-service',
-          title: 'We Service'
-        },
-        {
-          slug: 'infoelec',
-          title: 'infoElec'
-        },
-        {
-          slug: 'optimum-transmission',
-          title: 'Optimum Transmission'
-        },
-        {
-          slug: 'soprofort',
-          title: 'Soprofort'
-        },
-        {
-          slug: 'microtel-training-institute',
-          title: 'Microtel Training Institute'
-        },
-        {
-          slug: 'integral',
-          title: 'Integral'
-        },
-        {
-          slug: 'epiza',
-          title: 'Epiza'
-        },
-        {
-          slug: 'pibo',
-          title: 'Pibo'
-        },
-        {
-          slug: 'intermat',
-          title: 'Intermat'
-        },
-        {
-          slug: 'bn-electric-company',
-          title: 'BN Electric Company'
-        },
-        {
-          slug: 'cinquelec',
-          title: 'Cinquelec'
-        },
-        {
-          slug: 'spheretec',
-          title: 'Spheretec'
-        },
-        {
-          slug: 'clinique-sonya',
-          title: 'Clinique Sonya'
-        },
-        {
-          slug: 'clinique-aya',
-          title: 'Clinique Aya'
-        },
-        {
-          slug: 'rcelec',
-          title: 'RCelec'
+          title: 'Acodim',
+          description: 'Content to come…',
+          client: {
+            Client: 'Acodim',
+            Features: 'Web Design, Development, Hosting',
+            Industry: 'Real estate promotion'
+          },
+          body:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
+          link: 'https://www.acodim.dz'
         }
+        // {
+        //   slug: 'ets-ouar',
+        //   title: 'ETS Ouar',
+        //   description: 'Content to come…'
+        // },
+        // {
+        //   slug: 'tpbl',
+        //   title: 'TPBL',
+        //   description: 'Content to come…'
+        // },
+        // {
+        //   slug: 'botanique-algerie',
+        //   title: 'Botanique Algérie',
+        //   description: 'Content to come…'
+        // },
+        // {
+        //   slug: 'corim',
+        //   title: 'Corim',
+        //   description: 'Content to come…'
+        // }
+        // {
+        //   slug: 'we-service',
+        //   title: 'We Service',
+        //   description: 'Content to come…'
+        // },
+        // {
+        //   slug: 'infoelec',
+        //   title: 'infoElec',
+        //   description: 'Content to come…'
+        // },
+        // {
+        //   slug: 'optimum-transmission',
+        //   title: 'Optimum Transmission',
+        //   description: 'Content to come…'
+        // },
+        // {
+        //   slug: 'soprofort',
+        //   title: 'Soprofort',
+        //   description: 'Content to come…'
+        // },
+        // {
+        //   slug: 'microtel-training-institute',
+        //   title: 'Microtel Training Institute',
+        //   description: 'Content to come…'
+        // },
+        // {
+        //   slug: 'integral',
+        //   title: 'Integral',
+        //   description: 'Content to come…'
+        // },
+        // {
+        //   slug: 'epiza',
+        //   title: 'Epiza',
+        //   description: 'Content to come…'
+        // },
+        // {
+        //   slug: 'pibo',
+        //   title: 'Pibo',
+        //   description: 'Content to come…'
+        // },
+        // {
+        //   slug: 'intermat',
+        //   title: 'Intermat',
+        //   description: 'Content to come…'
+        // },
+        // {
+        //   slug: 'bn-electric-company',
+        //   title: 'BN Electric Company',
+        //   description: 'Content to come…'
+        // },
+        // {
+        //   slug: 'cinquelec',
+        //   title: 'Cinquelec',
+        //   description: 'Content to come…'
+        // },
+        // {
+        //   slug: 'spheretec',
+        //   title: 'Spheretec',
+        //   description: 'Content to come…'
+        // },
+        // {
+        //   slug: 'clinique-sonya',
+        //   title: 'Clinique Sonya',
+        //   description: 'Content to come…'
+        // },
+        // {
+        //   slug: 'clinique-aya',
+        //   title: 'Clinique Aya',
+        //   description: 'Content to come…'
+        // },
+        // {
+        //   slug: 'rcelec',
+        //   title: 'RCelec',
+        //   description: 'Content to come…'
+        // }
       ],
 
       prestations: {
@@ -120,7 +148,22 @@ export default (context) => {
         description: 'Content to come…',
         headline: 'Lorem ipsum, dolor sit amet elit.',
         body:
-          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum omnis provident deserunt saepe laborum, fugiat soluta blanditiis mollitia quia ratione! Non fuga debitis aspernatur accusamus voluptatem minus voluptate, amet suscipit?'
+          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum omnis provident deserunt saepe laborum, fugiat soluta blanditiis mollitia quia ratione! Non fuga debitis aspernatur accusamus voluptatem minus voluptate, amet suscipit?',
+        webDesign: {
+          headline: 'Web design',
+          body:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, ullam inventore quo nam, perspiciatis nobis accusantium odit ut velit modi sed accusamus aut iusto et, molestias fuga laboriosam tempora porro!'
+        },
+        dev: {
+          headline: 'Development',
+          body:
+            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis est cum recusandae quas dolore, fuga praesentium neque deserunt quod sed culpa quisquam aperiam fugiat necessitatibus veniam! Odit animi architecto non.'
+        },
+        support: {
+          headline: 'Support + Hosting',
+          body:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus vitae nam, nisi veniam cum ad nostrum ab ullam dolores architecto, maxime ex perspiciatis aperiam id est iusto adipisci doloremque amet.'
+        }
       },
 
       agency: {
