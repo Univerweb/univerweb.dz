@@ -3,7 +3,7 @@
     <h2 class="h1">{{ $t('works.title') }}</h2>
     <div class="details">
       <div
-        v-for="(work, index) in $t('worksItem').slice(0, 6)"
+        v-for="(work, index) in $t('work').slice(0, 6)"
         :key="index"
         class="item"
       >

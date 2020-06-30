@@ -5,7 +5,7 @@
         <h1>{{ $t('works.headline') }}</h1>
       </div>
       <div class="details">
-        <div v-for="(work, index) in $t('worksItem')" :key="index" class="item">
+        <div v-for="(work, index) in $t('work')" :key="index" class="item">
           <h2 class="h3">
             <nuxt-link :to="localePath('/realisations/' + work.slug)">
               {{ work.title }}

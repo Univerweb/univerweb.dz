@@ -33,7 +33,7 @@ export default {
   },
 
   data() {
-    const works = this.$t('worksItem')
+    const works = this.$t('work')
     const slug = this.$route.params.slug
     const work = works.find((work) => work.slug === slug)
     const count = works.length
