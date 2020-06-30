@@ -20,7 +20,7 @@
                 :alt="work.title"
               />
             </div>
-            <p>{{ work.title }}</p>
+            <p class="h6">{{ work.body }}</p>
           </nuxt-link>
         </div>
       </div>

@@ -17,7 +17,7 @@
             v-lazy="'/works/' + work.slug + '/' + work.slug + '_thumbnail.jpg'"
             :alt="work.title"
           />
-          <p>{{ work.title }}</p>
+          <p class="h6">{{ work.body }}</p>
         </nuxt-link>
       </div>
     </div>
