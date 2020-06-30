@@ -1,26 +1,23 @@
 <template>
-  <div class="nav">
-    <div class="container grid">
-      <nuxt-link
-        v-if="currentIndex < count - 1"
-        :to="localePath('/realisations/' + previus[0].slug)"
-        class="link previous"
-        :data-text="$t('links.previous')"
-      >
-        <nav-arrow />
-        {{ previus[0].title }}
-      </nuxt-link>
-
-      <nuxt-link
-        v-if="currentIndex > 0"
-        :to="localePath('/realisations/' + next[0].slug)"
-        class="link next"
-        :data-text="$t('links.next')"
-      >
-        {{ next[0].title }}
-        <nav-arrow />
-      </nuxt-link>
-    </div>
+  <div class="container nav">
+    <nuxt-link
+      v-if="currentIndex < count - 1"
+      :to="localePath('/realisations/' + previus[0].slug)"
+      class="link previous"
+      :data-text="$t('links.previous')"
+    >
+      <nav-arrow />
+      {{ previus[0].title }}
+    </nuxt-link>
+    <nuxt-link
+      v-if="currentIndex > 0"
+      :to="localePath('/realisations/' + next[0].slug)"
+      class="link next"
+      :data-text="$t('links.next')"
+    >
+      {{ next[0].title }}
+      <nav-arrow />
+    </nuxt-link>
   </div>
 </template>
 
@@ -53,12 +50,11 @@ export default {
 
 <style lang="scss">
 .nav {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  padding-top: 72px;
+  padding-bottom: 48px;
   background: $blue;
-  & .grid {
-    grid-template-columns: repeat(2, auto);
-    padding-top: 72px;
-    padding-bottom: 48px;
-  }
   & .next,
   & .previous {
     position: relative;
