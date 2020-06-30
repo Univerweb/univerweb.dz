@@ -51,7 +51,8 @@ export default {
 <style lang="scss">
 .nav {
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(2, max-content);
+  justify-content: space-between;
   padding-top: 72px;
   padding-bottom: 48px;
   background: $blue;
