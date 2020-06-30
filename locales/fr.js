@@ -51,11 +51,19 @@ export default (context) => {
         //   title: 'ETS Ouar',
         //   description: 'Contenu à venir…'
         // },
-        // {
-        //   slug: 'tpbl',
-        //   title: 'TPBL',
-        //   description: 'Contenu à venir…'
-        // },
+        {
+          slug: 'tpbl',
+          title: 'TPBL',
+          description: 'Contenu à venir…',
+          client: {
+            Client: 'TPBL',
+            Fonctionnalités: 'Web Design, Développement, Hébergement',
+            Secteur: 'Promotion immobilière'
+          },
+          body:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+          link: 'https://www.tpbl.dz'
+        },
         // {
         //   slug: 'botanique-algerie',
         //   title: 'Botanique Algérie',
