@@ -242,7 +242,7 @@ main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   & * {
-    grid-column: 1 / 12;
+    grid-column: 1 / 13;
     @media (min-width: $sm) {
       grid-column: 1 / 10;
       &:not(h1) {
