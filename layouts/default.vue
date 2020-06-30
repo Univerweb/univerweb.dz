@@ -290,11 +290,9 @@ main {
   margin-bottom: 0;
   transition: min-height $transition;
   @media (min-width: $md) {
-    & {
-      min-height: calc(100vh - 144px);
-      .scrolled & {
-        min-height: calc(100vh - 72px);
-      }
+    min-height: calc(100vh - 144px);
+    .scrolled & {
+      min-height: calc(100vh - 72px);
     }
   }
   & .arrow {
