@@ -45,7 +45,7 @@ export default (context) => {
           body:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
           link: 'https://www.acodim.dz'
-        }
+        },
         // {
         //   slug: 'ets-ouar',
         //   title: 'ETS Ouar',
@@ -61,11 +61,19 @@ export default (context) => {
         //   title: 'Botanique Algérie',
         //   description: 'Content to come…'
         // },
-        // {
-        //   slug: 'corim',
-        //   title: 'Corim',
-        //   description: 'Content to come…'
-        // }
+        {
+          slug: 'corim',
+          title: 'Corim',
+          description: 'Content to come…',
+          client: {
+            Client: 'Corim',
+            Features: 'Web Design, Development, Hosting',
+            Industry: 'Real estate'
+          },
+          body:
+            'Corim is a real estate agency based in Algiers and specialized in the rental and sale of apartments, villas, buildings, land, premises and hangars.',
+          link: 'https://www.corim.dz'
+        }
         // {
         //   slug: 'we-service',
         //   title: 'We Service',

@@ -45,7 +45,7 @@ export default (context) => {
           body:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
           link: 'https://www.acodim.dz'
-        }
+        },
         // {
         //   slug: 'ets-ouar',
         //   title: 'ETS Ouar',
@@ -61,11 +61,19 @@ export default (context) => {
         //   title: 'Botanique Algérie',
         //   description: 'Contenu à venir…'
         // },
-        // {
-        //   slug: 'corim',
-        //   title: 'Corim',
-        //   description: 'Contenu à venir…'
-        // }
+        {
+          slug: 'corim',
+          title: 'Corim',
+          description: 'Contenu à venir…',
+          client: {
+            Client: 'Corim',
+            Fonctionnalités: 'Web Design, Développement, Hébergement',
+            Secteur: 'Immobilier'
+          },
+          body:
+            "Corim est une agence immobilière installée à Alger et spécialisée dans la location et la vente d'appartements, de villa, d'immeubles, de terrains, de locaux et de hangars.",
+          link: 'https://www.corim.dz'
+        }
         // {
         //   title: 'We Service',
         //   slug: 'we-service',
