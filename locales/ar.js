@@ -14,7 +14,8 @@ export default (context) => {
         home: 'الصفحة الرئيسية',
         ariaLabel: 'افتح القائمة',
         previous: 'السابق',
-        next: 'التالي'
+        next: 'التالي',
+        visit: 'زيارة الموقع'
       },
 
       home: {
@@ -31,7 +32,7 @@ export default (context) => {
         headline: 'اكتشف أحدث إبداعاتنا.'
       },
 
-      worksItem: [
+      work: [
         {
           slug: 'acodim',
           title: 'أكوديم'
@@ -117,9 +118,9 @@ export default (context) => {
       prestations: {
         title: 'الخدمات',
         description: 'محتوى قادم…',
-        headline: 'Lorem ipsum, dolor sit amet elit.',
+        headline: 'كل أملاً بولندا، تلك, جهة العالم،.',
         body:
-          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum omnis provident deserunt saepe laborum, fugiat soluta blanditiis mollitia quia ratione! Non fuga debitis aspernatur accusamus voluptatem minus voluptate, amet suscipit?'
+          'عن يكن تصرّف والنفيس انتصارهم, ان أسابيع الأهداف التقليدي فقد. لها ونتج أوزار الصفحة أي, أكثر انتصارهم مما ٣٠, الباهضة التنازلي ٣٠ جهة. إجلاء فكانت كما ما. أي الأمم والمعدات انه, ماذا تكاليف عدد أي. فقد إذ لأداء كانتا وباستثناء, تعديل عسكرياً دون ٣٠, قبل عل جزيرتي وحرمان استعملت.'
       },
 
       agency: {
@@ -214,7 +215,7 @@ export default (context) => {
       request: {
         headline: 'لديك مشروع في الاعتبار ؟',
         body:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+          'وقد تجهيز الإقتصادي ٣٠, أي بلا وحتّى المارق المتّبعة. أكثر الأخذ ذات هو. الأخذ بتخصيص البرية بل أما. قامت بلاده أي بعض. لمّ أم وحتى السفن, لغات الأمم الصفحة ٣٠ فعل. مكن اتّجة المتساقطة، لم.',
         link: 'اتصل بنا'
       }
     })

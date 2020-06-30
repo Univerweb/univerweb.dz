@@ -14,7 +14,8 @@ export default (context) => {
         home: 'Accueil',
         ariaLabel: 'Ouvrir le menu',
         previous: 'Précédent',
-        next: 'Suivant'
+        next: 'Suivant',
+        visit: 'Visiter le site web'
       },
 
       home: {
@@ -31,7 +32,7 @@ export default (context) => {
         headline: 'Découvrez nos toutes dernières créations.'
       },
 
-      worksItem: [
+      work: [
         {
           slug: 'acodim',
           title: 'Acodim'
