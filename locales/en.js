@@ -97,12 +97,20 @@ export default (context) => {
           body:
             'Corim is a real estate agency based in Algiers and specialized in the rental and sale of apartments, villas, buildings, land, premises and hangars.',
           link: 'https://www.corim.dz'
+        },
+        {
+          slug: 'we-service',
+          title: 'We Service',
+          description: 'Content to come…',
+          client: {
+            Client: 'We Service',
+            Features: 'Web Design, Hosting',
+            Industry: 'Consulting'
+          },
+          body:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+          link: 'https://www.weservice.dz'
         }
-        // {
-        //   slug: 'we-service',
-        //   title: 'We Service',
-        //   description: 'Content to come…'
-        // },
         // {
         //   slug: 'infoelec',
         //   title: 'infoElec',

@@ -99,12 +99,22 @@ export default (context) => {
           body:
             "Corim est une agence immobilière installée à Alger et spécialisée dans la location et la vente d'appartements, de villa, d'immeubles, de terrains, de locaux et de hangars.",
           link: 'https://www.corim.dz'
+        },
+
+        {
+          title: 'We Service',
+          slug: 'we-service',
+          description: 'Contenu à venir…',
+          client: {
+            Client: 'We Service',
+            Fonctionnalités: 'Web Design, Hébergement',
+            Secteur: 'Conseil'
+          },
+          body:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
+          link: 'https://www.weservice.dz'
         }
-        // {
-        //   title: 'We Service',
-        //   slug: 'we-service',
-        //   description: 'Contenu à venir…'
-        // },
+
         // {
         //   slug: 'infoelec',
         //   title: 'infoElec',
