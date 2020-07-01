@@ -46,11 +46,19 @@ export default (context) => {
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
           link: 'https://www.acodim.dz'
         },
-        // {
-        //   slug: 'ets-ouar',
-        //   title: 'ETS Ouar',
-        //   description: 'Contenu à venir…'
-        // },
+        {
+          slug: 'ets-ouar',
+          title: 'ETS Ouar',
+          description: 'Contenu à venir…',
+          client: {
+            Client: 'ETS Ouar',
+            Fonctionnalités: 'Web Design, Développement',
+            Secteur: 'Automobile'
+          },
+          body:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+          link: 'https://www.etsouar.com'
+        },
         {
           slug: 'tpbl',
           title: 'TPBL',
