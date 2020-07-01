@@ -64,11 +64,21 @@ export default (context) => {
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
           link: 'https://www.tpbl.dz'
         },
-        // {
-        //   slug: 'botanique-algerie',
-        //   title: 'Botanique Algérie',
-        //   description: 'Contenu à venir…'
-        // },
+
+        {
+          slug: 'botanique-algerie',
+          title: 'Botanique Algérie',
+          description: 'Contenu à venir…',
+          client: {
+            Client: 'Botanique Algérie',
+            Fonctionnalités: 'Web Design, Développement, Hébergement',
+            Secteur: 'Botanique'
+          },
+          body:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+          link: 'https://www.botaniquealgerie.dz'
+        },
+
         {
           slug: 'corim',
           title: 'Corim',
