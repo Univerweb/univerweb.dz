@@ -72,7 +72,6 @@ export default (context) => {
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
           link: 'https://www.tpbl.dz'
         },
-
         {
           slug: 'botanique-algerie',
           title: 'Botanique Algérie',
@@ -86,7 +85,6 @@ export default (context) => {
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
           link: 'https://www.botaniquealgerie.dz'
         },
-
         {
           slug: 'corim',
           title: 'Corim',
@@ -100,7 +98,6 @@ export default (context) => {
             "Corim est une agence immobilière installée à Alger et spécialisée dans la location et la vente d'appartements, de villa, d'immeubles, de terrains, de locaux et de hangars.",
           link: 'https://www.corim.dz'
         },
-
         {
           title: 'We Service',
           slug: 'we-service',
@@ -113,13 +110,21 @@ export default (context) => {
           body:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
           link: 'https://www.weservice.dz'
+        },
+        {
+          slug: 'infoelec',
+          title: 'infoElec',
+          description: 'Contenu à venir…',
+          client: {
+            Client: 'infoElec',
+            Fonctionnalités: 'Web Design, Développement, Hébergement',
+            Secteur: 'Actualité'
+          },
+          body:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
+          link: 'https://www.infoelec.dz'
         }
 
-        // {
-        //   slug: 'infoelec',
-        //   title: 'infoElec',
-        //   description: 'Contenu à venir…'
-        // },
         // {
         //   title: 'Optimum Transmission',
         //   slug: 'optimum-transmission',
