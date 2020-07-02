@@ -188,12 +188,20 @@ export default (context) => {
           body:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
           link: 'https://www.epizaskikda.com'
+        },
+        {
+          slug: 'pibo',
+          title: 'Pibo',
+          description: 'Content to come…',
+          client: {
+            Client: 'Pibo',
+            Features: 'Web Design, Development, Hosting',
+            Industry: 'Real estate promotion'
+          },
+          body:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+          link: 'https://www.pibo.dz'
         }
-        // {
-        //   slug: 'pibo',
-        //   title: 'Pibo',
-        //   description: 'Content to come…'
-        // },
         // {
         //   slug: 'intermat',
         //   title: 'Intermat',
