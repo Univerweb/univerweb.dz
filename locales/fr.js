@@ -162,12 +162,20 @@ export default (context) => {
           body:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
           link: 'https://www.microtel-net.com'
+        },
+        {
+          slug: 'integral',
+          title: 'Integral',
+          description: 'Contenu à venir…',
+          client: {
+            Client: 'Integral',
+            Fonctionnalités: 'Web Design, Développement',
+            Secteur: 'Travaux publics'
+          },
+          body:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
+          link: 'https://www.integral.sarl'
         }
-        // {
-        //   slug: 'integral',
-        //   title: 'Integral',
-        //   description: 'Contenu à venir…'
-        // },
         // {
         //   slug: 'epiza',
         //   title: 'Epiza',
