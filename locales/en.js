@@ -131,7 +131,7 @@ export default (context) => {
           client: {
             Client: 'Optimum Transmission',
             Features: 'Web Design, Hosting',
-            Industry: 'News'
+            Industry: 'Mechanical'
           },
           body:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
