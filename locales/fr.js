@@ -149,12 +149,20 @@ export default (context) => {
           body:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
           link: 'https://www.soprofort.dz'
+        },
+        {
+          slug: 'microtel-training-institute',
+          title: 'Microtel Training Institute',
+          description: 'Contenu à venir…',
+          client: {
+            Client: 'Microtel Training Institute',
+            Fonctionnalités: 'Web Design, Développement, Hébergement',
+            Secteur: 'Formation'
+          },
+          body:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
+          link: 'https://www.microtel-net.com'
         }
-        // {
-        //   slug: 'microtel-training-institute',
-        //   title: 'Microtel Training Institute',
-        //   description: 'Contenu à venir…'
-        // },
         // {
         //   slug: 'integral',
         //   title: 'Integral',
