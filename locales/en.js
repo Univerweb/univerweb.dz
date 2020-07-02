@@ -175,12 +175,20 @@ export default (context) => {
           body:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
           link: 'https://www.integral.sarl'
+        },
+        {
+          slug: 'epiza',
+          title: 'Epiza',
+          description: 'Content to come…',
+          client: {
+            Client: 'Epiza',
+            Features: 'Web Design, Development, Hosting',
+            Industry: 'Real estate promotion'
+          },
+          body:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+          link: 'https://www.epizaskikda.com'
         }
-        // {
-        //   slug: 'epiza',
-        //   title: 'Epiza',
-        //   description: 'Content to come…'
-        // },
         // {
         //   slug: 'pibo',
         //   title: 'Pibo',
