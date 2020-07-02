@@ -1,6 +1,6 @@
 <template>
   <main id="main" class="work">
-    <div class="container">
+    <div class="container intro">
       <work-back />
       <h1>{{ work.title }}</h1>
     </div>
