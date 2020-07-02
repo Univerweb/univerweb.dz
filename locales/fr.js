@@ -123,13 +123,20 @@ export default (context) => {
           body:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
           link: 'https://www.infoelec.dz'
+        },
+        {
+          title: 'Optimum Transmission',
+          slug: 'optimum-transmission',
+          description: 'Contenu à venir…',
+          client: {
+            Client: 'Optimum Transmission',
+            Fonctionnalités: 'Web Design, Hébergement',
+            Secteur: 'Mechanical'
+          },
+          body:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
+          link: 'https://www.optimumtransmission.dz'
         }
-
-        // {
-        //   title: 'Optimum Transmission',
-        //   slug: 'optimum-transmission',
-        //   description: 'Contenu à venir…'
-        // },
         // {
         //   slug: 'soprofort',
         //   title: 'Soprofort',
