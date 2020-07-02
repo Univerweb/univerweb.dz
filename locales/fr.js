@@ -136,12 +136,20 @@ export default (context) => {
           body:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
           link: 'https://www.optimumtransmission.dz'
+        },
+        {
+          slug: 'soprofort',
+          title: 'Soprofort',
+          description: 'Contenu à venir…',
+          client: {
+            Client: 'Soprofort',
+            Fonctionnalités: 'Web Design, Développement, Hébergement',
+            Secteur: 'Promotion immobilière'
+          },
+          body:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
+          link: 'https://www.soprofort.dz'
         }
-        // {
-        //   slug: 'soprofort',
-        //   title: 'Soprofort',
-        //   description: 'Contenu à venir…'
-        // },
         // {
         //   slug: 'microtel-training-institute',
         //   title: 'Microtel Training Institute',
