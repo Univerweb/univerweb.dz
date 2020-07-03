@@ -214,12 +214,20 @@ export default (context) => {
           body:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
           link: 'https://www.intermatalgeria.com'
+        },
+        {
+          slug: 'bn-electric-company',
+          title: 'BN Electric Company',
+          description: 'Content to come…',
+          client: {
+            Client: 'BN Electric Company',
+            Features: 'Web Design, Hosting',
+            Industry: 'Electricity'
+          },
+          body:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+          link: 'https://www.bnelectric.dz'
         }
-        // {
-        //   slug: 'bn-electric-company',
-        //   title: 'BN Electric Company',
-        //   description: 'Content to come…'
-        // },
         // {
         //   slug: 'cinquelec',
         //   title: 'Cinquelec',
