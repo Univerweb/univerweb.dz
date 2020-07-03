@@ -376,7 +376,7 @@ export default (context) => {
       error: {
         404: 'Page not found',
         500: 'An error has occurred',
-        description: 'no bowl.',
+        description: 'no luck.',
         btn: 'Back to Home'
       },
 
