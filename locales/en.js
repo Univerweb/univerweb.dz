@@ -227,12 +227,20 @@ export default (context) => {
           body:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
           link: 'https://www.bnelectric.dz'
+        },
+        {
+          slug: 'cinquelec',
+          title: 'Cinquelec',
+          description: 'Content to come…',
+          client: {
+            Client: 'Cinquelec',
+            Features: 'Web Design, Development, Hosting',
+            Industry: 'Electricity'
+          },
+          body:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+          link: 'https://www.cinquelec.com'
         }
-        // {
-        //   slug: 'cinquelec',
-        //   title: 'Cinquelec',
-        //   description: 'Content to come…'
-        // },
         // {
         //   slug: 'spheretec',
         //   title: 'Spheretec',
