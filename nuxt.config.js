@@ -67,7 +67,7 @@ export default {
             '@type': 'ContactPoint',
             contactType: 'technical support',
             telephone: '+213 21 44 08 11',
-            email: 'webmaster@univerweb.dz',
+            email: 'support@univerweb.dz',
             areaServed: 'DZ',
             availableLanguage: ['French', 'Arabic']
           }

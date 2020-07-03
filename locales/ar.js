@@ -7,7 +7,7 @@ export default (context) => {
         realisations: 'آخر الأعمال',
         prestations: 'الخدمات',
         agence: 'الوكالة',
-        contact: 'إتصل بنا'
+        contact: 'التواصل معنا'
       },
 
       links: {
@@ -351,22 +351,22 @@ export default (context) => {
       },
 
       contact: {
-        title: 'إتصل بنا',
+        title: 'التواصل معنا',
         description: 'أخبرنا عن احتياجاتك ، نكون سعيدين بالتعامل معك.',
         body:
           'إنشاء مواقع احترافية هو ما نقوم به. أخبرنا عن احتياجاتك ، نكون سعيدين بالتعامل معك.',
         form: {
-          fullname: 'اسمك',
-          company: 'اسم الشركة',
+          fullname: 'الإسم',
+          company: 'إسم الشركة',
           email: 'البريد الإلكتروني',
           message: 'صف المشروع',
           submit: 'إرسال'
         },
         other: {
-          headline: 'طرق أخرى للاتصال بنا',
+          headline: 'طرق أخرى التواصل معنا',
           body: {
-            'h.nedjar@univerweb.dz': 'إدارة عامة',
-            'webmaster@univerweb.dz': 'خدمة تقنية'
+            'h.nedjar@univerweb.dz': 'مسيّر',
+            'support@univerweb.dz': 'دعم تقني'
           }
         }
       },

@@ -360,16 +360,16 @@ export default (context) => {
           "Créer des sites web professionnels, c'est ce que nous faisons. Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
         form: {
           fullname: 'Votre nom',
-          company: 'Votre entreprise',
+          company: 'Nom de votre entreprise',
           email: 'Votre e-mail',
-          message: 'Décrivez-nous votre projet',
+          message: 'Décrivez le projet',
           submit: 'Soumettre'
         },
         other: {
           headline: 'Autres moyens de nous contacter',
           body: {
-            'h.nedjar@univerweb.dz': 'Direction générale',
-            'webmaster@univerweb.dz': 'Service technique'
+            'h.nedjar@univerweb.dz': 'Gérant',
+            'support@univerweb.dz': 'Soutien technique'
           }
         }
       },
