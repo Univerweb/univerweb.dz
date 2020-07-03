@@ -201,13 +201,20 @@ export default (context) => {
           body:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
           link: 'https://www.pibo.dz'
+        },
+        {
+          slug: 'intermat',
+          title: 'Intermat',
+          description: 'Contenu à venir…',
+          client: {
+            Client: 'Intermat',
+            Fonctionnalités: 'Web Design, Développement',
+            Secteur: 'Travaux publics'
+          },
+          body:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
+          link: 'https://www.intermatalgeria.com'
         }
-
-        // {
-        //   slug: 'intermat',
-        //   title: 'Intermat',
-        //   description: 'Contenu à venir…'
-        // },
         // {
         //   slug: 'bn-electric-company',
         //   title: 'BN Electric Company',
