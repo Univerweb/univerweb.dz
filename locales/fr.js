@@ -279,12 +279,20 @@ export default (context) => {
           body:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
           link: 'https://www.cliniqueaya.dz'
+        },
+        {
+          slug: 'rcelec',
+          title: 'RCelec',
+          description: 'Contenu à venir…',
+          client: {
+            Client: 'RCelec',
+            Fonctionnalités: 'Web Design, Hébergement',
+            Secteur: 'Électricité'
+          },
+          body:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
+          link: 'https://www.rcelec.dz'
         }
-        // {
-        //   slug: 'rcelec',
-        //   title: 'RCelec',
-        //   description: 'Contenu à venir…'
-        // }
       ],
 
       prestations: {
