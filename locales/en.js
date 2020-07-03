@@ -253,12 +253,20 @@ export default (context) => {
           body:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
           link: 'https://www.spheretec.dz'
+        },
+        {
+          slug: 'clinique-sonya',
+          title: 'Clinique Sonya',
+          description: 'Content to come…',
+          client: {
+            Client: 'Clinique Sonya',
+            Features: 'Web Design, Hosting',
+            Industry: 'Health'
+          },
+          body:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+          link: 'https://www.cliniquesonya.dz'
         }
-        // {
-        //   slug: 'clinique-sonya',
-        //   title: 'Clinique Sonya',
-        //   description: 'Content to come…'
-        // },
         // {
         //   slug: 'clinique-aya',
         //   title: 'Clinique Aya',
