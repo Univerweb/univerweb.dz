@@ -266,12 +266,20 @@ export default (context) => {
           body:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
           link: 'https://www.cliniquesonya.dz'
+        },
+        {
+          slug: 'clinique-aya',
+          title: 'Clinique Aya',
+          description: 'Content to come…',
+          client: {
+            Client: 'Clinique Aya',
+            Features: 'Web Design, Hosting',
+            Industry: 'Health'
+          },
+          body:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+          link: 'https://www.cliniqueaya.dz'
         }
-        // {
-        //   slug: 'clinique-aya',
-        //   title: 'Clinique Aya',
-        //   description: 'Content to come…'
-        // },
         // {
         //   slug: 'rcelec',
         //   title: 'RCelec',
