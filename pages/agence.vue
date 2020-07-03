@@ -59,11 +59,6 @@ export default {
           hid: 'og:description',
           property: 'og:description',
           content: this.$t('agency.description')
-        },
-        {
-          hid: 'og:image',
-          property: 'og:image',
-          content: ''
         }
       ]
     }

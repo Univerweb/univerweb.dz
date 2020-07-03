@@ -103,6 +103,16 @@ export default {
             '/' +
             this.work.slug +
             '_bg.jpg'
+        },
+        {
+          hid: 'og:image:secure_url',
+          property: 'og:image:secure_url',
+          content:
+            'https://www.univerweb.dz/works/' +
+            this.work.slug +
+            '/' +
+            this.work.slug +
+            '_bg.jpg'
         }
       ]
     }

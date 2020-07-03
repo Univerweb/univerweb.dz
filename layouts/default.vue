@@ -78,16 +78,43 @@ export default {
         href: 'https://www.univerweb.dz/ar' + path
       }
     ]
+
+    let IMG = 'https://www.univerweb.dz/univerweb-ar.png'
+    if (this.$i18n.locale !== 'ar') {
+      IMG = 'https://www.univerweb.dz/univerweb.png'
+    }
+
     return {
       htmlAttrs: { lang: this.$i18n.locale, dir: DIR },
       link,
       meta: [
-        { hid: 'og:type', property: 'og:type', content: 'website' },
-        { hid: 'og:site_name', property: 'og:site_name', content: 'Univerweb' },
+        {
+          hid: 'og:site_name',
+          property: 'og:site_name',
+          content: 'Univerweb'
+        },
         {
           hid: 'og:url',
           property: 'og:url',
           content: `https://www.univerweb.dz${this.$route.path}`
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: IMG
+        },
+        {
+          hid: 'og:image:secure_url',
+          property: 'og:image:secure_url',
+          content: IMG
+        },
+        {
+          property: 'og:image:width',
+          content: '1920'
+        },
+        {
+          property: 'og:image:height',
+          content: '1080'
         }
       ]
     }

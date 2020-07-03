@@ -18,13 +18,13 @@ export default {
     }
   },
   head() {
-    let titleTemplate = this.$t('error.500')
+    let TITLE = this.$t('error.500')
     if (this.error.statusCode === 404) {
-      titleTemplate = this.$t('error.404')
+      TITLE = this.$t('error.404')
     }
-    const description = titleTemplate + ', ' + this.$t('error.description')
+    const DESC = TITLE + ', ' + this.$t('error.description')
     return {
-      titleTemplate: titleTemplate + ` — ${this.$t('name')}`,
+      titleTemplate: TITLE + ` — ${this.$t('name')}`,
       meta: [
         {
           name: 'robots',
@@ -33,22 +33,17 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: description
+          content: DESC
         },
         {
           hid: 'og:title',
           property: 'og:title',
-          content: ''
+          content: TITLE
         },
         {
           hid: 'og:description',
           name: 'og:description',
-          content: description
-        },
-        {
-          hid: 'og:image',
-          property: 'og:image',
-          content: ''
+          content: DESC
         },
         {
           hid: 'og:url',
