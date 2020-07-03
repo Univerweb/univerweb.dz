@@ -1,6 +1,8 @@
 <template>
   <section class="container works">
-    <h2 class="h1">{{ $t('works.title') }}</h2>
+    <div class="intro">
+      <h2 class="h1">{{ $t('works.title') + '.' }}</h2>
+    </div>
     <div class="details">
       <div
         v-for="(work, index) in $t('work').slice(0, 6)"
