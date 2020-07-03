@@ -240,12 +240,20 @@ export default (context) => {
           body:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
           link: 'https://www.cinquelec.com'
+        },
+        {
+          slug: 'spheretec',
+          title: 'Spheretec',
+          description: 'Contenu à venir…',
+          client: {
+            Client: 'Spheretec',
+            Fonctionnalités: 'Web Design, Hébergement',
+            Secteur: 'Télécommunications'
+          },
+          body:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
+          link: 'https://www.spheretec.dz'
         }
-        // {
-        //   slug: 'spheretec',
-        //   title: 'Spheretec',
-        //   description: 'Contenu à venir…'
-        // },
         // {
         //   slug: 'clinique-sonya',
         //   title: 'Clinique Sonya',
