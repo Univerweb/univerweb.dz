@@ -27,9 +27,9 @@ export default (context) => {
       },
 
       works: {
-        title: 'Réalisations',
-        description: 'Contenu à venir…',
-        headline: 'Découvrez nos toutes dernières créations.'
+        title: 'Nos dernières créations',
+        description:
+          'Découvrez nos toutes dernières créations, nous serions ravis de collaborer avec vous.'
       },
 
       work: [

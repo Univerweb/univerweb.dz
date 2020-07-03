@@ -27,9 +27,8 @@ export default (context) => {
       },
 
       works: {
-        title: 'آخر الأعمال',
-        description: 'محتوى قادم…',
-        headline: 'اكتشف أحدث إبداعاتنا.'
+        title: 'أحدث إبداعاتنا',
+        description: 'إكتشف أحدث إبداعاتنا ، نكون سعيدين بالتعامل معك.'
       },
 
       work: [

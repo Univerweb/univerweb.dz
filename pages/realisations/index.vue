@@ -2,7 +2,7 @@
   <main>
     <div class="container">
       <div class="intro">
-        <h1>{{ $t('works.headline') }}</h1>
+        <h1>{{ $t('works.title') + '.' }}</h1>
       </div>
       <div class="details">
         <div v-for="(work, index) in $t('work')" :key="index" class="item">
