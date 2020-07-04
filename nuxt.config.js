@@ -82,7 +82,10 @@ export default {
   },
 
   /* Plugins to load before mounting the App */
-  plugins: ['@/plugins/vue-lazyload'],
+  plugins: [
+    '@/plugins/vue-lazyload',
+    { src: '~plugins/ga.js', mode: 'client' }
+  ],
 
   /* Nuxt.js dev-modules */
   buildModules: [
