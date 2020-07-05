@@ -133,7 +133,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   align-content: space-between;
   padding: 72px 24px 24px;
   z-index: -1;
@@ -213,11 +213,11 @@ header {
   }
   & .globe {
     margin-right: -1rem;
-    fill: $dark-blue;
     [lang='ar'] & {
       margin-right: 0;
       margin-left: -1rem;
     }
+    fill: $dark-blue;
     @media (min-width: $md) {
       fill: $blue;
     }
@@ -246,11 +246,11 @@ header {
   & .arrow {
     height: 8px;
     margin-left: -1rem;
-    fill: $dark-blue;
     [lang='ar'] & {
       margin-left: 0;
       margin-right: -1rem;
     }
+    fill: $dark-blue;
     @media (min-width: $md) {
       fill: $blue;
     }

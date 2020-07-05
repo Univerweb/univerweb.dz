@@ -17,6 +17,12 @@ export default {
 
   beforeMount() {
     window.addEventListener('scroll', this.handleScroll)
+    const vh = window.innerHeight * 0.01
+    document.documentElement.style.setProperty('--vh', `${vh}px`)
+    window.addEventListener('resize', () => {
+      const vh = window.innerHeight * 0.01
+      document.documentElement.style.setProperty('--vh', `${vh}px`)
+    })
   },
 
   mounted() {
@@ -221,8 +227,7 @@ body {
 */
 .wrapper {
   display: grid;
-  min-height: 100vh;
-  height: 100%;
+  height: calc(var(--vh, 1vh) * 100);
 }
 
 /*
@@ -259,16 +264,16 @@ main {
 ** Hero
 */
 .hero {
-  min-height: calc(100vh - 72px);
+  height: calc((var(--vh, 1vh) * 100) - 72px);
   display: grid;
   align-content: center;
   margin-top: 0;
   margin-bottom: 0;
-  transition: min-height $transition;
+  transition: height $transition;
   @media (min-width: $md) {
-    min-height: calc(100vh - 144px);
+    height: calc((var(--vh, 1vh) * 100) - 144px);
     .scrolled & {
-      min-height: calc(100vh - 72px);
+      height: calc((var(--vh, 1vh) * 100) - 72px);
     }
   }
   & .arrow {
