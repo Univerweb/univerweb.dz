@@ -109,23 +109,4 @@ export default {
     }
   }
 }
-
-.card {
-  display: grid;
-  background: $light;
-}
-
-img[lazy='error'] {
-  background: red;
-}
-
-img[lazy='loading'] {
-  background: $light;
-  opacity: 0;
-  transition: opacity $transition;
-}
-
-img[lazy='loaded'] {
-  opacity: 1;
-}
 </style>

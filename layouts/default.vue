@@ -417,9 +417,25 @@ button {
   }
 }
 
+.card {
+  display: grid;
+  background: $light;
+}
+
 img {
   width: 100%;
   height: auto;
+  &[lazy='error'] {
+    background: red;
+  }
+  &[lazy='loading'] {
+    background: $light;
+    opacity: 0;
+    transition: opacity $transition;
+  }
+  &[lazy='loaded'] {
+    opacity: 1;
+  }
 }
 
 p {
