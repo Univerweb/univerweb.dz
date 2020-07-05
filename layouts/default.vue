@@ -200,8 +200,13 @@ html {
 ** Body
 */
 body {
+  margin: 0;
+  padding: 0;
   color: $black;
   font-family: $font;
+  [lang='ar'] & {
+    font-family: $font-arabe;
+  }
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -263,6 +268,32 @@ main {
 }
 
 /*
+** Hero
+*/
+.hero {
+  min-height: calc(100vh - 72px);
+  display: grid;
+  align-content: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  transition: min-height $transition;
+  @media (min-width: $md) {
+    min-height: calc(100vh - 144px);
+    .scrolled & {
+      min-height: calc(100vh - 72px);
+    }
+  }
+  & .arrow {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 12px;
+    cursor: pointer;
+  }
+}
+
+/*
 ** Intro
 */
 .intro {
@@ -303,32 +334,6 @@ main {
     & .item:nth-child(even) {
       grid-column: 7 / 12;
     }
-  }
-}
-
-/*
-** Hero
-*/
-.hero {
-  min-height: calc(100vh - 72px);
-  display: grid;
-  align-content: center;
-  margin-top: 0;
-  margin-bottom: 0;
-  transition: min-height $transition;
-  @media (min-width: $md) {
-    min-height: calc(100vh - 144px);
-    .scrolled & {
-      min-height: calc(100vh - 72px);
-    }
-  }
-  & .arrow {
-    position: absolute;
-    bottom: 24px;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 12px;
-    cursor: pointer;
   }
 }
 
@@ -386,6 +391,21 @@ h6,
   margin: 0;
 }
 
+p {
+  margin-top: 0;
+  margin-bottom: 12px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.lead {
+  @include size(20);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: $black-light;
+}
+
 a {
   color: $black;
   text-decoration: none;
@@ -436,21 +456,6 @@ img {
   &[lazy='loaded'] {
     opacity: 1;
   }
-}
-
-p {
-  margin-top: 0;
-  margin-bottom: 12px;
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
-.lead {
-  @include size(20);
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  color: $black-light;
 }
 
 .visually-hidden {
