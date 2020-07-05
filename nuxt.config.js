@@ -131,6 +131,8 @@ export default {
 
   /* Manifest */
   manifest: {
+    name: 'Univerweb',
+    short_name: 'Univerweb',
     icons: [
       {
         src: '/android-chrome-192x192.png',
