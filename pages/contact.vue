@@ -115,14 +115,14 @@ textarea {
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 4px;
+  [lang='ar'] & {
+    letter-spacing: 0;
+  }
   margin: 0 0 12px;
   padding: 0 12px;
   border: 1px solid transparent;
   outline: 0;
   transition: border-color $transition;
-  [lang='ar'] & {
-    letter-spacing: 0;
-  }
   &:not(input) {
     resize: none;
     line-height: 24px;
