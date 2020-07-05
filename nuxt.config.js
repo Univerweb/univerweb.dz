@@ -99,7 +99,7 @@ export default {
     '@nuxtjs/svg',
     '@nuxtjs/style-resources',
     '@nuxtjs/pwa',
-    'vue-scrollto/nuxt'
+    ['vue-scrollto/nuxt', { offset: -72 }]
   ],
 
   /* Nuxt.js modules */
