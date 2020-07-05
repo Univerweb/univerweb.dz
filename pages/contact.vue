@@ -75,13 +75,7 @@
 </template>
 
 <script>
-import AppAbout from '@/components/common/AppAbout'
-
 export default {
-  components: {
-    AppAbout
-  },
-
   head() {
     return {
       bodyAttrs: { class: 'contact' },

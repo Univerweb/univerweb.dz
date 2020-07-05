@@ -89,6 +89,9 @@ export default {
     { src: '~plugins/ga.js', mode: 'client' }
   ],
 
+  /* Auto import components */
+  components: true,
+
   /* Nuxt.js dev-modules */
   buildModules: [
     '@nuxtjs/eslint-module',

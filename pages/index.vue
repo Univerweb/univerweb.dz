@@ -7,17 +7,7 @@
 </template>
 
 <script>
-import HomeWelcome from '@/components/partials/home/HomeWelcome'
-import HomeWorks from '@/components/partials/home/HomeWorks'
-import HomeRequest from '@/components/partials/home/homeRequest'
-
 export default {
-  components: {
-    HomeWelcome,
-    HomeWorks,
-    HomeRequest
-  },
-
   head() {
     return {
       bodyAttrs: { class: 'home' },

@@ -8,17 +8,7 @@
 </template>
 
 <script>
-import TheSkiplinks from '@/components/TheSkiplinks'
-import TheHeader from '@/components/TheHeader'
-import TheFooter from '@/components/TheFooter'
-
 export default {
-  components: {
-    TheSkiplinks,
-    TheHeader,
-    TheFooter
-  },
-
   data() {
     return {
       scrolled: false
@@ -61,7 +51,6 @@ export default {
         rel: 'canonical',
         href: `https://www.univerweb.dz${this.$route.path}`
       },
-
       {
         rel: 'alternate',
         hreflang: 'fr',
@@ -78,7 +67,6 @@ export default {
         href: 'https://www.univerweb.dz/ar' + path
       }
     ]
-
     let IMG = 'https://www.univerweb.dz/univerweb-ar.png'
     if (this.$i18n.locale !== 'ar') {
       IMG = 'https://www.univerweb.dz/univerweb.png'

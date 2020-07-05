@@ -46,22 +46,12 @@
       </div>
     </div>
     <work-nav />
-    <work-request />
+    <app-request />
   </main>
 </template>
 
 <script>
-import WorkBack from '@/components/partials/work/WorkBack'
-import WorkNav from '@/components/partials/work/WorkNav'
-import WorkRequest from '@/components/common/AppRequest'
-
 export default {
-  components: {
-    WorkBack,
-    WorkNav,
-    WorkRequest
-  },
-
   validate({ params, store }) {
     return store.state.i18n.messages.work.some(
       (item) => item.slug === params.slug

@@ -48,14 +48,12 @@
 </template>
 
 <script>
-import AppAbout from '@/components/common/AppAbout'
 import TwitterIcon from '@/assets/icons/twitter.svg?inline'
 import FacebookIcon from '@/assets/icons/facebook.svg?inline'
 import GithubIcon from '@/assets/icons/github.svg?inline'
 
 export default {
   components: {
-    AppAbout,
     TwitterIcon,
     FacebookIcon,
     GithubIcon
