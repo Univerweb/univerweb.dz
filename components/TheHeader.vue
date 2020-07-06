@@ -164,6 +164,9 @@ header {
     row-gap: 24px;
     margin: 0;
     padding: 48px 0 0;
+    @media screen and (orientation: landscape) {
+      padding-top: 24px;
+    }
     list-style: none;
     @media (min-width: $md) {
       grid-template-columns: repeat(4, auto);
