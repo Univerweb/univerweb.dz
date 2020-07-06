@@ -29,7 +29,7 @@
     </div>
     <div class="more">
       <nuxt-link :to="localePath('realisations')" class="btn">
-        {{ $t('works.title') }}
+        {{ $t('links.more') }}
         <home-arrow />
       </nuxt-link>
     </div>

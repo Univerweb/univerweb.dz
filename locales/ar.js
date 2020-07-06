@@ -15,6 +15,7 @@ export default (context) => {
         ariaLabel: 'افتح القائمة',
         previous: 'السابق',
         next: 'التالي',
+        more: 'المزيد من الأعمال',
         visit: 'زيارة الموقع'
       },
 

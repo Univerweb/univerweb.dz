@@ -15,6 +15,7 @@ export default (context) => {
         ariaLabel: 'Ouvrir le menu',
         previous: 'Précédent',
         next: 'Suivant',
+        more: 'Plus de réalisations',
         visit: 'Visiter le site web'
       },
 
