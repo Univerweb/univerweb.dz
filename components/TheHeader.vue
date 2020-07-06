@@ -133,7 +133,8 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: calc(var(--vh, 1vh) * 100);
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   align-content: space-between;
   padding: 72px 24px 24px;
   z-index: -1;
