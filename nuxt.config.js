@@ -80,13 +80,16 @@ export default {
 
   /* Style Resources */
   styleResources: {
-    scss: '@/assets/scss/var.scss'
+    scss: ['@/assets/css/var.scss', '@/assets/css/mixin.scss']
   },
+
+  /* Styles */
+  css: ['@/assets/css/main.scss', '@/assets/css/font.scss'],
 
   /* Plugins to load before mounting the App */
   plugins: [
     '@/plugins/vue-lazyload',
-    { src: '~plugins/ga.js', mode: 'client' }
+    { src: '@/plugins/ga.js', mode: 'client' }
   ],
 
   /* Auto import components */
