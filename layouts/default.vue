@@ -260,14 +260,16 @@ main {
 ** Hero
 */
 .hero {
-  height: calc((var(--vh, 1vh) * 100) - 72px);
+  height: calc((var(--vh, 1vh) * 100) - 96px);
   display: grid;
   align-content: center;
   margin-top: 0;
   margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
   transition: height $transition;
   @media (min-width: $md) {
-    height: calc((var(--vh, 1vh) * 100) - 144px);
+    height: calc((var(--vh, 1vh) * 100) - 192px);
     .scrolled & {
       height: calc((var(--vh, 1vh) * 100) - 72px);
     }
