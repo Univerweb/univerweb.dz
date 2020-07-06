@@ -5,7 +5,12 @@ export default {
   head: {
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        name: 'viewport',
+        content:
+          'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'
+      },
+
       { name: 'msapplication-TileColor', content: '#50c8f0' },
       { name: 'theme-color', content: '#50c8f0' },
       { name: 'apple-mobile-web-app-capable"', content: 'yes' },
@@ -155,5 +160,10 @@ export default {
   /* Progress-bar color */
   loading: {
     color: '#50c8f0'
+  },
+
+  server: {
+    port: 3000,
+    host: '0.0.0.0'
   }
 }
