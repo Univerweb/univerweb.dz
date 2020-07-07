@@ -97,7 +97,7 @@ header {
   padding: 24px;
   transition: padding $transition;
   z-index: 1;
-  .scrolled & {
+  .scrolled &:not(.show) {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   @media (min-width: $md) {
@@ -141,8 +141,9 @@ header {
   transition: opacity $transition;
   .show & {
     display: grid;
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
+
+    height: 100%;
+
     background: $dark-blue;
     opacity: 1;
     pointer-events: auto;
