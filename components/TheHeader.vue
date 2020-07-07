@@ -148,9 +148,7 @@ header {
   transition: opacity $transition;
   .show & {
     display: grid;
-
     height: 100%;
-
     background: $dark-blue;
     opacity: 1;
     pointer-events: auto;
