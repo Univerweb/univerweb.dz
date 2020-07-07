@@ -75,7 +75,6 @@ main {
   padding-top: 0;
   padding-bottom: 0;
   min-height: calc(100vh - 96px);
-  min-height: -webkit-fill-available;
   transition: min-height $transition;
   @media (min-width: $md) {
     min-height: calc(100vh - 192px);
