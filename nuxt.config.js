@@ -89,7 +89,11 @@ export default {
   },
 
   /* Styles */
-  css: ['@/assets/css/main.scss', '@/assets/css/font.scss'],
+  css: [
+    '@/assets/css/font.scss',
+    '@/assets/css/keyframes.scss',
+    '@/assets/css/main.scss'
+  ],
 
   /* Plugins to load before mounting the App */
   plugins: [
