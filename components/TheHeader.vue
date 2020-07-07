@@ -79,6 +79,13 @@ export default {
     onChange(event) {
       this.$router.replace(this.switchLocalePath(event))
     }
+  },
+
+  head() {
+    return {
+      htmlAttrs: { style: this.show ? 'height: 100%; overflow: hidden' : '' },
+      bodyAttrs: { style: this.show ? 'height: 100%; overflow: hidden' : '' }
+    }
   }
 }
 </script>
