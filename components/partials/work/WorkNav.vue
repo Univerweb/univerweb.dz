@@ -15,8 +15,8 @@
       class="link next"
       :data-text="$t('links.next')"
     >
-      {{ next[0].title }}
       <nav-arrow />
+      {{ next[0].title }}
     </nuxt-link>
   </div>
 </template>
@@ -51,7 +51,10 @@ export default {
 <style lang="scss">
 .nav {
   display: grid;
-  grid-template-columns: repeat(2, max-content);
+  grid-template-columns: repeat(2, 1fr);
+  @media (min-width: $sm) {
+    grid-template-columns: repeat(2, max-content);
+  }
   justify-content: space-between;
   padding-top: 72px;
   padding-bottom: 48px;
@@ -60,8 +63,10 @@ export default {
   & .previous {
     position: relative;
     color: $dark-blue;
+    padding: 0 12px 0 18px;
     [lang='ar'] & {
       font-family: $font-arabe;
+      padding: 0 18px 0 12px;
     }
     &:hover {
       color: $white;
@@ -70,48 +75,56 @@ export default {
       content: attr(data-text);
       position: absolute;
       color: $dark-blue;
-      top: -24px;
-      left: 40px;
+      top: -12px;
+      left: 20px;
       [lang='ar'] & {
         left: 0;
-        right: 40px;
+        right: 20px;
       }
       font-size: 0.8rem;
-      line-height: 1.875;
+      line-height: 0.9375;
       pointer-events: none;
     }
     &:not(.previous) {
       grid-column: 2;
-      text-align: right;
+      text-align: end;
+      padding: 0 18px 0 12px;
+      [lang='ar'] & {
+        padding: 0 12px 0 18px;
+      }
       &::before {
-        right: 40px;
+        right: 18px;
+        left: 0;
         [lang='ar'] & {
-          left: 40px;
+          left: 18px;
           text-align: left;
         }
       }
     }
   }
   & .arrow {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    bottom: 50%;
+    margin: auto 0;
     fill: currentColor;
-    height: 12px;
+    height: 7px;
     transform: rotate(90deg);
-    margin-right: 12px;
-    margin-bottom: 2px;
     [lang='ar'] & {
       transform: rotate(-90deg);
-      margin-right: 0;
-      margin-left: 12px;
+      right: 0;
+      left: auto;
     }
   }
   & .next .arrow {
-    margin-right: 0;
-    margin-left: 12px;
     transform: rotate(-90deg);
+    right: 0;
+    left: auto;
     [lang='ar'] & {
       transform: rotate(90deg);
-      margin-right: 12px;
-      margin-left: 0;
+      right: auto;
+      left: 0;
     }
   }
 }
