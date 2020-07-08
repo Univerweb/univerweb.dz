@@ -44,7 +44,7 @@ export default (context) => {
             Industry: 'Real estate promotion'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
+            'Based in Algiers, Acodim is a company specializing in real estate promotion.',
           link: 'https://www.acodim.dz'
         },
         {
@@ -57,7 +57,7 @@ export default (context) => {
             Industry: 'Automobile'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
+            'ETS Ouar is an organization committed to OE quality (Original) for the Algerian market for spare parts, high-precision components and products from the original equipment, high-quality car spare parts.',
           link: 'https://www.etsouar.com'
         },
         {
@@ -70,20 +70,20 @@ export default (context) => {
             Industry: 'Real estate promotion'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+            'Founded in 2016 and based in Skikda, TPBL is a company specializing in real estate promotion.',
           link: 'https://www.tpbl.dz'
         },
         {
           slug: 'botanique-algerie',
-          title: 'Botanique Algérie',
+          title: 'Botany Algeria',
           description: 'Content to come…',
           client: {
-            Client: 'Botanique Algérie',
+            Client: 'Botany Algeria',
             Features: 'Web Design, Development, Hosting',
             Industry: 'Botanical'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+            'Botanique Algérie is a national network dedicated to knowledge, sharing and promotion of botany in Algeria.',
           link: 'https://www.botaniquealgerie.dz'
         },
         {
@@ -109,7 +109,7 @@ export default (context) => {
             Industry: 'Consulting'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+            'We Service is a service and consulting company that offers a global solution for research laboratory expertise.',
           link: 'https://www.weservice.dz'
         },
         {
@@ -122,7 +122,7 @@ export default (context) => {
             Industry: 'News'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+            'infoElec is the first Algerian magazine dedicated to the electrical and energy sector.',
           link: 'https://www.infoelec.dz'
         },
         {
@@ -135,7 +135,7 @@ export default (context) => {
             Industry: 'Mechanical'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+            'Installed since 2006 at the gates of southern Algeria, Optimum Transmission is a company specializing in the manufacture and distribution of transmission belts.',
           link: 'https://www.optimumtransmission.dz'
         },
         {
@@ -148,7 +148,7 @@ export default (context) => {
             Industry: 'Real estate promotion'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+            'Soprofort is a real estate development company created in 2004. Combining competence and know-how, it realizes in collaboration with the realization company Eridj high quality real estate projects.',
           link: 'https://www.soprofort.dz'
         },
         {
@@ -161,7 +161,7 @@ export default (context) => {
             Industry: 'Training'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+            'Founded in 1992, Microtel Training Institute has set itself the objective of assisting companies and institutions to set up efficient, scalable and manageable network solutions.',
           link: 'https://www.microtel-net.com'
         },
         {
@@ -174,7 +174,7 @@ export default (context) => {
             Industry: 'Public works'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+            'Integral distributes equipment for public works, it supplies its customers with machines and spare parts manufactured by the main European and American manufacturers.',
           link: 'https://www.integral.sarl'
         },
         {
@@ -187,7 +187,7 @@ export default (context) => {
             Industry: 'Real estate promotion'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+            'Epiza is a team of professionals assembled for the realization of real estate projects.',
           link: 'https://www.epizaskikda.com'
         },
         {
@@ -200,7 +200,7 @@ export default (context) => {
             Industry: 'Real estate promotion'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+            'Pibo is a real estate development company created in 2014 by the co-founder and manager of Soprofort, who has acquired over the past decade significant experience in real estate development.',
           link: 'https://www.pibo.dz'
         },
         {
@@ -213,7 +213,7 @@ export default (context) => {
             Industry: 'Public works'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+            'Intermat is a company specializing in the sale of construction and public works machinery and equipment.',
           link: 'https://www.intermatalgeria.com'
         },
         {
@@ -226,7 +226,7 @@ export default (context) => {
             Industry: 'Electricity'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+            'Founded in 2010, BN Electric Company is a company specializing in mobile telephony, industry, renewable energies, the tertiary sector and services.',
           link: 'https://www.bnelectric.dz'
         },
         {
@@ -239,7 +239,7 @@ export default (context) => {
             Industry: 'Electricity'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+            'Founded in 1994, Cinquelec is a company specializing in the import and distribution of electrical equipment for the building and industry, industrial, tertiary and public lighting, VDI networks, technical alarms, assembly of cabinets and boxes.',
           link: 'https://www.cinquelec.com'
         },
         {
@@ -252,33 +252,33 @@ export default (context) => {
             Industry: 'Telecommunications'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+            'Spheretech is an Algerian company specializing in the data transmission sector.',
           link: 'https://www.spheretec.dz'
         },
         {
           slug: 'clinique-sonya',
-          title: 'Clinique Sonya',
+          title: 'Sonya Clinic',
           description: 'Content to come…',
           client: {
-            Client: 'Clinique Sonya',
+            Client: 'Sonya Clinic',
             Features: 'Web Design, Hosting',
             Industry: 'Health'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+            'Sonya Hemodialysis Clinic is a private clinic specializing in the treatment of chronic end-stage renal disease.',
           link: 'https://www.cliniquesonya.dz'
         },
         {
           slug: 'clinique-aya',
-          title: 'Clinique Aya',
+          title: 'Aya Clinic',
           description: 'Content to come…',
           client: {
-            Client: 'Clinique Aya',
+            Client: 'Aya Clinic',
             Features: 'Web Design, Hosting',
             Industry: 'Health'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+            'Opened in 2010, Clinique Aya is a private hospital whose main objective is to provide patients with quality care. It brings together more than 35 specialist doctors and a team of 60 people.',
           link: 'https://www.cliniqueaya.dz'
         },
         {
@@ -291,7 +291,7 @@ export default (context) => {
             Industry: 'Electricity'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+            'Offering its services to individuals, businesses and local authorities, RCelec is a company specializing in electrical work for buildings and industry, public lighting, computer networks and home automation.',
           link: 'https://www.rcelec.dz'
         }
       ],

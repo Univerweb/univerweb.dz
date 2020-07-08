@@ -44,7 +44,7 @@ export default (context) => {
             Secteur: 'Promotion immobilière'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
+            'Installée à Alger, Acodim est entreprise spécialisée dans la promotion immobilière.',
           link: 'https://www.acodim.dz'
         },
         {
@@ -57,7 +57,7 @@ export default (context) => {
             Secteur: 'Automobile'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+            'ETS Ouar est une organisation engagée sur la qualité OE (Original) pour le marché algérien de la pièce de rechange, des composants et des produits de haute précision de la première monte, des pièces détachées automobiles de toute première qualité.',
           link: 'https://www.etsouar.com'
         },
         {
@@ -70,7 +70,7 @@ export default (context) => {
             Secteur: 'Promotion immobilière'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+            'Créée en 2016 et installée à Skikda, TPBL est une entreprise spécialisée dans la promotion immobilière.',
           link: 'https://www.tpbl.dz'
         },
         {
@@ -83,7 +83,7 @@ export default (context) => {
             Secteur: 'Botanique'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
+            'Botanique Algérie est un réseau national dédié à la connaissance, au partage et à la promotion de la botanique en Algérie.',
           link: 'https://www.botaniquealgerie.dz'
         },
         {
@@ -109,7 +109,7 @@ export default (context) => {
             Secteur: 'Conseil'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
+            "We Service est une société de service et de consulting qui offre une solution globale d'expertise de laboratoires de recherche.",
           link: 'https://www.weservice.dz'
         },
         {
@@ -122,7 +122,7 @@ export default (context) => {
             Secteur: 'Actualité'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
+            'infoElec est le premier magazine algérien dédié à la filière électrique et énergétique.',
           link: 'https://www.infoelec.dz'
         },
         {
@@ -135,7 +135,7 @@ export default (context) => {
             Secteur: 'Mécanique'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
+            'Installée depuis 2006 aux portes du sud algérien, Optimum Transmission est une entreprise spécialisée dans la fabrication et la distribution de courroies de transmission.',
           link: 'https://www.optimumtransmission.dz'
         },
         {
@@ -148,7 +148,7 @@ export default (context) => {
             Secteur: 'Promotion immobilière'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
+            "Soprofort est une société de promotion immobilière créée en 2004. Conjuguant depuis compétence et savoir-faire, Elle réalise en collaboration avec l'entreprise de réalisation Eridj des projets immobiliers de grande qualité.",
           link: 'https://www.soprofort.dz'
         },
         {
@@ -161,7 +161,7 @@ export default (context) => {
             Secteur: 'Formation'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
+            "Créée en 1992, Microtel Training Institute s'est donné comme objectif d'assister les entreprises et institutions à mettre en place des solutions réseaux performantes, évolutives et manageables.",
           link: 'https://www.microtel-net.com'
         },
         {
@@ -174,7 +174,7 @@ export default (context) => {
             Secteur: 'Travaux publics'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
+            'Integral distribue des équipements pour les travaux publics, elle fournit à ses clients des machines et des pièces de rechange fabriquées par les principaux constructeurs européens et américains.',
           link: 'https://www.integral.sarl'
         },
         {
@@ -187,7 +187,7 @@ export default (context) => {
             Secteur: 'Promotion immobilière'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
+            'Epiza est une équipe de professionnels rassemblée pour la réalisation de projets immobiliers.',
           link: 'https://www.epizaskikda.com'
         },
         {
@@ -200,7 +200,7 @@ export default (context) => {
             Secteur: 'Promotion immobilière'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
+            'Pibo est une entreprise de promotion immobilière créée en 2014 par le cofondateur et gérant de la Soprofort, qui a acquis depuis une décennie une expérience un savoir-faire important dans le domaine de la promotion immobilière.',
           link: 'https://www.pibo.dz'
         },
         {
@@ -213,7 +213,7 @@ export default (context) => {
             Secteur: 'Travaux publics'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
+            "Intermat est une entreprise spécialisée dans la vente d'engins et de matériels pour le bâtiment et travaux publics.",
           link: 'https://www.intermatalgeria.com'
         },
         {
@@ -226,7 +226,7 @@ export default (context) => {
             Secteur: 'Électricité'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
+            "Fondée en 2010, BN Electric Company est une entreprise spécialisée dans la téléphonie mobile, l'industrie, les énergies renouvelables, le tertiaire et les services.",
           link: 'https://www.bnelectric.dz'
         },
         {
@@ -239,7 +239,7 @@ export default (context) => {
             Secteur: 'Électricité'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
+            "Créée en 1994, Cinquelec est une entreprise spécialisée dans l'importation et la distribution de matériels électriques pour le bâtiment et l'industrie, éclairage industriel, tertiaire et public, réseaux VDI, alarmes techniques, montage d'armoires et coffrets.",
           link: 'https://www.cinquelec.com'
         },
         {
@@ -252,7 +252,7 @@ export default (context) => {
             Secteur: 'Télécommunications'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
+            'Spheretec est une jeune entreprise algérienne spécialisée dans le secteur des transmissions de données.',
           link: 'https://www.spheretec.dz'
         },
         {
@@ -265,7 +265,7 @@ export default (context) => {
             Secteur: 'Santé'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
+            "La clinique d'Hémodialyse Sonya est une clinique privée spécialisée dans le traitement de l'insuffisance rénale chronique terminale.",
           link: 'https://www.cliniquesonya.dz'
         },
         {
@@ -278,7 +278,7 @@ export default (context) => {
             Secteur: 'Santé'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
+            'Ouverte en 2010, La Clinique Aya est un établissement hospitalier privé ayant pour objectif principal de fournir aux patients des soins de qualité. Elle regroupe plus de 35 médecins spécialistes et une équipe de 60 personnes.',
           link: 'https://www.cliniqueaya.dz'
         },
         {
@@ -291,7 +291,7 @@ export default (context) => {
             Secteur: 'Électricité'
           },
           body:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dicta perspiciatis sit, corporis quia, ipsum veritatis laboriosam iure, expedita quo eligendi ipsam doloribus nulla ducimus officiis numquam voluptatem temporibus voluptates.',
+            "Proposant ses services aux particuliers, entreprises et aux collectivités locales, RCelec est une entreprise spécialisée dans les travaux d'électricité pour le bâtiment et l'industrie, l'éclairage public, les réseaux informatiques et la domotique.",
           link: 'https://www.rcelec.dz'
         }
       ],
