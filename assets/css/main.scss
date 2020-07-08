@@ -255,6 +255,20 @@ a {
   transition: color $transition;
 }
 
+.link {
+  display: inline-block;
+  font-family: $font;
+  @include size(20);
+  font-weight: 500;
+  @media (min-width: $sm) {
+    @include size(28);
+    line-height: 1.286;
+  }
+  &:hover {
+    color: $blue;
+  }
+}
+
 button {
   font-family: inherit;
   font-size: inherit;

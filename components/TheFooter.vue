@@ -122,22 +122,14 @@ address {
   font-style: normal;
 }
 
-.link {
-  display: inline-block;
-  font-family: $font;
-  @include size(28);
-  line-height: 1.286;
-  font-weight: 500;
-  &:hover {
-    color: $blue;
-  }
-}
-
 .social {
   display: grid;
   grid-template-columns: repeat(3, auto);
   justify-content: space-between;
-  max-width: 295px;
+  max-width: 210px;
+  @media (min-width: $sm) {
+    max-width: 295px;
+  }
   margin: 12px 0 0;
   padding: 0;
   list-style: none;
