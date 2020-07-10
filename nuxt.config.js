@@ -1,7 +1,6 @@
 export default {
-  mode: 'universal',
-
-  /* Headers of the page */
+  target: 'static',
+  ssr: true,
   head: {
     meta: [
       { charset: 'utf-8' },
@@ -10,7 +9,6 @@ export default {
         content:
           'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'
       },
-
       { name: 'msapplication-TileColor', content: '#50c8f0' },
       { name: 'theme-color', content: '#50c8f0' },
       { name: 'apple-mobile-web-app-capable"', content: 'yes' },
@@ -40,7 +38,6 @@ export default {
         color: '#50c8f0'
       }
     ],
-    /* JSON-LD Data structured */
     __dangerouslyDisableSanitizers: ['script'],
     script: [
       {
@@ -82,29 +79,14 @@ export default {
       }
     ]
   },
-
-  /* Style Resources */
   styleResources: {
     scss: ['@/assets/css/var.scss', '@/assets/css/mixin.scss']
   },
-
-  /* Styles */
   css: [
     '@/assets/css/font.scss',
     '@/assets/css/keyframes.scss',
     '@/assets/css/main.scss'
   ],
-
-  /* Plugins to load before mounting the App */
-  plugins: [
-    '@/plugins/vue-lazyload',
-    { src: '@/plugins/ga.js', mode: 'client' }
-  ],
-
-  /* Auto import components */
-  components: true,
-
-  /* Nuxt.js dev-modules */
   buildModules: [
     '@nuxtjs/eslint-module',
     '@nuxtjs/stylelint-module',
@@ -113,11 +95,9 @@ export default {
     '@nuxtjs/pwa',
     ['vue-scrollto/nuxt', { offset: -72 }]
   ],
-
-  /* Nuxt.js modules */
   modules: ['nuxt-i18n', '@nuxt/http'],
-
-  /* Internationalisation */
+  components: true,
+  plugins: ['~plugins/vue-lazyload', { src: '~plugins/ga.js', mode: 'client' }],
   i18n: {
     locales: [
       {
@@ -140,8 +120,6 @@ export default {
       syncMessages: true
     }
   },
-
-  /* Manifest */
   manifest: {
     name: 'Univerweb',
     short_name: 'Univerweb',
@@ -160,9 +138,13 @@ export default {
     background_color: '#50c8f0',
     lang: 'fr'
   },
-
-  /* Progress-bar color */
   loading: {
     color: '#50c8f0'
+  },
+  generate: {
+    fallback: '404.html'
+  },
+  router: {
+    trailingSlash: true
   }
 }
