@@ -24,7 +24,7 @@ export default (context) => {
         description: 'Contenu à venir…',
         headline: 'Nous concevons des sites web professionnels.',
         body:
-          'Nous concevons des sites web qui répondent précisément à vos attentes et qui respectent intégralement votre image de marque.'
+          'Nous créons et nous innovons pour vous, notre mission première est de vous satisfaire ! Plus qu’une prestation, c’est une véritable expérience numérique qu’on vous offre.'
       },
 
       works: {
@@ -324,7 +324,7 @@ export default (context) => {
         description: 'Contenu à venir…',
         headline: 'Nous sommes une agence web.',
         body:
-          'Nous sommes une agence web spécialisée dans la création, l’hébergement et le référencement de sites web. Installée depuis 2011 à Alger, nous avons une équipe créative, dynamique et passionnée par son travail. Notre métier consiste à concevoir des sites web qui répondent à vos attentes et qui respectent votre image de marque.',
+          'Nous sommes dans l’innovation perpétuelle, c’est pourquoi nous offrons depuis 2011 des prestations numériques conçues pour vous et avec vous. Les conceptions web que nous réalisons, créent de véritables solutions personnalisées répondant à tous types de projets. La passion et la créativité qui animent notre équipe feront de votre expérience client une aventure unique, le meilleur moyen d’atteindre votre cible.',
         method: {
           headline: 'Notre méthode de travail',
           body: {
