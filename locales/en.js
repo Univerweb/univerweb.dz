@@ -359,13 +359,6 @@ export default (context) => {
           "Tell us about your needs, we'd love to collaborate with you.",
         body:
           "Creating professional websites is what we do. Tell us about your needs, we'd love to collaborate with you.",
-        form: {
-          fullname: 'Your name',
-          company: 'Your company name',
-          email: 'Your email',
-          message: 'Describe the project',
-          submit: 'Submit'
-        },
         other: {
           headline: 'Other ways to contact us',
           body: {

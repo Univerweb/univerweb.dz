@@ -359,13 +359,6 @@ export default (context) => {
           'Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.',
         body:
           "Créer des sites web professionnels, c'est ce que nous faisons. Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
-        form: {
-          fullname: 'Votre nom',
-          company: 'Nom de votre entreprise',
-          email: 'Votre e-mail',
-          message: 'Décrivez le projet',
-          submit: 'Soumettre'
-        },
         other: {
           headline: 'Autres moyens de nous contacter',
           body: {
