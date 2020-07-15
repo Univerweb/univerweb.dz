@@ -122,7 +122,7 @@ export default {
   },
 
   env: {
-    API_KEY: process.env.API_KEY || true
+    API_KEY: process.env.API_KEY || false
   },
 
   manifest: {
