@@ -120,6 +120,11 @@ export default {
       syncMessages: true
     }
   },
+
+  env: {
+    API_KEY: process.env.API_KEY || true
+  },
+
   manifest: {
     name: 'Univerweb',
     short_name: 'Univerweb',

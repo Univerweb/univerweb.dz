@@ -34,8 +34,7 @@ export default {
       const script = document.createElement('script')
       script.onload = this.onScriptLoaded
       script.type = 'text/javascript'
-      script.src =
-        'https://maps.googleapis.com/maps/api/js?key=AIzaSyBPyljmCunxdoxZ7CsPnXCGqvj1qiTYb60&map_ids=80752be13e97ac9e'
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.API_KEY}&map_ids=80752be13e97ac9e`
       document.head.appendChild(script)
     } else {
       this.onScriptLoaded()
