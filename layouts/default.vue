@@ -42,9 +42,9 @@ export default {
     if (this.$i18n.locale !== 'ar') {
       DIR = 'ltr'
     }
-    let path = this.$route.path
+    let PATH = this.$route.path
     if (this.$i18n.locale !== 'fr') {
-      path = this.$route.path.slice(3)
+      PATH = this.$route.path.slice(3)
     }
     const link = [
       {
@@ -54,17 +54,17 @@ export default {
       {
         rel: 'alternate',
         hreflang: 'fr',
-        href: process.env.BASE_URL + path
+        href: process.env.BASE_URL + PATH
       },
       {
         rel: 'alternate',
         hreflang: 'en',
-        href: process.env.BASE_URL + path
+        href: process.env.BASE_URL + PATH
       },
       {
         rel: 'alternate',
         hreflang: 'ar',
-        href: process.env.BASE_URL + path
+        href: process.env.BASE_URL + PATH
       }
     ]
     let IMG = process.env.BASE_URL + '/univerweb-ar.png'
