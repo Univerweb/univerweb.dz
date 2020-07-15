@@ -49,27 +49,27 @@ export default {
     const link = [
       {
         rel: 'canonical',
-        href: `https://www.univerweb.dz${this.$route.path}`
+        href: process.env.BASE_URL + this.$route.path
       },
       {
         rel: 'alternate',
         hreflang: 'fr',
-        href: 'https://www.univerweb.dz' + path
+        href: process.env.BASE_URL + path
       },
       {
         rel: 'alternate',
         hreflang: 'en',
-        href: 'https://www.univerweb.dz/en' + path
+        href: process.env.BASE_URL + path
       },
       {
         rel: 'alternate',
         hreflang: 'ar',
-        href: 'https://www.univerweb.dz/ar' + path
+        href: process.env.BASE_URL + path
       }
     ]
-    let IMG = 'https://www.univerweb.dz/univerweb-ar.png'
+    let IMG = process.env.BASE_URL + '/univerweb-ar.png'
     if (this.$i18n.locale !== 'ar') {
-      IMG = 'https://www.univerweb.dz/univerweb.png'
+      IMG = process.env.BASE_URL + '/univerweb.png'
     }
 
     return {
@@ -84,7 +84,7 @@ export default {
         {
           hid: 'og:url',
           property: 'og:url',
-          content: `https://www.univerweb.dz${this.$route.path}`
+          content: process.env.BASE_URL + this.$route.path
         },
         {
           hid: 'og:image',

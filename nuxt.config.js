@@ -46,10 +46,10 @@ export default {
           '@context': 'http://schema.org',
           '@type': 'Organization',
           name: 'Univerweb',
-          url: 'https://www.univerweb.dz',
+          url: process.env.BASE_URL,
           logo: {
             '@type': 'ImageObject',
-            url: 'https://www.univerweb.dz/logo.svg',
+            url: process.env.BASE_URL + '/logo.svg',
             width: '256px',
             height: '256px'
           },
@@ -122,6 +122,7 @@ export default {
   },
 
   env: {
+    BASE_URL: process.env.BASE_URL || false,
     API_KEY: process.env.API_KEY || false
   },
 

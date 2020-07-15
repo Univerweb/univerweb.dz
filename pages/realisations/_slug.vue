@@ -66,6 +66,8 @@ export default {
   },
 
   head() {
+    const IMG = `${process.env.BASE_URL}/works/${this.work.slug}/${this.work.slug}_bg.jpg`
+
     return {
       titleTemplate: `${this.work.title} — ${this.$t('name')}`,
       meta: [
@@ -87,22 +89,12 @@ export default {
         {
           hid: 'og:image',
           property: 'og:image',
-          content:
-            'https://www.univerweb.dz/works/' +
-            this.work.slug +
-            '/' +
-            this.work.slug +
-            '_bg.jpg'
+          content: IMG
         },
         {
           hid: 'og:image:secure_url',
           property: 'og:image:secure_url',
-          content:
-            'https://www.univerweb.dz/works/' +
-            this.work.slug +
-            '/' +
-            this.work.slug +
-            '_bg.jpg'
+          content: IMG
         }
       ]
     }
