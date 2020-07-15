@@ -34,7 +34,7 @@ export default {
       const script = document.createElement('script')
       script.onload = this.onScriptLoaded
       script.type = 'text/javascript'
-      script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.API_KEY}&map_ids=80752be13e97ac9e`
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.API_KEY}&map_ids=101a5bf427dc0726`
       document.head.appendChild(script)
     } else {
       this.onScriptLoaded()
@@ -46,7 +46,7 @@ export default {
       const HQ = { lat: 36.721043, lng: 3.047502 }
       // eslint-disable-next-line no-undef
       const map = new google.maps.Map(document.getElementById('map'), {
-        mapId: '80752be13e97ac9e',
+        mapId: '101a5bf427dc0726',
         zoom: 14,
         center: HQ
       })
