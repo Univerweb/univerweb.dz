@@ -20,7 +20,11 @@
       </ul>
       <div class="lang">
         <lang-globe />
-        <select v-model="lang" @change="onChange(lang)">
+        <select
+          v-model="lang"
+          :aria-label="$t('ariaLabel.lang')"
+          @change="onChange(lang)"
+        >
           <option
             v-for="(locale, index) in $i18n.locales"
             :key="index"

@@ -19,7 +19,8 @@ export default (context) => {
       },
 
       ariaLabel: {
-        menu: 'Open menu'
+        menu: 'Open menu',
+        lang: 'Select language'
       },
 
       home: {

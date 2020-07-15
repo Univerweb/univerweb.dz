@@ -19,7 +19,8 @@ export default (context) => {
       },
 
       ariaLabel: {
-        menu: 'افتح القائمة'
+        menu: 'افتح القائمة',
+        lang: 'اختر اللغة'
       },
 
       home: {
