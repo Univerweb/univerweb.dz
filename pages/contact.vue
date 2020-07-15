@@ -6,6 +6,7 @@
         <app-about />
       </div>
     </div>
+    <div id="map"></div>
     <div class="container">
       <div class="intro">
         <h2>{{ $t('contact.other.headline') }}</h2>
@@ -28,6 +29,48 @@
 
 <script>
 export default {
+  mounted() {
+    if (typeof google === 'undefined') {
+      const script = document.createElement('script')
+      script.onload = this.onScriptLoaded
+      script.type = 'text/javascript'
+      script.src =
+        'https://maps.googleapis.com/maps/api/js?key=AIzaSyBPyljmCunxdoxZ7CsPnXCGqvj1qiTYb60&map_ids=80752be13e97ac9e'
+      document.head.appendChild(script)
+    } else {
+      this.onScriptLoaded()
+    }
+  },
+
+  methods: {
+    onScriptLoaded(event = null) {
+      const HQ = { lat: 36.721043, lng: 3.047502 }
+      // eslint-disable-next-line no-undef
+      const map = new google.maps.Map(document.getElementById('map'), {
+        mapId: '80752be13e97ac9e',
+        zoom: 14,
+        center: HQ
+      })
+      // eslint-disable-next-line no-undef
+      const marker = new google.maps.Marker({
+        position: HQ,
+        icon: {
+          // eslint-disable-next-line no-undef
+          path: google.maps.SymbolPath.CIRCLE,
+          fillColor: '#50c8f0',
+          fillOpacity: 1,
+          strokeColor: '#28285a',
+          scale: 10
+        },
+        map
+      })
+      marker.addListener('click', function() {
+        map.setZoom(16)
+        map.setCenter(marker.getPosition())
+      })
+    }
+  },
+
   head() {
     return {
       bodyAttrs: { class: 'contact' },
@@ -53,3 +96,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+#map {
+  width: 100%;
+  height: 720px;
+  background-color: $light;
+}
+</style>
