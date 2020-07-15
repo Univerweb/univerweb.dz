@@ -34,7 +34,7 @@
     </nav>
     <button
       type="button"
-      :aria-label="$t('links.ariaLabel')"
+      :aria-label="$t('ariaLabel.menu')"
       class="toggle"
       @click="isShow"
     >

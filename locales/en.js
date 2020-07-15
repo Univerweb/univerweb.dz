@@ -12,11 +12,14 @@ export default (context) => {
 
       links: {
         home: 'Home',
-        ariaLabel: 'Open menu',
         previous: 'Previous',
         next: 'Next',
         more: 'More work',
         visit: 'Visit Website'
+      },
+
+      ariaLabel: {
+        menu: 'Open menu'
       },
 
       home: {
