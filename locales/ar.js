@@ -1,5 +1,5 @@
-export default (context) => {
-  return new Promise(function(resolve) {
+export default context => {
+  return new Promise(function (resolve) {
     resolve({
       name: 'يونيفارواب',
 

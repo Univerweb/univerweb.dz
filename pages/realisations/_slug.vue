@@ -54,14 +54,14 @@
 export default {
   validate({ params, store }) {
     return store.state.i18n.messages.work.some(
-      (item) => item.slug === params.slug
+      item => item.slug === params.slug
     )
   },
 
   data() {
     const works = this.$t('work')
     const slug = this.$route.params.slug
-    const work = works.find((work) => work.slug === slug)
+    const work = works.find(work => work.slug === slug)
     return { work }
   },
 

@@ -32,7 +32,7 @@ export default {
   data() {
     const works = this.$t('work')
     const slug = this.$route.params.slug
-    const work = works.find((work) => work.slug === slug)
+    const work = works.find(work => work.slug === slug)
     const count = works.length
     const currentIndex = works.indexOf(work)
     const next = works.slice(currentIndex - 1, currentIndex)

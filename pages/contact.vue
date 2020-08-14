@@ -63,7 +63,7 @@ export default {
         },
         map
       })
-      marker.addListener('click', function() {
+      marker.addListener('click', function () {
         map.setZoom(16)
         map.setCenter(marker.getPosition())
       })
