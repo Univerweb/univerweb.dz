@@ -96,25 +96,14 @@ export default {
   plugins: ['~plugins/vue-lazyload', { src: '~plugins/ga.js', mode: 'client' }],
   i18n: {
     locales: [
-      {
-        code: 'fr',
-        file: 'fr.js'
-      },
-      {
-        code: 'en',
-        file: 'en.js'
-      },
-      {
-        code: 'ar',
-        file: 'ar.js'
-      }
+      { code: 'fr', file: 'fr.js' },
+      { code: 'en', file: 'en.js' },
+      { code: 'ar', file: 'ar.js' }
     ],
     defaultLocale: 'fr',
     lazy: true,
     langDir: 'locales/',
-    vuex: {
-      syncMessages: true
-    }
+    vuex: { syncMessages: true }
   },
 
   env: {
@@ -140,13 +129,7 @@ export default {
     background_color: '#50c8f0',
     lang: 'fr'
   },
-  loading: {
-    color: '#50c8f0'
-  },
-  generate: {
-    fallback: '404.html'
-  },
-  router: {
-    trailingSlash: true
-  }
+  loading: { color: '#50c8f0' },
+  generate: { fallback: '404.html' },
+  router: { trailingSlash: true }
 }
