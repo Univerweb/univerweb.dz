@@ -73,7 +73,7 @@ export default {
   head() {
     return {
       bodyAttrs: { class: 'contact' },
-      titleTemplate: `${this.$t('contact.title')} — ${this.$t('name')}`,
+      titleTemplate: `${this.$t('menu.contact')} — ${this.$t('name')}`,
       meta: [
         {
           hid: 'description',
@@ -83,7 +83,7 @@ export default {
         {
           hid: 'og:title',
           property: 'og:title',
-          content: this.$t('contact.title')
+          content: this.$t('menu.contact')
         },
         {
           hid: 'og:description',

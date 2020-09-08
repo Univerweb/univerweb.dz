@@ -9,10 +9,10 @@ export default {
   },
 
   links: {
-    home: 'Accueil',
+    home: 'Création de sites web',
     previous: 'Précédent',
     next: 'Suivant',
-    more: 'Plus de réalisations',
+    more: 'More happiness',
     visit: 'Visiter le site web'
   },
 
@@ -22,7 +22,6 @@ export default {
   },
 
   home: {
-    title: 'Création de sites web',
     description: 'Contenu à venir…',
     headline: 'Nous concevons des sites web professionnels.',
     body:
@@ -30,9 +29,9 @@ export default {
   },
 
   works: {
-    title: 'Nos dernières créations',
     description:
-      'Découvrez nos toutes dernières créations, nous serions ravis de collaborer avec vous.'
+      'Découvrez nos toutes dernières créations, nous serions ravis de collaborer avec vous.',
+    headline: 'Ils ont cru en nous et ils sont comblés.'
   },
 
   work: [
@@ -299,15 +298,15 @@ export default {
   ],
 
   prestations: {
-    title: 'Prestations',
-    description: 'Contenu à venir…',
-    headline: 'Lorem ipsum, dolor sit amet elit.',
+    description:
+      'Une stratégie de présence web accomplie, sur des fondements technologiques et une méthodologie rigoureuse.',
+    headline: 'Ce dont nous sommes capables.',
     body:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum omnis provident deserunt saepe laborum, fugiat soluta blanditiis mollitia quia ratione! Non fuga debitis aspernatur accusamus voluptatem minus voluptate, amet suscipit?',
+      'De nos jours quiconque peut faire un site web, y compris votre neveu de 13 ans ! Mais qui peut réellement concrétiser une stratégie de présence web accomplie, sur des fondements technologiques et une méthodologie rigoureuse.',
     webDesign: {
       headline: 'Web design',
       body:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, ullam inventore quo nam, perspiciatis nobis accusantium odit ut velit modi sed accusamus aut iusto et, molestias fuga laboriosam tempora porro!'
+        "Un mélange savant et millimétré entre design attrayant, charte graphique respectée et expérience utilisateur au top des priorités. Nous trouverons pour vous l'équilibre parfait."
     },
     dev: {
       headline: 'Développement',
@@ -322,7 +321,6 @@ export default {
   },
 
   agency: {
-    title: "L'agence",
     description: 'Contenu à venir…',
     headline: 'Nous sommes une agence web.',
     body:
@@ -356,7 +354,6 @@ export default {
   },
 
   contact: {
-    title: 'Contact',
     description:
       'Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.',
     body:
@@ -407,7 +404,7 @@ export default {
   },
 
   request: {
-    headline: 'Vous avez un projet en tête ?',
+    headline: 'Convaincu ? Prenons un café ensemble.',
     body:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
     link: 'Contactez-nous'

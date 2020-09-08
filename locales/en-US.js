@@ -9,10 +9,10 @@ export default {
   },
 
   links: {
-    home: 'Home',
+    home: 'Website Design',
     previous: 'Previous',
     next: 'Next',
-    more: 'More work',
+    more: 'More happiness',
     visit: 'Visit Website'
   },
 
@@ -22,7 +22,6 @@ export default {
   },
 
   home: {
-    title: 'Website Design',
     description: 'Content to come…',
     headline: 'We design professional websites.',
     body:
@@ -30,9 +29,9 @@ export default {
   },
 
   works: {
-    title: 'Our latest creations',
     description:
-      "Discover our latest creations, we'd love to collaborate with you."
+      "Discover our latest creations, we'd love to collaborate with you.",
+    headline: 'They believed in us and they are fulfilled.'
   },
 
   work: [
@@ -299,15 +298,15 @@ export default {
   ],
 
   prestations: {
-    title: 'Services',
-    description: 'Content to come…',
-    headline: 'Lorem ipsum, dolor sit amet elit.',
+    description:
+      'An accomplished web presence strategy, on technological foundations and a rigorous methodology.',
+    headline: 'What we are capable of.',
     body:
-      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum omnis provident deserunt saepe laborum, fugiat soluta blanditiis mollitia quia ratione! Non fuga debitis aspernatur accusamus voluptatem minus voluptate, amet suscipit?',
+      'These days anyone can make a website, including your 13 year old nephew! But who can really materialize an accomplished web presence strategy, on technological foundations and a rigorous methodology.',
     webDesign: {
       headline: 'Web design',
       body:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, ullam inventore quo nam, perspiciatis nobis accusantium odit ut velit modi sed accusamus aut iusto et, molestias fuga laboriosam tempora porro!'
+        'A clever and precise mix of attractive design, respected graphic charter and user experience at the top of the priorities. We will find the perfect balance for you.'
     },
     dev: {
       headline: 'Development',
@@ -322,7 +321,6 @@ export default {
   },
 
   agency: {
-    title: 'The agency',
     description: 'Content to come…',
     headline: 'We are a web agency.',
     body:
@@ -356,7 +354,6 @@ export default {
   },
 
   contact: {
-    title: 'Contact',
     description: "Tell us about your needs, we'd love to collaborate with you.",
     body:
       "Creating professional websites is what we do. Tell us about your needs, we'd love to collaborate with you.",
@@ -406,7 +403,7 @@ export default {
   },
 
   request: {
-    headline: 'Got a Project in Mind?',
+    headline: "Convinced? Let's have a coffee together.",
     body:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
     link: 'Get in Touch'

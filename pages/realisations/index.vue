@@ -2,7 +2,7 @@
   <main>
     <div class="container">
       <div class="intro">
-        <h1>{{ $t('works.title') + '.' }}</h1>
+        <h1>{{ $t('works.headline') }}</h1>
       </div>
       <div class="details">
         <div v-for="(work, index) in $t('work')" :key="index" class="item">
@@ -33,7 +33,7 @@ export default {
   head() {
     return {
       bodyAttrs: { class: 'works' },
-      titleTemplate: `${this.$t('works.title')} — ${this.$t('name')}`,
+      titleTemplate: `${this.$t('menu.realisations')} — ${this.$t('name')}`,
       meta: [
         {
           hid: 'description',
@@ -43,7 +43,7 @@ export default {
         {
           hid: 'og:title',
           property: 'og:title',
-          content: this.$t('works.title')
+          content: this.$t('menu.realisations')
         },
         {
           hid: 'og:description',

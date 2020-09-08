@@ -1,7 +1,7 @@
 <template>
   <nuxt-link :to="localePath('realisations')" class="back">
     <nav-arrow />
-    {{ $t('works.title') }}
+    {{ $t('menu.realisations') }}
   </nuxt-link>
 </template>
 

@@ -32,7 +32,7 @@ export default {
   head() {
     return {
       bodyAttrs: { class: 'prestations' },
-      titleTemplate: `${this.$t('prestations.title')} — ${this.$t('name')}`,
+      titleTemplate: `${this.$t('menu.prestations')} — ${this.$t('name')}`,
       meta: [
         {
           hid: 'description',
@@ -42,7 +42,7 @@ export default {
         {
           hid: 'og:title',
           property: 'og:title',
-          content: this.$t('prestations.title')
+          content: this.$t('menu.prestations')
         },
         {
           hid: 'og:description',

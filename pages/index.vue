@@ -11,7 +11,7 @@ export default {
   head() {
     return {
       bodyAttrs: { class: 'home' },
-      titleTemplate: `${this.$t('name')} — ${this.$t('home.title')}`,
+      titleTemplate: `${this.$t('name')} — ${this.$t('links.home')}`,
       meta: [
         {
           hid: 'description',
@@ -21,7 +21,7 @@ export default {
         {
           hid: 'og:title',
           property: 'og:title',
-          content: this.$t('home.title')
+          content: this.$t('links.home')
         },
         {
           hid: 'og:description',

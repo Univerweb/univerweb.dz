@@ -1,7 +1,7 @@
 <template>
   <section class="container works">
     <div class="intro">
-      <h2 class="h1">{{ $t('works.title') + '.' }}</h2>
+      <h2 class="h1">{{ $t('works.headline') }}</h2>
     </div>
     <div class="details">
       <div

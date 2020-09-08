@@ -43,7 +43,7 @@
 export default {
   head() {
     return {
-      titleTemplate: `${this.$t('agency.title')} — ${this.$t('name')}`,
+      titleTemplate: `${this.$t('menu.agence')} — ${this.$t('name')}`,
       meta: [
         {
           hid: 'description',
@@ -53,7 +53,7 @@ export default {
         {
           hid: 'og:title',
           property: 'og:title',
-          content: this.$t('agency.title')
+          content: this.$t('menu.agence')
         },
         {
           hid: 'og:description',
