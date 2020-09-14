@@ -2,7 +2,7 @@
   <main>
     <div class="container details">
       <div class="item">
-        <h1 class="h2">{{ $t('contact.title') }}</h1>
+        <h1 class="h2">{{ $t('menu.contact') }}</h1>
         <app-about />
       </div>
     </div>
