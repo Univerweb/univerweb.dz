@@ -50,12 +50,14 @@
 <script>
 import TwitterIcon from '@/assets/icons/twitter.svg?inline'
 import FacebookIcon from '@/assets/icons/facebook.svg?inline'
+import LinkedinIcon from '@/assets/icons/linkedin.svg?inline'
 import GithubIcon from '@/assets/icons/github.svg?inline'
 
 export default {
   components: {
     TwitterIcon,
     FacebookIcon,
+    LinkedinIcon,
     GithubIcon
   },
 
@@ -69,6 +71,10 @@ export default {
         {
           link: 'https://www.facebook.com/Univerweb',
           slug: 'facebook'
+        },
+        {
+          link: 'https://www.linkedin.com/company/univerweb',
+          slug: 'linkedin'
         },
         {
           link: 'https://github.com/Univerweb',
@@ -124,7 +130,7 @@ address {
 
 .social {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(4, auto);
   justify-content: space-between;
   max-width: 210px;
   @media (min-width: $sm) {

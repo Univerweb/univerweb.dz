@@ -398,6 +398,7 @@ export default {
     social: {
       twitter: 'Rejoignez-nous sur Twitter',
       facebook: 'Rejoignez-nous sur Facebook',
+      linkedin: 'Rejoignez-nous sur LinkedIn',
       github: 'Rejoignez-nous sur GitHub'
     },
     copy: 'Copyright 2020 Univerweb. Tous droits réservés.'
