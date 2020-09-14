@@ -39,26 +39,28 @@ export default {
       {
         type: 'application/ld+json',
         innerHTML: JSON.stringify({
-          '@context': 'http://schema.org',
+          '@context': 'https://schema.org',
           '@type': 'Organization',
           name: 'Univerweb',
           url: process.env.BASE_URL,
           logo: {
             '@type': 'ImageObject',
-            url: process.env.BASE_URL + '/logo.svg',
-            width: '256px',
-            height: '256px'
+            url: process.env.BASE_URL + '/logo.png',
+            width: '1024px',
+            height: '1024px'
           },
-          email: 'info@univerweb.dz',
+          email: 'contact@univerweb.dz',
           telephone: '+213 551 90 46 22',
           faxNumber: '+213 21 44 08 11',
           sameAs: [
             'https://twitter.com/univerweb',
-            'https://www.facebook.com/Univerweb'
+            'https://www.facebook.com/Univerweb',
+            'https://www.linkedin.com/company/univerweb',
+            'https://github.com/Univerweb'
           ],
           address: {
             '@type': 'PostalAddress',
-            streetAddress: '62, coopérative El Mebniya',
+            streetAddress: '62, coopérative El Mebniya, Birkhadem',
             postalCode: '16 330',
             addressLocality: 'Alger',
             addressCountry: 'Algérie'
