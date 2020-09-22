@@ -12,7 +12,7 @@ export default {
     home: 'Création de sites web',
     previous: 'Précédent',
     next: 'Suivant',
-    more: 'More happiness',
+    more: 'Plus de bonheur',
     visit: 'Visiter le site web'
   },
 
