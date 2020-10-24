@@ -376,9 +376,9 @@ export default {
   footer: {
     address: {
       name: 'Univerweb Eurl',
-      streetAddress: '62, cooperative El Mebniya',
+      streetAddress: '62 Coop. El Mebnia',
       addressLocality: 'Birkhadem',
-      postalCode: '16 330',
+      postalCode: '16 029',
       addressCity: 'Algiers'
     },
     maps: 'Get directions',

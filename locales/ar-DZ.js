@@ -369,9 +369,9 @@ export default {
   footer: {
     address: {
       name: 'يونيفارواب',
-      streetAddress: '62 ، تعاونية المبنية',
+      streetAddress: '62 تعاونية المبنية',
       addressLocality: 'بئر خادم',
-      postalCode: '330 16',
+      postalCode: '029 16',
       addressCity: 'الجزائر العاصمة '
     },
     maps: 'احصل على الاتجاهات',

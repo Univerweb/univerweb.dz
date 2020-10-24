@@ -60,8 +60,8 @@ export default {
           ],
           address: {
             '@type': 'PostalAddress',
-            streetAddress: '62, coopérative El Mebniya, Birkhadem',
-            postalCode: '16 330',
+            streetAddress: '62 Coop. El Mebnia, Birkhadem',
+            postalCode: '16 029',
             addressLocality: 'Alger',
             addressCountry: 'Algérie'
           },
