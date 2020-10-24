@@ -113,24 +113,23 @@ export default {
     API_KEY: process.env.API_KEY || false
   },
 
-  manifest: {
-    name: 'Univerweb',
-    short_name: 'Univerweb',
-    icons: [
-      {
-        src: '/android-chrome-192x192.png',
-        sizes: '192x192',
-        type: 'image/png'
-      },
-      {
-        src: '/android-chrome-512x512.png',
-        sizes: '512x512',
-        type: 'image/png'
-      }
-    ],
-    background_color: '#50c8f0',
-    lang: 'fr'
+  pwa: {
+    manifest: {
+      name: 'Univerweb',
+      short_name: 'Univerweb',
+      icons: [
+        {
+          src: '/icon.png',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'any maskable'
+        }
+      ],
+      background_color: '#50c8f0',
+      lang: 'fr'
+    }
   },
+
   loading: { color: '#50c8f0' },
   generate: { fallback: '404.html' },
   router: { trailingSlash: true }
