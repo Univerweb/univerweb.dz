@@ -72,6 +72,13 @@ export default {
     }
   },
 
+  head() {
+    return {
+      htmlAttrs: { style: this.show ? 'height: 100%; overflow: hidden' : '' },
+      bodyAttrs: { style: this.show ? 'height: 100%; overflow: hidden' : '' }
+    }
+  },
+
   created() {
     this.lang = this.$i18n.locale
   },
@@ -82,13 +89,6 @@ export default {
     },
     onChange(event) {
       this.$router.replace(this.switchLocalePath(event))
-    }
-  },
-
-  head() {
-    return {
-      htmlAttrs: { style: this.show ? 'height: 100%; overflow: hidden' : '' },
-      bodyAttrs: { style: this.show ? 'height: 100%; overflow: hidden' : '' }
     }
   }
 }

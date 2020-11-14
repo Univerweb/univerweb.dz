@@ -15,28 +15,6 @@ export default {
     }
   },
 
-  beforeMount() {
-    window.addEventListener('scroll', this.handleScroll)
-  },
-
-  mounted() {
-    this.scrolled = window.scrollY > 0
-    this.$nextTick(() => {
-      this.$nuxt.$loading.start()
-      setTimeout(() => this.$nuxt.$loading.finish(), 500)
-    })
-  },
-
-  beforeDestroy() {
-    window.removeEventListener('scroll', this.handleScroll)
-  },
-
-  methods: {
-    handleScroll() {
-      this.scrolled = window.scrollY > 0
-    }
-  },
-
   head() {
     let DIR = 'rtl'
     if (this.$i18n.locale !== 'ar') {
@@ -105,6 +83,28 @@ export default {
           content: '1080'
         }
       ]
+    }
+  },
+
+  beforeMount() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+
+  mounted() {
+    this.scrolled = window.scrollY > 0
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+      setTimeout(() => this.$nuxt.$loading.finish(), 500)
+    })
+  },
+
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
+
+  methods: {
+    handleScroll() {
+      this.scrolled = window.scrollY > 0
     }
   }
 }
