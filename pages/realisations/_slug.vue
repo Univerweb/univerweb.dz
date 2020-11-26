@@ -159,6 +159,10 @@ export default {
       top: 120px;
     }
   }
+  & .card img {
+    border-radius: 0.25rem;
+    box-shadow: 0 0 40px 0 rgba(17, 17, 17, 0.1);
+  }
 }
 
 [lang='ar'] .work .link {
