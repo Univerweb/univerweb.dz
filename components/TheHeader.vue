@@ -42,11 +42,9 @@
       class="toggle"
       @click="isShow"
     >
-      <span>
-        <span class="top"></span>
-        <span class="middle"></span>
-        <span class="bottom"></span
-      ></span>
+      <span class="top"></span>
+      <span class="middle"></span>
+      <span class="bottom"></span>
     </button>
   </header>
 </template>
@@ -272,50 +270,38 @@ header {
 }
 
 .toggle {
-  background: transparent;
-  margin: 0;
-  padding: 0;
-  outline: none;
+  display: grid;
   @media (min-width: $md) {
     display: none;
   }
-  & > span {
-    display: grid;
-    align-content: space-between;
-    height: 24px;
-
-    &:focus {
-      background: $dark-blue;
-      .show & {
-        background: $blue;
-      }
+  align-content: space-between;
+  background: transparent;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  & span {
+    background: $blue;
+    height: 3px;
+    border-radius: 2em;
+    transition: all $transition;
+  }
+  & .middle {
+    animation: CollapseMiddle $animation;
+    .show & {
+      animation: CollapseShowMiddle $animation;
     }
-    & span {
-      background: $blue;
-      height: 3px;
-      border-radius: 3px;
-      transition: all $transition;
+  }
+  & .top {
+    animation: CollapseTop $animation;
+    .show & {
+      animation: CollapseShowTop $animation;
     }
-    .show &:focus span {
-      background: $dark-blue;
-    }
-    & .middle {
-      animation: CollapseMiddle $animation;
-      .show & {
-        animation: CollapseShowMiddle $animation;
-      }
-    }
-    & .top {
-      animation: CollapseTop $animation;
-      .show & {
-        animation: CollapseShowTop $animation;
-      }
-    }
-    & .bottom {
-      animation: CollapseBottom $animation;
-      .show & {
-        animation: CollapseShowBottom $animation;
-      }
+  }
+  & .bottom {
+    animation: CollapseBottom $animation;
+    .show & {
+      animation: CollapseShowBottom $animation;
     }
   }
 }
