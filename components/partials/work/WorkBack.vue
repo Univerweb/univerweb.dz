@@ -29,7 +29,7 @@ export default {
   &:hover {
     color: $blue;
   }
-  & .arrow {
+  .arrow {
     fill: currentColor;
     height: 5px;
     transform: rotate(90deg);

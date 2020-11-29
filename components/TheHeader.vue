@@ -166,7 +166,7 @@ header {
     opacity: 1;
     pointer-events: auto;
   }
-  & ul {
+  ul {
     display: grid;
     grid-auto-columns: max-content;
     row-gap: 24px;
@@ -182,7 +182,7 @@ header {
       padding: 0;
     }
   }
-  & a {
+  a {
     position: relative;
     display: block;
     @include size(20);
@@ -223,7 +223,7 @@ header {
   @media (min-width: $md) {
     background: $dark-blue;
   }
-  & .globe {
+  .globe {
     margin-right: -1rem;
     [lang='ar'] & {
       margin-right: 0;
@@ -234,7 +234,7 @@ header {
       fill: $blue;
     }
   }
-  & select {
+  select {
     background-color: transparent;
     color: $dark-blue;
     appearance: none;
@@ -251,11 +251,11 @@ header {
     @media (min-width: $md) {
       color: $blue;
     }
-    & option {
+    option {
       color: initial;
     }
   }
-  & .arrow {
+  .arrow {
     height: 8px;
     margin-left: -1rem;
     [lang='ar'] & {
@@ -280,25 +280,25 @@ header {
   margin: 0;
   padding: 0;
   outline: none;
-  & span {
+  span {
     background: $blue;
     height: 3px;
     border-radius: 2em;
     transition: all $transition;
   }
-  & .middle {
+  .middle {
     animation: CollapseMiddle $animation;
     .show & {
       animation: CollapseShowMiddle $animation;
     }
   }
-  & .top {
+  .top {
     animation: CollapseTop $animation;
     .show & {
       animation: CollapseShowTop $animation;
     }
   }
-  & .bottom {
+  .bottom {
     animation: CollapseBottom $animation;
     .show & {
       animation: CollapseShowBottom $animation;

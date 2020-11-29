@@ -50,7 +50,7 @@ export default {
 .more {
   text-align: end;
   margin-top: 48px;
-  & .arrow {
+  .arrow {
     fill: currentColor;
     height: 8px;
     transform: rotate(-90deg);

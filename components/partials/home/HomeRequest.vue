@@ -14,7 +14,7 @@
   background: $blue;
   color: $dark-blue;
   text-align: center;
-  & a::before {
+  a::before {
     background: $white;
   }
 }

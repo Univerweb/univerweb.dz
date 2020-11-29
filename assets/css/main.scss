@@ -82,7 +82,7 @@ main {
       min-height: calc(100vh - 72px);
     }
   }
-  & .arrow {
+  .arrow {
     position: absolute;
     bottom: 24px;
     left: 50%;
@@ -96,7 +96,7 @@ main {
 .intro {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  & * {
+  * {
     grid-column: 1 / 13;
     @media (min-width: $sm) {
       grid-column: 1 / 10;
@@ -118,15 +118,14 @@ main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   row-gap: 24px;
-  & .item:nth-child(odd),
-  & .item:nth-child(even) {
+  .item {
     grid-column: 1 / 13;
   }
   @media (min-width: $sm) {
-    & .item:nth-child(odd) {
+    .item:nth-child(odd) {
       grid-column: 1 / 6;
     }
-    & .item:nth-child(even) {
+    .item:nth-child(even) {
       grid-column: 7 / 12;
     }
   }
@@ -134,36 +133,36 @@ main {
     row-gap: 48px;
     @media (min-width: $sm) {
       column-gap: 48px;
-      & .item:nth-child(odd) {
+      .item:nth-child(odd) {
         grid-column: 1 / 7;
       }
-      & .item:nth-child(even) {
+      .item:nth-child(even) {
         grid-column: 7 / 13;
       }
     }
     @media (min-width: $md) {
-      & .item:nth-child(3n + 1) {
+      .item:nth-child(3n + 1) {
         grid-column: 1 / 5;
       }
-      & .item:nth-child(3n + 2) {
+      .item:nth-child(3n + 2) {
         grid-column: 5 / 9;
       }
-      & .item:nth-child(3n + 3) {
+      .item:nth-child(3n + 3) {
         grid-column: 9 / 13;
       }
     }
-    & .item {
+    .item {
       display: grid;
-      & h3,
-      & .h3 {
+      h3,
+      .h3 {
         margin-top: 12px;
         margin-bottom: 0;
         order: 1;
       }
-      & > a {
+      > a {
         position: relative;
         display: grid;
-        & p {
+        p {
           display: grid;
           align-items: end;
           background: $blue;

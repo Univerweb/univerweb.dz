@@ -112,7 +112,7 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  & span {
+  span {
     padding: 80% 0 0;
     @media (min-width: $sm) {
       padding: 60% 0 0;
@@ -120,7 +120,7 @@ export default {
     @media (min-width: $md) {
       padding: 50% 0 0;
     }
-    & img {
+    img {
       opacity: 0;
       position: absolute;
       top: 0;
@@ -133,13 +133,13 @@ export default {
 
 .work .client {
   @media (min-width: $sm) {
-    & .item:nth-child(1) {
+    .item:nth-child(1) {
       grid-column: 1 / 4;
     }
-    & .item:nth-child(2) {
+    .item:nth-child(2) {
       grid-column: 5 / 8;
     }
-    & .item:nth-child(3) {
+    .item:nth-child(3) {
       grid-column: 9 / 12;
     }
   }
@@ -148,18 +148,18 @@ export default {
 .work .project {
   padding-top: 0;
   @media (min-width: $sm) {
-    & .item:nth-child(1) {
+    .item:nth-child(1) {
       grid-column: 1 / 4;
     }
-    & .item:nth-child(2) {
+    .item:nth-child(2) {
       grid-column: 5 / 13;
     }
-    & .inner {
+    .inner {
       position: sticky;
       top: 120px;
     }
   }
-  & .card img {
+  .card img {
     border-radius: 0.25rem;
     box-shadow: 0 0 40px 0 rgba(17, 17, 17, 0.1);
   }

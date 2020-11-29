@@ -59,8 +59,8 @@ export default {
   padding-top: 72px;
   padding-bottom: 48px;
   background: $blue;
-  & .next,
-  & .previous {
+  .next,
+  .previous {
     position: relative;
     color: $dark-blue;
     padding: 0 12px 0 18px;
@@ -102,7 +102,7 @@ export default {
       }
     }
   }
-  & .arrow {
+  .arrow {
     position: absolute;
     left: 0;
     top: 50%;
@@ -117,7 +117,7 @@ export default {
       left: auto;
     }
   }
-  & .next .arrow {
+  .next .arrow {
     transform: rotate(-90deg);
     right: 0;
     left: auto;

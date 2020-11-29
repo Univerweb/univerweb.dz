@@ -110,13 +110,13 @@ footer {
   @media (min-width: $lg) {
     grid-template-columns: auto auto 160px;
   }
-  & a {
+  a {
     color: $white;
     &:hover {
       color: $blue;
     }
   }
-  & .about .lead {
+  .lead {
     color: $white;
     @media (min-width: $sm) {
       max-width: 310px;
@@ -139,9 +139,9 @@ address {
   margin: 12px 0 0;
   padding: 0;
   list-style: none;
-  & a {
+  a {
     display: grid;
-    & svg {
+    svg {
       height: 24px;
       fill: $blue;
       transition: opacity $transition;

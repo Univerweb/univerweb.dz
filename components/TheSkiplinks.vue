@@ -10,7 +10,7 @@
 .skip-links {
   position: absolute;
   z-index: 10;
-  & button {
+  button {
     position: absolute;
     clip: rect(1px, 1px, 1px, 1px);
     background: $blue;
