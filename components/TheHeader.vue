@@ -12,10 +12,10 @@
     </nuxt-link>
     <nav class="menu">
       <ul>
-        <li v-for="(name, value) in $t('menu')" :key="value">
-          <nuxt-link :to="localePath(value)" @click.native="show = false">
-            {{ name }}
-          </nuxt-link>
+        <li v-for="(value, name) in $t('menu')" :key="name">
+          <nuxt-link :to="localePath(name)" @click.native="show = false">{{
+            value
+          }}</nuxt-link>
         </li>
       </ul>
       <div class="lang">
@@ -26,8 +26,8 @@
           @change="onChange(lang)"
         >
           <option
-            v-for="(locale, index) in $i18n.locales"
-            :key="index"
+            v-for="locale in $i18n.locales"
+            :key="locale.code"
             :value="locale.code"
           >
             {{ locale.code }}

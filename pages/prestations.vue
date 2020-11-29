@@ -10,11 +10,8 @@
       </div>
       <div class="details">
         <ul class="item">
-          <li
-            v-for="(name, index) in $t('prestations.webDesign.tags')"
-            :key="index"
-          >
-            {{ name }}
+          <li v-for="item in $t('prestations.webDesign.tags')" :key="item">
+            {{ item }}
           </li>
         </ul>
         <p class="item lead">{{ $t('prestations.webDesign.body') }}</p>
@@ -26,8 +23,8 @@
       </div>
       <div class="details">
         <ul class="item">
-          <li v-for="(name, index) in $t('prestations.dev.tags')" :key="index">
-            {{ name }}
+          <li v-for="item in $t('prestations.dev.tags')" :key="item">
+            {{ item }}
           </li>
         </ul>
         <p class="item lead">{{ $t('prestations.dev.body') }}</p>
@@ -39,11 +36,8 @@
       </div>
       <div class="details">
         <ul class="item">
-          <li
-            v-for="(name, index) in $t('prestations.support.tags')"
-            :key="index"
-          >
-            {{ name }}
+          <li v-for="item in $t('prestations.support.tags')" :key="item">
+            {{ item }}
           </li>
         </ul>
         <p class="item lead">{{ $t('prestations.support.body') }}</p>

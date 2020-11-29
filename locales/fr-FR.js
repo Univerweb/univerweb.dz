@@ -369,8 +369,8 @@ export default {
     other: {
       headline: 'Autres moyens de nous contacter',
       body: {
-        'h.nedjar@univerweb.dz': 'Gérant',
-        'support@univerweb.dz': 'Soutien technique'
+        Gérant: 'h.nedjar@univerweb.dz',
+        'Soutien technique': 'support@univerweb.dz'
       }
     }
   },

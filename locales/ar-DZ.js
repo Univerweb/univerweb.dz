@@ -360,8 +360,8 @@ export default {
     other: {
       headline: 'طرق أخرى التواصل معنا',
       body: {
-        'h.nedjar@univerweb.dz': 'مسيّر',
-        'support@univerweb.dz': 'دعم تقني'
+        مسيّر: 'h.nedjar@univerweb.dz',
+        'دعم تقني': 'support@univerweb.dz'
       }
     }
   },

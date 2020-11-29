@@ -33,13 +33,13 @@
     <div class="about-container">
       <app-about />
       <ul class="social">
-        <li v-for="(social, index) in socials" :key="index">
-          <a :href="social.link">
-            <span class="visually-hidden">
-              {{ $t('footer.social.' + social.slug) }}
-            </span>
-            <component :is="social.slug + '-icon'" />
-          </a>
+        <li v-for="(value, name) in socials" :key="name">
+          <a :href="value">
+            <span class="visually-hidden">{{
+              $t('footer.social.' + name)
+            }}</span>
+            <component :is="name + '-icon'"
+          /></a>
         </li>
       </ul>
     </div>
@@ -63,24 +63,12 @@ export default {
 
   data() {
     return {
-      socials: [
-        {
-          link: 'https://twitter.com/Univerweb',
-          slug: 'twitter'
-        },
-        {
-          link: 'https://www.facebook.com/Univerweb',
-          slug: 'facebook'
-        },
-        {
-          link: 'https://www.linkedin.com/company/univerweb',
-          slug: 'linkedin'
-        },
-        {
-          link: 'https://github.com/Univerweb',
-          slug: 'github'
-        }
-      ]
+      socials: {
+        twitter: 'https://twitter.com/Univerweb',
+        facebook: 'https://www.facebook.com/Univerweb',
+        linkedin: 'https://www.linkedin.com/company/univerweb',
+        github: 'https://github.com/Univerweb'
+      }
     }
   }
 }

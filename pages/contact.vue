@@ -13,14 +13,12 @@
       </div>
       <div class="details">
         <div
-          v-for="(name, value) in $t('contact.other.body')"
-          :key="value"
+          v-for="(value, name) in $t('contact.other.body')"
+          :key="name"
           class="item"
         >
           <h3 class="h6">{{ name }}</h3>
-          <a :href="'mailto:' + value" class="link">
-            {{ value }}
-          </a>
+          <a :href="'mailto:' + value" class="link">{{ value }}</a>
         </div>
       </div>
     </div>

@@ -12,12 +12,12 @@
       </div>
       <ol class="details">
         <li
-          v-for="(name, value) in $t('agency.method.body')"
-          :key="value"
+          v-for="(value, name) in $t('agency.method.body')"
+          :key="name"
           class="item"
         >
-          <h3>{{ value }}</h3>
-          <p class="lead">{{ name }}</p>
+          <h3>{{ name }}</h3>
+          <p class="lead">{{ value }}</p>
         </li>
       </ol>
     </div>
@@ -27,12 +27,12 @@
       </div>
       <div class="details">
         <div
-          v-for="(name, value) in $t('agency.choose.body')"
-          :key="value"
+          v-for="(value, name) in $t('agency.choose.body')"
+          :key="name"
           class="item"
         >
-          <h3>{{ value }}</h3>
-          <p class="lead">{{ name }}</p>
+          <h3>{{ name }}</h3>
+          <p class="lead">{{ value }}</p>
         </div>
       </div>
     </div>

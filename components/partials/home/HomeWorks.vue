@@ -4,15 +4,11 @@
       <h2 class="h1">{{ $t('works.headline') }}</h2>
     </div>
     <div class="details">
-      <div
-        v-for="(work, index) in $t('work').slice(0, 6)"
-        :key="index"
-        class="item"
-      >
+      <div v-for="work in $t('work').slice(0, 6)" :key="work.slug" class="item">
         <h3>
-          <nuxt-link :to="localePath('/realisations/' + work.slug)">
-            {{ work.title }}
-          </nuxt-link>
+          <nuxt-link :to="localePath('/realisations/' + work.slug)">{{
+            work.title
+          }}</nuxt-link>
         </h3>
         <nuxt-link :to="localePath('/realisations/' + work.slug)">
           <div class="card">
@@ -28,10 +24,9 @@
       </div>
     </div>
     <div class="more">
-      <nuxt-link :to="localePath('realisations')" class="btn">
-        {{ $t('links.more') }}
-        <home-arrow />
-      </nuxt-link>
+      <nuxt-link :to="localePath('realisations')" class="btn"
+        >{{ $t('links.more') }}<home-arrow
+      /></nuxt-link>
     </div>
   </section>
 </template>

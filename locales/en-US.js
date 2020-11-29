@@ -363,8 +363,8 @@ export default {
     other: {
       headline: 'Other ways to contact us',
       body: {
-        'h.nedjar@univerweb.dz': 'Manager',
-        'support@univerweb.dz': 'Technical support'
+        Manager: 'h.nedjar@univerweb.dz',
+        'Technical support': 'support@univerweb.dz'
       }
     }
   },

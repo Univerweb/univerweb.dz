@@ -19,11 +19,9 @@
     </div>
     <div class="container client">
       <div class="details">
-        <div v-for="(name, value) in work.client" :key="value" class="item">
-          <h2 class="h6">
-            {{ value }}
-          </h2>
-          <p class="lead">{{ name }}</p>
+        <div v-for="(value, name) in work.client" :key="name" class="item">
+          <h2 class="h6">{{ name }}</h2>
+          <p class="lead">{{ value }}</p>
         </div>
       </div>
     </div>
@@ -32,9 +30,7 @@
         <div class="item">
           <div class="inner">
             <p class="lead">{{ work.body }}</p>
-            <a :href="work.link" class="link">
-              {{ $t('links.visit') }}
-            </a>
+            <a :href="work.link" class="link">{{ $t('links.visit') }}</a>
           </div>
         </div>
         <div class="item card">
