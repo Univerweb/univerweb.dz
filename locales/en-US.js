@@ -305,16 +305,19 @@ export default {
       'These days anyone can make a website, including your 13 year old nephew! But who can really materialize an accomplished web presence strategy, on technological foundations and a rigorous methodology.',
     webDesign: {
       headline: 'Web design',
+      tags: ['#Responsive', '#StructuredData', '#ValidHTML', '#Accessibility'],
       body:
         'A clever and precise mix of attractive design, respected graphic charter and user experience at the top of the priorities. We will find the perfect balance for you.'
     },
     dev: {
       headline: 'Development',
+      tags: ['#CMS', '#Drupal', '#MobileApp', '#NuxtJS'],
       body:
         'Your business and your business needs are unique. You are unique! We will code the application for you that meets your exact needs, without frills and with agility.'
     },
     support: {
       headline: 'Support + Hosting',
+      tags: ['#HTTPS', '#HTTP/2', '#FullBackup'],
       body:
         'Imagine a dish in a restaurant without a plate and without a waiter. A site without reliable hosting and 24/7 support is exactly the same thing.'
     }
