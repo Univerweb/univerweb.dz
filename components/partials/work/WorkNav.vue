@@ -5,19 +5,15 @@
       :to="localePath('/realisations/' + previus[0].slug)"
       class="link previous"
       :data-text="$t('links.previous')"
+      ><nav-arrow />{{ previus[0].title }}</nuxt-link
     >
-      <nav-arrow />
-      {{ previus[0].title }}
-    </nuxt-link>
     <nuxt-link
       v-if="currentIndex > 0"
       :to="localePath('/realisations/' + next[0].slug)"
       class="link next"
       :data-text="$t('links.next')"
+      ><nav-arrow />{{ next[0].title }}</nuxt-link
     >
-      <nav-arrow />
-      {{ next[0].title }}
-    </nuxt-link>
   </div>
 </template>
 

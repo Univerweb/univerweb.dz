@@ -1,17 +1,13 @@
 <template>
   <div class="container details request">
     <div class="item">
-      <h2 class="h3">
-        {{ $t('request.headline') }}
-      </h2>
-      <nuxt-link :to="localePath('contact')" class="h2">
-        {{ $t('request.link') }}
-      </nuxt-link>
+      <h2 class="h3">{{ $t('request.headline') }}</h2>
+      <nuxt-link :to="localePath('contact')" class="h2">{{
+        $t('request.link')
+      }}</nuxt-link>
     </div>
     <div class="item">
-      <p class="lead">
-        {{ $t('request.body') }}
-      </p>
+      <p class="lead">{{ $t('request.body') }}</p>
     </div>
   </div>
 </template>
