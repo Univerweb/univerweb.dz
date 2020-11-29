@@ -311,12 +311,12 @@ export default {
     dev: {
       headline: 'Development',
       body:
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis est cum recusandae quas dolore, fuga praesentium neque deserunt quod sed culpa quisquam aperiam fugiat necessitatibus veniam! Odit animi architecto non.'
+        'Your business and your business needs are unique. You are unique! We will code the application for you that meets your exact needs, without frills and with agility.'
     },
     support: {
       headline: 'Support + Hosting',
       body:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus vitae nam, nisi veniam cum ad nostrum ab ullam dolores architecto, maxime ex perspiciatis aperiam id est iusto adipisci doloremque amet.'
+        'Imagine a dish in a restaurant without a plate and without a waiter. A site without reliable hosting and 24/7 support is exactly the same thing.'
     }
   },
 
