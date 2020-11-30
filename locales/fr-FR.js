@@ -305,26 +305,26 @@ export default {
       'De nos jours quiconque peut faire un site web, y compris votre neveu de 13 ans ! Mais qui peut réellement concrétiser une stratégie de présence web accomplie, sur des fondements technologiques et une méthodologie rigoureuse.',
     webDesign: {
       headline: 'Web design',
+      body:
+        "Un mélange savant et millimétré entre design attrayant, charte graphique respectée et expérience utilisateur au top des priorités. Nous trouverons pour vous l'équilibre parfait.",
       tags: [
         '#Responsive',
         '#DonnéesStructurées',
         '#HtmlValide',
         '#Accessibilité'
-      ],
-      body:
-        "Un mélange savant et millimétré entre design attrayant, charte graphique respectée et expérience utilisateur au top des priorités. Nous trouverons pour vous l'équilibre parfait."
+      ]
     },
     dev: {
       headline: 'Développement',
-      tags: ['#CMS', '#Drupal', '#ApplicationMobile', '#NuxtJS'],
       body:
-        "Votre entreprise et vos besoins métiers sont uniques. Vous êtes uniques ! Nos coderons pour vous l'application qui répond exactement à vos besoins, sans fioritures et avec agilité."
+        "Votre entreprise et vos besoins métiers sont uniques. Vous êtes uniques ! Nos coderons pour vous l'application qui répond exactement à vos besoins, sans fioritures et avec agilité.",
+      tags: ['#CMS', '#Drupal', '#ApplicationMobile', '#NuxtJS']
     },
     support: {
       headline: 'Support + Hébergement',
-      tags: ['#HTTPS', '#HTTP/2', '#SauvegardeComplète'],
       body:
-        "Imaginez un plat au restaurant sans assiette et sans serveur. Un site sans hébergement fiable et un support présent 24/7 c'est exactement la même chose."
+        "Imaginez un plat au restaurant sans assiette et sans serveur. Un site sans hébergement fiable et un support présent 24/7 c'est exactement la même chose.",
+      tags: ['#HTTPS', '#HTTP/2', '#SauvegardeComplète']
     }
   },
 
