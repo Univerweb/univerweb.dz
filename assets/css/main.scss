@@ -102,6 +102,9 @@ main {
       grid-column: 1 / 10;
       &:not(h1) {
         grid-column: 1 / 8;
+        .prestations .container:nth-child(even) & {
+          grid-column: 7 / 12;
+        }
       }
     }
     @media (min-width: $md) {
@@ -118,63 +121,92 @@ main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   row-gap: 24px;
-  .item {
-    grid-column: 1 / 13;
-  }
-  @media (min-width: $sm) {
-    .item:nth-child(odd) {
-      grid-column: 1 / 6;
-    }
-    .item:nth-child(even) {
-      grid-column: 7 / 12;
-    }
-  }
   .works & {
     row-gap: 48px;
     @media (min-width: $sm) {
       column-gap: 48px;
-      .item:nth-child(odd) {
+    }
+  }
+  .prestations & {
+    align-items: center;
+  }
+}
+
+/* Item */
+.item {
+  grid-column: 1 / 13;
+  .works & {
+    display: grid;
+  }
+  &:nth-child(odd) {
+    @media (min-width: $sm) {
+      grid-column: 1 / 6;
+      .works & {
         grid-column: 1 / 7;
       }
-      .item:nth-child(even) {
-        grid-column: 7 / 13;
+      .prestations .container:nth-child(even) & {
+        grid-column: 7 / 12;
       }
     }
+  }
+  &:nth-child(even) {
+    .prestations & {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      color: $black-light;
+      font-weight: 500;
+    }
+    @media (min-width: $sm) {
+      grid-column: 7 / 12;
+      .works & {
+        grid-column: 7 / 13;
+      }
+      .prestations & {
+        grid-column: 7 / 10;
+      }
+      .prestations .container:nth-child(even) & {
+        grid-column: 3 / 6;
+        order: -1;
+      }
+    }
+  }
+  .works & {
     @media (min-width: $md) {
-      .item:nth-child(3n + 1) {
+      &:nth-child(3n + 1) {
         grid-column: 1 / 5;
       }
-      .item:nth-child(3n + 2) {
+      &:nth-child(3n + 2) {
         grid-column: 5 / 9;
       }
-      .item:nth-child(3n + 3) {
+      &:nth-child(3n + 3) {
         grid-column: 9 / 13;
       }
     }
-    .item {
+    h2,
+    h3 {
+      margin-top: 12px;
+      margin-bottom: 0;
+      order: 1;
+    }
+    > a {
+      position: relative;
       display: grid;
-      h3,
-      .h3 {
-        margin-top: 12px;
-        margin-bottom: 0;
-        order: 1;
-      }
-      > a {
-        position: relative;
+      p {
         display: grid;
-        p {
-          display: grid;
-          align-items: end;
-          background: $blue;
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          padding: 12px;
-          opacity: 0;
-          transition: opacity $transition;
-          &:hover {
-            opacity: 1;
-          }
+        align-items: end;
+        background: $blue;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding: 12px;
+        opacity: 0;
+        transition: opacity $transition;
+        &:hover {
+          opacity: 1;
         }
       }
     }
@@ -248,6 +280,9 @@ p {
   color: $black-light;
   footer & {
     font-weight: 400;
+  }
+  .details & {
+    margin: 0;
   }
 }
 
