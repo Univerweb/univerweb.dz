@@ -5,7 +5,6 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'msapplication-TileColor', content: '#50c8f0' },
       { name: 'theme-color', content: '#50c8f0' },
       { name: 'apple-mobile-web-app-capable"', content: 'yes' },
       { name: 'apple-mobile-web-app-status-bar-style', content: 'default' }
