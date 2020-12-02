@@ -10,18 +10,8 @@ export default {
       { name: 'apple-mobile-web-app-status-bar-style', content: 'default' }
     ],
     link: [
-      {
-        rel: 'icon',
-        type: 'image/png',
-        sizes: '32x32',
-        href: '/favicon-32x32.png'
-      },
-      {
-        rel: 'icon',
-        type: 'image/png',
-        sizes: '16x16',
-        href: '/favicon-16x16.png'
-      }
+      { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+      { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' }
     ],
     __dangerouslyDisableSanitizers: ['script'],
     script: [
@@ -69,11 +59,7 @@ export default {
   styleResources: {
     scss: ['@/assets/css/var.scss', '@/assets/css/mixin.scss']
   },
-  css: [
-    '@/assets/css/font.scss',
-    '@/assets/css/keyframes.scss',
-    '@/assets/css/main.scss'
-  ],
+  css: ['@/assets/css/font.scss', '@/assets/css/keyframes.scss', '@/assets/css/main.scss'],
   buildModules: [
     '@nuxtjs/eslint-module',
     '@nuxtjs/stylelint-module',

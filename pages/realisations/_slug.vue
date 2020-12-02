@@ -4,17 +4,9 @@
       <work-back />
       <h1>{{ work.title }}</h1>
     </div>
-    <div
-      v-lazy:background-image="
-        '/works/' + work.slug + '/' + work.slug + '_bg.jpg'
-      "
-      class="banner card"
-    >
+    <div v-lazy:background-image="'/works/' + work.slug + '/' + work.slug + '_bg.jpg'" class="banner card">
       <span>
-        <img
-          v-lazy="'/works/' + work.slug + '/' + work.slug + '_bg.jpg'"
-          :alt="work.title"
-        />
+        <img v-lazy="'/works/' + work.slug + '/' + work.slug + '_bg.jpg'" :alt="work.title" />
       </span>
     </div>
     <div class="container client">
@@ -34,10 +26,7 @@
           </div>
         </div>
         <div class="item card">
-          <img
-            v-lazy="'/works/' + work.slug + '/' + work.slug + '_page.jpg'"
-            :alt="work.title"
-          />
+          <img v-lazy="'/works/' + work.slug + '/' + work.slug + '_page.jpg'" :alt="work.title" />
         </div>
       </div>
     </div>
@@ -49,9 +38,7 @@
 <script>
 export default {
   validate({ params, store }) {
-    return store.state.i18n.messages.work.some(
-      item => item.slug === params.slug
-    )
+    return store.state.i18n.messages.work.some(item => item.slug === params.slug)
   },
 
   data() {

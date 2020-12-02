@@ -2,20 +2,11 @@
   <footer>
     <div class="address-container">
       <address class="address" title="Adresse postale">
-        <strong>{{ $t('footer.address.name') }} </strong><br />{{
-          $t('footer.address.streetAddress')
-        }}<br />{{ $t('footer.address.addressLocality') }}
-        {{ $t('footer.address.postalCode')
-        }}<span v-if="$i18n.locale === 'ar'">، </span><span v-else>, </span
-        >{{ $t('footer.address.addressCity') }}
+        <strong>{{ $t('footer.address.name') }} </strong><br />{{ $t('footer.address.streetAddress') }}<br />{{ $t('footer.address.addressLocality') }}
+        {{ $t('footer.address.postalCode') }}<span v-if="$i18n.locale === 'ar'">، </span><span v-else>, </span>{{ $t('footer.address.addressCity') }}
       </address>
       <p>
-        <a
-          href="https://goo.gl/maps/MmadgQgZRBv"
-          target="_blank"
-          rel="noopener"
-          >{{ $t('footer.maps') }}</a
-        >
+        <a href="https://goo.gl/maps/MmadgQgZRBv" target="_blank" rel="noopener">{{ $t('footer.maps') }}</a>
       </p>
       <p>
         <a href="tel:+21321440811">
@@ -34,9 +25,7 @@
       <ul class="social">
         <li v-for="(value, name) in socials" :key="name">
           <a :href="value">
-            <span class="visually-hidden">{{
-              $t('footer.social.' + name)
-            }}</span>
+            <span class="visually-hidden">{{ $t('footer.social.' + name) }}</span>
             <component :is="name + '-icon'"
           /></a>
         </li>

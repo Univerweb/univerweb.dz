@@ -1,10 +1,10 @@
 # UWS4
 
-> The Univerweb&#39;s new website.
+> The Univerweb website.
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ npm install
 

@@ -9,11 +9,7 @@
         <h2 class="h1">{{ $t('agency.method.headline') }}</h2>
       </div>
       <ol class="details">
-        <li
-          v-for="(value, name) in $t('agency.method.body')"
-          :key="name"
-          class="item"
-        >
+        <li v-for="(value, name) in $t('agency.method.body')" :key="name" class="item">
           <h3>{{ name }}</h3>
           <p class="lead">{{ value }}</p>
         </li>
@@ -24,11 +20,7 @@
         <h2 class="h1">{{ $t('agency.choose.headline') }}</h2>
       </div>
       <div class="details">
-        <div
-          v-for="(value, name) in $t('agency.choose.body')"
-          :key="name"
-          class="item"
-        >
+        <div v-for="(value, name) in $t('agency.choose.body')" :key="name" class="item">
           <h3>{{ name }}</h3>
           <p class="lead">{{ value }}</p>
         </div>

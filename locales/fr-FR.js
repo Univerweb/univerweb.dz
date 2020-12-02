@@ -29,8 +29,7 @@ export default {
   },
 
   works: {
-    description:
-      'Découvrez nos toutes dernières créations, nous serions ravis de collaborer avec vous.',
+    description: 'Découvrez nos toutes dernières créations, nous serions ravis de collaborer avec vous.',
     headline: 'Ils ont cru en nous et ils sont comblés.'
   },
 
@@ -44,8 +43,7 @@ export default {
         Fonctionnalités: 'Web Design, Développement, Hébergement',
         Secteur: 'Promotion immobilière'
       },
-      body:
-        'Installée à Alger, Acodim est entreprise spécialisée dans la promotion immobilière.',
+      body: 'Installée à Alger, Acodim est entreprise spécialisée dans la promotion immobilière.',
       link: 'https://www.acodim.dz'
     },
     {
@@ -70,8 +68,7 @@ export default {
         Fonctionnalités: 'Web Design, Développement, Hébergement',
         Secteur: 'Promotion immobilière'
       },
-      body:
-        'Créée en 2016 et installée à Skikda, TPBL est une entreprise spécialisée dans la promotion immobilière.',
+      body: 'Créée en 2016 et installée à Skikda, TPBL est une entreprise spécialisée dans la promotion immobilière.',
       link: 'https://www.tpbl.dz'
     },
     {
@@ -83,8 +80,7 @@ export default {
         Fonctionnalités: 'Web Design, Développement, Hébergement',
         Secteur: 'Botanique'
       },
-      body:
-        'Botanique Algérie est un réseau national dédié à la connaissance, au partage et à la promotion de la botanique en Algérie.',
+      body: 'Botanique Algérie est un réseau national dédié à la connaissance, au partage et à la promotion de la botanique en Algérie.',
       link: 'https://www.botaniquealgerie.dz'
     },
     {
@@ -109,8 +105,7 @@ export default {
         Fonctionnalités: 'Web Design, Hébergement',
         Secteur: 'Conseil'
       },
-      body:
-        "We Service est une société de service et de consulting qui offre une solution globale d'expertise de laboratoires de recherche.",
+      body: "We Service est une société de service et de consulting qui offre une solution globale d'expertise de laboratoires de recherche.",
       link: 'https://www.weservice.dz'
     },
     {
@@ -122,8 +117,7 @@ export default {
         Fonctionnalités: 'Web Design, Développement, Hébergement',
         Secteur: 'Actualité'
       },
-      body:
-        'infoElec est le premier magazine algérien dédié à la filière électrique et énergétique.',
+      body: 'infoElec est le premier magazine algérien dédié à la filière électrique et énergétique.',
       link: 'https://www.infoelec.dz'
     },
     {
@@ -187,8 +181,7 @@ export default {
         Fonctionnalités: 'Web Design, Développement, Hébergement',
         Secteur: 'Promotion immobilière'
       },
-      body:
-        'Epiza est une équipe de professionnels rassemblée pour la réalisation de projets immobiliers.',
+      body: 'Epiza est une équipe de professionnels rassemblée pour la réalisation de projets immobiliers.',
       link: 'https://www.epizaskikda.com'
     },
     {
@@ -213,8 +206,7 @@ export default {
         Fonctionnalités: 'Web Design, Développement',
         Secteur: 'Travaux publics'
       },
-      body:
-        "Intermat est une entreprise spécialisée dans la vente d'engins et de matériels pour le bâtiment et travaux publics.",
+      body: "Intermat est une entreprise spécialisée dans la vente d'engins et de matériels pour le bâtiment et travaux publics.",
       link: 'https://www.intermatalgeria.com'
     },
     {
@@ -252,8 +244,7 @@ export default {
         Fonctionnalités: 'Web Design, Hébergement',
         Secteur: 'Télécommunications'
       },
-      body:
-        'Spheretec est une jeune entreprise algérienne spécialisée dans le secteur des transmissions de données.',
+      body: 'Spheretec est une jeune entreprise algérienne spécialisée dans le secteur des transmissions de données.',
       link: 'https://www.spheretec.dz'
     },
     {
@@ -265,8 +256,7 @@ export default {
         Fonctionnalités: 'Web Design, Hébergement',
         Secteur: 'Santé'
       },
-      body:
-        "La clinique d'Hémodialyse Sonya est une clinique privée spécialisée dans le traitement de l'insuffisance rénale chronique terminale.",
+      body: "La clinique d'Hémodialyse Sonya est une clinique privée spécialisée dans le traitement de l'insuffisance rénale chronique terminale.",
       link: 'https://www.cliniquesonya.dz'
     },
     {
@@ -298,8 +288,7 @@ export default {
   ],
 
   prestations: {
-    description:
-      'Une stratégie de présence web accomplie, sur des fondements technologiques et une méthodologie rigoureuse.',
+    description: 'Une stratégie de présence web accomplie, sur des fondements technologiques et une méthodologie rigoureuse.',
     headline: 'Ce dont nous sommes capables.',
     body:
       'De nos jours quiconque peut faire un site web, y compris votre neveu de 13 ans ! Mais qui peut réellement concrétiser une stratégie de présence web accomplie, sur des fondements technologiques et une méthodologie rigoureuse.',
@@ -307,12 +296,7 @@ export default {
       headline: 'Web design',
       body:
         "Un mélange savant et millimétré entre design attrayant, charte graphique respectée et expérience utilisateur au top des priorités. Nous trouverons pour vous l'équilibre parfait.",
-      tags: [
-        '#Responsive',
-        '#DonnéesStructurées',
-        '#HtmlValide',
-        '#Accessibilité'
-      ]
+      tags: ['#Responsive', '#DonnéesStructurées', '#HtmlValide', '#Accessibilité']
     },
     dev: {
       headline: 'Développement',
@@ -340,8 +324,7 @@ export default {
           'Afin de mieux vous connaitre, nous essaierons de comprendre des éléments essentiels tels que votre activité, votre philosophie, vos objectifs et vos contraintes.',
         Recherche:
           'Après avoir mieux fait connaissance et cerner votre projet, nous trouverons des solutions adaptées à vos besoins tout en respectant votre image de marque.',
-        Création:
-          'En vous consultant et informant étape par étape, votre projet commence à avoir un visage, le votre tout simplement.',
+        Création: 'En vous consultant et informant étape par étape, votre projet commence à avoir un visage, le votre tout simplement.',
         Suivi:
           "Après la publication du site web, nous vous accompagnerons dans la maintenance et mise à jour du site, dans la formation et le référencement et dans l'analyse du trafic."
       }
@@ -353,19 +336,15 @@ export default {
           'Du choix de votre nom de domaine à la configuration de votre messagerie professionnelle, en passant par la création, l’hébergement et le référencement de votre site web, nous vous offrirons un service complet.',
         'À la pointe de la technique':
           'Nous utilisons les dernières techniques et langages du web (HTML5, CSS3 et JavaScript), afin de vous offrir le meilleur service possible.',
-        'Un projet qui vous ressemble':
-          'Nous concevons des sites web qui vous ressemblent et qui sont adaptés à votre budget.',
-        'Un design innovant':
-          'Nous concevons un design sur mesure afin de refléter au mieux l’identité de votre entreprise.'
+        'Un projet qui vous ressemble': 'Nous concevons des sites web qui vous ressemblent et qui sont adaptés à votre budget.',
+        'Un design innovant': 'Nous concevons un design sur mesure afin de refléter au mieux l’identité de votre entreprise.'
       }
     }
   },
 
   contact: {
-    description:
-      'Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.',
-    body:
-      "Créer des sites web professionnels, c'est ce que nous faisons. Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
+    description: 'Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.',
+    body: "Créer des sites web professionnels, c'est ce que nous faisons. Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
     other: {
       headline: 'Autres moyens de nous contacter',
       body: {

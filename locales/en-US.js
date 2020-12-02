@@ -24,13 +24,11 @@ export default {
   home: {
     description: 'Content to come…',
     headline: 'We design professional websites.',
-    body:
-      'We design websites that precisely meet your expectations and that fully respect your brand image.'
+    body: 'We design websites that precisely meet your expectations and that fully respect your brand image.'
   },
 
   works: {
-    description:
-      "Discover our latest creations, we'd love to collaborate with you.",
+    description: "Discover our latest creations, we'd love to collaborate with you.",
     headline: 'They believed in us and they are fulfilled.'
   },
 
@@ -44,8 +42,7 @@ export default {
         Features: 'Web Design, Development, Hosting',
         Industry: 'Real estate promotion'
       },
-      body:
-        'Based in Algiers, Acodim is a company specializing in real estate promotion.',
+      body: 'Based in Algiers, Acodim is a company specializing in real estate promotion.',
       link: 'https://www.acodim.dz'
     },
     {
@@ -70,8 +67,7 @@ export default {
         Features: 'Web Design, Development, Hosting',
         Industry: 'Real estate promotion'
       },
-      body:
-        'Founded in 2016 and based in Skikda, TPBL is a company specializing in real estate promotion.',
+      body: 'Founded in 2016 and based in Skikda, TPBL is a company specializing in real estate promotion.',
       link: 'https://www.tpbl.dz'
     },
     {
@@ -83,8 +79,7 @@ export default {
         Features: 'Web Design, Development, Hosting',
         Industry: 'Botanical'
       },
-      body:
-        'Botanique Algérie is a national network dedicated to knowledge, sharing and promotion of botany in Algeria.',
+      body: 'Botanique Algérie is a national network dedicated to knowledge, sharing and promotion of botany in Algeria.',
       link: 'https://www.botaniquealgerie.dz'
     },
     {
@@ -109,8 +104,7 @@ export default {
         Features: 'Web Design, Hosting',
         Industry: 'Consulting'
       },
-      body:
-        'We Service is a service and consulting company that offers a global solution for research laboratory expertise.',
+      body: 'We Service is a service and consulting company that offers a global solution for research laboratory expertise.',
       link: 'https://www.weservice.dz'
     },
     {
@@ -122,8 +116,7 @@ export default {
         Features: 'Web Design, Development, Hosting',
         Industry: 'News'
       },
-      body:
-        'infoElec is the first Algerian magazine dedicated to the electrical and energy sector.',
+      body: 'infoElec is the first Algerian magazine dedicated to the electrical and energy sector.',
       link: 'https://www.infoelec.dz'
     },
     {
@@ -187,8 +180,7 @@ export default {
         Features: 'Web Design, Development, Hosting',
         Industry: 'Real estate promotion'
       },
-      body:
-        'Epiza is a team of professionals assembled for the realization of real estate projects.',
+      body: 'Epiza is a team of professionals assembled for the realization of real estate projects.',
       link: 'https://www.epizaskikda.com'
     },
     {
@@ -213,8 +205,7 @@ export default {
         Features: 'Web Design, Development',
         Industry: 'Public works'
       },
-      body:
-        'Intermat is a company specializing in the sale of construction and public works machinery and equipment.',
+      body: 'Intermat is a company specializing in the sale of construction and public works machinery and equipment.',
       link: 'https://www.intermatalgeria.com'
     },
     {
@@ -252,8 +243,7 @@ export default {
         Features: 'Web Design, Hosting',
         Industry: 'Telecommunications'
       },
-      body:
-        'Spheretech is an Algerian company specializing in the data transmission sector.',
+      body: 'Spheretech is an Algerian company specializing in the data transmission sector.',
       link: 'https://www.spheretec.dz'
     },
     {
@@ -265,8 +255,7 @@ export default {
         Features: 'Web Design, Hosting',
         Industry: 'Health'
       },
-      body:
-        'Sonya Hemodialysis Clinic is a private clinic specializing in the treatment of chronic end-stage renal disease.',
+      body: 'Sonya Hemodialysis Clinic is a private clinic specializing in the treatment of chronic end-stage renal disease.',
       link: 'https://www.cliniquesonya.dz'
     },
     {
@@ -298,8 +287,7 @@ export default {
   ],
 
   prestations: {
-    description:
-      'An accomplished web presence strategy, on technological foundations and a rigorous methodology.',
+    description: 'An accomplished web presence strategy, on technological foundations and a rigorous methodology.',
     headline: 'What we are capable of.',
     body:
       'These days anyone can make a website, including your 13 year old nephew! But who can really materialize an accomplished web presence strategy, on technological foundations and a rigorous methodology.',
@@ -317,8 +305,7 @@ export default {
     },
     support: {
       headline: 'Support + Hosting',
-      body:
-        'Imagine a dish in a restaurant without a plate and without a waiter. A site without reliable hosting and 24/7 support is exactly the same thing.',
+      body: 'Imagine a dish in a restaurant without a plate and without a waiter. A site without reliable hosting and 24/7 support is exactly the same thing.',
       tags: ['#HTTPS', '#HTTP/2', '#FullBackup']
     }
   },
@@ -335,8 +322,7 @@ export default {
           'In order to know you better, we will try to understand essential elements such as your activity, your philosophy, your objectives and your constraints.',
         Research:
           'After getting to know each other better and understanding your project, we will find solutions adapted to your needs while respecting your brand image.',
-        Creation:
-          'By consulting and informing you step by step, your project begins to have a face, yours simply.',
+        Creation: 'By consulting and informing you step by step, your project begins to have a face, yours simply.',
         Monitoring:
           'After the publication of the website, we will accompany you in the maintenance and updating of the site, in training and referencing and in traffic analysis.'
       }
@@ -348,18 +334,15 @@ export default {
           'From the choice of your domain name to the configuration of your professional messaging, including the creation, hosting and referencing of your website, we will offer you a complete service.',
         'At the cutting edge of technology':
           'We use the latest techniques and languages of the web (HTML5, CSS3 and JavaScript), in order to offer you the best possible service.',
-        'A project that looks like you':
-          'We design websites that look like you and are tailored to your budget.',
-        'Innovative design':
-          'We create a custom design to best reflect the identity of your business.'
+        'A project that looks like you': 'We design websites that look like you and are tailored to your budget.',
+        'Innovative design': 'We create a custom design to best reflect the identity of your business.'
       }
     }
   },
 
   contact: {
     description: "Tell us about your needs, we'd love to collaborate with you.",
-    body:
-      "Creating professional websites is what we do. Tell us about your needs, we'd love to collaborate with you.",
+    body: "Creating professional websites is what we do. Tell us about your needs, we'd love to collaborate with you.",
     other: {
       headline: 'Other ways to contact us',
       body: {

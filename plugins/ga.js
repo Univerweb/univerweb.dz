@@ -13,13 +13,7 @@ export default ({ app }) => {
     a.async = 1
     a.src = g
     m.parentNode.insertBefore(a, m)
-  })(
-    window,
-    document,
-    'script',
-    'https://www.google-analytics.com/analytics.js',
-    'ga'
-  )
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga')
   ga('create', 'UA-23258915-1', 'auto')
   app.router.afterEach((to, from) => {
     ga('set', 'page', to.fullPath)
