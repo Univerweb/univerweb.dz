@@ -372,7 +372,6 @@ export default {
   error: {
     404: 'Page not found',
     500: 'An error has occurred',
-    description: 'no luck.',
     btn: 'Back to Home'
   },
 

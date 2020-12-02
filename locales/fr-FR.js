@@ -378,7 +378,6 @@ export default {
   error: {
     404: 'Page non trouvée',
     500: "Une erreur s'est produite",
-    description: 'pas de bol.',
     btn: "Retour à l'accueil"
   },
 

@@ -118,6 +118,6 @@ export default {
     }
   },
   loading: { color: '#50c8f0' },
-  generate: { fallback: '404.html' },
+  generate: { fallback: 'not_found.html' },
   router: { trailingSlash: true }
 }

@@ -22,42 +22,9 @@ export default {
     if (this.error.statusCode === 404) {
       TITLE = this.$t('error.404')
     }
-    const DESC = TITLE + ', ' + this.$t('error.description')
     return {
       titleTemplate: TITLE + ` — ${this.$t('name')}`,
-      meta: [
-        {
-          name: 'robots',
-          content: 'noindex, follow'
-        },
-        {
-          hid: 'description',
-          name: 'description',
-          content: DESC
-        },
-        {
-          hid: 'og:title',
-          property: 'og:title',
-          content: TITLE
-        },
-        {
-          hid: 'og:description',
-          name: 'og:description',
-          content: DESC
-        },
-        {
-          hid: 'og:url',
-          property: 'og:url',
-          content: null
-        }
-      ],
-      link: [
-        {
-          hid: 'canonical',
-          rel: 'canonical',
-          content: null
-        }
-      ]
+      meta: [{ name: 'robots', content: 'noindex, follow' }]
     }
   }
 }
