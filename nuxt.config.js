@@ -11,11 +11,6 @@ export default {
     ],
     link: [
       {
-        rel: 'apple-touch-icon',
-        sizes: '180x180',
-        href: '/apple-touch-icon.png'
-      },
-      {
         rel: 'icon',
         type: 'image/png',
         sizes: '32x32',
@@ -26,11 +21,6 @@ export default {
         type: 'image/png',
         sizes: '16x16',
         href: '/favicon-16x16.png'
-      },
-      {
-        rel: 'mask-icon',
-        href: '/safari-pinned-tab.svg',
-        color: '#50c8f0'
       }
     ],
     __dangerouslyDisableSanitizers: ['script'],
@@ -44,9 +34,9 @@ export default {
           url: process.env.BASE_URL,
           logo: {
             '@type': 'ImageObject',
-            url: process.env.BASE_URL + '/logo.png',
-            width: '1024px',
-            height: '1024px'
+            url: process.env.BASE_URL + '/logo.svg',
+            width: '512px',
+            height: '512px'
           },
           email: 'contact@univerweb.dz',
           telephone: '+213 551 90 46 22',
@@ -111,7 +101,6 @@ export default {
     BASE_URL: process.env.BASE_URL || false,
     API_KEY: process.env.API_KEY || false
   },
-
   pwa: {
     manifest: {
       name: 'Univerweb',
@@ -128,7 +117,6 @@ export default {
       lang: 'fr'
     }
   },
-
   loading: { color: '#50c8f0' },
   generate: { fallback: '404.html' },
   router: { trailingSlash: true }
