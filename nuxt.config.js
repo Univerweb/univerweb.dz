@@ -57,9 +57,9 @@ export default {
     ]
   },
   styleResources: {
-    scss: ['@/assets/css/var.scss', '@/assets/css/mixin.scss']
+    scss: ['@/assets/scss/var.scss', '@/assets/scss/mixin.scss']
   },
-  css: ['@/assets/css/font.scss', '@/assets/css/keyframes.scss', '@/assets/css/main.scss'],
+  css: ['@/assets/scss/font.scss', '@/assets/scss/keyframes.scss', '@/assets/scss/main.scss'],
   buildModules: [
     '@nuxtjs/eslint-module',
     '@nuxtjs/stylelint-module',
