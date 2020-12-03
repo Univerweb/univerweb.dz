@@ -99,7 +99,6 @@ main {
   * {
     grid-column: 1 / 13;
     @media (min-width: $sm) {
-      grid-column: 1 / 10;
       &:not(h1) {
         .prestations .container:nth-child(even) & {
           grid-column: 7 / 12;
@@ -107,6 +106,9 @@ main {
       }
     }
     @media (min-width: $md) {
+      grid-column: 1 / 10;
+    }
+    @media (min-width: $lg) {
       grid-column: 1 / 8;
     }
   }
