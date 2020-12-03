@@ -25,7 +25,6 @@
 export default {
   head() {
     return {
-      bodyAttrs: { class: 'contact' },
       titleTemplate: `${this.$t('menu.contact')} — ${this.$t('name')}`,
       meta: [
         {

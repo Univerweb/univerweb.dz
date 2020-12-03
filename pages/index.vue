@@ -10,7 +10,6 @@
 export default {
   head() {
     return {
-      bodyAttrs: { class: 'home' },
       titleTemplate: `${this.$t('name')} — ${this.$t('links.home')}`,
       meta: [
         {

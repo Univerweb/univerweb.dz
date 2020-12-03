@@ -131,9 +131,6 @@ main {
 /* Item */
 .item {
   grid-column: 1 / 13;
-  .works & {
-    display: grid;
-  }
   &:nth-child(odd) {
     @media (min-width: $sm) {
       grid-column: 1 / 6;
@@ -171,6 +168,7 @@ main {
     }
   }
   .works & {
+    display: grid;
     @media (min-width: $md) {
       &:nth-child(3n + 1) {
         grid-column: 1 / 5;
