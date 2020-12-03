@@ -91,9 +91,9 @@ header {
   }
   @media (min-width: $md) {
     grid-template-columns: auto 1fr;
-    padding: 48px;
+    padding: 36px;
     .scrolled & {
-      padding: 12px 48px;
+      padding: 12px 36px;
     }
   }
 }

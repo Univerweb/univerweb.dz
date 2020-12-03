@@ -37,7 +37,7 @@ main {
   margin-top: 72px;
   transition: margin-top $transition;
   @media (min-width: $md) {
-    margin-top: 144px;
+    margin-top: 120px;
     .scrolled & {
       margin-top: 72px;
     }
@@ -59,10 +59,10 @@ main {
     padding: 96px 48px;
   }
   @media (min-width: $md) {
-    padding: 144px calc(50% - 934px / 2);
+    padding: 144px calc(50% - 928px / 2);
   }
   @media (min-width: $lg) {
-    padding: 144px calc(50% - 980px / 2);
+    padding: 144px calc(50% - 1200px / 2);
   }
 }
 
@@ -101,17 +101,13 @@ main {
     @media (min-width: $sm) {
       grid-column: 1 / 10;
       &:not(h1) {
-        grid-column: 1 / 8;
         .prestations .container:nth-child(even) & {
           grid-column: 7 / 12;
         }
       }
     }
     @media (min-width: $md) {
-      grid-column: 1 / 9;
-      &:not(h1) {
-        grid-column: 1 / 7;
-      }
+      grid-column: 1 / 8;
     }
   }
 }
