@@ -4,7 +4,7 @@
       <h1>{{ $t('prestations.headline') }}</h1>
       <p class="lead">{{ $t('prestations.body') }}</p>
     </div>
-    <div class="container">
+    <div class="container prestations">
       <div class="intro">
         <h2>{{ $t('prestations.webDesign.headline') }}</h2>
       </div>
@@ -17,7 +17,7 @@
         </ul>
       </div>
     </div>
-    <div class="container">
+    <div class="container prestations">
       <div class="intro">
         <h2>{{ $t('prestations.dev.headline') }}</h2>
       </div>
@@ -30,7 +30,7 @@
         </ul>
       </div>
     </div>
-    <div class="container">
+    <div class="container prestations">
       <div class="intro">
         <h2>{{ $t('prestations.support.headline') }}</h2>
       </div>
@@ -50,7 +50,6 @@
 export default {
   head() {
     return {
-      bodyAttrs: { class: 'prestations' },
       titleTemplate: `${this.$t('menu.prestations')} — ${this.$t('name')}`,
       meta: [
         {

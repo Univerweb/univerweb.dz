@@ -99,10 +99,8 @@ main {
   * {
     grid-column: 1 / 13;
     @media (min-width: $sm) {
-      &:not(h1) {
-        .prestations .container:nth-child(even) & {
-          grid-column: 7 / 12;
-        }
+      .prestations:nth-child(even) & {
+        grid-column: 7 / 12;
       }
     }
     @media (min-width: $md) {
@@ -142,7 +140,7 @@ main {
       .works & {
         grid-column: 1 / 7;
       }
-      .prestations .container:nth-child(even) & {
+      .prestations:nth-child(even) & {
         grid-column: 7 / 12;
       }
     }
@@ -166,7 +164,7 @@ main {
       .prestations & {
         grid-column: 7 / 10;
       }
-      .prestations .container:nth-child(even) & {
+      .prestations:nth-child(even) & {
         grid-column: 3 / 6;
         order: -1;
       }

@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div class="container">
+    <div class="container works">
       <div class="intro">
         <h1>{{ $t('works.headline') }}</h1>
       </div>
@@ -25,7 +25,6 @@
 export default {
   head() {
     return {
-      bodyAttrs: { class: 'works' },
       titleTemplate: `${this.$t('menu.realisations')} — ${this.$t('name')}`,
       meta: [
         {
