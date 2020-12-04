@@ -275,7 +275,7 @@ p {
   footer & {
     font-weight: 400;
   }
-  .details & {
+  &.item {
     margin: 0;
   }
 }
