@@ -73,9 +73,9 @@ export default {
   plugins: ['~plugins/vue-lazyload', { src: '~plugins/ga.js', mode: 'client' }],
   i18n: {
     locales: [
-      { code: 'fr', file: 'fr-FR.js' },
-      { code: 'en', file: 'en-US.js' },
-      { code: 'ar', file: 'ar-DZ.js' }
+      { code: 'fr', name: 'Français', file: 'fr-FR.js' },
+      { code: 'en', name: 'English', file: 'en-US.js' },
+      { code: 'ar', name: 'العربية', file: 'ar-DZ.js' }
     ],
     defaultLocale: 'fr',
     lazy: true,

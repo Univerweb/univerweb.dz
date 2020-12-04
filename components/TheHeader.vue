@@ -14,9 +14,7 @@
       <div class="lang">
         <lang-globe />
         <select v-model="lang" :aria-label="$t('ariaLabel.lang')" @change="onChange(lang)">
-          <option v-for="locale in $i18n.locales" :key="locale.code" :value="locale.code">
-            {{ locale.code }}
-          </option>
+          <option v-for="locale in $i18n.locales" :key="locale.code" :value="locale.code">{{ locale.name }}</option>
         </select>
         <lang-arrow />
       </div>
@@ -222,9 +220,11 @@ header {
     height: 48px;
     border: 0;
     font-family: $font;
+    [lang='ar'] & {
+      font-family: $font-arabe;
+    }
     font-weight: 500;
     font-size: initial;
-    text-transform: uppercase;
     cursor: pointer;
     outline: 0;
     z-index: 2;
