@@ -68,6 +68,9 @@ ol {
     color: $blue;
     @include size(56);
     font-weight: 800;
+    [lang='ar'] & {
+      font-family: $font;
+    }
   }
 }
 </style>
