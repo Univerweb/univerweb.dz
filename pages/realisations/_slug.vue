@@ -86,69 +86,64 @@ export default {
 </script>
 
 <style lang="scss">
-.work h1 {
-  margin-bottom: 0;
-}
-
-.work .banner {
-  position: relative;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  span {
-    padding: 80% 0 0;
+.work {
+  h1 {
+    margin-bottom: 0;
+  }
+  .banner {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    span {
+      padding: 80% 0 0;
+      @media (min-width: $sm) {
+        padding: 60% 0 0;
+      }
+      @media (min-width: $md) {
+        padding: 50% 0 0;
+      }
+      img {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .client {
     @media (min-width: $sm) {
-      padding: 60% 0 0;
-    }
-    @media (min-width: $md) {
-      padding: 50% 0 0;
-    }
-    img {
-      opacity: 0;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      .item:nth-child(1) {
+        grid-column: 1 / 4;
+      }
+      .item:nth-child(2) {
+        grid-column: 5 / 8;
+      }
+      .item:nth-child(3) {
+        grid-column: 9 / 12;
+      }
     }
   }
-}
-
-.work .client {
-  @media (min-width: $sm) {
-    .item:nth-child(1) {
-      grid-column: 1 / 4;
+  .project {
+    padding-top: 0;
+    @media (min-width: $sm) {
+      .item:nth-child(1) {
+        grid-column: 1 / 4;
+      }
+      .item:nth-child(2) {
+        grid-column: 5 / 13;
+      }
+      .inner {
+        position: sticky;
+        top: 120px;
+      }
     }
-    .item:nth-child(2) {
-      grid-column: 5 / 8;
-    }
-    .item:nth-child(3) {
-      grid-column: 9 / 12;
-    }
-  }
-}
-
-.work .project {
-  padding-top: 0;
-  @media (min-width: $sm) {
-    .item:nth-child(1) {
-      grid-column: 1 / 4;
-    }
-    .item:nth-child(2) {
-      grid-column: 5 / 13;
-    }
-    .inner {
-      position: sticky;
-      top: 120px;
+    .card img {
+      border-radius: 0.25rem;
+      box-shadow: 0 0 40px 0 rgba(17, 17, 17, 0.1);
     }
   }
-  .card img {
-    border-radius: 0.25rem;
-    box-shadow: 0 0 40px 0 rgba(17, 17, 17, 0.1);
-  }
-}
-
-[lang='ar'] .work .link {
-  font-family: $font-arabe;
 }
 </style>
