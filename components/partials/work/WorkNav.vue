@@ -53,7 +53,7 @@ export default {
     color: $dark-blue;
     padding: 0 12px 0 18px;
     [lang='ar'] & {
-      font-family: $font-arabe;
+      font-family: $font-arabic;
       padding: 0 18px 0 12px;
     }
     &:hover {

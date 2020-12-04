@@ -25,7 +25,7 @@ body {
   color: $black;
   font-family: $font;
   [lang='ar'] & {
-    font-family: $font-arabe;
+    font-family: $font-arabic;
   }
   font-size: 1rem;
   font-weight: 400;
@@ -299,7 +299,7 @@ a {
     color: $blue;
   }
   [lang='ar'] .work & {
-    font-family: $font-arabe;
+    font-family: $font-arabic;
   }
 }
 

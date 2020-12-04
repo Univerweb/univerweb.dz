@@ -221,7 +221,7 @@ header {
     border: 0;
     font-family: $font;
     [lang='ar'] & {
-      font-family: $font-arabe;
+      font-family: $font-arabic;
     }
     font-weight: 500;
     font-size: initial;

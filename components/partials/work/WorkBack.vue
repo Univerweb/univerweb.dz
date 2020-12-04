@@ -21,7 +21,7 @@ export default {
   text-transform: uppercase;
   margin-bottom: 12px;
   [lang='ar'] & {
-    font-family: $font-arabe;
+    font-family: $font-arabic;
   }
   &:hover {
     color: $blue;
