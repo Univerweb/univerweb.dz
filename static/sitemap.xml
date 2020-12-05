@@ -804,7 +804,7 @@
       <image:caption>أو تي أس عور — أحدث إبداعاتنا</image:caption>
     </image:image>
   </url>
-  <url>
+  <!-- <url>
     <loc>https://univerweb.dz/realisations/acodim/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -840,4 +840,40 @@
       <image:caption>أكوديم — أحدث إبداعاتنا</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://univerweb.dz/realisations/sourca-algerie/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/sourca-algerie/" />
+		<link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/sourca-algerie/" />
+		<link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/sourca-algerie/" />
+    <image:image>
+      <image:loc>https://univerweb.dz/works/sourca-algerie/sourca-algerie_bg.jpg</image:loc>
+      <image:caption>Sourca Algérie — Nos dernières créations</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://univerweb.dz/en/realisations/sourca-algerie/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/sourca-algerie/" />
+		<link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/sourca-algerie/" />
+		<link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/sourca-algerie/" />
+    <image:image>
+      <image:loc>https://univerweb.dz/works/sourca-algerie/sourca-algerie_bg.jpg</image:loc>
+      <image:caption>Sourca Algérie — Our latest creations</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://univerweb.dz/ar/realisations/sourca-algerie/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/sourca-algerie/" />
+		<link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/sourca-algerie/" />
+		<link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/sourca-algerie/" />
+    <image:image>
+      <image:loc>https://univerweb.dz/works/sourca-algerie/sourca-algerie_bg.jpg</image:loc>
+      <image:caption>سوركا الجزائر — أحدث إبداعاتنا</image:caption>
+    </image:image>
+  </url> -->
 </urlset>

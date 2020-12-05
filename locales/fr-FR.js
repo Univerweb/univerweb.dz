@@ -22,34 +22,48 @@ export default {
   },
 
   home: {
-    description: 'Contenu à venir…',
-    headline: 'Nous concevons des sites web professionnels.',
+    description:
+      "Plus que des sites web, nous concevons et innovons pour vous des expériences numériques centrées sur l'humain et qui reflètent votre image de marque.",
+    headline: 'Nous créons des sites web tellement mémorables.',
     body:
-      'Nous créons et nous innovons pour vous, notre mission première est de vous satisfaire ! Plus qu’une prestation, c’est une véritable expérience numérique qu’on vous offre.'
+      "Encore plus que des sites web, nous concevons et innovons pour vous des expériences numériques centrées sur l'humain et qui reflètent votre image de marque, notre mission première est de vous satisfaire !"
   },
 
   works: {
-    description: 'Découvrez nos toutes dernières créations, nous serions ravis de collaborer avec vous.',
+    description: 'Découvrez nos toutes dernières créations. Nous serions ravis de collaborer avec vous.',
     headline: 'Ils ont cru en nous et ils sont comblés.'
   },
 
   work: [
-    {
-      slug: 'acodim',
-      title: 'Acodim',
-      description: 'Contenu à venir…',
-      client: {
-        Client: 'Acodim',
-        Fonctionnalités: 'Web Design, Développement, Hébergement',
-        Secteur: 'Promotion immobilière'
-      },
-      body: 'Installée à Alger, Acodim est entreprise spécialisée dans la promotion immobilière.',
-      link: 'https://www.acodim.dz'
-    },
+    // {
+    //   slug: 'sourca-algerie',
+    //   title: 'Sourca Algérie',
+    //   description: 'Univerweb a collaboré avec Sourca Algérie sur sa présence numérique. Nous avons créé le site web et nous assurons son hébergement.',
+    //   client: {
+    //     Client: 'Sourca Algérie',
+    //     Fonctionnalités: 'Web Design, Développement, Hébergement',
+    //     Secteur: 'Technologies'
+    //   },
+    //   body:
+    //     "Sourca Algérie est une équipe de professionnels dédiée à fournir des technologies d'inspections et produits de contrôle non destructif de la plus haute qualité.",
+    //   link: 'https://sourcadz.com'
+    // },
+    // {
+    //   slug: 'acodim',
+    //   title: 'Acodim',
+    //   description: 'Univerweb a collaboré avec Acodim sur sa présence numérique. Nous avons créé le site web et nous assurons son hébergement.',
+    //   client: {
+    //     Client: 'Acodim',
+    //     Fonctionnalités: 'Web Design, Développement, Hébergement',
+    //     Secteur: 'Promotion immobilière'
+    //   },
+    //   body: 'Installée à Alger, Acodim est entreprise spécialisée dans la promotion immobilière.',
+    //   link: 'https://www.acodim.dz'
+    // },
     {
       slug: 'ets-ouar',
       title: 'ETS Ouar',
-      description: 'Contenu à venir…',
+      description: 'Univerweb a collaboré avec ETS Ouar sur sa présence numérique. Nous avons créé le site web.',
       client: {
         Client: 'ETS Ouar',
         Fonctionnalités: 'Web Design, Développement',
@@ -62,7 +76,7 @@ export default {
     {
       slug: 'tpbl',
       title: 'TPBL',
-      description: 'Contenu à venir…',
+      description: 'Univerweb a collaboré avec TPBL sur sa présence numérique. Nous avons créé le site web et nous assurons son hébergement.',
       client: {
         Client: 'TPBL',
         Fonctionnalités: 'Web Design, Développement, Hébergement',
@@ -74,7 +88,7 @@ export default {
     {
       slug: 'botanique-algerie',
       title: 'Botanique Algérie',
-      description: 'Contenu à venir…',
+      description: 'Univerweb a collaboré avec Botanique Algérie sur sa présence numérique. Nous avons créé le site web et nous assurons son hébergement.',
       client: {
         Client: 'Botanique Algérie',
         Fonctionnalités: 'Web Design, Développement, Hébergement',
@@ -86,7 +100,7 @@ export default {
     {
       slug: 'corim',
       title: 'Corim',
-      description: 'Contenu à venir…',
+      description: 'Univerweb a collaboré avec Corim sur sa présence numérique. Nous avons créé le site web et nous assurons son hébergement.',
       client: {
         Client: 'Corim',
         Fonctionnalités: 'Web Design, Développement, Hébergement',
@@ -99,7 +113,7 @@ export default {
     {
       title: 'We Service',
       slug: 'we-service',
-      description: 'Contenu à venir…',
+      description: 'Univerweb a collaboré avec We Service sur sa présence numérique. Nous avons créé le site web et nous assurons son hébergement.',
       client: {
         Client: 'We Service',
         Fonctionnalités: 'Web Design, Hébergement',
@@ -111,7 +125,7 @@ export default {
     {
       slug: 'infoelec',
       title: 'infoElec',
-      description: 'Contenu à venir…',
+      description: 'Univerweb a collaboré avec infoElec sur sa présence numérique. Nous avons créé le site web et nous assurons son hébergement.',
       client: {
         Client: 'infoElec',
         Fonctionnalités: 'Web Design, Développement, Hébergement',
@@ -123,7 +137,7 @@ export default {
     {
       title: 'Optimum Transmission',
       slug: 'optimum-transmission',
-      description: 'Contenu à venir…',
+      description: 'Univerweb a collaboré avec Optimum Transmission sur sa présence numérique. Nous avons créé le site web et nous assurons son hébergement.',
       client: {
         Client: 'Optimum Transmission',
         Fonctionnalités: 'Web Design, Hébergement',
@@ -136,7 +150,7 @@ export default {
     {
       slug: 'soprofort',
       title: 'Soprofort',
-      description: 'Contenu à venir…',
+      description: 'Univerweb a collaboré avec Soprofort sur sa présence numérique. Nous avons créé le site web et nous assurons son hébergement.',
       client: {
         Client: 'Soprofort',
         Fonctionnalités: 'Web Design, Développement, Hébergement',
@@ -149,7 +163,8 @@ export default {
     {
       slug: 'microtel-training-institute',
       title: 'Microtel Training Institute',
-      description: 'Contenu à venir…',
+      description:
+        'Univerweb a collaboré avec Microtel Training Institute sur sa présence numérique. Nous avons créé le site web et nous assurons son hébergement.',
       client: {
         Client: 'Microtel Training Institute',
         Fonctionnalités: 'Web Design, Développement, Hébergement',
@@ -162,7 +177,7 @@ export default {
     {
       slug: 'integral',
       title: 'Integral',
-      description: 'Contenu à venir…',
+      description: 'Univerweb a collaboré avec Integral sur sa présence numérique. Nous avons créé le site web.',
       client: {
         Client: 'Integral',
         Fonctionnalités: 'Web Design, Développement',
@@ -175,7 +190,7 @@ export default {
     {
       slug: 'epiza',
       title: 'Epiza',
-      description: 'Contenu à venir…',
+      description: 'Univerweb a collaboré avec Epiza sur sa présence numérique. Nous avons créé le site web et nous assurons son hébergement.',
       client: {
         Client: 'Epiza',
         Fonctionnalités: 'Web Design, Développement, Hébergement',
@@ -187,7 +202,7 @@ export default {
     {
       slug: 'pibo',
       title: 'Pibo',
-      description: 'Contenu à venir…',
+      description: 'Univerweb a collaboré avec Pibo sur sa présence numérique. Nous avons créé le site web et nous assurons son hébergement.',
       client: {
         Client: 'Pibo',
         Fonctionnalités: 'Web Design, Développement, Hébergement',
@@ -200,7 +215,7 @@ export default {
     {
       slug: 'intermat',
       title: 'Intermat',
-      description: 'Contenu à venir…',
+      description: 'Univerweb a collaboré avec Intermat sur sa présence numérique.',
       client: {
         Client: 'Intermat',
         Fonctionnalités: 'Web Design, Développement',
@@ -212,7 +227,7 @@ export default {
     {
       slug: 'bn-electric-company',
       title: 'BN Electric Company',
-      description: 'Contenu à venir…',
+      description: 'Univerweb a collaboré avec BN Electric Company sur sa présence numérique. Nous avons créé le site web et nous assurons son hébergement.',
       client: {
         Client: 'BN Electric Company',
         Fonctionnalités: 'Web Design, Hébergement',
@@ -225,7 +240,7 @@ export default {
     {
       slug: 'cinquelec',
       title: 'Cinquelec',
-      description: 'Contenu à venir…',
+      description: 'Univerweb a collaboré avec Cinquelec sur sa présence numérique. Nous avons créé le site web et nous assurons son hébergement.',
       client: {
         Client: 'Cinquelec',
         Fonctionnalités: 'Web Design, Développement, Hébergement',
@@ -238,7 +253,7 @@ export default {
     {
       slug: 'spheretec',
       title: 'Spheretec',
-      description: 'Contenu à venir…',
+      description: 'Univerweb a collaboré avec Spheretec sur sa présence numérique. Nous avons créé le site web et nous assurons son hébergement.',
       client: {
         Client: 'Spheretec',
         Fonctionnalités: 'Web Design, Hébergement',
@@ -250,7 +265,7 @@ export default {
     {
       slug: 'clinique-sonya',
       title: 'Clinique Sonya',
-      description: 'Contenu à venir…',
+      description: 'Univerweb a collaboré avec la Clinique Sonya sur sa présence numérique. Nous avons créé le site web et nous assurons son hébergement.',
       client: {
         Client: 'Clinique Sonya',
         Fonctionnalités: 'Web Design, Hébergement',
@@ -262,7 +277,7 @@ export default {
     {
       slug: 'clinique-aya',
       title: 'Clinique Aya',
-      description: 'Contenu à venir…',
+      description: 'Univerweb a collaboré avec la Clinique Aya sur sa présence numérique. Nous avons créé le site web et nous assurons son hébergement.',
       client: {
         Client: 'Clinique Aya',
         Fonctionnalités: 'Web Design, Hébergement',
@@ -275,7 +290,7 @@ export default {
     {
       slug: 'rcelec',
       title: 'RCelec',
-      description: 'Contenu à venir…',
+      description: 'Univerweb a collaboré avec RCelec sur sa présence numérique. Nous avons créé le site web et nous assurons son hébergement.',
       client: {
         Client: 'RCelec',
         Fonctionnalités: 'Web Design, Hébergement',
@@ -313,31 +328,26 @@ export default {
   },
 
   agency: {
-    description: 'Contenu à venir…',
+    description: 'Nous sommes une jeunes équipe de créativo-perfectionnistes et passionnée par notre travail, nous aimons coder de magnifiques sites web.',
     headline: 'Nous sommes une agence web.',
     body:
-      'Nous sommes dans l’innovation perpétuelle, c’est pourquoi nous offrons depuis 2011 des prestations numériques conçues pour vous et avec vous. Les conceptions web que nous réalisons, créent de véritables solutions personnalisées répondant à tous types de projets. La passion et la créativité qui animent notre équipe feront de votre expérience client une aventure unique, le meilleur moyen d’atteindre votre cible.',
+      'Créée en 2011 à Alger, nous sommes une jeunes équipe de créativo-perfectionnistes et passionnée par notre travail, nous aimons coder de magnifiques sites web en buvant du café le matin.',
     method: {
       headline: 'Notre méthode de travail',
       body: {
-        Écoute:
-          'Afin de mieux vous connaitre, nous essaierons de comprendre des éléments essentiels tels que votre activité, votre philosophie, vos objectifs et vos contraintes.',
-        Recherche:
-          'Après avoir mieux fait connaissance et cerner votre projet, nous trouverons des solutions adaptées à vos besoins tout en respectant votre image de marque.',
-        Création: 'En vous consultant et informant étape par étape, votre projet commence à avoir un visage, le votre tout simplement.',
-        Suivi:
-          "Après la publication du site web, nous vous accompagnerons dans la maintenance et mise à jour du site, dans la formation et le référencement et dans l'analyse du trafic."
+        Écoute: 'Nous essaierons de comprendre des éléments essentiels tels que votre activité, vos objectifs et vos contraintes.',
+        Recherche: 'Nous trouverons des solutions adaptées à vos besoins tout en respectant votre image de marque.',
+        Création: 'En vous consultant et informant étape par étape, nous donnons vie à votre projet.',
+        Suivi: 'Après la publication du projet, nous vous accompagnerons dans sa maintenance et mise à jour.'
       }
     },
     choose: {
       headline: 'Pourquoi nous choisir',
       body: {
-        'Une prestation complète':
-          'Du choix de votre nom de domaine à la configuration de votre messagerie professionnelle, en passant par la création, l’hébergement et le référencement de votre site web, nous vous offrirons un service complet.',
-        'À la pointe de la technique':
-          'Nous utilisons les dernières techniques et langages du web (HTML5, CSS3 et JavaScript), afin de vous offrir le meilleur service possible.',
-        'Un projet qui vous ressemble': 'Nous concevons des sites web qui vous ressemblent et qui sont adaptés à votre budget.',
-        'Un design innovant': 'Nous concevons un design sur mesure afin de refléter au mieux l’identité de votre entreprise.'
+        'Une prestation complète': 'Création du site web, nom du domaine et hébergement, nous vous offrirons un service complet.',
+        'À la pointe de la technique': 'Nous utilisons les dernières techniques et langages du web afin de vous offrir le meilleur service possible.',
+        'Un projet qui vous ressemble': 'Nous concevons des sites web qui reflètent votre image de marque et qui sont adaptés à votre budget.',
+        'Un design innovant': "Nous concevons un design sur mesure afin de refléter au mieux l'identité de votre entreprise."
       }
     }
   },
@@ -392,8 +402,6 @@ export default {
 
   request: {
     headline: 'Convaincu ? Prenons un café ensemble.',
-    body:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
     link: 'Contactez-nous'
   }
 }

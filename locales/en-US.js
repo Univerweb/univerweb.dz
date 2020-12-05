@@ -22,33 +22,47 @@ export default {
   },
 
   home: {
-    description: 'Content to come…',
-    headline: 'We design professional websites.',
-    body: 'We design websites that precisely meet your expectations and that fully respect your brand image.'
+    description: 'Even more than websites, we design and innovate human-centered digital experiences for you that reflect your brand image.',
+    headline: 'We create such memorable websites.',
+    body:
+      'Even more than websites, we design and innovate human-centered digital experiences for you that reflect your brand image, our primary mission is to satisfy you!'
   },
 
   works: {
-    description: "Discover our latest creations, we'd love to collaborate with you.",
+    description: 'Discover our latest creations. We would be delighted to work with you.',
     headline: 'They believed in us and they are fulfilled.'
   },
 
   work: [
-    {
-      slug: 'acodim',
-      title: 'Acodim',
-      description: 'Content to come…',
-      client: {
-        Client: 'Acodim',
-        Features: 'Web Design, Development, Hosting',
-        Industry: 'Real estate promotion'
-      },
-      body: 'Based in Algiers, Acodim is a company specializing in real estate promotion.',
-      link: 'https://www.acodim.dz'
-    },
+    // {
+    //   slug: 'sourca-algerie',
+    //   title: 'Sourca Algeria',
+    //   description: 'Univerweb collaborated with Acodim on its digital presence. We created the website and we provide hosting.',
+    //   client: {
+    //     Client: 'Sourca Algeria',
+    //     Fonctionnalités: 'Web Design, Development, Hosting',
+    //     Secteur: 'Technologies'
+    //   },
+    //   body:
+    //     'Sourca Algeria is a team of professionals dedicated to providing the highest quality inspection technologies and non-destructive testing products.',
+    //   link: 'https://sourcadz.com'
+    // },
+    // {
+    //   slug: 'acodim',
+    //   title: 'Acodim',
+    //   description: 'Univerweb collaborated with Acodim on its digital presence. We created the website and we provide hosting.',
+    //   client: {
+    //     Client: 'Acodim',
+    //     Features: 'Web Design, Development, Hosting',
+    //     Industry: 'Real estate promotion'
+    //   },
+    //   body: 'Based in Algiers, Acodim is a company specializing in real estate promotion.',
+    //   link: 'https://www.acodim.dz'
+    // },
     {
       slug: 'ets-ouar',
       title: 'ETS Ouar',
-      description: 'Content to come…',
+      description: 'Univerweb collaborated with ETS Ouar on its digital presence. We created the website.',
       client: {
         Client: 'ETS Ouar',
         Features: 'Web Design, Development',
@@ -61,7 +75,7 @@ export default {
     {
       slug: 'tpbl',
       title: 'TPBL',
-      description: 'Content to come…',
+      description: 'Univerweb collaborated with TPBL on its digital presence. We created the website and we provide hosting.',
       client: {
         Client: 'TPBL',
         Features: 'Web Design, Development, Hosting',
@@ -73,7 +87,7 @@ export default {
     {
       slug: 'botanique-algerie',
       title: 'Botany Algeria',
-      description: 'Content to come…',
+      description: 'Univerweb collaborated with Botany Algeria on its digital presence. We created the website and we provide hosting.',
       client: {
         Client: 'Botany Algeria',
         Features: 'Web Design, Development, Hosting',
@@ -85,7 +99,7 @@ export default {
     {
       slug: 'corim',
       title: 'Corim',
-      description: 'Content to come…',
+      description: 'Univerweb collaborated with Corim on its digital presence. We created the website and we provide hosting.',
       client: {
         Client: 'Corim',
         Features: 'Web Design, Development, Hosting',
@@ -98,7 +112,7 @@ export default {
     {
       slug: 'we-service',
       title: 'We Service',
-      description: 'Content to come…',
+      description: 'Univerweb collaborated with We Service on its digital presence. We created the website and we provide hosting.',
       client: {
         Client: 'We Service',
         Features: 'Web Design, Hosting',
@@ -110,7 +124,7 @@ export default {
     {
       slug: 'infoelec',
       title: 'infoElec',
-      description: 'Content to come…',
+      description: 'Univerweb collaborated with infoElec on its digital presence. We created the website and we provide hosting.',
       client: {
         Client: 'infoElec',
         Features: 'Web Design, Development, Hosting',
@@ -122,7 +136,7 @@ export default {
     {
       slug: 'optimum-transmission',
       title: 'Optimum Transmission',
-      description: 'Content to come…',
+      description: 'Univerweb collaborated with Optimum Transmission on its digital presence. We created the website and we provide hosting.',
       client: {
         Client: 'Optimum Transmission',
         Features: 'Web Design, Hosting',
@@ -135,7 +149,7 @@ export default {
     {
       slug: 'soprofort',
       title: 'Soprofort',
-      description: 'Content to come…',
+      description: 'Univerweb collaborated with Soprofort on its digital presence. We created the website and we provide hosting.',
       client: {
         Client: 'Soprofort',
         Features: 'Web Design, Development, Hosting',
@@ -148,7 +162,7 @@ export default {
     {
       slug: 'microtel-training-institute',
       title: 'Microtel Training Institute',
-      description: 'Content to come…',
+      description: 'Univerweb collaborated with Microtel Training Institute on its digital presence. We created the website and we provide hosting.',
       client: {
         Client: 'Microtel Training Institute',
         Features: 'Web Design, Development, Hosting',
@@ -161,7 +175,7 @@ export default {
     {
       slug: 'integral',
       title: 'Integral',
-      description: 'Content to come…',
+      description: 'Univerweb collaborated with Integral on its digital presence. We created the website.',
       client: {
         Client: 'Integral',
         Features: 'Web Design, Development',
@@ -174,7 +188,7 @@ export default {
     {
       slug: 'epiza',
       title: 'Epiza',
-      description: 'Content to come…',
+      description: 'Univerweb collaborated with Epiza on its digital presence. We created the website and we provide hosting.',
       client: {
         Client: 'Epiza',
         Features: 'Web Design, Development, Hosting',
@@ -186,7 +200,7 @@ export default {
     {
       slug: 'pibo',
       title: 'Pibo',
-      description: 'Content to come…',
+      description: 'Univerweb collaborated with Pibo on its digital presence. We created the website and we provide hosting.',
       client: {
         Client: 'Pibo',
         Features: 'Web Design, Development, Hosting',
@@ -199,7 +213,7 @@ export default {
     {
       slug: 'intermat',
       title: 'Intermat',
-      description: 'Content to come…',
+      description: 'Univerweb collaborated with Intermat on its digital presence. We created the website.',
       client: {
         Client: 'Intermat',
         Features: 'Web Design, Development',
@@ -211,7 +225,7 @@ export default {
     {
       slug: 'bn-electric-company',
       title: 'BN Electric Company',
-      description: 'Content to come…',
+      description: 'Univerweb collaborated with BN Electric Company on its digital presence. We created the website and we provide hosting.',
       client: {
         Client: 'BN Electric Company',
         Features: 'Web Design, Hosting',
@@ -224,7 +238,7 @@ export default {
     {
       slug: 'cinquelec',
       title: 'Cinquelec',
-      description: 'Content to come…',
+      description: 'Univerweb collaborated with Cinquelec on its digital presence. We created the website and we provide hosting.',
       client: {
         Client: 'Cinquelec',
         Features: 'Web Design, Development, Hosting',
@@ -237,7 +251,7 @@ export default {
     {
       slug: 'spheretec',
       title: 'Spheretec',
-      description: 'Content to come…',
+      description: 'Univerweb collaborated with Spheretec on its digital presence. We created the website and we provide hosting.',
       client: {
         Client: 'Spheretec',
         Features: 'Web Design, Hosting',
@@ -249,7 +263,7 @@ export default {
     {
       slug: 'clinique-sonya',
       title: 'Sonya Clinic',
-      description: 'Content to come…',
+      description: 'Univerweb collaborated with the Sonya Clinic on its digital presence. We created the website and we provide hosting.',
       client: {
         Client: 'Sonya Clinic',
         Features: 'Web Design, Hosting',
@@ -261,7 +275,7 @@ export default {
     {
       slug: 'clinique-aya',
       title: 'Aya Clinic',
-      description: 'Content to come…',
+      description: 'Univerweb collaborated with the Aya Clinic on its digital presence. We created the website and we provide hosting.',
       client: {
         Client: 'Aya Clinic',
         Features: 'Web Design, Hosting',
@@ -274,7 +288,7 @@ export default {
     {
       slug: 'rcelec',
       title: 'RCelec',
-      description: 'Content to come…',
+      description: 'Univerweb collaborated with RCelec on its digital presence. We created the website and we provide hosting.',
       client: {
         Client: 'RCelec',
         Features: 'Web Design, Hosting',
@@ -311,31 +325,27 @@ export default {
   },
 
   agency: {
-    description: 'Content to come…',
+    description:
+      'We are a young team of creative-perfectionists and passionate about our work, we like to code beautiful websites while drinking coffee in the morning.',
     headline: 'We are a web agency.',
     body:
-      'We are a web agency specializing in the creation, hosting and referencing of websites. Established since 2011 in Algiers, we have a creative, dynamic and passionate team for their work. Our job is to design websites that meet your expectations and that respect your brand image.',
+      'Founded in 2011 in Algiers, we are a young team of creative-perfectionists and passionate about our work, we like to code beautiful websites while drinking coffee in the morning.',
     method: {
       headline: 'Our working method',
       body: {
-        Listen:
-          'In order to know you better, we will try to understand essential elements such as your activity, your philosophy, your objectives and your constraints.',
-        Research:
-          'After getting to know each other better and understanding your project, we will find solutions adapted to your needs while respecting your brand image.',
-        Creation: 'By consulting and informing you step by step, your project begins to have a face, yours simply.',
-        Monitoring:
-          'After the publication of the website, we will accompany you in the maintenance and updating of the site, in training and referencing and in traffic analysis.'
+        Listen: 'We will try to understand essential elements such as your activity, your objectives and your constraints.',
+        Research: 'We will find solutions adapted to your needs while respecting your brand image.',
+        Creation: 'By consulting and informing you step by step, we bring your project to life.',
+        Monitoring: 'After the publication of the project, we will support you in its maintenance and updating.'
       }
     },
     choose: {
       headline: 'Why choose us',
       body: {
-        'A complete service':
-          'From the choice of your domain name to the configuration of your professional messaging, including the creation, hosting and referencing of your website, we will offer you a complete service.',
-        'At the cutting edge of technology':
-          'We use the latest techniques and languages of the web (HTML5, CSS3 and JavaScript), in order to offer you the best possible service.',
-        'A project that looks like you': 'We design websites that look like you and are tailored to your budget.',
-        'Innovative design': 'We create a custom design to best reflect the identity of your business.'
+        'A complete service': 'Creation of the website, domain name and hosting, we will offer you a complete service.',
+        'At the cutting edge of technology': 'We use the latest techniques and languages on the web to provide you with the best possible service.',
+        'A project that looks like you': 'We design websites that reflect your brand image and are tailored to your budget.',
+        'Innovative design': 'We design a custom design to best reflect the identity of your business.'
       }
     }
   },
@@ -390,8 +400,6 @@ export default {
 
   request: {
     headline: "Convinced? Let's have a coffee together.",
-    body:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, nulla rerum adipisci amet facilis eligendi quidem recusandae obcaecati libero dicta molestiae qui fugiat distinctio laudantium ratione iste omnis dolor ipsum?',
     link: 'Get in Touch'
   }
 }
