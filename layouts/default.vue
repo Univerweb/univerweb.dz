@@ -55,6 +55,11 @@ export default {
       link,
       meta: [
         {
+          hid: 'og:type',
+          property: 'og:type',
+          content: 'website'
+        },
+        {
           hid: 'og:site_name',
           property: 'og:site_name',
           content: this.$t('name')
