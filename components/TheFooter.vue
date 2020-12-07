@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div class="address-container">
+    <div>
       <address class="address" title="Adresse postale">
         <strong>{{ $t('footer.address.name') }} </strong><br />{{ $t('footer.address.streetAddress') }}<br />{{ $t('footer.address.addressLocality') }}
         {{ $t('footer.address.postalCode') }}<span v-if="$i18n.locale === 'ar'">، </span><span v-else>, </span>{{ $t('footer.address.addressCity') }}
@@ -20,7 +20,7 @@
         </a>
       </p>
     </div>
-    <div class="about-container">
+    <div>
       <app-about />
       <ul class="social">
         <li v-for="(value, name) in socials" :key="name">
@@ -64,65 +64,57 @@ export default {
 
 <style lang="scss">
 footer {
-  display: grid;
-  gap: 48px;
-  background: $dark-blue;
-  color: $light;
   padding: 48px 24px;
+  display: grid;
+  justify-content: space-between;
+  gap: 48px;
   @media (min-width: $sm) {
     grid-template-columns: auto auto;
-    justify-content: space-between;
     padding: 96px 48px;
   }
   @media (min-width: $md) {
-    grid-template-columns: auto auto 160px;
+    grid-template-columns: 1fr auto 1fr;
     padding: 144px 96px;
-    .address-container {
-      grid-row: 1 / 1;
-    }
-    .about-container {
-      grid-row: 1 / 3;
-    }
   }
-  a {
-    color: $white;
-    &:hover {
-      color: $blue;
-    }
+
+  address {
+    font-style: normal;
   }
+
+  a:hover {
+    color: $blue;
+  }
+
   .lead {
-    color: $white;
+    color: $black;
     @media (min-width: $sm) {
       max-width: 310px;
     }
   }
-}
 
-address {
-  font-style: normal;
-}
-
-.social {
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  justify-content: space-between;
-  max-width: 210px;
-  @media (min-width: $sm) {
-    max-width: 295px;
-  }
-  margin: 12px 0 0;
-  padding: 0;
-  list-style: none;
-  a {
+  .social {
     display: grid;
-    svg {
-      height: 24px;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+    max-width: 210px;
+    @media (min-width: $sm) {
+      max-width: 295px;
+    }
+    margin: 12px 0 0;
+    padding: 0;
+    list-style: none;
+    a {
+      display: grid;
+      svg {
+        height: 24px;
+      }
     }
   }
-}
 
-.copy {
-  font-size: 0.8rem;
-  line-height: 1.875;
+  .copy {
+    max-width: 170px;
+    font-size: 0.8rem;
+    line-height: 1.875;
+  }
 }
 </style>
