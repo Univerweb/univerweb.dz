@@ -9,6 +9,7 @@
     width: 12px;
   }
 }
+
 @keyframes CollapseShowMiddle {
   0% {
     width: 12px;
@@ -20,6 +21,7 @@
     width: 0;
   }
 }
+
 @keyframes CollapseTop {
   0% {
     transform: translateY(10.5px) rotate(-45deg);
@@ -36,6 +38,7 @@
     width: 24px;
   }
 }
+
 @keyframes CollapseShowTop {
   0% {
     transform: translateY(0) rotate(0);
@@ -52,6 +55,7 @@
     width: 24px;
   }
 }
+
 @keyframes CollapseBottom {
   0% {
     transform: translateY(-10.5px) rotate(45deg);
@@ -73,6 +77,7 @@
     width: 18px;
   }
 }
+
 @keyframes CollapseShowBottom {
   0% {
     transform: translateY(0) rotate(0);
