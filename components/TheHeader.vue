@@ -207,10 +207,6 @@ header {
       margin-right: 0;
       margin-left: -1rem;
     }
-    fill: $dark-blue;
-    @media (min-width: $md) {
-      fill: $blue;
-    }
   }
   select {
     background-color: transparent;
@@ -241,10 +237,6 @@ header {
     [lang='ar'] & {
       margin-left: 0;
       margin-right: -1rem;
-    }
-    fill: $dark-blue;
-    @media (min-width: $md) {
-      fill: $blue;
     }
   }
 }

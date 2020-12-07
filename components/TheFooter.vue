@@ -117,11 +117,6 @@ address {
     display: grid;
     svg {
       height: 24px;
-      fill: $blue;
-      transition: opacity $transition;
-      &:hover {
-        opacity: 0.5;
-      }
     }
   }
 }
