@@ -93,6 +93,6 @@ export default {
 #map {
   width: 100%;
   height: 720px;
-  background-color: $light;
+  background-color: #e5e3df;
 }
 </style>
