@@ -11,7 +11,7 @@
           <nuxt-link :to="localePath(name)" @click.native="show = false">{{ value }}</nuxt-link>
         </li>
       </ul>
-      <div class="lang">
+      <div class="btn lang">
         <lang-globe />
         <select v-model="lang" :aria-label="$t('ariaLabel.lang')" @change="onChange(lang)">
           <option v-for="locale in $i18n.locales" :key="locale.code" :value="locale.code">{{ locale.name }}</option>
@@ -190,16 +190,17 @@ header {
   }
 }
 
-.lang {
+.lang,
+.lang:hover {
   display: grid;
   grid-template-columns: repeat(3, auto);
   align-items: center;
   width: fit-content;
   background: $blue;
-  padding: 0 24px;
-  border-radius: 2em;
+  color: $dark-blue;
   @media (min-width: $md) {
     background: $dark-blue;
+    color: $blue;
   }
   .globe {
     margin-right: -1rem;
@@ -225,7 +226,7 @@ header {
     outline: 0;
     z-index: 2;
     @media (min-width: $md) {
-      color: $blue;
+      color: currentColor;
     }
     option {
       color: initial;
