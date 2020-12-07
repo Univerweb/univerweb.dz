@@ -192,22 +192,16 @@ header {
 
 .lang,
 .lang:hover {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  align-items: center;
-  width: fit-content;
-  background: $blue;
+  background-color: $blue;
   color: $dark-blue;
+  padding: 0 12px;
   @media (min-width: $md) {
     background: $dark-blue;
     color: $blue;
   }
   .globe {
-    margin-right: -1rem;
-    [lang='ar'] & {
-      margin-right: 0;
-      margin-left: -1rem;
-    }
+    margin-inline-end: -28px;
+    margin-inline-start: 12px;
   }
   select {
     background-color: transparent;
@@ -234,11 +228,7 @@ header {
   }
   .arrow {
     height: 8px;
-    margin-left: -1rem;
-    [lang='ar'] & {
-      margin-left: 0;
-      margin-right: -1rem;
-    }
+    margin-inline-start: -25px;
   }
 }
 

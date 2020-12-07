@@ -34,18 +34,18 @@ export default {
 
 <style lang="scss">
 .more {
-  text-align: end;
+  display: grid;
   margin-top: 48px;
-  .arrow {
-    fill: currentColor;
-    height: 8px;
-    transform: rotate(-90deg);
-    margin-left: 6px;
-    margin-bottom: 2px;
-    [lang='ar'] & {
-      transform: rotate(90deg);
-      margin-left: 0;
-      margin-right: 6px;
+  .btn {
+    justify-self: end;
+    .arrow {
+      fill: currentColor;
+      height: 8px;
+      margin-bottom: 2px;
+      transform: rotate(-90deg);
+      [lang='ar'] & {
+        transform: rotate(90deg);
+      }
     }
   }
 }
