@@ -7,14 +7,14 @@
       </div>
     </div>
     <div id="map"></div>
-    <div class="container">
+    <div class="container contact">
       <div class="intro">
         <h2>{{ $t('contact.other.headline') }}</h2>
       </div>
       <div class="details">
         <div v-for="(value, name) in $t('contact.other.body')" :key="name" class="item">
           <h3 class="h6">{{ name }}</h3>
-          <a :href="'mailto:' + value" class="link">{{ value }}</a>
+          <a :href="'mailto:' + value" class="link moveArrow">{{ value }}</a>
         </div>
       </div>
     </div>
@@ -94,5 +94,13 @@ export default {
   width: 100%;
   height: 720px;
   background-color: #e5e3df;
+}
+
+.contact {
+  background-color: $dark-blue;
+  color: $white;
+  a {
+    color: $white;
+  }
 }
 </style>
