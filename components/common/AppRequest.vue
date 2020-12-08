@@ -7,12 +7,12 @@
 
 <style lang="scss">
 .request {
-  background-color: $white;
-  color: $primary;
+  background-color: var(--primary);
+  color: $white;
   transition: background-color $transition, color $transition;
   text-align: center;
   a {
-    color: $primary;
+    color: $white;
     margin: 0;
   }
 }

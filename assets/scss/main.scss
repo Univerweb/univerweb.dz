@@ -38,8 +38,8 @@ body {
 body {
   margin: 0;
   padding: 0;
-  background-color: $white;
-  color: $color;
+  background-color: var(--bg);
+  color: var(--color);
   transition: background-color $transition, color $transition;
   font-family: $font;
   [lang='ar'] & {
@@ -168,7 +168,7 @@ main {
       margin: 0;
       padding: 0;
       list-style: none;
-      color: $color-secondary;
+      color: var(--color-secondary);
       transition: color $transition;
       font-weight: 500;
     }
@@ -211,8 +211,8 @@ main {
       p {
         display: grid;
         align-items: end;
-        background-color: $secondary;
-        color: $primary;
+        background-color: var(--secondary);
+        color: var(--primary);
         position: absolute;
         width: 100%;
         height: 100%;
@@ -291,7 +291,7 @@ p {
   @include size(20);
   font-weight: 500;
   letter-spacing: -0.02em;
-  color: $color-secondary;
+  color: var(--color-secondary);
   transition: color $transition;
   footer & {
     font-weight: 400;
@@ -302,7 +302,7 @@ p {
 }
 
 a {
-  color: $color;
+  color: var(--color);
   text-decoration: none;
   transition: color $transition;
 }
@@ -337,8 +337,8 @@ button {
   align-items: center;
   justify-content: center;
   column-gap: 12px;
-  background-color: $primary;
-  color: $secondary;
+  background-color: var(--primary);
+  color: var(--secondary);
   font-weight: 500;
   line-height: 48px;
   width: fit-content;
@@ -347,8 +347,8 @@ button {
   border-radius: 2em;
   transition: background-color $transition, color $transition;
   &:hover {
-    background-color: $secondary;
-    color: $primary;
+    background-color: var(--secondary);
+    color: var(--primary);
   }
 }
 
@@ -379,6 +379,9 @@ button {
   display: grid;
   background-color: $light;
   transition: background-color $transition;
+  .dark-mode & {
+    background-color: $color-secondary;
+  }
 }
 
 img {
@@ -391,6 +394,9 @@ img {
     background-color: $light;
     opacity: 0;
     transition: background-color $transition, opacity $transition;
+    .dark-mode & {
+      background-color: $color-secondary;
+    }
   }
   &[lazy='loaded'] {
     opacity: 1;

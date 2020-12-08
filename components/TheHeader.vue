@@ -80,12 +80,15 @@ header {
   grid-template-columns: auto auto;
   justify-content: space-between;
   align-items: center;
-  background-color: $white;
+  background-color: var(--bg);
   padding: 24px;
   transition: background-color $transition, padding $transition;
   z-index: 1;
   .scrolled &:not(.show) {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    .dark-mode & {
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
   }
   @media (min-width: $md) {
     grid-template-columns: auto 1fr;
@@ -105,6 +108,9 @@ header {
   g:last-child {
     fill: $primary;
     transition: fill $transition;
+    .dark-mode & {
+      fill: $white;
+    }
   }
 }
 
@@ -119,7 +125,7 @@ header {
   z-index: -1;
   opacity: 0;
   pointer-events: none;
-  background-color: $primary;
+  background-color: var(--bg);
   transition: background-color $transition;
   .show & {
     display: grid;
@@ -157,7 +163,7 @@ header {
     position: relative;
     display: block;
     @include size(20);
-    color: $color;
+    color: var(--color);
     font-weight: 500;
     @media (min-width: $md) {
       font-size: 1rem;
