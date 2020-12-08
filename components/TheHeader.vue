@@ -2,7 +2,7 @@
   <header :class="{ show: show }">
     <NuxtLink :to="localePath('/')" :title="$t('links.home')" class="logo" @click.native="show = false">
       <span class="visually-hidden">{{ $t('links.home') }}</span>
-      <LogoArabe v-if="$i18n.locale === 'ar'" />
+      <LogoArabic v-if="$i18n.locale === 'ar'" />
       <LogoLatin v-else />
     </NuxtLink>
     <nav class="menu">
@@ -29,14 +29,14 @@
 
 <script>
 import LogoLatin from '@/static/logos/univerweb.svg?inline'
-import LogoArabe from '@/static/logos/univerweb-ar.svg?inline'
+import LogoArabic from '@/static/logos/univerweb-ar.svg?inline'
 import LangGlobe from '@/assets/icons/globe.svg?inline'
 import LangArrow from '@/assets/icons/arrow.svg?inline'
 
 export default {
   components: {
     LogoLatin,
-    LogoArabe,
+    LogoArabic,
     LangGlobe,
     LangArrow
   },
