@@ -1,11 +1,11 @@
 <template>
   <main v-if="error.statusCode === 404" class="hero error">
     <h1>{{ $t('error.404') }}</h1>
-    <nuxt-link to="/" class="btn">{{ $t('error.btn') }}</nuxt-link>
+    <NuxtLink to="/" class="btn">{{ $t('error.btn') }}</NuxtLink>
   </main>
   <main v-else class="hero error">
     <h1>{{ $t('error.500') }}</h1>
-    <nuxt-link to="/" class="btn">{{ $t('error.btn') }}</nuxt-link>
+    <NuxtLink to="/" class="btn">{{ $t('error.btn') }}</NuxtLink>
   </main>
 </template>
 

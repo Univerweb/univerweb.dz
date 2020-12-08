@@ -6,18 +6,18 @@
     <div class="details">
       <div v-for="work in $t('work').slice(0, 6)" :key="work.slug" class="item">
         <h3>
-          <nuxt-link :to="localePath('/realisations/' + work.slug)">{{ work.title }}</nuxt-link>
+          <NuxtLink :to="localePath('/realisations/' + work.slug)">{{ work.title }}</NuxtLink>
         </h3>
-        <nuxt-link :to="localePath('/realisations/' + work.slug)">
+        <NuxtLink :to="localePath('/realisations/' + work.slug)">
           <div class="card">
             <img v-lazy="'/works/' + work.slug + '/' + work.slug + '_thumbnail.jpg'" :alt="work.title" />
           </div>
           <p class="h6">{{ work.body }}</p>
-        </nuxt-link>
+        </NuxtLink>
       </div>
     </div>
     <div class="more">
-      <nuxt-link :to="localePath('realisations')" class="btn">{{ $t('links.more') }}<home-arrow /></nuxt-link>
+      <NuxtLink :to="localePath('realisations')" class="btn">{{ $t('links.more') }}<home-arrow /></NuxtLink>
     </div>
   </section>
 </template>

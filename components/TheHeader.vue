@@ -1,14 +1,14 @@
 <template>
   <header :class="{ show: show }">
-    <nuxt-link :to="localePath('/')" :title="$t('links.home')" class="logo" @click.native="show = false">
+    <NuxtLink :to="localePath('/')" :title="$t('links.home')" class="logo" @click.native="show = false">
       <span class="visually-hidden">{{ $t('links.home') }}</span>
       <logo-arabe v-if="$i18n.locale === 'ar'" />
       <logo-latin v-else />
-    </nuxt-link>
+    </NuxtLink>
     <nav class="menu">
       <ul>
         <li v-for="(value, name) in $t('menu')" :key="name">
-          <nuxt-link :to="localePath(name)" @click.native="show = false">{{ value }}</nuxt-link>
+          <NuxtLink :to="localePath(name)" @click.native="show = false">{{ value }}</NuxtLink>
         </li>
       </ul>
       <div class="btn lang">

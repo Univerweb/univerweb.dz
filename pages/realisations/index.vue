@@ -7,14 +7,14 @@
       <div class="details">
         <div v-for="work in $t('work')" :key="work.slug" class="item">
           <h2 class="h3">
-            <nuxt-link :to="localePath('/realisations/' + work.slug)">{{ work.title }}</nuxt-link>
+            <NuxtLink :to="localePath('/realisations/' + work.slug)">{{ work.title }}</NuxtLink>
           </h2>
-          <nuxt-link :to="localePath('/realisations/' + work.slug)">
+          <NuxtLink :to="localePath('/realisations/' + work.slug)">
             <div class="card">
               <img v-lazy="'/works/' + work.slug + '/' + work.slug + '_thumbnail.jpg'" :alt="work.title" />
             </div>
             <p class="h6">{{ work.body }}</p>
-          </nuxt-link>
+          </NuxtLink>
         </div>
       </div>
     </div>
