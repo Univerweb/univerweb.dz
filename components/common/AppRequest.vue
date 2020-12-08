@@ -9,6 +9,7 @@
 .request {
   background-color: $white;
   color: $primary;
+  transition: background-color $transition, color $transition;
   text-align: center;
   a {
     color: $primary;

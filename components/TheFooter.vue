@@ -113,6 +113,7 @@ footer {
 
   .lead {
     color: $color;
+    transition: color $transition;
     @media (min-width: $sm) {
       max-width: 310px;
     }

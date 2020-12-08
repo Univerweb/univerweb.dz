@@ -82,7 +82,7 @@ header {
   align-items: center;
   background-color: $white;
   padding: 24px;
-  transition: padding $transition;
+  transition: background-color $transition, padding $transition;
   z-index: 1;
   .scrolled &:not(.show) {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -135,6 +135,7 @@ header {
   }
   @media (min-width: $md) {
     background-color: $white !important;
+    transition: background-color $transition;
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;

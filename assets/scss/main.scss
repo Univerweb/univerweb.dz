@@ -24,6 +24,7 @@ body {
   padding: 0;
   background-color: $white;
   color: $color;
+  transition: background-color $transition, color $transition;
   font-family: $font;
   [lang='ar'] & {
     font-family: $font-arabic;
@@ -152,6 +153,7 @@ main {
       padding: 0;
       list-style: none;
       color: $color-secondary;
+      transition: color $transition;
       font-weight: 500;
     }
     @media (min-width: $sm) {
@@ -199,7 +201,7 @@ main {
         height: 100%;
         padding: 12px;
         opacity: 0;
-        transition: opacity $transition;
+        transition: background-color $transition, color $transition, opacity $transition;
         &:hover {
           opacity: 1;
         }
@@ -273,6 +275,7 @@ p {
   font-weight: 500;
   letter-spacing: -0.02em;
   color: $color-secondary;
+  transition: color $transition;
   footer & {
     font-weight: 400;
   }
@@ -358,6 +361,7 @@ button {
 .card {
   display: grid;
   background-color: $light;
+  transition: background-color $transition;
 }
 
 img {
@@ -369,7 +373,7 @@ img {
   &[lazy='loading'] {
     background-color: $light;
     opacity: 0;
-    transition: opacity $transition;
+    transition: background-color $transition, opacity $transition;
   }
   &[lazy='loaded'] {
     opacity: 1;
