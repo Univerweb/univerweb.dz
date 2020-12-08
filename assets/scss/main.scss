@@ -22,7 +22,7 @@ body {
 body {
   margin: 0;
   padding: 0;
-  color: $black;
+  color: $color;
   font-family: $font;
   [lang='ar'] & {
     font-family: $font-arabic;
@@ -281,7 +281,7 @@ p {
 }
 
 a {
-  color: $black;
+  color: $color;
   text-decoration: none;
   transition: color $transition;
 }
