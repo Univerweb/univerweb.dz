@@ -105,12 +105,6 @@ header {
   g:last-child {
     fill: $primary;
     transition: fill $transition;
-    .show & {
-      fill: $white;
-      @media (min-width: $md) {
-        fill: $primary;
-      }
-    }
   }
 }
 
@@ -125,17 +119,15 @@ header {
   z-index: -1;
   opacity: 0;
   pointer-events: none;
-  transition: opacity $transition;
+  background-color: $primary;
+  transition: background-color $transition;
   .show & {
     display: grid;
     height: 100%;
-    background-color: $primary;
     opacity: 1;
     pointer-events: auto;
   }
   @media (min-width: $md) {
-    background-color: $white !important;
-    transition: background-color $transition;
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
@@ -165,12 +157,9 @@ header {
     position: relative;
     display: block;
     @include size(20);
+    color: $color;
     font-weight: 500;
-    .show & {
-      color: $white;
-    }
     @media (min-width: $md) {
-      color: $color !important;
       font-size: 1rem;
       line-height: 1.5;
       text-align: center;
@@ -193,20 +182,14 @@ header {
 
 .lang,
 .lang:hover {
-  background-color: $secondary;
-  color: $primary;
   padding: 0 12px;
-  @media (min-width: $md) {
-    background-color: $primary;
-    color: $secondary;
-  }
   .globe {
     margin-inline-end: -28px;
     margin-inline-start: 12px;
   }
   select {
     background-color: transparent;
-    color: $primary;
+    color: currentColor;
     appearance: none;
     padding: 0 24px;
     height: 48px;
@@ -220,9 +203,6 @@ header {
     cursor: pointer;
     outline: 0;
     z-index: 2;
-    @media (min-width: $md) {
-      color: currentColor;
-    }
     option {
       color: initial;
     }
