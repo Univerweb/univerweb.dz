@@ -61,6 +61,7 @@ export default {
   },
   css: ['@/assets/scss/font.scss', '@/assets/scss/keyframes.scss', '@/assets/scss/main.scss'],
   buildModules: [
+    '@nuxtjs/color-mode',
     '@nuxtjs/eslint-module',
     '@nuxtjs/stylelint-module',
     '@nuxtjs/svg',
