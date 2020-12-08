@@ -186,8 +186,7 @@ header {
   }
 }
 
-.lang,
-.lang:hover {
+.lang {
   padding: 0 12px;
   .globe {
     margin-inline-end: -28px;
@@ -216,6 +215,10 @@ header {
   .arrow {
     height: 8px;
     margin-inline-start: -25px;
+  }
+  &:hover {
+    background-color: var(--primary);
+    color: var(--secondary);
   }
 }
 
