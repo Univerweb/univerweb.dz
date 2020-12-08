@@ -87,24 +87,21 @@ main {
 /* Hero */
 .hero {
   display: grid;
-  align-content: center;
+  grid-auto-rows: 1fr auto;
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 0;
   padding-bottom: 0;
   min-height: calc(100vh - 96px);
-  transition: min-height $transition;
   @media (min-width: $md) {
-    min-height: calc(100vh - 192px);
-    .scrolled & {
-      min-height: calc(100vh - 72px);
-    }
+    min-height: calc(100vh - 156px);
+  }
+  transition: min-height $transition;
+  .intro {
+    align-self: center;
   }
   .arrow {
-    position: absolute;
-    bottom: 24px;
-    left: 50%;
-    transform: translateX(-50%);
+    justify-self: center;
     height: 12px;
     cursor: pointer;
   }
