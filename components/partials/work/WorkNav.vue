@@ -1,10 +1,10 @@
 <template>
   <div class="container nav">
     <NuxtLink v-if="currentIndex < count - 1" :to="localePath('/realisations/' + previus[0].slug)" class="link previous" :data-text="$t('links.previous')"
-      ><nav-arrow />{{ previus[0].title }}</NuxtLink
+      ><NavArrow />{{ previus[0].title }}</NuxtLink
     >
     <NuxtLink v-if="currentIndex > 0" :to="localePath('/realisations/' + next[0].slug)" class="link next" :data-text="$t('links.next')"
-      ><nav-arrow />{{ next[0].title }}</NuxtLink
+      ><NavArrow />{{ next[0].title }}</NuxtLink
     >
   </div>
 </template>

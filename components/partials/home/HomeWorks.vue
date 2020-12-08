@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="more">
-      <NuxtLink :to="localePath('realisations')" class="btn">{{ $t('links.more') }}<home-arrow /></NuxtLink>
+      <NuxtLink :to="localePath('realisations')" class="btn">{{ $t('links.more') }}<HomeArrow /></NuxtLink>
     </div>
   </section>
 </template>

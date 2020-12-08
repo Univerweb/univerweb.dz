@@ -26,7 +26,7 @@
         </div>
       </div>
     </div>
-    <app-request />
+    <AppRequest />
   </main>
 </template>
 

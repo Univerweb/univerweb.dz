@@ -4,7 +4,7 @@
       <h1>{{ $t('home.headline') }}</h1>
       <p class="lead">{{ $t('home.body') }}</p>
     </div>
-    <home-arrow v-scroll-to="'.works'" />
+    <HomeArrow v-scroll-to="'.works'" />
   </section>
 </template>
 

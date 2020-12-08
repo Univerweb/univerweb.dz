@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :to="localePath('realisations')" class="back"><nav-arrow />{{ $t('menu.realisations') }}</NuxtLink>
+  <NuxtLink :to="localePath('realisations')" class="back"><NavArrow />{{ $t('menu.realisations') }}</NuxtLink>
 </template>
 
 <script>

@@ -3,7 +3,7 @@
     <div class="container details">
       <div class="item">
         <h1 class="h2">{{ $t('menu.contact') }}</h1>
-        <app-about />
+        <AppAbout />
       </div>
     </div>
     <div id="map"></div>

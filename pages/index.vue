@@ -1,8 +1,8 @@
 <template>
   <main>
-    <home-welcome />
-    <home-works />
-    <home-request />
+    <HomeWelcome />
+    <HomeWorks />
+    <HomeRequest />
   </main>
 </template>
 

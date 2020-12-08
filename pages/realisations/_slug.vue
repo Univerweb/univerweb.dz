@@ -1,7 +1,7 @@
 <template>
   <main id="main" class="work">
     <div class="container intro">
-      <work-back />
+      <WorkBack />
       <h1>{{ work.title }}</h1>
     </div>
     <div v-lazy:background-image="'/works/' + work.slug + '/' + work.slug + '_bg.jpg'" class="banner card">
@@ -30,8 +30,8 @@
         </div>
       </div>
     </div>
-    <work-nav />
-    <app-request />
+    <WorkNav />
+    <AppRequest />
   </main>
 </template>
 

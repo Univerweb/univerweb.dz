@@ -21,12 +21,12 @@
       </p>
     </div>
     <div>
-      <app-about />
+      <AppAbout />
       <ul class="social">
         <li v-for="(value, name) in socials" :key="name">
           <a :href="value">
             <span class="visually-hidden">{{ $t('footer.social.' + name) }}</span>
-            <component :is="name + '-icon'"
+            <Component :is="name + '-icon'"
           /></a>
         </li>
       </ul>

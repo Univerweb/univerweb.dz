@@ -2,8 +2,8 @@
   <header :class="{ show: show }">
     <NuxtLink :to="localePath('/')" :title="$t('links.home')" class="logo" @click.native="show = false">
       <span class="visually-hidden">{{ $t('links.home') }}</span>
-      <logo-arabe v-if="$i18n.locale === 'ar'" />
-      <logo-latin v-else />
+      <LogoArabe v-if="$i18n.locale === 'ar'" />
+      <LogoLatin v-else />
     </NuxtLink>
     <nav class="menu">
       <ul>
@@ -12,11 +12,11 @@
         </li>
       </ul>
       <div class="btn lang">
-        <lang-globe />
+        <LangGlobe />
         <select v-model="lang" :aria-label="$t('ariaLabel.lang')" @change="onChange(lang)">
           <option v-for="locale in $i18n.locales" :key="locale.code" :value="locale.code">{{ locale.name }}</option>
         </select>
-        <lang-arrow />
+        <LangArrow />
       </div>
     </nav>
     <button type="button" :aria-label="$t('ariaLabel.menu')" class="toggle" @click="isShow">

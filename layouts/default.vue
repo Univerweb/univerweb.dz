@@ -1,9 +1,9 @@
 <template>
   <div class="wrapper" :class="{ scrolled: scrolled }">
-    <the-skiplinks />
-    <the-header />
-    <nuxt />
-    <the-footer />
+    <TheSkiplinks />
+    <TheHeader />
+    <Nuxt />
+    <TheFooter />
   </div>
 </template>
 
