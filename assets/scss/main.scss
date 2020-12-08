@@ -5,6 +5,22 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bg: #{$white};
+  --color: #{$color};
+  --color-secondary: #{$color-secondary};
+  --primary: #{$primary};
+  --secondary: #{$secondary};
+}
+
+.dark-mode {
+  --bg: #091a28;
+  --color: #{$white};
+  --color-secondary: #{$white};
+  --primary: #{$secondary};
+  --secondary: #{$primary};
+}
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
