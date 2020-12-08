@@ -7,7 +7,7 @@
 
 <style lang="scss">
 .request {
-  background: $white;
+  background-color: $white;
   color: $primary;
   text-align: center;
   a {

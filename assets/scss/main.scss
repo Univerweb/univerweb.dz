@@ -192,7 +192,7 @@ main {
       p {
         display: grid;
         align-items: end;
-        background: $secondary;
+        background-color: $secondary;
         position: absolute;
         width: 100%;
         height: 100%;
@@ -316,7 +316,7 @@ button {
   align-items: center;
   justify-content: center;
   column-gap: 12px;
-  background: $primary;
+  background-color: $primary;
   color: $secondary;
   font-weight: 500;
   line-height: 48px;
@@ -326,7 +326,7 @@ button {
   border-radius: 2em;
   transition: background-color $transition, color $transition;
   &:hover {
-    background: $secondary;
+    background-color: $secondary;
     color: $primary;
   }
 }
@@ -356,17 +356,17 @@ button {
 
 .card {
   display: grid;
-  background: $light;
+  background-color: $light;
 }
 
 img {
   width: 100%;
   height: auto;
   &[lazy='error'] {
-    background: red;
+    background-color: red;
   }
   &[lazy='loading'] {
-    background: $light;
+    background-color: $light;
     opacity: 0;
     transition: opacity $transition;
   }
@@ -386,5 +386,5 @@ img {
 
 ::selection {
   color: $primary;
-  background: $secondary;
+  background-color: $secondary;
 }

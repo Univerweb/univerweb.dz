@@ -80,7 +80,7 @@ header {
   grid-template-columns: auto auto;
   justify-content: space-between;
   align-items: center;
-  background: $white;
+  background-color: $white;
   padding: 24px;
   transition: padding $transition;
   z-index: 1;
@@ -129,12 +129,12 @@ header {
   .show & {
     display: grid;
     height: 100%;
-    background: $primary;
+    background-color: $primary;
     opacity: 1;
     pointer-events: auto;
   }
   @media (min-width: $md) {
-    background: $white !important;
+    background-color: $white !important;
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
@@ -178,7 +178,7 @@ header {
       content: '';
       display: block;
       position: absolute;
-      background: $secondary;
+      background-color: $secondary;
       width: 0%;
       height: 3px;
       transition: width $transition;
@@ -196,7 +196,7 @@ header {
   color: $primary;
   padding: 0 12px;
   @media (min-width: $md) {
-    background: $primary;
+    background-color: $primary;
     color: $secondary;
   }
   .globe {
@@ -238,13 +238,13 @@ header {
     display: none;
   }
   align-content: space-between;
-  background: transparent;
+  background-color: transparent;
   height: 24px;
   margin: 0;
   padding: 0;
   outline: none;
   span {
-    background: $secondary;
+    background-color: $secondary;
     height: 3px;
     border-radius: 2em;
     transition: all $transition;
