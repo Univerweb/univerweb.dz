@@ -13,7 +13,7 @@
   button {
     position: absolute;
     clip: rect(1px, 1px, 1px, 1px);
-    background: $blue;
+    background: $secondary;
     color: $dark-blue;
     font-weight: 500;
     line-height: 25px;

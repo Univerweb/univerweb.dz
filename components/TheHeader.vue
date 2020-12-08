@@ -100,7 +100,7 @@ header {
   display: block;
   height: 24px;
   g:first-child {
-    fill: $blue;
+    fill: $secondary;
   }
   g:last-child {
     fill: $dark-blue;
@@ -178,7 +178,7 @@ header {
       content: '';
       display: block;
       position: absolute;
-      background: $blue;
+      background: $secondary;
       width: 0%;
       height: 3px;
       transition: width $transition;
@@ -192,12 +192,12 @@ header {
 
 .lang,
 .lang:hover {
-  background-color: $blue;
+  background-color: $secondary;
   color: $dark-blue;
   padding: 0 12px;
   @media (min-width: $md) {
     background: $dark-blue;
-    color: $blue;
+    color: $secondary;
   }
   .globe {
     margin-inline-end: -28px;
@@ -244,7 +244,7 @@ header {
   padding: 0;
   outline: none;
   span {
-    background: $blue;
+    background: $secondary;
     height: 3px;
     border-radius: 2em;
     transition: all $transition;

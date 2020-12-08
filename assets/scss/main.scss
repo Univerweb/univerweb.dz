@@ -192,7 +192,7 @@ main {
       p {
         display: grid;
         align-items: end;
-        background: $blue;
+        background: $secondary;
         position: absolute;
         width: 100%;
         height: 100%;
@@ -296,7 +296,7 @@ a {
     line-height: 1.286;
   }
   &:hover {
-    color: $blue;
+    color: $secondary;
   }
   [lang='ar'] .work & {
     font-family: $font-arabic;
@@ -317,7 +317,7 @@ button {
   justify-content: center;
   column-gap: 12px;
   background: $dark-blue;
-  color: $blue;
+  color: $secondary;
   font-weight: 500;
   line-height: 48px;
   width: fit-content;
@@ -326,7 +326,7 @@ button {
   border-radius: 2em;
   transition: background-color $transition, color $transition;
   &:hover {
-    background: $blue;
+    background: $secondary;
     color: $dark-blue;
   }
 }
@@ -386,5 +386,5 @@ img {
 
 ::selection {
   color: $dark-blue;
-  background: $blue;
+  background: $secondary;
 }

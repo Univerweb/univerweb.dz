@@ -66,7 +66,7 @@ ol {
   li:before {
     counter-increment: counterName;
     content: counters(counterName, '-');
-    color: $blue;
+    color: $secondary;
     @include size(56);
     font-weight: 800;
     [lang='ar'] & {

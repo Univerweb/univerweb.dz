@@ -24,7 +24,7 @@ export default {
     font-family: $font-arabic;
   }
   &:hover {
-    color: $blue;
+    color: $secondary;
   }
   .arrow {
     fill: currentColor;
