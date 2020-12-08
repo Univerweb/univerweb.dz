@@ -31,6 +31,20 @@
         </li>
       </ul>
     </div>
+    <div class="colorSwitcher">
+      <button class="btn" @click="setCurrentTheme">
+        <span>
+          <DarkIcon :class="$colorMode.preference === 'dark' ? 'show' : 'hide'" />
+          <SystemIcon :class="$colorMode.preference === 'system' ? 'show' : 'hide'" />
+          <LightIcon :class="$colorMode.preference === 'light' ? 'show' : 'hide'" />
+        </span>
+        <transition name="from-bottom-to-bottom" mode="out-in">
+          <span v-if="$colorMode.preference === 'dark'" key="dark">{{ $t('footer.colorMode.dark') }}</span>
+          <span v-if="$colorMode.preference === 'system'" key="system"> {{ $t('footer.colorMode.system') }}</span>
+          <span v-else-if="$colorMode.preference === 'light'" key="light">{{ $t('footer.colorMode.light') }}</span>
+        </transition>
+      </button>
+    </div>
     <p class="copy">{{ $t('footer.copy') }}</p>
   </footer>
 </template>
@@ -40,13 +54,19 @@ import TwitterIcon from '@/assets/icons/twitter.svg?inline'
 import FacebookIcon from '@/assets/icons/facebook.svg?inline'
 import LinkedinIcon from '@/assets/icons/linkedin.svg?inline'
 import GithubIcon from '@/assets/icons/github.svg?inline'
+import DarkIcon from '@/assets/icons/dark.svg?inline'
+import SystemIcon from '@/assets/icons/system.svg?inline'
+import LightIcon from '@/assets/icons/light.svg?inline'
 
 export default {
   components: {
     TwitterIcon,
     FacebookIcon,
     LinkedinIcon,
-    GithubIcon
+    GithubIcon,
+    DarkIcon,
+    SystemIcon,
+    LightIcon
   },
 
   data() {
@@ -57,6 +77,12 @@ export default {
         linkedin: 'https://www.linkedin.com/company/univerweb',
         github: 'https://github.com/Univerweb'
       }
+    }
+  },
+
+  methods: {
+    setCurrentTheme() {
+      this.$colorMode.preference = this.$colorMode.preference === 'system' ? 'light' : this.$colorMode.preference === 'light' ? 'dark' : 'system'
     }
   }
 }
@@ -107,6 +133,51 @@ footer {
       display: grid;
       svg {
         height: 24px;
+      }
+    }
+  }
+
+  .colorSwitcher {
+    justify-self: start;
+    @media (min-width: $md) {
+      justify-self: end;
+    }
+    .btn {
+      width: 140px;
+      outline: 0;
+      span:first-child {
+        position: relative;
+        width: 16px;
+        height: 16px;
+        svg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 16px;
+          height: 16px;
+        }
+        .show {
+          animation: ShowIcon 300ms forwards;
+        }
+        .hide {
+          animation: HideIcon 300ms forwards;
+        }
+      }
+      .from-bottom-to-bottom-enter-active {
+        opacity: 1;
+        transition: opacity 100ms, transform 100ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .from-bottom-to-bottom-leave-active {
+        opacity: 1;
+        transition: opacity 100ms, transform 100ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .from-bottom-to-bottom-enter {
+        opacity: 0;
+        transform: scaleY(0);
+      }
+      .from-bottom-to-bottom-leave-active {
+        opacity: 0;
+        transform: scaleY(0);
       }
     }
   }

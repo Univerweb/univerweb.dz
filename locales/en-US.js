@@ -395,6 +395,11 @@ export default {
       linkedin: 'Join us on LinkedIn',
       github: 'Join us on GitHub'
     },
+    colorMode: {
+      dark: 'Dark',
+      system: 'System',
+      light: 'Light'
+    },
     copy: 'Copyright 2020 Univerweb. All rights reserved.'
   },
 
