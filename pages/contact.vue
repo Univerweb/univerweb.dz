@@ -97,7 +97,7 @@ export default {
 }
 
 .contact {
-  background-color: $dark-blue;
+  background-color: $primary;
   color: $white;
   a {
     color: $white;

@@ -8,10 +8,10 @@
 <style lang="scss">
 .request {
   background: $white;
-  color: $dark-blue;
+  color: $primary;
   text-align: center;
   a {
-    color: $dark-blue;
+    color: $primary;
     margin: 0;
   }
 }

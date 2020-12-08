@@ -103,12 +103,12 @@ header {
     fill: $secondary;
   }
   g:last-child {
-    fill: $dark-blue;
+    fill: $primary;
     transition: fill $transition;
     .show & {
       fill: $white;
       @media (min-width: $md) {
-        fill: $dark-blue;
+        fill: $primary;
       }
     }
   }
@@ -129,7 +129,7 @@ header {
   .show & {
     display: grid;
     height: 100%;
-    background: $dark-blue;
+    background: $primary;
     opacity: 1;
     pointer-events: auto;
   }
@@ -193,10 +193,10 @@ header {
 .lang,
 .lang:hover {
   background-color: $secondary;
-  color: $dark-blue;
+  color: $primary;
   padding: 0 12px;
   @media (min-width: $md) {
-    background: $dark-blue;
+    background: $primary;
     color: $secondary;
   }
   .globe {
@@ -205,7 +205,7 @@ header {
   }
   select {
     background-color: transparent;
-    color: $dark-blue;
+    color: $primary;
     appearance: none;
     padding: 0 24px;
     height: 48px;

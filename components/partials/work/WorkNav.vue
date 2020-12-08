@@ -50,7 +50,7 @@ export default {
   .next,
   .previous {
     position: relative;
-    color: $dark-blue;
+    color: $primary;
     padding: 0 12px 0 18px;
     [lang='ar'] & {
       font-family: $font-arabic;
@@ -62,7 +62,7 @@ export default {
     &::before {
       content: attr(data-text);
       position: absolute;
-      color: $dark-blue;
+      color: $primary;
       top: -12px;
       left: 20px;
       [lang='ar'] & {

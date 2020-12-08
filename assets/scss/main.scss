@@ -316,7 +316,7 @@ button {
   align-items: center;
   justify-content: center;
   column-gap: 12px;
-  background: $dark-blue;
+  background: $primary;
   color: $secondary;
   font-weight: 500;
   line-height: 48px;
@@ -327,7 +327,7 @@ button {
   transition: background-color $transition, color $transition;
   &:hover {
     background: $secondary;
-    color: $dark-blue;
+    color: $primary;
   }
 }
 
@@ -385,6 +385,6 @@ img {
 }
 
 ::selection {
-  color: $dark-blue;
+  color: $primary;
   background: $secondary;
 }
