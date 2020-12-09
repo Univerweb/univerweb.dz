@@ -3,7 +3,6 @@ export default {
   ssr: true,
   head: {
     meta: [
-      { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'theme-color', content: '#50c8f0' },
       { name: 'apple-mobile-web-app-capable', content: 'yes' },
