@@ -363,9 +363,9 @@ export default {
   },
 
   error: {
-    404: 'Page not found',
-    500: 'An error has occurred',
-    btn: 'Back to Home'
+    headline: 'Oops…',
+    404: 'This page cannot be found.',
+    500: 'An error has occurred.'
   },
 
   footer: {

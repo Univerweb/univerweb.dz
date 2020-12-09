@@ -1,29 +1,25 @@
 <template>
-  <main v-if="error.statusCode === 404" class="hero error">
-    <h1>{{ $t('error.404') }}</h1>
-    <NuxtLink to="/" class="btn">{{ $t('error.btn') }}</NuxtLink>
-  </main>
-  <main v-else class="hero error">
-    <h1>{{ $t('error.500') }}</h1>
-    <NuxtLink to="/" class="btn">{{ $t('error.btn') }}</NuxtLink>
+  <main class="container hero error">
+    <h1>{{ $t('error.headline') }}</h1>
+    <p v-if="error.statusCode === 404" class="lead">{{ $t('error.404') }}</p>
+    <p v-else class="lead">{{ $t('error.500') }}</p>
   </main>
 </template>
 
 <script>
 export default {
+  layout: 'secondary',
+
   props: {
     error: {
       type: Object,
       default: null
     }
   },
+
   head() {
-    let TITLE = this.$t('error.500')
-    if (this.error.statusCode === 404) {
-      TITLE = this.$t('error.404')
-    }
     return {
-      titleTemplate: TITLE + ` — ${this.$t('name')}`,
+      titleTemplate: `${this.error.statusCode} — ${this.$t('name')}`,
       meta: [{ name: 'robots', content: 'noindex, follow' }]
     }
   }
@@ -32,7 +28,9 @@ export default {
 
 <style lang="scss">
 .hero.error {
-  text-align: center;
+  grid-auto-rows: auto auto;
   justify-items: center;
+  align-content: center;
+  min-height: calc(100vh);
 }
 </style>

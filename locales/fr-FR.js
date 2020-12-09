@@ -365,9 +365,9 @@ export default {
   },
 
   error: {
-    404: 'Page non trouvée',
-    500: "Une erreur s'est produite",
-    btn: "Retour à l'accueil"
+    headline: 'Oops…',
+    404: 'Cette page est introuvable.',
+    500: "Une erreur s'est produite."
   },
 
   footer: {
