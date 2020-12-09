@@ -1,3 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.71 15" class="arrow" fill="currentColor">
-  <path d="M0,2.361L2.361,0l10.495,10.495L23.35,0l2.361,2.361L13.071,15l-0.216-0.216L12.639,15L0,2.361z"></path>
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" width="20" height="12" viewBox="0 0 20 12" fill="currentColor" class="arrow">
+  <polygon points="17.6,0 10,7.6 2.4,0 0.2,2.2 7.8,9.8 10,12 12.2,9.8 19.8,2.2 "/>
 </svg>

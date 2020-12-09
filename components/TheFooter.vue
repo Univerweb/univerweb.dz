@@ -132,9 +132,6 @@ footer {
     list-style: none;
     a {
       display: grid;
-      svg {
-        height: 24px;
-      }
     }
   }
 
