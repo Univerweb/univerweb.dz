@@ -1,7 +1,7 @@
 <template>
   <div class="container nav">
-    <NuxtLink v-if="currentIndex < count - 1" :to="localePath('/realisations/' + previus[0].slug)" class="link previous" :data-text="$t('links.previous')"
-      ><NavArrow />{{ previus[0].title }}</NuxtLink
+    <NuxtLink v-if="currentIndex < count - 1" :to="localePath('/realisations/' + prev[0].slug)" class="link prev" :data-text="$t('links.prev')"
+      ><NavArrow />{{ prev[0].title }}</NuxtLink
     >
     <NuxtLink v-if="currentIndex > 0" :to="localePath('/realisations/' + next[0].slug)" class="link next" :data-text="$t('links.next')"
       ><NavArrow />{{ next[0].title }}</NuxtLink
@@ -24,10 +24,10 @@ export default {
     const count = works.length
     const currentIndex = works.indexOf(work)
     const next = works.slice(currentIndex - 1, currentIndex)
-    const previus = works.slice(currentIndex + 1, currentIndex + 2)
+    const prev = works.slice(currentIndex + 1, currentIndex + 2)
     const data = {
       next,
-      previus,
+      prev,
       currentIndex,
       count
     }
@@ -48,7 +48,7 @@ export default {
   padding-bottom: 48px;
   background-color: $secondary;
   .next,
-  .previous {
+  .prev {
     position: relative;
     color: $primary;
     padding: 0 12px 0 18px;
@@ -73,7 +73,7 @@ export default {
       line-height: 0.9375;
       pointer-events: none;
     }
-    &:not(.previous) {
+    &:not(.prev) {
       grid-column: 2;
       text-align: end;
       padding: 0 18px 0 12px;

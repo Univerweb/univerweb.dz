@@ -10,7 +10,7 @@ export default {
 
   links: {
     home: 'Website Design',
-    previous: 'Previous',
+    prev: 'Previous',
     next: 'Next',
     more: 'More happiness',
     visit: 'Visit Website'

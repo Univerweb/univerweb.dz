@@ -10,7 +10,7 @@ export default {
 
   links: {
     home: 'تصميم مواقع الويب',
-    previous: 'السابق',
+    prev: 'السابق',
     next: 'التالي',
     more: 'سعادة أكثر',
     visit: 'زيارة الموقع'
