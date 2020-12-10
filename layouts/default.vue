@@ -25,25 +25,10 @@ export default {
       PATH = this.$route.path.slice(3)
     }
     const link = [
-      {
-        rel: 'canonical',
-        href: process.env.BASE_URL + this.$route.path
-      },
-      {
-        rel: 'alternate',
-        hreflang: 'fr',
-        href: process.env.BASE_URL + PATH
-      },
-      {
-        rel: 'alternate',
-        hreflang: 'en',
-        href: process.env.BASE_URL + PATH
-      },
-      {
-        rel: 'alternate',
-        hreflang: 'ar',
-        href: process.env.BASE_URL + PATH
-      }
+      { rel: 'canonical', href: process.env.BASE_URL + this.$route.path },
+      { rel: 'alternate', hreflang: 'fr', href: process.env.BASE_URL + PATH },
+      { rel: 'alternate', hreflang: 'en', href: process.env.BASE_URL + PATH },
+      { rel: 'alternate', hreflang: 'ar', href: process.env.BASE_URL + PATH }
     ]
     let IMG = process.env.BASE_URL + '/univerweb-ar.png'
     if (this.$i18n.locale !== 'ar') {
@@ -54,39 +39,13 @@ export default {
       htmlAttrs: { lang: this.$i18n.locale, dir: DIR },
       link,
       meta: [
-        {
-          hid: 'og:type',
-          property: 'og:type',
-          content: 'website'
-        },
-        {
-          hid: 'og:site_name',
-          property: 'og:site_name',
-          content: this.$t('name')
-        },
-        {
-          hid: 'og:url',
-          property: 'og:url',
-          content: process.env.BASE_URL + this.$route.path
-        },
-        {
-          hid: 'og:image',
-          property: 'og:image',
-          content: IMG
-        },
-        {
-          hid: 'og:image:secure_url',
-          property: 'og:image:secure_url',
-          content: IMG
-        },
-        {
-          property: 'og:image:width',
-          content: '1920'
-        },
-        {
-          property: 'og:image:height',
-          content: '1080'
-        }
+        { hid: 'og:type', property: 'og:type', content: 'website' },
+        { hid: 'og:site_name', property: 'og:site_name', content: this.$t('name') },
+        { hid: 'og:url', property: 'og:url', content: process.env.BASE_URL + this.$route.path },
+        { hid: 'og:image', property: 'og:image', content: IMG },
+        { hid: 'og:image:secure_url', property: 'og:image:secure_url', content: IMG },
+        { property: 'og:image:width', content: '1920' },
+        { property: 'og:image:height', content: '1080' }
       ]
     }
   },

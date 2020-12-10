@@ -27,21 +27,9 @@ export default {
     return {
       titleTemplate: `${this.$t('menu.contact')} — ${this.$t('name')}`,
       meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: this.$t('contact.description')
-        },
-        {
-          hid: 'og:title',
-          property: 'og:title',
-          content: this.$t('menu.contact')
-        },
-        {
-          hid: 'og:description',
-          property: 'og:description',
-          content: this.$t('contact.description')
-        }
+        { hid: 'description', name: 'description', content: this.$t('contact.description') },
+        { hid: 'og:title', property: 'og:title', content: this.$t('menu.contact') },
+        { hid: 'og:description', property: 'og:description', content: this.$t('contact.description') }
       ]
     }
   },

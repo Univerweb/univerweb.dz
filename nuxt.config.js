@@ -82,7 +82,6 @@ export default {
     langDir: 'locales/',
     vuex: { syncMessages: true }
   },
-
   env: {
     BASE_URL: process.env.BASE_URL || false,
     API_KEY: process.env.API_KEY || false
@@ -91,14 +90,7 @@ export default {
     manifest: {
       name: 'Univerweb',
       short_name: 'Univerweb',
-      icons: [
-        {
-          src: '/icon.png',
-          sizes: '512x512',
-          type: 'image/png',
-          purpose: 'any maskable'
-        }
-      ],
+      icons: [{ src: '/icon.png', sizes: '512x512', type: 'image/png', purpose: 'any maskable' }],
       background_color: '#50c8f0',
       lang: 'fr'
     }

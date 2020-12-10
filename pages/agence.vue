@@ -36,21 +36,9 @@ export default {
     return {
       titleTemplate: `${this.$t('menu.agence')} — ${this.$t('name')}`,
       meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: this.$t('agency.description')
-        },
-        {
-          hid: 'og:title',
-          property: 'og:title',
-          content: this.$t('menu.agence')
-        },
-        {
-          hid: 'og:description',
-          property: 'og:description',
-          content: this.$t('agency.description')
-        }
+        { hid: 'description', name: 'description', content: this.$t('agency.description') },
+        { hid: 'og:title', property: 'og:title', content: this.$t('menu.agence') },
+        { hid: 'og:description', property: 'og:description', content: this.$t('agency.description') }
       ]
     }
   }

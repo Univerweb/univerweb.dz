@@ -28,21 +28,9 @@ export default {
     return {
       titleTemplate: `${this.$t('menu.realisations')} — ${this.$t('name')}`,
       meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: this.$t('works.description')
-        },
-        {
-          hid: 'og:title',
-          property: 'og:title',
-          content: this.$t('menu.realisations')
-        },
-        {
-          hid: 'og:description',
-          property: 'og:description',
-          content: this.$t('works.description')
-        }
+        { hid: 'description', name: 'description', content: this.$t('works.description') },
+        { hid: 'og:title', property: 'og:title', content: this.$t('menu.realisations') },
+        { hid: 'og:description', property: 'og:description', content: this.$t('works.description') }
       ]
     }
   }
