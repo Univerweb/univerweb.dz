@@ -10,7 +10,7 @@ export default {
 
   links: {
     home: 'Création de sites web',
-    previous: 'Précédent',
+    prev: 'Précédent',
     next: 'Suivant',
     more: 'Plus de bonheur',
     visit: 'Visiter le site web'
