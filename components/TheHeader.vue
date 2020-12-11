@@ -1,7 +1,7 @@
 <template>
   <header :class="{ show: show }">
-    <NuxtLink :to="localePath('/')" :title="$t('links.home')" class="logo" @click.native="show = false">
-      <span class="visually-hidden">{{ $t('links.home') }}</span>
+    <NuxtLink :to="localePath('/')" :title="$t('name')" class="logo" @click.native="show = false">
+      <span class="visually-hidden">{{ $t('name') }}</span>
       <LogoArabic v-if="$i18n.locale === 'ar'" />
       <LogoLatin v-else />
     </NuxtLink>
