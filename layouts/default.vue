@@ -27,8 +27,8 @@ export default {
     const link = [
       { rel: 'canonical', href: process.env.BASE_URL + this.$route.path },
       { rel: 'alternate', hreflang: 'fr', href: process.env.BASE_URL + PATH },
-      { rel: 'alternate', hreflang: 'en', href: process.env.BASE_URL + PATH },
-      { rel: 'alternate', hreflang: 'ar', href: process.env.BASE_URL + PATH }
+      { rel: 'alternate', hreflang: 'en', href: process.env.BASE_URL + '/en' + PATH },
+      { rel: 'alternate', hreflang: 'ar', href: process.env.BASE_URL + '/ar' + PATH }
     ]
     let IMG = process.env.BASE_URL + '/univerweb-ar.png'
     if (this.$i18n.locale !== 'ar') {
