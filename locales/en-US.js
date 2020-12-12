@@ -343,7 +343,7 @@ export default {
     },
     choose: {
       title: 'Why choose us',
-      body: {
+      content: {
         'A complete service': 'Creation of the website, domain name and hosting, we will offer you a complete service.',
         'At the cutting edge of technology': 'We use the latest techniques and languages on the web to provide you with the best possible service.',
         'A project that looks like you': 'We design websites that reflect your brand image and are tailored to your budget.',

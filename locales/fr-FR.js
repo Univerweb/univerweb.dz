@@ -345,7 +345,7 @@ export default {
     },
     choose: {
       title: 'Pourquoi nous choisir',
-      body: {
+      content: {
         'Une prestation complète': 'Création du site web, nom du domaine et hébergement, nous vous offrirons un service complet.',
         'À la pointe de la technique': 'Nous utilisons les dernières techniques et langages du web afin de vous offrir le meilleur service possible.',
         'Un projet qui vous ressemble': 'Nous concevons des sites web qui reflètent votre image de marque et qui sont adaptés à votre budget.',

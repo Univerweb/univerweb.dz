@@ -20,7 +20,7 @@
         <h2 class="h1">{{ $t('agency.choose.title') }}</h2>
       </div>
       <div class="details">
-        <div v-for="(value, name) in $t('agency.choose.body')" :key="name" class="item">
+        <div v-for="(value, name) in $t('agency.choose.content')" :key="name" class="item">
           <h3>{{ name }}</h3>
           <p class="lead">{{ value }}</p>
         </div>
