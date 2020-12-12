@@ -376,7 +376,7 @@ export default {
 
   footer: {
     address: {
-      name: 'Univerweb Eurl',
+      name: '@:name Eurl',
       streetAddress: '62 Coop. El Mebnia',
       addressLocality: 'Birkhadem',
       postalCode: '16 029',
@@ -397,7 +397,7 @@ export default {
       system: 'System',
       light: 'Light'
     },
-    copy: 'Copyright 2020 Univerweb. All rights reserved.'
+    copy: 'Copyright 2020 @:(name). All rights reserved.'
   },
 
   request: {

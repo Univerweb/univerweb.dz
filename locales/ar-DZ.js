@@ -366,7 +366,7 @@ export default {
 
   footer: {
     address: {
-      name: 'يونيفارواب',
+      name: '@:name',
       streetAddress: '62 تعاونية المبنية',
       addressLocality: 'بئر خادم',
       postalCode: '029 16',
@@ -387,7 +387,7 @@ export default {
       system: 'جهاز',
       light: 'فاتح'
     },
-    copy: 'حقوق النشر 2020 يونيفارواب. جميع الحقوق محفوظة.'
+    copy: 'حقوق النشر 2020 @:(name). جميع الحقوق محفوظة.'
   },
 
   request: {
