@@ -23,14 +23,6 @@ export default {
     email: 'E-mail :'
   },
 
-  home: {
-    description:
-      "Plus que des sites web, nous concevons et innovons pour vous des expériences numériques centrées sur l'humain et qui reflètent votre image de marque.",
-    headline: 'Nous créons des sites web tellement mémorables.',
-    lead:
-      "Encore plus que des sites web, nous concevons et innovons pour vous des expériences numériques centrées sur l'humain et qui reflètent votre image de marque, notre mission première est de vous satisfaire !"
-  },
-
   works: {
     description: 'Découvrez nos toutes dernières créations. Nous serions ravis de collaborer avec vous.',
     headline: 'Ils ont cru en nous et ils sont comblés.'

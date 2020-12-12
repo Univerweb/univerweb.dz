@@ -23,13 +23,6 @@ export default {
     email: 'E-mail:'
   },
 
-  home: {
-    description: 'Even more than websites, we design and innovate human-centered digital experiences for you that reflect your brand image.',
-    headline: 'We create such memorable websites.',
-    lead:
-      'Even more than websites, we design and innovate human-centered digital experiences for you that reflect your brand image, our primary mission is to satisfy you!'
-  },
-
   works: {
     description: 'Discover our latest creations. We would be delighted to work with you.',
     headline: 'They believed in us and they are fulfilled.'
