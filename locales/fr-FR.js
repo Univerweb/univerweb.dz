@@ -311,7 +311,7 @@ export default {
       'De nos jours quiconque peut faire un site web, y compris votre neveu de 13 ans ! Mais qui peut réellement concrétiser une stratégie de présence web accomplie, sur des fondements technologiques et une méthodologie rigoureuse.',
     webDesign: {
       title: 'Web design',
-      body:
+      content:
         "Un mélange savant et millimétré entre design attrayant, charte graphique respectée et expérience utilisateur au top des priorités. Nous trouverons pour vous l'équilibre parfait.",
       tags: ['#Responsive', '#DonnéesStructurées', '#HtmlValide', '#Accessibilité']
     },
