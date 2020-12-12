@@ -6,7 +6,7 @@
     </div>
     <div class="container">
       <div class="intro">
-        <h2 class="h1">{{ $t('agency.method.headline') }}</h2>
+        <h2 class="h1">{{ $t('agency.method.title') }}</h2>
       </div>
       <ol class="details">
         <li v-for="(value, name) in $t('agency.method.body')" :key="name" class="item">
