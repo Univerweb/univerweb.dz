@@ -1,45 +1,39 @@
 <template>
   <main>
     <div class="container intro">
-      <h1>{{ $t('prestations.headline') }}</h1>
-      <p class="lead">{{ $t('prestations.lead') }}</p>
+      <h1>{{ headline }}</h1>
+      <p class="lead">{{ lead }}</p>
     </div>
     <div class="container prestations">
       <div class="intro">
-        <h2>{{ $t('prestations.webDesign.title') }}</h2>
+        <h2>{{ webDesign.title }}</h2>
       </div>
       <div class="details">
-        <p class="item lead">{{ $t('prestations.webDesign.content') }}</p>
+        <p class="item lead">{{ webDesign.content }}</p>
         <ul class="item">
-          <li v-for="item in $t('prestations.webDesign.tags')" :key="item">
-            {{ item }}
-          </li>
+          <li v-for="item in webDesign.tags" :key="item">{{ item }}</li>
         </ul>
       </div>
     </div>
     <div class="container prestations">
       <div class="intro">
-        <h2>{{ $t('prestations.dev.title') }}</h2>
+        <h2>{{ dev.title }}</h2>
       </div>
       <div class="details">
-        <p class="item lead">{{ $t('prestations.dev.content') }}</p>
+        <p class="item lead">{{ dev.content }}</p>
         <ul class="item">
-          <li v-for="item in $t('prestations.dev.tags')" :key="item">
-            {{ item }}
-          </li>
+          <li v-for="item in dev.tags" :key="item">{{ item }}</li>
         </ul>
       </div>
     </div>
     <div class="container prestations">
       <div class="intro">
-        <h2>{{ $t('prestations.support.title') }}</h2>
+        <h2>{{ support.title }}</h2>
       </div>
       <div class="details">
-        <p class="item lead">{{ $t('prestations.support.content') }}</p>
+        <p class="item lead">{{ support.content }}</p>
         <ul class="item">
-          <li v-for="item in $t('prestations.support.tags')" :key="item">
-            {{ item }}
-          </li>
+          <li v-for="item in support.tags" :key="item">{{ item }}</li>
         </ul>
       </div>
     </div>
@@ -49,25 +43,19 @@
 
 <script>
 export default {
+  async asyncData({ $content, app }) {
+    const { title, description, headline, lead, webDesign, dev, support } = await $content(app.i18n.locale, 'prestations').fetch()
+
+    return { title, description, headline, lead, webDesign, dev, support }
+  },
+
   head() {
     return {
-      titleTemplate: `${this.$t('menu.prestations')} — ${this.$t('name')}`,
+      titleTemplate: `${this.title} — ${this.$t('name')}`,
       meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: this.$t('prestations.description')
-        },
-        {
-          hid: 'og:title',
-          property: 'og:title',
-          content: this.$t('menu.prestations')
-        },
-        {
-          hid: 'og:description',
-          property: 'og:description',
-          content: this.$t('prestations.description')
-        }
+        { hid: 'description', name: 'description', content: this.description },
+        { hid: 'og:title', property: 'og:title', content: this.title },
+        { hid: 'og:description', property: 'og:description', content: this.description }
       ]
     }
   }
