@@ -6,7 +6,7 @@
     </div>
     <div class="container prestations">
       <div class="intro">
-        <h2>{{ $t('prestations.webDesign.headline') }}</h2>
+        <h2>{{ $t('prestations.webDesign.title') }}</h2>
       </div>
       <div class="details">
         <p class="item lead">{{ $t('prestations.webDesign.body') }}</p>

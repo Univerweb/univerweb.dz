@@ -308,7 +308,7 @@ export default {
     lead:
       'These days anyone can make a website, including your 13 year old nephew! But who can really materialize an accomplished web presence strategy, on technological foundations and a rigorous methodology.',
     webDesign: {
-      headline: 'Web design',
+      title: 'Web design',
       body:
         'A clever and precise mix of attractive design, respected graphic charter and user experience at the top of the priorities. We will find the perfect balance for you.',
       tags: ['#Responsive', '#StructuredData', '#ValidHTML', '#Accessibility']
