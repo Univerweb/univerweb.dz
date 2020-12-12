@@ -2,7 +2,7 @@
   <section class="container hero">
     <div class="intro">
       <h1>{{ $t('home.headline') }}</h1>
-      <p class="lead">{{ $t('home.body') }}</p>
+      <p class="lead">{{ $t('home.lead') }}</p>
     </div>
     <HomeArrow v-scroll-to="'.works'" />
   </section>
