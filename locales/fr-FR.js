@@ -300,7 +300,7 @@ export default {
     description: 'Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.',
     body: "Créer des sites web professionnels, c'est ce que nous faisons. Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
     other: {
-      headline: 'Autres moyens de nous contacter',
+      title: 'Autres moyens de nous contacter',
       body: {
         Gérant: 'h.nedjar@univerweb.dz',
         'Soutien technique': 'support@univerweb.dz'

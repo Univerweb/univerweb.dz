@@ -9,7 +9,7 @@
     <div id="map"></div>
     <div class="container contact">
       <div class="intro">
-        <h2>{{ $t('contact.other.headline') }}</h2>
+        <h2>{{ $t('contact.other.title') }}</h2>
       </div>
       <div class="details">
         <div v-for="(value, name) in $t('contact.other.body')" :key="name" class="item">

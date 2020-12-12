@@ -299,7 +299,7 @@ export default {
     description: "Tell us about your needs, we'd love to collaborate with you.",
     body: "Creating professional websites is what we do. Tell us about your needs, we'd love to collaborate with you.",
     other: {
-      headline: 'Other ways to contact us',
+      title: 'Other ways to contact us',
       body: {
         Manager: 'h.nedjar@univerweb.dz',
         'Technical support': 'support@univerweb.dz'
