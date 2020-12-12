@@ -2,7 +2,7 @@
   <main>
     <div class="container intro">
       <h1>{{ $t('agency.headline') }}</h1>
-      <p class="lead">{{ $t('agency.body') }}</p>
+      <p class="lead">{{ $t('agency.lead') }}</p>
     </div>
     <div class="container">
       <div class="intro">

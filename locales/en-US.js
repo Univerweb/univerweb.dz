@@ -330,7 +330,7 @@ export default {
     description:
       'We are a young team of creative-perfectionists and passionate about our work, we like to code beautiful websites while drinking coffee in the morning.',
     headline: 'We are a web agency.',
-    body:
+    lead:
       'Founded in 2011 in Algiers, we are a young team of creative-perfectionists and passionate about our work, we like to code beautiful websites while drinking coffee in the morning.',
     method: {
       title: 'Our working method',

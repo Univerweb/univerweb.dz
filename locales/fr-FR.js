@@ -332,7 +332,7 @@ export default {
   agency: {
     description: 'Nous sommes une jeunes équipe de créativo-perfectionnistes et passionnée par notre travail, nous aimons coder de magnifiques sites web.',
     headline: 'Nous sommes une agence web.',
-    body:
+    lead:
       'Créée en 2011 à Alger, nous sommes une jeunes équipe de créativo-perfectionnistes et passionnée par notre travail, nous aimons coder de magnifiques sites web en buvant du café le matin.',
     method: {
       title: 'Notre méthode de travail',
