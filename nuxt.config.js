@@ -68,7 +68,7 @@ export default {
     '@nuxtjs/pwa',
     ['vue-scrollto/nuxt', { offset: -72 }]
   ],
-  modules: ['nuxt-i18n', '@nuxt/http'],
+  modules: ['nuxt-i18n', '@nuxt/http', '@nuxt/content'],
   components: true,
   plugins: ['~plugins/vue-lazyload', { src: '~plugins/ga.js', mode: 'client' }],
   i18n: {
