@@ -35,7 +35,7 @@
         <h2>{{ $t('prestations.support.title') }}</h2>
       </div>
       <div class="details">
-        <p class="item lead">{{ $t('prestations.support.body') }}</p>
+        <p class="item lead">{{ $t('prestations.support.content') }}</p>
         <ul class="item">
           <li v-for="item in $t('prestations.support.tags')" :key="item">
             {{ item }}

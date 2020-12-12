@@ -323,7 +323,7 @@ export default {
     },
     support: {
       title: 'Support + Hébergement',
-      body:
+      content:
         "Imaginez un plat au restaurant sans assiette et sans serveur. Un site sans hébergement fiable et un support présent 24/7 c'est exactement la même chose.",
       tags: ['#HTTPS', '#HTTP/2', '#SauvegardeComplète']
     }
