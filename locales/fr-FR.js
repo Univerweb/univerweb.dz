@@ -307,7 +307,7 @@ export default {
   prestations: {
     description: 'Une stratégie de présence web accomplie, sur des fondements technologiques et une méthodologie rigoureuse.',
     headline: 'Ce dont nous sommes capables.',
-    body:
+    lead:
       'De nos jours quiconque peut faire un site web, y compris votre neveu de 13 ans ! Mais qui peut réellement concrétiser une stratégie de présence web accomplie, sur des fondements technologiques et une méthodologie rigoureuse.',
     webDesign: {
       headline: 'Web design',

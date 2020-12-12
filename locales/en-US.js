@@ -305,7 +305,7 @@ export default {
   prestations: {
     description: 'An accomplished web presence strategy, on technological foundations and a rigorous methodology.',
     headline: 'What we are capable of.',
-    body:
+    lead:
       'These days anyone can make a website, including your 13 year old nephew! But who can really materialize an accomplished web presence strategy, on technological foundations and a rigorous methodology.',
     webDesign: {
       headline: 'Web design',

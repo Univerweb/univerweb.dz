@@ -2,7 +2,7 @@
   <main>
     <div class="container intro">
       <h1>{{ $t('prestations.headline') }}</h1>
-      <p class="lead">{{ $t('prestations.body') }}</p>
+      <p class="lead">{{ $t('prestations.lead') }}</p>
     </div>
     <div class="container prestations">
       <div class="intro">
