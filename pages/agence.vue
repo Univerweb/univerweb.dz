@@ -1,15 +1,15 @@
 <template>
   <main>
     <div class="container intro">
-      <h1>{{ $t('agency.headline') }}</h1>
-      <p class="lead">{{ $t('agency.lead') }}</p>
+      <h1>{{ headline }}</h1>
+      <p class="lead">{{ lead }}</p>
     </div>
     <div class="container">
       <div class="intro">
-        <h2 class="h1">{{ $t('agency.method.title') }}</h2>
+        <h2 class="h1">{{ method.title }}</h2>
       </div>
       <ol class="details">
-        <li v-for="(value, name) in $t('agency.method.content')" :key="name" class="item">
+        <li v-for="(value, name) in method.content" :key="name" class="item">
           <h3>{{ name }}</h3>
           <p class="lead">{{ value }}</p>
         </li>
@@ -17,10 +17,10 @@
     </div>
     <div class="container">
       <div class="intro">
-        <h2 class="h1">{{ $t('agency.choose.title') }}</h2>
+        <h2 class="h1">{{ choose.title }}</h2>
       </div>
       <div class="details">
-        <div v-for="(value, name) in $t('agency.choose.content')" :key="name" class="item">
+        <div v-for="(value, name) in choose.content" :key="name" class="item">
           <h3>{{ name }}</h3>
           <p class="lead">{{ value }}</p>
         </div>
@@ -32,13 +32,19 @@
 
 <script>
 export default {
+  async asyncData({ $content, app }) {
+    const { title, description, headline, lead, method, choose } = await $content(app.i18n.locale, 'agence').fetch()
+
+    return { title, description, headline, lead, method, choose }
+  },
+
   head() {
     return {
-      titleTemplate: `${this.$t('menu.agence')} — ${this.$t('name')}`,
+      titleTemplate: `${this.title} — ${this.$t('name')}`,
       meta: [
-        { hid: 'description', name: 'description', content: this.$t('agency.description') },
-        { hid: 'og:title', property: 'og:title', content: this.$t('menu.agence') },
-        { hid: 'og:description', property: 'og:description', content: this.$t('agency.description') }
+        { hid: 'description', name: 'description', content: this.description },
+        { hid: 'og:title', property: 'og:title', content: this.title },
+        { hid: 'og:description', property: 'og:description', content: this.description }
       ]
     }
   }
