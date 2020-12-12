@@ -8,10 +8,6 @@ export default {
     contact: 'التواصل معنا'
   },
 
-  links: {
-    home: 'تصميم مواقع الويب'
-  },
-
   label: {
     menu: 'افتح القائمة',
     lang: 'اختر اللغة',

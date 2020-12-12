@@ -8,10 +8,6 @@ export default {
     contact: 'Contact'
   },
 
-  links: {
-    home: 'Website Design'
-  },
-
   label: {
     menu: 'Open menu',
     lang: 'Select language',
