@@ -32,7 +32,7 @@
     </div>
     <div class="container prestations">
       <div class="intro">
-        <h2>{{ $t('prestations.support.headline') }}</h2>
+        <h2>{{ $t('prestations.support.title') }}</h2>
       </div>
       <div class="details">
         <p class="item lead">{{ $t('prestations.support.body') }}</p>

@@ -322,7 +322,7 @@ export default {
       tags: ['#CMS', '#Drupal', '#ApplicationMobile', '#NuxtJS']
     },
     support: {
-      headline: 'Support + Hébergement',
+      title: 'Support + Hébergement',
       body:
         "Imaginez un plat au restaurant sans assiette et sans serveur. Un site sans hébergement fiable et un support présent 24/7 c'est exactement la même chose.",
       tags: ['#HTTPS', '#HTTP/2', '#SauvegardeComplète']

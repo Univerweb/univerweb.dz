@@ -320,7 +320,7 @@ export default {
       tags: ['#CMS', '#Drupal', '#MobileApp', '#NuxtJS']
     },
     support: {
-      headline: 'Support + Hosting',
+      title: 'Support + Hosting',
       body: 'Imagine a dish in a restaurant without a plate and without a waiter. A site without reliable hosting and 24/7 support is exactly the same thing.',
       tags: ['#HTTPS', '#HTTP/2', '#FullBackup']
     }
