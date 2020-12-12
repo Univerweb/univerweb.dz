@@ -297,7 +297,6 @@ export default {
 
   contact: {
     description: "Tell us about your needs, we'd love to collaborate with you.",
-    lead: "Creating professional websites is what we do. Tell us about your needs, we'd love to collaborate with you.",
     other: {
       title: 'Other ways to contact us',
       content: {
@@ -324,6 +323,7 @@ export default {
     maps: 'Get directions',
     phone: '021 44 08 11',
     mobile: '0551 90 46 22',
+    about: "Creating professional websites is what we do. Tell us about your needs, we'd love to collaborate with you.",
     email: 'contact@univerweb.dz',
     social: {
       twitter: 'Join us on Twitter',

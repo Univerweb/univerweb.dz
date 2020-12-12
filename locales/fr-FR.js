@@ -298,7 +298,6 @@ export default {
 
   contact: {
     description: 'Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.',
-    lead: "Créer des sites web professionnels, c'est ce que nous faisons. Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
     other: {
       title: 'Autres moyens de nous contacter',
       content: {
@@ -325,6 +324,7 @@ export default {
     maps: 'Obtenir un itinéraire',
     phone: '021 44 08 11',
     mobile: '0551 90 46 22',
+    about: "Créer des sites web professionnels, c'est ce que nous faisons. Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
     email: 'contact@univerweb.dz',
     social: {
       twitter: 'Rejoignez-nous sur Twitter',
