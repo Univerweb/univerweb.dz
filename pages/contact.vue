@@ -2,17 +2,17 @@
   <main>
     <div class="container details">
       <div class="item">
-        <h1 class="h2">{{ $t('menu.contact') }}</h1>
+        <h1 class="h2">{{ title }}</h1>
         <AppAbout />
       </div>
     </div>
     <div id="map"></div>
     <div class="container contact">
       <div class="intro">
-        <h2>{{ $t('contact.other.title') }}</h2>
+        <h2>{{ other.title }}</h2>
       </div>
       <div class="details">
-        <div v-for="(value, name) in $t('contact.other.content')" :key="name" class="item">
+        <div v-for="(value, name) in other.content" :key="name" class="item">
           <h3 class="h6">{{ name }}</h3>
           <a :href="'mailto:' + value" class="link moveArrow">{{ value }}</a>
         </div>
@@ -23,13 +23,19 @@
 
 <script>
 export default {
+  async asyncData({ $content, app }) {
+    const { title, description, other } = await $content(app.i18n.locale, 'contact').fetch()
+
+    return { title, description, other }
+  },
+
   head() {
     return {
-      titleTemplate: `${this.$t('menu.contact')} — ${this.$t('name')}`,
+      titleTemplate: `${this.title} — ${this.$t('name')}`,
       meta: [
-        { hid: 'description', name: 'description', content: this.$t('contact.description') },
-        { hid: 'og:title', property: 'og:title', content: this.$t('menu.contact') },
-        { hid: 'og:description', property: 'og:description', content: this.$t('contact.description') }
+        { hid: 'description', name: 'description', content: this.description },
+        { hid: 'og:title', property: 'og:title', content: this.title },
+        { hid: 'og:description', property: 'og:description', content: this.description }
       ]
     }
   },
