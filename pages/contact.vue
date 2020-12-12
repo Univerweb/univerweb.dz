@@ -12,7 +12,7 @@
         <h2>{{ $t('contact.other.title') }}</h2>
       </div>
       <div class="details">
-        <div v-for="(value, name) in $t('contact.other.body')" :key="name" class="item">
+        <div v-for="(value, name) in $t('contact.other.content')" :key="name" class="item">
           <h3 class="h6">{{ name }}</h3>
           <a :href="'mailto:' + value" class="link moveArrow">{{ value }}</a>
         </div>

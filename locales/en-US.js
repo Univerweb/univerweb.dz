@@ -300,7 +300,7 @@ export default {
     body: "Creating professional websites is what we do. Tell us about your needs, we'd love to collaborate with you.",
     other: {
       title: 'Other ways to contact us',
-      body: {
+      content: {
         Manager: 'h.nedjar@univerweb.dz',
         'Technical support': 'support@univerweb.dz'
       }
