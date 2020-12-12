@@ -298,7 +298,7 @@ export default {
 
   contact: {
     description: 'Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.',
-    body: "Créer des sites web professionnels, c'est ce que nous faisons. Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
+    lead: "Créer des sites web professionnels, c'est ce que nous faisons. Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
     other: {
       title: 'Autres moyens de nous contacter',
       content: {

@@ -297,7 +297,7 @@ export default {
 
   contact: {
     description: "Tell us about your needs, we'd love to collaborate with you.",
-    body: "Creating professional websites is what we do. Tell us about your needs, we'd love to collaborate with you.",
+    lead: "Creating professional websites is what we do. Tell us about your needs, we'd love to collaborate with you.",
     other: {
       title: 'Other ways to contact us',
       content: {
