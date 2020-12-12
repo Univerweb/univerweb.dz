@@ -17,7 +17,7 @@
     </div>
     <div class="container">
       <div class="intro">
-        <h2 class="h1">{{ $t('agency.choose.headline') }}</h2>
+        <h2 class="h1">{{ $t('agency.choose.title') }}</h2>
       </div>
       <div class="details">
         <div v-for="(value, name) in $t('agency.choose.body')" :key="name" class="item">
