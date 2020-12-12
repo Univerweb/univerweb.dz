@@ -9,16 +9,22 @@ export default {
   },
 
   links: {
-    home: 'Création de sites web',
-    prev: 'Précédent',
-    next: 'Suivant',
-    more: 'Plus de bonheur',
-    visit: 'Visiter le site web'
+    home: 'Création de sites web'
   },
 
-  ariaLabel: {
+  label: {
     menu: 'Ouvrir le menu',
-    lang: 'Choisir la langue'
+    lang: 'Choisir la langue',
+    more: 'Plus de bonheur',
+    client: 'Client',
+    features: 'Fonctionnalités',
+    industry: 'Secteur',
+    visit: 'Visiter le site web',
+    prev: 'Précédent',
+    next: 'Suivant',
+    phone: 'Téléphone / fax :',
+    mobile: 'Mobile :',
+    email: 'E-mail :'
   },
 
   home: {
@@ -379,18 +385,9 @@ export default {
       addressCity: 'Alger'
     },
     maps: 'Obtenir un itinéraire',
-    phone: {
-      label: 'Téléphone / fax :',
-      number: '021 44 08 11'
-    },
-    mobile: {
-      label: 'Mobile :',
-      number: '0551 90 46 22'
-    },
-    email: {
-      label: 'E-mail :',
-      mailto: 'contact@univerweb.dz'
-    },
+    phone: '021 44 08 11',
+    mobile: '0551 90 46 22',
+    email: 'contact@univerweb.dz',
     social: {
       twitter: 'Rejoignez-nous sur Twitter',
       facebook: 'Rejoignez-nous sur Facebook',

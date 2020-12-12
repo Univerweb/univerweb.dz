@@ -13,13 +13,13 @@
       </ul>
       <div class="btn lang">
         <LangGlobe />
-        <select v-model="lang" :aria-label="$t('ariaLabel.lang')" @change="onChange(lang)">
+        <select v-model="lang" :aria-label="$t('label.lang')" @change="onChange(lang)">
           <option v-for="locale in $i18n.locales" :key="locale.code" :value="locale.code">{{ locale.name }}</option>
         </select>
         <LangArrow />
       </div>
     </nav>
-    <button type="button" :aria-label="$t('ariaLabel.menu')" class="toggle" @click="isShow">
+    <button type="button" :aria-label="$t('label.menu')" class="toggle" @click="isShow">
       <span class="top"></span>
       <span class="middle"></span>
       <span class="bottom"></span>

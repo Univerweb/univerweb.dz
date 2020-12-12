@@ -9,16 +9,22 @@ export default {
   },
 
   links: {
-    home: 'Website Design',
-    prev: 'Previous',
-    next: 'Next',
-    more: 'More happiness',
-    visit: 'Visit Website'
+    home: 'Website Design'
   },
 
-  ariaLabel: {
+  label: {
     menu: 'Open menu',
-    lang: 'Select language'
+    lang: 'Select language',
+    more: 'More happiness',
+    client: 'Client',
+    features: 'Features',
+    industry: 'Industry',
+    visit: 'Visit Website',
+    prev: 'Previous',
+    next: 'Next',
+    phone: 'Telephone / fax:',
+    mobile: 'Mobile:',
+    email: 'E-mail:'
   },
 
   home: {
@@ -377,18 +383,9 @@ export default {
       addressCity: 'Algiers'
     },
     maps: 'Get directions',
-    phone: {
-      label: 'Telephone / fax:',
-      number: '021 44 08 11'
-    },
-    mobile: {
-      label: 'Mobile:',
-      number: '0551 90 46 22'
-    },
-    email: {
-      label: 'E-mail:',
-      mailto: 'contact@univerweb.dz'
-    },
+    phone: '021 44 08 11',
+    mobile: '0551 90 46 22',
+    email: 'contact@univerweb.dz',
     social: {
       twitter: 'Join us on Twitter',
       facebook: 'Join us on Facebook',

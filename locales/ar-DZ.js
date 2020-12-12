@@ -9,16 +9,22 @@ export default {
   },
 
   links: {
-    home: 'تصميم مواقع الويب',
-    prev: 'السابق',
-    next: 'التالي',
-    more: 'سعادة أكثر',
-    visit: 'زيارة الموقع'
+    home: 'تصميم مواقع الويب'
   },
 
-  ariaLabel: {
+  label: {
     menu: 'افتح القائمة',
-    lang: 'اختر اللغة'
+    lang: 'اختر اللغة',
+    more: 'سعادة أكثر',
+    client: 'الزبون',
+    features: 'المميزات',
+    industry: 'القطاع',
+    visit: 'زيارة الموقع',
+    prev: 'السابق',
+    next: 'التالي',
+    phone: 'الهاتف / الفاكس:',
+    mobile: 'جوال:',
+    email: 'البريد الإلكتروني:'
   },
 
   home: {
@@ -367,18 +373,9 @@ export default {
       addressCity: 'الجزائر العاصمة '
     },
     maps: 'احصل على الاتجاهات',
-    phone: {
-      label: 'الهاتف / الفاكس:',
-      number: '021 44 08 11'
-    },
-    mobile: {
-      label: 'جوال:',
-      number: '0551 90 46 22'
-    },
-    email: {
-      label: 'البريد الإلكتروني:',
-      mailto: 'contact@univerweb.dz'
-    },
+    phone: '021 44 08 11',
+    mobile: '0551 90 46 22',
+    email: 'contact@univerweb.dz',
     social: {
       twitter: 'انضم إلينا على تويتر',
       facebook: 'انضم إلينا على فيس بوك',

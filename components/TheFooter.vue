@@ -10,13 +10,13 @@
       </p>
       <p>
         <a href="tel:+21321440811">
-          <span class="visually-hidden">{{ $t('footer.phone.label') }}</span>
-          <span dir="ltr">{{ $t('footer.phone.number') }}</span>
+          <span class="visually-hidden">{{ $t('label.phone') }}</span>
+          <span dir="ltr">{{ $t('footer.phone') }}</span>
         </a>
         —
         <a href="tel:+213551904622">
-          <span class="visually-hidden">{{ $t('footer.mobile.label') }}</span>
-          <span dir="ltr">{{ $t('footer.mobile.number') }}</span>
+          <span class="visually-hidden">{{ $t('label.mobile') }}</span>
+          <span dir="ltr">{{ $t('footer.mobile') }}</span>
         </a>
       </p>
     </div>
