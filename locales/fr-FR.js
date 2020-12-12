@@ -336,7 +336,7 @@ export default {
       'Créée en 2011 à Alger, nous sommes une jeunes équipe de créativo-perfectionnistes et passionnée par notre travail, nous aimons coder de magnifiques sites web en buvant du café le matin.',
     method: {
       title: 'Notre méthode de travail',
-      body: {
+      content: {
         Écoute: 'Nous essaierons de comprendre des éléments essentiels tels que votre activité, vos objectifs et vos contraintes.',
         Recherche: 'Nous trouverons des solutions adaptées à vos besoins tout en respectant votre image de marque.',
         Création: 'En vous consultant et informant étape par étape, nous donnons vie à votre projet.',

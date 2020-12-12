@@ -334,7 +334,7 @@ export default {
       'Founded in 2011 in Algiers, we are a young team of creative-perfectionists and passionate about our work, we like to code beautiful websites while drinking coffee in the morning.',
     method: {
       title: 'Our working method',
-      body: {
+      content: {
         Listen: 'We will try to understand essential elements such as your activity, your objectives and your constraints.',
         Research: 'We will find solutions adapted to your needs while respecting your brand image.',
         Creation: 'By consulting and informing you step by step, we bring your project to life.',
