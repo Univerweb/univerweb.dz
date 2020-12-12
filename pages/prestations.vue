@@ -22,7 +22,7 @@
         <h2>{{ $t('prestations.dev.title') }}</h2>
       </div>
       <div class="details">
-        <p class="item lead">{{ $t('prestations.dev.body') }}</p>
+        <p class="item lead">{{ $t('prestations.dev.content') }}</p>
         <ul class="item">
           <li v-for="item in $t('prestations.dev.tags')" :key="item">
             {{ item }}

@@ -315,7 +315,7 @@ export default {
     },
     dev: {
       title: 'Development',
-      body:
+      content:
         'Your business and your business needs are unique. You are unique! We will code the application for you that meets your exact needs, without frills and with agility.',
       tags: ['#CMS', '#Drupal', '#MobileApp', '#NuxtJS']
     },
