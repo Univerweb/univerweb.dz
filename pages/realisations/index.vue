@@ -1,36 +1,26 @@
 <template>
   <main>
-    <div class="container works">
-      <div class="intro">
-        <h1>{{ $t('works.headline') }}</h1>
-      </div>
-      <div class="details">
-        <div v-for="work in $t('work')" :key="work.slug" class="item">
-          <h2 class="h3">
-            <NuxtLink :to="localePath('/realisations/' + work.slug)">{{ work.title }}</NuxtLink>
-          </h2>
-          <NuxtLink :to="localePath('/realisations/' + work.slug)">
-            <div class="card">
-              <img v-lazy="'/works/' + work.slug + '/' + work.slug + '_thumbnail.jpg'" :alt="work.title" />
-            </div>
-            <p class="h6">{{ work.body }}</p>
-          </NuxtLink>
-        </div>
-      </div>
-    </div>
+    <AppWorks :headline="headline" :works="works" />
     <AppRequest />
   </main>
 </template>
 
 <script>
 export default {
+  async asyncData({ $content, app }) {
+    const { title, description, headline } = await $content(app.i18n.locale, 'works').only(['title', 'description', 'headline']).fetch()
+    const works = await $content(app.i18n.locale, 'works_slug').only(['slug', 'title', 'lead']).sortBy('position', 'desc').fetch()
+
+    return { title, description, headline, works }
+  },
+
   head() {
     return {
-      titleTemplate: `${this.$t('menu.realisations')} — ${this.$t('name')}`,
+      titleTemplate: `${this.title} — ${this.$t('name')}`,
       meta: [
-        { hid: 'description', name: 'description', content: this.$t('works.description') },
-        { hid: 'og:title', property: 'og:title', content: this.$t('menu.realisations') },
-        { hid: 'og:description', property: 'og:description', content: this.$t('works.description') }
+        { hid: 'description', name: 'description', content: this.description },
+        { hid: 'og:title', property: 'og:title', content: this.title },
+        { hid: 'og:description', property: 'og:description', content: this.description }
       ]
     }
   }

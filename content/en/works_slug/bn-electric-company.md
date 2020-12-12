@@ -1,0 +1,12 @@
+---
+title: BN Electric Company
+description: Univerweb collaborated with BN Electric Company on its digital presence. We created the website and we provide hosting.
+
+tags:
+  - '#WebDesign'
+  - '#Hosting'
+industry: Electricity
+lead: Founded in 2010, BN Electric Company is a company specializing in mobile telephony, industry, renewable energies, the tertiary sector and services.
+link: https://www.bnelectric.dz
+position: 6
+---

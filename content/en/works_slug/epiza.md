@@ -1,0 +1,13 @@
+---
+title: Epiza
+description: Univerweb collaborated with Epiza on its digital presence. We created the website and we provide hosting.
+
+tags:
+  - '#WebDesign'
+  - '#Development'
+  - '#Hosting'
+industry: Real estate promotion
+lead: Epiza is a team of professionals assembled for the realization of real estate projects.
+link: https://www.epizaskikda.com
+position: 9
+---

@@ -1,0 +1,13 @@
+---
+title: Microtel Training Institute
+description: Univerweb collaborated with Microtel Training Institute on its digital presence. We created the website and we provide hosting.
+
+tags:
+  - '#WebDesign'
+  - '#Development'
+  - '#Hosting'
+industry: Training
+lead: Founded in 1992, Microtel Training Institute has set itself the objective of assisting companies and institutions to set up efficient, scalable and manageable network solutions.
+link: https://www.microtel-net.com
+position: 11
+---

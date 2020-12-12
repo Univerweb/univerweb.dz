@@ -1,0 +1,13 @@
+---
+title: Corim
+description: Univerweb collaborated with Corim on its digital presence. We created the website and we provide hosting.
+
+tags:
+  - '#WebDesign'
+  - '#Development'
+  - '#Hosting'
+industry: Real estate
+lead: Corim is a real estate agency based in Algiers and specialized in the rental and sale of apartments, villas, buildings, land, premises and hangars.
+link: https://www.corim.dz
+position: 16
+---

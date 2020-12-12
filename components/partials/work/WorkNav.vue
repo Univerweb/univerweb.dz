@@ -1,11 +1,7 @@
 <template>
   <div class="container nav">
-    <NuxtLink v-if="currentIndex < count - 1" :to="localePath('/realisations/' + prev[0].slug)" class="link prev" :data-text="$t('label.prev')"
-      ><NavArrow />{{ prev[0].title }}</NuxtLink
-    >
-    <NuxtLink v-if="currentIndex > 0" :to="localePath('/realisations/' + next[0].slug)" class="link next" :data-text="$t('label.next')"
-      ><NavArrow />{{ next[0].title }}</NuxtLink
-    >
+    <NuxtLink v-if="prev" :to="toLink(prev.slug)" class="link prev" :data-text="$t('label.prev')"><NavArrow />{{ prev.title }}</NuxtLink>
+    <NuxtLink v-if="next" :to="toLink(next.slug)" class="link next" :data-text="$t('label.next')"><NavArrow />{{ next.title }}</NuxtLink>
   </div>
 </template>
 
@@ -17,21 +13,24 @@ export default {
     NavArrow
   },
 
-  data() {
-    const works = this.$t('work')
-    const slug = this.$route.params.slug
-    const work = works.find(work => work.slug === slug)
-    const count = works.length
-    const currentIndex = works.indexOf(work)
-    const next = works.slice(currentIndex - 1, currentIndex)
-    const prev = works.slice(currentIndex + 1, currentIndex + 2)
-    const data = {
-      next,
-      prev,
-      currentIndex,
-      count
+  props: {
+    prev: {
+      type: Object,
+      default: null
+    },
+    next: {
+      type: Object,
+      default: null
     }
-    return data
+  },
+
+  methods: {
+    toLink(slug) {
+      if (slug === 'index') {
+        return this.localePath('realisations')
+      }
+      return this.localePath({ name: 'realisations-slug', params: { slug } })
+    }
   }
 }
 </script>

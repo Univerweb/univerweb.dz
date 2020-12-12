@@ -79,8 +79,7 @@ export default {
     ],
     defaultLocale: 'fr',
     lazy: true,
-    langDir: 'locales/',
-    vuex: { syncMessages: true }
+    langDir: 'locales/'
   },
   env: {
     BASE_URL: process.env.BASE_URL || false,
