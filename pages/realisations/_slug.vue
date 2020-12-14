@@ -48,28 +48,16 @@
 <script>
 export default {
   async asyncData({ $content, app, params, error }) {
-    const { slug } = params
-    let path = `/${app.i18n.defaultLocale}/works_slug`
-    let work, prev, next
+    const path = `${app.i18n.locale}/works_slug`
+    let work
 
     try {
-      work = await $content(path, slug).fetch()
+      work = await $content(path, params.slug).fetch()
     } catch (e) {
       return error({ statusCode: 404, message: 'Page not found' })
     }
 
-    if (app.i18n.defaultLocale !== app.i18n.locale) {
-      try {
-        path = `/${app.i18n.locale}/works_slug`
-        work = await $content(path, slug).fetch()
-      } catch (err) {
-        path = `/${app.i18n.defaultLocale}/works_slug`
-      }
-    }
-
-    try {
-      ;[prev, next] = await $content(path).only(['title', 'slug']).sortBy('position', 'asc').surround(slug, { before: 1, after: 1 }).fetch()
-    } catch (e) {}
+    const [prev, next] = await $content(path).only(['title', 'slug']).sortBy('position', 'asc').surround(params.slug).fetch()
 
     return {
       work,
