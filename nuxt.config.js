@@ -94,7 +94,13 @@ export default {
       lang: 'fr'
     }
   },
-  loading: { color: '#50c8f0' },
-  generate: { fallback: 'not_found.html' },
-  router: { trailingSlash: true }
+  loading: {
+    color: '#50c8f0'
+  },
+  generate: {
+    fallback: 'not_found.html'
+  },
+  router: {
+    trailingSlash: true
+  }
 }
