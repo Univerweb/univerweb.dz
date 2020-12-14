@@ -1,13 +1,13 @@
 <template>
   <section class="container works">
     <div class="intro">
-      <WorksHeadline>{{ headline }}</WorksHeadline>
+      <AppWorksHeadline>{{ headline }}</AppWorksHeadline>
     </div>
     <div class="details">
       <div v-for="work in works" :key="work.slug" class="item">
-        <WorksTitle>
+        <AppWorksTitle>
           <NuxtLink :to="localePath('/realisations/' + work.slug)">{{ work.title }}</NuxtLink>
-        </WorksTitle>
+        </AppWorksTitle>
         <NuxtLink :to="localePath('/realisations/' + work.slug)">
           <div class="card">
             <img v-lazy="'/works/' + work.slug + '/' + work.slug + '_thumbnail.jpg'" :alt="work.title" />
@@ -16,7 +16,7 @@
         </NuxtLink>
       </div>
     </div>
-    <WorksMore />
+    <AppWorksMore />
   </section>
 </template>
 
