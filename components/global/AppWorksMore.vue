@@ -18,7 +18,9 @@ export default {
       name = true
     }
 
-    return { name }
+    return {
+      name
+    }
   }
 }
 </script>

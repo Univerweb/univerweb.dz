@@ -29,7 +29,10 @@ export default {
       if (slug === 'index') {
         return this.localePath('realisations')
       }
-      return this.localePath({ name: 'realisations-slug', params: { slug } })
+      return this.localePath({
+        name: 'realisations-slug',
+        params: { slug }
+      })
     }
   }
 }

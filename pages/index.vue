@@ -12,7 +12,14 @@ export default {
     const { title, description, headline, lead } = await $content(app.i18n.locale, 'home').fetch()
     const worksPage = await $content(app.i18n.locale, 'works').only('headline').fetch()
     const works = await $content(app.i18n.locale, 'works_slug').limit(6).sortBy('position', 'desc').fetch()
-    return { title, description, headline, lead, worksPage, works }
+    return {
+      title,
+      description,
+      headline,
+      lead,
+      worksPage,
+      works
+    }
   },
 
   head() {

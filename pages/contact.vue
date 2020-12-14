@@ -26,7 +26,11 @@ export default {
   async asyncData({ $content, app }) {
     const { title, description, other } = await $content(app.i18n.locale, 'contact').fetch()
 
-    return { title, description, other }
+    return {
+      title,
+      description,
+      other
+    }
   },
 
   head() {

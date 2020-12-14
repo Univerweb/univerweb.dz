@@ -35,7 +35,14 @@ export default {
   async asyncData({ $content, app }) {
     const { title, description, headline, lead, method, choose } = await $content(app.i18n.locale, 'agence').fetch()
 
-    return { title, description, headline, lead, method, choose }
+    return {
+      title,
+      description,
+      headline,
+      lead,
+      method,
+      choose
+    }
   },
 
   head() {
