@@ -99,8 +99,5 @@ export default {
   },
   generate: {
     fallback: 'not_found.html'
-  },
-  router: {
-    trailingSlash: true
   }
 }
