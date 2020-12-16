@@ -49,10 +49,18 @@ export default {
   padding-top: 72px;
   padding-bottom: 48px;
   background-color: $secondary;
+  transition: background-color $transition;
+  .dark-mode & {
+    background-color: var(--bg);
+  }
   .next,
   .prev {
     position: relative;
     color: $primary;
+    transition: color $transition;
+    .dark-mode & {
+      color: $secondary;
+    }
     padding: 0 12px 0 18px;
     [lang='ar'] & {
       font-family: $font-arabic;
@@ -65,6 +73,10 @@ export default {
       content: attr(data-text);
       position: absolute;
       color: $primary;
+      transition: color $transition;
+      .dark-mode & {
+        color: $secondary;
+      }
       top: -12px;
       left: 20px;
       [lang='ar'] & {
