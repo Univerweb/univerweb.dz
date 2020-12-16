@@ -10,7 +10,7 @@
       </div>
       <div class="details">
         <p class="item lead">{{ webDesign.content }}</p>
-        <ul class="item">
+        <ul class="item tags">
           <li v-for="item in webDesign.tags" :key="item">{{ item }}</li>
         </ul>
       </div>
@@ -21,7 +21,7 @@
       </div>
       <div class="details">
         <p class="item lead">{{ dev.content }}</p>
-        <ul class="item">
+        <ul class="item tags">
           <li v-for="item in dev.tags" :key="item">{{ item }}</li>
         </ul>
       </div>
@@ -32,7 +32,7 @@
       </div>
       <div class="details">
         <p class="item lead">{{ support.content }}</p>
-        <ul class="item">
+        <ul class="item tags">
           <li v-for="item in support.tags" :key="item">{{ item }}</li>
         </ul>
       </div>

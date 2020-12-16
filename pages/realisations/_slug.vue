@@ -122,14 +122,6 @@ export default {
         grid-column: 9 / 12;
       }
     }
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      column-gap: 12px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
   }
   .project {
     padding-top: 0;
