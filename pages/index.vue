@@ -2,7 +2,7 @@
   <main>
     <HomeWelcome :headline="headline" :lead="lead" />
     <AppWorks :headline="worksPage.headline" :works="works" />
-    <HomeRequest />
+    <AppRequest />
   </main>
 </template>
 
