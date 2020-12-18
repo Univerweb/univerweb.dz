@@ -11,48 +11,6 @@ export default {
     link: [
       { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
       { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' }
-    ],
-    __dangerouslyDisableSanitizers: ['script'],
-    script: [
-      {
-        type: 'application/ld+json',
-        innerHTML: JSON.stringify({
-          '@context': 'https://schema.org',
-          '@type': 'Organization',
-          name: 'Univerweb',
-          url: process.env.BASE_URL,
-          logo: {
-            '@type': 'ImageObject',
-            url: process.env.BASE_URL + '/logo.svg',
-            width: '512px',
-            height: '512px'
-          },
-          email: 'contact@univerweb.dz',
-          telephone: '+213 551 90 46 22',
-          faxNumber: '+213 21 44 08 11',
-          sameAs: [
-            'https://twitter.com/univerweb',
-            'https://www.facebook.com/Univerweb',
-            'https://www.linkedin.com/company/univerweb',
-            'https://github.com/Univerweb'
-          ],
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: '62 Coop. El Mebnia, Birkhadem',
-            postalCode: '16 029',
-            addressLocality: 'Alger',
-            addressCountry: 'Algérie'
-          },
-          contactPoint: {
-            '@type': 'ContactPoint',
-            contactType: 'technical support',
-            telephone: '+213 21 44 08 11',
-            email: 'support@univerweb.dz',
-            areaServed: 'DZ',
-            availableLanguage: ['French', 'Arabic']
-          }
-        })
-      }
     ]
   },
   styleResources: {
