@@ -16,34 +16,34 @@ export default {
   },
 
   head() {
-    let DIR = 'rtl'
+    let direction = 'rtl'
     if (this.$i18n.locale !== 'ar') {
-      DIR = 'ltr'
+      direction = 'ltr'
     }
-    let PATH = this.$route.path
+    let path = this.$route.path
     if (this.$i18n.locale !== 'fr') {
-      PATH = this.$route.path.slice(3)
+      path = this.$route.path.slice(3)
     }
     const link = [
       { rel: 'canonical', href: process.env.BASE_URL + this.$route.path },
-      { rel: 'alternate', hreflang: 'fr', href: process.env.BASE_URL + PATH },
-      { rel: 'alternate', hreflang: 'en', href: process.env.BASE_URL + '/en' + PATH },
-      { rel: 'alternate', hreflang: 'ar', href: process.env.BASE_URL + '/ar' + PATH }
+      { rel: 'alternate', hreflang: 'fr', href: process.env.BASE_URL + path },
+      { rel: 'alternate', hreflang: 'en', href: process.env.BASE_URL + '/en' + path },
+      { rel: 'alternate', hreflang: 'ar', href: process.env.BASE_URL + '/ar' + path }
     ]
-    let IMG = process.env.BASE_URL + '/univerweb-ar.png'
+    let ogImage = process.env.BASE_URL + '/univerweb-ar.png'
     if (this.$i18n.locale !== 'ar') {
-      IMG = process.env.BASE_URL + '/univerweb.png'
+      ogImage = process.env.BASE_URL + '/univerweb.png'
     }
 
     return {
-      htmlAttrs: { lang: this.$i18n.locale, dir: DIR },
+      htmlAttrs: { lang: this.$i18n.locale, dir: direction },
       link,
       meta: [
         { hid: 'og:type', property: 'og:type', content: 'website' },
         { hid: 'og:site_name', property: 'og:site_name', content: this.$t('name') },
         { hid: 'og:url', property: 'og:url', content: process.env.BASE_URL + this.$route.path },
-        { hid: 'og:image', property: 'og:image', content: IMG },
-        { hid: 'og:image:secure_url', property: 'og:image:secure_url', content: IMG },
+        { hid: 'og:image', property: 'og:image', content: ogImage },
+        { hid: 'og:image:secure_url', property: 'og:image:secure_url', content: ogImage },
         { property: 'og:image:width', content: '1920' },
         { property: 'og:image:height', content: '1080' }
       ]

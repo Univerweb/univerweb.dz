@@ -9,12 +9,12 @@
 <script>
 export default {
   head() {
-    let DIR = 'rtl'
+    let direction = 'rtl'
     if (this.$i18n.locale !== 'ar') {
-      DIR = 'ltr'
+      direction = 'ltr'
     }
     return {
-      htmlAttrs: { lang: this.$i18n.locale, dir: DIR }
+      htmlAttrs: { lang: this.$i18n.locale, dir: direction }
     }
   }
 }

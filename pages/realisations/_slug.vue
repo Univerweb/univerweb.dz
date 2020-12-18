@@ -67,15 +67,15 @@ export default {
   },
 
   head() {
-    const IMG = `${process.env.BASE_URL}/works/${this.work.slug}/${this.work.slug}_bg.jpg`
+    const ogImage = `${process.env.BASE_URL}/works/${this.work.slug}/${this.work.slug}_bg.jpg`
     return {
       titleTemplate: `${this.work.title} — ${this.$t('name')}`,
       meta: [
         { hid: 'description', name: 'description', content: this.work.description },
         { hid: 'og:title', property: 'og:title', content: this.work.title },
         { hid: 'og:description', property: 'og:description', content: this.work.description },
-        { hid: 'og:image', property: 'og:image', content: IMG },
-        { hid: 'og:image:secure_url', property: 'og:image:secure_url', content: IMG }
+        { hid: 'og:image', property: 'og:image', content: ogImage },
+        { hid: 'og:image:secure_url', property: 'og:image:secure_url', content: ogImage }
       ]
     }
   }

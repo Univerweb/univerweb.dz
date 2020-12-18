@@ -58,16 +58,16 @@ export default {
 
   methods: {
     onScriptLoaded(event = null) {
-      const HQ = { lat: 36.721043, lng: 3.047502 }
+      const hq = { lat: 36.721043, lng: 3.047502 }
       // eslint-disable-next-line no-undef
       const map = new google.maps.Map(document.getElementById('map'), {
         mapId: '101a5bf427dc0726',
         zoom: 14,
-        center: HQ
+        center: hq
       })
       // eslint-disable-next-line no-undef
       const marker = new google.maps.Marker({
-        position: HQ,
+        position: hq,
         icon: {
           // eslint-disable-next-line no-undef
           path: google.maps.SymbolPath.CIRCLE,
