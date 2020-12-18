@@ -15,7 +15,7 @@ export default {
     }
   },
 
-  head() {
+  head({ $config: { baseURL } }) {
     let direction = 'rtl'
     if (this.$i18n.locale !== 'ar') {
       direction = 'ltr'
@@ -25,14 +25,14 @@ export default {
       path = this.$route.path.slice(3)
     }
     const link = [
-      { rel: 'canonical', href: process.env.BASE_URL + this.$route.path },
-      { rel: 'alternate', hreflang: 'fr', href: process.env.BASE_URL + path },
-      { rel: 'alternate', hreflang: 'en', href: process.env.BASE_URL + '/en' + path },
-      { rel: 'alternate', hreflang: 'ar', href: process.env.BASE_URL + '/ar' + path }
+      { rel: 'canonical', href: `${baseURL}${this.$route.path}` },
+      { rel: 'alternate', hreflang: 'fr', href: `${baseURL}${path}` },
+      { rel: 'alternate', hreflang: 'en', href: `${baseURL}/en${path}` },
+      { rel: 'alternate', hreflang: 'ar', href: `${baseURL}/ar${path}` }
     ]
-    let ogImage = process.env.BASE_URL + '/univerweb-ar.png'
+    let ogImage = `${baseURL}/univerweb-ar.png`
     if (this.$i18n.locale !== 'ar') {
-      ogImage = process.env.BASE_URL + '/univerweb.png'
+      ogImage = `${baseURL}/univerweb.png`
     }
 
     return {
@@ -41,7 +41,7 @@ export default {
       meta: [
         { hid: 'og:type', property: 'og:type', content: 'website' },
         { hid: 'og:site_name', property: 'og:site_name', content: this.$t('name') },
-        { hid: 'og:url', property: 'og:url', content: process.env.BASE_URL + this.$route.path },
+        { hid: 'og:url', property: 'og:url', content: `${baseURL}${this.$route.path}` },
         { hid: 'og:image', property: 'og:image', content: ogImage },
         { hid: 'og:image:secure_url', property: 'og:image:secure_url', content: ogImage },
         { property: 'og:image:width', content: '1920' },
@@ -55,10 +55,10 @@ export default {
             '@context': 'https://schema.org',
             '@type': 'Organization',
             name: 'Univerweb',
-            url: process.env.BASE_URL,
+            url: `${baseURL}`,
             logo: {
               '@type': 'ImageObject',
-              url: process.env.BASE_URL + '/logo.svg',
+              url: `${baseURL}/logo.svg`,
               width: '512px',
               height: '512px'
             },

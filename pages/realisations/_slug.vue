@@ -67,7 +67,7 @@ export default {
   },
 
   head() {
-    const ogImage = `${process.env.BASE_URL}/works/${this.work.slug}/${this.work.slug}_bg.jpg`
+    const ogImage = `${this.$config.baseURL}/works/${this.work.slug}/${this.work.slug}_bg.jpg`
     return {
       titleTemplate: `${this.work.title} — ${this.$t('name')}`,
       meta: [

@@ -49,7 +49,7 @@ export default {
       const script = document.createElement('script')
       script.onload = this.onScriptLoaded
       script.type = 'text/javascript'
-      script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.API_KEY}&map_ids=101a5bf427dc0726`
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${this.$config.apiKey}&map_ids=101a5bf427dc0726`
       document.head.appendChild(script)
     } else {
       this.onScriptLoaded()
