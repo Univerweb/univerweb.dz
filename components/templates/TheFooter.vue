@@ -2,8 +2,9 @@
   <footer>
     <div>
       <address class="address" title="Adresse postale">
-        <strong>{{ $t('footer.address.name') }} </strong><br />{{ $t('footer.address.streetAddress') }}<br />{{ $t('footer.address.addressLocality') }}
-        {{ $t('footer.address.postalCode') }}<span v-if="$i18n.locale === 'ar'">، </span><span v-else>, </span>{{ $t('footer.address.addressCity') }}
+        <strong>{{ $t('footer.address.name') }}</strong
+        ><br />{{ $t('footer.address.streetAddress') }}<br />{{ $t('footer.address.addressLocality') }} {{ $t('footer.address.postalCode')
+        }}<span v-if="$i18n.locale === 'ar'">، </span><span v-else>, </span>{{ $t('footer.address.addressCity') }}
       </address>
       <p>
         <a href="https://goo.gl/maps/MmadgQgZRBv" target="_blank" rel="noopener">{{ $t('footer.maps') }}</a>
