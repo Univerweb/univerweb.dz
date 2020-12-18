@@ -1,13 +1,32 @@
 <template>
   <main>
     <HomeWelcome :headline="headline" :lead="lead" />
-    <AppWorks :headline="worksPage.headline" :works="works" />
-    <AppRequest />
+    <AppWorks :headline="worksPage.headline" :works="works" :h1="h1" :like-h1="likeH1" :h2="h2" :more="more" />
+    <AppRequest :home="likeH1" />
   </main>
 </template>
 
 <script>
 export default {
+  props: {
+    h1: {
+      type: String,
+      default: 'h2'
+    },
+    likeH1: {
+      type: String,
+      default: 'h1'
+    },
+    h2: {
+      type: String,
+      default: 'h3'
+    },
+    more: {
+      type: String,
+      default: 'div'
+    }
+  },
+
   async asyncData({ $content, app }) {
     const { title, description, headline, lead } = await $content(app.i18n.locale, 'home').fetch()
     const worksPage = await $content(app.i18n.locale, 'works').only('headline').fetch()

@@ -191,6 +191,7 @@ main {
     }
     h2,
     h3 {
+      @include size(20);
       margin-top: 12px;
       margin-bottom: 0;
       order: 1;
