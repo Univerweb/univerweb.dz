@@ -82,8 +82,8 @@ export default {
     langDir: 'locales/'
   },
   env: {
-    BASE_URL: process.env.BASE_URL || false,
-    API_KEY: process.env.API_KEY || false
+    BASE_URL: process.env.BASE_URL || 'http://localhost:3000',
+    API_KEY: process.env.API_KEY || ''
   },
   pwa: {
     manifest: {
