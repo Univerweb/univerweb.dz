@@ -66,9 +66,9 @@ export default {
             telephone: '+213 551 90 46 22',
             faxNumber: '+213 21 44 08 11',
             sameAs: [
-              'https://twitter.com/univerweb',
+              'https://twitter.com/Univerweb',
               'https://www.facebook.com/Univerweb',
-              'https://www.linkedin.com/company/univerweb',
+              'https://www.linkedin.com/company/Univerweb',
               'https://github.com/Univerweb'
             ],
             address: {
