@@ -20,7 +20,9 @@ export default {
     next: 'التالي',
     phone: 'الهاتف / الفاكس:',
     mobile: 'جوال:',
-    email: 'البريد الإلكتروني:'
+    email: 'البريد الإلكتروني:',
+    manager: 'مسيّر',
+    support: 'دعم تقني'
   },
 
   footer: {

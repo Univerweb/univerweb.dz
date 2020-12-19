@@ -20,7 +20,9 @@ export default {
     next: 'Suivant',
     phone: 'Téléphone / fax :',
     mobile: 'Mobile :',
-    email: 'E-mail :'
+    email: 'E-mail :',
+    manager: 'Gérant',
+    support: 'Soutien technique'
   },
 
   footer: {

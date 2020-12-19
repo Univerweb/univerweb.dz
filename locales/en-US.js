@@ -20,7 +20,9 @@ export default {
     next: 'Next',
     phone: 'Telephone / fax:',
     mobile: 'Mobile:',
-    email: 'E-mail:'
+    email: 'E-mail:',
+    manager: 'Manager',
+    support: 'Technical support'
   },
 
   footer: {

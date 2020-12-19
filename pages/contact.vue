@@ -9,12 +9,16 @@
     <div id="map"></div>
     <div class="container contact">
       <div class="intro">
-        <h2>{{ other.title }}</h2>
+        <h2>{{ other }}</h2>
       </div>
       <div class="details">
-        <div v-for="(value, name) in other.content" :key="name" class="item">
-          <h3 class="h6">{{ name }}</h3>
-          <a :href="'mailto:' + value" class="link moveArrow">{{ value }}</a>
+        <div class="item">
+          <h3 class="h6">{{ $t('label.manager') }}</h3>
+          <a :href="'mailto:' + $config.managerEmail" class="link moveArrow">{{ $config.managerEmail }}</a>
+        </div>
+        <div class="item">
+          <h3 class="h6">{{ $t('label.support') }}</h3>
+          <a :href="'mailto:' + $config.supportEmail" class="link moveArrow">{{ $config.supportEmail }}</a>
         </div>
       </div>
     </div>
