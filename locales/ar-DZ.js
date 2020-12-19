@@ -30,12 +30,9 @@ export default {
       name: '@:name',
       streetAddress: '62 تعاونية المبنية',
       addressLocality: 'بئر خادم',
-      postalCode: '029 16',
       addressCity: 'الجزائر العاصمة '
     },
     maps: 'احصل على الاتجاهات',
-    phone: '021 44 08 11',
-    mobile: '0551 90 46 22',
     about: 'إنشاء مواقع احترافية هو ما نقوم به. أخبرنا عن احتياجاتك، نكون سعيدين بالتعامل معك.',
     social: {
       twitter: 'انضم إلينا على تويتر',

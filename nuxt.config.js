@@ -44,7 +44,10 @@ export default {
     baseEmail: process.env.BASE_EMAIL || false,
     managerEmail: process.env.MANAGER_EMAIL || false,
     supportEmail: process.env.SUPPORT_EMAIL || false,
-    apiKey: process.env.API_KEY || ''
+    apiKey: process.env.API_KEY || '',
+    phone: '021 44 08 11',
+    mobile: '0551 90 46 22',
+    postalCode: '16029'
   },
   pwa: {
     manifest: {

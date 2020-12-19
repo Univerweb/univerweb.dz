@@ -3,21 +3,21 @@
     <div>
       <address class="address" title="Adresse postale">
         <strong>{{ $t('footer.address.name') }}</strong
-        ><br />{{ $t('footer.address.streetAddress') }}<br />{{ $t('footer.address.addressLocality') }} {{ $t('footer.address.postalCode')
+        ><br />{{ $t('footer.address.streetAddress') }}<br />{{ $t('footer.address.addressLocality') }} {{ $config.postalCode
         }}<span v-if="$i18n.locale === 'ar'">، </span><span v-else>, </span>{{ $t('footer.address.addressCity') }}
       </address>
       <p>
         <a href="https://goo.gl/maps/MmadgQgZRBv" target="_blank" rel="noopener">{{ $t('footer.maps') }}</a>
       </p>
       <p>
-        <a :href="'tel:+213' + this.$t('footer.phone').slice(1).replace(/ /g, '')">
+        <a :href="'tel:+213' + this.$config.phone.slice(1).replace(/ /g, '')">
           <span class="visually-hidden">{{ $t('label.phone') }}</span>
-          <span dir="ltr">{{ $t('footer.phone') }}</span>
+          <span dir="ltr"> {{ $config.phone }}</span>
         </a>
         —
-        <a :href="'tel:+213' + this.$t('footer.mobile').slice(1).replace(/ /g, '')">
+        <a :href="'tel:+213' + this.$config.mobile.slice(1).replace(/ /g, '')">
           <span class="visually-hidden">{{ $t('label.mobile') }}</span>
-          <span dir="ltr">{{ $t('footer.mobile') }}</span>
+          <span dir="ltr">{{ $config.mobile }}</span>
         </a>
       </p>
     </div>

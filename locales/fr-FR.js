@@ -30,12 +30,9 @@ export default {
       name: '@:name Eurl',
       streetAddress: '62 Coop. El Mebnia',
       addressLocality: 'Birkhadem',
-      postalCode: '16 029',
       addressCity: 'Alger'
     },
     maps: 'Obtenir un itinéraire',
-    phone: '021 44 08 11',
-    mobile: '0551 90 46 22',
     about: "Créer des sites web professionnels, c'est ce que nous faisons. Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
     social: {
       twitter: 'Rejoignez-nous sur Twitter',

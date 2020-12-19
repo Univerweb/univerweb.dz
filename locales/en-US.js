@@ -30,12 +30,9 @@ export default {
       name: '@:name Eurl',
       streetAddress: '62 Coop. El Mebnia',
       addressLocality: 'Birkhadem',
-      postalCode: '16 029',
       addressCity: 'Algiers'
     },
     maps: 'Get directions',
-    phone: '021 44 08 11',
-    mobile: '0551 90 46 22',
     about: "Creating professional websites is what we do. Tell us about your needs, we'd love to collaborate with you.",
     social: {
       twitter: 'Join us on Twitter',

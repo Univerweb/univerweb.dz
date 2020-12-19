@@ -15,7 +15,7 @@ export default {
     }
   },
 
-  head({ $config: { baseURL, baseEmail } }) {
+  head({ $config: { baseURL } }) {
     let direction = 'rtl'
     if (this.$i18n.locale !== 'ar') {
       direction = 'ltr'
@@ -62,9 +62,9 @@ export default {
               width: '512px',
               height: '512px'
             },
-            email: `${baseEmail}`,
-            telephone: '+213 551 90 46 22',
-            faxNumber: '+213 21 44 08 11',
+            email: this.$config.baseEmail,
+            telephone: this.$config.mobile,
+            faxNumber: this.$config.phone,
             sameAs: [
               'https://twitter.com/Univerweb',
               'https://www.facebook.com/Univerweb',
@@ -74,7 +74,7 @@ export default {
             address: {
               '@type': 'PostalAddress',
               streetAddress: '62 Coop. El Mebnia, Birkhadem',
-              postalCode: '16 029',
+              postalCode: this.$config.postalCode,
               addressLocality: 'Alger',
               addressCountry: 'Algérie'
             }
