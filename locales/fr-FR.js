@@ -35,7 +35,6 @@ export default {
     phone: '021 44 08 11',
     mobile: '0551 90 46 22',
     about: "Créer des sites web professionnels, c'est ce que nous faisons. Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
-    email: 'contact@univerweb.dz',
     social: {
       twitter: 'Rejoignez-nous sur Twitter',
       facebook: 'Rejoignez-nous sur Facebook',

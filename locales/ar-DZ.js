@@ -35,7 +35,6 @@ export default {
     phone: '021 44 08 11',
     mobile: '0551 90 46 22',
     about: 'إنشاء مواقع احترافية هو ما نقوم به. أخبرنا عن احتياجاتك، نكون سعيدين بالتعامل معك.',
-    email: 'contact@univerweb.dz',
     social: {
       twitter: 'انضم إلينا على تويتر',
       facebook: 'انضم إلينا على فيس بوك',

@@ -15,7 +15,7 @@ export default {
     }
   },
 
-  head({ $config: { baseURL } }) {
+  head({ $config: { baseURL, baseEmail } }) {
     let direction = 'rtl'
     if (this.$i18n.locale !== 'ar') {
       direction = 'ltr'
@@ -62,7 +62,7 @@ export default {
               width: '512px',
               height: '512px'
             },
-            email: 'contact@univerweb.dz',
+            email: `${baseEmail}`,
             telephone: '+213 551 90 46 22',
             faxNumber: '+213 21 44 08 11',
             sameAs: [

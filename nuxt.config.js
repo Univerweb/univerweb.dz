@@ -41,6 +41,7 @@ export default {
   },
   publicRuntimeConfig: {
     baseURL: process.env.BASE_URL || 'http://localhost:3000',
+    baseEmail: process.env.BASE_EMAIL || false,
     apiKey: process.env.API_KEY || ''
   },
   pwa: {
