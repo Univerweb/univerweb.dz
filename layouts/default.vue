@@ -77,14 +77,6 @@ export default {
               postalCode: '16 029',
               addressLocality: 'Alger',
               addressCountry: 'Algérie'
-            },
-            contactPoint: {
-              '@type': 'ContactPoint',
-              contactType: 'technical support',
-              telephone: '+213 21 44 08 11',
-              email: 'support@univerweb.dz',
-              areaServed: 'DZ',
-              availableLanguage: ['French', 'Arabic']
             }
           })
         }
