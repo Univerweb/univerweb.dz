@@ -75,7 +75,7 @@ export default {
       socials: {
         twitter: 'https://twitter.com/Univerweb',
         facebook: 'https://www.facebook.com/Univerweb',
-        linkedin: 'https://www.linkedin.com/company/univerweb',
+        linkedin: 'https://www.linkedin.com/company/Univerweb',
         github: 'https://github.com/Univerweb'
       }
     }
