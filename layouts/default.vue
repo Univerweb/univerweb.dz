@@ -34,6 +34,10 @@ export default {
     if (this.$i18n.locale !== 'ar') {
       ogImage = `${baseURL}/univerweb.png`
     }
+    let comma = '، '
+    if (this.$i18n.locale !== 'ar') {
+      comma = ', '
+    }
 
     return {
       htmlAttrs: { lang: this.$i18n.locale, dir: direction },
@@ -54,7 +58,7 @@ export default {
           innerHTML: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Organization',
-            name: 'Univerweb',
+            name: this.$t('name'),
             url: `${baseURL}`,
             logo: {
               '@type': 'ImageObject',
@@ -73,10 +77,9 @@ export default {
             ],
             address: {
               '@type': 'PostalAddress',
-              streetAddress: '62 Coop. El Mebnia, Birkhadem',
+              streetAddress: this.$t('footer.address.streetAddress') + comma + this.$t('footer.address.addressLocality'),
               postalCode: this.$config.postalCode,
-              addressLocality: 'Alger',
-              addressCountry: 'Algérie'
+              addressLocality: this.$t('footer.address.addressRegion') + comma + this.$t('footer.address.addressCountry')
             }
           })
         }

@@ -30,7 +30,8 @@ export default {
       name: '@:name Eurl',
       streetAddress: '62 Coop. El Mebnia',
       addressLocality: 'Birkhadem',
-      addressCity: 'Algiers'
+      addressRegion: 'Algiers',
+      addressCountry: 'Algeria'
     },
     maps: 'Get directions',
     about: "Creating professional websites is what we do. Tell us about your needs, we'd love to collaborate with you.",

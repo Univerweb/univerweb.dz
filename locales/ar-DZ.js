@@ -30,7 +30,8 @@ export default {
       name: '@:name',
       streetAddress: '62 تعاونية المبنية',
       addressLocality: 'بئر خادم',
-      addressCity: 'الجزائر العاصمة '
+      addressRegion: 'الجزائر العاصمة',
+      addressCountry: 'الجزائر'
     },
     maps: 'احصل على الاتجاهات',
     about: 'إنشاء مواقع احترافية هو ما نقوم به. أخبرنا عن احتياجاتك، نكون سعيدين بالتعامل معك.',

@@ -30,7 +30,8 @@ export default {
       name: '@:name Eurl',
       streetAddress: '62 Coop. El Mebnia',
       addressLocality: 'Birkhadem',
-      addressCity: 'Alger'
+      addressRegion: 'Alger',
+      addressCountry: 'Algérie'
     },
     maps: 'Obtenir un itinéraire',
     about: "Créer des sites web professionnels, c'est ce que nous faisons. Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
