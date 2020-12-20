@@ -132,10 +132,7 @@ main {
   grid-template-columns: repeat(12, 1fr);
   row-gap: 24px;
   .works & {
-    row-gap: 48px;
-    @media (min-width: $sm) {
-      column-gap: 48px;
-    }
+    column-gap: 24px;
   }
   .prestations & {
     align-items: center;
@@ -177,42 +174,15 @@ main {
     }
   }
   .works & {
-    display: grid;
-    @media (min-width: $md) {
-      &:nth-child(3n + 1) {
-        grid-column: 1 / 5;
+    @media (min-width: $sm) {
+      &:nth-child(1) {
+        grid-column: 1 / 13;
       }
-      &:nth-child(3n + 2) {
-        grid-column: 5 / 9;
+      &:nth-child(2n + 2) {
+        grid-column: 1 / 7;
       }
-      &:nth-child(3n + 3) {
-        grid-column: 9 / 13;
-      }
-    }
-    h2,
-    h3 {
-      @include size(20);
-      margin-top: 12px;
-      margin-bottom: 0;
-      order: 1;
-    }
-    > a {
-      position: relative;
-      display: grid;
-      p {
-        display: grid;
-        align-items: end;
-        background-color: var(--secondary);
-        color: var(--primary);
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        padding: 12px;
-        opacity: 0;
-        transition: background-color $transition, color $transition, opacity $transition;
-        &:hover {
-          opacity: 1;
-        }
+      &:nth-child(2n + 3) {
+        grid-column: 7 / 13;
       }
     }
   }
@@ -254,7 +224,6 @@ h2,
 
 h3,
 .h3 {
-  font-size: 1.75rem;
   @include size(20);
   font-weight: 500;
   letter-spacing: -0.02em;
@@ -378,9 +347,6 @@ button {
 img {
   width: 100%;
   height: auto;
-  &[lazy='error'] {
-    background-color: red;
-  }
   &[lazy='loading'] {
     background-color: $light;
     opacity: 0;
