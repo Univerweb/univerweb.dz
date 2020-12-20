@@ -83,7 +83,7 @@ header {
   background-color: var(--bg);
   padding: 24px;
   transition: background-color $transition, padding $transition;
-  z-index: 1;
+  z-index: 100;
   .scrolled &:not(.show) {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     .dark-mode & {
