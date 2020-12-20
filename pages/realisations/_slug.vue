@@ -5,9 +5,7 @@
       <h1>{{ work.title }}</h1>
     </div>
     <div v-lazy:background-image="'/works/' + work.slug + '/' + work.slug + '_bg.jpg'" class="banner card">
-      <span>
-        <img v-lazy="'/works/' + work.slug + '/' + work.slug + '_bg.jpg'" :alt="work.title" />
-      </span>
+      <img v-lazy="'/works/' + work.slug + '/' + work.slug + '_bg.jpg'" :alt="work.title" />
     </div>
     <div class="container client">
       <div class="details">
@@ -92,22 +90,28 @@ export default {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    span {
-      padding: 80% 0 0;
-      @media (min-width: $sm) {
-        padding: 60% 0 0;
-      }
-      @media (min-width: $md) {
-        padding: 50% 0 0;
-      }
-      img {
-        opacity: 0;
-        position: absolute;
-        top: 0;
-        left: 0;
+    width: 100%;
+    height: 456px;
+    @media (min-width: $lg) {
+      height: auto;
+      max-height: 648px;
+      overflow: hidden;
+      &::before {
+        content: '';
         width: 100%;
-        height: 100%;
+        display: block;
+        height: 0;
+        pointer-events: none;
+        padding-top: 33.75%;
       }
+    }
+    img {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
     }
   }
   .client {
