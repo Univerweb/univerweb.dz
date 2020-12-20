@@ -67,7 +67,8 @@ export default {
       const map = new google.maps.Map(document.getElementById('map'), {
         mapId: '101a5bf427dc0726',
         zoom: 14,
-        center: hq
+        center: hq,
+        backgroundColor: '#fafafa'
       })
       // eslint-disable-next-line no-undef
       const marker = new google.maps.Marker({
@@ -95,7 +96,7 @@ export default {
 #map {
   width: 100%;
   height: 720px;
-  background-color: #e5e3df;
+  background-color: #fafafa;
 }
 
 .contact {
