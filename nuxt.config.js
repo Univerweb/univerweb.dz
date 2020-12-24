@@ -36,6 +36,7 @@ export default {
       { code: 'ar', name: 'العربية', file: 'ar-DZ.js' }
     ],
     defaultLocale: 'fr',
+    detectBrowserLanguage: false,
     lazy: true,
     langDir: 'locales/'
   },
