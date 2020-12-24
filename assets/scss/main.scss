@@ -347,17 +347,20 @@ button {
 img {
   width: 100%;
   height: auto;
-  &[lazy='loading'] {
-    background-color: $light;
-    opacity: 0;
-    transition: background-color $transition, opacity $transition;
-    .dark-mode & {
-      background-color: $color-secondary;
-    }
+}
+
+[lazy='loading'] {
+  background-color: $light;
+  opacity: 0;
+  transition: opacity 20s ease;
+  .dark-mode & {
+    background-color: $color-secondary;
   }
-  &[lazy='loaded'] {
-    opacity: 1;
-  }
+}
+
+[lazy='loaded'] {
+  opacity: 1;
+  transition: opacity 20s ease;
 }
 
 .tags {
