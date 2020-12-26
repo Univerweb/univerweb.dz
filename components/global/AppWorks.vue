@@ -3,7 +3,7 @@
     <div class="intro">
       <Component :is="h1" :class="likeH1">{{ headline }}</Component>
     </div>
-    <div v-lazy class="details">
+    <div class="details">
       <div v-for="work in works" :key="work.slug" v-lazy:background-image="`/works/${work.slug}/${work.slug}_thumbnail.jpg`" class="item">
         <NuxtLink :to="localePath(`/realisations/${work.slug}`)">
           <img :src="`/works/${work.slug}/${work.slug}_thumbnail.jpg`" :alt="work.title" width="800" height="850" />
