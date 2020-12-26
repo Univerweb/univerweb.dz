@@ -352,7 +352,7 @@ img {
 [lazy='loading'] {
   background-color: $light;
   opacity: 0;
-  transition: opacity 20s ease;
+  transition: opacity $transition;
   .dark-mode & {
     background-color: $color-secondary;
   }
@@ -360,7 +360,6 @@ img {
 
 [lazy='loaded'] {
   opacity: 1;
-  transition: opacity 20s ease;
 }
 
 .tags {
