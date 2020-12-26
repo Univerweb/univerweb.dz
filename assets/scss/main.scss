@@ -363,12 +363,16 @@ img {
 }
 
 .tags {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 12px;
   margin: 0;
   padding: 0;
   list-style: none;
+  * {
+    display: inline-block;
+    margin-right: 12px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .visually-hidden {
