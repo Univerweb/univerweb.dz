@@ -368,9 +368,9 @@ img {
   list-style: none;
   * {
     display: inline-block;
-    margin-right: 12px;
+    margin-inline-end: 12px;
     &:last-child {
-      margin-right: 0;
+      margin-inline-end: 0;
     }
   }
 }
