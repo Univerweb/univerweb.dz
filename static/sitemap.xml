@@ -806,7 +806,7 @@
       <image:caption>أو تي أس عور — أحدث إبداعاتنا</image:caption>
     </image:image>
   </url>
-  <!-- <url>
+  <url>
     <loc>https://univerweb.dz/realisations/acodim</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -842,7 +842,7 @@
       <image:caption>أكوديم — أحدث إبداعاتنا</image:caption>
     </image:image>
   </url>
-  <url>
+  <!-- <url>
     <loc>https://univerweb.dz/realisations/sourca-algerie</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
