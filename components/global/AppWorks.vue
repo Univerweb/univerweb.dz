@@ -91,7 +91,7 @@ export default {
     .overlay {
       position: absolute;
       width: 100%;
-      height: 456px;
+      height: 100%;
       background-color: $color;
       opacity: 0.3;
       transition: opacity $transition;
@@ -104,7 +104,7 @@ export default {
       grid-auto-rows: auto auto 1fr;
       position: absolute;
       width: 100%;
-      height: 456px;
+      height: 100%;
       color: $white;
       padding: 24px;
       @media (min-width: $sm) {
