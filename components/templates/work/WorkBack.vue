@@ -30,12 +30,10 @@ export default {
     fill: currentColor;
     height: 5px;
     transform: rotate(90deg);
-    margin-right: 6px;
+    margin-inline-end: 6px;
     margin-bottom: 2px;
     [lang='ar'] & {
       transform: rotate(-90deg);
-      margin-right: 0;
-      margin-left: 6px;
     }
   }
 }
