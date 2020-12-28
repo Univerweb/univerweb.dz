@@ -61,10 +61,9 @@ export default {
     .dark-mode & {
       color: $secondary;
     }
-    padding: 0 12px 0 18px;
+    padding-inline: 18px 12px;
     [lang='ar'] & {
       font-family: $font-arabic;
-      padding: 0 18px 0 12px;
     }
     &:hover {
       color: $white;
@@ -77,12 +76,8 @@ export default {
       .dark-mode & {
         color: $secondary;
       }
-      top: -12px;
-      left: 20px;
-      [lang='ar'] & {
-        left: 0;
-        right: 20px;
-      }
+      inset-block-start: -12px;
+      inset-inline-start: 20px;
       font-size: 0.8rem;
       line-height: 0.9375;
       pointer-events: none;
@@ -90,17 +85,10 @@ export default {
     &:not(.prev) {
       grid-column: 2;
       text-align: end;
-      padding: 0 18px 0 12px;
-      [lang='ar'] & {
-        padding: 0 12px 0 18px;
-      }
+      padding-inline: 12px 18px;
       &::before {
-        right: 18px;
-        left: 0;
-        [lang='ar'] & {
-          left: 18px;
-          text-align: left;
-        }
+        inset-inline-start: 0;
+        inset-inline-end: 18px;
       }
     }
   }
