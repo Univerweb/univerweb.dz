@@ -112,11 +112,6 @@ main {
   grid-template-columns: repeat(12, 1fr);
   * {
     grid-column: 1 / 13;
-    @media (min-width: $sm) {
-      .prestations:nth-child(even) & {
-        grid-column: 7 / 12;
-      }
-    }
     @media (min-width: $md) {
       grid-column: 1 / 10;
     }
@@ -131,37 +126,17 @@ main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   row-gap: 24px;
-  .prestations & {
-    align-items: center;
-  }
 }
 
 /* Item */
 .item {
   grid-column: 1 / 13;
-  &:nth-child(odd) {
-    @media (min-width: $sm) {
+  @media (min-width: $sm) {
+    &:nth-child(odd) {
       grid-column: 1 / 6;
-      .prestations:nth-child(even) & {
-        grid-column: 7 / 12;
-      }
     }
-  }
-  &:nth-child(even) {
-    .prestations & {
-      color: var(--color-secondary);
-      transition: color $transition;
-      font-weight: 500;
-    }
-    @media (min-width: $sm) {
+    &:nth-child(even) {
       grid-column: 7 / 12;
-      .prestations & {
-        grid-column: 7 / 10;
-      }
-      .prestations:nth-child(even) & {
-        grid-column: 3 / 6;
-        order: -1;
-      }
     }
   }
 }
@@ -233,9 +208,6 @@ p {
   transition: color $transition;
   footer & {
     font-weight: 400;
-  }
-  &.item {
-    margin: 0;
   }
 }
 

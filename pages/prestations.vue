@@ -69,3 +69,38 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.prestations {
+  .tags {
+    color: var(--color-secondary);
+    transition: color $transition;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  @media (min-width: $sm) {
+    &:nth-child(even) .intro * {
+      grid-column: 7 / 12;
+    }
+
+    .details {
+      align-items: center;
+    }
+
+    .item:nth-child(even) {
+      grid-column: 7 / 10;
+    }
+
+    &:nth-child(even) .item {
+      &:nth-child(odd) {
+        grid-column: 7 / 12;
+      }
+      &:nth-child(even) {
+        grid-column: 3 / 6;
+        order: -1;
+      }
+    }
+  }
+}
+</style>
