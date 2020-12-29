@@ -104,56 +104,56 @@ export default {
         }
       }
     }
-  }
 
-  img {
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-  }
+    img {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
 
-  .overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: $color;
-    opacity: 0.3;
-    transition: opacity $transition;
-  }
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $color;
+      opacity: 0.3;
+      transition: opacity $transition;
+    }
 
-  .inner {
-    display: grid;
-    grid-auto-rows: auto auto 1fr;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    color: $white;
-    padding: 24px;
-    @media (min-width: $sm) {
+    .inner {
+      display: grid;
+      grid-auto-rows: auto auto 1fr;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      color: $white;
       padding: 24px;
+      @media (min-width: $sm) {
+        padding: 24px;
+      }
+      @media (min-width: $md) {
+        padding: 48px;
+      }
+      @media (min-width: $lg) {
+        padding: 48px;
+      }
     }
-    @media (min-width: $md) {
-      padding: 48px;
-    }
-    @media (min-width: $lg) {
-      padding: 48px;
-    }
-  }
 
-  h2,
-  h3 {
-    @include size(32);
-    margin-bottom: 12px;
-  }
+    h2,
+    h3 {
+      @include size(32);
+      margin-bottom: 12px;
+    }
 
-  p {
-    color: $white;
-    max-width: 520px;
-    align-self: end;
-    transform: translateY(calc(100% + 48px));
-    transition: transform $transition;
+    p {
+      color: $white;
+      max-width: 520px;
+      align-self: end;
+      transform: translateY(calc(100% + 48px));
+      transition: transform $transition;
+    }
   }
 }
 
