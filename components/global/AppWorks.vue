@@ -78,33 +78,30 @@ export default {
     overflow: hidden;
     border-radius: 12px;
     @media (min-width: $sm) {
-      &.item:nth-child(1) {
-        grid-column: 1 / 13;
-      }
-      &.item:nth-child(2n + 2) {
+      &.item:nth-child(odd) {
         grid-column: 1 / 7;
       }
-      &.item:nth-child(2n + 3) {
+      &.item:nth-child(even) {
         grid-column: 7 / 13;
       }
     }
     @media (min-width: $lg) {
       border-radius: 24px;
     }
-  }
 
-  a {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    &:hover {
-      .overlay {
-        opacity: 0.6;
-      }
-      p {
-        transform: translateY(0);
+    a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      &:hover {
+        .overlay {
+          opacity: 0.6;
+        }
+        p {
+          transform: translateY(0);
+        }
       }
     }
   }
