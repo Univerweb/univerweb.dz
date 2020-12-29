@@ -62,74 +62,97 @@ export default {
 </script>
 
 <style lang="scss">
-.works .item {
-  position: relative;
-  background-color: $light;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  width: 100%;
-  height: 456px;
-  overflow: hidden;
-  border-radius: 12px;
-  @media (min-width: $lg) {
-    border-radius: 24px;
-  }
-  a {
-    position: absolute;
-    top: 0;
-    left: 0;
+.works .details {
+  column-gap: 24px;
+
+  .item {
+    position: relative;
+    background-color: $light;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
     width: 100%;
-    height: 100%;
-    img {
-      opacity: 0;
+    height: 456px;
+    overflow: hidden;
+    border-radius: 12px;
+    @media (min-width: $sm) {
+      &.item:nth-child(1) {
+        grid-column: 1 / 13;
+      }
+      &.item:nth-child(2n + 2) {
+        grid-column: 1 / 7;
+      }
+      &.item:nth-child(2n + 3) {
+        grid-column: 7 / 13;
+      }
+    }
+    @media (min-width: $lg) {
+      border-radius: 24px;
+    }
+
+    a {
       position: absolute;
       top: 0;
       left: 0;
-      height: 100%;
-    }
-    .overlay {
-      position: absolute;
       width: 100%;
       height: 100%;
-      background-color: $color;
-      opacity: 0.3;
-      transition: opacity $transition;
-    }
-    &:hover .overlay {
-      opacity: 0.6;
-    }
-    .inner {
-      display: grid;
-      grid-auto-rows: auto auto 1fr;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      color: $white;
-      padding: 24px;
-      @media (min-width: $sm) {
-        padding: 24px;
+
+      img {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
       }
-      @media (min-width: $md) {
-        padding: 48px;
+
+      .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: $color;
+        opacity: 0.3;
+        transition: opacity $transition;
       }
-      @media (min-width: $lg) {
-        padding: 48px;
+
+      &:hover .overlay {
+        opacity: 0.6;
       }
-      h2,
-      h3 {
-        @include size(32);
-        margin-bottom: 12px;
-      }
-      p {
+
+      .inner {
+        display: grid;
+        grid-auto-rows: auto auto 1fr;
+        position: absolute;
+        width: 100%;
+        height: 100%;
         color: $white;
-        max-width: 520px;
-        align-self: end;
-        transform: translateY(calc(100% + 48px));
-        transition: transform $transition;
-      }
-      &:hover p {
-        transform: translateY(0);
+        padding: 24px;
+        @media (min-width: $sm) {
+          padding: 24px;
+        }
+        @media (min-width: $md) {
+          padding: 48px;
+        }
+        @media (min-width: $lg) {
+          padding: 48px;
+        }
+
+        h2,
+        h3 {
+          @include size(32);
+          margin-bottom: 12px;
+        }
+
+        p {
+          color: $white;
+          max-width: 520px;
+          align-self: end;
+          transform: translateY(calc(100% + 48px));
+          transition: transform $transition;
+        }
+
+        &:hover p {
+          transform: translateY(0);
+        }
       }
     }
   }
@@ -138,8 +161,10 @@ export default {
 .more {
   display: grid;
   margin-top: 48px;
+
   .btn {
     justify-self: end;
+
     .arrow {
       fill: currentColor;
       height: 8px;
