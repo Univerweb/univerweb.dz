@@ -45,7 +45,7 @@
 
 <script>
 export default {
-  async asyncData({ $content, app, params, error }) {
+  async asyncData({ $content, app, params, error, context }) {
     const path = `${app.i18n.locale}/works_slug`
     let work
 
@@ -64,16 +64,53 @@ export default {
     }
   },
 
-  head() {
-    const ogImage = `${this.$config.baseURL}/works/${this.work.slug}/${this.work.slug}_bg.jpg`
+  head({ $config: { baseURL } }) {
+    const ogImage = `${baseURL}/works/${this.work.slug}/${this.work.slug}_bg.jpg`
+
+    let routeItem = `${baseURL}/`
+    if (this.$i18n.locale !== 'fr') {
+      routeItem = `${baseURL}/${this.$i18n.locale}`
+    }
+
     return {
       titleTemplate: `${this.work.title} — ${this.$t('name')}`,
+
       meta: [
         { hid: 'description', name: 'description', content: this.work.description },
         { hid: 'og:title', property: 'og:title', content: this.work.title },
         { hid: 'og:description', property: 'og:description', content: this.work.description },
         { hid: 'og:image', property: 'og:image', content: ogImage },
         { hid: 'og:image:secure_url', property: 'og:image:secure_url', content: ogImage }
+      ],
+
+      script: [
+        {
+          json: {
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: this.$t('name'),
+                item: routeItem
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: this.$t('menu.realisations'),
+                item: `${baseURL}${this.localePath('realisations')}`
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: this.work.title,
+                item: `${baseURL}${this.$route.fullPath}`
+              }
+            ]
+          },
+          type: 'application/ld+json'
+        }
       ]
     }
   }
