@@ -41,7 +41,9 @@ export default {
 
     return {
       htmlAttrs: { lang: this.$i18n.locale, dir: direction },
+
       link,
+
       meta: [
         { hid: 'og:type', property: 'og:type', content: 'website' },
         { hid: 'og:site_name', property: 'og:site_name', content: this.$t('name') },
@@ -51,11 +53,10 @@ export default {
         { property: 'og:image:width', content: '1920' },
         { property: 'og:image:height', content: '1080' }
       ],
-      __dangerouslyDisableSanitizers: ['script'],
+
       script: [
         {
-          type: 'application/ld+json',
-          innerHTML: JSON.stringify({
+          json: {
             '@context': 'https://schema.org',
             '@type': 'Organization',
             name: this.$t('name'),
@@ -81,7 +82,8 @@ export default {
               postalCode: this.$config.postalCode,
               addressLocality: this.$t('footer.address.addressRegion') + comma + this.$t('footer.address.addressCountry')
             }
-          })
+          },
+          type: 'application/ld+json'
         }
       ]
     }
