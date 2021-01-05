@@ -45,7 +45,7 @@
 
 <script>
 export default {
-  async asyncData({ $content, app, params, error, context }) {
+  async asyncData({ $content, app, params, error }) {
     const path = `${app.i18n.locale}/works_slug`
     let work
 
