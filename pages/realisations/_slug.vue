@@ -88,6 +88,7 @@ export default {
           json: {
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
+            name: this.work.title,
             itemListElement: [
               {
                 '@type': 'ListItem',
@@ -104,8 +105,7 @@ export default {
               {
                 '@type': 'ListItem',
                 position: 3,
-                name: this.work.title,
-                item: `${baseURL}${this.$route.fullPath}`
+                name: this.work.title
               }
             ]
           },
