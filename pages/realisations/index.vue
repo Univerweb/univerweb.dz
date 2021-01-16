@@ -19,10 +19,10 @@ export default {
     }
   },
 
-  head({ $config: { baseURL } }) {
-    let routeItem = `${baseURL}/`
+  head() {
+    let routeItem = `${this.$config.baseURL}/`
     if (this.$i18n.locale !== 'fr') {
-      routeItem = `${baseURL}/${this.$i18n.locale}`
+      routeItem = `${this.$config.baseURL}/${this.$i18n.locale}`
     }
 
     return {
@@ -39,6 +39,7 @@ export default {
           json: {
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
+            name: this.title,
             itemListElement: [
               {
                 '@type': 'ListItem',
@@ -49,8 +50,7 @@ export default {
               {
                 '@type': 'ListItem',
                 position: 2,
-                name: this.title,
-                item: `${baseURL}${this.$route.fullPath}`
+                name: this.title
               }
             ]
           },
