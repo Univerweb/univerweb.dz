@@ -101,7 +101,6 @@ header {
 
 .logo svg {
   display: block;
-  height: 24px;
   g:first-child {
     fill: $secondary;
   }
