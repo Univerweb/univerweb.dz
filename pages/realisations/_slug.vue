@@ -4,8 +4,8 @@
       <WorkBack />
       <h1>{{ work.title }}</h1>
     </div>
-    <div v-lazy:background-image="'/works/' + work.slug + '/' + work.slug + '_bg.jpg'" class="banner card">
-      <img v-lazy="'/works/' + work.slug + '/' + work.slug + '_bg.jpg'" :alt="work.title" />
+    <div v-lazy:background-image="`/works/banner/${work.slug}.jpg`" class="banner card">
+      <img v-lazy="`/works/banner/${work.slug}.jpg`" :alt="work.title" />
     </div>
     <div class="container client">
       <div class="details">
@@ -65,7 +65,7 @@ export default {
   },
 
   head({ $config: { baseURL } }) {
-    const ogImage = `${baseURL}/works/${this.work.slug}/${this.work.slug}_bg.jpg`
+    const ogImage = `${baseURL}/works/banner/${this.work.slug}.jpg`
 
     let routeItem = `${baseURL}/`
     if (this.$i18n.locale !== 'fr') {
