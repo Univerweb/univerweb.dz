@@ -34,7 +34,7 @@
           </div>
         </div>
         <div class="item card">
-          <img v-lazy="'/works/' + work.slug + '/' + work.slug + '_page.jpg'" :alt="work.title" />
+          <img v-lazy="`/works/page/${work.slug}.jpg`" :alt="work.title" />
         </div>
       </div>
     </div>
