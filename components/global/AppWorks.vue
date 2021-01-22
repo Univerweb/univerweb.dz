@@ -4,9 +4,9 @@
       <Component :is="h1" :class="likeH1">{{ headline }}</Component>
     </div>
     <div class="details">
-      <div v-for="work in works" :key="work.slug" v-lazy:background-image="`/works/${work.slug}/${work.slug}_thumbnail.jpg`" class="item">
+      <div v-for="work in works" :key="work.slug" class="item">
         <NuxtLink :to="localePath(`/realisations/${work.slug}`)">
-          <img :src="`/works/${work.slug}/${work.slug}_thumbnail.jpg`" :alt="work.title" width="800" height="850" />
+          <img :src="`/works/${work.slug}/${work.slug}_thumbnail.jpg`" :alt="work.title" width="588" height="624" />
           <div class="overlay"></div>
           <div class="inner">
             <Component :is="h2">{{ work.title }}</Component>
@@ -63,18 +63,18 @@ export default {
 
 <style lang="scss">
 .works {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 588px;
+  @media (min-width: $sm) {
+    max-width: 100%;
+  }
+
   .details {
     column-gap: 24px;
   }
 
   .item {
-    position: relative;
-    background-color: $light;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    width: 100%;
-    height: 456px;
     overflow: hidden;
     border-radius: 12px;
     @media (min-width: $sm) {
@@ -90,11 +90,8 @@ export default {
     }
 
     a {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      display: block;
+      position: relative;
       &:hover {
         .overlay {
           opacity: 0.6;
@@ -106,15 +103,13 @@ export default {
     }
 
     img {
-      opacity: 0;
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
+      display: block;
     }
 
     .overlay {
       position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       background-color: $color;
@@ -126,6 +121,8 @@ export default {
       display: grid;
       grid-auto-rows: auto auto 1fr;
       position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       color: $white;
