@@ -6,7 +6,7 @@
     <div class="details">
       <div v-for="work in works" :key="work.slug" class="item">
         <NuxtLink :to="localePath(`/realisations/${work.slug}`)">
-          <img :src="`/works/${work.slug}/${work.slug}_thumbnail.jpg`" :alt="work.title" width="588" height="624" />
+          <img :src="`/works/thumbnail/${work.slug}-588.jpg`" :alt="work.title" width="588" height="624" />
           <div class="overlay"></div>
           <div class="inner">
             <Component :is="h2">{{ work.title }}</Component>
