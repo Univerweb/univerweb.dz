@@ -77,6 +77,7 @@ export default {
   .item {
     overflow: hidden;
     border-radius: 12px;
+    z-index: 1;
     @media (min-width: $sm) {
       &.item:nth-child(odd) {
         grid-column: 1 / 7;
@@ -90,7 +91,7 @@ export default {
     }
 
     a {
-      display: block;
+      display: grid;
       position: relative;
       &:hover {
         .overlay {
@@ -102,14 +103,8 @@ export default {
       }
     }
 
-    img {
-      display: block;
-    }
-
     .overlay {
       position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
       height: 100%;
       background-color: $color;
@@ -121,9 +116,6 @@ export default {
       display: grid;
       grid-auto-rows: auto auto 1fr;
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
       height: 100%;
       color: $white;
       padding: 24px;
@@ -146,7 +138,6 @@ export default {
 
     p {
       color: $white;
-      max-width: 520px;
       align-self: end;
       transform: translateY(calc(100% + 48px));
       transition: transform $transition;
