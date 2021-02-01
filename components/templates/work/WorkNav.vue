@@ -62,7 +62,7 @@ export default {
       color: $secondary;
     }
     padding-inline: 18px 12px;
-    [lang='ar'] & {
+    [lang='ar-DZ'] & {
       font-family: $font-arabic;
     }
     &:hover {
@@ -101,7 +101,7 @@ export default {
     fill: currentColor;
     height: 7px;
     transform: rotate(90deg);
-    [lang='ar'] & {
+    [lang='ar-DZ'] & {
       transform: rotate(-90deg);
       right: 0;
       left: auto;
@@ -111,7 +111,7 @@ export default {
     transform: rotate(-90deg);
     right: 0;
     left: auto;
-    [lang='ar'] & {
+    [lang='ar-DZ'] & {
       transform: rotate(90deg);
       right: auto;
       left: 0;

@@ -42,7 +42,7 @@ body {
   color: var(--color);
   transition: background-color $transition, color $transition;
   font-family: $font;
-  [lang='ar'] & {
+  [lang='ar-DZ'] & {
     font-family: $font-arabic;
   }
   font-size: 1rem;
@@ -229,7 +229,7 @@ a {
   &:hover {
     color: $secondary;
   }
-  [lang='ar'] .work & {
+  [lang='ar-DZ'] .work & {
     font-family: $font-arabic;
   }
 }

@@ -100,7 +100,7 @@ ol {
     color: $secondary;
     @include size(56);
     font-weight: 800;
-    [lang='ar'] & {
+    [lang='ar-DZ'] & {
       font-family: $font;
     }
   }

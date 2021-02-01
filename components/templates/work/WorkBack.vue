@@ -20,7 +20,7 @@ export default {
   line-height: 1.875;
   text-transform: uppercase;
   margin-bottom: 12px;
-  [lang='ar'] & {
+  [lang='ar-DZ'] & {
     font-family: $font-arabic;
   }
   &:hover {
@@ -32,7 +32,7 @@ export default {
     transform: rotate(90deg);
     margin-inline-end: 6px;
     margin-bottom: 2px;
-    [lang='ar'] & {
+    [lang='ar-DZ'] & {
       transform: rotate(-90deg);
     }
   }

@@ -16,10 +16,7 @@ export default {
   },
 
   head({ $config: { baseURL } }) {
-    let direction = 'rtl'
-    if (this.$i18n.locale !== 'ar') {
-      direction = 'ltr'
-    }
+    const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true })
     let path = this.$route.path
     if (this.$i18n.locale !== 'fr') {
       path = this.$route.path.slice(3)
@@ -40,7 +37,7 @@ export default {
     }
 
     return {
-      htmlAttrs: { lang: this.$i18n.locale, dir: direction },
+      htmlAttrs: { ...i18nHead.htmlAttrs },
 
       link,
 

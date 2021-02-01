@@ -167,7 +167,7 @@ export default {
       height: 8px;
       margin-bottom: 2px;
       transform: rotate(-90deg);
-      [lang='ar'] & {
+      [lang='ar-DZ'] & {
         transform: rotate(90deg);
       }
     }
