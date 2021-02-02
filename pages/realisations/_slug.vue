@@ -85,30 +85,55 @@ export default {
 
       script: [
         {
-          json: {
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            name: this.work.title,
-            itemListElement: [
-              {
-                '@type': 'ListItem',
-                position: 1,
-                name: this.$t('name'),
-                item: routeItem
+          json: [
+            {
+              '@context': 'https://schema.org',
+              '@type': 'article',
+              mainEntityOfPage: {
+                '@type': 'WebPage',
+                '@id': `${baseURL}${this.$route.path}`
               },
-              {
-                '@type': 'ListItem',
-                position: 2,
-                name: this.$t('menu.realisations'),
-                item: `${baseURL}${this.localePath('realisations')}`
+              headline: this.work.title,
+              image: {
+                '@type': 'ImageObject',
+                url: ogImage,
+                width: '1920px',
+                height: '1080px'
               },
-              {
-                '@type': 'ListItem',
-                position: 3,
-                name: this.work.title
-              }
-            ]
-          },
+              dateCreated: this.work.createdAt,
+              datePublished: this.work.createdAt,
+              dateModified: this.work.updatedAt,
+              articleSection: this.$t('menu.realisations'),
+              articleBody: this.work.lead,
+              keywords: this.work.tags,
+              description: this.work.description
+            },
+
+            {
+              '@context': 'https://schema.org',
+              '@type': 'BreadcrumbList',
+              name: this.work.title,
+              itemListElement: [
+                {
+                  '@type': 'ListItem',
+                  position: 1,
+                  name: this.$t('name'),
+                  item: routeItem
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 2,
+                  name: this.$t('menu.realisations'),
+                  item: `${baseURL}${this.localePath('realisations')}`
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 3,
+                  name: this.work.title
+                }
+              ]
+            }
+          ],
           type: 'application/ld+json'
         }
       ]
