@@ -199,7 +199,7 @@ header {
     height: 48px;
     border: 0;
     font-family: $font;
-    [lang='ar'] & {
+    [lang='ar-DZ'] & {
       font-family: $font-arabic;
     }
     font-weight: 500;
