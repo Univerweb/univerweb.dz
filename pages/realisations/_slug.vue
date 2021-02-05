@@ -5,7 +5,7 @@
       <h1>{{ work.title }}</h1>
     </div>
     <div v-lazy:background-image="`/works/banner/${work.slug}.jpg`" class="banner card">
-      <img v-lazy="`/works/banner/${work.slug}.jpg`" :alt="work.title" />
+      <img v-lazy="`/works/banner/${work.slug}.jpg`" :alt="work.description" />
     </div>
     <div class="container client">
       <div class="details">
