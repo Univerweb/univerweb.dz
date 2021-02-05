@@ -9,7 +9,7 @@
 export default {
   async asyncData({ $content, app }) {
     const { title, description, headline } = await $content(app.i18n.locale, 'works').only(['title', 'description', 'headline']).fetch()
-    const works = await $content(app.i18n.locale, 'works_slug').only(['slug', 'title', 'tags', 'lead']).sortBy('position', 'desc').fetch()
+    const works = await $content(app.i18n.locale, 'works_slug').only(['slug', 'title', 'description', 'tags', 'lead']).sortBy('position', 'desc').fetch()
 
     return {
       title,
