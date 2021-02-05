@@ -25,6 +25,10 @@ export default {
     support: 'دعم تقني'
   },
 
+  alt: {
+    workpage: 'نظرة عامة على موقع'
+  },
+
   footer: {
     address: {
       name: '@:name',

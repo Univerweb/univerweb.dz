@@ -38,7 +38,7 @@
             :srcset="`/works/page/${work.slug}-377.jpg 377w, /works/page/${work.slug}-619.jpg 619w, /works/page/${work.slug}-719.jpg 719w, /works/page/${work.slug}-754.jpg 754w, /works/page/${work.slug}-800.jpg 800w, /works/page/${work.slug}-1238.jpg 1238w`"
             sizes="(max-width: 425px) 377px, (max-width: 767px) 719px, (max-width: 1279px) 619px, 800px"
             :src="`/works/page/${work.slug}-800.jpg`"
-            :alt="work.title"
+            :alt="$t('alt.workpage') + ' ' + work.title"
             loading="lazy"
           />
         </div>

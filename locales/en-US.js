@@ -25,6 +25,10 @@ export default {
     support: 'Technical support'
   },
 
+  alt: {
+    workpage: 'A website overview of'
+  },
+
   footer: {
     address: {
       name: '@:name Eurl',
