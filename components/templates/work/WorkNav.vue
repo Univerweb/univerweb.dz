@@ -95,11 +95,12 @@ export default {
   .arrow {
     position: absolute;
     left: 0;
-    top: 50%;
-    bottom: 50%;
-    margin: auto 0;
+    top: 9px;
+    @media (min-width: $sm) {
+      top: 15px;
+    }
     fill: currentColor;
-    height: 7px;
+    height: 6px;
     transform: rotate(90deg);
     [lang='ar-DZ'] & {
       transform: rotate(-90deg);
