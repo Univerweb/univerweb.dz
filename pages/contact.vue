@@ -97,6 +97,7 @@ export default {
       const map = new google.maps.Map(document.getElementById('map'), {
         mapId: '101a5bf427dc0726',
         zoom: 14,
+        streetViewControl: false,
         center: hq,
         backgroundColor: '#fafafa'
       })
