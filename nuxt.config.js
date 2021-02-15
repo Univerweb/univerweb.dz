@@ -53,6 +53,7 @@ export default {
   pwa: {
     manifest: {
       name: 'Univerweb',
+      description: 'Univerweb website',
       theme_color: '#50c8f0'
     }
   },
