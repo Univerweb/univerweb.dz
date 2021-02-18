@@ -28,7 +28,7 @@ export default {
   ],
   modules: ['nuxt-i18n', '@nuxt/content'],
   components: ['~/components/templates', '~/components/global'],
-  plugins: ['~plugins/vue-lazyload', { src: '~plugins/ga.js', mode: 'client' }],
+  plugins: [{ src: '~plugins/ga.js', mode: 'client' }],
   i18n: {
     locales: [
       { code: 'fr', iso: 'fr-FR', dir: 'ltr', name: 'Français', file: 'fr-FR.js' },

@@ -4,8 +4,8 @@
       <WorkBack />
       <h1>{{ work.title }}</h1>
     </div>
-    <div v-lazy:background-image="`/works/banner/${work.slug}.jpg`" class="banner card">
-      <img v-lazy="`/works/banner/${work.slug}.jpg`" :alt="work.description" />
+    <div :style="`background-image: url(/works/banner/${work.slug}.jpg)`" class="banner card">
+      <img :src="`/works/banner/${work.slug}.jpg`" :alt="work.description" loading="lazy" />
     </div>
     <div class="container client">
       <div class="details">
