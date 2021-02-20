@@ -37,7 +37,7 @@
     "nuxt-i18n": "^6.20.2",
     "prettier": "^2.2.1",
     "sass-loader": "^10.1.1",
-    "stylelint": "^13.10.0",
+    "stylelint": "^13.11.0",
     "vue-scrollto": "^2.20.0"
   }
 }
