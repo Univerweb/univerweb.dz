@@ -118,7 +118,6 @@ export default {
             {
               '@context': 'https://schema.org',
               '@type': 'BreadcrumbList',
-              name: this.work.title,
               itemListElement: [
                 {
                   '@type': 'ListItem',

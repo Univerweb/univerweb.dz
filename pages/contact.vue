@@ -57,7 +57,6 @@ export default {
           json: {
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
-            name: this.title,
             itemListElement: [
               {
                 '@type': 'ListItem',
