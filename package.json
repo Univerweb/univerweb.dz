@@ -1,4 +1,6 @@
 {
+  "name": "univerweb.dz",
+  "version": "1.2.0",
   "private": true,
   "scripts": {
     "dev": "nuxt",
