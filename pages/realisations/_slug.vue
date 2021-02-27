@@ -4,9 +4,18 @@
       <WorkBack />
       <h1>{{ work.title }}</h1>
     </div>
-    <div :style="`background-image: url(/works/banner/${work.slug}.jpg)`" class="banner card">
-      <img :src="`/works/banner/${work.slug}.jpg`" :alt="work.description" loading="lazy" />
+    <div class="banner card">
+      <img
+        :srcset="`/works/banner/${work.slug}-425.jpg 425w, /works/banner/${work.slug}-768.jpg 768w, /works/banner/${work.slug}-850.jpg 850w, /works/banner/${work.slug}-1024.jpg 1024w, /works/banner/${work.slug}-1280.jpg 1280w, /works/banner/${work.slug}-1536.jpg 1536w, /works/banner/${work.slug}-2048.jpg 2048w, /works/banner/${work.slug}-2560.jpg 2560w`"
+        sizes="100vw"
+        :src="`/works/banner/${work.slug}-1280.jpg`"
+        :alt="work.description"
+        width="1280"
+        height="648"
+        loading="lazy"
+      />
     </div>
+
     <div class="container client">
       <div class="details">
         <div class="item">
@@ -152,33 +161,9 @@ export default {
   h1 {
     margin-bottom: 0;
   }
-  .banner {
-    position: relative;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    width: 100%;
+  .banner img {
+    object-fit: cover;
     height: 456px;
-    @media (min-width: $lg) {
-      height: auto;
-      max-height: 648px;
-      overflow: hidden;
-      &::before {
-        content: '';
-        width: 100%;
-        display: block;
-        height: 0;
-        pointer-events: none;
-        padding-top: 33.75%;
-      }
-    }
-    img {
-      opacity: 0;
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-    }
   }
   .client {
     @media (min-width: $sm) {
