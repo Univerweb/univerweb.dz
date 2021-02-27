@@ -228,6 +228,7 @@ header {
   }
   align-content: space-between;
   background-color: transparent;
+  width: 24px;
   height: 24px;
   margin: 0;
   padding: 0;
@@ -240,6 +241,7 @@ header {
   }
   .middle {
     animation: CollapseMiddle $animation;
+    transform-origin: left;
     .show & {
       animation: CollapseShowMiddle $animation;
     }
@@ -252,8 +254,10 @@ header {
   }
   .bottom {
     animation: CollapseBottom $animation;
+    transform-origin: left;
     .show & {
       animation: CollapseShowBottom $animation;
+      transform-origin: center;
     }
   }
 }
