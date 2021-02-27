@@ -11,7 +11,7 @@
         :src="`/works/banner/${work.slug}-1280.jpg`"
         :alt="work.description"
         width="1280"
-        height="648"
+        height="456"
         loading="lazy"
       />
     </div>
