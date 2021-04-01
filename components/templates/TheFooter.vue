@@ -10,12 +10,12 @@
         <a href="https://goo.gl/maps/MmadgQgZRBv" target="_blank" rel="noopener">{{ $t('footer.maps') }}</a>
       </p>
       <p>
-        <a :href="'tel:+213' + this.$config.phone.slice(1).replace(/ /g, '')">
+        <a :href="'tel:+213' + $config.phone.slice(1).replace(/ /g, '')">
           <span class="visually-hidden">{{ $t('label.phone') }}</span>
           <span dir="ltr"> {{ $config.phone }}</span>
         </a>
         —
-        <a :href="'tel:+213' + this.$config.mobile.slice(1).replace(/ /g, '')">
+        <a :href="'tel:+213' + $config.mobile.slice(1).replace(/ /g, '')">
           <span class="visually-hidden">{{ $t('label.mobile') }}</span>
           <span dir="ltr">{{ $config.mobile }}</span>
         </a>
