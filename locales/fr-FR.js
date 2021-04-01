@@ -1,6 +1,12 @@
 export default {
   name: 'Univerweb',
 
+  skiplinks: {
+    menu: 'Aller au menu',
+    content: 'Aller au contenu',
+    contact: 'Aller au contact'
+  },
+
   menu: {
     realisations: 'Réalisations',
     prestations: 'Prestations',

@@ -1,6 +1,12 @@
 export default {
   name: 'يونيفارواب',
 
+  skiplinks: {
+    menu: 'إذهب إلى القائمة',
+    content: 'إذهب الى المحتوى',
+    contact: 'إذهب إلى التواصل'
+  },
+
   menu: {
     realisations: 'آخر الأعمال',
     prestations: 'الخدمات',

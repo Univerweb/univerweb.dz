@@ -1,8 +1,8 @@
 <template>
   <div class="skip-links">
-    <button v-scroll-to="'header'">Aller au menu</button>
-    <button v-scroll-to="'main'">Aller au contenu</button>
-    <button v-scroll-to="'footer'">Aller au contact</button>
+    <button v-scroll-to="'header'">{{ $t('skiplinks.menu') }}</button>
+    <button v-scroll-to="'main'">{{ $t('skiplinks.content') }}</button>
+    <button v-scroll-to="'footer'">{{ $t('skiplinks.contact') }}</button>
   </div>
 </template>
 
