@@ -12,7 +12,7 @@
       <p>
         <a :href="'tel:+213' + $config.phone.slice(1).replace(/ /g, '')">
           <span class="visually-hidden">{{ $t('label.phone') }}</span>
-          <span dir="ltr"> {{ $config.phone }}</span>
+          <span dir="ltr">{{ $config.phone }}</span>
         </a>
         —
         <a :href="'tel:+213' + $config.mobile.slice(1).replace(/ /g, '')">
