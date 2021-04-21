@@ -8,24 +8,24 @@ webDesign:
   title: Web design
   content: Un mélange savant et millimétré entre design attrayant, charte graphique respectée et expérience utilisateur au top des priorités. Nous trouverons pour vous l'équilibre parfait.
   tags:
-    - '#Responsive'
-    - '#DonnéesStructurées'
-    - '#HtmlValide'
-    - '#Accessibilité'
+    - "#Responsive"
+    - "#DonnéesStructurées"
+    - "#HtmlValide"
+    - "#Accessibilité"
 
 dev:
   title: Développement
   content: Votre entreprise et vos besoins métiers sont uniques. Vous êtes uniques ! Nos coderons pour vous l'application qui répond exactement à vos besoins, sans fioritures et avec agilité.
   tags:
-    - '#CMS'
-    - '#Drupal'
-    - '#ApplicationMobile'
-    - '#NuxtJS'
+    - "#CMS"
+    - "#Drupal"
+    - "#ApplicationMobile"
+    - "#NuxtJS"
 
 support:
   title: Support + Hébergement
   content: Imaginez un plat au restaurant sans assiette et sans serveur. Un site sans hébergement fiable et un support présent 24/7 c'est exactement la même chose.
   tags:
-    - '#HTTPS'
-    - '##HTTP/2'
-    - '#SauvegardeComplète'
+    - "#HTTPS"
+    - "##HTTP/2"
+    - "#SauvegardeComplète"
