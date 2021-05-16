@@ -9,12 +9,10 @@
 <script>
 export default {
   head() {
-    let direction = 'rtl'
-    if (this.$i18n.locale !== 'ar') {
-      direction = 'ltr'
-    }
+    const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true })
+
     return {
-      htmlAttrs: { lang: this.$i18n.locale, dir: direction }
+      htmlAttrs: { ...i18nHead.htmlAttrs }
     }
   }
 }
