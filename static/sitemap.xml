@@ -4,30 +4,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://univerweb.dz/</loc>
-    <lastmod>2021-01-16T13:00:00+00:00</lastmod>
+    <lastmod>2021-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar"/>
+    <image:image>
+      <image:loc>https://univerweb.dz/univerweb.png</image:loc>
+      <image:caption>Univerweb — Création de sites web en Algérie</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://univerweb.dz/en</loc>
-    <lastmod>2021-01-16T13:00:00+00:00</lastmod>
+    <lastmod>2021-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar"/>
+    <image:image>
+      <image:loc>https://univerweb.dz/univerweb.png</image:loc>
+      <image:caption>Univerweb — Website Design in Algeria</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://univerweb.dz/ar</loc>
-    <lastmod>2021-01-16T13:00:00+00:00</lastmod>
+    <lastmod>2021-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar"/>
+    <image:image>
+      <image:loc>https://univerweb.dz/univerweb-ar.png</image:loc>
+      <image:caption>يونيفارواب — تصميم مواقع الويب في الجزائر</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://univerweb.dz/realisations</loc>
