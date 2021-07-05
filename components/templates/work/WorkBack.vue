@@ -14,7 +14,7 @@ export default {
 
 <style lang="scss">
 .back {
-  display: inline-block;
+  width: max-content;
   font-size: 0.8rem;
   font-weight: 800;
   line-height: 1.875;
