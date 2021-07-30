@@ -36,7 +36,7 @@
     "lint-staged": "^11.1.0",
     "node-sass": "^6.0.1",
     "nuxt": "^2.15.7",
-    "nuxt-i18n": "^6.27.3",
+    "nuxt-i18n": "^6.28.0",
     "prettier": "^2.3.2",
     "sass-loader": "^10.2.0",
     "stylelint": "^13.13.1",
