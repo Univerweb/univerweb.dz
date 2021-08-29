@@ -50,6 +50,13 @@ export default {
     mobile: '0551 90 46 22',
     postalCode: '16029'
   },
+  content: {
+    markdown: {
+      prism: {
+        theme: false
+      }
+    }
+  },
   pwa: {
     manifest: {
       name: 'Univerweb',
