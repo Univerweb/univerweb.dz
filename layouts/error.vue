@@ -25,12 +25,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-.hero.error {
-  grid-auto-rows: auto auto;
-  justify-items: center;
-  align-content: center;
-  min-height: calc(100vh);
-}
-</style>

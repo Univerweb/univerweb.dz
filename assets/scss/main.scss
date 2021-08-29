@@ -104,6 +104,12 @@ main {
     justify-self: center;
     cursor: pointer;
   }
+  &.error {
+    grid-auto-rows: auto auto;
+    justify-items: center;
+    align-content: center;
+    min-height: calc(100vh);
+  }
 }
 
 /* Intro */
