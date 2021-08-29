@@ -50,6 +50,12 @@ body {
   line-height: 1.5;
 }
 
+/* Nuxt Progress */
+.nuxt-progress {
+  transition: none !important;
+  background-color: #50c8f0 !important;
+}
+
 /* Main */
 main {
   margin-top: 72px;

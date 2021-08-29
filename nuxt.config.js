@@ -64,9 +64,6 @@ export default {
       theme_color: '#50c8f0'
     }
   },
-  loading: {
-    color: '#50c8f0'
-  },
   generate: {
     fallback: 'not_found.html'
   }
