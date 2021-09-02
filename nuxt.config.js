@@ -1,6 +1,5 @@
 export default {
   target: 'static',
-  ssr: true,
   head: {
     meta: [
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
