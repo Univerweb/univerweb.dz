@@ -166,7 +166,7 @@ export default {
     height: 456px;
   }
   .client {
-    @media (min-width: $sm) {
+    @media (min-width: $md) {
       .item:nth-child(1) {
         grid-column: 1 / 4;
       }
@@ -180,7 +180,7 @@ export default {
   }
   .project {
     padding-top: 0;
-    @media (min-width: $sm) {
+    @media (min-width: $md) {
       .item:nth-child(1) {
         grid-column: 1 / 4;
       }

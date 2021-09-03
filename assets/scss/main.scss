@@ -30,7 +30,7 @@ html {
 
 html,
 body {
-  @media (min-width: $md) {
+  @media (min-width: $lg) {
     overflow: visible !important;
   }
 }
@@ -60,7 +60,7 @@ body {
 main {
   margin-top: 72px;
   transition: margin-top $transition;
-  @media (min-width: $md) {
+  @media (min-width: $lg) {
     margin-top: 120px;
     .scrolled & {
       margin-top: 72px;
@@ -79,13 +79,13 @@ main {
 /* Container */
 .container {
   padding: 48px 24px;
-  @media (min-width: $sm) {
+  @media (min-width: $md) {
     padding: 96px 48px;
   }
-  @media (min-width: $md) {
+  @media (min-width: $lg) {
     padding: 144px calc(50% - 928px / 2);
   }
-  @media (min-width: $lg) {
+  @media (min-width: $xl) {
     padding: 144px calc(50% - 1200px / 2);
   }
 }
@@ -99,7 +99,7 @@ main {
   padding-top: 0;
   padding-bottom: 0;
   min-height: calc(100vh - 96px);
-  @media (min-width: $md) {
+  @media (min-width: $lg) {
     min-height: calc(100vh - 156px);
   }
   transition: min-height $transition;
@@ -124,10 +124,10 @@ main {
   grid-template-columns: repeat(12, 1fr);
   * {
     grid-column: 1 / 13;
-    @media (min-width: $md) {
+    @media (min-width: $lg) {
       grid-column: 1 / 10;
     }
-    @media (min-width: $lg) {
+    @media (min-width: $xl) {
       grid-column: 1 / 8;
     }
   }
@@ -143,7 +143,7 @@ main {
 /* Item */
 .item {
   grid-column: 1 / 13;
-  @media (min-width: $sm) {
+  @media (min-width: $md) {
     &:nth-child(odd) {
       grid-column: 1 / 6;
     }
@@ -161,11 +161,11 @@ h1,
   letter-spacing: -0.05em;
   margin-top: 0;
   margin-bottom: 24px;
-  @media (min-width: $sm) {
+  @media (min-width: $md) {
     @include size(56);
     margin-bottom: 36px;
   }
-  @media (min-width: $md) {
+  @media (min-width: $lg) {
     @include size(80);
     margin-bottom: 48px;
     letter-spacing: -0.05em;
@@ -179,10 +179,10 @@ h2,
   letter-spacing: -0.05em;
   margin-top: 0;
   margin-bottom: 24px;
-  @media (min-width: $sm) {
+  @media (min-width: $md) {
     @include size(42);
   }
-  @media (min-width: $md) {
+  @media (min-width: $lg) {
     @include size(56);
   }
 }
@@ -234,7 +234,7 @@ a {
   font-family: $font;
   @include size(20);
   font-weight: 500;
-  @media (min-width: $sm) {
+  @media (min-width: $md) {
     @include size(28);
     line-height: 1.286;
   }

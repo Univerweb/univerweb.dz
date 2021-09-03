@@ -42,7 +42,7 @@ export default {
 .nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  @media (min-width: $sm) {
+  @media (min-width: $md) {
     grid-template-columns: repeat(2, max-content);
   }
   justify-content: space-between;
@@ -96,7 +96,7 @@ export default {
     position: absolute;
     left: 0;
     top: 9px;
-    @media (min-width: $sm) {
+    @media (min-width: $md) {
       top: 15px;
     }
     fill: currentColor;

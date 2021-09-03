@@ -108,7 +108,7 @@ export default {
     margin: 0;
   }
 
-  @media (min-width: $sm) {
+  @media (min-width: $md) {
     &:nth-child(even) .intro * {
       grid-column: 7 / 12;
     }

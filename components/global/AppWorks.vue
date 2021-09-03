@@ -74,7 +74,7 @@ export default {
   margin-left: auto;
   margin-right: auto;
   max-width: 588px;
-  @media (min-width: $sm) {
+  @media (min-width: $md) {
     max-width: 100%;
   }
 
@@ -88,7 +88,7 @@ export default {
     overflow: hidden;
     border-radius: 12px;
     z-index: 1;
-    @media (min-width: $sm) {
+    @media (min-width: $md) {
       &.item:nth-child(odd) {
         grid-column: 1 / 7;
       }
@@ -96,7 +96,7 @@ export default {
         grid-column: 7 / 13;
       }
     }
-    @media (min-width: $lg) {
+    @media (min-width: $xl) {
       border-radius: 24px;
     }
 
@@ -129,13 +129,13 @@ export default {
       height: 100%;
       color: $white;
       padding: 24px;
-      @media (min-width: $sm) {
+      @media (min-width: $md) {
         padding: 24px;
       }
-      @media (min-width: $md) {
+      @media (min-width: $lg) {
         padding: 48px;
       }
-      @media (min-width: $lg) {
+      @media (min-width: $xl) {
         padding: 48px;
       }
     }

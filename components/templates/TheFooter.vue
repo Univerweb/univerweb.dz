@@ -95,11 +95,11 @@ footer {
   display: grid;
   justify-content: space-between;
   gap: 48px;
-  @media (min-width: $sm) {
+  @media (min-width: $md) {
     grid-template-columns: auto auto;
     padding: 96px 48px;
   }
-  @media (min-width: $md) {
+  @media (min-width: $lg) {
     grid-template-columns: 1fr auto 1fr;
     padding: 144px 96px;
   }
@@ -115,7 +115,7 @@ footer {
   .lead {
     color: var(--color);
     transition: color $transition;
-    @media (min-width: $sm) {
+    @media (min-width: $md) {
       max-width: 310px;
     }
   }
@@ -125,7 +125,7 @@ footer {
     grid-template-columns: repeat(4, auto);
     justify-content: space-between;
     max-width: 210px;
-    @media (min-width: $sm) {
+    @media (min-width: $md) {
       max-width: 295px;
     }
     margin: 12px 0 0;
@@ -138,7 +138,7 @@ footer {
 
   .colorSwitcher {
     justify-self: start;
-    @media (min-width: $md) {
+    @media (min-width: $lg) {
       justify-self: end;
     }
     .btn {

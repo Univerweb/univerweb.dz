@@ -90,7 +90,7 @@ header {
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     }
   }
-  @media (min-width: $md) {
+  @media (min-width: $lg) {
     grid-template-columns: auto 1fr;
     padding: 36px;
     .scrolled & {
@@ -132,7 +132,7 @@ header {
     opacity: 1;
     pointer-events: auto;
   }
-  @media (min-width: $md) {
+  @media (min-width: $lg) {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
@@ -152,7 +152,7 @@ header {
       padding-top: 24px;
     }
     list-style: none;
-    @media (min-width: $md) {
+    @media (min-width: $lg) {
       grid-template-columns: repeat(4, auto);
       justify-content: space-around;
       padding: 0;
@@ -164,7 +164,7 @@ header {
     @include size(20);
     color: var(--color);
     font-weight: 500;
-    @media (min-width: $md) {
+    @media (min-width: $lg) {
       font-size: 1rem;
       line-height: 1.5;
       text-align: center;
@@ -223,7 +223,7 @@ header {
 
 .toggle {
   display: grid;
-  @media (min-width: $md) {
+  @media (min-width: $lg) {
     display: none;
   }
   align-content: space-between;
