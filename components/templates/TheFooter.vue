@@ -91,10 +91,16 @@ export default {
 
 <style lang="scss">
 footer {
-  padding: 48px 24px;
+  padding: 24px 12px;
   display: grid;
   justify-content: space-between;
   gap: 48px;
+  @media (min-width: $xs) {
+    padding: 32px 16px;
+  }
+  @media (min-width: $sm) {
+    padding: 48px 24px;
+  }
   @media (min-width: $md) {
     grid-template-columns: auto auto;
     padding: 96px 48px;
