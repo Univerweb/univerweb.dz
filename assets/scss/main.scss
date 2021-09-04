@@ -143,7 +143,13 @@ main {
 .details {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  row-gap: 24px;
+  row-gap: 12px;
+  @media (min-width: $xs) {
+    row-gap: 16px;
+  }
+  @media (min-width: $sm) {
+    row-gap: 24px;
+  }
 }
 
 /* Item */
