@@ -81,7 +81,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: var(--bg);
-  padding: 24px;
+  padding: 24px 12px;
   transition: background-color $transition, padding $transition;
   z-index: 100;
   .scrolled &:not(.show) {
@@ -89,6 +89,12 @@ header {
     .dark-mode & {
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     }
+  }
+  @media (min-width: $xs) {
+    padding: 24px 16px;
+  }
+  @media (min-width: $sm) {
+    padding: 24px;
   }
   @media (min-width: $lg) {
     grid-template-columns: auto 1fr;
