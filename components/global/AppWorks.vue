@@ -124,7 +124,10 @@ export default {
 
     .inner {
       display: grid;
-      grid-auto-rows: auto auto 1fr;
+      grid-auto-rows: auto 1fr;
+      @media (min-width: $lg) {
+        grid-auto-rows: auto auto 1fr;
+      }
       position: absolute;
       height: 100%;
       color: $white;
@@ -147,6 +150,10 @@ export default {
     }
 
     p {
+      display: none;
+      @media (min-width: $lg) {
+        display: block;
+      }
       color: $white;
       align-self: end;
       transform: translateY(calc(100% + 48px));
