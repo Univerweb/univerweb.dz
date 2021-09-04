@@ -80,7 +80,13 @@ export default {
 
   .details {
     grid-template-columns: initial;
-    column-gap: 24px;
+    gap: 12px;
+    @media (min-width: $md) {
+      gap: 16px;
+    }
+    @media (min-width: $lg) {
+      gap: 24px;
+    }
   }
 
   .item {
