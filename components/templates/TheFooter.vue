@@ -94,12 +94,14 @@ footer {
   padding: 24px 12px;
   display: grid;
   justify-content: space-between;
-  gap: 48px;
+  gap: 24px;
   @media (min-width: $xs) {
     padding: 32px 16px;
+    gap: 32px;
   }
   @media (min-width: $sm) {
     padding: 48px 24px;
+    gap: 48px;
   }
   @media (min-width: $md) {
     grid-template-columns: auto auto;
