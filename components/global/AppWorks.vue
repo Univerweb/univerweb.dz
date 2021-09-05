@@ -88,8 +88,8 @@ export default {
   .item {
     grid-column: initial;
     overflow: hidden;
-    border-radius: 12px;
     z-index: 1;
+    border-radius: 12px;
     @media (min-width: $xl) {
       border-radius: 24px;
     }
@@ -119,9 +119,6 @@ export default {
     .inner {
       display: grid;
       grid-auto-rows: auto 1fr;
-      @media (min-width: $lg) {
-        grid-auto-rows: auto auto 1fr;
-      }
       position: absolute;
       height: 100%;
       color: $white;
@@ -131,6 +128,7 @@ export default {
       }
       @media (min-width: $lg) {
         padding: 36px;
+        grid-auto-rows: auto auto 1fr;
       }
       @media (min-width: $xl) {
         padding: 48px;
