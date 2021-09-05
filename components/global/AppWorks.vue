@@ -135,7 +135,7 @@ export default {
         padding: 24px;
       }
       @media (min-width: $lg) {
-        padding: 48px;
+        padding: 36px;
       }
       @media (min-width: $xl) {
         padding: 48px;
