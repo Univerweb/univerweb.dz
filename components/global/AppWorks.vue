@@ -87,7 +87,7 @@ export default {
     overflow: hidden;
     border-radius: 12px;
     z-index: 1;
-    @media (min-width: $md) {
+    @media (min-width: $sm) {
       &.item:nth-child(odd) {
         grid-column: 1 / 7;
       }
