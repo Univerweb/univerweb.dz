@@ -112,7 +112,7 @@ export default {
       width: 100%;
       height: 100%;
       background-color: $color;
-      opacity: 0.3;
+      opacity: 0.1;
       transition: opacity $transition;
     }
 
