@@ -72,7 +72,10 @@ export default {
 <style lang="scss">
 .works {
   .details {
-    grid-template-columns: initial;
+    grid-template-columns: 1fr;
+    @media (min-width: $sm) {
+      grid-template-columns: 1fr 1fr;
+    }
     gap: 12px;
     @media (min-width: $md) {
       gap: 16px;
@@ -87,14 +90,6 @@ export default {
     overflow: hidden;
     border-radius: 12px;
     z-index: 1;
-    @media (min-width: $sm) {
-      &.item:nth-child(odd) {
-        grid-column: 1 / 7;
-      }
-      &.item:nth-child(even) {
-        grid-column: 7 / 13;
-      }
-    }
     @media (min-width: $xl) {
       border-radius: 24px;
     }
