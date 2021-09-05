@@ -71,13 +71,6 @@ export default {
 
 <style lang="scss">
 .works {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 588px;
-  @media (min-width: $md) {
-    max-width: 100%;
-  }
-
   .details {
     grid-template-columns: initial;
     gap: 12px;
