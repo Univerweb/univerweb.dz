@@ -17,6 +17,7 @@ export default {
   },
   css: ['@/assets/scss/font.scss', '@/assets/scss/keyframes.scss', '@/assets/scss/main.scss'],
   buildModules: [
+    '@nuxt/image',
     '@nuxtjs/color-mode',
     '@nuxtjs/eslint-module',
     '@nuxtjs/stylelint-module',
@@ -65,5 +66,16 @@ export default {
   },
   generate: {
     fallback: 'not_found.html'
+  },
+
+  image: {
+    screens: {
+      xs: 319,
+      sm: 639,
+      md: 767,
+      lg: 1023,
+      xl: 1279,
+      xxl: 2560
+    }
   }
 }
