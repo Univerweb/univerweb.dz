@@ -34,7 +34,7 @@
     "eslint-plugin-nuxt": "^3.0.0",
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.4",
-    "lint-staged": "^11.2.4",
+    "lint-staged": "^11.2.5",
     "node-sass": "^6.0.1",
     "nuxt": "^2.15.8",
     "nuxt-i18n": "^6.28.1",
