@@ -26,7 +26,7 @@ export default {
     '@nuxtjs/pwa',
     ['vue-scrollto/nuxt', { offset: -72 }]
   ],
-  modules: ['nuxt-i18n', '@nuxt/content'],
+  modules: ['@nuxtjs/i18n', '@nuxt/content'],
   components: ['~/components/templates', '~/components/global'],
   plugins: [{ src: '~plugins/ga.js', mode: 'client' }],
   i18n: {
@@ -36,7 +36,6 @@ export default {
       { code: 'ar', iso: 'ar-DZ', dir: 'rtl', name: 'العربية', file: 'ar-DZ.js' }
     ],
     defaultLocale: 'fr',
-    detectBrowserLanguage: false,
     lazy: true,
     langDir: 'locales/'
   },

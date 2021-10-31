@@ -16,7 +16,7 @@ export default {
   },
 
   head({ $config: { baseURL } }) {
-    const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true })
+    const i18nHead = this.$nuxtI18nHead({ addDirAttribute: true, addSeoAttributes: true })
     let path = this.$route.path
     if (this.$i18n.locale !== 'fr') {
       path = this.$route.path.slice(3)
