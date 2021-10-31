@@ -32,6 +32,8 @@
 
 <script>
 export default {
+  name: 'AgencePage',
+
   async asyncData({ $content, app }) {
     const { title, description, headline, lead, method, choose } = await $content(app.i18n.locale, 'agence').fetch()
 

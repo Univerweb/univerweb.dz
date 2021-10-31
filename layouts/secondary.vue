@@ -8,6 +8,8 @@
 
 <script>
 export default {
+  name: 'SecondaryLayout',
+
   head() {
     const i18nHead = this.$nuxtI18nHead({ addDirAttribute: true, addSeoAttributes: true })
 

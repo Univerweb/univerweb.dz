@@ -8,6 +8,8 @@
 
 <script>
 export default {
+  name: 'ErrorLayout',
+
   layout: 'secondary',
 
   props: {

@@ -27,6 +27,8 @@
 
 <script>
 export default {
+  name: 'ContactPage',
+
   async asyncData({ $content, app }) {
     const { title, description, other } = await $content(app.i18n.locale, 'contact').fetch()
 

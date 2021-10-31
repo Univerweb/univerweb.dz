@@ -8,6 +8,8 @@
 
 <script>
 export default {
+  name: 'HomePage',
+
   props: {
     h1: {
       type: String,
