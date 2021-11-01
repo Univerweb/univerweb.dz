@@ -121,22 +121,22 @@
 
 @keyframes ShowIcon {
   from {
-    opacity: 0;
+    opacity: 0%;
     transform: scaleY(0);
   }
   to {
-    opacity: 1;
+    opacity: 100%;
     transform: scaleY(1);
   }
 }
 
 @keyframes HideIcon {
   from {
-    opacity: 1;
+    opacity: 100%;
     transform: scaleY(1);
   }
   to {
-    opacity: 0;
+    opacity: 0%;
     transform: scaleY(0);
   }
 }
