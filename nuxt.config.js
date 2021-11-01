@@ -20,7 +20,6 @@ export default {
     '@nuxt/image',
     '@nuxtjs/color-mode',
     '@nuxtjs/eslint-module',
-    '@nuxtjs/stylelint-module',
     '@nuxtjs/svg',
     '@nuxtjs/style-resources',
     '@nuxtjs/pwa',
