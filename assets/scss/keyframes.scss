@@ -2,9 +2,11 @@
   0% {
     transform: scaleX(0);
   }
+
   75% {
     transform: scaleX(0);
   }
+
   100% {
     transform: scaleX(0.5);
   }
@@ -14,9 +16,11 @@
   0% {
     transform: scaleX(0.5);
   }
+
   25% {
     transform: scaleX(0);
   }
+
   100% {
     transform: scaleX(0);
   }
@@ -26,12 +30,15 @@
   0% {
     transform: translateY(10.5px) scaleX(1) rotate(-45deg);
   }
+
   25% {
     transform: translateY(10.5px) rotate(0);
   }
+
   50% {
     transform: translateY(0) rotate(0);
   }
+
   100% {
     transform: translateY(0) scaleX(1) rotate(0);
   }
@@ -41,12 +48,15 @@
   0% {
     transform: translateY(0) scaleX(1) rotate(0);
   }
+
   50% {
     transform: translateY(0) rotate(0);
   }
+
   75% {
     transform: translateY(10.5px) rotate(0);
   }
+
   100% {
     transform: translateY(10.5px) scaleX(1) rotate(-45deg);
   }
@@ -56,15 +66,19 @@
   0% {
     transform: translateY(-10.5px) scaleX(1) rotate(45deg);
   }
+
   25% {
     transform: translateY(-10.5px) rotate(0);
   }
+
   50% {
     transform: translateY(0) scaleX(1) rotate(0);
   }
+
   75% {
     transform: translateY(0) scaleX(0.75) rotate(0);
   }
+
   100% {
     transform: translateY(0) scaleX(0.75) rotate(0);
   }
@@ -74,15 +88,19 @@
   0% {
     transform: translateY(0) scaleX(0.75) rotate(0);
   }
+
   25% {
     transform: translateY(0) scaleX(0.75) rotate(0);
   }
+
   50% {
     transform: translateY(0) scaleX(1) rotate(0);
   }
+
   75% {
     transform: translateY(-10.5px) rotate(0);
   }
+
   100% {
     transform: translateY(-10.5px) scaleX(1) rotate(45deg);
   }
@@ -93,26 +111,32 @@
     transform: scaleX(0.05);
     transform-origin: left;
   }
+
   25% {
     transform: scaleX(1);
     transform-origin: left;
   }
+
   26% {
     transform: scaleX(1);
     transform-origin: right;
   }
+
   60% {
     transform: scaleX(0.05);
     transform-origin: right;
   }
+
   80% {
     transform: scaleX(0);
     transform-origin: right;
   }
+
   81% {
     transform: scaleX(0);
     transform-origin: left;
   }
+
   100% {
     transform: scaleX(0.05);
     transform-origin: left;
@@ -124,6 +148,7 @@
     opacity: 0%;
     transform: scaleY(0);
   }
+
   to {
     opacity: 100%;
     transform: scaleY(1);
@@ -135,6 +160,7 @@
     opacity: 100%;
     transform: scaleY(1);
   }
+
   to {
     opacity: 0%;
     transform: scaleY(0);
