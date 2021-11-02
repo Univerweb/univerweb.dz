@@ -246,23 +246,23 @@ header {
     transition: all $transition;
   }
   .middle {
-    animation: CollapseMiddle $animation;
+    animation: collapse-middle $animation;
     transform-origin: left;
     .show & {
-      animation: CollapseShowMiddle $animation;
+      animation: collapse-show-middle $animation;
     }
   }
   .top {
-    animation: CollapseTop $animation;
+    animation: collapse-top $animation;
     .show & {
-      animation: CollapseShowTop $animation;
+      animation: collapse-show-top $animation;
     }
   }
   .bottom {
-    animation: CollapseBottom $animation;
+    animation: collapse-bottom $animation;
     transform-origin: left;
     .show & {
-      animation: CollapseShowBottom $animation;
+      animation: collapse-show-bottom $animation;
       transform-origin: center;
     }
   }

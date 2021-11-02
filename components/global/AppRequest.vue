@@ -1,7 +1,7 @@
 <template>
   <div class="container request">
     <h2 class="h3">{{ $t('request.headline') }}</h2>
-    <NuxtLink :to="localePath('contact')" :class="home" class="moveArrow">{{ $t('request.link') }}</NuxtLink>
+    <NuxtLink :to="localePath('contact')" :class="home" class="move-arrow">{{ $t('request.link') }}</NuxtLink>
   </div>
 </template>
 

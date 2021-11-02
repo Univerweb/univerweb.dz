@@ -14,11 +14,11 @@
       <div class="details">
         <div class="item">
           <h3 class="h6">{{ $t('label.manager') }}</h3>
-          <a :href="'mailto:' + $config.managerEmail" class="link moveArrow">{{ $config.managerEmail }}</a>
+          <a :href="'mailto:' + $config.managerEmail" class="link move-arrow">{{ $config.managerEmail }}</a>
         </div>
         <div class="item">
           <h3 class="h6">{{ $t('label.support') }}</h3>
-          <a :href="'mailto:' + $config.supportEmail" class="link moveArrow">{{ $config.supportEmail }}</a>
+          <a :href="'mailto:' + $config.supportEmail" class="link move-arrow">{{ $config.supportEmail }}</a>
         </div>
       </div>
     </div>

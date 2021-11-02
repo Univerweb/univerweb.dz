@@ -286,7 +286,7 @@ button {
   }
 }
 
-.moveArrow {
+.move-arrow {
   position: relative;
   display: inline-block;
   &:hover {
@@ -305,7 +305,7 @@ button {
     transition: background-color $transition, transform $transition;
   }
   &:hover::before {
-    animation: MoveArrow $animation;
+    animation: move-arrow $animation;
   }
 }
 

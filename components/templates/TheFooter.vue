@@ -164,10 +164,10 @@ footer {
           height: 16px;
         }
         .show {
-          animation: ShowIcon 300ms forwards;
+          animation: show-icon 300ms forwards;
         }
         .hide {
-          animation: HideIcon 300ms forwards;
+          animation: hide-icon 300ms forwards;
         }
       }
       .from-bottom-to-bottom-enter-active {
