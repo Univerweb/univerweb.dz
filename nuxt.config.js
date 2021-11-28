@@ -64,16 +64,5 @@ export default {
   },
   generate: {
     fallback: 'not_found.html'
-  },
-
-  image: {
-    screens: {
-      xs: 319,
-      sm: 639,
-      md: 767,
-      lg: 1023,
-      xl: 1279,
-      xxl: 2560
-    }
   }
 }
