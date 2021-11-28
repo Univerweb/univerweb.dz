@@ -1,6 +1,6 @@
 <template>
   <header :class="{ show: show }">
-    <NuxtLink :to="localePath('/')" :title="$t('name')" class="logo" @click.native="show = false">
+    <NuxtLink :to="localePath('/')" :title="$t('name')" class="logo">
       <span class="visually-hidden">{{ $t('name') }}</span>
       <LogoArabic v-if="$i18n.locale === 'ar'" />
       <LogoLatin v-else />
@@ -8,7 +8,7 @@
     <nav class="menu">
       <ul>
         <li v-for="(value, name) in $t('menu')" :key="name">
-          <NuxtLink :to="localePath(name)" @click.native="show = false">{{ value }}</NuxtLink>
+          <NuxtLink :to="localePath(name)">{{ value }}</NuxtLink>
         </li>
       </ul>
       <div class="btn lang">
@@ -52,6 +52,12 @@ export default {
     return {
       htmlAttrs: { style: this.show ? 'height: 100%; overflow: hidden' : '' },
       bodyAttrs: { style: this.show ? 'height: 100%; overflow: hidden' : '' }
+    }
+  },
+
+  watch: {
+    $route() {
+      this.show = false
     }
   },
 
