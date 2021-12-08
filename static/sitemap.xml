@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://univerweb.dz/</loc>
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar" />
     <image:image>
       <image:loc>https://univerweb.dz/univerweb.png</image:loc>
       <image:caption>Univerweb — Création de sites web en Algérie</image:caption>
@@ -20,9 +18,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar" />
     <image:image>
       <image:loc>https://univerweb.dz/univerweb.png</image:loc>
       <image:caption>Univerweb — Website Design in Algeria</image:caption>
@@ -33,9 +31,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar" />
     <image:image>
       <image:loc>https://univerweb.dz/univerweb-ar.png</image:loc>
       <image:caption>يونيفارواب — تصميم مواقع الويب في الجزائر</image:caption>
@@ -46,9 +44,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations" />
     <image:image>
       <image:loc>https://univerweb.dz/univerweb.png</image:loc>
       <image:caption>Réalisations — Univerweb</image:caption>
@@ -59,9 +57,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations" />
     <image:image>
       <image:loc>https://univerweb.dz/univerweb.png</image:loc>
       <image:caption>Latest work — Univerweb</image:caption>
@@ -72,9 +70,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations" />
     <image:image>
       <image:loc>https://univerweb.dz/univerweb-ar.png</image:loc>
       <image:caption>آخر الأعمال — يونيفارواب</image:caption>
@@ -85,9 +83,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/prestations"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/prestations"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/prestations"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/prestations" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/prestations" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/prestations" />
     <image:image>
       <image:loc>https://univerweb.dz/univerweb.png</image:loc>
       <image:caption>Prestations — Univerweb</image:caption>
@@ -98,9 +96,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/prestations"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/prestations"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/prestations"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/prestations" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/prestations" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/prestations" />
     <image:image>
       <image:loc>https://univerweb.dz/univerweb.png</image:loc>
       <image:caption>Services — Univerweb</image:caption>
@@ -111,9 +109,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/prestations"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/prestations"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/prestations"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/prestations" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/prestations" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/prestations" />
     <image:image>
       <image:loc>https://univerweb.dz/univerweb-ar.png</image:loc>
       <image:caption>الخدمات — يونيفارواب</image:caption>
@@ -124,9 +122,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/agence"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/agence"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/agence"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/agence" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/agence" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/agence" />
     <image:image>
       <image:loc>https://univerweb.dz/univerweb.png</image:loc>
       <image:caption>L'agence — Univerweb</image:caption>
@@ -137,9 +135,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/agence"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/agence"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/agence"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/agence" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/agence" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/agence" />
     <image:image>
       <image:loc>https://univerweb.dz/univerweb.png</image:loc>
       <image:caption>The agency — Univerweb</image:caption>
@@ -150,9 +148,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/agence"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/agence"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/agence"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/agence" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/agence" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/agence" />
     <image:image>
       <image:loc>https://univerweb.dz/univerweb-ar.png</image:loc>
       <image:caption>الوكالة — يونيفارواب</image:caption>
@@ -163,9 +161,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/contact"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/contact"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/contact"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/contact" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/contact" />
     <image:image>
       <image:loc>https://univerweb.dz/univerweb.png</image:loc>
       <image:caption>Contact — Univerweb</image:caption>
@@ -176,9 +174,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/contact"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/contact"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/contact"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/contact" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/contact" />
     <image:image>
       <image:loc>https://univerweb.dz/univerweb.png</image:loc>
       <image:caption>Contact — Univerweb</image:caption>
@@ -189,9 +187,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/contact"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/contact"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/contact"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/contact" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/contact" />
     <image:image>
       <image:loc>https://univerweb.dz/univerweb-ar.png</image:loc>
       <image:caption>التواصل معنا — يونيفارواب</image:caption>
@@ -202,9 +200,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/rcelec"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/rcelec"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/rcelec"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/rcelec" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/rcelec" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/rcelec" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/rcelec.jpg</image:loc>
       <image:caption>RCelec — Nos dernières créations</image:caption>
@@ -215,9 +213,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/rcelec"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/rcelec"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/rcelec"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/rcelec" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/rcelec" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/rcelec" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/rcelec.jpg</image:loc>
       <image:caption>RCelec — Our latest creations</image:caption>
@@ -228,9 +226,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/rcelec"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/rcelec"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/rcelec"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/rcelec" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/rcelec" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/rcelec" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/rcelec.jpg</image:loc>
       <image:caption>أرسي إيلك — أحدث إبداعاتنا</image:caption>
@@ -241,9 +239,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/clinique-aya"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/clinique-aya"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/clinique-aya"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/clinique-aya" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/clinique-aya" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/clinique-aya" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/clinique-aya.jpg</image:loc>
       <image:caption>Clinique Aya — Nos dernières créations</image:caption>
@@ -254,9 +252,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/clinique-aya"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/clinique-aya"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/clinique-aya"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/clinique-aya" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/clinique-aya" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/clinique-aya" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/clinique-aya.jpg</image:loc>
       <image:caption>Clinique Aya — Our latest creations</image:caption>
@@ -267,9 +265,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/clinique-aya"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/clinique-aya"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/clinique-aya"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/clinique-aya" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/clinique-aya" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/clinique-aya" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/clinique-aya.jpg</image:loc>
       <image:caption>عيادة أياة — أحدث إبداعاتنا</image:caption>
@@ -280,9 +278,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/clinique-sonya"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/clinique-sonya"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/clinique-sonya"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/clinique-sonya" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/clinique-sonya" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/clinique-sonya" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/clinique-sonya.jpg</image:loc>
       <image:caption>Clinique Sonya — Nos dernières créations</image:caption>
@@ -293,9 +291,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/clinique-sonya"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/clinique-sonya"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/clinique-sonya"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/clinique-sonya" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/clinique-sonya" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/clinique-sonya" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/clinique-sonya.jpg</image:loc>
       <image:caption>Clinique Sonya — Our latest creations</image:caption>
@@ -306,9 +304,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/clinique-sonya"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/clinique-sonya"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/clinique-sonya"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/clinique-sonya" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/clinique-sonya" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/clinique-sonya" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/clinique-sonya.jpg</image:loc>
       <image:caption>عيادة صونيا — أحدث إبداعاتنا</image:caption>
@@ -319,9 +317,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/spheretec"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/spheretec"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/spheretec"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/spheretec" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/spheretec" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/spheretec" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/spheretec.jpg</image:loc>
       <image:caption>Spheretec — Nos dernières créations</image:caption>
@@ -332,9 +330,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/spheretec"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/spheretec"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/spheretec"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/spheretec" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/spheretec" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/spheretec" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/spheretec.jpg</image:loc>
       <image:caption>Spheretec — Our latest creations</image:caption>
@@ -345,9 +343,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/spheretec"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/spheretec"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/spheretec"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/spheretec" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/spheretec" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/spheretec" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/spheretec.jpg</image:loc>
       <image:caption>سفارتيك — أحدث إبداعاتنا</image:caption>
@@ -358,9 +356,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/cinquelec"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/cinquelec"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/cinquelec"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/cinquelec" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/cinquelec" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/cinquelec" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/cinquelec.jpg</image:loc>
       <image:caption>Cinquelec — Nos dernières créations</image:caption>
@@ -371,9 +369,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/cinquelec"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/cinquelec"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/cinquelec"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/cinquelec" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/cinquelec" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/cinquelec" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/cinquelec.jpg</image:loc>
       <image:caption>Cinquelec — Our latest creations</image:caption>
@@ -384,9 +382,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/cinquelec"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/cinquelec"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/cinquelec"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/cinquelec" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/cinquelec" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/cinquelec" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/cinquelec.jpg</image:loc>
       <image:caption>سانكيليك — أحدث إبداعاتنا</image:caption>
@@ -397,9 +395,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/bn-electric-company"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/bn-electric-company"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/bn-electric-company"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/bn-electric-company" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/bn-electric-company" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/bn-electric-company" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/bn-electric-company.jpg</image:loc>
       <image:caption>BN Electric Company — Nos dernières créations</image:caption>
@@ -410,9 +408,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/bn-electric-company"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/bn-electric-company"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/bn-electric-company"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/bn-electric-company" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/bn-electric-company" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/bn-electric-company" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/bn-electric-company.jpg</image:loc>
       <image:caption>BN Electric Company — Our latest creations</image:caption>
@@ -423,9 +421,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/bn-electric-company"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/bn-electric-company"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/bn-electric-company"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/bn-electric-company" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/bn-electric-company" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/bn-electric-company" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/bn-electric-company.jpg</image:loc>
       <image:caption>بي أن إلكتريك كومباني — أحدث إبداعاتنا</image:caption>
@@ -436,9 +434,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/intermat"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/intermat"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/intermat"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/intermat" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/intermat" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/intermat" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/intermat.jpg</image:loc>
       <image:caption>Intermat — Nos dernières créations</image:caption>
@@ -449,9 +447,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/intermat"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/intermat"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/intermat"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/intermat" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/intermat" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/intermat" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/intermat.jpg</image:loc>
       <image:caption>Intermat — Our latest creations</image:caption>
@@ -462,9 +460,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/intermat"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/intermat"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/intermat"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/intermat" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/intermat" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/intermat" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/intermat.jpg</image:loc>
       <image:caption>إنترمات — أحدث إبداعاتنا</image:caption>
@@ -475,9 +473,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/pibo"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/pibo"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/pibo"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/pibo" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/pibo" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/pibo" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/pibo.jpg</image:loc>
       <image:caption>Pibo — Nos dernières créations</image:caption>
@@ -488,9 +486,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/pibo"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/pibo"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/pibo"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/pibo" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/pibo" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/pibo" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/pibo.jpg</image:loc>
       <image:caption>Pibo — Our latest creations</image:caption>
@@ -501,9 +499,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/pibo"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/pibo"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/pibo"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/pibo" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/pibo" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/pibo" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/pibo.jpg</image:loc>
       <image:caption>بيبو — أحدث إبداعاتنا</image:caption>
@@ -514,9 +512,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/integral"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/integral"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/integral"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/integral" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/integral" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/integral" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/integral.jpg</image:loc>
       <image:caption>Integral — Nos dernières créations</image:caption>
@@ -527,9 +525,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/integral"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/integral"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/integral"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/integral" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/integral" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/integral" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/integral.jpg</image:loc>
       <image:caption>Integral — Our latest creations</image:caption>
@@ -540,9 +538,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/integral"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/integral"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/integral"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/integral" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/integral" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/integral" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/integral.jpg</image:loc>
       <image:caption>إنتيغرال — أحدث إبداعاتنا</image:caption>
@@ -553,9 +551,9 @@
     <lastmod>2021-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/microtel-training-institute"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/microtel-training-institute"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/microtel-training-institute"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/microtel-training-institute" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/microtel-training-institute" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/microtel-training-institute" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/microtel-training-institute.jpg</image:loc>
       <image:caption>Microtel Training Institute — Nos dernières créations</image:caption>
@@ -566,9 +564,9 @@
     <lastmod>2021-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/microtel-training-institute"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/microtel-training-institute"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/microtel-training-institute"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/microtel-training-institute" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/microtel-training-institute" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/microtel-training-institute" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/microtel-training-institute.jpg</image:loc>
       <image:caption>Microtel Training Institute — Our latest creations</image:caption>
@@ -579,9 +577,9 @@
     <lastmod>2021-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/microtel-training-institute"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/microtel-training-institute"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/microtel-training-institute"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/microtel-training-institute" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/microtel-training-institute" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/microtel-training-institute" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/microtel-training-institute.jpg</image:loc>
       <image:caption>ميكروتال تراينينغ إنستيتيوت — أحدث إبداعاتنا</image:caption>
@@ -592,9 +590,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/soprofort"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/soprofort"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/soprofort"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/soprofort" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/soprofort" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/soprofort" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/soprofort.jpg</image:loc>
       <image:caption>Soprofort — Nos dernières créations</image:caption>
@@ -605,9 +603,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/soprofort"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/soprofort"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/soprofort"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/soprofort" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/soprofort" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/soprofort" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/soprofort.jpg</image:loc>
       <image:caption>Soprofort — Our latest creations</image:caption>
@@ -618,9 +616,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/soprofort"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/soprofort"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/soprofort"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/soprofort" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/soprofort" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/soprofort" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/soprofort.jpg</image:loc>
       <image:caption>صوبروفور — أحدث إبداعاتنا</image:caption>
@@ -631,9 +629,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/optimum-transmission"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/optimum-transmission"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/optimum-transmission"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/optimum-transmission" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/optimum-transmission" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/optimum-transmission" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/optimum-transmission.jpg</image:loc>
       <image:caption>Optimum Transmission — Nos dernières créations</image:caption>
@@ -644,9 +642,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/optimum-transmission"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/optimum-transmission"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/optimum-transmission"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/optimum-transmission" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/optimum-transmission" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/optimum-transmission" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/optimum-transmission.jpg</image:loc>
       <image:caption>Optimum Transmission — Our latest creations</image:caption>
@@ -657,9 +655,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/optimum-transmission"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/optimum-transmission"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/optimum-transmission"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/optimum-transmission" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/optimum-transmission" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/optimum-transmission" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/optimum-transmission.jpg</image:loc>
       <image:caption>أوبتيموم ترانسميسيون — أحدث إبداعاتنا</image:caption>
@@ -670,9 +668,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/infoelec"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/infoelec"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/infoelec"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/infoelec" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/infoelec" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/infoelec" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/infoelec.jpg</image:loc>
       <image:caption>infoElec — Nos dernières créations</image:caption>
@@ -683,9 +681,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/infoelec"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/infoelec"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/infoelec"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/infoelec" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/infoelec" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/infoelec" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/infoelec.jpg</image:loc>
       <image:caption>infoElec — Our latest creations</image:caption>
@@ -696,9 +694,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/infoelec"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/infoelec"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/infoelec"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/infoelec" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/infoelec" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/infoelec" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/infoelec.jpg</image:loc>
       <image:caption>إنفو إيليك — أحدث إبداعاتنا</image:caption>
@@ -709,9 +707,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/we-service"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/we-service"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/we-service"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/we-service" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/we-service" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/we-service" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/we-service.jpg</image:loc>
       <image:caption>We Service — Nos dernières créations</image:caption>
@@ -722,9 +720,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/we-service"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/we-service"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/we-service"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/we-service" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/we-service" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/we-service" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/we-service.jpg</image:loc>
       <image:caption>We Service — Our latest creations</image:caption>
@@ -735,9 +733,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/we-service"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/we-service"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/we-service"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/we-service" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/we-service" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/we-service" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/we-service.jpg</image:loc>
       <image:caption>وي سرفيس — أحدث إبداعاتنا</image:caption>
@@ -748,9 +746,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/corim"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/corim"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/corim"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/corim" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/corim" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/corim" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/corim.jpg</image:loc>
       <image:caption>Corim — Nos dernières créations</image:caption>
@@ -761,9 +759,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/corim"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/corim"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/corim"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/corim" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/corim" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/corim" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/corim.jpg</image:loc>
       <image:caption>Corim — Our latest creations</image:caption>
@@ -774,9 +772,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/corim"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/corim"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/corim"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/corim" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/corim" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/corim" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/corim.jpg</image:loc>
       <image:caption>كوريم — أحدث إبداعاتنا</image:caption>
@@ -787,9 +785,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/botanique-algerie"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/botanique-algerie"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/botanique-algerie"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/botanique-algerie" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/botanique-algerie" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/botanique-algerie" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/botanique-algerie.jpg</image:loc>
       <image:caption>Botanique Algérie — Nos dernières créations</image:caption>
@@ -800,9 +798,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/botanique-algerie"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/botanique-algerie"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/botanique-algerie"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/botanique-algerie" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/botanique-algerie" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/botanique-algerie" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/botanique-algerie.jpg</image:loc>
       <image:caption>Botanique Algérie — Our latest creations</image:caption>
@@ -813,9 +811,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/botanique-algerie"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/botanique-algerie"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/botanique-algerie"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/botanique-algerie" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/botanique-algerie" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/botanique-algerie" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/botanique-algerie.jpg</image:loc>
       <image:caption>بوتانيك الجزائر — أحدث إبداعاتنا</image:caption>
@@ -826,9 +824,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/tpbl"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/tpbl"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/tpbl"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/tpbl" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/tpbl" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/tpbl" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/tpbl.jpg</image:loc>
       <image:caption>TPBL — Nos dernières créations</image:caption>
@@ -839,9 +837,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/tpbl"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/tpbl"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/tpbl"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/tpbl" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/tpbl" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/tpbl" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/tpbl.jpg</image:loc>
       <image:caption>TPBL — Our latest creations</image:caption>
@@ -852,9 +850,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/tpbl"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/tpbl"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/tpbl"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/tpbl" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/tpbl" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/tpbl" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/tpbl.jpg</image:loc>
       <image:caption>تي بي بي أل — أحدث إبداعاتنا</image:caption>
@@ -865,9 +863,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/ets-ouar"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/ets-ouar"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/ets-ouar"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/ets-ouar" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/ets-ouar" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/ets-ouar" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/ets-ouar.jpg</image:loc>
       <image:caption>ETS Ouar — Nos dernières créations</image:caption>
@@ -878,9 +876,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/ets-ouar"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/ets-ouar"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/ets-ouar"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/ets-ouar" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/ets-ouar" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/ets-ouar" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/ets-ouar.jpg</image:loc>
       <image:caption>ETS Ouar — Our latest creations</image:caption>
@@ -891,9 +889,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/ets-ouar"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/ets-ouar"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/ets-ouar"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/ets-ouar" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/ets-ouar" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/ets-ouar" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/ets-ouar.jpg</image:loc>
       <image:caption>أو تي أس عور — أحدث إبداعاتنا</image:caption>
@@ -904,9 +902,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/acodim"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/acodim"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/acodim"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/acodim" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/acodim" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/acodim" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/acodim.jpg</image:loc>
       <image:caption>Acodim — Nos dernières créations</image:caption>
@@ -917,9 +915,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/acodim"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/acodim"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/acodim"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/acodim" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/acodim" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/acodim" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/acodim.jpg</image:loc>
       <image:caption>Acodim — Our latest creations</image:caption>
@@ -930,9 +928,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/acodim"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/acodim"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/acodim"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/acodim" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/acodim" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/acodim" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/acodim.jpg</image:loc>
       <image:caption>أكوديم — أحدث إبداعاتنا</image:caption>
@@ -943,9 +941,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/sourca-algerie"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/sourca-algerie"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/sourca-algerie"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/sourca-algerie" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/sourca-algerie" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/sourca-algerie" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/sourca-algerie.jpg</image:loc>
       <image:caption>Sourça Algérie — Nos dernières créations</image:caption>
@@ -956,9 +954,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/sourca-algerie"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/sourca-algerie"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/sourca-algerie"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/sourca-algerie" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/sourca-algerie" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/sourca-algerie" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/sourca-algerie.jpg</image:loc>
       <image:caption>Sourca Algeria — Our latest creations</image:caption>
@@ -969,9 +967,9 @@
     <lastmod>2021-07-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/sourca-algerie"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/sourca-algerie"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/sourca-algerie"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://univerweb.dz/realisations/sourca-algerie" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://univerweb.dz/en/realisations/sourca-algerie" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://univerweb.dz/ar/realisations/sourca-algerie" />
     <image:image>
       <image:loc>https://univerweb.dz/works/image/sourca-algerie.jpg</image:loc>
       <image:caption>سورسا الجزائر — أحدث إبداعاتنا</image:caption>
