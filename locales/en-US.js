@@ -56,7 +56,7 @@ export default {
       system: 'System',
       light: 'Light'
     },
-    copy: 'Copyright 2021 @:(name). All rights reserved.'
+    copy: 'Copyright 2022 @:(name). All rights reserved.'
   },
 
   request: {

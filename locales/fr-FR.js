@@ -56,7 +56,7 @@ export default {
       system: 'Système',
       light: 'Clair'
     },
-    copy: 'Copyright 2021 @:(name). Tous droits réservés.'
+    copy: 'Copyright 2022 @:(name). Tous droits réservés.'
   },
 
   request: {
