@@ -38,7 +38,7 @@
     "husky": "^7.0.4",
     "lint-staged": "^12.3.3",
     "sass": "^1.49.7",
-    "sass-loader": "^10.2.0",
+    "sass-loader": "^10.2.1",
     "vue-scrollto": "^2.20.0"
   }
 }
