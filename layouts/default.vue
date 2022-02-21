@@ -19,11 +19,7 @@ export default {
 
   head({ $config: { baseURL } }) {
     const i18nHead = this.$nuxtI18nHead({ addDirAttribute: true, addSeoAttributes: true })
-
-    let ogImage = `${baseURL}/univerweb-ar.png`
-    if (this.$i18n.locale !== 'ar') {
-      ogImage = `${baseURL}/univerweb.png`
-    }
+    const ogImage = this.$i18n.locale === 'ar' ? `${baseURL}/univerweb-ar.png` : `${baseURL}/univerweb.png`
     const comma = this.$i18n.locale === 'ar' ? '، ' : ', '
 
     return {
