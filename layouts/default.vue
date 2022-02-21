@@ -19,7 +19,7 @@ export default {
 
   head({ $config: { baseURL } }) {
     const i18nHead = this.$nuxtI18nHead({ addDirAttribute: true, addSeoAttributes: true })
-    const ogImage = this.$i18n.locale === 'ar' ? `${baseURL}/univerweb-ar.png` : `${baseURL}/univerweb.png`
+    const image = this.$i18n.locale === 'ar' ? `${baseURL}/univerweb-ar.png` : `${baseURL}/univerweb.png`
     const comma = this.$i18n.locale === 'ar' ? '، ' : ', '
 
     return {
@@ -29,8 +29,8 @@ export default {
         { hid: 'og:type', property: 'og:type', content: 'website' },
         { hid: 'og:site_name', property: 'og:site_name', content: this.$t('name') },
         { hid: 'og:url', property: 'og:url', content: `${baseURL}${this.$route.path}` },
-        { hid: 'og:image', property: 'og:image', content: ogImage },
-        { hid: 'og:image:secure_url', property: 'og:image:secure_url', content: ogImage },
+        { hid: 'og:image', property: 'og:image', content: image },
+        { hid: 'og:image:secure_url', property: 'og:image:secure_url', content: image },
         { property: 'og:image:width', content: '1920' },
         { property: 'og:image:height', content: '1080' },
         ...i18nHead.meta
@@ -47,7 +47,7 @@ export default {
             url: `${baseURL}`,
             image: {
               '@type': 'ImageObject',
-              url: ogImage,
+              url: image,
               width: '1920px',
               height: '1080px'
             },
