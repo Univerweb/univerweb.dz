@@ -19,16 +19,7 @@ export default {
 
   head({ $config: { baseURL } }) {
     const i18nHead = this.$nuxtI18nHead({ addDirAttribute: true, addSeoAttributes: true })
-    let path = this.$route.path
-    if (this.$i18n.locale !== 'fr') {
-      path = this.$route.path.slice(3)
-    }
-    const link = [
-      { rel: 'canonical', href: `${baseURL}${this.$route.path}` },
-      { rel: 'alternate', hreflang: 'fr', href: `${baseURL}${path}` },
-      { rel: 'alternate', hreflang: 'en', href: `${baseURL}/en${path}` },
-      { rel: 'alternate', hreflang: 'ar', href: `${baseURL}/ar${path}` }
-    ]
+
     let ogImage = `${baseURL}/univerweb-ar.png`
     if (this.$i18n.locale !== 'ar') {
       ogImage = `${baseURL}/univerweb.png`
@@ -41,8 +32,6 @@ export default {
     return {
       htmlAttrs: { ...i18nHead.htmlAttrs },
 
-      link,
-
       meta: [
         { hid: 'og:type', property: 'og:type', content: 'website' },
         { hid: 'og:site_name', property: 'og:site_name', content: this.$t('name') },
@@ -50,8 +39,11 @@ export default {
         { hid: 'og:image', property: 'og:image', content: ogImage },
         { hid: 'og:image:secure_url', property: 'og:image:secure_url', content: ogImage },
         { property: 'og:image:width', content: '1920' },
-        { property: 'og:image:height', content: '1080' }
+        { property: 'og:image:height', content: '1080' },
+        ...i18nHead.meta
       ],
+
+      link: [...i18nHead.link],
 
       script: [
         {

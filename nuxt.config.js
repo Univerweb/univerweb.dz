@@ -36,7 +36,8 @@ export default {
     ],
     defaultLocale: 'fr',
     lazy: true,
-    langDir: 'locales/'
+    langDir: 'locales/',
+    baseUrl: process.env.BASE_URL
   },
   publicRuntimeConfig: {
     baseURL: process.env.BASE_URL || 'http://localhost:3000',
