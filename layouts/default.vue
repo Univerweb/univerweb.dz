@@ -45,6 +45,12 @@ export default {
             '@type': 'Organization',
             name: this.$t('name'),
             url: `${baseURL}`,
+            image: {
+              '@type': 'ImageObject',
+              url: ogImage,
+              width: '1920px',
+              height: '1080px'
+            },
             logo: {
               '@type': 'ImageObject',
               url: `${baseURL}/logo.svg`,
