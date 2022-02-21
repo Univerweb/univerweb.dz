@@ -145,24 +145,24 @@
 
 @keyframes show-icon {
   from {
-    opacity: 0%;
+    opacity: 0;
     transform: scaleY(0);
   }
 
   to {
-    opacity: 100%;
+    opacity: 1;
     transform: scaleY(1);
   }
 }
 
 @keyframes hide-icon {
   from {
-    opacity: 100%;
+    opacity: 1;
     transform: scaleY(1);
   }
 
   to {
-    opacity: 0%;
+    opacity: 0;
     transform: scaleY(0);
   }
 }

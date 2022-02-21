@@ -71,7 +71,7 @@ main {
   }
   &.page-enter,
   &.page-leave-active {
-    opacity: 0%;
+    opacity: 0;
   }
 }
 
@@ -324,7 +324,7 @@ img {
 
 [lazy='loading'] {
   background-color: $light;
-  opacity: 0%;
+  opacity: 0;
   transition: opacity $transition;
   .dark-mode & {
     background-color: $color-secondary;
@@ -332,7 +332,7 @@ img {
 }
 
 [lazy='loaded'] {
-  opacity: 100%;
+  opacity: 1;
 }
 
 .tags {
