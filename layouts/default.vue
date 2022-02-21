@@ -24,10 +24,7 @@ export default {
     if (this.$i18n.locale !== 'ar') {
       ogImage = `${baseURL}/univerweb.png`
     }
-    let comma = '، '
-    if (this.$i18n.locale !== 'ar') {
-      comma = ', '
-    }
+    const comma = this.$i18n.locale === 'ar' ? '، ' : ', '
 
     return {
       htmlAttrs: { ...i18nHead.htmlAttrs },
