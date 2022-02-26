@@ -27,8 +27,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Almarai'), local('Almarai-Regular'), url('/fonts/almarai-regular.woff2') format('woff2');
-  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+  src: url('/fonts/almarai-regular.woff2') format('woff2');
 }
 
 @font-face {
@@ -36,8 +35,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: local('Almarai Bold'), local('Almarai-Bold'), url('/fonts/almarai-medium.woff2') format('woff2');
-  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+  src: url('/fonts/almarai-medium.woff2') format('woff2');
 }
 
 @font-face {
@@ -45,6 +43,5 @@
   font-style: normal;
   font-weight: 800;
   font-display: swap;
-  src: local('Almarai ExtraBold'), local('Almarai-ExtraBold'), url('/fonts/almarai-bold.woff2') format('woff2');
-  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+  src: url('/fonts/almarai-bold.woff2') format('woff2');
 }
