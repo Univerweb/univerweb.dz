@@ -6,14 +6,13 @@
     <div class="details">
       <div v-for="work in works" :key="work.slug" class="item">
         <NuxtLink :to="localePath(`/realisations/${work.slug}`)">
-          <img
+          <AppImg
             :srcset="`/works/thumbnail/${work.slug}-377.jpg 377w, /works/thumbnail/${work.slug}-452.jpg 452w, /works/thumbnail/${work.slug}-540.jpg 540w, /works/thumbnail/${work.slug}-588.jpg 588w, /works/thumbnail/${work.slug}-754.jpg 754w, /works/thumbnail/${work.slug}-904.jpg 904w, /works/thumbnail/${work.slug}-1080.jpg 1080w, /works/thumbnail/${work.slug}-1176.jpg 1176w`"
             sizes="(max-width: 425px) 377px, (max-width: 767px) 540px, (max-width: 1279px) 452px, 588px"
             :src="`/works/thumbnail/${work.slug}-588.jpg`"
             :alt="work.description"
-            width="588"
-            height="624"
-            loading="lazy"
+            :width="588"
+            :height="624"
           />
           <div class="overlay"></div>
           <div class="inner">
