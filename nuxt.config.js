@@ -26,7 +26,7 @@ export default {
     ['vue-scrollto/nuxt', { offset: -72 }]
   ],
   modules: ['@nuxtjs/i18n', '@nuxt/content'],
-  components: ['~/components/templates', '~/components/global'],
+  components: true,
   plugins: [{ src: '~plugins/ga.js', mode: 'client' }],
   i18n: {
     locales: [
