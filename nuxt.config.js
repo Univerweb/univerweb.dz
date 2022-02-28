@@ -35,6 +35,7 @@ export default {
       { code: 'en', iso: 'en-US', file: 'en-US.js', name: 'English' }
     ],
     defaultLocale: 'fr',
+    detectBrowserLanguage: false,
     lazy: true,
     langDir: 'locales/',
     baseUrl: process.env.BASE_URL
