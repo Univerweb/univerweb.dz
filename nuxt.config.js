@@ -15,7 +15,7 @@ export default {
   styleResources: {
     scss: ['@/assets/scss/var.scss', '@/assets/scss/mixin.scss']
   },
-  css: ['@/assets/scss/font.scss', '@/assets/scss/keyframes.scss', '@/assets/scss/main.scss'],
+  css: ['@/assets/css/font.css', '@/assets/css/keyframes.css', '@/assets/scss/main.scss'],
   buildModules: [
     '@nuxt/image',
     '@nuxtjs/color-mode',
