@@ -30,11 +30,10 @@ export default {
   },
 
   async asyncData({ $content, app }) {
-    const { title, description, headline, lead } = await $content(app.i18n.locale, 'home').fetch()
+    const { description, headline, lead } = await $content(app.i18n.locale, 'home').fetch()
     const worksPage = await $content(app.i18n.locale, 'works').only('headline').fetch()
     const works = await $content(app.i18n.locale, 'works_slug').limit(6).sortBy('position', 'desc').fetch()
     return {
-      title,
       description,
       headline,
       lead,
@@ -45,10 +44,10 @@ export default {
 
   head() {
     return {
-      titleTemplate: `${this.$t('name')} — ${this.title}`,
+      titleTemplate: `${this.$t('name')} — ${this.$t('description')}`,
       meta: [
         { hid: 'description', name: 'description', content: this.description },
-        { hid: 'og:title', property: 'og:title', content: this.title },
+        { hid: 'og:title', property: 'og:title', content: this.$t('description') },
         { hid: 'og:description', property: 'og:description', content: this.description }
       ]
     }

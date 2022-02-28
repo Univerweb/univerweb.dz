@@ -1,5 +1,6 @@
 export default {
   name: 'يونيفارواب',
+  description: 'تصميم مواقع الويب في الجزائر',
 
   skiplinks: {
     menu: 'إذهب إلى القائمة',

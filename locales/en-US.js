@@ -1,5 +1,6 @@
 export default {
   name: 'Univerweb',
+  description: 'Website Design in Algeria',
 
   skiplinks: {
     menu: 'Skip to menu',

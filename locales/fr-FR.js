@@ -1,5 +1,6 @@
 export default {
   name: 'Univerweb',
+  description: 'Création de sites web en Algérie',
 
   skiplinks: {
     menu: 'Aller au menu',

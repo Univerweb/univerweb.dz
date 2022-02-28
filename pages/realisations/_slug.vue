@@ -93,7 +93,8 @@ export default {
         { hid: 'og:title', property: 'og:title', content: this.work.title },
         { hid: 'og:description', property: 'og:description', content: this.work.description },
         { hid: 'og:image', property: 'og:image', content: ogImage },
-        { hid: 'og:image:secure_url', property: 'og:image:secure_url', content: ogImage }
+        { hid: 'og:image:secure_url', property: 'og:image:secure_url', content: ogImage },
+        { hid: 'og:image:alt', property: 'og:image:alt', content: `${this.work.title} — ${this.work.industry}` }
       ],
 
       script: [
