@@ -32,7 +32,7 @@ export default {
         { hid: 'og:image', property: 'og:image', content: image },
         { hid: 'og:image:secure_url', property: 'og:image:secure_url', content: image },
         { property: 'og:image:width', content: 1920 },
-        { property: 'og:image:height', content: '1080' },
+        { property: 'og:image:height', content: 1080 },
         { hid: 'og:image:alt', property: 'og:image:alt', content: `${this.$t('name')} — ${this.$t('description')}` },
         ...i18nHead.meta
       ],
