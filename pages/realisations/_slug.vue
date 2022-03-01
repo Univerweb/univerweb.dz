@@ -78,7 +78,7 @@ export default {
   },
 
   head({ $config: { baseURL } }) {
-    const ogImage = `${baseURL}/works/image/${this.work.slug}.jpg`
+    const ogImage = `${baseURL}/images/${this.work.slug}_share.jpg`
 
     let routeItem = `${baseURL}/`
     if (this.$i18n.locale !== 'fr') {
