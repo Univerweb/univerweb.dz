@@ -1,18 +1,10 @@
 <template>
-  <img :srcset="srcset" :sizes="sizes" :src="src" :alt="alt" :width="width" :height="height" loading="lazy" />
+  <nuxt-img format="webp" quality="100" :src="src" :alt="alt" :sizes="sizes" loading="lazy" />
 </template>
 
 <script>
 export default {
   props: {
-    srcset: {
-      type: String,
-      default: null
-    },
-    sizes: {
-      type: String,
-      default: null
-    },
     src: {
       type: String,
       default: null
@@ -21,12 +13,8 @@ export default {
       type: String,
       default: null
     },
-    width: {
-      type: Number,
-      default: null
-    },
-    height: {
-      type: Number,
+    sizes: {
+      type: String,
       default: null
     }
   }

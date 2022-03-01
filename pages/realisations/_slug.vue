@@ -5,14 +5,7 @@
       <h1>{{ work.title }}</h1>
     </div>
     <div class="banner card">
-      <AppImg
-        :srcset="`/works/banner/${work.slug}-425.jpg 425w, /works/banner/${work.slug}-768.jpg 768w, /works/banner/${work.slug}-850.jpg 850w, /works/banner/${work.slug}-1024.jpg 1024w, /works/banner/${work.slug}-1280.jpg 1280w, /works/banner/${work.slug}-1536.jpg 1536w, /works/banner/${work.slug}-2048.jpg 2048w, /works/banner/${work.slug}-2560.jpg 2560w`"
-        sizes="100vw"
-        :src="`/works/banner/${work.slug}-1280.jpg`"
-        :alt="work.description"
-        :width="1280"
-        :height="456"
-      />
+      <AppImg :src="`/images/${work.slug}_banner.jpg`" :alt="work.description" sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw" />
     </div>
 
     <div class="container client">
@@ -43,10 +36,9 @@
         </div>
         <div class="item card">
           <AppImg
-            :srcset="`/works/page/${work.slug}-377.jpg 377w, /works/page/${work.slug}-619.jpg 619w, /works/page/${work.slug}-719.jpg 719w, /works/page/${work.slug}-754.jpg 754w, /works/page/${work.slug}-800.jpg 800w, /works/page/${work.slug}-1238.jpg 1238w`"
-            sizes="(max-width: 425px) 377px, (max-width: 767px) 719px, (max-width: 1279px) 619px, 800px"
-            :src="`/works/page/${work.slug}-800.jpg`"
+            :src="`/images/${work.slug}_preview.jpg`"
             :alt="`${$t('alt.workpage')} ${work.title}`"
+            sizes="xs:288px sm:607px md:719px lg:619px xl:1280px"
           />
         </div>
       </div>
@@ -160,9 +152,22 @@ export default {
   h1 {
     margin-bottom: 0;
   }
-  .banner img {
-    object-fit: cover;
-    height: 456px;
+  .banner {
+    position: relative;
+    aspect-ratio: 3/2;
+    @media (min-width: $lg) {
+      aspect-ratio: 3/1;
+    }
+    img {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
   .client {
     @media (min-width: $md) {

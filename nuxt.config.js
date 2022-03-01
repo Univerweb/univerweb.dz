@@ -40,6 +40,9 @@ export default {
     langDir: 'locales/',
     baseUrl: process.env.BASE_URL
   },
+  image: {
+    staticFilename: 'images/[name]-[hash][ext]'
+  },
   publicRuntimeConfig: {
     baseURL: process.env.BASE_URL || 'http://localhost:3000',
     baseEmail: process.env.BASE_EMAIL || false,
