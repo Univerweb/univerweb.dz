@@ -71,11 +71,7 @@ export default {
 
   head({ $config: { baseURL } }) {
     const image = `${baseURL}/images/${this.work.slug}_share.jpg`
-
-    let routeItem = `${baseURL}/`
-    if (this.$i18n.locale !== 'fr') {
-      routeItem = `${baseURL}/${this.$i18n.locale}`
-    }
+    const routeItem = this.$i18n.locale === 'fr' ? `${baseURL}/` : `${baseURL}/${this.$i18n.locale}`
 
     return {
       titleTemplate: `${this.work.title} — ${this.$t('name')}`,
