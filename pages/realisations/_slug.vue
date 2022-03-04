@@ -106,6 +106,11 @@ export default {
                 width: '1920px',
                 height: '1080px'
               },
+              author: {
+                '@type': 'Thing',
+                name: this.$t('name'),
+                url: `${baseURL}`
+              },
               dateCreated: this.work.createdAt,
               datePublished: this.work.createdAt,
               dateModified: this.work.updatedAt,
