@@ -103,7 +103,7 @@ export default {
                 height: '1080px'
               },
               author: {
-                '@type': 'Thing',
+                '@type': 'Organization',
                 name: this.$t('name'),
                 url: `${baseURL}`
               },
