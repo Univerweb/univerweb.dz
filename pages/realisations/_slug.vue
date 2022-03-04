@@ -70,7 +70,7 @@ export default {
   },
 
   head({ $config: { baseURL } }) {
-    const ogImage = `${baseURL}/images/${this.work.slug}_share.jpg`
+    const image = `${baseURL}/images/${this.work.slug}_share.jpg`
 
     let routeItem = `${baseURL}/`
     if (this.$i18n.locale !== 'fr') {
@@ -84,8 +84,8 @@ export default {
         { hid: 'description', name: 'description', content: this.work.description },
         { hid: 'og:title', property: 'og:title', content: this.work.title },
         { hid: 'og:description', property: 'og:description', content: this.work.description },
-        { hid: 'og:image', property: 'og:image', content: ogImage },
-        { hid: 'og:image:secure_url', property: 'og:image:secure_url', content: ogImage },
+        { hid: 'og:image', property: 'og:image', content: image },
+        { hid: 'og:image:secure_url', property: 'og:image:secure_url', content: image },
         { hid: 'og:image:alt', property: 'og:image:alt', content: `${this.work.title} — ${this.work.industry}` }
       ],
 
@@ -102,7 +102,7 @@ export default {
               headline: this.work.title,
               image: {
                 '@type': 'ImageObject',
-                url: ogImage,
+                url: image,
                 width: '1920px',
                 height: '1080px'
               },
