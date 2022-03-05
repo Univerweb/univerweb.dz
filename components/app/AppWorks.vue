@@ -5,8 +5,20 @@
     </div>
     <div class="details">
       <div v-for="work in works" :key="work.slug" class="item">
-        <NuxtLink :to="localePath(`/realisations/${work.slug}`)">
+        <NuxtLink :to="localePath(`/realisations/${work.slug}`)" vocab="https://schema.org/" typeof="Article">
+          <div property="mainEntityOfPage" typeof="WebPage">
+            <meta property="id" :content="$config.baseURL + localePath(`/realisations/${work.slug}`)" />
+          </div>
+          <meta property="dateCreated datePublished" :content="work.createdAt" />
+          <meta property="dateModified" :content="work.updatedAt" />
+          <div property="author publisher" typeof="Organization">
+            <meta property="name" :content="$t('name')" />
+            <meta property="url" :content="$config.baseURL" />
+          </div>
+          <meta property="articleSection" :content="$t('menu.realisations')" />
+          <meta property="description" :content="work.description" />
           <AppImg
+            property="image"
             :src="`/images/${work.slug}_thumbnail.jpg`"
             :alt="work.description"
             width="588"
@@ -15,11 +27,11 @@
           />
           <div class="overlay"></div>
           <div class="inner">
-            <Component :is="h2">{{ work.title }}</Component>
+            <Component :is="h2" property="headline">{{ work.title }}</Component>
             <ul class="tags">
-              <li v-for="tag in work.tags" :key="tag">{{ tag }}</li>
+              <li v-for="tag in work.tags" :key="tag" property="keywords">{{ tag }}</li>
             </ul>
-            <p class="lead">{{ work.lead }}</p>
+            <p property="articleBody" class="lead">{{ work.lead }}</p>
           </div>
         </NuxtLink>
       </div>
