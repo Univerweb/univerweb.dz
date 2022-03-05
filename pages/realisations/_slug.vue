@@ -1,48 +1,65 @@
 <template>
   <main id="main" class="work">
-    <div class="container intro">
-      <WorkBack />
-      <h1>{{ work.title }}</h1>
-    </div>
-    <div class="banner card">
-      <AppImg :src="`/images/${work.slug}_banner.jpg`" :alt="work.description" sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw" />
-    </div>
-
-    <div class="container client">
-      <div class="details">
-        <div class="item">
-          <h2 class="h6">{{ $t('label.client') }}</h2>
-          <p class="lead">{{ work.title }}</p>
-        </div>
-        <div class="item">
-          <h2 class="h6">{{ $t('label.features') }}</h2>
-          <ul class="lead tags">
-            <li v-for="tag in work.tags" :key="tag">{{ tag }}</li>
-          </ul>
-        </div>
-        <div class="item">
-          <h2 class="h6">{{ $t('label.industry') }}</h2>
-          <p class="lead">{{ work.industry }}</p>
-        </div>
+    <article vocab="https://schema.org/" typeof="Article">
+      <div property="mainEntityOfPage" typeof="WebPage">
+        <meta property="id" :content="`${$config.baseURL}${$route.path}`" />
       </div>
-    </div>
-    <div class="container project">
-      <div class="details">
-        <div class="item">
-          <div class="inner">
-            <p class="lead">{{ work.lead }}</p>
-            <a :href="work.link" class="link">{{ $t('label.visit') }}</a>
+      <meta property="dateCreated datePublished" :content="work.createdAt" />
+      <meta property="dateModified" :content="work.updatedAt" />
+      <div property="author publisher" typeof="Organization">
+        <meta property="name" :content="$t('name')" />
+        <meta property="url" :content="$config.baseURL" />
+      </div>
+      <meta property="articleSection" :content="$t('menu.realisations')" />
+      <meta property="description" :content="work.description" />
+      <div class="container intro">
+        <WorkBack />
+        <h1 property="headline">{{ work.title }}</h1>
+      </div>
+      <div class="banner card">
+        <AppImg
+          property="image"
+          :src="`/images/${work.slug}_banner.jpg`"
+          :alt="work.description"
+          sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw"
+        />
+      </div>
+      <div class="container client">
+        <div class="details">
+          <div class="item">
+            <h2 class="h6">{{ $t('label.client') }}</h2>
+            <p class="lead">{{ work.title }}</p>
+          </div>
+          <div class="item">
+            <h2 class="h6">{{ $t('label.features') }}</h2>
+            <ul class="lead tags">
+              <li v-for="tag in work.tags" :key="tag" property="keywords">{{ tag }}</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h2 class="h6">{{ $t('label.industry') }}</h2>
+            <p class="lead">{{ work.industry }}</p>
           </div>
         </div>
-        <div class="item card">
-          <AppImg
-            :src="`/images/${work.slug}_preview.jpg`"
-            :alt="`${$t('alt.workpage')} ${work.title}`"
-            sizes="xs:288px sm:607px md:719px lg:619px xl:1280px"
-          />
+      </div>
+      <div class="container project">
+        <div class="details">
+          <div class="item">
+            <div class="inner">
+              <p property="articleBody" class="lead">{{ work.lead }}</p>
+              <a :href="work.link" class="link">{{ $t('label.visit') }}</a>
+            </div>
+          </div>
+          <div class="item card">
+            <AppImg
+              :src="`/images/${work.slug}_preview.jpg`"
+              :alt="`${$t('alt.workpage')} ${work.title}`"
+              sizes="xs:288px sm:607px md:719px lg:619px xl:1280px"
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </article>
     <WorkNav :prev="prev" :next="next" />
     <AppRequest />
   </main>
@@ -88,34 +105,6 @@ export default {
       script: [
         {
           json: [
-            {
-              '@context': 'https://schema.org',
-              '@type': 'article',
-              mainEntityOfPage: {
-                '@type': 'WebPage',
-                '@id': `${baseURL}${this.$route.path}`
-              },
-              headline: this.work.title,
-              image: {
-                '@type': 'ImageObject',
-                url: image,
-                width: '1920px',
-                height: '1080px'
-              },
-              author: {
-                '@type': 'Organization',
-                name: this.$t('name'),
-                url: `${baseURL}`
-              },
-              dateCreated: this.work.createdAt,
-              datePublished: this.work.createdAt,
-              dateModified: this.work.updatedAt,
-              articleSection: this.$t('menu.realisations'),
-              articleBody: this.work.lead,
-              keywords: this.work.tags,
-              description: this.work.description
-            },
-
             {
               '@context': 'https://schema.org',
               '@type': 'BreadcrumbList',
