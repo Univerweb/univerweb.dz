@@ -2,451 +2,451 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://univerweb.dz/</loc>
-    <lastmod>2022-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://univerweb.dz/en</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2022-02-28T19:16:41.709Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/ar</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2022-02-28T19:16:53.254Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://univerweb.dz/en</loc>
+    <lastmod>2022-02-28T19:16:47.084Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/realisations</loc>
-    <lastmod>2022-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://univerweb.dz/en/realisations</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2020-12-20T22:08:49.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/ar/realisations</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2020-12-20T22:08:49.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://univerweb.dz/en/realisations</loc>
+    <lastmod>2020-12-20T22:08:49.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/prestations</loc>
-    <lastmod>2022-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://univerweb.dz/en/prestations</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2021-04-21T18:39:21.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/ar/prestations</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2021-04-21T18:40:58.271Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://univerweb.dz/en/prestations</loc>
+    <lastmod>2021-04-21T18:41:29.860Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/agence</loc>
-    <lastmod>2022-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://univerweb.dz/en/agence</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2020-12-20T22:08:49.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/ar/agence</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2020-12-20T22:08:49.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://univerweb.dz/en/agence</loc>
+    <lastmod>2020-12-20T22:08:49.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/contact</loc>
-    <lastmod>2022-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://univerweb.dz/en/contact</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2020-12-20T22:08:49.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/ar/contact</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2020-12-20T22:08:49.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://univerweb.dz/en/contact</loc>
+    <lastmod>2020-12-20T22:08:49.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/realisations/rcelec</loc>
-    <lastmod>2022-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://univerweb.dz/en/realisations/rcelec</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2021-04-21T18:39:09.491Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/ar/realisations/rcelec</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2020-12-20T22:08:49.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://univerweb.dz/en/realisations/rcelec</loc>
+    <lastmod>2021-04-21T18:41:19.352Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/realisations/clinique-aya</loc>
-    <lastmod>2022-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://univerweb.dz/en/realisations/clinique-aya</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2021-04-21T18:38:56.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/ar/realisations/clinique-aya</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2020-12-20T22:08:49.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://univerweb.dz/en/realisations/clinique-aya</loc>
+    <lastmod>2021-04-21T18:41:10.921Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/realisations/clinique-sonya</loc>
-    <lastmod>2022-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://univerweb.dz/en/realisations/clinique-sonya</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2021-04-21T18:39:03.107Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/ar/realisations/clinique-sonya</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2020-12-20T22:08:49.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://univerweb.dz/en/realisations/clinique-sonya</loc>
+    <lastmod>2021-04-21T18:41:12.434Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/realisations/spheretec</loc>
-    <lastmod>2022-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://univerweb.dz/en/realisations/spheretec</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2021-04-21T18:39:11.320Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/ar/realisations/spheretec</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2020-12-20T22:08:49.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://univerweb.dz/en/realisations/spheretec</loc>
+    <lastmod>2021-04-21T18:41:22.203Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/realisations/cinquelec</loc>
-    <lastmod>2022-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://univerweb.dz/en/realisations/cinquelec</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2021-04-21T18:38:50.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/ar/realisations/cinquelec</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2020-12-20T22:08:49.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://univerweb.dz/en/realisations/cinquelec</loc>
+    <lastmod>2021-04-21T18:41:09.233Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/realisations/bn-electric-company</loc>
-    <lastmod>2022-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://univerweb.dz/en/realisations/bn-electric-company</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2021-04-21T18:38:48.245Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/ar/realisations/bn-electric-company</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2020-12-20T22:08:49.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://univerweb.dz/en/realisations/bn-electric-company</loc>
+    <lastmod>2021-04-21T18:41:07.065Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/realisations/intermat</loc>
-    <lastmod>2022-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://univerweb.dz/en/realisations/intermat</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2021-04-21T18:39:05.544Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/ar/realisations/intermat</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2020-12-20T22:08:49.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://univerweb.dz/en/realisations/intermat</loc>
+    <lastmod>2021-04-21T18:41:14.568Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/realisations/pibo</loc>
-    <lastmod>2022-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://univerweb.dz/en/realisations/pibo</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2021-04-21T18:39:07.884Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/ar/realisations/pibo</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2020-12-20T22:08:49.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://univerweb.dz/en/realisations/pibo</loc>
+    <lastmod>2021-04-21T18:41:17.543Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/realisations/integral</loc>
-    <lastmod>2022-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://univerweb.dz/en/realisations/integral</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2021-04-21T18:25:08.256Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/ar/realisations/integral</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2021-04-21T18:37:49.755Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://univerweb.dz/en/realisations/integral</loc>
+    <lastmod>2021-04-21T18:33:27.943Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/realisations/microtel-training-institute</loc>
-    <lastmod>2022-05-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://univerweb.dz/en/realisations/microtel-training-institute</loc>
-    <lastmod>2022-05-04</lastmod>
+    <lastmod>2022-05-04T10:46:15.407Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/ar/realisations/microtel-training-institute</loc>
-    <lastmod>2022-05-04</lastmod>
+    <lastmod>2022-05-04T10:46:28.376Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://univerweb.dz/en/realisations/microtel-training-institute</loc>
+    <lastmod>2022-05-04T10:46:24.783Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/realisations/soprofort</loc>
-    <lastmod>2022-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://univerweb.dz/en/realisations/soprofort</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2021-04-21T18:26:23.851Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/ar/realisations/soprofort</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2021-04-21T18:37:56.609Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://univerweb.dz/en/realisations/soprofort</loc>
+    <lastmod>2021-04-21T18:33:15.897Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/realisations/optimum-transmission</loc>
-    <lastmod>2022-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://univerweb.dz/en/realisations/optimum-transmission</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2021-04-21T18:26:22.758Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/ar/realisations/optimum-transmission</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2021-04-21T18:37:57.932Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://univerweb.dz/en/realisations/optimum-transmission</loc>
+    <lastmod>2021-04-21T18:33:09.966Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/realisations/infoelec</loc>
-    <lastmod>2022-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://univerweb.dz/en/realisations/infoelec</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2021-04-21T18:26:21.989Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/ar/realisations/infoelec</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2021-04-21T18:37:59.955Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://univerweb.dz/en/realisations/infoelec</loc>
+    <lastmod>2021-04-21T18:33:04.632Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/realisations/we-service</loc>
-    <lastmod>2022-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://univerweb.dz/en/realisations/we-service</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2021-04-21T18:26:21.092Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/ar/realisations/we-service</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2021-04-21T18:38:02.532Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://univerweb.dz/en/realisations/we-service</loc>
+    <lastmod>2021-04-21T18:32:59.945Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/realisations/corim</loc>
-    <lastmod>2022-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://univerweb.dz/en/realisations/corim</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2021-04-21T18:26:19.920Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/ar/realisations/corim</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2021-04-21T18:38:05.020Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://univerweb.dz/en/realisations/corim</loc>
+    <lastmod>2021-04-21T18:32:55.688Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/realisations/botanique-algerie</loc>
-    <lastmod>2022-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://univerweb.dz/en/realisations/botanique-algerie</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2021-04-21T18:26:18.049Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/ar/realisations/botanique-algerie</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2021-04-21T18:38:06.840Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://univerweb.dz/en/realisations/botanique-algerie</loc>
+    <lastmod>2021-04-21T18:32:47.078Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/realisations/tpbl</loc>
-    <lastmod>2022-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://univerweb.dz/en/realisations/tpbl</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2021-04-21T18:26:16.741Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/ar/realisations/tpbl</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2021-04-21T18:38:08.556Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://univerweb.dz/en/realisations/tpbl</loc>
+    <lastmod>2021-04-21T18:32:42.057Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/realisations/ets-ouar</loc>
-    <lastmod>2022-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://univerweb.dz/en/realisations/ets-ouar</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2021-04-21T18:26:14.968Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/ar/realisations/ets-ouar</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2021-04-21T18:38:10.053Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://univerweb.dz/en/realisations/ets-ouar</loc>
+    <lastmod>2021-04-21T18:32:38.026Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/realisations/acodim</loc>
-    <lastmod>2022-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://univerweb.dz/en/realisations/acodim</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2021-04-21T18:32:33.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/ar/realisations/acodim</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2021-04-21T18:38:11.555Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://univerweb.dz/en/realisations/acodim</loc>
+    <lastmod>2021-04-21T18:32:33.000Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/realisations/sourca-algerie</loc>
-    <lastmod>2022-02-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://univerweb.dz/en/realisations/sourca-algerie</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2021-07-05T08:24:31.983Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://univerweb.dz/ar/realisations/sourca-algerie</loc>
-    <lastmod>2022-02-28</lastmod>
+    <lastmod>2021-07-05T08:24:40.115Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://univerweb.dz/en/realisations/sourca-algerie</loc>
+    <lastmod>2021-07-05T08:25:13.284Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
