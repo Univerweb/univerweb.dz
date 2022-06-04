@@ -41,7 +41,7 @@
         </span>
         <transition name="from-bottom-to-bottom" mode="out-in">
           <span v-if="$colorMode.preference === 'dark'" key="dark">{{ $t('footer.colorMode.dark') }}</span>
-          <span v-if="$colorMode.preference === 'system'" key="system"> {{ $t('footer.colorMode.system') }}</span>
+          <span v-if="$colorMode.preference === 'system'" key="system">{{ $t('footer.colorMode.system') }}</span>
           <span v-else-if="$colorMode.preference === 'light'" key="light">{{ $t('footer.colorMode.light') }}</span>
         </transition>
       </button>
