@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.18.2",
-    "@commitlint/cli": "^16.2.4",
+    "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^16.2.4",
     "@nuxt/image": "^0.6.2",
     "@nuxtjs/color-mode": "^2.1.1",
