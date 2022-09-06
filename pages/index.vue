@@ -44,7 +44,7 @@ export default {
 
   head() {
     return {
-      titleTemplate: `${this.$t('description')} — ${this.$t('name')}`,
+      title: this.$t('description'),
       meta: [
         { hid: 'description', name: 'description', content: this.description },
         { hid: 'og:title', property: 'og:title', content: this.$t('description') },

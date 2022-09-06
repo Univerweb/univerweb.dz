@@ -91,7 +91,7 @@ export default {
     const routeItem = this.$i18n.locale === 'fr' ? `${baseURL}/` : `${baseURL}/${this.$i18n.locale}`
 
     return {
-      titleTemplate: `${this.work.title} — ${this.$t('name')}`,
+      title: this.work.title,
 
       meta: [
         { hid: 'description', name: 'description', content: this.work.description },

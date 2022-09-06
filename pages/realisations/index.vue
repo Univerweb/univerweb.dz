@@ -28,7 +28,7 @@ export default {
     }
 
     return {
-      titleTemplate: `${this.title} — ${this.$t('name')}`,
+      title: this.title,
 
       meta: [
         { hid: 'description', name: 'description', content: this.description },

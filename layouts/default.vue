@@ -23,6 +23,7 @@ export default {
     const comma = this.$i18n.locale === 'ar' ? '، ' : ', '
 
     return {
+      titleTemplate: `%s — ${this.$t('name')}`,
       htmlAttrs: { ...i18nHead.htmlAttrs },
       meta: [
         { hid: 'og:type', property: 'og:type', content: 'website' },
