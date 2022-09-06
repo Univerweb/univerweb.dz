@@ -24,7 +24,6 @@ export default {
 
     return {
       htmlAttrs: { ...i18nHead.htmlAttrs },
-
       meta: [
         { hid: 'og:type', property: 'og:type', content: 'website' },
         { hid: 'og:site_name', property: 'og:site_name', content: this.$t('name') },
@@ -37,9 +36,7 @@ export default {
         { hid: 'og:image:alt', property: 'og:image:alt', content: `${this.$t('name')} — ${this.$t('description')}` },
         ...i18nHead.meta
       ],
-
       link: [...i18nHead.link],
-
       script: [
         {
           json: {
