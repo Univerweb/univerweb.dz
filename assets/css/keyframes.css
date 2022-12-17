@@ -143,6 +143,43 @@
   }
 }
 
+@keyframes move-arrow-ar {
+  0% {
+    transform: scaleX(0.05);
+    transform-origin: right;
+  }
+
+  25% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+
+  26% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  60% {
+    transform: scaleX(0.05);
+    transform-origin: left;
+  }
+
+  80% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  81% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+
+  100% {
+    transform: scaleX(0.05);
+    transform-origin: right;
+  }
+}
+
 @keyframes show-icon {
   from {
     opacity: 0;

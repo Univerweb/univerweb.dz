@@ -301,10 +301,16 @@ button {
     background-color: var(--secondary);
     transform: scaleX(0.05);
     transform-origin: left;
+    [lang='ar-DZ'] & {
+      transform-origin: right;
+    }
     transition: background-color $transition, transform $transition;
   }
   &:hover::before {
     animation: move-arrow $animation;
+    [lang='ar-DZ'] & {
+      animation: move-arrow-ar $animation;
+    }
   }
 }
 
