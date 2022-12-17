@@ -41,9 +41,6 @@ body {
   color: var(--color);
   transition: background-color $transition, color $transition;
   font-family: $font;
-  [lang='ar-DZ'] & {
-    font-family: $font-arabic;
-  }
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -242,7 +239,6 @@ a {
 
 .link {
   display: inline-block;
-  font-family: $font;
   @include size(20);
   font-weight: 500;
   @media (min-width: $md) {
@@ -251,9 +247,6 @@ a {
   }
   &:hover {
     color: $secondary;
-  }
-  [lang='ar-DZ'] .work & {
-    font-family: $font-arabic;
   }
 }
 

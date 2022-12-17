@@ -211,9 +211,6 @@ header {
     height: 48px;
     border: 0;
     font-family: $font;
-    [lang='ar-DZ'] & {
-      font-family: $font-arabic;
-    }
     font-weight: 500;
     font-size: initial;
     cursor: pointer;

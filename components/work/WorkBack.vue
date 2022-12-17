@@ -20,9 +20,6 @@ export default {
   line-height: 1.875;
   text-transform: uppercase;
   margin-bottom: 12px;
-  [lang='ar-DZ'] & {
-    font-family: $font-arabic;
-  }
   &:hover {
     color: $secondary;
   }

@@ -62,9 +62,6 @@ export default {
       color: $secondary;
     }
     padding-inline: 18px 12px;
-    [lang='ar-DZ'] & {
-      font-family: $font-arabic;
-    }
     &:hover {
       color: $white;
     }
