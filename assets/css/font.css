@@ -11,7 +11,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('/fonts/AlmaraiRegular.woff2') format('woff2');
+  src: url('/fonts/AlmaraiLight.woff2') format('woff2');
 }
 
 @font-face {
@@ -23,9 +23,9 @@
 }
 
 @font-face {
-  font-family: 'Almarai Medium';
+  font-family: 'Almarai Bold';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('/fonts/AlmaraiMedium.woff2') format('woff2');
+  src: url('/fonts/AlmaraiBold.woff2') format('woff2');
 }
