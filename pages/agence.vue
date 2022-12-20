@@ -99,11 +99,8 @@ ol {
     counter-increment: counterName;
     content: counters(counterName, '-');
     color: $secondary;
+    font-family: $fontMedium;
     @include size(56);
-    font-weight: 500;
-    [lang='ar-DZ'] & {
-      font-family: $font;
-    }
   }
 }
 </style>

@@ -15,7 +15,7 @@
     clip: rect(1px, 1px, 1px, 1px);
     background-color: $secondary;
     color: $primary;
-    font-weight: 500;
+    font-family: $fontMedium;
     line-height: 25px;
     letter-spacing: -0.02em;
     text-transform: uppercase;

@@ -173,9 +173,9 @@ header {
   a {
     position: relative;
     display: block;
+    font-family: $fontMedium;
     @include size(20);
     color: var(--color);
-    font-weight: 500;
     @media (min-width: $lg) {
       font-size: 1rem;
       line-height: 1.5;
@@ -210,8 +210,7 @@ header {
     padding: 0 24px;
     height: 48px;
     border: 0;
-    font-family: $font;
-    font-weight: 500;
+    font-family: $fontMedium;
     font-size: initial;
     cursor: pointer;
     outline: 0;

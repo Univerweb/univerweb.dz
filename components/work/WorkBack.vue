@@ -15,8 +15,8 @@ export default {
 <style lang="scss">
 .back {
   width: max-content;
+  font-family: $fontMedium;
   font-size: 0.8rem;
-  font-weight: 500;
   line-height: 1.875;
   text-transform: uppercase;
   margin-bottom: 12px;
