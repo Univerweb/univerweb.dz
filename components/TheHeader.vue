@@ -173,7 +173,7 @@ header {
   a {
     position: relative;
     display: block;
-    font-family: $fontMedium;
+    font-family: var(--fontMedium);
     @include size(20);
     color: var(--textPrimary);
     @media (min-width: $lg) {
@@ -210,7 +210,7 @@ header {
     padding: 0 24px;
     height: 48px;
     border: 0;
-    font-family: $fontMedium;
+    font-family: var(--fontMedium);
     font-size: initial;
     cursor: pointer;
     outline: 0;

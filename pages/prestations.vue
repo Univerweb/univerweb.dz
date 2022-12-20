@@ -105,7 +105,7 @@ export default {
 .prestations {
   .tags {
     color: var(--textSecondary);
-    font-family: $fontMedium;
+    font-family: var(--fontMedium);
     transition: color $transition;
     margin: 0;
   }

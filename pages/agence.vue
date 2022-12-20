@@ -99,7 +99,7 @@ ol {
     counter-increment: counterName;
     content: counters(counterName, '-');
     color: $secondary;
-    font-family: $fontMedium;
+    font-family: var(--fontMedium);
     @include size(56);
   }
 }

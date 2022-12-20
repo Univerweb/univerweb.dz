@@ -11,6 +11,13 @@
   --textSecondary: #{$textSecondary};
   --primary: #{$primary};
   --secondary: #{$secondary};
+  --font: 'Sofia Pro Light', Arial;
+  --fontMedium: 'Sofia Pro Medium', Arial;
+}
+
+[lang='ar-DZ'] {
+  --font: 'Almarai Light', Arial;
+  --fontMedium: 'Almarai Bold', Arial;
 }
 
 .dark-mode {
@@ -40,7 +47,7 @@ body {
   background-color: var(--bg);
   color: var(--textPrimary);
   transition: background-color $transition, color $transition;
-  font-family: $font;
+  font-family: var(--font);
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -164,7 +171,7 @@ main {
 /* Headings */
 h1,
 .h1 {
-  font-family: $fontMedium;
+  font-family: var(--fontMedium);
   @include size(44);
   font-weight: 400;
   letter-spacing: -0.05em;
@@ -183,7 +190,7 @@ h1,
 
 h2,
 .h2 {
-  font-family: $fontMedium;
+  font-family: var(--fontMedium);
   @include size(32);
   font-weight: 400;
   letter-spacing: -0.05em;
@@ -199,7 +206,7 @@ h2,
 
 h3,
 .h3 {
-  font-family: $fontMedium;
+  font-family: var(--fontMedium);
   @include size(20);
   font-weight: 400;
   letter-spacing: -0.02em;
@@ -223,13 +230,13 @@ p {
 }
 
 .lead {
-  font-family: $fontMedium;
+  font-family: var(--fontMedium);
   @include size(20);
   letter-spacing: -0.02em;
   color: var(--textSecondary);
   transition: color $transition;
   footer & {
-    font-family: $font;
+    font-family: var(--font);
   }
 }
 
@@ -240,12 +247,12 @@ a {
 }
 
 strong {
-  font-family: $fontMedium;
+  font-family: var(--fontMedium);
   font-weight: 400;
 }
 
 .link {
-  font-family: $fontMedium;
+  font-family: var(--fontMedium);
   display: inline-block;
   @include size(20);
   @media (min-width: $md) {
@@ -272,7 +279,7 @@ button {
   column-gap: 12px;
   background-color: var(--primary);
   color: var(--secondary);
-  font-family: $fontMedium;
+  font-family: var(--fontMedium);
   line-height: 48px;
   width: fit-content;
   height: 48px;
