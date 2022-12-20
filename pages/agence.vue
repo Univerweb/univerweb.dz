@@ -98,7 +98,7 @@ ol {
   li:before {
     counter-increment: counterName;
     content: counters(counterName, '-');
-    color: $secondary;
+    color: $primary;
     font-family: var(--fontMedium);
     @include size(56);
   }

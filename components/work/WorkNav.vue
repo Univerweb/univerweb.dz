@@ -48,7 +48,7 @@ export default {
   justify-content: space-between;
   padding-top: 72px;
   padding-bottom: 48px;
-  background-color: $secondary;
+  background-color: $primary;
   transition: background-color $transition;
   .dark-mode & {
     background-color: var(--bg);
@@ -56,10 +56,10 @@ export default {
   .next,
   .prev {
     position: relative;
-    color: $primary;
+    color: $secondary;
     transition: color $transition;
     .dark-mode & {
-      color: $secondary;
+      color: $primary;
     }
     padding-inline: 18px 12px;
     &:hover {
@@ -68,10 +68,10 @@ export default {
     &::before {
       content: attr(data-text);
       position: absolute;
-      color: $primary;
+      color: $secondary;
       transition: color $transition;
       .dark-mode & {
-        color: $secondary;
+        color: $primary;
       }
       inset-block-start: -12px;
       inset-inline-start: 20px;

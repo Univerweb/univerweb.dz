@@ -237,7 +237,7 @@ strong {
     line-height: 1.286;
   }
   &:hover {
-    color: $secondary;
+    color: $primary;
   }
 }
 
@@ -254,8 +254,8 @@ button {
   align-items: center;
   justify-content: center;
   column-gap: 12px;
-  background-color: var(--primary);
-  color: var(--secondary);
+  background-color: var(--secondary);
+  color: var(--primary);
   font-family: var(--fontMedium);
   line-height: 48px;
   width: fit-content;
@@ -264,8 +264,8 @@ button {
   border-radius: 2em;
   transition: background-color $transition, color $transition;
   &:hover {
-    background-color: var(--secondary);
-    color: var(--primary);
+    background-color: var(--primary);
+    color: var(--secondary);
   }
 }
 
@@ -282,7 +282,7 @@ button {
     right: 0;
     bottom: -2px;
     height: 3px;
-    background-color: var(--secondary);
+    background-color: var(--primary);
     transform: scaleX(0.05);
     transform-origin: left;
     [lang='ar-DZ'] & {
@@ -348,6 +348,6 @@ img {
 }
 
 ::selection {
-  color: $primary;
-  background-color: $secondary;
+  color: $secondary;
+  background-color: $primary;
 }

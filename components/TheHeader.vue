@@ -114,10 +114,10 @@ header {
 .logo svg {
   display: block;
   g:first-child {
-    fill: $secondary;
+    fill: $primary;
   }
   g:last-child {
-    fill: $primary;
+    fill: $secondary;
     transition: fill $transition;
     .dark-mode & {
       fill: $white;
@@ -185,7 +185,7 @@ header {
       content: '';
       display: block;
       position: absolute;
-      background-color: $secondary;
+      background-color: $primary;
       width: 0%;
       height: 3px;
       transition: width $transition;
@@ -224,8 +224,8 @@ header {
     margin-inline-start: -25px;
   }
   &:hover {
-    background-color: var(--primary);
-    color: var(--secondary);
+    background-color: var(--secondary);
+    color: var(--primary);
   }
 }
 
@@ -242,7 +242,7 @@ header {
   padding: 0;
   outline: none;
   span {
-    background-color: $secondary;
+    background-color: $primary;
     height: 3px;
     border-radius: 2em;
     transition: all $transition;

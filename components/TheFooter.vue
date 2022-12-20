@@ -117,7 +117,7 @@ footer {
   }
 
   a:hover {
-    color: $secondary;
+    color: $primary;
   }
 
   .lead {

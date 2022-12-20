@@ -18,7 +18,7 @@ export default {
 
 <style lang="scss">
 .request {
-  background-color: var(--primary);
+  background-color: var(--secondary);
   color: $white;
   transition: background-color $transition, color $transition;
   text-align: center;

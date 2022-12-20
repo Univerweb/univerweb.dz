@@ -21,7 +21,7 @@ export default {
   text-transform: uppercase;
   margin-bottom: 12px;
   &:hover {
-    color: $secondary;
+    color: $primary;
   }
   .arrow {
     fill: currentColor;

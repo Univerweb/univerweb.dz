@@ -132,7 +132,7 @@ export default {
 }
 
 .contact {
-  background-color: var(--primary);
+  background-color: var(--secondary);
   color: $white;
   a {
     color: $white;

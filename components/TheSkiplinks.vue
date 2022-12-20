@@ -13,8 +13,8 @@
   button {
     position: absolute;
     clip: rect(1px, 1px, 1px, 1px);
-    background-color: $secondary;
-    color: $primary;
+    background-color: $primary;
+    color: $secondary;
     font-family: var(--fontMedium);
     line-height: 25px;
     letter-spacing: -0.02em;
