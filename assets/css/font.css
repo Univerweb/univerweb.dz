@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Sofia Pro';
+  font-family: 'Sofia Pro Light';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -7,15 +7,7 @@
 }
 
 @font-face {
-  font-family: 'Sofia Pro';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('/fonts/SofiaProMedium.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Almarai';
+  font-family: 'Almarai Light';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -23,9 +15,17 @@
 }
 
 @font-face {
-  font-family: 'Almarai';
+  font-family: 'Sofia Pro Medium';
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/SofiaProMedium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Almarai Medium';
+  font-style: normal;
+  font-weight: 400;
   font-display: swap;
   src: url('/fonts/AlmaraiMedium.woff2') format('woff2');
 }
