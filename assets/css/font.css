@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('/fonts/sofiapro-regular.woff2') format('woff2');
+  src: url('/fonts/SofiaProLight.woff2') format('woff2');
 }
 
 @font-face {
@@ -11,7 +11,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url('/fonts/sofiapro-medium.woff2') format('woff2');
+  src: url('/fonts/SofiaProMedium.woff2') format('woff2');
 }
 
 @font-face {
@@ -19,7 +19,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('/fonts/almarai-regular.woff2') format('woff2');
+  src: url('/fonts/AlmaraiRegular.woff2') format('woff2');
 }
 
 @font-face {
@@ -27,5 +27,5 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url('/fonts/almarai-medium.woff2') format('woff2');
+  src: url('/fonts/AlmaraiMedium.woff2') format('woff2');
 }
