@@ -5,29 +5,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  --bg: #{$white};
-  --textPrimary: #{$textPrimary};
-  --textSecondary: #{$textSecondary};
-  --primary: #{$primary};
-  --secondary: #{$secondary};
-  --font: 'Sofia Pro Light', Arial;
-  --fontMedium: 'Sofia Pro Medium', Arial;
-}
-
-[lang='ar-DZ'] {
-  --font: 'Almarai Light', Arial;
-  --fontMedium: 'Almarai Bold', Arial;
-}
-
-.dark-mode {
-  --bg: #091a28;
-  --textPrimary: #{$white};
-  --textSecondary: #{$white};
-  --primary: #{$secondary};
-  --secondary: #{$primary};
-}
-
 html {
   text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;

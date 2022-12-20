@@ -3,11 +3,42 @@ $sm: 640px;
 $md: 768px;
 $lg: 1024px;
 $xl: 1280px;
+
 $textPrimary: #111;
 $textSecondary: #666;
 $primary: #28285a;
 $secondary: #50c8f0;
 $white: #fff;
 $light: #fafafa;
+$dark: #091a28;
+
+$fontLightLatin: 'Sofia Pro Light', Arial;
+$fontMediumLatin: 'Sofia Pro Medium', Arial;
+$fontLightArabic: 'Almarai Light', Arial;
+$fontMediumArabic: 'Almarai Bold', Arial;
+
 $transition: 0.3s linear;
 $animation: 0.5s forwards;
+
+:root {
+  --bg: #{$white};
+  --textPrimary: #{$textPrimary};
+  --textSecondary: #{$textSecondary};
+  --primary: #{$primary};
+  --secondary: #{$secondary};
+  --font: #{$fontLightLatin};
+  --fontMedium: #{$fontMediumLatin};
+}
+
+[lang='ar-DZ'] {
+  --font: #{$fontLightArabic};
+  --fontMedium: #{$fontMediumArabic};
+}
+
+.dark-mode {
+  --bg: #{$dark};
+  --textPrimary: #{$white};
+  --textSecondary: #{$white};
+  --primary: #{$secondary};
+  --secondary: #{$primary};
+}
