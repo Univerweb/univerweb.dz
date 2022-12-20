@@ -8,7 +8,7 @@
 :root {
   --bg: #{$white};
   --color: #{$color};
-  --color-secondary: #{$color-secondary};
+  --color-secondary: #{$colorSecondary};
   --primary: #{$primary};
   --secondary: #{$secondary};
 }
@@ -316,7 +316,7 @@ button {
   background-color: $light;
   transition: background-color $transition;
   .dark-mode & {
-    background-color: $color-secondary;
+    background-color: $colorSecondary;
   }
 }
 
@@ -330,7 +330,7 @@ img {
   opacity: 0;
   transition: opacity $transition;
   .dark-mode & {
-    background-color: $color-secondary;
+    background-color: $colorSecondary;
   }
 }
 
