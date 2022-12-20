@@ -100,7 +100,7 @@ ol {
     content: counters(counterName, '-');
     color: $secondary;
     @include size(56);
-    font-weight: 800;
+    font-weight: 500;
     [lang='ar-DZ'] & {
       font-family: $font;
     }

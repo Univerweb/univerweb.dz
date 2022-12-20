@@ -165,7 +165,7 @@ main {
 h1,
 .h1 {
   @include size(44);
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: -0.05em;
   margin-top: 0;
   margin-bottom: 24px;
@@ -235,6 +235,10 @@ a {
   color: var(--color);
   text-decoration: none;
   transition: color $transition;
+}
+
+strong {
+  font-weight: 500;
 }
 
 .link {

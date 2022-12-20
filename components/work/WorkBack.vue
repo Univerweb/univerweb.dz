@@ -16,7 +16,7 @@ export default {
 .back {
   width: max-content;
   font-size: 0.8rem;
-  font-weight: 800;
+  font-weight: 500;
   line-height: 1.875;
   text-transform: uppercase;
   margin-bottom: 12px;

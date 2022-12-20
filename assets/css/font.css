@@ -15,14 +15,6 @@
 }
 
 @font-face {
-  font-family: 'Sofia Pro';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url('/fonts/sofiapro-bold.woff2') format('woff2');
-}
-
-@font-face {
   font-family: 'Almarai';
   font-style: normal;
   font-weight: 400;
@@ -36,12 +28,4 @@
   font-weight: 500;
   font-display: swap;
   src: url('/fonts/almarai-medium.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Almarai';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url('/fonts/almarai-bold.woff2') format('woff2');
 }
