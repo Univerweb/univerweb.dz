@@ -4,6 +4,8 @@
   font-weight: 400;
   font-display: swap;
   src: url('/fonts/SofiaProLight.woff2') format('woff2');
+  ascent-override: 90.5%;
+  descent-override: 21%;
 }
 
 @font-face {
@@ -20,6 +22,8 @@
   font-weight: 400;
   font-display: swap;
   src: url('/fonts/SofiaProMedium.woff2') format('woff2');
+  ascent-override: 90.5%;
+  descent-override: 21.2%;
 }
 
 @font-face {
