@@ -175,7 +175,7 @@ header {
     display: block;
     font-family: $fontMedium;
     @include size(20);
-    color: var(--color);
+    color: var(--textPrimary);
     @media (min-width: $lg) {
       font-size: 1rem;
       line-height: 1.5;

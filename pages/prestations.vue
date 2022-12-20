@@ -104,7 +104,7 @@ export default {
 <style lang="scss">
 .prestations {
   .tags {
-    color: var(--color-secondary);
+    color: var(--textSecondary);
     font-family: $fontMedium;
     transition: color $transition;
     margin: 0;

@@ -121,7 +121,7 @@ export default {
       position: absolute;
       width: 100%;
       height: 100%;
-      background-color: $color;
+      background-color: $textPrimary;
       opacity: 0.1;
       transition: opacity $transition;
     }

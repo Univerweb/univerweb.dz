@@ -7,16 +7,16 @@
 
 :root {
   --bg: #{$white};
-  --color: #{$color};
-  --color-secondary: #{$colorSecondary};
+  --textPrimary: #{$textPrimary};
+  --textSecondary: #{$textSecondary};
   --primary: #{$primary};
   --secondary: #{$secondary};
 }
 
 .dark-mode {
   --bg: #091a28;
-  --color: #{$white};
-  --color-secondary: #{$white};
+  --textPrimary: #{$white};
+  --textSecondary: #{$white};
   --primary: #{$secondary};
   --secondary: #{$primary};
 }
@@ -38,7 +38,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--bg);
-  color: var(--color);
+  color: var(--textPrimary);
   transition: background-color $transition, color $transition;
   font-family: $font;
   font-size: 1rem;
@@ -226,7 +226,7 @@ p {
   font-family: $fontMedium;
   @include size(20);
   letter-spacing: -0.02em;
-  color: var(--color-secondary);
+  color: var(--textSecondary);
   transition: color $transition;
   footer & {
     font-family: $font;
@@ -234,7 +234,7 @@ p {
 }
 
 a {
-  color: var(--color);
+  color: var(--textPrimary);
   text-decoration: none;
   transition: color $transition;
 }
@@ -319,7 +319,7 @@ button {
   background-color: $light;
   transition: background-color $transition;
   .dark-mode & {
-    background-color: $colorSecondary;
+    background-color: $textSecondary;
   }
 }
 
@@ -333,7 +333,7 @@ img {
   opacity: 0;
   transition: opacity $transition;
   .dark-mode & {
-    background-color: $colorSecondary;
+    background-color: $textSecondary;
   }
 }
 

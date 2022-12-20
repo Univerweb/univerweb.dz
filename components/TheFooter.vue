@@ -121,7 +121,7 @@ footer {
   }
 
   .lead {
-    color: var(--color);
+    color: var(--textPrimary);
     transition: color $transition;
     @media (min-width: $md) {
       max-width: 310px;
