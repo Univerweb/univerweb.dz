@@ -8,8 +8,7 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "npm run lint:js",
-    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
-    "prepare": "husky install"
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore ."
   },
   "lint-staged": {
     "*.{js,vue}": "eslint"
@@ -22,8 +21,6 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.19.1",
-    "@commitlint/cli": "^17.3.0",
-    "@commitlint/config-conventional": "^17.3.0",
     "@nuxt/image": "^0.7.1",
     "@nuxtjs/color-mode": "^2.1.1",
     "@nuxtjs/eslint-config": "^11.0.0",
@@ -35,7 +32,6 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-vue": "^9.8.0",
-    "husky": "^8.0.2",
     "lint-staged": "^13.1.0",
     "sass": "^1.57.1",
     "sass-loader": "^10.4.1",
