@@ -9,11 +9,11 @@
 }
 
 @font-face {
-  font-family: 'Almarai Light';
+  font-family: 'Almarai Regular';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('/fonts/AlmaraiLight.woff2') format('woff2');
+  src: url('/fonts/AlmaraiRegular.woff2') format('woff2');
 }
 
 @font-face {

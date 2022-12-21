@@ -12,10 +12,8 @@ $white: #fff;
 $light: #fafafa;
 $dark: #091a28;
 
-$fontLightLatin: 'Sofia Pro Light', Arial;
-$fontMediumLatin: 'Sofia Pro Medium', Arial;
-$fontLightArabic: 'Almarai Light', Arial;
-$fontMediumArabic: 'Almarai Bold', Arial;
+$font: 'Sofia Pro Light', 'Almarai Regular', Arial;
+$fontMedium: 'Sofia Pro Medium', 'Almarai Bold', Arial;
 
 $transition: 0.3s linear;
 $animation: 0.5s forwards;
@@ -26,13 +24,8 @@ $animation: 0.5s forwards;
   --textSecondary: #{$textSecondary};
   --primary: #{$primary};
   --secondary: #{$secondary};
-  --font: #{$fontLightLatin};
-  --fontMedium: #{$fontMediumLatin};
-}
-
-[lang='ar-DZ'] {
-  --font: #{$fontLightArabic};
-  --fontMedium: #{$fontMediumArabic};
+  --font: #{$font};
+  --fontMedium: #{$fontMedium};
 }
 
 .dark-mode {
