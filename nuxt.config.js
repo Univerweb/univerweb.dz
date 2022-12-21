@@ -19,7 +19,6 @@ export default {
   buildModules: [
     '@nuxt/image',
     '@nuxtjs/color-mode',
-    '@nuxtjs/eslint-module',
     '@nuxtjs/svg',
     '@nuxtjs/style-resources',
     '@nuxtjs/pwa',
