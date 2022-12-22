@@ -9,7 +9,6 @@
     "generate": "nuxt generate"
   },
   "devDependencies": {
-    "@nuxtjs/svg": "^0.4.0",
     "nuxt": "^3.0.0",
     "sass": "^1.57.1",
     "vue-scrollto": "^2.20.0"
