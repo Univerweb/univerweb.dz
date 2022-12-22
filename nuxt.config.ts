@@ -31,8 +31,6 @@ export default defineNuxtConfig({
     ['vue-scrollto/nuxt', { offset: -72 }]
   ],
 
-  components: true,
-
   plugins: [{ src: '~plugins/ga.js', mode: 'client' }],
 
   i18n: {
