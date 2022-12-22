@@ -48,15 +48,17 @@ export default defineNuxtConfig({
   //   staticFilename: 'images/[name]-[hash][ext]'
   // },
 
-  publicRuntimeConfig: {
-    baseURL: process.env.BASE_URL || 'http://localhost:3000',
-    baseEmail: process.env.BASE_EMAIL || false,
-    managerEmail: process.env.MANAGER_EMAIL || false,
-    supportEmail: process.env.SUPPORT_EMAIL || false,
-    apiKey: process.env.API_KEY || '',
-    phone: '021 44 08 11',
-    mobile: '0551 90 46 22',
-    postalCode: '16029'
+  runtimeConfig: {
+    public: {
+      baseURL: process.env.BASE_URL || 'http://localhost:3000',
+      baseEmail: process.env.BASE_EMAIL,
+      managerEmail: process.env.MANAGER_EMAIL,
+      supportEmail: process.env.SUPPORT_EMAIL,
+      apiKey: process.env.API_KEY || '',
+      phone: '021 44 08 11',
+      mobile: '0551 90 46 22',
+      postalCode: '16029'
+    }
   },
 
   // content: {

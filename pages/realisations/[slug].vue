@@ -2,13 +2,13 @@
   <main id="main" class="work">
     <article vocab="https://schema.org/" typeof="Article">
       <div property="mainEntityOfPage" typeof="WebPage">
-        <meta property="id" :content="`${$config.baseURL}${$route.path}`" />
+        <meta property="id" :content="`${$config.public.baseURL}${$route.path}`" />
       </div>
       <meta property="dateCreated datePublished" :content="work.createdAt" />
       <meta property="dateModified" :content="work.updatedAt" />
       <div property="author publisher" typeof="Organization">
         <meta property="name" :content="$t('name')" />
-        <meta property="url" :content="$config.baseURL" />
+        <meta property="url" :content="$config.public.baseURL" />
       </div>
       <meta property="articleSection" :content="$t('menu.realisations')" />
       <meta property="description" :content="work.description" />
@@ -86,7 +86,7 @@ export default {
     }
   },
 
-  head({ $config: { baseURL } }) {
+  head({ $config. public: { baseURL } }) {
     const image = `${baseURL}/images/${this.work.slug}_share.jpg`
     const routeItem = this.$i18n.locale === 'fr' ? `${baseURL}/` : `${baseURL}/${this.$i18n.locale}`
 

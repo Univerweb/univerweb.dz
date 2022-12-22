@@ -99,9 +99,9 @@ export default {
 
   // OLD Code
   // head() {
-  //   let routeItem = `${this.$config.baseURL}/`
+  //   let routeItem = `${this.$config. public.baseURL}/`
   //   if (this.$i18n.locale !== 'fr') {
-  //     routeItem = `${this.$config.baseURL}/${this.$i18n.locale}`
+  //     routeItem = `${this.$config. public.baseURL}/${this.$i18n.locale}`
   //   }
 
   //   return {

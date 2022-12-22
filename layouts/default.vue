@@ -17,7 +17,7 @@ export default {
     }
   },
 
-  head({ $config: { baseURL } }) {
+  head({ $config. public: { baseURL } }) {
     const i18nHead = this.$nuxtI18nHead({ addDirAttribute: true, addSeoAttributes: true })
     const image = this.$i18n.locale === 'ar' ? `${baseURL}/images/univerweb-ar_share.jpg` : `${baseURL}/images/univerweb_share.jpg`
     const comma = this.$i18n.locale === 'ar' ? '، ' : ', '
@@ -57,9 +57,9 @@ export default {
               width: '512px',
               height: '512px'
             },
-            email: this.$config.baseEmail,
-            telephone: this.$config.mobile,
-            faxNumber: this.$config.phone,
+            email: this.$config. public.baseEmail,
+            telephone: this.$config. public.mobile,
+            faxNumber: this.$config. public.phone,
             sameAs: [
               'https://twitter.com/Univerweb',
               'https://www.facebook.com/Univerweb',
@@ -69,7 +69,7 @@ export default {
             address: {
               '@type': 'PostalAddress',
               streetAddress: this.$t('footer.address.streetAddress') + comma + this.$t('footer.address.addressLocality'),
-              postalCode: this.$config.postalCode,
+              postalCode: this.$config. public.postalCode,
               addressLocality: this.$t('footer.address.addressRegion') + comma + this.$t('footer.address.addressCountry')
             }
           },
