@@ -61,13 +61,13 @@ export default defineNuxtConfig({
   //   }
   // },
 
-  pwa: {
-    manifest: {
-      name: 'Univerweb',
-      description: 'Univerweb website',
-      theme_color: '#50c8f0'
-    }
-  },
+  // pwa: {
+  //   manifest: {
+  //     name: 'Univerweb',
+  //     description: 'Univerweb website',
+  //     theme_color: '#50c8f0'
+  //   }
+  // },
 
   generate: {
     fallback: 'not_found.html'

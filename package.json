@@ -9,7 +9,6 @@
     "generate": "nuxt generate"
   },
   "devDependencies": {
-    "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/svg": "^0.4.0",
     "nuxt": "^3.0.0",
     "sass": "^1.57.1",
