@@ -6,6 +6,29 @@
   </main>
 </template>
 
+<script setup lang="ts">
+const title = ref('My App')
+const description = ref('My App Description')
+
+useHead({
+  title,
+  meta: [
+    {
+      name: 'description',
+      content: description
+    },
+    {
+      property: 'og:title',
+      content: title
+    },
+    {
+      property: 'og:description',
+      content: description
+    }
+  ]
+})
+</script>
+
 <script>
 export default {
   name: 'HomePage',
@@ -40,17 +63,18 @@ export default {
       worksPage,
       works
     }
-  },
-
-  head() {
-    return {
-      title: this.$t('description'),
-      meta: [
-        { hid: 'description', name: 'description', content: this.description },
-        { hid: 'og:title', property: 'og:title', content: this.$t('description') },
-        { hid: 'og:description', property: 'og:description', content: this.description }
-      ]
-    }
   }
+
+  // OLD Code
+  // head() {
+  //   return {
+  //     title: this.$t('description'),
+  //     meta: [
+  //       { hid: 'description', name: 'description', content: this.description },
+  //       { hid: 'og:title', property: 'og:title', content: this.$t('description') },
+  //       { hid: 'og:description', property: 'og:description', content: this.description }
+  //     ]
+  //   }
+  // }
 }
 </script>
