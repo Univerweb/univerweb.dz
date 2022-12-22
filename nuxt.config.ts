@@ -15,15 +15,21 @@ export default defineNuxtConfig({
   //   ]
   // },
 
-  // styleResources: {
-  //   scss: ['@/assets/scss/var.scss', '@/assets/scss/mixin.scss']
-  // },
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@use "@/assets/scss/var.scss" as *; @use "@/assets/scss/mixin.scss" as *;'
+        }
+      }
+    }
+  },
 
   css: ['@/assets/css/font.css', '@/assets/scss/main.scss', '@/assets/css/keyframes.css'],
 
   modules: [],
 
-  plugins: [{ src: '~plugins/ga.js', mode: 'client' }],
+  // plugins: [{ src: '~plugins/ga.js', mode: 'client' }],
 
   // i18n: {
   //   locales: [
