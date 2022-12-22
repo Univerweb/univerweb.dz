@@ -1,5 +1,6 @@
-export default {
+export default defineNuxtConfig({
   target: 'static',
+
   head: {
     meta: [
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -12,14 +13,28 @@ export default {
       { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' }
     ]
   },
+
   styleResources: {
     scss: ['@/assets/scss/var.scss', '@/assets/scss/mixin.scss']
   },
+
   css: ['@/assets/css/font.css', '@/assets/scss/main.scss', '@/assets/css/keyframes.css'],
-  buildModules: ['@nuxt/image', '@nuxtjs/color-mode', '@nuxtjs/svg', '@nuxtjs/style-resources', '@nuxtjs/pwa', ['vue-scrollto/nuxt', { offset: -72 }]],
-  modules: ['@nuxtjs/i18n', '@nuxt/content'],
+
+  modules: [
+    '@nuxtjs/i18n',
+    '@nuxt/content',
+    '@nuxt/image',
+    '@nuxtjs/color-mode',
+    '@nuxtjs/svg',
+    '@nuxtjs/style-resources',
+    '@nuxtjs/pwa',
+    ['vue-scrollto/nuxt', { offset: -72 }]
+  ],
+
   components: true,
+
   plugins: [{ src: '~plugins/ga.js', mode: 'client' }],
+
   i18n: {
     locales: [
       { code: 'fr', iso: 'fr-FR', file: 'fr-FR.js', name: 'Français', dir: 'ltr' },
@@ -32,9 +47,11 @@ export default {
     langDir: 'locales/',
     baseUrl: process.env.BASE_URL
   },
+
   image: {
     staticFilename: 'images/[name]-[hash][ext]'
   },
+
   publicRuntimeConfig: {
     baseURL: process.env.BASE_URL || 'http://localhost:3000',
     baseEmail: process.env.BASE_EMAIL || false,
@@ -45,6 +62,7 @@ export default {
     mobile: '0551 90 46 22',
     postalCode: '16029'
   },
+
   content: {
     markdown: {
       prism: {
@@ -52,6 +70,7 @@ export default {
       }
     }
   },
+
   pwa: {
     manifest: {
       name: 'Univerweb',
@@ -59,7 +78,8 @@ export default {
       theme_color: '#50c8f0'
     }
   },
+
   generate: {
     fallback: 'not_found.html'
   }
-}
+})
