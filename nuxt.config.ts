@@ -16,14 +16,7 @@ export default {
     scss: ['@/assets/scss/var.scss', '@/assets/scss/mixin.scss']
   },
   css: ['@/assets/css/font.css', '@/assets/scss/main.scss', '@/assets/css/keyframes.css'],
-  buildModules: [
-    '@nuxt/image',
-    '@nuxtjs/color-mode',
-    '@nuxtjs/svg',
-    '@nuxtjs/style-resources',
-    '@nuxtjs/pwa',
-    ['vue-scrollto/nuxt', { offset: -72 }]
-  ],
+  buildModules: ['@nuxt/image', '@nuxtjs/color-mode', '@nuxtjs/svg', '@nuxtjs/style-resources', '@nuxtjs/pwa', ['vue-scrollto/nuxt', { offset: -72 }]],
   modules: ['@nuxtjs/i18n', '@nuxt/content'],
   components: true,
   plugins: [{ src: '~plugins/ga.js', mode: 'client' }],
