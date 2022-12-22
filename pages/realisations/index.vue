@@ -43,7 +43,7 @@ useHead({
 })
 </script>
 
-<script>
+<!-- <script>
 export default {
   name: 'RealisationsPage',
 
@@ -100,4 +100,4 @@ export default {
   //   }
   // }
 }
-</script>
+</script> -->

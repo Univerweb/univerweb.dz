@@ -68,7 +68,7 @@ useHead({
 })
 </script>
 
-<script>
+<!-- <script>
 export default {
   name: 'AgencePage',
 
@@ -126,7 +126,7 @@ export default {
   //   }
   // }
 }
-</script>
+</script> -->
 
 <style lang="scss">
 ol {

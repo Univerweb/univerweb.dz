@@ -7,7 +7,7 @@
   </div>
 </template>
 
-<script>
+<!-- <script>
 export default {
   name: 'DefaultLayout',
 
@@ -101,4 +101,4 @@ export default {
     }
   }
 }
-</script>
+</script> -->

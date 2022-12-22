@@ -63,7 +63,7 @@ useHead({
 })
 </script>
 
-<script>
+<!-- <script>
 export default {
   name: 'ContactPage',
 
@@ -158,7 +158,7 @@ export default {
     }
   }
 }
-</script>
+</script> -->
 
 <style lang="scss">
 #map {
