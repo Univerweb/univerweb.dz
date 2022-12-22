@@ -21,7 +21,7 @@ export default defineNuxtConfig({
 
   css: ['@/assets/css/font.css', '@/assets/scss/main.scss', '@/assets/css/keyframes.css'],
 
-  modules: ['@nuxt/image', '@nuxtjs/color-mode', '@nuxtjs/svg', '@nuxtjs/style-resources', '@nuxtjs/pwa', ['vue-scrollto/nuxt', { offset: -72 }]],
+  modules: ['@nuxt/image', '@nuxtjs/svg', '@nuxtjs/style-resources', '@nuxtjs/pwa', ['vue-scrollto/nuxt', { offset: -72 }]],
 
   plugins: [{ src: '~plugins/ga.js', mode: 'client' }],
 
@@ -53,13 +53,13 @@ export default defineNuxtConfig({
     postalCode: '16029'
   },
 
-  content: {
-    markdown: {
-      prism: {
-        theme: false
-      }
-    }
-  },
+  // content: {
+  //   markdown: {
+  //     prism: {
+  //       theme: false
+  //     }
+  //   }
+  // },
 
   pwa: {
     manifest: {
