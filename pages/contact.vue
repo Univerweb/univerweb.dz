@@ -14,11 +14,11 @@
       <div class="details">
         <div class="item">
           <h3 class="h6">{{ $t('label.manager') }}</h3>
-          <a :href="'mailto:' + $config.managerEmail" class="link move-arrow">{{ $config.managerEmail }}</a>
+          <a :href="'mailto:' + $config.public.managerEmail" class="link move-arrow">{{ $config.public.managerEmail }}</a>
         </div>
         <div class="item">
           <h3 class="h6">{{ $t('label.support') }}</h3>
-          <a :href="'mailto:' + $config.supportEmail" class="link move-arrow">{{ $config.supportEmail }}</a>
+          <a :href="'mailto:' + $config.public.supportEmail" class="link move-arrow">{{ $config.public.supportEmail }}</a>
         </div>
       </div>
     </div>
@@ -79,9 +79,9 @@ export default {
 
   // OLD Code
   // head() {
-  //   let routeItem = `${this.$config.baseURL}/`
+  //   let routeItem = `${this.$config. public.baseURL}/`
   //   if (this.$i18n.locale !== 'fr') {
-  //     routeItem = `${this.$config.baseURL}/${this.$i18n.locale}`
+  //     routeItem = `${this.$config. public.baseURL}/${this.$i18n.locale}`
   //   }
 
   //   return {
@@ -123,7 +123,7 @@ export default {
       const script = document.createElement('script')
       script.onload = this.onScriptLoaded
       script.type = 'text/javascript'
-      script.src = `https://maps.googleapis.com/maps/api/js?key=${this.$config.apiKey}&map_ids=101a5bf427dc0726`
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${this.$config.public.apiKey}&map_ids=101a5bf427dc0726`
       document.head.appendChild(script)
     } else {
       this.onScriptLoaded()
