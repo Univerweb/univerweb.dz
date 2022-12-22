@@ -27,6 +27,14 @@
   </header>
 </template>
 
+<script setup lang="ts">
+useHead({
+  // this.show
+  htmlAttrs: { style: 'this.show' ? 'height: 100%; overflow: hidden' : '' },
+  bodyAttrs: { style: 'this.show' ? 'height: 100%; overflow: hidden' : '' }
+})
+</script>
+
 <script>
 import LogoLatin from '@/static/logos/univerweb.svg?inline'
 import LogoArabic from '@/static/logos/univerweb-ar.svg?inline'
@@ -48,12 +56,13 @@ export default {
     }
   },
 
-  head() {
-    return {
-      htmlAttrs: { style: this.show ? 'height: 100%; overflow: hidden' : '' },
-      bodyAttrs: { style: this.show ? 'height: 100%; overflow: hidden' : '' }
-    }
-  },
+  // OLD Code
+  // head() {
+  //   return {
+  //     htmlAttrs: { style: this.show ? 'height: 100%; overflow: hidden' : '' },
+  //     bodyAttrs: { style: this.show ? 'height: 100%; overflow: hidden' : '' }
+  //   }
+  // },
 
   watch: {
     $route() {

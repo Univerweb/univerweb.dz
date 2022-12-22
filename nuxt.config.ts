@@ -1,18 +1,19 @@
 export default defineNuxtConfig({
   target: 'static',
 
-  head: {
-    meta: [
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'theme-color', content: '#50c8f0' },
-      { name: 'apple-mobile-web-app-capable', content: 'yes' },
-      { name: 'apple-mobile-web-app-status-bar-style', content: 'default' }
-    ],
-    link: [
-      { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
-      { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' }
-    ]
-  },
+  // OLD Code - Non remplacer
+  // head: {
+  //   meta: [
+  //     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+  //     { name: 'theme-color', content: '#50c8f0' },
+  //     { name: 'apple-mobile-web-app-capable', content: 'yes' },
+  //     { name: 'apple-mobile-web-app-status-bar-style', content: 'default' }
+  //   ],
+  //   link: [
+  //     { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+  //     { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' }
+  //   ]
+  // },
 
   styleResources: {
     scss: ['@/assets/scss/var.scss', '@/assets/scss/mixin.scss']

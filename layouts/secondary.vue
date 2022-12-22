@@ -8,14 +8,15 @@
 
 <script>
 export default {
-  name: 'SecondaryLayout',
+  name: 'SecondaryLayout'
 
-  head() {
-    const i18nHead = this.$nuxtI18nHead({ addDirAttribute: true, addSeoAttributes: true })
+  // OLD Code - Non remplacer
+  // head() {
+  //   const i18nHead = this.$nuxtI18nHead({ addDirAttribute: true, addSeoAttributes: true })
 
-    return {
-      htmlAttrs: { ...i18nHead.htmlAttrs }
-    }
-  }
+  //   return {
+  //     htmlAttrs: { ...i18nHead.htmlAttrs }
+  //   }
+  // }
 }
 </script>

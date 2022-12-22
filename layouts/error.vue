@@ -17,13 +17,14 @@ export default {
       type: Object,
       default: null
     }
-  },
-
-  head() {
-    return {
-      titleTemplate: `${this.error.statusCode} — ${this.$t('name')}`,
-      meta: [{ name: 'robots', content: 'noindex, follow' }]
-    }
   }
+
+  // OLD Code - Non remplacer
+  // head() {
+  //   return {
+  //     titleTemplate: `${this.error.statusCode} — ${this.$t('name')}`,
+  //     meta: [{ name: 'robots', content: 'noindex, follow' }]
+  //   }
+  // }
 }
 </script>
