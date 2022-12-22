@@ -79,7 +79,7 @@ useHead({
 })
 </script>
 
-<script>
+<!-- <script>
 export default {
   name: 'PrestationsPage',
 
@@ -138,7 +138,7 @@ export default {
   //   }
   // }
 }
-</script>
+</script> -->
 
 <style lang="scss">
 .prestations {

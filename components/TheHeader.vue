@@ -35,7 +35,7 @@ useHead({
 })
 </script>
 
-<script>
+<!-- <script>
 import LogoLatin from '@/static/logos/univerweb.svg?inline'
 import LogoArabic from '@/static/logos/univerweb-ar.svg?inline'
 import LangGlobe from '@/assets/icons/globe.svg?inline'
@@ -83,7 +83,7 @@ export default {
     }
   }
 }
-</script>
+</script> -->
 
 <style lang="scss">
 header {
