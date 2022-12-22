@@ -38,9 +38,9 @@ export default defineNuxtConfig({
   //   baseUrl: process.env.BASE_URL
   // },
 
-  image: {
-    staticFilename: 'images/[name]-[hash][ext]'
-  },
+  // image: {
+  //   staticFilename: 'images/[name]-[hash][ext]'
+  // },
 
   publicRuntimeConfig: {
     baseURL: process.env.BASE_URL || 'http://localhost:3000',
