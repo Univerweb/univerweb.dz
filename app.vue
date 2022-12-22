@@ -2,7 +2,7 @@
   <div class="wrapper" :class="{ scrolled: scrolled }">
     <TheSkiplinks />
     <TheHeader />
-    <slot />
+    <NuxtPage />
     <TheFooter />
   </div>
 </template>
