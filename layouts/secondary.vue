@@ -2,7 +2,7 @@
   <div class="wrapper">
     <TheSkiplinks />
     <TheHeader />
-    <Nuxt />
+    <slot />
   </div>
 </template>
 

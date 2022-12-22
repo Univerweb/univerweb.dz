@@ -6,11 +6,13 @@
   </main>
 </template>
 
+<script lang="ts">
+definePageMeta({ layout: 'secondary' })
+</script>
+
 <script>
 export default {
   name: 'ErrorLayout',
-
-  layout: 'secondary',
 
   props: {
     error: {
