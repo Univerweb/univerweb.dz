@@ -23,14 +23,14 @@
     </div>
     <div>
       <AppAbout />
-      <!-- <ul class="social">
+      <ul class="social">
         <li v-for="(value, name) in socials" :key="name">
           <a :href="value">
-            <span class="visually-hidden">{{ $t('footer.social.' + name) }}</span>
-            <Component :is="name + '-icon'"
-          /></a>
+            <!-- <span class="visually-hidden">{{ $t('footer.social.' + name) }}</span> -->
+            <NuxtIcon :name="name" />
+          </a>
         </li>
-      </ul> -->
+      </ul>
     </div>
     <!-- <div class="colorSwitcher">
       <button class="btn" @click="setCurrentTheme">
@@ -50,35 +50,25 @@
   </footer>
 </template>
 
+<script setup>
+const socials = {
+  twitter: 'https://twitter.com/Univerweb',
+  facebook: 'https://www.facebook.com/Univerweb',
+  linkedin: 'https://www.linkedin.com/company/Univerweb',
+  github: 'https://github.com/Univerweb'
+}
+</script>
+
 <script>
-import TwitterIcon from '@/assets/icons/twitter.svg?inline'
-import FacebookIcon from '@/assets/icons/facebook.svg?inline'
-import LinkedinIcon from '@/assets/icons/linkedin.svg?inline'
-import GithubIcon from '@/assets/icons/github.svg?inline'
 import DarkIcon from '@/assets/icons/dark.svg?inline'
 import SystemIcon from '@/assets/icons/system.svg?inline'
 import LightIcon from '@/assets/icons/light.svg?inline'
 
 export default {
   components: {
-    TwitterIcon,
-    FacebookIcon,
-    LinkedinIcon,
-    GithubIcon,
     DarkIcon,
     SystemIcon,
     LightIcon
-  },
-
-  data() {
-    return {
-      socials: {
-        twitter: 'https://twitter.com/Univerweb',
-        facebook: 'https://www.facebook.com/Univerweb',
-        linkedin: 'https://www.linkedin.com/company/Univerweb',
-        github: 'https://github.com/Univerweb'
-      }
-    }
   },
 
   methods: {
