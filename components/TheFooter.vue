@@ -32,20 +32,27 @@
         </li>
       </ul>
     </div>
-    <!-- <div class="colorSwitcher">
-      <button class="btn" @click="setCurrentTheme">
+    <div class="colorSwitcher">
+      <button class="btn" @click="setCurrentMode">
         <span>
-          <DarkIcon :class="$colorMode.preference === 'dark' ? 'show' : 'hide'" />
-          <SystemIcon :class="$colorMode.preference === 'system' ? 'show' : 'hide'" />
-          <LightIcon :class="$colorMode.preference === 'light' ? 'show' : 'hide'" />
+          <NuxtIcon name="dark" filled :class="colorMode.preference === 'dark' ? 'show' : 'hide'" />
+          <NuxtIcon name="system" filled :class="colorMode.preference === 'system' ? 'show' : 'hide'" />
+          <NuxtIcon name="light" filled :class="colorMode.preference === 'light' ? 'show' : 'hide'" />
         </span>
-        <transition name="from-bottom-to-bottom" mode="out-in">
-          <span v-if="$colorMode.preference === 'dark'" key="dark">{{ $t('footer.colorMode.dark') }}</span>
-          <span v-if="$colorMode.preference === 'system'" key="system">{{ $t('footer.colorMode.system') }}</span>
-          <span v-else-if="$colorMode.preference === 'light'" key="light">{{ $t('footer.colorMode.light') }}</span>
-        </transition>
+        <!-- <transition name="from-bottom-to-bottom" mode="out-in"> -->
+        <span v-if="colorMode.preference === 'dark'" key="dark">
+          <!-- {{ $t('footer.colorMode.dark') }} -->
+        </span>
+        <span v-if="colorMode.preference === 'system'" key="system">
+          <!-- {{ $t('footer.colorMode.system') }} -->
+        </span>
+        <span v-else-if="colorMode.preference === 'light'" key="light">
+          <!-- {{ $t('footer.colorMode.light') }} -->
+        </span>
+        <!-- </transition> -->
       </button>
-    </div> -->
+    </div>
+
     <!-- <p class="copy">{{ $t('footer.copy') }}</p> -->
   </footer>
 </template>
@@ -57,26 +64,9 @@ const socials = {
   linkedin: 'https://www.linkedin.com/company/Univerweb',
   github: 'https://github.com/Univerweb'
 }
-</script>
 
-<script>
-import DarkIcon from '@/assets/icons/dark.svg?inline'
-import SystemIcon from '@/assets/icons/system.svg?inline'
-import LightIcon from '@/assets/icons/light.svg?inline'
-
-export default {
-  components: {
-    DarkIcon,
-    SystemIcon,
-    LightIcon
-  },
-
-  methods: {
-    setCurrentTheme() {
-      this.$colorMode.preference = this.$colorMode.preference === 'system' ? 'light' : this.$colorMode.preference === 'light' ? 'dark' : 'system'
-    }
-  }
-}
+const colorMode = useColorMode()
+const setCurrentMode = () => (colorMode.preference = colorMode.preference === 'system' ? 'light' : colorMode.preference === 'light' ? 'dark' : 'system')
 </script>
 
 <style lang="scss">
