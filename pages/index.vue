@@ -1,8 +1,8 @@
 <template>
   <main>
-    <HomeWelcome :headline="headline" :lead="lead" />
+    <!-- <HomeWelcome :headline="headline" :lead="lead" />
     <AppWorks :headline="worksPage.headline" :works="works" :h1="h1" :like-h1="likeH1" :h2="h2" :more="more" />
-    <AppRequest :home="likeH1" />
+    <AppRequest :home="likeH1" /> -->
   </main>
 </template>
 

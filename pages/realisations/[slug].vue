@@ -1,6 +1,6 @@
 <template>
   <main id="main" class="work">
-    <article vocab="https://schema.org/" typeof="Article">
+    <!-- <article vocab="https://schema.org/" typeof="Article">
       <div property="mainEntityOfPage" typeof="WebPage">
         <meta property="id" :content="`${$config.public.baseURL}${$route.path}`" />
       </div>
@@ -61,7 +61,7 @@
       </div>
     </article>
     <WorkNav :prev="prev" :next="next" />
-    <AppRequest />
+    <AppRequest /> -->
   </main>
 </template>
 

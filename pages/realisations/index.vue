@@ -1,7 +1,7 @@
 <template>
   <main>
-    <AppWorks :headline="headline" :works="works" />
-    <AppRequest />
+    <!-- <AppWorks :headline="headline" :works="works" />
+    <AppRequest /> -->
   </main>
 </template>
 
