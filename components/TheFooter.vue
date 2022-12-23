@@ -22,7 +22,7 @@
       </p> -->
     </div>
     <div>
-      <!-- <AppAbout /> -->
+      <AppAbout />
       <!-- <ul class="social">
         <li v-for="(value, name) in socials" :key="name">
           <a :href="value">
