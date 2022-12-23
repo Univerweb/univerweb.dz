@@ -1,25 +1,27 @@
 <template>
   <header :class="{ show: show }">
-    <NuxtLink :to="localePath('/')" :title="$t('name')" class="logo">
+    <!-- <NuxtLink :to="localePath('/')" :title="$t('name')" class="logo">
       <span class="visually-hidden">{{ $t('name') }}</span>
       <LogoArabic v-if="$i18n.locale === 'ar'" />
       <LogoLatin v-else />
-    </NuxtLink>
+    </NuxtLink> -->
     <nav class="menu">
       <ul>
-        <li v-for="(value, name) in $t('menu')" :key="name">
+        <!-- <li v-for="(value, name) in $t('menu')" :key="name">
           <NuxtLink :to="localePath(name)">{{ value }}</NuxtLink>
-        </li>
+        </li> -->
       </ul>
       <div class="btn lang">
         <LangGlobe />
-        <select v-model="lang" :aria-label="$t('label.lang')" @change="onChange(lang)">
+        <!-- <select v-model="lang" :aria-label="$t('label.lang')" @change="onChange(lang)">
           <option v-for="locale in $i18n.locales" :key="locale.code" :value="locale.code">{{ locale.name }}</option>
-        </select>
+        </select> -->
         <LangArrow />
       </div>
     </nav>
-    <button type="button" :aria-label="$t('label.menu')" class="toggle" @click="isShow">
+
+    <!-- :aria-label="$t('label.menu')" -->
+    <button type="button" aria-label="$t('label.menu')" class="toggle" @click="isShow">
       <span class="top"></span>
       <span class="middle"></span>
       <span class="bottom"></span>
@@ -28,10 +30,14 @@
 </template>
 
 <script setup lang="ts">
+const show = ref(false)
+const isShow = () => (show.value = !show.value)
+
+const lang = ref('')
+
 useHead({
-  // this.show
-  htmlAttrs: { style: 'this.show' ? 'height: 100%; overflow: hidden' : '' },
-  bodyAttrs: { style: 'this.show' ? 'height: 100%; overflow: hidden' : '' }
+  htmlAttrs: { style: show ? 'height: 100%; overflow: hidden' : '' },
+  bodyAttrs: { style: show ? 'height: 100%; overflow: hidden' : '' }
 })
 </script>
 
@@ -49,21 +55,7 @@ export default {
     LangArrow
   },
 
-  data() {
-    return {
-      show: false,
-      lang: ''
-    }
-  },
-
   // OLD Code
-  // head() {
-  //   return {
-  //     htmlAttrs: { style: this.show ? 'height: 100%; overflow: hidden' : '' },
-  //     bodyAttrs: { style: this.show ? 'height: 100%; overflow: hidden' : '' }
-  //   }
-  // },
-
   watch: {
     $route() {
       this.show = false
@@ -75,9 +67,6 @@ export default {
   },
 
   methods: {
-    isShow() {
-      this.show = !this.show
-    },
     onChange(event) {
       this.$router.replace(this.switchLocalePath(event))
     }

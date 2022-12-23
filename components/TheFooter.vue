@@ -1,15 +1,15 @@
 <template>
   <footer>
     <div>
-      <address class="address" title="Adresse postale">
+      <!-- <address class="address" title="Adresse postale">
         <strong>{{ $t('footer.address.name') }}</strong
         ><br />{{ $t('footer.address.streetAddress') }}<br />{{ $t('footer.address.addressLocality') }} {{ $config.public.postalCode
         }}<span v-if="$i18n.locale === 'ar'">، </span><span v-else>, </span>{{ $t('footer.address.addressRegion') }}
-      </address>
-      <p>
+      </address> -->
+      <!-- <p>
         <a href="https://goo.gl/maps/MmadgQgZRBv" target="_blank" rel="noopener">{{ $t('footer.maps') }}</a>
-      </p>
-      <p>
+      </p> -->
+      <!-- <p>
         <a :href="'tel:+213' + $config.public.phone.slice(1).replace(/ /g, '')">
           <span class="visually-hidden">{{ $t('label.phone') }}</span>
           <span dir="ltr">{{ $config.public.phone }}</span>
@@ -19,20 +19,20 @@
           <span class="visually-hidden">{{ $t('label.mobile') }}</span>
           <span dir="ltr">{{ $config.public.mobile }}</span>
         </a>
-      </p>
+      </p> -->
     </div>
     <div>
-      <AppAbout />
-      <ul class="social">
+      <!-- <AppAbout /> -->
+      <!-- <ul class="social">
         <li v-for="(value, name) in socials" :key="name">
           <a :href="value">
             <span class="visually-hidden">{{ $t('footer.social.' + name) }}</span>
             <Component :is="name + '-icon'"
           /></a>
         </li>
-      </ul>
+      </ul> -->
     </div>
-    <div class="colorSwitcher">
+    <!-- <div class="colorSwitcher">
       <button class="btn" @click="setCurrentTheme">
         <span>
           <DarkIcon :class="$colorMode.preference === 'dark' ? 'show' : 'hide'" />
@@ -45,8 +45,8 @@
           <span v-else-if="$colorMode.preference === 'light'" key="light">{{ $t('footer.colorMode.light') }}</span>
         </transition>
       </button>
-    </div>
-    <p class="copy">{{ $t('footer.copy') }}</p>
+    </div> -->
+    <!-- <p class="copy">{{ $t('footer.copy') }}</p> -->
   </footer>
 </template>
 

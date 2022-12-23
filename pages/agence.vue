@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div class="container intro">
+    <!-- <div class="container intro">
       <h1>{{ headline }}</h1>
       <p class="lead">{{ lead }}</p>
     </div>
@@ -26,7 +26,7 @@
         </div>
       </div>
     </div>
-    <AppRequest />
+    <AppRequest /> -->
   </main>
 </template>
 

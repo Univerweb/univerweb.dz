@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div class="container details">
+    <!-- <div class="container details">
       <div class="item">
         <h1 class="h2">{{ title }}</h1>
         <AppAbout />
@@ -21,7 +21,7 @@
           <a :href="'mailto:' + $config.public.supportEmail" class="link move-arrow">{{ $config.public.supportEmail }}</a>
         </div>
       </div>
-    </div>
+    </div> -->
   </main>
 </template>
 
