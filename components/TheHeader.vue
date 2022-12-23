@@ -12,11 +12,11 @@
         </li> -->
       </ul>
       <div class="btn lang">
-        <LangGlobe />
+        <NuxtIcon name="globe" />
         <!-- <select v-model="lang" :aria-label="$t('label.lang')" @change="onChange(lang)">
           <option v-for="locale in $i18n.locales" :key="locale.code" :value="locale.code">{{ locale.name }}</option>
         </select> -->
-        <LangArrow />
+        <NuxtIcon name="arrow" />
       </div>
     </nav>
 
@@ -44,15 +44,11 @@ useHead({
 <!-- <script>
 import LogoLatin from '@/static/logos/univerweb.svg?inline'
 import LogoArabic from '@/static/logos/univerweb-ar.svg?inline'
-import LangGlobe from '@/assets/icons/globe.svg?inline'
-import LangArrow from '@/assets/icons/arrow.svg?inline'
 
 export default {
   components: {
     LogoLatin,
-    LogoArabic,
-    LangGlobe,
-    LangArrow
+    LogoArabic
   },
 
   // OLD Code
