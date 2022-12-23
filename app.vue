@@ -7,78 +7,84 @@
   </div>
 </template>
 
+<script setup lang="ts">
+const scrolled = ref(false)
+
+// const i18nHead = this.$nuxtI18nHead({ addDirAttribute: true, addSeoAttributes: true })
+// const image = this.$i18n.locale === 'ar' ? `${baseURL}/images/univerweb-ar_share.jpg` : `${baseURL}/images/univerweb_share.jpg`
+// const comma = this.$i18n.locale === 'ar' ? '، ' : ', '
+
+useHead({
+  // titleTemplate: `%s — ${this.$t('name')}`,
+  titleTemplate: '%s — Univerweb',
+
+  // htmlAttrs: { ...i18nHead.htmlAttrs },
+
+  meta: [
+    { name: 'theme-color', content: '#50c8f0' },
+    { name: 'apple-mobile-web-app-capable', content: 'yes' },
+    { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
+
+    { property: 'og:type', content: 'website' },
+    // { property: 'og:site_name', content: this.$t('name') },
+    // { property: 'og:url', content: `${baseURL}${this.$route.path}` },
+    // { property: 'og:image', content: image },
+    // { property: 'og:image:secure_url', content: image },
+    { property: 'og:image:type', content: 'image/jpeg' },
+    { property: 'og:image:width', content: 1920 },
+    { property: 'og:image:height', content: 1080 }
+    // { property: 'og:image:alt', content: `${this.$t('name')} — ${this.$t('description')}` }
+  ],
+
+  link: [
+    { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+    { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' }
+    // ...i18nHead.link
+  ]
+
+  // script: [
+  //   {
+  //     json: {
+  //       '@context': 'https://schema.org',
+  //       '@type': 'Organization',
+  //       name: this.$t('name'),
+  //       url: `${baseURL}`,
+  //       image: {
+  //         '@type': 'ImageObject',
+  //         url: image,
+  //         width: '1920px',
+  //         height: '1080px'
+  //       },
+  //       logo: {
+  //         '@type': 'ImageObject',
+  //         url: `${baseURL}/logo.svg`,
+  //         width: '512px',
+  //         height: '512px'
+  //       },
+  //       email: this.$config.public.baseEmail,
+  //       telephone: this.$config.public.mobile,
+  //       faxNumber: this.$config.public.phone,
+  //       sameAs: [
+  //         'https://twitter.com/Univerweb',
+  //         'https://www.facebook.com/Univerweb',
+  //         'https://www.linkedin.com/company/Univerweb',
+  //         'https://github.com/Univerweb'
+  //       ],
+  //       address: {
+  //         '@type': 'PostalAddress'
+  //         streetAddress: this.$t('footer.address.streetAddress') + comma + this.$t('footer.address.addressLocality'),
+  //         postalCode: this.$config.public.postalCode,
+  //         addressLocality: this.$t('footer.address.addressRegion') + comma + this.$t('footer.address.addressCountry')
+  //       }
+  //     },
+  //     type: 'application/ld+json'
+  //   }
+  // ]
+})
+</script>
+
 <!-- <script>
 export default {
-  name: 'DefaultLayout',
-
-  data() {
-    return {
-      scrolled: false
-    }
-  },
-
-  head({ $config. public: { baseURL } }) {
-    const i18nHead = this.$nuxtI18nHead({ addDirAttribute: true, addSeoAttributes: true })
-    const image = this.$i18n.locale === 'ar' ? `${baseURL}/images/univerweb-ar_share.jpg` : `${baseURL}/images/univerweb_share.jpg`
-    const comma = this.$i18n.locale === 'ar' ? '، ' : ', '
-
-    return {
-      titleTemplate: `%s — ${this.$t('name')}`,
-      htmlAttrs: { ...i18nHead.htmlAttrs },
-      meta: [
-        { hid: 'og:type', property: 'og:type', content: 'website' },
-        { hid: 'og:site_name', property: 'og:site_name', content: this.$t('name') },
-        { hid: 'og:url', property: 'og:url', content: `${baseURL}${this.$route.path}` },
-        { hid: 'og:image', property: 'og:image', content: image },
-        { hid: 'og:image:secure_url', property: 'og:image:secure_url', content: image },
-        { property: 'og:image:type', content: 'image/jpeg' },
-        { property: 'og:image:width', content: 1920 },
-        { property: 'og:image:height', content: 1080 },
-        { hid: 'og:image:alt', property: 'og:image:alt', content: `${this.$t('name')} — ${this.$t('description')}` },
-        ...i18nHead.meta
-      ],
-      link: [...i18nHead.link],
-      script: [
-        {
-          json: {
-            '@context': 'https://schema.org',
-            '@type': 'Organization',
-            name: this.$t('name'),
-            url: `${baseURL}`,
-            image: {
-              '@type': 'ImageObject',
-              url: image,
-              width: '1920px',
-              height: '1080px'
-            },
-            logo: {
-              '@type': 'ImageObject',
-              url: `${baseURL}/logo.svg`,
-              width: '512px',
-              height: '512px'
-            },
-            email: this.$config. public.baseEmail,
-            telephone: this.$config. public.mobile,
-            faxNumber: this.$config. public.phone,
-            sameAs: [
-              'https://twitter.com/Univerweb',
-              'https://www.facebook.com/Univerweb',
-              'https://www.linkedin.com/company/Univerweb',
-              'https://github.com/Univerweb'
-            ],
-            address: {
-              '@type': 'PostalAddress',
-              streetAddress: this.$t('footer.address.streetAddress') + comma + this.$t('footer.address.addressLocality'),
-              postalCode: this.$config. public.postalCode,
-              addressLocality: this.$t('footer.address.addressRegion') + comma + this.$t('footer.address.addressCountry')
-            }
-          },
-          type: 'application/ld+json'
-        }
-      ]
-    }
-  },
-
   beforeMount() {
     window.addEventListener('scroll', this.handleScroll)
   },
