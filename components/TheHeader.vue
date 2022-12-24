@@ -2,8 +2,8 @@
   <header :class="{ show: show }">
     <!-- <NuxtLink :to="localePath('/')" :title="$t('name')" class="logo">
       <span class="visually-hidden">{{ $t('name') }}</span>
-      <LogoArabic v-if="$i18n.locale === 'ar'" />
-      <LogoLatin v-else />
+      <NuxtIcon name="logos/univerweb-ar" v-if="$i18n.locale === 'ar'" />
+      <NuxtIcon name="logos/univerweb" v-else />
     </NuxtLink> -->
     <nav class="menu">
       <ul>
@@ -42,15 +42,7 @@ useHead({
 </script>
 
 <!-- <script>
-import LogoLatin from '@/static/logos/univerweb.svg?inline'
-import LogoArabic from '@/static/logos/univerweb-ar.svg?inline'
-
 export default {
-  components: {
-    LogoLatin,
-    LogoArabic
-  },
-
   // OLD Code
   watch: {
     $route() {

@@ -1,16 +1,6 @@
 <template>
-  <NuxtLink :to="localePath('realisations')" class="back"><NavArrow />{{ $t('menu.realisations') }}</NuxtLink>
+  <NuxtLink :to="localePath('realisations')" class="back"><NuxtIcon name="arrow" />{{ $t('menu.realisations') }}</NuxtLink>
 </template>
-
-<script>
-import NavArrow from '@/assets/icons/arrow.svg?inline'
-
-export default {
-  components: {
-    NavArrow
-  }
-}
-</script>
 
 <style lang="scss">
 .back {
