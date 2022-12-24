@@ -5,19 +5,21 @@
   </div>
 </template>
 
+<script setup lang="ts">
+defineProps({
+  prev: {
+    type: Object,
+    default: null
+  },
+  next: {
+    type: Object,
+    default: null
+  }
+})
+</script>
+
 <script>
 export default {
-  props: {
-    prev: {
-      type: Object,
-      default: null
-    },
-    next: {
-      type: Object,
-      default: null
-    }
-  },
-
   methods: {
     toLink(slug) {
       if (slug === 'index') {

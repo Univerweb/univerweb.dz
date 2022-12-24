@@ -42,35 +42,33 @@
   </section>
 </template>
 
-<script>
-export default {
-  props: {
-    headline: {
-      type: String,
-      required: true
-    },
-    works: {
-      type: Array,
-      required: true
-    },
-    h1: {
-      type: String,
-      default: 'h1'
-    },
-    likeH1: {
-      type: String,
-      default: null
-    },
-    h2: {
-      type: String,
-      default: 'h2'
-    },
-    more: {
-      type: String,
-      default: null
-    }
+<script setup lang="ts">
+defineProps({
+  headline: {
+    type: String,
+    required: true
+  },
+  works: {
+    type: Array,
+    required: true
+  },
+  h1: {
+    type: String,
+    default: 'h1'
+  },
+  likeH1: {
+    type: String,
+    default: null
+  },
+  h2: {
+    type: String,
+    default: 'h2'
+  },
+  more: {
+    type: String,
+    default: null
   }
-}
+})
 </script>
 
 <style lang="scss">

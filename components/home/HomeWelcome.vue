@@ -8,17 +8,15 @@
   </section>
 </template>
 
-<script>
-export default {
-  props: {
-    headline: {
-      type: String,
-      required: true
-    },
-    lead: {
-      type: String,
-      required: true
-    }
+<script setup lang="ts">
+defineProps({
+  headline: {
+    type: String,
+    required: true
+  },
+  lead: {
+    type: String,
+    required: true
   }
-}
+})
 </script>

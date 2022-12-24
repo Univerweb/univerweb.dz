@@ -10,6 +10,25 @@
 const title = ref('My App')
 const description = ref('My App Description')
 
+defineProps({
+  h1: {
+    type: String,
+    default: 'h2'
+  },
+  likeH1: {
+    type: String,
+    default: 'h1'
+  },
+  h2: {
+    type: String,
+    default: 'h3'
+  },
+  more: {
+    type: String,
+    default: 'div'
+  }
+})
+
 useHead({
   title,
   meta: [
@@ -32,25 +51,6 @@ useHead({
 <!-- <script>
 export default {
   name: 'HomePage',
-
-  props: {
-    h1: {
-      type: String,
-      default: 'h2'
-    },
-    likeH1: {
-      type: String,
-      default: 'h1'
-    },
-    h2: {
-      type: String,
-      default: 'h3'
-    },
-    more: {
-      type: String,
-      default: 'div'
-    }
-  },
 
   async asyncData({ $content, app }) {
     const { description, headline, lead } = await $content(app.i18n.locale, 'home').fetch()

@@ -5,15 +5,13 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    home: {
-      type: String,
-      default: 'h2'
-    }
+<script setup lang="ts">
+defineProps({
+  home: {
+    type: String,
+    default: 'h2'
   }
-}
+})
 </script>
 
 <style lang="scss">
