@@ -8,18 +8,18 @@
 
 <script lang="ts">
 definePageMeta({ layout: 'secondary' })
+
+defineProps({
+  error: {
+    type: Object,
+    default: null
+  }
+})
 </script>
 
 <script>
 export default {
-  name: 'ErrorLayout',
-
-  props: {
-    error: {
-      type: Object,
-      default: null
-    }
-  }
+  name: 'ErrorLayout'
 
   // OLD Code - Non remplacer
   // head() {
