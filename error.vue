@@ -6,27 +6,16 @@
   </main>
 </template>
 
-<script lang="ts">
-definePageMeta({ layout: 'secondary' })
-
+<script setup lang="ts">
 defineProps({
   error: {
     type: Object,
-    default: null
+    default: () => {}
   }
 })
-</script>
 
-<script>
-export default {
-  name: 'ErrorLayout'
-
-  // OLD Code - Non remplacer
-  // head() {
-  //   return {
-  //     titleTemplate: `${this.error.statusCode} — ${this.$t('name')}`,
-  //     meta: [{ name: 'robots', content: 'noindex, follow' }]
-  //   }
-  // }
-}
+definePageMeta({
+  // titleTemplate: `${error.statusCode} — ${$t('name')}`,
+  // meta: [{ name: 'robots', content: 'noindex, follow' }]
+})
 </script>
