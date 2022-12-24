@@ -17,14 +17,14 @@ export default defineNuxtConfig({
 
   i18n: {
     locales: [
-      { code: 'fr', iso: 'fr-FR', file: 'fr-FR.js', name: 'Français', dir: 'ltr' },
-      { code: 'ar', iso: 'ar-DZ', file: 'ar-DZ.js', name: 'العربية', dir: 'rtl' },
-      { code: 'en', iso: 'en-US', file: 'en-US.js', name: 'English' }
+      { code: 'fr', iso: 'fr-FR', file: 'fr.json', name: 'Français', dir: 'ltr' },
+      { code: 'ar', iso: 'ar-DZ', file: 'ar.json', name: 'العربية', dir: 'rtl' },
+      { code: 'en', iso: 'en-US', file: 'en.json', name: 'English' }
     ],
     defaultLocale: 'fr',
     detectBrowserLanguage: false,
     lazy: true,
-    langDir: 'locales/',
+    langDir: 'locales',
     baseUrl: process.env.BASE_URL
   },
 
