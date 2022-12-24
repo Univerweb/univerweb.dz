@@ -11,22 +11,22 @@ export default defineNuxtConfig({
 
   css: ['@/assets/css/font.css', '@/assets/scss/main.scss', '@/assets/css/keyframes.css'],
 
-  modules: ['@nuxt/content', ['@nuxtjs/color-mode'], ['nuxt-icons']],
+  modules: ['@nuxtjs/i18n', '@nuxt/content', ['@nuxtjs/color-mode'], ['nuxt-icons']],
 
   // plugins: [{ src: '~plugins/ga.js', mode: 'client' }],
 
-  // i18n: {
-  //   locales: [
-  //     { code: 'fr', iso: 'fr-FR', file: 'fr-FR.js', name: 'Français', dir: 'ltr' },
-  //     { code: 'ar', iso: 'ar-DZ', file: 'ar-DZ.js', name: 'العربية', dir: 'rtl' },
-  //     { code: 'en', iso: 'en-US', file: 'en-US.js', name: 'English' }
-  //   ],
-  //   defaultLocale: 'fr',
-  //   detectBrowserLanguage: false,
-  //   lazy: true,
-  //   langDir: 'locales/',
-  //   baseUrl: process.env.BASE_URL
-  // },
+  i18n: {
+    locales: [
+      { code: 'fr', iso: 'fr-FR', file: 'fr-FR.js', name: 'Français', dir: 'ltr' },
+      { code: 'ar', iso: 'ar-DZ', file: 'ar-DZ.js', name: 'العربية', dir: 'rtl' },
+      { code: 'en', iso: 'en-US', file: 'en-US.js', name: 'English' }
+    ],
+    defaultLocale: 'fr',
+    detectBrowserLanguage: false,
+    lazy: true,
+    langDir: 'locales/',
+    baseUrl: process.env.BASE_URL
+  },
 
   // image: {
   //   staticFilename: 'images/[name]-[hash][ext]'
