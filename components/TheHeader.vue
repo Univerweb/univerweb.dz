@@ -1,27 +1,28 @@
 <template>
   <header :class="{ show: show }">
-    <!-- <NuxtLink :to="localePath('/')" :title="$t('name')" class="logo">
+    <NuxtLink :to="localePath('/')" :title="$t('name')" class="logo">
       <span class="visually-hidden">{{ $t('name') }}</span>
       <NuxtIcon name="logos/univerweb-ar" v-if="$i18n.locale === 'ar'" />
       <NuxtIcon name="logos/univerweb" v-else />
-    </NuxtLink> -->
+    </NuxtLink>
+
     <nav class="menu">
       <ul>
-        <!-- <li v-for="(value, name) in $t('menu')" :key="name">
+        <li v-for="(value, name) in $t('menu')" :key="name">
           <NuxtLink :to="localePath(name)">{{ value }}</NuxtLink>
-        </li> -->
+        </li>
       </ul>
+
       <div class="btn lang">
         <NuxtIcon name="globe" />
-        <!-- <select v-model="lang" :aria-label="$t('label.lang')" @change="onChange(lang)">
+        <select v-model="lang" :aria-label="$t('label.lang')" @change="onChange(lang)">
           <option v-for="locale in $i18n.locales" :key="locale.code" :value="locale.code">{{ locale.name }}</option>
-        </select> -->
+        </select>
         <NuxtIcon name="arrow" />
       </div>
     </nav>
 
-    <!-- :aria-label="$t('label.menu')" -->
-    <button type="button" aria-label="$t('label.menu')" class="toggle" @click="isShow">
+    <button type="button" :aria-label="$t('label.menu')" class="toggle" @click="isShow">
       <span class="top"></span>
       <span class="middle"></span>
       <span class="bottom"></span>
