@@ -37,19 +37,13 @@
       </div>
     </div>
     <Component :is="more" class="more">
-      <NuxtLink :to="localePath('realisations')" class="btn">{{ $t('label.more') }}<HomeArrow /></NuxtLink>
+      <NuxtLink :to="localePath('realisations')" class="btn">{{ $t('label.more') }}<NuxtIcon name="arrow" /></NuxtLink>
     </Component>
   </section>
 </template>
 
 <script>
-import HomeArrow from '@/assets/icons/arrow.svg?inline'
-
 export default {
-  components: {
-    HomeArrow
-  },
-
   props: {
     headline: {
       type: String,

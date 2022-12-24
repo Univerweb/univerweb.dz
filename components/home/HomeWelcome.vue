@@ -4,18 +4,12 @@
       <h1>{{ headline }}</h1>
       <p class="lead">{{ lead }}</p>
     </div>
-    <HomeArrow v-scroll-to="'.works'" />
+    <NuxtIcon name="arrow" v-scroll-to="'.works'" />
   </section>
 </template>
 
 <script>
-import HomeArrow from '@/assets/icons/arrow.svg?inline'
-
 export default {
-  components: {
-    HomeArrow
-  },
-
   props: {
     headline: {
       type: String,

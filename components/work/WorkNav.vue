@@ -1,18 +1,12 @@
 <template>
   <div class="container nav">
-    <NuxtLink v-if="prev" :to="toLink(prev.slug)" class="link prev" :data-text="$t('label.prev')"><NavArrow />{{ prev.title }}</NuxtLink>
-    <NuxtLink v-if="next" :to="toLink(next.slug)" class="link next" :data-text="$t('label.next')"><NavArrow />{{ next.title }}</NuxtLink>
+    <NuxtLink v-if="prev" :to="toLink(prev.slug)" class="link prev" :data-text="$t('label.prev')"><NuxtIcon name="arrow" />{{ prev.title }}</NuxtLink>
+    <NuxtLink v-if="next" :to="toLink(next.slug)" class="link next" :data-text="$t('label.next')"><NuxtIcon name="arrow" />{{ next.title }}</NuxtLink>
   </div>
 </template>
 
 <script>
-import NavArrow from '@/assets/icons/arrow.svg?inline'
-
 export default {
-  components: {
-    NavArrow
-  },
-
   props: {
     prev: {
       type: Object,
