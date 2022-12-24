@@ -7,9 +7,6 @@
 </template>
 
 <script setup lang="ts">
-const title = ref('My App')
-const description = ref('My App Description')
-
 defineProps({
   h1: {
     type: String,
@@ -27,24 +24,6 @@ defineProps({
     type: String,
     default: 'div'
   }
-})
-
-useHead({
-  title,
-  meta: [
-    {
-      name: 'description',
-      content: description
-    },
-    {
-      property: 'og:title',
-      content: title
-    },
-    {
-      property: 'og:description',
-      content: description
-    }
-  ]
 })
 </script>
 
