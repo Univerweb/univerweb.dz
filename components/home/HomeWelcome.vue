@@ -4,7 +4,7 @@
       <h1>{{ headline }}</h1>
       <p class="lead">{{ lead }}</p>
     </div>
-    <NuxtIcon name="arrow" v-scroll-to="'.works'" />
+    <!-- <NuxtIcon name="arrow" v-scroll-to="'.works'" /> -->
   </section>
 </template>
 
