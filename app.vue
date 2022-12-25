@@ -1,9 +1,9 @@
 <template>
   <div class="wrapper" :class="{ scrolled: scrolled }">
-    <TheSkiplinks />
+    <!-- <TheSkiplinks />
     <TheHeader />
     <NuxtPage />
-    <TheFooter />
+    <TheFooter /> -->
   </div>
 </template>
 
@@ -18,7 +18,7 @@ const desc = t('description')
 const home = await queryContent(`${locale.value}/home`).only('description').findOne()
 const ogUrl = `${config.public.baseURL}${route.path}`
 const ogImage = locale.value === 'ar' ? `${config.public.baseURL}/images/univerweb-ar_share.jpg` : `${config.public.baseURL}/images/univerweb_share.jpg`
-// const comma = this.$i18n.locale === 'ar' ? '، ' : ', '
+const comma = locale.value === 'ar' ? '، ' : ', '
 
 const scrolled = ref(false)
 
@@ -55,46 +55,46 @@ useHead({
     { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
     { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
     ...(i18nHead.value.link || [])
-  ]
+  ],
 
-  // script: [
-  //   {
-  //     json: {
-  //       '@context': 'https://schema.org',
-  //       '@type': 'Organization',
-  //       name: this.$t('name'),
-  //       url: `${baseURL}`,
-  //       image: {
-  //         '@type': 'ImageObject',
-  //         url: image,
-  //         width: '1920px',
-  //         height: '1080px'
-  //       },
-  //       logo: {
-  //         '@type': 'ImageObject',
-  //         url: `${baseURL}/logo.svg`,
-  //         width: '512px',
-  //         height: '512px'
-  //       },
-  //       email: this.$config.public.baseEmail,
-  //       telephone: this.$config.public.mobile,
-  //       faxNumber: this.$config.public.phone,
-  //       sameAs: [
-  //         'https://twitter.com/Univerweb',
-  //         'https://www.facebook.com/Univerweb',
-  //         'https://www.linkedin.com/company/Univerweb',
-  //         'https://github.com/Univerweb'
-  //       ],
-  //       address: {
-  //         '@type': 'PostalAddress'
-  //         streetAddress: this.$t('footer.address.streetAddress') + comma + this.$t('footer.address.addressLocality'),
-  //         postalCode: this.$config.public.postalCode,
-  //         addressLocality: this.$t('footer.address.addressRegion') + comma + this.$t('footer.address.addressCountry')
-  //       }
-  //     },
-  //     type: 'application/ld+json'
-  //   }
-  // ]
+  script: [
+    {
+      type: 'application/ld+json',
+      children: {
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: `${name}`,
+        url: `${config.public.baseURL}`,
+        image: {
+          '@type': 'ImageObject',
+          url: ogImage,
+          width: '1920px',
+          height: '1080px'
+        },
+        logo: {
+          '@type': 'ImageObject',
+          url: `${config.public.baseURL}/logo.svg`,
+          width: '512px',
+          height: '512px'
+        },
+        email: `${config.public.baseEmail}`,
+        telephone: `${config.public.mobile}`,
+        faxNumber: `${config.public.phone}`,
+        sameAs: [
+          'https://twitter.com/Univerweb',
+          'https://www.facebook.com/Univerweb',
+          'https://www.linkedin.com/company/Univerweb',
+          'https://github.com/Univerweb'
+        ],
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: `${t('footer.address.streetAddress')}${comma}${t('footer.address.addressLocality')}`,
+          postalCode: `${config.public.postalCode}`,
+          addressLocality: `${t('footer.address.addressRegion')}${comma}${t('footer.address.addressCountry')}`
+        }
+      }
+    }
+  ]
 })
 </script>
 
