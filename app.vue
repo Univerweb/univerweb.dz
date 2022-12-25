@@ -14,9 +14,12 @@ const scrolled = ref(false)
 // const image = this.$i18n.locale === 'ar' ? `${baseURL}/images/univerweb-ar_share.jpg` : `${baseURL}/images/univerweb_share.jpg`
 // const comma = this.$i18n.locale === 'ar' ? '، ' : ', '
 
+const { t } = useI18n()
+const name = t('name')
+const desc = t('description')
+
 useHead({
-  // titleTemplate: `%s — ${this.$t('name')}`,
-  titleTemplate: '%s — Univerweb',
+  titleTemplate: `%s — ${name}`,
 
   // htmlAttrs: { ...i18nHead.htmlAttrs },
 
@@ -26,14 +29,14 @@ useHead({
     { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
 
     { property: 'og:type', content: 'website' },
-    // { property: 'og:site_name', content: this.$t('name') },
+    { property: 'og:site_name', content: name },
     // { property: 'og:url', content: `${baseURL}${this.$route.path}` },
     // { property: 'og:image', content: image },
     // { property: 'og:image:secure_url', content: image },
     { property: 'og:image:type', content: 'image/jpeg' },
     { property: 'og:image:width', content: 1920 },
-    { property: 'og:image:height', content: 1080 }
-    // { property: 'og:image:alt', content: `${this.$t('name')} — ${this.$t('description')}` }
+    { property: 'og:image:height', content: 1080 },
+    { property: 'og:image:alt', content: `${name} — ${desc}` }
   ],
 
   link: [
