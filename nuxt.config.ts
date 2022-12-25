@@ -11,7 +11,7 @@ export default defineNuxtConfig({
 
   css: ['@/assets/css/font.css', '@/assets/scss/main.scss', '@/assets/css/keyframes.css'],
 
-  modules: ['@nuxtjs/i18n', '@nuxt/content', ['@nuxtjs/color-mode'], ['nuxt-icons']],
+  modules: ['@nuxtjs/i18n', '@nuxt/content', '@nuxt/image-edge', '@nuxtjs/color-mode', 'nuxt-icons'],
 
   // plugins: [{ src: '~plugins/ga.js', mode: 'client' }],
 
@@ -28,9 +28,9 @@ export default defineNuxtConfig({
     baseUrl: process.env.BASE_URL
   },
 
-  // image: {
-  //   staticFilename: 'images/[name]-[hash][ext]'
-  // },
+  image: {
+    staticFilename: 'images/[name]-[hash][ext]'
+  },
 
   runtimeConfig: {
     public: {
