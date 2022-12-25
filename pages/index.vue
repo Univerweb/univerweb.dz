@@ -1,8 +1,8 @@
 <template>
   <main>
-    <!-- <HomeWelcome :headline="headline" :lead="lead" />
-    <AppWorks :headline="worksPage.headline" :works="works" :h1="h1" :like-h1="likeH1" :h2="h2" :more="more" />
-    <AppRequest :home="likeH1" /> -->
+    <HomeWelcome :headline="home!.headline" :lead="home!.lead" />
+    <AppWorks :headline="worksPage!.headline" :works="works!" :h1="h1" :like-h1="likeH1" :h2="h2" :more="more" />
+    <AppRequest :home="likeH1" />
   </main>
 </template>
 
@@ -25,35 +25,11 @@ defineProps({
     default: 'div'
   }
 })
+
+const { locale } = useI18n()
+const { data: home } = await useAsyncData('home', () => queryContent(`${locale.value}/home`).only(['headline', 'lead']).findOne())
+const { data: worksPage } = await useAsyncData('works', () => queryContent(`${locale.value}/works`).only(['headline']).findOne())
+const { data: works } = await useAsyncData('works_slug', () =>
+  queryContent(`${locale.value}/works_slug`).only(['title', 'tags', 'lead']).limit(6).sort({ _id: -1 }).find()
+)
 </script>
-
-<!-- <script>
-export default {
-  name: 'HomePage',
-
-  async asyncData({ $content, app }) {
-    const { description, headline, lead } = await $content(app.i18n.locale, 'home').fetch()
-    const worksPage = await $content(app.i18n.locale, 'works').only('headline').fetch()
-    const works = await $content(app.i18n.locale, 'works_slug').limit(6).sortBy('position', 'desc').fetch()
-    return {
-      description,
-      headline,
-      lead,
-      worksPage,
-      works
-    }
-  }
-
-  // OLD Code
-  // head() {
-  //   return {
-  //     title: this.$t('description'),
-  //     meta: [
-  //       { hid: 'description', name: 'description', content: this.description },
-  //       { hid: 'og:title', property: 'og:title', content: this.$t('description') },
-  //       { hid: 'og:description', property: 'og:description', content: this.description }
-  //     ]
-  //   }
-  // }
-}
-</script> -->
