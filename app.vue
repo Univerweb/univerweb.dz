@@ -25,7 +25,9 @@ const scrolled = ref(false)
 useHead({
   htmlAttrs: {
     lang: i18nHead.value.htmlAttrs!.lang,
-    dir: i18nHead.value.htmlAttrs!.dir
+    dir: computed(() => {
+      return i18nHead.value.htmlAttrs!.dir
+    })
   },
 
   titleTemplate: titleChunk => {
