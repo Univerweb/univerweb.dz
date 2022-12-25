@@ -8,19 +8,21 @@
 </template>
 
 <script setup lang="ts">
-const i18nHead = useLocaleHead({
-  addSeoAttributes: true,
-  addDirAttribute: true
-})
+const i18nHead = useLocaleHead({ addSeoAttributes: true, addDirAttribute: true })
 
-const scrolled = ref(false)
-
-// const image = this.$i18n.locale === 'ar' ? `${baseURL}/images/univerweb-ar_share.jpg` : `${baseURL}/images/univerweb_share.jpg`
-// const comma = this.$i18n.locale === 'ar' ? '، ' : ', '
-
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const name = t('name')
 const desc = t('description')
+
+const route = useRoute()
+const config = useRuntimeConfig()
+
+const ogUrl = `${config.public.baseURL}${route.path}`
+const ogImage = locale.value === 'ar' ? `${config.public.baseURL}/images/univerweb-ar_share.jpg` : `${config.public.baseURL}/images/univerweb_share.jpg`
+
+// const comma = this.$i18n.locale === 'ar' ? '، ' : ', '
+
+const scrolled = ref(false)
 
 useHead({
   htmlAttrs: {
@@ -34,12 +36,11 @@ useHead({
     { name: 'theme-color', content: '#50c8f0' },
     { name: 'apple-mobile-web-app-capable', content: 'yes' },
     { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
-
     { property: 'og:type', content: 'website' },
     { property: 'og:site_name', content: name },
-    // { property: 'og:url', content: `${baseURL}${this.$route.path}` },
-    // { property: 'og:image', content: image },
-    // { property: 'og:image:secure_url', content: image },
+    { property: 'og:url', content: ogUrl },
+    { property: 'og:image', content: ogImage },
+    { property: 'og:image:secure_url', content: ogImage },
     { property: 'og:image:type', content: 'image/jpeg' },
     { property: 'og:image:width', content: 1920 },
     { property: 'og:image:height', content: 1080 },
