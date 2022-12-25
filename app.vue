@@ -8,9 +8,13 @@
 </template>
 
 <script setup lang="ts">
+const i18nHead = useLocaleHead({
+  addSeoAttributes: true,
+  addDirAttribute: true
+})
+
 const scrolled = ref(false)
 
-// const i18nHead = this.$nuxtI18nHead({ addDirAttribute: true, addSeoAttributes: true })
 // const image = this.$i18n.locale === 'ar' ? `${baseURL}/images/univerweb-ar_share.jpg` : `${baseURL}/images/univerweb_share.jpg`
 // const comma = this.$i18n.locale === 'ar' ? '، ' : ', '
 
@@ -19,9 +23,12 @@ const name = t('name')
 const desc = t('description')
 
 useHead({
-  titleTemplate: `%s — ${name}`,
+  htmlAttrs: {
+    lang: i18nHead.value.htmlAttrs!.lang,
+    dir: i18nHead.value.htmlAttrs!.dir
+  },
 
-  // htmlAttrs: { ...i18nHead.htmlAttrs },
+  titleTemplate: `%s — ${name}`,
 
   meta: [
     { name: 'theme-color', content: '#50c8f0' },
@@ -36,13 +43,14 @@ useHead({
     { property: 'og:image:type', content: 'image/jpeg' },
     { property: 'og:image:width', content: 1920 },
     { property: 'og:image:height', content: 1080 },
-    { property: 'og:image:alt', content: `${name} — ${desc}` }
+    { property: 'og:image:alt', content: `${name} — ${desc}` },
+    ...(i18nHead.value.meta || [])
   ],
 
   link: [
     { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
-    { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' }
-    // ...i18nHead.link
+    { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+    ...(i18nHead.value.link || [])
   ]
 
   // script: [
