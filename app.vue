@@ -9,17 +9,15 @@
 
 <script setup lang="ts">
 const i18nHead = useLocaleHead({ addSeoAttributes: true, addDirAttribute: true })
-
 const { t, locale } = useI18n()
-const name = t('name')
-const desc = t('description')
-
 const route = useRoute()
 const config = useRuntimeConfig()
 
+const name = t('name')
+const desc = t('description')
+const home = await queryContent(`${locale.value}/home`).only('description').findOne()
 const ogUrl = `${config.public.baseURL}${route.path}`
 const ogImage = locale.value === 'ar' ? `${config.public.baseURL}/images/univerweb-ar_share.jpg` : `${config.public.baseURL}/images/univerweb_share.jpg`
-
 // const comma = this.$i18n.locale === 'ar' ? '، ' : ', '
 
 const scrolled = ref(false)
@@ -30,12 +28,17 @@ useHead({
     dir: i18nHead.value.htmlAttrs!.dir
   },
 
-  titleTemplate: `%s — ${name}`,
+  titleTemplate: titleChunk => {
+    return titleChunk ? `${titleChunk} — ${name}` : `${desc} — ${name}`
+  },
 
   meta: [
     { name: 'theme-color', content: '#50c8f0' },
     { name: 'apple-mobile-web-app-capable', content: 'yes' },
     { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
+    { name: 'description', content: home.description },
+    { property: 'og:title', content: desc },
+    { property: 'og:description', content: home.description },
     { property: 'og:type', content: 'website' },
     { property: 'og:site_name', content: name },
     { property: 'og:url', content: ogUrl },
