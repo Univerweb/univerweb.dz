@@ -8,8 +8,16 @@
     "contact": "Skip to contact"
   },
 
+  "menu": [
+    { "path": "realisations", "title": "Latest work" },
+    { "path": "prestations", "title": "Services" },
+    { "path": "agence", "title": "The agency" },
+    { "path": "contact", "title": "Contact" }
+  ],
+
   "label": {
     "menu": "Open menu",
+    "lang": "Select language",
     "more": "More happiness",
     "client": "Client",
     "features": "Features",
