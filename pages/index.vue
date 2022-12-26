@@ -27,9 +27,12 @@ defineProps({
 })
 
 const { locale } = useI18n()
-const { data: home } = await useAsyncData('home', () => queryContent(`${locale.value}/home`).only(['headline', 'lead']).findOne())
-const { data: worksPage } = await useAsyncData('works', () => queryContent(`${locale.value}/works`).only(['headline']).findOne())
-const { data: works } = await useAsyncData('works_slug', () =>
-  queryContent(`${locale.value}/works_slug`).only(['title', 'tags', 'lead']).limit(6).sort({ _id: -1 }).find()
-)
+
+const homePath = `${locale.value}/home`
+const worksPagePath = `${locale.value}/works`
+const worksPath = `${locale.value}/works_slug`
+
+const { data: home } = await useAsyncData('home', () => queryContent(homePath).only(['headline', 'lead']).findOne())
+const { data: worksPage } = await useAsyncData('works', () => queryContent(worksPagePath).only(['headline']).findOne())
+const { data: works } = await useAsyncData('works_slug', () => queryContent(worksPath).only(['title', 'tags', 'lead']).limit(6).sort({ _id: -1 }).find())
 </script>
