@@ -1,15 +1,15 @@
 <template>
-  <main>
-    <!-- <div class="container intro">
-      <h1>{{ headline }}</h1>
-      <p class="lead">{{ lead }}</p>
+  <main v-if="agence">
+    <div class="container intro">
+      <h1>{{ agence.headline }}</h1>
+      <p class="lead">{{ agence.lead }}</p>
     </div>
     <div class="container">
       <div class="intro">
-        <h2 class="h1">{{ method.title }}</h2>
+        <h2 class="h1">{{ agence.method.title }}</h2>
       </div>
       <ol class="details">
-        <li v-for="(value, name) in method.content" :key="name" class="item">
+        <li v-for="(value, name) in agence.method.content" :key="name" class="item">
           <h3>{{ name }}</h3>
           <p class="lead">{{ value }}</p>
         </li>
@@ -17,118 +17,62 @@
     </div>
     <div class="container">
       <div class="intro">
-        <h2 class="h1">{{ choose.title }}</h2>
+        <h2 class="h1">{{ agence.choose.title }}</h2>
       </div>
       <div class="details">
-        <div v-for="(value, name) in choose.content" :key="name" class="item">
+        <div v-for="(value, name) in agence.choose.content" :key="name" class="item">
           <h3>{{ name }}</h3>
           <p class="lead">{{ value }}</p>
         </div>
       </div>
     </div>
-    <AppRequest /> -->
+    <AppRequest />
+    {{ item }}
   </main>
 </template>
 
 <script setup lang="ts">
-const title = ref('My App')
-const description = ref('My App Description')
-const name = ref('Name')
-const item = ref('Item')
+const { locale } = useI18n()
+const config = useRuntimeConfig()
+
+const agencePath = `${locale.value}/agence`
+const globalPath = `${locale.value}/global`
+const baseURL = config.public.baseURL
+
+const { data: agence } = await useAsyncData('agence', () => queryContent(agencePath).only(['title', 'desc', 'headline', 'lead', 'method', 'choose']).findOne())
+const { data: global } = await useAsyncData('global', () => queryContent(globalPath).only(['name']).findOne())
+
+const title = computed(() => agence.value!.title)
+const desc = computed(() => agence.value!.desc)
+const name = computed(() => global.value!.name)
+const item = locale.value !== 'fr' ? `${baseURL}/${locale.value}` : `${baseURL}/`
 
 useHead({
   title,
+
   meta: [
-    {
-      name: 'description',
-      content: description
-    },
-    {
-      property: 'og:title',
-      content: title
-    },
-    {
-      property: 'og:description',
-      content: description
-    }
+    { name: 'description', content: desc },
+    { property: 'og:title', content: title },
+    { property: 'og:description', content: desc }
   ],
+
   script: [
     {
-      json: {
+      type: 'application/ld+json',
+      children: {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: name, item: item },
           { '@type': 'ListItem', position: 2, name: title }
         ]
-      },
-      type: 'application/ld+json'
+      }
     }
   ]
 })
 </script>
 
-<!-- <script>
-export default {
-  name: 'AgencePage',
-
-  async asyncData({ $content, app }) {
-    const { title, description, headline, lead, method, choose } = await $content(app.i18n.locale, 'agence').fetch()
-
-    return {
-      title,
-      description,
-      headline,
-      lead,
-      method,
-      choose
-    }
-  }
-
-  // OLD Code
-  // head() {
-  //   let routeItem = `${this.$config. public.baseURL}/`
-  //   if (this.$i18n.locale !== 'fr') {
-  //     routeItem = `${this.$config. public.baseURL}/${this.$i18n.locale}`
-  //   }
-
-  //   return {
-  //     title: this.title,
-
-  //     meta: [
-  //       { hid: 'description', name: 'description', content: this.description },
-  //       { hid: 'og:title', property: 'og:title', content: this.title },
-  //       { hid: 'og:description', property: 'og:description', content: this.description }
-  //     ],
-
-  //     script: [
-  //       {
-  //         json: {
-  //           '@context': 'https://schema.org',
-  //           '@type': 'BreadcrumbList',
-  //           itemListElement: [
-  //             {
-  //               '@type': 'ListItem',
-  //               position: 1,
-  //               name: this.$t('name'),
-  //               item: routeItem
-  //             },
-  //             {
-  //               '@type': 'ListItem',
-  //               position: 2,
-  //               name: this.title
-  //             }
-  //           ]
-  //         },
-  //         type: 'application/ld+json'
-  //       }
-  //     ]
-  //   }
-  // }
-}
-</script> -->
-
-<style lang="scss">
+<style lang="scss" scoped>
 ol {
   margin: 0;
   padding: 0;
