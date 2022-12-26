@@ -1,15 +1,15 @@
 <template>
-  <main v-if="agence">
+  <main>
     <div class="container intro">
-      <h1>{{ agence.headline }}</h1>
-      <p class="lead">{{ agence.lead }}</p>
+      <h1>{{ headline }}</h1>
+      <p class="lead">{{ lead }}</p>
     </div>
     <div class="container">
       <div class="intro">
-        <h2 class="h1">{{ agence.method.title }}</h2>
+        <h2 class="h1">{{ method.title }}</h2>
       </div>
       <ol class="details">
-        <li v-for="(value, name) in agence.method.content" :key="name" class="item">
+        <li v-for="(value, name) in method.content" :key="name" class="item">
           <h3>{{ name }}</h3>
           <p class="lead">{{ value }}</p>
         </li>
@@ -17,10 +17,10 @@
     </div>
     <div class="container">
       <div class="intro">
-        <h2 class="h1">{{ agence.choose.title }}</h2>
+        <h2 class="h1">{{ choose.title }}</h2>
       </div>
       <div class="details">
-        <div v-for="(value, name) in agence.choose.content" :key="name" class="item">
+        <div v-for="(value, name) in choose.content" :key="name" class="item">
           <h3>{{ name }}</h3>
           <p class="lead">{{ value }}</p>
         </div>
@@ -43,6 +43,10 @@ const { data: global } = await useAsyncData('global', () => queryContent(globalP
 
 const title = agence.value!.title
 const desc = agence.value!.desc
+const headline = agence.value!.headline
+const lead = agence.value!.lead
+const method = agence.value!.method
+const choose = agence.value!.choose
 const name = global.value!.name
 const item = locale.value !== 'fr' ? `${baseURL}/${locale.value}` : `${baseURL}/`
 
