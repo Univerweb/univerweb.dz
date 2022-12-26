@@ -27,7 +27,6 @@
       </div>
     </div>
     <AppRequest />
-    {{ item }}
   </main>
 </template>
 
