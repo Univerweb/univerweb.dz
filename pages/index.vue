@@ -33,6 +33,6 @@ const worksPagePath = `${locale.value}/works`
 const worksPath = `${locale.value}/works_slug`
 
 const { data: home } = await useAsyncData('home', () => queryContent(homePath).only(['headline', 'lead']).findOne())
-const { data: worksPage } = await useAsyncData('works', () => queryContent(worksPagePath).only(['headline']).findOne())
-const { data: works } = await useAsyncData('works_slug', () => queryContent(worksPath).only(['title', 'tags', 'lead']).limit(6).sort({ _id: -1 }).find())
+const { data: worksPage } = await useAsyncData('worksPage', () => queryContent(worksPagePath).only(['headline']).findOne())
+const { data: works } = await useAsyncData('works', () => queryContent(worksPath).only(['title', 'tags', 'lead']).limit(6).sort({ _id: -1 }).find())
 </script>
