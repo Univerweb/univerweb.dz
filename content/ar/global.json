@@ -8,8 +8,16 @@
     "contact": "إذهب إلى التواصل"
   },
 
+  "menu": [
+    { "path": "realisations", "title": "آخر الأعمال" },
+    { "path": "prestations", "title": "الخدمات" },
+    { "path": "agence", "title": "الوكالة" },
+    { "path": "contact", "title": "التواصل معنا" }
+  ],
+
   "label": {
     "menu": "افتح القائمة",
+    "lang": "اختر اللغة",
     "more": "سعادة أكثر",
     "client": "الزبون",
     "features": "المميزات",
