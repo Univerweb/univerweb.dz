@@ -42,9 +42,9 @@ const baseURL = config.public.baseURL
 const { data: agence } = await useAsyncData('agence', () => queryContent(agencePath).only(['title', 'desc', 'headline', 'lead', 'method', 'choose']).findOne())
 const { data: global } = await useAsyncData('global', () => queryContent(globalPath).only(['name']).findOne())
 
-const title = computed(() => agence.value!.title)
-const desc = computed(() => agence.value!.desc)
-const name = computed(() => global.value!.name)
+const title = agence.value!.title
+const desc = agence.value!.desc
+const name = global.value!.name
 const item = locale.value !== 'fr' ? `${baseURL}/${locale.value}` : `${baseURL}/`
 
 useHead({
