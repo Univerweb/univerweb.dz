@@ -1,146 +1,90 @@
 <template>
-  <main>
-    <!-- <div class="container intro">
-      <h1>{{ headline }}</h1>
-      <p class="lead">{{ lead }}</p>
+  <main v-if="prestations">
+    <div class="container intro">
+      <h1>{{ prestations.headline }}</h1>
+      <p class="lead">{{ prestations.lead }}</p>
     </div>
     <div class="container prestations">
       <div class="intro">
-        <h2>{{ webDesign.title }}</h2>
+        <h2>{{ prestations.webDesign.title }}</h2>
       </div>
       <div class="details">
-        <p class="item lead">{{ webDesign.content }}</p>
+        <p class="item lead">{{ prestations.webDesign.content }}</p>
         <ul class="item tags">
-          <li v-for="item in webDesign.tags" :key="item">{{ item }}</li>
+          <li v-for="item in prestations.webDesign.tags" :key="item">{{ item }}</li>
         </ul>
       </div>
     </div>
     <div class="container prestations">
       <div class="intro">
-        <h2>{{ dev.title }}</h2>
+        <h2>{{ prestations.dev.title }}</h2>
       </div>
       <div class="details">
-        <p class="item lead">{{ dev.content }}</p>
+        <p class="item lead">{{ prestations.dev.content }}</p>
         <ul class="item tags">
-          <li v-for="item in dev.tags" :key="item">{{ item }}</li>
+          <li v-for="item in prestations.dev.tags" :key="item">{{ item }}</li>
         </ul>
       </div>
     </div>
     <div class="container prestations">
       <div class="intro">
-        <h2>{{ support.title }}</h2>
+        <h2>{{ prestations.support.title }}</h2>
       </div>
       <div class="details">
-        <p class="item lead">{{ support.content }}</p>
+        <p class="item lead">{{ prestations.support.content }}</p>
         <ul class="item tags">
-          <li v-for="item in support.tags" :key="item">{{ item }}</li>
+          <li v-for="item in prestations.support.tags" :key="item">{{ item }}</li>
         </ul>
       </div>
     </div>
-    <AppRequest /> -->
+    <AppRequest />
   </main>
 </template>
 
 <script setup lang="ts">
-const title = ref('My App')
-const description = ref('My App Description')
-const name = ref('Name')
-const item = ref('Item')
+const { locale } = useI18n()
+const config = useRuntimeConfig()
+
+const prestationsPath = `${locale.value}/prestations`
+const globalPath = `${locale.value}/global`
+const baseURL = config.public.baseURL
+
+const { data: prestations } = await useAsyncData('presta', () =>
+  queryContent(prestationsPath).only(['title', 'desc', 'headline', 'lead', 'webDesign', 'dev', 'support']).findOne()
+)
+const { data: global } = await useAsyncData('global', () => queryContent(globalPath).only(['name']).findOne())
+
+const title = computed(() => prestations.value!.title)
+const desc = computed(() => prestations.value!.desc)
+const name = computed(() => global.value!.name)
+const item = locale.value !== 'fr' ? `${baseURL}/${locale.value}` : `${baseURL}/`
 
 useHead({
   title,
+
   meta: [
-    {
-      name: 'description',
-      content: description
-    },
-    {
-      property: 'og:title',
-      content: title
-    },
-    {
-      property: 'og:description',
-      content: description
-    }
+    { name: 'description', content: desc },
+    { property: 'og:title', content: title },
+    { property: 'og:description', content: desc }
   ],
+
   script: [
     {
-      json: {
+      type: 'application/ld+json',
+      children: {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: name, item: item },
           { '@type': 'ListItem', position: 2, name: title }
         ]
-      },
-      type: 'application/ld+json'
+      }
     }
   ]
 })
 </script>
 
-<!-- <script>
-export default {
-  name: 'PrestationsPage',
-
-  async asyncData({ $content, app }) {
-    const { title, description, headline, lead, webDesign, dev, support } = await $content(app.i18n.locale, 'prestations').fetch()
-
-    return {
-      title,
-      description,
-      headline,
-      lead,
-      webDesign,
-      dev,
-      support
-    }
-  }
-
-  // OLD Code
-  // head() {
-  //   let routeItem = `${this.$config. public.baseURL}/`
-  //   if (this.$i18n.locale !== 'fr') {
-  //     routeItem = `${this.$config. public.baseURL}/${this.$i18n.locale}`
-  //   }
-
-  //   return {
-  //     title: this.title,
-
-  //     meta: [
-  //       { hid: 'description', name: 'description', content: this.description },
-  //       { hid: 'og:title', property: 'og:title', content: this.title },
-  //       { hid: 'og:description', property: 'og:description', content: this.description }
-  //     ],
-
-  //     script: [
-  //       {
-  //         json: {
-  //           '@context': 'https://schema.org',
-  //           '@type': 'BreadcrumbList',
-  //           itemListElement: [
-  //             {
-  //               '@type': 'ListItem',
-  //               position: 1,
-  //               name: this.$t('name'),
-  //               item: routeItem
-  //             },
-  //             {
-  //               '@type': 'ListItem',
-  //               position: 2,
-  //               name: this.title
-  //             }
-  //           ]
-  //         },
-  //         type: 'application/ld+json'
-  //       }
-  //     ]
-  //   }
-  // }
-}
-</script> -->
-
-<style lang="scss">
+<style lang="scss" scoped>
 .prestations {
   .tags {
     color: var(--textSecondary);
