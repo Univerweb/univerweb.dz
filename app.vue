@@ -84,9 +84,9 @@ useHead({
           width: '512px',
           height: '512px'
         },
-        email: `${config.public.baseEmail}`,
-        telephone: `${config.public.mobile}`,
-        faxNumber: `${config.public.phone}`,
+        email: config.public.baseEmail,
+        telephone: config.public.mobile,
+        faxNumber: config.public.phone,
         sameAs: [
           'https://twitter.com/Univerweb',
           'https://www.facebook.com/Univerweb',
@@ -96,7 +96,7 @@ useHead({
         address: {
           '@type': 'PostalAddress',
           streetAddress: streetAddress,
-          postalCode: `${config.public.postalCode}`,
+          postalCode: config.public.postalCode,
           addressLocality: addressLocality
         }
       }
