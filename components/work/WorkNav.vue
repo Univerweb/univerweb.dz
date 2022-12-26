@@ -18,7 +18,7 @@ defineProps({
 })
 </script>
 
-<script>
+<!-- <script>
 export default {
   methods: {
     toLink(slug) {
@@ -32,7 +32,7 @@ export default {
     }
   }
 }
-</script>
+</script> -->
 
 <style lang="scss">
 .nav {
