@@ -1,6 +1,7 @@
 {
   "name": "Univerweb",
-  "description": "Création de sites web en Algérie",
+  "title": "Création de sites web en Algérie",
+  "desc": "Plus que des sites web, nous concevons et innovons pour vous des expériences numériques centrées sur l'humain et qui reflètent votre image de marque.",
 
   "skiplinks": {
     "menu": "Aller au menu",
