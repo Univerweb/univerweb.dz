@@ -49,14 +49,14 @@ const prestationsPath = `${locale.value}/prestations`
 const globalPath = `${locale.value}/global`
 const baseURL = config.public.baseURL
 
-const { data: prestations } = await useAsyncData('presta', () =>
+const { data: prestations } = await useAsyncData('prestations', () =>
   queryContent(prestationsPath).only(['title', 'desc', 'headline', 'lead', 'webDesign', 'dev', 'support']).findOne()
 )
 const { data: global } = await useAsyncData('global', () => queryContent(globalPath).only(['name']).findOne())
 
-const title = computed(() => prestations.value!.title)
-const desc = computed(() => prestations.value!.desc)
-const name = computed(() => global.value!.name)
+const title = prestations.value!.title
+const desc = prestations.value!.desc
+const name = global.value!.name
 const item = locale.value !== 'fr' ? `${baseURL}/${locale.value}` : `${baseURL}/`
 
 useHead({
