@@ -1,39 +1,39 @@
 <template>
-  <main v-if="prestations">
+  <main>
     <div class="container intro">
-      <h1>{{ prestations.headline }}</h1>
-      <p class="lead">{{ prestations.lead }}</p>
+      <h1>{{ headline }}</h1>
+      <p class="lead">{{ lead }}</p>
     </div>
     <div class="container prestations">
       <div class="intro">
-        <h2>{{ prestations.webDesign.title }}</h2>
+        <h2>{{ webDesign.title }}</h2>
       </div>
       <div class="details">
-        <p class="item lead">{{ prestations.webDesign.content }}</p>
+        <p class="item lead">{{ webDesign.content }}</p>
         <ul class="item tags">
-          <li v-for="item in prestations.webDesign.tags" :key="item">{{ item }}</li>
+          <li v-for="item in webDesign.tags" :key="item">{{ item }}</li>
         </ul>
       </div>
     </div>
     <div class="container prestations">
       <div class="intro">
-        <h2>{{ prestations.dev.title }}</h2>
+        <h2>{{ title }}</h2>
       </div>
       <div class="details">
-        <p class="item lead">{{ prestations.dev.content }}</p>
+        <p class="item lead">{{ dev.content }}</p>
         <ul class="item tags">
-          <li v-for="item in prestations.dev.tags" :key="item">{{ item }}</li>
+          <li v-for="item in dev.tags" :key="item">{{ item }}</li>
         </ul>
       </div>
     </div>
     <div class="container prestations">
       <div class="intro">
-        <h2>{{ prestations.support.title }}</h2>
+        <h2>{{ support.title }}</h2>
       </div>
       <div class="details">
-        <p class="item lead">{{ prestations.support.content }}</p>
+        <p class="item lead">{{ support.content }}</p>
         <ul class="item tags">
-          <li v-for="item in prestations.support.tags" :key="item">{{ item }}</li>
+          <li v-for="item in support.tags" :key="item">{{ item }}</li>
         </ul>
       </div>
     </div>
@@ -56,6 +56,11 @@ const { data: global } = await useAsyncData('global', () => queryContent(globalP
 
 const title = prestations.value!.title
 const desc = prestations.value!.desc
+const headline = prestations.value!.headline
+const lead = prestations.value!.lead
+const webDesign = prestations.value!.webDesign
+const dev = prestations.value!.dev
+const support = prestations.value!.support
 const name = global.value!.name
 const item = locale.value !== 'fr' ? `${baseURL}/${locale.value}` : `${baseURL}/`
 
