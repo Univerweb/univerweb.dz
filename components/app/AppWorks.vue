@@ -7,13 +7,13 @@
       <div v-for="work in works" :key="work.slug" class="item">
         <NuxtLink :to="localePath(`/realisations/${work.slug}`)" vocab="https://schema.org/" typeof="Article">
           <div property="mainEntityOfPage" typeof="WebPage">
-            <meta property="id" :content="$config.public.baseURL + localePath(`/realisations/${work.slug}`)" />
+            <meta property="id" :content="baseURL + localePath(`/realisations/${work.slug}`)" />
           </div>
           <meta property="dateCreated datePublished" :content="work.createdAt" />
           <meta property="dateModified" :content="work.updatedAt" />
           <div property="author publisher" typeof="Organization">
             <meta property="name" :content="$t('name')" />
-            <meta property="url" :content="$config.public.baseURL" />
+            <meta property="url" :content="baseURL" />
           </div>
           <meta property="articleSection" :content="$t('menu.realisations')" />
           <meta property="description" :content="work.description" />
@@ -36,13 +36,17 @@
         </NuxtLink>
       </div>
     </div>
-    <Component :is="more" class="more">
+    <Component v-if="more" :is="more" class="more">
       <NuxtLink :to="localePath('realisations')" class="btn">{{ $t('label.more') }}<NuxtIcon name="arrow" /></NuxtLink>
     </Component>
   </section>
 </template>
 
 <script setup lang="ts">
+const localePath = useLocalePath()
+const config = useRuntimeConfig()
+const baseURL = config.public.baseURL
+
 defineProps({
   headline: {
     type: String,
@@ -50,7 +54,7 @@ defineProps({
   },
   works: {
     type: Array,
-    required: true
+    default: () => []
   },
   h1: {
     type: String,
@@ -71,7 +75,7 @@ defineProps({
 })
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .works {
   .details {
     grid-template-columns: 1fr;
