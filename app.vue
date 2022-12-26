@@ -8,39 +8,44 @@
 </template>
 
 <script setup lang="ts">
-const i18nHead = useLocaleHead({ addSeoAttributes: true, addDirAttribute: true })
-const { t, locale } = useI18n()
-const route = useRoute()
+const { locale } = useI18n()
 const config = useRuntimeConfig()
+const route = useRoute()
+const i18nHead = useLocaleHead({ addSeoAttributes: true, addDirAttribute: true })
 
-const name = t('name')
-const desc = t('description')
-const home = await queryContent(`${locale.value}/home`).only('desc').findOne()
-const ogUrl = `${config.public.baseURL}${route.path}`
-const ogImage = locale.value === 'ar' ? `${config.public.baseURL}/images/univerweb-ar_share.jpg` : `${config.public.baseURL}/images/univerweb_share.jpg`
+const globalPath = `${locale.value}/global`
+const baseURL = config.public.baseURL
+
+const { data: global } = await useAsyncData('global', () => queryContent(globalPath).only(['name', 'title', 'desc', 'footer']).findOne())
+
+const name = global.value!.name
+const title = global.value!.title
+const desc = global.value!.desc
+const ogUrl = `${baseURL}${route.path}`
+const ogImage = locale.value === 'ar' ? `${baseURL}/images/univerweb-ar_share.jpg` : `${baseURL}/images/univerweb_share.jpg`
 const comma = locale.value === 'ar' ? '، ' : ', '
+const streetAddress = `${global.value!.footer.address.streetAddress}${comma}${global.value!.footer.address.addressLocality}`
+const addressLocality = `${global.value!.footer.address.addressRegion}${comma}${global.value!.footer.address.addressCountry}`
 
 const scrolled = ref(false)
 
 useHead({
   htmlAttrs: {
     lang: i18nHead.value.htmlAttrs!.lang,
-    dir: computed(() => {
-      return i18nHead.value.htmlAttrs!.dir
-    })
+    dir: computed(() => i18nHead.value.htmlAttrs!.dir)
   },
 
   titleTemplate: titleChunk => {
-    return titleChunk ? `${titleChunk} — ${name}` : `${desc} — ${name}`
+    return titleChunk ? `${titleChunk} — ${name}` : `${title} — ${name}`
   },
 
   meta: [
     { name: 'theme-color', content: '#50c8f0' },
     { name: 'apple-mobile-web-app-capable', content: 'yes' },
     { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
-    { name: 'description', content: home.desc },
-    { property: 'og:title', content: desc },
-    { property: 'og:description', content: home.desc },
+    { name: 'description', content: desc },
+    { property: 'og:title', content: title },
+    { property: 'og:description', content: desc },
     { property: 'og:type', content: 'website' },
     { property: 'og:site_name', content: name },
     { property: 'og:url', content: ogUrl },
@@ -49,7 +54,7 @@ useHead({
     { property: 'og:image:type', content: 'image/jpeg' },
     { property: 'og:image:width', content: 1920 },
     { property: 'og:image:height', content: 1080 },
-    { property: 'og:image:alt', content: `${name} — ${desc}` },
+    { property: 'og:image:alt', content: `${name} — ${title}` },
     ...(i18nHead.value.meta || [])
   ],
 
@@ -65,8 +70,8 @@ useHead({
       children: {
         '@context': 'https://schema.org',
         '@type': 'Organization',
-        name: `${name}`,
-        url: `${config.public.baseURL}`,
+        name: name,
+        url: baseURL,
         image: {
           '@type': 'ImageObject',
           url: ogImage,
@@ -75,7 +80,7 @@ useHead({
         },
         logo: {
           '@type': 'ImageObject',
-          url: `${config.public.baseURL}/logo.svg`,
+          url: `${baseURL}/logo.svg`,
           width: '512px',
           height: '512px'
         },
@@ -90,9 +95,9 @@ useHead({
         ],
         address: {
           '@type': 'PostalAddress',
-          streetAddress: `${t('footer.address.streetAddress')}${comma}${t('footer.address.addressLocality')}`,
+          streetAddress: streetAddress,
           postalCode: `${config.public.postalCode}`,
-          addressLocality: `${t('footer.address.addressRegion')}${comma}${t('footer.address.addressCountry')}`
+          addressLocality: addressLocality
         }
       }
     }
