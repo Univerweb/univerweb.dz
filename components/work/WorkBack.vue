@@ -1,6 +1,18 @@
 <template>
-  <NuxtLink :to="localePath('realisations')" class="back"><NuxtIcon name="arrow" />{{ $t('menu.realisations') }}</NuxtLink>
+  <NuxtLink :to="localePath('realisations')" class="back">
+    <NuxtIcon name="arrow" />
+    {{ title }}
+  </NuxtLink>
 </template>
+
+<script setup lang="ts">
+const localePath = useLocalePath()
+const { locale } = useI18n()
+
+const { data } = await useAsyncData('workBack', () => queryContent(locale.value, 'global').only(['menu']).findOne())
+
+const title = data.value!.menu[0].title
+</script>
 
 <style lang="scss">
 .back {
