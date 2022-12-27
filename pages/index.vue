@@ -7,6 +7,18 @@
 </template>
 
 <script setup lang="ts">
+const { locale } = useI18n()
+
+const { data: home } = await useAsyncData('HomeWelcome', () => queryContent(locale.value, 'home').only(['headline', 'lead']).findOne())
+const { data: works } = await useAsyncData('AppWorks', () =>
+  queryContent(locale.value, 'realisations').only(['title', 'tags', 'lead']).limit(6).sort({ _id: -1 }).find()
+)
+
+const headline = home.value!.headline
+const lead = home.value!.lead
+const worksHeadline = works.value![0].headline
+const slug = works.value!
+
 defineProps({
   h1: {
     type: String,
@@ -25,16 +37,4 @@ defineProps({
     default: 'div'
   }
 })
-
-const { locale } = useI18n()
-
-const { data: home } = await useAsyncData('HomeWelcome', () => queryContent(locale.value, 'home').only(['headline', 'lead']).findOne())
-const { data: works } = await useAsyncData('AppWorks', () =>
-  queryContent(locale.value, 'realisations').only(['title', 'tags', 'lead']).limit(6).sort({ _id: -1 }).find()
-)
-
-const headline = home.value!.headline
-const lead = home.value!.lead
-const worksHeadline = works.value![0].headline
-const slug = works.value!
 </script>
