@@ -48,17 +48,17 @@
           <NuxtIcon name="system" filled :class="colorMode.preference === 'system' ? 'show' : 'hide'" />
           <NuxtIcon name="light" filled :class="colorMode.preference === 'light' ? 'show' : 'hide'" />
         </span>
-        <!-- <transition name="from-bottom-to-bottom" mode="out-in"> -->
-        <span v-if="colorMode.preference === 'dark'" key="dark">
-          {{ footer.colorMode.dark }}
-        </span>
-        <span v-if="colorMode.preference === 'system'" key="system">
-          {{ footer.colorMode.system }}
-        </span>
-        <span v-else-if="colorMode.preference === 'light'" key="light">
-          {{ footer.colorMode.light }}
-        </span>
-        <!-- </transition> -->
+        <Transition name="from-bottom-to-bottom" mode="out-in">
+          <span v-if="colorMode.preference === 'dark'">
+            {{ footer.colorMode.dark }}
+          </span>
+          <span v-else-if="colorMode.preference === 'system'">
+            {{ footer.colorMode.system }}
+          </span>
+          <span v-else-if="colorMode.preference === 'light'">
+            {{ footer.colorMode.light }}
+          </span>
+        </Transition>
       </button>
     </div>
 
