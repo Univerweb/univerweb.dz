@@ -34,21 +34,19 @@
 const { locale } = useI18n()
 const config = useRuntimeConfig()
 
-const agencePath = `${locale.value}/agence`
-const globalPath = `${locale.value}/global`
-const baseURL = config.public.baseURL
+const { data: agency } = await useAsyncData('agencyPage', () =>
+  queryContent(locale.value, 'agence').only(['title', 'desc', 'headline', 'lead', 'method', 'choose']).findOne()
+)
+const { data: global } = await useAsyncData('agencyGlobal', () => queryContent(locale.value, 'global').only(['name']).findOne())
 
-const { data: agence } = await useAsyncData('agence', () => queryContent(agencePath).only(['title', 'desc', 'headline', 'lead', 'method', 'choose']).findOne())
-const { data: global } = await useAsyncData('global', () => queryContent(globalPath).only(['name']).findOne())
-
-const title = agence.value!.title
-const desc = agence.value!.desc
-const headline = agence.value!.headline
-const lead = agence.value!.lead
-const method = agence.value!.method
-const choose = agence.value!.choose
+const title = agency.value!.title
+const desc = agency.value!.desc
+const headline = agency.value!.headline
+const lead = agency.value!.lead
+const method = agency.value!.method
+const choose = agency.value!.choose
 const name = global.value!.name
-const item = locale.value !== 'fr' ? `${baseURL}/${locale.value}` : `${baseURL}/`
+const item = locale.value !== 'fr' ? `${config.public.baseURL}/${locale.value}` : `${config.public.baseURL}/`
 
 useHead({
   title,
