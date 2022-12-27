@@ -1,11 +1,17 @@
 <template>
   <div class="container request">
-    <h2 class="h3">{{ $t('request.headline') }}</h2>
-    <NuxtLink :to="localePath('contact')" :class="home" class="move-arrow">{{ $t('request.link') }}</NuxtLink>
+    <h2 class="h3">{{ request.headline }}</h2>
+    <NuxtLink :to="localePath('contact')" :class="home" class="move-arrow">{{ request.link }}</NuxtLink>
   </div>
 </template>
 
 <script setup lang="ts">
+const { locale } = useI18n()
+const localePath = useLocalePath()
+
+const { data: global } = await useAsyncData('AppRequest', () => queryContent(locale.value, 'global').only(['request']).findOne())
+const request = global.value!.request
+
 defineProps({
   home: {
     type: String,
@@ -14,7 +20,7 @@ defineProps({
 })
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .request {
   background-color: var(--secondary);
   color: $white;
