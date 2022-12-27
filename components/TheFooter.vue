@@ -3,7 +3,7 @@
     <div>
       <address class="address" title="Adresse postale">
         <strong>{{ $t('footer.address.name') }}</strong
-        ><br />{{ $t('footer.address.streetAddress') }}<br />{{ $t('footer.address.addressLocality') }} {{ $config.public.postalCode
+        ><br />{{ $t('footer.address.streetAddress') }}<br />{{ $t('footer.address.addressLocality') }} {{ postalCode
         }}<span v-if="$i18n.locale === 'ar'">، </span><span v-else>, </span>{{ $t('footer.address.addressRegion') }}
       </address>
 
@@ -12,14 +12,14 @@
       </p>
 
       <p>
-        <a :href="'tel:+213' + $config.public.phone.slice(1).replace(/ /g, '')">
+        <a :href="`tel:+213${phone.slice(1).replace(/ /g, '')}`">
           <span class="visually-hidden">{{ $t('label.phone') }}</span>
-          <span dir="ltr">{{ $config.public.phone }}</span>
+          <span dir="ltr">{{ phone }}</span>
         </a>
         —
-        <a :href="'tel:+213' + $config.public.mobile.slice(1).replace(/ /g, '')">
+        <a :href="`tel:+213${mobile.slice(1).replace(/ /g, '')}`">
           <span class="visually-hidden">{{ $t('label.mobile') }}</span>
-          <span dir="ltr">{{ $config.public.mobile }}</span>
+          <span dir="ltr">{{ mobile }}</span>
         </a>
       </p>
     </div>
@@ -62,13 +62,18 @@
   </footer>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const socials = {
   twitter: 'https://twitter.com/Univerweb',
   facebook: 'https://www.facebook.com/Univerweb',
   linkedin: 'https://www.linkedin.com/company/Univerweb',
   github: 'https://github.com/Univerweb'
 }
+
+const config = useRuntimeConfig()
+const postalCode = config.public.postalCode
+const phone = config.public.phone
+const mobile = config.public.mobile
 
 const colorMode = useColorMode()
 const setCurrentMode = () => (colorMode.preference = colorMode.preference === 'system' ? 'light' : colorMode.preference === 'light' ? 'dark' : 'system')
