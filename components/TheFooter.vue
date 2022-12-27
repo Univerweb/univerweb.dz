@@ -2,23 +2,27 @@
   <footer>
     <div>
       <address class="address" title="Adresse postale">
-        <strong>{{ $t('footer.address.name') }}</strong
-        ><br />{{ $t('footer.address.streetAddress') }}<br />{{ $t('footer.address.addressLocality') }} {{ postalCode
-        }}<span v-if="$i18n.locale === 'ar'">، </span><span v-else>, </span>{{ $t('footer.address.addressRegion') }}
+        <strong>{{ footer.address.name }}</strong>
+        <br />
+        {{ footer.address.streetAddress }}
+        <br />
+        {{ footer.address.addressLocality }}
+        {{ postalCode }}<span v-if="coma">، </span><span v-else>, </span>
+        {{ footer.address.addressRegion }}
       </address>
 
       <p>
-        <a href="https://goo.gl/maps/MmadgQgZRBv" target="_blank" rel="noopener">{{ $t('footer.maps') }}</a>
+        <a href="https://goo.gl/maps/MmadgQgZRBv" target="_blank" rel="noopener">{{ footer.maps }}</a>
       </p>
 
       <p>
         <a :href="`tel:+213${phone.slice(1).replace(/ /g, '')}`">
-          <span class="visually-hidden">{{ $t('label.phone') }}</span>
+          <span class="visually-hidden">{{ label.phone }}</span>
           <span dir="ltr">{{ phone }}</span>
         </a>
         —
         <a :href="`tel:+213${mobile.slice(1).replace(/ /g, '')}`">
-          <span class="visually-hidden">{{ $t('label.mobile') }}</span>
+          <span class="visually-hidden">{{ label.mobile }}</span>
           <span dir="ltr">{{ mobile }}</span>
         </a>
       </p>
@@ -28,10 +32,10 @@
       <AppAbout />
 
       <ul class="social">
-        <li v-for="(value, name) in socials" :key="name">
+        <li v-for="(value, name) in social" :key="name">
           <a :href="value">
-            <span class="visually-hidden">{{ $t('footer.social.' + name) }}</span>
-            <NuxtIcon :name="name" />
+            <span class="visually-hidden">{{ footer.social[name] }}</span>
+            <NuxtIcon :name="`${name}`" />
           </a>
         </li>
       </ul>
@@ -46,36 +50,37 @@
         </span>
         <!-- <transition name="from-bottom-to-bottom" mode="out-in"> -->
         <span v-if="colorMode.preference === 'dark'" key="dark">
-          {{ $t('footer.colorMode.dark') }}
+          {{ footer.colorMode.dark }}
         </span>
         <span v-if="colorMode.preference === 'system'" key="system">
-          {{ $t('footer.colorMode.system') }}
+          {{ footer.colorMode.system }}
         </span>
         <span v-else-if="colorMode.preference === 'light'" key="light">
-          {{ $t('footer.colorMode.light') }}
+          {{ footer.colorMode.light }}
         </span>
         <!-- </transition> -->
       </button>
     </div>
 
-    <p class="copy">{{ $t('footer.copy') }}</p>
+    <p class="copy">{{ footer.copy }}</p>
   </footer>
 </template>
 
 <script setup lang="ts">
-const socials = {
-  twitter: 'https://twitter.com/Univerweb',
-  facebook: 'https://www.facebook.com/Univerweb',
-  linkedin: 'https://www.linkedin.com/company/Univerweb',
-  github: 'https://github.com/Univerweb'
-}
-
-const config = useRuntimeConfig()
-const postalCode = config.public.postalCode
-const phone = config.public.phone
-const mobile = config.public.mobile
-
+const { locale } = useI18n()
 const colorMode = useColorMode()
+
+const { data: global } = await useAsyncData('footerGlobal', () => queryContent(locale.value, 'global').only(['footer', 'label']).findOne())
+const { data: common } = await useAsyncData('footerCommon', () => queryContent('common').only(['social', 'phone', 'mobile', 'postalCode']).findOne())
+
+const footer = global.value!.footer
+const label = global.value!.label
+const social = common.value!.social
+const phone = common.value!.phone
+const mobile = common.value!.mobile
+const postalCode = common.value!.postalCode
+const coma = locale.value === 'ar'
+
 const setCurrentMode = () => (colorMode.preference = colorMode.preference === 'system' ? 'light' : colorMode.preference === 'light' ? 'dark' : 'system')
 </script>
 

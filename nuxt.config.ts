@@ -19,7 +19,7 @@ export default defineNuxtConfig({
     locales: [
       { code: 'fr', iso: 'fr-FR', file: 'fr.json', name: 'Français', dir: 'ltr' },
       { code: 'ar', iso: 'ar-DZ', file: 'ar.json', name: 'العربية', dir: 'rtl' },
-      { code: 'en', iso: 'en-US', file: 'en.json', name: 'English', dir: 'ltr' }
+      { code: 'en', iso: 'en-US', file: 'en.json', name: 'English' }
     ],
     defaultLocale: 'fr',
     detectBrowserLanguage: false,
@@ -38,10 +38,7 @@ export default defineNuxtConfig({
       baseEmail: process.env.BASE_EMAIL,
       managerEmail: process.env.MANAGER_EMAIL,
       supportEmail: process.env.SUPPORT_EMAIL,
-      apiKey: process.env.API_KEY || '',
-      phone: '021 44 08 11',
-      mobile: '0551 90 46 22',
-      postalCode: '16029'
+      apiKey: process.env.API_KEY || ''
     }
   }
   // pwa: {
