@@ -10,7 +10,7 @@ const { locale } = useI18n()
 const config = useRuntimeConfig()
 
 const { data: works } = await useAsyncData('WorksPage', () =>
-  queryContent(locale.value, 'realisations').only(['title', 'desc', 'headline', 'tags', 'lead']).sort({ _id: -1 }).find()
+  queryContent(locale.value, 'realisations').only(['title', 'desc', 'headline', 'tags', 'lead']).sort({ _id: -1 }).skip(1).find()
 )
 const { data: global } = await useAsyncData('WorksGlobal', () => queryContent(locale.value, 'global').only(['name']).findOne())
 

@@ -11,7 +11,7 @@ const { locale } = useI18n()
 
 const { data: home } = await useAsyncData('HomeWelcome', () => queryContent(locale.value, 'home').only(['headline', 'lead']).findOne())
 const { data: works } = await useAsyncData('AppWorks', () =>
-  queryContent(locale.value, 'realisations').only(['title', 'tags', 'lead']).limit(6).sort({ _id: -1 }).find()
+  queryContent(locale.value, 'realisations').only(['title', 'tags', 'lead']).limit(6).sort({ _id: -1 }).skip(1).find()
 )
 
 const headline = home.value!.headline
