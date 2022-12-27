@@ -1,7 +1,7 @@
 <template>
   <main>
-    <HomeWelcome :headline="home!.headline" :lead="home!.lead" />
-    <AppWorks :headline="worksPage!.headline" :works="works!" :h1="h1" :like-h1="likeH1" :h2="h2" :more="more" />
+    <HomeWelcome :headline="headline" :lead="lead" />
+    <AppWorks :headline="worksHeadline" :works="slug" :h1="h1" :like-h1="likeH1" :h2="h2" :more="more" />
     <AppRequest :home="likeH1" />
   </main>
 </template>
@@ -28,11 +28,13 @@ defineProps({
 
 const { locale } = useI18n()
 
-const homePath = `${locale.value}/home`
-const worksPagePath = `${locale.value}/works`
-const worksPath = `${locale.value}/works_slug`
+const { data: home } = await useAsyncData('HomeWelcome', () => queryContent(locale.value, 'home').only(['headline', 'lead']).findOne())
+const { data: works } = await useAsyncData('AppWorks', () =>
+  queryContent(locale.value, 'realisations').only(['title', 'tags', 'lead']).limit(6).sort({ _id: -1 }).find()
+)
 
-const { data: home } = await useAsyncData('home', () => queryContent(homePath).only(['headline', 'lead']).findOne())
-const { data: worksPage } = await useAsyncData('worksPage', () => queryContent(worksPagePath).only(['headline']).findOne())
-const { data: works } = await useAsyncData('works', () => queryContent(worksPath).only(['title', 'tags', 'lead']).limit(6).sort({ _id: -1 }).find())
+const headline = home.value!.headline
+const lead = home.value!.lead
+const worksHeadline = works.value![0].headline
+const slug = works.value!
 </script>

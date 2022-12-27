@@ -29,21 +29,17 @@
 const { locale } = useI18n()
 const config = useRuntimeConfig()
 
-const contactPath = `${locale.value}/contact`
-const globalPath = `${locale.value}/global`
-const baseURL = config.public.baseURL
-const managerEmail = config.public.managerEmail
-const supportEmail = config.public.supportEmail
-
-const { data: contact } = await useAsyncData('contact', () => queryContent(contactPath).only(['title', 'desc', 'other']).findOne())
-const { data: global } = await useAsyncData('global', () => queryContent(globalPath).only(['name', 'label']).findOne())
+const { data: contact } = await useAsyncData('contactPage', () => queryContent(locale.value, 'contact').only(['title', 'desc', 'other']).findOne())
+const { data: global } = await useAsyncData('contactGlobal', () => queryContent(locale.value, 'global').only(['name', 'label']).findOne())
 
 const title = contact.value!.title
 const desc = contact.value!.desc
 const name = global.value!.name
-const item = locale.value !== 'fr' ? `${baseURL}/${locale.value}` : `${baseURL}/`
+const item = locale.value !== 'fr' ? `${config.public.baseURL}/${locale.value}` : `${config.public.baseURL}/`
 const other = contact.value!.other
 const label = global.value!.label
+const managerEmail = config.public.managerEmail
+const supportEmail = config.public.supportEmail
 
 useHead({
   title,

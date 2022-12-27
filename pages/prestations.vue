@@ -45,24 +45,20 @@
 const { locale } = useI18n()
 const config = useRuntimeConfig()
 
-const prestationsPath = `${locale.value}/prestations`
-const globalPath = `${locale.value}/global`
-const baseURL = config.public.baseURL
-
-const { data: prestations } = await useAsyncData('prestations', () =>
-  queryContent(prestationsPath).only(['title', 'desc', 'headline', 'lead', 'webDesign', 'dev', 'support']).findOne()
+const { data: presta } = await useAsyncData('prestaPage', () =>
+  queryContent(locale.value, 'prestations').only(['title', 'desc', 'headline', 'lead', 'webDesign', 'dev', 'support']).findOne()
 )
-const { data: global } = await useAsyncData('global', () => queryContent(globalPath).only(['name']).findOne())
+const { data: global } = await useAsyncData('prestaGlobal', () => queryContent(locale.value, 'global').only(['name']).findOne())
 
-const title = prestations.value!.title
-const desc = prestations.value!.desc
-const headline = prestations.value!.headline
-const lead = prestations.value!.lead
-const webDesign = prestations.value!.webDesign
-const dev = prestations.value!.dev
-const support = prestations.value!.support
+const title = presta.value!.title
+const desc = presta.value!.desc
+const headline = presta.value!.headline
+const lead = presta.value!.lead
+const webDesign = presta.value!.webDesign
+const dev = presta.value!.dev
+const support = presta.value!.support
 const name = global.value!.name
-const item = locale.value !== 'fr' ? `${baseURL}/${locale.value}` : `${baseURL}/`
+const item = locale.value !== 'fr' ? `${config.public.baseURL}/${locale.value}` : `${config.public.baseURL}/`
 
 useHead({
   title,

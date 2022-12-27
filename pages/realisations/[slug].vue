@@ -1,14 +1,14 @@
 <template>
   <main id="main" class="work">
-    <!-- <article vocab="https://schema.org/" typeof="Article">
+    <article vocab="https://schema.org/" typeof="Article">
       <div property="mainEntityOfPage" typeof="WebPage">
-        <meta property="id" :content="`${$config.public.baseURL}${$route.path}`" />
+        <meta property="id" :content="`${baseURL}${path}`" />
       </div>
-      <meta property="dateCreated datePublished" :content="work.createdAt" />
-      <meta property="dateModified" :content="work.updatedAt" />
+      <!-- <meta property="dateCreated datePublished" :content="work.createdAt" /> -->
+      <!-- <meta property="dateModified" :content="work.updatedAt" /> -->
       <div property="author publisher" typeof="Organization">
         <meta property="name" :content="$t('name')" />
-        <meta property="url" :content="$config.public.baseURL" />
+        <meta property="url" :content="baseURL" />
       </div>
       <meta property="articleSection" :content="$t('menu.realisations')" />
       <meta property="description" :content="work.description" />
@@ -17,12 +17,7 @@
         <h1 property="headline">{{ work.title }}</h1>
       </div>
       <div class="banner card">
-        <AppImg
-          property="image"
-          :src="`/images/${work.slug}_banner.jpg`"
-          :alt="work.description"
-          sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw"
-        />
+        <AppImg property="image" :src="`/images/${slug}_banner.jpg`" :alt="work.description" sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw" />
       </div>
       <div class="container client">
         <div class="details">
@@ -51,21 +46,74 @@
             </div>
           </div>
           <div class="item card">
-            <AppImg
-              :src="`/images/${work.slug}_preview.jpg`"
-              :alt="`${$t('alt.workpage')} ${work.title}`"
-              sizes="xs:288px sm:607px md:719px lg:619px xl:1280px"
-            />
+            <AppImg :src="`/images/${slug}_preview.jpg`" :alt="`${$t('alt.workpage')} ${work.title}`" sizes="xs:288px sm:607px md:719px lg:619px xl:1280px" />
           </div>
         </div>
       </div>
     </article>
     <WorkNav :prev="prev" :next="next" />
-    <AppRequest /> -->
+    <AppRequest />
   </main>
 </template>
 
-<script>
+<script setup lang="ts">
+// import { createError } from 'h3'
+
+const { locale } = useI18n()
+const route = useRoute()
+const path = route.path
+const slug = route.params.slug
+const config = useRuntimeConfig()
+
+const fullPath = locale.value === 'fr' ? `/${locale.value}${path}` : `${path}`
+
+const { data, error } = await useAsyncData(`content-${fullPath}`, () => {
+  return queryContent().where({ _path: fullPath }).only([]).findOne()
+})
+
+const work = data.value!
+const baseURL = config.public.baseURL
+
+// if (error.value) {
+//   throwError(
+//     createError({
+//       statusCode: 404,
+//       statusMessage: 'Not Found'
+//     })
+//   )
+// }
+
+const [prev, next] = await queryContent('/realisations')
+  // .only(['_path', 'title'])
+  // .where({ _id: { $not: { $contains: 'index' } } })
+  .findSurround({ _path: fullPath })
+
+useHead({
+  // title,
+
+  meta: [
+    // { name: 'description', content: work.desc },
+    // { property: 'og:title', content: work.title },
+    // { property: 'og:description', content: work.desc }
+  ]
+
+  // script: [
+  //   {
+  //     type: 'application/ld+json',
+  //     children: {
+  //       '@context': 'https://schema.org',
+  //       '@type': 'BreadcrumbList',
+  //       itemListElement: [
+  //         { '@type': 'ListItem', position: 1, name: name, item: item },
+  //         { '@type': 'ListItem', position: 2, name: title }
+  //       ]
+  //     }
+  //   }
+  // ]
+})
+</script>
+
+<!-- <script>
 export default {
   async asyncData({ $content, app, params, error }) {
     const path = `${app.i18n.locale}/works_slug`
@@ -135,9 +183,9 @@ export default {
     }
   }
 }
-</script>
+</script> -->
 
-<style lang="scss">
+<style lang="scss" scoped>
 .work {
   h1 {
     margin-bottom: 0;
