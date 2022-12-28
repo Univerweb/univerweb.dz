@@ -7,32 +7,32 @@
       <!-- <meta property="dateCreated datePublished" :content="work.createdAt" /> -->
       <!-- <meta property="dateModified" :content="work.updatedAt" /> -->
       <div property="author publisher" typeof="Organization">
-        <meta property="name" :content="$t('name')" />
+        <meta property="name" :content="name" />
         <meta property="url" :content="baseURL" />
       </div>
-      <meta property="articleSection" :content="$t('menu.realisations')" />
-      <meta property="description" :content="work.description" />
+      <meta property="articleSection" :content="menu.realisations" />
+      <meta property="description" :content="work.desc" />
       <div class="container intro">
         <WorkBack />
         <h1 property="headline">{{ work.title }}</h1>
       </div>
       <div class="banner card">
-        <AppImg property="image" :src="`/images/${slug}_banner.jpg`" :alt="work.description" sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw" />
+        <AppImg property="image" :src="`/images/${slug}_banner.jpg`" :alt="work.desc" sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw" />
       </div>
       <div class="container client">
         <div class="details">
           <div class="item">
-            <h2 class="h6">{{ $t('label.client') }}</h2>
+            <h2 class="h6">{{ label.client }}</h2>
             <p class="lead">{{ work.title }}</p>
           </div>
           <div class="item">
-            <h2 class="h6">{{ $t('label.features') }}</h2>
+            <h2 class="h6">{{ label.features }}</h2>
             <ul class="lead tags">
               <li v-for="tag in work.tags" :key="tag" property="keywords">{{ tag }}</li>
             </ul>
           </div>
           <div class="item">
-            <h2 class="h6">{{ $t('label.industry') }}</h2>
+            <h2 class="h6">{{ label.industry }}</h2>
             <p class="lead">{{ work.industry }}</p>
           </div>
         </div>
@@ -42,11 +42,11 @@
           <div class="item">
             <div class="inner">
               <p property="articleBody" class="lead">{{ work.lead }}</p>
-              <a :href="work.link" class="link">{{ $t('label.visit') }}</a>
+              <a :href="work.link" class="link">{{ label.visit }}</a>
             </div>
           </div>
           <div class="item card">
-            <AppImg :src="`/images/${slug}_preview.jpg`" :alt="`${$t('alt.workpage')} ${work.title}`" sizes="xs:288px sm:607px md:719px lg:619px xl:1280px" />
+            <AppImg :src="`/images/${slug}_preview.jpg`" :alt="`${alt.workpage} ${work.title}`" sizes="xs:288px sm:607px md:719px lg:619px xl:1280px" />
           </div>
         </div>
       </div>
@@ -67,12 +67,20 @@ const config = useRuntimeConfig()
 
 const fullPath = locale.value === 'fr' ? `/${locale.value}${path}` : `${path}`
 
-const { data, error } = await useAsyncData(`content-${fullPath}`, () => {
-  return queryContent().where({ _path: fullPath }).only([]).findOne()
+const { data, error } = await useAsyncData(`${fullPath}Page`, () => {
+  return queryContent().where({ _path: fullPath }).only(['title', 'desc', 'tags', 'industry', 'lead', 'link']).findOne()
 })
+const { data: global } = await useAsyncData('workGlobal', () => queryContent(locale.value, 'global').only(['name', 'menu', 'label', 'alt']).findOne())
 
-const work = data.value!
+const title = data.value!.title
+const desc = data.value!.desc
 const baseURL = config.public.baseURL
+const work = data.value!
+const name = global.value!.name
+const menu = global.value!.menu
+const label = global.value!.label
+const alt = global.value!.alt
+const ogImage = `${baseURL}/images/${slug}_share.jpg`
 
 // if (error.value) {
 //   throwError(
@@ -89,12 +97,15 @@ const [prev, next] = await queryContent('/realisations')
   .findSurround({ _path: fullPath })
 
 useHead({
-  // title,
+  title,
 
   meta: [
-    // { name: 'description', content: work.desc },
-    // { property: 'og:title', content: work.title },
-    // { property: 'og:description', content: work.desc }
+    { name: 'description', content: desc },
+    { property: 'og:title', content: title },
+    { property: 'og:description', content: desc },
+    { property: 'og:image', content: ogImage },
+    { property: 'og:image:secure_url', content: ogImage },
+    { property: 'og:image:alt', content: `${title} — ${data.value!.industry}` }
   ]
 
   // script: [
