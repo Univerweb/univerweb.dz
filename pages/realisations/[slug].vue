@@ -1,39 +1,44 @@
 <template>
-  <main id="main" class="work">
+  <main id="main" class="work" v-if="data && global">
     <article vocab="https://schema.org/" typeof="Article">
       <div property="mainEntityOfPage" typeof="WebPage">
-        <meta property="id" :content="`${baseURL}${path}`" />
+        <meta property="id" :content="`${config.public.baseURL}${route.path}`" />
       </div>
-      <!-- <meta property="dateCreated datePublished" :content="work.createdAt" /> -->
-      <!-- <meta property="dateModified" :content="work.updatedAt" /> -->
+      <!-- <meta property="dateCreated datePublished" :content="data.createdAt" /> -->
+      <!-- <meta property="dateModified" :content="data.updatedAt" /> -->
       <div property="author publisher" typeof="Organization">
-        <meta property="name" :content="name" />
-        <meta property="url" :content="baseURL" />
+        <meta property="name" :content="global.name" />
+        <meta property="url" :content="config.public.baseURL" />
       </div>
-      <meta property="articleSection" :content="menu.realisations" />
-      <meta property="description" :content="work.desc" />
+      <meta property="articleSection" :content="global.menu.realisations" />
+      <meta property="description" :content="data.desc" />
       <div class="container intro">
         <WorkBack />
-        <h1 property="headline">{{ work.title }}</h1>
+        <h1 property="headline">{{ data.title }}</h1>
       </div>
       <div class="banner card">
-        <AppImg property="image" :src="`/images/${slug}_banner.jpg`" :alt="work.desc" sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw" />
+        <AppImg
+          property="image"
+          :src="`/images/${route.params.slug}_banner.jpg`"
+          :alt="data.desc"
+          sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw"
+        />
       </div>
       <div class="container client">
         <div class="details">
           <div class="item">
-            <h2 class="h6">{{ label.client }}</h2>
-            <p class="lead">{{ work.title }}</p>
+            <h2 class="h6">{{ global.label.client }}</h2>
+            <p class="lead">{{ data.title }}</p>
           </div>
           <div class="item">
-            <h2 class="h6">{{ label.features }}</h2>
+            <h2 class="h6">{{ global.label.features }}</h2>
             <ul class="lead tags">
-              <li v-for="tag in work.tags" :key="tag" property="keywords">{{ tag }}</li>
+              <li v-for="tag in data.tags" :key="tag" property="keywords">{{ tag }}</li>
             </ul>
           </div>
           <div class="item">
-            <h2 class="h6">{{ label.industry }}</h2>
-            <p class="lead">{{ work.industry }}</p>
+            <h2 class="h6">{{ global.label.industry }}</h2>
+            <p class="lead">{{ data.industry }}</p>
           </div>
         </div>
       </div>
@@ -41,12 +46,16 @@
         <div class="details">
           <div class="item">
             <div class="inner">
-              <p property="articleBody" class="lead">{{ work.lead }}</p>
-              <a :href="work.link" class="link">{{ label.visit }}</a>
+              <p property="articleBody" class="lead">{{ data.lead }}</p>
+              <a :href="data.link" class="link">{{ global.label.visit }}</a>
             </div>
           </div>
           <div class="item card">
-            <AppImg :src="`/images/${slug}_preview.jpg`" :alt="`${alt.workpage} ${work.title}`" sizes="xs:288px sm:607px md:719px lg:619px xl:1280px" />
+            <AppImg
+              :src="`/images/${route.params.slug}_preview.jpg`"
+              :alt="`${global.alt.workpage} ${data.title}`"
+              sizes="xs:288px sm:607px md:719px lg:619px xl:1280px"
+            />
           </div>
         </div>
       </div>
@@ -57,144 +66,64 @@
 </template>
 
 <script setup lang="ts">
-// import { createError } from 'h3'
+import { createError } from 'h3'
 
+const localePath = useLocalePath()
 const { locale } = useI18n()
 const route = useRoute()
-const path = route.path
-const slug = route.params.slug
 const config = useRuntimeConfig()
 
-const fullPath = locale.value === 'fr' ? `/${locale.value}${path}` : `${path}`
+const fullPath = locale.value === 'fr' ? `/${locale.value}${route.path}` : `${route.path}`
 
 const { data, error } = await useAsyncData(`${fullPath}Page`, () => {
   return queryContent().where({ _path: fullPath }).only(['title', 'desc', 'tags', 'industry', 'lead', 'link']).findOne()
 })
 const { data: global } = await useAsyncData('workGlobal', () => queryContent(locale.value, 'global').only(['name', 'menu', 'label', 'alt']).findOne())
 
-const title = data.value!.title
-const desc = data.value!.desc
-const baseURL = config.public.baseURL
-const work = data.value!
-const name = global.value!.name
-const menu = global.value!.menu
-const label = global.value!.label
-const alt = global.value!.alt
-const ogImage = `${baseURL}/images/${slug}_share.jpg`
+if (error.value) {
+  showError(
+    createError({
+      statusCode: 404,
+      statusMessage: 'Not Found'
+    })
+  )
+}
 
-// if (error.value) {
-//   throwError(
-//     createError({
-//       statusCode: 404,
-//       statusMessage: 'Not Found'
-//     })
-//   )
-// }
-
-const [prev, next] = await queryContent('/realisations')
-  // .only(['_path', 'title'])
-  // .where({ _id: { $not: { $contains: 'index' } } })
-  .findSurround({ _path: fullPath })
+const [prev, next] = await queryContent(locale.value, 'realisations').only(['_path', 'title']).findSurround({ _path: fullPath })
 
 useHead({
-  title,
+  title: data.value!.title,
 
   meta: [
-    { name: 'description', content: desc },
-    { property: 'og:title', content: title },
-    { property: 'og:description', content: desc },
-    { property: 'og:image', content: ogImage },
-    { property: 'og:image:secure_url', content: ogImage },
-    { property: 'og:image:alt', content: `${title} — ${data.value!.industry}` }
-  ]
+    { name: 'description', content: data.value!.desc },
+    { property: 'og:title', content: data.value!.title },
+    { property: 'og:description', content: data.value!.desc },
+    { property: 'og:image', content: `${config.public.baseURL}/images/${route.params.slug}_share.jpg` },
+    { property: 'og:image:secure_url', content: `${config.public.baseURL}/images/${route.params.slug}_share.jpg` },
+    { property: 'og:image:alt', content: `${data.value!.title} — ${data.value!.industry}` }
+  ],
 
-  // script: [
-  //   {
-  //     type: 'application/ld+json',
-  //     children: {
-  //       '@context': 'https://schema.org',
-  //       '@type': 'BreadcrumbList',
-  //       itemListElement: [
-  //         { '@type': 'ListItem', position: 1, name: name, item: item },
-  //         { '@type': 'ListItem', position: 2, name: title }
-  //       ]
-  //     }
-  //   }
-  // ]
+  script: [
+    {
+      type: 'application/ld+json',
+      children: {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: global.value!.name,
+            item: locale.value === 'fr' ? `${config.public.baseURL}/` : `${config.public.baseURL}/${locale.value}`
+          },
+          { '@type': 'ListItem', position: 2, name: global.value!.menu.realisations, item: `${config.public.baseURL}${localePath('realisations')}` },
+          { '@type': 'ListItem', position: 3, name: data.value!.title }
+        ]
+      }
+    }
+  ]
 })
 </script>
-
-<!-- <script>
-export default {
-  async asyncData({ $content, app, params, error }) {
-    const path = `${app.i18n.locale}/works_slug`
-    let work
-
-    try {
-      work = await $content(path, params.slug).fetch()
-    } catch (e) {
-      return error({ statusCode: 404, message: 'Page not found' })
-    }
-
-    const [prev, next] = await $content(path).only(['title', 'slug']).sortBy('position', 'asc').surround(params.slug).fetch()
-
-    return {
-      work,
-      prev,
-      next
-    }
-  },
-
-  head({ $config. public: { baseURL } }) {
-    const image = `${baseURL}/images/${this.work.slug}_share.jpg`
-    const routeItem = this.$i18n.locale === 'fr' ? `${baseURL}/` : `${baseURL}/${this.$i18n.locale}`
-
-    return {
-      title: this.work.title,
-
-      meta: [
-        { hid: 'description', name: 'description', content: this.work.description },
-        { hid: 'og:title', property: 'og:title', content: this.work.title },
-        { hid: 'og:description', property: 'og:description', content: this.work.description },
-        { hid: 'og:image', property: 'og:image', content: image },
-        { hid: 'og:image:secure_url', property: 'og:image:secure_url', content: image },
-        { hid: 'og:image:alt', property: 'og:image:alt', content: `${this.work.title} — ${this.work.industry}` }
-      ],
-
-      script: [
-        {
-          json: [
-            {
-              '@context': 'https://schema.org',
-              '@type': 'BreadcrumbList',
-              itemListElement: [
-                {
-                  '@type': 'ListItem',
-                  position: 1,
-                  name: this.$t('name'),
-                  item: routeItem
-                },
-                {
-                  '@type': 'ListItem',
-                  position: 2,
-                  name: this.$t('menu.realisations'),
-                  item: `${baseURL}${this.localePath('realisations')}`
-                },
-                {
-                  '@type': 'ListItem',
-                  position: 3,
-                  name: this.work.title
-                }
-              ]
-            }
-          ],
-          type: 'application/ld+json'
-        }
-      ]
-    }
-  }
-}
-</script> -->
 
 <style lang="scss" scoped>
 .work {
