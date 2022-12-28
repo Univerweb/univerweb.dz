@@ -1,21 +1,24 @@
 <template>
   <main class="container hero error">
-    <h1>{{ $t('error.headline') }}</h1>
-    <p v-if="error.statusCode === 404" class="lead">{{ $t('error.404') }}</p>
-    <p v-else class="lead">{{ $t('error.500') }}</p>
+    <Head>
+      <Title>{{ error.statusCode }} — {{ global!.name }}</Title>
+      <Meta name="robots" :content="'noindex, follow'" />
+    </Head>
+
+    <h1>{{ global!.error.headline }}</h1>
+    <p v-if="error.statusCode == 404" class="lead">{{ global!.error.error404 }}</p>
+    <p v-else class="lead">{{ global!.error.error500 }}</p>
   </main>
 </template>
 
 <script setup lang="ts">
+const { locale } = useI18n()
+const { data: global } = await useAsyncData('errorGlobal', () => queryContent(locale.value, 'global').only(['name', 'error']).findOne())
+
 defineProps({
   error: {
     type: Object,
     default: () => {}
   }
-})
-
-definePageMeta({
-  // titleTemplate: `${error.statusCode} — ${$t('name')}`,
-  // meta: [{ name: 'robots', content: 'noindex, follow' }]
 })
 </script>
