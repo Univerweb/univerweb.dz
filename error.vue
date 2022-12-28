@@ -8,6 +8,7 @@
     <h1>{{ global!.error.headline }}</h1>
     <p v-if="error.statusCode == 404" class="lead">{{ global!.error.error404 }}</p>
     <p v-else class="lead">{{ global!.error.error500 }}</p>
+    <button class="btn" @click="handleError">{{ global!.error.back }}</button>
   </main>
 </template>
 
@@ -21,4 +22,12 @@ defineProps({
     default: () => {}
   }
 })
+
+const handleError = () => clearError({ redirect: '/' })
 </script>
+
+<style lang="scss" scoped>
+.btn {
+  margin-top: 96px;
+}
+</style>
