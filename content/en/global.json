@@ -69,6 +69,7 @@
   "error": {
     "headline": "Oops…",
     "error404": "This page cannot be found.",
-    "error500": "An error has occurred."
+    "error500": "An error has occurred.",
+    "back": "Back to Home"
   }
 }

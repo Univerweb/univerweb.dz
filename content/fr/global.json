@@ -69,6 +69,7 @@
   "error": {
     "headline": "Oops…",
     "error404": "Cette page est introuvable.",
-    "error500": "Une erreur s'est produite."
+    "error500": "Une erreur s'est produite.",
+    "back": "Retour à l'accueil"
   }
 }
