@@ -7,34 +7,14 @@
 </template>
 
 <script setup lang="ts">
-const show = ref(false)
+const show = useShow()
+const isShow = computed(() => (show.value === true ? 'height: 100%; overflow: hidden' : ''))
 
 useHead({
-  htmlAttrs: { style: show ? 'height: 100%; overflow: hidden' : '' },
-  bodyAttrs: { style: show ? 'height: 100%; overflow: hidden' : '' }
+  htmlAttrs: { style: isShow },
+  bodyAttrs: { style: isShow }
 })
 </script>
-
-<!-- <script>
-export default {
-  // OLD Code
-  watch: {
-    $route() {
-      this.show = false
-    }
-  },
-
-  created() {
-    this.lang = this.$i18n.locale
-  },
-
-  methods: {
-    onChange(event) {
-      this.$router.replace(this.switchLocalePath(event))
-    }
-  }
-}
-</script> -->
 
 <style lang="scss">
 header {

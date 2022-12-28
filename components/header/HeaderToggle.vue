@@ -1,5 +1,5 @@
 <template>
-  <button type="button" :aria-label="t('label.menu')" class="toggle" @click="isShow">
+  <button type="button" :aria-label="global!.label.menu" class="toggle" @click="show = !show">
     <span class="top"></span>
     <span class="middle"></span>
     <span class="bottom"></span>
@@ -7,10 +7,9 @@
 </template>
 
 <script setup lang="ts">
-const { t } = useI18n()
-
-const show = ref(false)
-const isShow = () => (show.value = !show.value)
+const show = useShow()
+const { locale } = useI18n()
+const { data: global } = await useAsyncData('HeaderToggle', () => queryContent(locale.value, 'global').only(['label']).findOne())
 </script>
 
 <style lang="scss">
