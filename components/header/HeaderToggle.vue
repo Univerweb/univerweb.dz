@@ -1,5 +1,5 @@
 <template>
-  <button type="button" :aria-label="global!.label.menu" class="toggle" @click="show = !show">
+  <button v-if="global" type="button" :aria-label="global.label.menu" class="toggle" @click="show = !show">
     <span class="top"></span>
     <span class="middle"></span>
     <span class="bottom"></span>
