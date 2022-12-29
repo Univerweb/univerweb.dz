@@ -1,6 +1,6 @@
 <template>
-  <NuxtLink :to="localePath('/')" :title="t('name')" class="logo">
-    <span class="visually-hidden">{{ t('name') }}</span>
+  <NuxtLink v-if="global" :to="localePath('/')" :title="global.name" class="logo">
+    <span class="visually-hidden">{{ global.name }}</span>
     <!-- <NuxtIcon name="logos/univerweb-ar" />
     <NuxtIcon name="logos/univerweb" /> -->
   </NuxtLink>
@@ -8,9 +8,9 @@
 
 <script setup lang="ts">
 const localePath = useLocalePath()
-const { t, locale } = useI18n()
+const { locale } = useI18n()
 
-const lang = locale.value === 'ar'
+const { data: global } = await useAsyncData('HeaderLogo', () => queryContent(locale.value, 'global').only(['name']).findOne())
 </script>
 
 <style lang="scss">
