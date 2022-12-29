@@ -1,11 +1,23 @@
 <template>
-  <div class="container nav">
-    <NuxtLink v-if="prev" :to="toLink(prev.slug)" class="link prev" :data-text="$t('label.prev')"><NuxtIcon name="arrow" />{{ prev.title }}</NuxtLink>
-    <NuxtLink v-if="next" :to="toLink(next.slug)" class="link next" :data-text="$t('label.next')"><NuxtIcon name="arrow" />{{ next.title }}</NuxtLink>
+  <div class="container nav" v-if="global">
+    <NuxtLink v-if="prev" :to="prev.slug" class="link prev" :data-text="global.label.prev">
+      <NuxtIcon name="arrow" />
+      {{ prev.title }}
+    </NuxtLink>
+    <NuxtLink v-if="next" :to="prev.slug" class="link next" :data-text="global.label.next">
+      <NuxtIcon name="arrow" />
+      {{ next.title }}
+    </NuxtLink>
   </div>
 </template>
 
 <script setup lang="ts">
+const { locale } = useI18n()
+const route = useRoute()
+const localePath = useLocalePath()
+
+const { data: global } = await useAsyncData('WorkNav', () => queryContent(locale.value, 'global').only(['label']).findOne())
+
 defineProps({
   prev: {
     type: Object,
