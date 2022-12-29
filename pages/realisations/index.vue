@@ -1,6 +1,6 @@
 <template>
-  <main>
-    <AppWorks :headline="headline" :works="slug" />
+  <main v-if="works">
+    <AppWorks :headline="works[0].headline" :works="works" />
     <AppRequest />
   </main>
 </template>
@@ -10,24 +10,17 @@ const { locale } = useI18n()
 const config = useRuntimeConfig()
 
 const { data: works } = await useAsyncData('WorksPage', () =>
-  queryContent(locale.value, 'realisations').only(['title', 'desc', 'headline', 'tags', 'lead']).sort({ _id: -1 }).skip(1).find()
+  queryContent(locale.value, 'realisations').only(['title', 'desc', 'headline', 'tags', 'lead']).sort({ _id: -1 }).find()
 )
 const { data: global } = await useAsyncData('WorksGlobal', () => queryContent(locale.value, 'global').only(['name']).findOne())
 
-const title = works.value![0].title
-const desc = works.value![0].desc
-const headline = works.value![0].headline
-const slug = works.value!
-const name = global.value!.name
-const item = locale.value !== 'fr' ? `${config.public.baseURL}/${locale.value}` : `${config.public.baseURL}/`
-
 useHead({
-  title,
+  title: works.value![0].title,
 
   meta: [
-    { name: 'description', content: desc },
-    { property: 'og:title', content: title },
-    { property: 'og:description', content: desc }
+    { name: 'description', content: works.value![0].desc },
+    { property: 'og:title', content: works.value![0].title },
+    { property: 'og:description', content: works.value![0].desc }
   ],
 
   script: [
@@ -37,8 +30,13 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: name, item: item },
-          { '@type': 'ListItem', position: 2, name: title }
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: global.value!.name,
+            item: locale.value !== 'fr' ? `${config.public.baseURL}/${locale.value}` : `${config.public.baseURL}/`
+          },
+          { '@type': 'ListItem', position: 2, name: works.value![0].title }
         ]
       }
     }
