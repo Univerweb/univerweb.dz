@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper" :class="{ scrolled: scrolled }">
+  <div class="wrapper" :class="{ scrolled: y }">
     <!-- <TheSkiplinks /> -->
     <TheHeader />
     <NuxtPage />
@@ -8,14 +8,13 @@
 </template>
 
 <script setup lang="ts">
+const { y } = useWindowScroll()
 const { locale } = useI18n()
 const config = useRuntimeConfig()
 const route = useRoute()
 const i18nHead = useLocaleHead({ addSeoAttributes: true, addDirAttribute: true })
 
 const { data: global } = await useAsyncData('global', () => queryContent(locale.value, 'global').only(['name', 'title', 'desc', 'footer']).findOne())
-
-const scrolled = ref(false)
 
 useHead({
   htmlAttrs: {
@@ -98,29 +97,3 @@ useHead({
   ]
 })
 </script>
-
-<!-- <script>
-export default {
-  beforeMount() {
-    window.addEventListener('scroll', this.handleScroll)
-  },
-
-  mounted() {
-    this.scrolled = window.scrollY > 0
-    this.$nextTick(() => {
-      this.$nuxt.$loading.start()
-      setTimeout(() => this.$nuxt.$loading.finish(), 500)
-    })
-  },
-
-  beforeDestroy() {
-    window.removeEventListener('scroll', this.handleScroll)
-  },
-
-  methods: {
-    handleScroll() {
-      this.scrolled = window.scrollY > 0
-    }
-  }
-}
-</script> -->

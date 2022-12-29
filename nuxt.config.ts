@@ -21,7 +21,7 @@ export default defineNuxtConfig({
 
   css: ['@/assets/css/font.css', '@/assets/scss/main.scss', '@/assets/css/keyframes.css'],
 
-  modules: ['@nuxtjs/i18n', '@nuxt/content', '@nuxt/image-edge', '@nuxtjs/color-mode', 'nuxt-icons'],
+  modules: ['@nuxtjs/i18n', '@nuxt/content', '@nuxt/image-edge', '@nuxtjs/color-mode', '@vueuse/nuxt', 'nuxt-icons'],
 
   // plugins: [{ src: '~plugins/ga.js', mode: 'client' }],
 
