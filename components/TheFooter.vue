@@ -1,29 +1,29 @@
 <template>
-  <footer>
+  <footer v-if="global && common">
     <div>
       <address class="address" title="Adresse postale">
-        <strong>{{ footer.address.name }}</strong>
+        <strong>{{ global.footer.address.name }}</strong>
         <br />
-        {{ footer.address.streetAddress }}
+        {{ global.footer.address.streetAddress }}
         <br />
-        {{ footer.address.addressLocality }}
-        {{ postalCode }}<span v-if="coma">، </span><span v-else>, </span>
-        {{ footer.address.addressRegion }}
+        {{ global.footer.address.addressLocality }}
+        {{ common.postalCode }}<span v-if="coma">، </span><span v-else>, </span>
+        {{ global.footer.address.addressRegion }}
       </address>
 
       <p>
-        <a href="https://goo.gl/maps/MmadgQgZRBv" target="_blank" rel="noopener">{{ footer.maps }}</a>
+        <a href="https://goo.gl/maps/MmadgQgZRBv" target="_blank" rel="noopener">{{ global.footer.maps }}</a>
       </p>
 
       <p>
-        <a :href="`tel:+213${phone.slice(1).replace(/ /g, '')}`">
-          <span class="visually-hidden">{{ label.phone }}</span>
-          <span dir="ltr">{{ phone }}</span>
+        <a :href="`tel:+213${common.phone.slice(1).replace(/ /g, '')}`">
+          <span class="visually-hidden">{{ global.label.phone }}</span>
+          <span dir="ltr">{{ common.phone }}</span>
         </a>
         —
-        <a :href="`tel:+213${mobile.slice(1).replace(/ /g, '')}`">
-          <span class="visually-hidden">{{ label.mobile }}</span>
-          <span dir="ltr">{{ mobile }}</span>
+        <a :href="`tel:+213${common.mobile.slice(1).replace(/ /g, '')}`">
+          <span class="visually-hidden">{{ global.label.mobile }}</span>
+          <span dir="ltr">{{ common.mobile }}</span>
         </a>
       </p>
     </div>
@@ -32,9 +32,9 @@
       <AppAbout />
 
       <ul class="social">
-        <li v-for="(value, name) in social" :key="name">
+        <li v-for="(value, name) in common.social" :key="name">
           <a :href="value">
-            <span class="visually-hidden">{{ footer.social[name] }}</span>
+            <span class="visually-hidden">{{ global.footer.social[name] }}</span>
             <NuxtIcon :name="`${name}`" />
           </a>
         </li>
@@ -50,19 +50,19 @@
         </span>
         <Transition name="from-bottom-to-bottom" mode="out-in">
           <span v-if="colorMode.preference === 'dark'">
-            {{ footer.colorMode.dark }}
+            {{ global.footer.colorMode.dark }}
           </span>
           <span v-else-if="colorMode.preference === 'system'">
-            {{ footer.colorMode.system }}
+            {{ global.footer.colorMode.system }}
           </span>
           <span v-else-if="colorMode.preference === 'light'">
-            {{ footer.colorMode.light }}
+            {{ global.footer.colorMode.light }}
           </span>
         </Transition>
       </button>
     </div>
 
-    <p class="copy">{{ footer.copy }}</p>
+    <p class="copy">{{ global.footer.copy }}</p>
   </footer>
 </template>
 
@@ -73,12 +73,6 @@ const colorMode = useColorMode()
 const { data: global } = await useAsyncData('footerGlobal', () => queryContent(locale.value, 'global').only(['footer', 'label']).findOne())
 const { data: common } = await useAsyncData('footerCommon', () => queryContent('common').only(['social', 'phone', 'mobile', 'postalCode']).findOne())
 
-const footer = global.value!.footer
-const label = global.value!.label
-const social = common.value!.social
-const phone = common.value!.phone
-const mobile = common.value!.mobile
-const postalCode = common.value!.postalCode
 const coma = locale.value === 'ar'
 
 const setCurrentMode = () => (colorMode.preference = colorMode.preference === 'system' ? 'light' : colorMode.preference === 'light' ? 'dark' : 'system')
