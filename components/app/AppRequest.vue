@@ -1,7 +1,7 @@
 <template>
-  <div class="container request">
-    <h2 class="h3">{{ request.headline }}</h2>
-    <NuxtLink :to="localePath('contact')" :class="home" class="move-arrow">{{ request.link }}</NuxtLink>
+  <div v-if="global" class="container request">
+    <h2 class="h3">{{ global.request.headline }}</h2>
+    <NuxtLink :to="localePath('contact')" :class="home" class="move-arrow">{{ global.request.link }}</NuxtLink>
   </div>
 </template>
 
@@ -10,7 +10,6 @@ const { locale } = useI18n()
 const localePath = useLocalePath()
 
 const { data: global } = await useAsyncData('AppRequest', () => queryContent(locale.value, 'global').only(['request']).findOne())
-const request = global.value!.request
 
 defineProps({
   home: {
