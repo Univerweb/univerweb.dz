@@ -1,13 +1,13 @@
 <template>
-  <div class="about">
+  <div v-if="global" class="about">
     <p class="lead">
-      {{ about }}
+      {{ global.footer.about }}
     </p>
-    <a :href="`mailto:${baseEmail}`" class="link">
+    <a :href="`mailto:${config.public.baseEmail}`" class="link">
       <span class="visually-hidden">
-        {{ email }}
+        {{ global.label.email }}
       </span>
-      {{ baseEmail }}
+      {{ config.public.baseEmail }}
     </a>
   </div>
 </template>
@@ -16,11 +16,5 @@
 const { locale } = useI18n()
 const config = useRuntimeConfig()
 
-const globalPath = `${locale.value}/global`
-const baseEmail = config.public.baseEmail
-
-const { data: global } = await useAsyncData('about', () => queryContent(globalPath).only(['footer', 'label']).findOne())
-
-const about = global.value!.footer.about
-const email = global.value!.label.email
+const { data: global } = await useAsyncData('AppAbout', () => queryContent(locale.value, 'global').only(['footer', 'label']).findOne())
 </script>
