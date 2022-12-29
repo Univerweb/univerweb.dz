@@ -1,5 +1,5 @@
 <template>
-  <section class="container works">
+  <section v-if="global" class="container works">
     <div class="intro">
       <Component :is="h1" :class="likeH1">{{ headline }}</Component>
     </div>
@@ -7,15 +7,15 @@
       <div v-for="work in works" :key="work.slug" class="item">
         <NuxtLink :to="localePath(`/realisations/${work.slug}`)" vocab="https://schema.org/" typeof="Article">
           <div property="mainEntityOfPage" typeof="WebPage">
-            <meta property="id" :content="baseURL + localePath(`/realisations/${work.slug}`)" />
+            <meta property="id" :content="config.public.baseURL + localePath(`/realisations/${work.slug}`)" />
           </div>
           <meta property="dateCreated datePublished" :content="work.createdAt" />
           <meta property="dateModified" :content="work.updatedAt" />
           <div property="author publisher" typeof="Organization">
-            <meta property="name" :content="$t('name')" />
-            <meta property="url" :content="baseURL" />
+            <meta property="name" :content="global.name" />
+            <meta property="url" :content="config.public.baseURL" />
           </div>
-          <meta property="articleSection" :content="$t('menu.realisations')" />
+          <meta property="articleSection" :content="global.menu.realisations" />
           <meta property="description" :content="work.description" />
           <AppImg
             property="image"
@@ -37,15 +37,17 @@
       </div>
     </div>
     <Component v-if="more" :is="more" class="more">
-      <NuxtLink :to="localePath('realisations')" class="btn">{{ $t('label.more') }}<NuxtIcon name="arrow" /></NuxtLink>
+      <NuxtLink :to="localePath('realisations')" class="btn">{{ global.label.more }}<NuxtIcon name="arrow" /></NuxtLink>
     </Component>
   </section>
 </template>
 
 <script setup lang="ts">
-const localePath = useLocalePath()
+const { locale } = useI18n()
 const config = useRuntimeConfig()
-const baseURL = config.public.baseURL
+const localePath = useLocalePath()
+
+const { data: global } = await useAsyncData('AppWorks', () => queryContent(locale.value, 'global').only(['name', 'label']).findOne())
 
 defineProps({
   headline: {
