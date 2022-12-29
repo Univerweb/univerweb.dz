@@ -9,18 +9,18 @@
           <div property="mainEntityOfPage" typeof="WebPage">
             <meta property="id" :content="config.public.baseURL + localePath(`/realisations/${work.slug}`)" />
           </div>
-          <meta property="dateCreated datePublished" :content="work.createdAt" />
-          <meta property="dateModified" :content="work.updatedAt" />
+          <!-- <meta property="dateCreated datePublished" :content="work.createdAt" />
+          <meta property="dateModified" :content="work.updatedAt" /> -->
           <div property="author publisher" typeof="Organization">
             <meta property="name" :content="global.name" />
             <meta property="url" :content="config.public.baseURL" />
           </div>
           <meta property="articleSection" :content="global.menu.realisations" />
-          <meta property="description" :content="work.description" />
+          <meta property="description" :content="work.desc" />
           <AppImg
             property="image"
             :src="`/images/${work.slug}_thumbnail.jpg`"
-            :alt="work.description"
+            :alt="work.desc"
             width="588"
             height="624"
             sizes="xs:288px sm:607px md:354px lg:456px xl:588px"
@@ -47,7 +47,7 @@ const { locale } = useI18n()
 const config = useRuntimeConfig()
 const localePath = useLocalePath()
 
-const { data: global } = await useAsyncData('AppWorks', () => queryContent(locale.value, 'global').only(['name', 'label']).findOne())
+const { data: global } = await useAsyncData('AppWorks', () => queryContent(locale.value, 'global').only(['name', 'label', 'menu']).findOne())
 
 defineProps({
   headline: {
