@@ -73,8 +73,6 @@ const { locale } = useI18n()
 const route = useRoute()
 const config = useRuntimeConfig()
 
-const slug = route.params.slug
-
 const fullPath = locale.value === 'fr' ? `/${locale.value}${route.path}` : `${route.path}`
 
 const { data, error } = await useAsyncData(`${fullPath}Page`, () => {
