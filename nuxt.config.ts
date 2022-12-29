@@ -1,4 +1,14 @@
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      baseURL: process.env.BASE_URL || 'http://localhost:3000',
+      baseEmail: process.env.BASE_EMAIL,
+      managerEmail: process.env.MANAGER_EMAIL,
+      supportEmail: process.env.SUPPORT_EMAIL,
+      apiKey: process.env.API_KEY || ''
+    }
+  },
+
   vite: {
     css: {
       preprocessorOptions: {
@@ -17,30 +27,19 @@ export default defineNuxtConfig({
 
   i18n: {
     locales: [
-      { code: 'fr', iso: 'fr-FR', file: 'fr.json', name: 'Français', dir: 'ltr' },
-      { code: 'ar', iso: 'ar-DZ', file: 'ar.json', name: 'العربية', dir: 'rtl' },
-      { code: 'en', iso: 'en-US', file: 'en.json', name: 'English' }
+      { code: 'fr', iso: 'fr-FR', name: 'Français', dir: 'ltr' },
+      { code: 'ar', iso: 'ar-DZ', name: 'العربية', dir: 'rtl' },
+      { code: 'en', iso: 'en-US', name: 'English' }
     ],
     defaultLocale: 'fr',
     detectBrowserLanguage: false,
-    lazy: true,
-    langDir: 'locales',
     baseUrl: process.env.BASE_URL
   },
 
   image: {
     staticFilename: 'images/[name]-[hash][ext]'
-  },
-
-  runtimeConfig: {
-    public: {
-      baseURL: process.env.BASE_URL || 'http://localhost:3000',
-      baseEmail: process.env.BASE_EMAIL,
-      managerEmail: process.env.MANAGER_EMAIL,
-      supportEmail: process.env.SUPPORT_EMAIL,
-      apiKey: process.env.API_KEY || ''
-    }
   }
+
   // pwa: {
   //   manifest: {
   //     name: 'Univerweb',
