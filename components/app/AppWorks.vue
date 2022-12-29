@@ -4,10 +4,10 @@
       <Component :is="h1" :class="likeH1">{{ headline }}</Component>
     </div>
     <div class="details">
-      <div v-for="work in works" :key="work.slug" class="item">
-        <NuxtLink :to="localePath(`/realisations/${work.slug}`)" vocab="https://schema.org/" typeof="Article">
+      <div v-for="work in works.slice(1)" class="item">
+        <NuxtLink :to="localePath(`/realisations/${work._path.slice(17)}`)" vocab="https://schema.org/" typeof="Article">
           <div property="mainEntityOfPage" typeof="WebPage">
-            <meta property="id" :content="config.public.baseURL + localePath(`/realisations/${work.slug}`)" />
+            <meta property="id" :content="config.public.baseURL + localePath(`/realisations/${work._path.slice(17)}`)" />
           </div>
           <!-- <meta property="dateCreated datePublished" :content="work.createdAt" />
           <meta property="dateModified" :content="work.updatedAt" /> -->
@@ -19,7 +19,7 @@
           <meta property="description" :content="work.desc" />
           <AppImg
             property="image"
-            :src="`/images/${work.slug}_thumbnail.jpg`"
+            :src="`/images/${work._path.slice(17)}_thumbnail.jpg`"
             :alt="work.desc"
             width="588"
             height="624"
