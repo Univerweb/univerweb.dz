@@ -1,7 +1,7 @@
 <template>
-  <main>
-    <HomeWelcome :headline="headline" :lead="lead" />
-    <AppWorks :headline="worksHeadline" :works="slug" :h1="h1" :like-h1="likeH1" :h2="h2" :more="more" />
+  <main v-if="home && works">
+    <HomeWelcome :headline="home.headline" :lead="home.lead" />
+    <AppWorks :headline="works[0].headline" :works="works" :h1="h1" :like-h1="likeH1" :h2="h2" :more="more" />
     <AppRequest :home="likeH1" />
   </main>
 </template>
@@ -11,13 +11,8 @@ const { locale } = useI18n()
 
 const { data: home } = await useAsyncData('HomeWelcome', () => queryContent(locale.value, 'home').only(['headline', 'lead']).findOne())
 const { data: works } = await useAsyncData('AppWorks', () =>
-  queryContent(locale.value, 'realisations').only(['title', 'tags', 'lead']).limit(6).sort({ _id: -1 }).skip(1).find()
+  queryContent(locale.value, 'realisations').only(['headline', 'title', 'tags', 'lead']).limit(6).sort({ _id: -1 }).find()
 )
-
-const headline = home.value!.headline
-const lead = home.value!.lead
-const worksHeadline = works.value![0].headline
-const slug = works.value!
 
 defineProps({
   h1: {
