@@ -1,7 +1,7 @@
 <template>
-  <NuxtLink :to="localePath('realisations')" class="back">
+  <NuxtLink v-if="global" :to="localePath('realisations')" class="back">
     <NuxtIcon name="arrow" />
-    {{ title }}
+    {{ global.menu[0].title }}
   </NuxtLink>
 </template>
 
@@ -9,9 +9,7 @@
 const localePath = useLocalePath()
 const { locale } = useI18n()
 
-const { data } = await useAsyncData('workBack', () => queryContent(locale.value, 'global').only(['menu']).findOne())
-
-const title = data.value!.menu[0].title
+const { data: global } = await useAsyncData('workBack', () => queryContent(locale.value, 'global').only(['menu']).findOne())
 </script>
 
 <style lang="scss">
