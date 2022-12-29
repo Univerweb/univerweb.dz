@@ -73,6 +73,8 @@ const { locale } = useI18n()
 const route = useRoute()
 const config = useRuntimeConfig()
 
+const slug = route.params.slug
+
 const fullPath = locale.value === 'fr' ? `/${locale.value}${route.path}` : `${route.path}`
 
 const { data, error } = await useAsyncData(`${fullPath}Page`, () => {
@@ -89,7 +91,10 @@ if (error.value) {
   )
 }
 
-const [prev, next] = await queryContent(locale.value, 'realisations').only(['_path', 'title']).findSurround({ _path: fullPath })
+const [prev, next] = await queryContent(locale.value, 'realisations')
+  // .only(['_path', 'title'])
+  // .where({ _id: { $not: { $contains: 'index' } } })
+  .findSurround({ _path: fullPath })
 
 useHead({
   title: data.value!.title,
