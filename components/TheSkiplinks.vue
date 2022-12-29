@@ -1,18 +1,24 @@
 <template>
-  <div class="skip-links">
+  <div v-if="global" class="skip-links">
     <button v-scroll-to="'header'">
-      {{ $t('skiplinks.menu') }}
+      {{ global.skiplinks.menu }}
     </button>
 
     <button v-scroll-to="'main'">
-      {{ $t('skiplinks.content') }}
+      {{ global.skiplinks.content }}
     </button>
 
     <button v-scroll-to="'footer'">
-      {{ $t('skiplinks.contact') }}
+      {{ global.skiplinks.contact }}
     </button>
   </div>
 </template>
+
+<script setup lang="ts">
+const { locale } = useI18n()
+
+const { data: global } = await useAsyncData('TheSkiplinks', () => queryContent(locale.value, 'global').only(['skiplinks']).findOne())
+</script>
 
 <style lang="scss">
 .skip-links {
