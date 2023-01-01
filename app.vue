@@ -18,7 +18,7 @@ const { data: global } = await useAsyncData('global', () => queryContent(locale.
 
 useHead({
   htmlAttrs: {
-    lang: i18nHead.value.htmlAttrs!.lang,
+    lang: computed(() => i18nHead.value.htmlAttrs!.lang),
     dir: computed(() => i18nHead.value.htmlAttrs!.dir)
   },
 
