@@ -15,7 +15,7 @@ const config = useRuntimeConfig()
 const route = useRoute()
 const i18nHead = useLocaleHead({ addSeoAttributes: true, addDirAttribute: true })
 
-const { data: global } = await useAsyncData('global', () => queryContent(locale.value, 'global').only(['name', 'title', 'desc', 'footer']).findOne())
+const { data: app } = await useAsyncData('app', () => queryContent(locale.value, 'global').only(['name', 'title', 'desc', 'footer']).findOne())
 
 useHead({
   htmlAttrs: {
@@ -24,18 +24,18 @@ useHead({
   },
 
   titleTemplate: titleChunk => {
-    return titleChunk ? `${titleChunk} — ${global.value!.name}` : `${global.value!.title} — ${global.value!.name}`
+    return titleChunk ? `${titleChunk} — ${app.value!.name}` : `${app.value!.title} — ${app.value!.name}`
   },
 
   meta: [
     { name: 'theme-color', content: '#50c8f0' },
     { name: 'apple-mobile-web-app-capable', content: 'yes' },
     { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
-    { name: 'description', content: global.value!.desc },
-    { property: 'og:title', content: global.value!.title },
-    { property: 'og:description', content: global.value!.desc },
+    { name: 'description', content: app.value!.desc },
+    { property: 'og:title', content: app.value!.title },
+    { property: 'og:description', content: app.value!.desc },
     { property: 'og:type', content: 'website' },
-    { property: 'og:site_name', content: global.value!.name },
+    { property: 'og:site_name', content: app.value!.name },
     { property: 'og:url', content: `${config.public.baseURL}${route.path}` },
     {
       property: 'og:image',
@@ -48,7 +48,7 @@ useHead({
     { property: 'og:image:type', content: 'image/jpeg' },
     { property: 'og:image:width', content: 1920 },
     { property: 'og:image:height', content: 1080 },
-    { property: 'og:image:alt', content: `${global.value!.name} — ${global.value!.title}` },
+    { property: 'og:image:alt', content: `${app.value!.name} — ${app.value!.title}` },
     ...(i18nHead.value.meta || [])
   ],
 
@@ -64,7 +64,7 @@ useHead({
       children: {
         '@context': 'https://schema.org',
         '@type': 'Organization',
-        name: global.value!.name,
+        name: app.value!.name,
         url: config.public.baseURL,
         image: {
           '@type': 'ImageObject',
@@ -89,9 +89,9 @@ useHead({
         ],
         address: {
           '@type': 'PostalAddress',
-          streetAddress: `${global.value!.footer.address.streetAddress}${locale.value === 'ar' ? '، ' : ', '}${global.value!.footer.address.addressLocality}`,
+          streetAddress: `${app.value!.footer.address.streetAddress}${locale.value === 'ar' ? '، ' : ', '}${app.value!.footer.address.addressLocality}`,
           postalCode: config.public.postalCode,
-          addressLocality: `${global.value!.footer.address.addressRegion}${locale.value === 'ar' ? '، ' : ', '}${global.value!.footer.address.addressCountry}`
+          addressLocality: `${app.value!.footer.address.addressRegion}${locale.value === 'ar' ? '، ' : ', '}${app.value!.footer.address.addressCountry}`
         }
       }
     }
