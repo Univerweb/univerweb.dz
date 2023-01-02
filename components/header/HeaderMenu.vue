@@ -94,7 +94,7 @@ const { data: nav } = await useAsyncData('nav', () => queryContent(locale.value,
       transition: width $transition;
     }
     &:hover::after,
-    &.nuxt-link-active::after {
+    &.router-link-active::after {
       width: 25%;
     }
   }
