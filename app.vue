@@ -1,5 +1,6 @@
 <template>
   <div class="wrapper" :class="{ scrolled: y }">
+    <NuxtLoadingIndicator />
     <!-- <TheSkiplinks /> -->
     <TheHeader />
     <NuxtPage />
