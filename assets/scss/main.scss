@@ -31,9 +31,8 @@ body {
 }
 
 /* Nuxt Progress */
-.nuxt-progress {
-  transition: none !important;
-  background-color: #50c8f0 !important;
+.nuxt-loading-indicator {
+  background: repeating-linear-gradient(to right, $primary 0%, $secondary 50%, $primary 100%) !important;
 }
 
 /* Main */
