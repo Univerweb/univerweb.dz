@@ -1,6 +1,6 @@
 <template>
-  <NuxtLink v-if="global" :to="localePath('/')" :title="global.name" class="logo">
-    <span class="visually-hidden">{{ global.name }}</span>
+  <NuxtLink v-if="logo" :to="localePath('/')" :title="logo.name" class="logo">
+    <span class="visually-hidden">{{ logo.name }}</span>
     <template v-if="locale === 'ar'">
       <svg xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" width="155.07" height="24" viewBox="0 0 155.07 24">
         <g>
@@ -95,7 +95,7 @@
 const localePath = useLocalePath()
 const { locale } = useI18n()
 
-const { data: global } = await useAsyncData('HeaderLogo', () => queryContent(locale.value, 'global').only(['name']).findOne())
+const { data: logo } = await useAsyncData('logo', () => queryContent(locale.value, 'global').only(['name']).findOne())
 </script>
 
 <style lang="scss">
