@@ -10,7 +10,7 @@
 
     <div class="btn lang">
       <NuxtIcon name="globe" />
-      <select v-model="locale" :aria-label="nav.label.lang" @change="setLocale(locale.code)">
+      <select v-model="locale" :aria-label="nav.label.lang" @change="setLocale(locale)">
         <option v-for="locale in locales" :key="locale.code" :value="locale.code">
           {{ locale.name }}
         </option>
