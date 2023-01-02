@@ -1,5 +1,5 @@
 <template>
-  <header :class="{ show: show }">
+  <header :class="{ show: show, hide: !show }">
     <HeaderLogo />
     <HeaderMenu />
     <HeaderToggle />
@@ -8,11 +8,10 @@
 
 <script setup lang="ts">
 const show = useShow()
-const isShow = computed(() => (show.value === true ? 'height: 100%; overflow: hidden' : ''))
 
 useHead({
-  htmlAttrs: { style: isShow },
-  bodyAttrs: { style: isShow }
+  htmlAttrs: { style: computed(() => (show.value === true ? 'height: 100%; overflow: hidden' : 'height: initial; overflow: initial')) },
+  bodyAttrs: { style: computed(() => (show.value === true ? 'height: 100%; overflow: hidden' : 'height: initial; overflow: initial')) }
 })
 </script>
 
