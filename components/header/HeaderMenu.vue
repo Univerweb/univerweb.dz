@@ -1,7 +1,7 @@
 <template>
-  <nav v-if="data" class="menu">
+  <nav v-if="nav" class="menu">
     <ul>
-      <li v-for="item in data.menu">
+      <li v-for="item in nav.menu">
         <NuxtLink :to="localePath(item.path)">
           {{ item.title }}
         </NuxtLink>
@@ -10,8 +10,8 @@
 
     <div class="btn lang">
       <NuxtIcon name="globe" />
-      <select v-model="locale" :aria-label="data.label.lang" @change="setLocale(locale.code)">
-        <option v-for="locale in availableLocales" :key="locale.code" :value="locale.code">
+      <select v-model="locale" :aria-label="nav.label.lang" @change="setLocale(locale.code)">
+        <option v-for="locale in locales" :key="locale.code" :value="locale.code">
           {{ locale.name }}
         </option>
       </select>
@@ -22,17 +22,9 @@
 
 <script setup lang="ts">
 const { locale, locales, setLocale } = useI18n()
-const switchLocalePath = useSwitchLocalePath()
 const localePath = useLocalePath()
-const router = useRouter()
 
-const { data } = await useAsyncData('HeaderMenu', () => queryContent(locale.value, 'global').only(['menu', 'label']).findOne())
-
-const availableLocales = computed(() => {
-  return locales.value
-})
-
-const onChange = () => router.replace(switchLocalePath())
+const { data: nav } = await useAsyncData('nav', () => queryContent(locale.value, 'global').only(['menu', 'label']).findOne())
 </script>
 
 <style lang="scss">
