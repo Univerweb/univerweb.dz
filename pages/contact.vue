@@ -1,24 +1,24 @@
 <template>
-  <main>
+  <main v-if="contact && global">
     <div class="container details">
       <div class="item">
-        <h1 class="h2">{{ title }}</h1>
+        <h1 class="h2">{{ contact.title }}</h1>
         <AppAbout />
       </div>
     </div>
     <div id="map"></div>
     <div class="container contact">
       <div class="intro">
-        <h2>{{ other }}</h2>
+        <h2>{{ contact.other }}</h2>
       </div>
       <div class="details">
         <div class="item">
-          <h3 class="h6">{{ label.manager }}</h3>
-          <a :href="`mailto:${managerEmail}`" class="link move-arrow">{{ managerEmail }}</a>
+          <h3 class="h6">{{ global.label.manager }}</h3>
+          <a :href="`mailto:${config.public.managerEmail}`" class="link move-arrow">{{ config.public.managerEmail }}</a>
         </div>
         <div class="item">
-          <h3 class="h6">{{ label.support }}</h3>
-          <a :href="`mailto:${supportEmail}`" class="link move-arrow">{{ supportEmail }}</a>
+          <h3 class="h6">{{ global.label.support }}</h3>
+          <a :href="`mailto:${config.public.supportEmail}`" class="link move-arrow">{{ config.public.supportEmail }}</a>
         </div>
       </div>
     </div>
@@ -32,22 +32,13 @@ const config = useRuntimeConfig()
 const { data: contact } = await useAsyncData('contactPage', () => queryContent(locale.value, 'contact').only(['title', 'desc', 'other']).findOne())
 const { data: global } = await useAsyncData('contactGlobal', () => queryContent(locale.value, 'global').only(['name', 'label']).findOne())
 
-const title = contact.value!.title
-const desc = contact.value!.desc
-const name = global.value!.name
-const item = locale.value !== 'fr' ? `${config.public.baseURL}/${locale.value}` : `${config.public.baseURL}/`
-const other = contact.value!.other
-const label = global.value!.label
-const managerEmail = config.public.managerEmail
-const supportEmail = config.public.supportEmail
-
 useHead({
-  title,
+  title: contact.value!.title,
 
   meta: [
-    { name: 'description', content: desc },
-    { property: 'og:title', content: title },
-    { property: 'og:description', content: desc }
+    { name: 'description', content: contact.value!.desc },
+    { property: 'og:title', content: contact.value!.title },
+    { property: 'og:description', content: contact.value!.desc }
   ],
 
   script: [
@@ -57,8 +48,13 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: name, item: item },
-          { '@type': 'ListItem', position: 2, name: title }
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: global.value!.name,
+            item: locale.value !== 'fr' ? `${config.public.baseURL}/${locale.value}` : `${config.public.baseURL}/`
+          },
+          { '@type': 'ListItem', position: 2, name: contact.value!.title }
         ]
       }
     }
