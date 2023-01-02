@@ -1,15 +1,15 @@
 <template>
-  <main>
+  <main v-if="agency">
     <div class="container intro">
-      <h1>{{ headline }}</h1>
-      <p class="lead">{{ lead }}</p>
+      <h1>{{ agency.headline }}</h1>
+      <p class="lead">{{ agency.lead }}</p>
     </div>
     <div class="container">
       <div class="intro">
-        <h2 class="h1">{{ method.title }}</h2>
+        <h2 class="h1">{{ agency.method.title }}</h2>
       </div>
       <ol class="details">
-        <li v-for="(value, name) in method.content" :key="name" class="item">
+        <li v-for="(value, name) in agency.method.content" :key="name" class="item">
           <h3>{{ name }}</h3>
           <p class="lead">{{ value }}</p>
         </li>
@@ -17,10 +17,10 @@
     </div>
     <div class="container">
       <div class="intro">
-        <h2 class="h1">{{ choose.title }}</h2>
+        <h2 class="h1">{{ agency.choose.title }}</h2>
       </div>
       <div class="details">
-        <div v-for="(value, name) in choose.content" :key="name" class="item">
+        <div v-for="(value, name) in agency.choose.content" :key="name" class="item">
           <h3>{{ name }}</h3>
           <p class="lead">{{ value }}</p>
         </div>
@@ -39,22 +39,13 @@ const { data: agency } = await useAsyncData('agencyPage', () =>
 )
 const { data: global } = await useAsyncData('agencyGlobal', () => queryContent(locale.value, 'global').only(['name']).findOne())
 
-const title = agency.value!.title
-const desc = agency.value!.desc
-const headline = agency.value!.headline
-const lead = agency.value!.lead
-const method = agency.value!.method
-const choose = agency.value!.choose
-const name = global.value!.name
-const item = locale.value !== 'fr' ? `${config.public.baseURL}/${locale.value}` : `${config.public.baseURL}/`
-
 useHead({
-  title,
+  title: agency.value!.title,
 
   meta: [
-    { name: 'description', content: desc },
-    { property: 'og:title', content: title },
-    { property: 'og:description', content: desc }
+    { name: 'description', content: agency.value!.desc },
+    { property: 'og:title', content: agency.value!.title },
+    { property: 'og:description', content: agency.value!.desc }
   ],
 
   script: [
@@ -64,8 +55,13 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: name, item: item },
-          { '@type': 'ListItem', position: 2, name: title }
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: global.value!.name,
+            item: locale.value !== 'fr' ? `${config.public.baseURL}/${locale.value}` : `${config.public.baseURL}/`
+          },
+          { '@type': 'ListItem', position: 2, name: agency.value!.title }
         ]
       }
     }
