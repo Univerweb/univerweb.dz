@@ -3,7 +3,7 @@
     <NuxtLoadingIndicator />
     <!-- <TheSkiplinks /> -->
     <TheHeader />
-    <NuxtPage />
+    <NuxtPage :transition="{ name: 'page', mode: 'out-in' }" />
     <TheFooter />
   </div>
 </template>
