@@ -10,10 +10,10 @@
   },
 
   "menu": [
-    { "path": "realisations", "title": "Latest work" },
-    { "path": "prestations", "title": "Services" },
-    { "path": "agence", "title": "The agency" },
-    { "path": "contact", "title": "Contact" }
+    { "slug": "realisations", "title": "Latest work" },
+    { "slug": "prestations", "title": "Services" },
+    { "slug": "agence", "title": "The agency" },
+    { "slug": "contact", "title": "Contact" }
   ],
 
   "label": {
