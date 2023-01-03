@@ -1,7 +1,10 @@
 <template>
   <header :class="{ show: show, hide: !show }">
     <HeaderLogo />
-    <HeaderMenu />
+    <nav class="nav">
+      <HeaderMenu />
+      <HeaderSwitcher />
+    </nav>
     <HeaderToggle />
   </header>
 </template>
@@ -46,6 +49,37 @@ header {
     padding: 36px;
     .scrolled & {
       padding: 12px 36px;
+    }
+  }
+
+  .nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    align-content: space-between;
+    padding: 72px 24px 24px;
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none;
+    background-color: var(--bg);
+    transition: background-color $transition;
+    .show & {
+      display: grid;
+      height: 100%;
+      opacity: 1;
+      pointer-events: auto;
+    }
+    @media (min-width: $lg) {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      position: initial;
+      height: initial;
+      padding: 0;
+      opacity: 1;
+      pointer-events: auto;
     }
   }
 }
