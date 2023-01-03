@@ -1,16 +1,19 @@
 <template>
-  <header :class="{ show: show, hide: !show }">
-    <HeaderLogo />
+  <header v-if="header" :class="{ show: show, hide: !show }">
+    <HeaderLogo :title="header.name" />
     <nav class="nav">
-      <HeaderMenu />
-      <HeaderSwitcher />
+      <HeaderMenu :links="header.menu" />
+      <HeaderSwitcher :ariaLabel="header.label.lang" />
     </nav>
-    <HeaderToggle />
+    <HeaderToggle :ariaLabel="header.label.menu" />
   </header>
 </template>
 
 <script setup lang="ts">
 const show = useShow()
+const { locale } = useI18n()
+
+const { data: header } = await useAsyncData('header', () => queryContent(locale.value, 'global').only(['name', 'menu', 'label']).findOne())
 
 useHead({
   htmlAttrs: { style: computed(() => (show.value === true ? 'height: 100%; overflow: hidden' : 'height: initial; overflow: initial')) },
@@ -51,36 +54,36 @@ header {
       padding: 12px 36px;
     }
   }
+}
 
-  .nav {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    align-content: space-between;
-    padding: 72px 24px 24px;
-    z-index: -1;
-    opacity: 0;
-    pointer-events: none;
-    background-color: var(--bg);
-    transition: background-color $transition;
-    .show & {
-      display: grid;
-      height: 100%;
-      opacity: 1;
-      pointer-events: auto;
-    }
-    @media (min-width: $lg) {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: center;
-      position: initial;
-      height: initial;
-      padding: 0;
-      opacity: 1;
-      pointer-events: auto;
-    }
+.nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  align-content: space-between;
+  padding: 72px 24px 24px;
+  z-index: -1;
+  opacity: 0;
+  pointer-events: none;
+  background-color: var(--bg);
+  transition: background-color $transition;
+  .show & {
+    display: grid;
+    height: 100%;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  @media (min-width: $lg) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    position: initial;
+    height: initial;
+    padding: 0;
+    opacity: 1;
+    pointer-events: auto;
   }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <button v-if="toggle" type="button" :aria-label="toggle.label.menu" class="toggle" @click="show = !show">
+  <button type="button" :aria-label="ariaLabel" class="toggle" @click="show = !show">
     <span class="top"></span>
     <span class="middle"></span>
     <span class="bottom"></span>
@@ -8,9 +8,13 @@
 
 <script setup lang="ts">
 const show = useShow()
-const { locale } = useI18n()
 
-const { data: toggle } = await useAsyncData('toggle', () => queryContent(locale.value, 'global').only(['label']).findOne())
+defineProps({
+  ariaLabel: {
+    type: String,
+    required: true
+  }
+})
 </script>
 
 <style lang="scss">

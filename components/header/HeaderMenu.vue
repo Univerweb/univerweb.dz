@@ -1,18 +1,22 @@
 <template>
-  <ul v-if="menu" class="menu">
-    <li v-for="item in menu.menu">
-      <NuxtLink :to="localePath(item.slug)">
-        {{ item.title }}
+  <ul class="menu">
+    <li v-for="link in links">
+      <NuxtLink :to="localePath(link.slug)">
+        {{ link.title }}
       </NuxtLink>
     </li>
   </ul>
 </template>
 
 <script setup lang="ts">
-const { locale } = useI18n()
 const localePath = useLocalePath()
 
-const { data: menu } = await useAsyncData('menu', () => queryContent(locale.value, 'global').only(['menu', 'label']).findOne())
+defineProps({
+  links: {
+    type: Array<any>,
+    default: () => []
+  }
+})
 </script>
 
 <style lang="scss">
