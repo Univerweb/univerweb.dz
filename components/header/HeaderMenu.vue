@@ -2,7 +2,7 @@
   <nav v-if="nav" class="menu">
     <ul>
       <li v-for="item in nav.menu">
-        <NuxtLink :to="localePath(item.path)">
+        <NuxtLink :to="localePath(item.slug)">
           {{ item.title }}
         </NuxtLink>
       </li>
