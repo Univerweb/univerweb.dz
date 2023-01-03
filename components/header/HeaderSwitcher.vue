@@ -1,7 +1,7 @@
 <template>
-  <div v-if="switcher" class="btn switcher">
+  <div class="btn switcher">
     <NuxtIcon name="globe" />
-    <select v-model="locale" :aria-label="switcher.label.lang" @change="setLocale(locale)">
+    <select v-model="locale" :aria-label="ariaLabel" @change="setLocale(locale)">
       <option v-for="locale in locales" :key="locale.code" :value="locale.code">
         {{ locale.name }}
       </option>
@@ -13,7 +13,12 @@
 <script setup lang="ts">
 const { locale, locales, setLocale } = useI18n()
 
-const { data: switcher } = await useAsyncData('switcher', () => queryContent(locale.value, 'global').only(['menu', 'label']).findOne())
+defineProps({
+  ariaLabel: {
+    type: String,
+    required: true
+  }
+})
 </script>
 
 <style lang="scss">
