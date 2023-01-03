@@ -3,7 +3,7 @@
     <HeaderLogo :title="header.name" />
     <nav class="nav">
       <HeaderMenu :links="header.menu" />
-      <HeaderSwitcher :ariaLabel="header.label.lang" />
+      <HeaderSwitcher :ariaLabel="header.label.lang" :locales="locales" />
     </nav>
     <HeaderToggle :ariaLabel="header.label.menu" />
   </header>
@@ -11,7 +11,7 @@
 
 <script setup lang="ts">
 const show = useShow()
-const { locale } = useI18n()
+const { locale, locales } = useI18n()
 
 const { data: header } = await useAsyncData('header', () => queryContent(locale.value, 'global').only(['name', 'menu', 'label']).findOne())
 

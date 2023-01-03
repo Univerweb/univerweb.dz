@@ -2,8 +2,8 @@
   <div class="btn switcher">
     <NuxtIcon name="globe" />
     <select v-model="locale" :aria-label="ariaLabel" @change="setLocale(locale)">
-      <option v-for="locale in locales" :key="locale.code" :value="locale.code">
-        {{ locale.name }}
+      <option v-for="l in locales" :key="l.code" :value="l.code">
+        {{ l.name }}
       </option>
     </select>
     <NuxtIcon name="arrow" />
@@ -11,12 +11,16 @@
 </template>
 
 <script setup lang="ts">
-const { locale, locales, setLocale } = useI18n()
+const { locale, setLocale } = useI18n()
 
 defineProps({
   ariaLabel: {
     type: String,
     required: true
+  },
+  locales: {
+    type: Array<any>,
+    default: () => []
   }
 })
 </script>
