@@ -1,5 +1,5 @@
 <template>
-  <div class="container nav" v-if="global">
+  <div class="container workNav" v-if="global">
     <NuxtLink v-if="prev" :to="prev.slug" class="link prev" :data-text="global.label.prev">
       <NuxtIcon name="arrow" />
       {{ prev.title }}
@@ -47,7 +47,7 @@ export default {
 </script> -->
 
 <style lang="scss">
-.nav {
+.workNav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   @media (min-width: $md) {
