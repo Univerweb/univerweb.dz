@@ -11,7 +11,6 @@
 
   "menu": [
     { "slug": "realisations", "title": "Latest work" },
-    { "slug": "works", "title": "Works" },
     { "slug": "prestations", "title": "Services" },
     { "slug": "agence", "title": "The agency" },
     { "slug": "contact", "title": "Contact" }
