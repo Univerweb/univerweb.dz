@@ -1,15 +1,13 @@
 <template>
-  <NuxtLink v-if="global" :to="localePath('realisations')" class="back">
+  <NuxtLink :to="localePath('realisations')" class="back">
     <NuxtIcon name="arrow" />
-    {{ global.menu[0].title }}
+    {{ t('menu[0].title') }}
   </NuxtLink>
 </template>
 
 <script setup lang="ts">
 const localePath = useLocalePath()
-const { locale } = useI18n()
-
-const { data: global } = await useAsyncData('workBack', () => queryContent(locale.value, 'global').only(['menu']).findOne())
+const { t } = useI18n()
 </script>
 
 <style lang="scss">
