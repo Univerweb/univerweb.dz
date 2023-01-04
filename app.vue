@@ -3,19 +3,25 @@
     <NuxtLoadingIndicator />
     <!-- <TheSkiplinks /> -->
     <TheHeader />
-    <NuxtPage :transition="{ name: 'page', mode: 'out-in' }" />
+    <NuxtPage :transition="{ name: 'page', mode: 'out-in', onBeforeEnter }" />
     <TheFooter />
   </div>
 </template>
 
 <script setup lang="ts">
 const { y } = useWindowScroll()
-const { locale } = useI18n()
-const config = useRuntimeConfig()
-const route = useRoute()
-const i18nHead = useLocaleHead({ addSeoAttributes: true, addDirAttribute: true })
 
+const { finalizePendingLocaleChange } = useI18n()
+const onBeforeEnter = async () => {
+  await finalizePendingLocaleChange()
+}
+
+const { locale } = useI18n()
 const { data: app } = await useAsyncData('app', () => queryContent(locale.value, 'global').only(['name', 'title', 'desc', 'footer']).findOne())
+
+const i18nHead = useLocaleHead({ addSeoAttributes: true, addDirAttribute: true })
+const route = useRoute()
+const config = useRuntimeConfig()
 
 useHead({
   htmlAttrs: {
