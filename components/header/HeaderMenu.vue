@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-const { tm, rt, locale } = useI18n()
+const { tm, rt } = useI18n()
 const localePath = useLocalePath()
 </script>
 
