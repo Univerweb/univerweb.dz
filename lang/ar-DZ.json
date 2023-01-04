@@ -11,7 +11,6 @@
 
   "menu": [
     { "slug": "realisations", "title": "آخر الأعمال" },
-    { "slug": "works", "title": "Works" },
     { "slug": "prestations", "title": "الخدمات" },
     { "slug": "agence", "title": "الوكالة" },
     { "slug": "contact", "title": "التواصل معنا" }
