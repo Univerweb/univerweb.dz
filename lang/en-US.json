@@ -24,13 +24,16 @@
     "features": "Features",
     "industry": "Industry",
     "visit": "Visit Website",
-    "prev": "Previous",
-    "next": "Next",
     "phone": "Telephone / fax:",
     "mobile": "Mobile:",
     "email": "E-mail:",
     "manager": "Manager",
     "support": "Technical support"
+  },
+
+  "nav": {
+    "prev": "Previous",
+    "next": "Next"
   },
 
   "alt": {
