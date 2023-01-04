@@ -1,5 +1,5 @@
 <template>
-  <button type="button" :aria-label="ariaLabel" class="toggle" @click="show = !show">
+  <button type="button" :aria-label="t('label.menu')" class="toggle" @click="show = !show">
     <span class="top"></span>
     <span class="middle"></span>
     <span class="bottom"></span>
@@ -7,14 +7,8 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
 const show = useShow()
-
-defineProps({
-  ariaLabel: {
-    type: String,
-    required: true
-  }
-})
 </script>
 
 <style lang="scss">
