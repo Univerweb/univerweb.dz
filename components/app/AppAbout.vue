@@ -1,11 +1,11 @@
 <template>
-  <div v-if="global" class="about">
+  <div class="about">
     <p class="lead">
-      {{ global.footer.about }}
+      {{ t('footer.about') }}
     </p>
     <a :href="`mailto:${config.public.baseEmail}`" class="link">
       <span class="visually-hidden">
-        {{ global.label.email }}
+        {{ t('label.email') }}
       </span>
       {{ config.public.baseEmail }}
     </a>
@@ -13,8 +13,6 @@
 </template>
 
 <script setup lang="ts">
-const { locale } = useI18n()
+const { t } = useI18n()
 const config = useRuntimeConfig()
-
-const { data: global } = await useAsyncData('AppAbout', () => queryContent(locale.value, 'global').only(['footer', 'label']).findOne())
 </script>
