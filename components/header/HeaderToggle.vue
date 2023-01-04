@@ -1,5 +1,5 @@
 <template>
-  <button type="button" :aria-label="t('label.menu')" class="toggle" @click="show = !show">
+  <button type="button" :aria-label="t('toggle')" class="toggle" @click="show = !show">
     <span class="top"></span>
     <span class="middle"></span>
     <span class="bottom"></span>

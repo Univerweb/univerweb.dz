@@ -1,7 +1,7 @@
 <template>
   <div class="btn switcher">
     <NuxtIcon name="globe" />
-    <select v-model="locale" :aria-label="t('label.lang')" @change="setLocale(locale)">
+    <select v-model="locale" :aria-label="t('switcher')" @change="setLocale(locale)">
       <option v-for="l in <Array<any>>locales" :key="l.code" :value="l.code">
         {{ l.name }}
       </option>
