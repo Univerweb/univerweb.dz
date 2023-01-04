@@ -1,22 +1,16 @@
 <template>
   <ul class="menu">
-    <li v-for="link in links">
-      <NuxtLink :to="localePath(link.slug)">
-        {{ link.title }}
+    <li v-for="link in tm('menu')">
+      <NuxtLink :to="localePath(rt(link.slug))">
+        {{ rt(link.title) }}
       </NuxtLink>
     </li>
   </ul>
 </template>
 
 <script setup lang="ts">
+const { tm, rt, locale } = useI18n()
 const localePath = useLocalePath()
-
-defineProps({
-  links: {
-    type: Array<any>,
-    default: () => []
-  }
-})
 </script>
 
 <style lang="scss">

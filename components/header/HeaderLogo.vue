@@ -1,6 +1,6 @@
 <template>
-  <NuxtLink :to="localePath('/')" :title="title" class="logo">
-    <span class="visually-hidden">{{ title }}</span>
+  <NuxtLink :to="localePath('/')" :title="t('name')" class="logo">
+    <span class="visually-hidden">{{ t('name') }}</span>
 
     <svg v-if="locale === 'ar'" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" width="155.07" height="24" viewBox="0 0 155.07 24">
       <g>
@@ -89,15 +89,8 @@
 </template>
 
 <script setup lang="ts">
+const { t, locale } = useI18n()
 const localePath = useLocalePath()
-const { locale } = useI18n()
-
-defineProps({
-  title: {
-    type: String,
-    required: true
-  }
-})
 </script>
 
 <style lang="scss">

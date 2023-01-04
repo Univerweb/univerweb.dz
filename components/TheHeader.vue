@@ -1,19 +1,16 @@
 <template>
-  <header v-if="header" :class="{ show: show, hide: !show }">
-    <HeaderLogo :title="header.name" />
+  <header :class="{ show: show, hide: !show }">
+    <HeaderLogo />
     <nav class="nav">
-      <HeaderMenu :links="header.menu" />
-      <HeaderSwitcher :ariaLabel="header.label.lang" :locales="locales" />
+      <HeaderMenu />
+      <HeaderSwitcher />
     </nav>
-    <HeaderToggle :ariaLabel="header.label.menu" />
+    <HeaderToggle />
   </header>
 </template>
 
 <script setup lang="ts">
 const show = useShow()
-const { locale, locales } = useI18n()
-
-const { data: header } = await useAsyncData('header', () => queryContent(locale.value, 'global').only(['name', 'menu', 'label']).findOne())
 
 useHead({
   htmlAttrs: { style: computed(() => (show.value === true ? 'height: 100%; overflow: hidden' : 'height: initial; overflow: initial')) },

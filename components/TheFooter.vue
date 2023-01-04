@@ -1,28 +1,28 @@
 <template>
-  <footer v-if="global && common">
+  <footer v-if="common">
     <div>
       <address class="address" title="Adresse postale">
-        <strong>{{ global.footer.address.name }}</strong>
+        <strong>{{ t('name') }}</strong>
         <br />
-        {{ global.footer.address.streetAddress }}
+        {{ t('footer.address.streetAddress') }}
         <br />
-        {{ global.footer.address.addressLocality }}
+        {{ t('footer.address.addressLocality') }}
         {{ common.postalCode }}<span v-if="coma">، </span><span v-else>, </span>
-        {{ global.footer.address.addressRegion }}
+        {{ t('footer.address.addressRegion') }}
       </address>
 
       <p>
-        <a href="https://goo.gl/maps/MmadgQgZRBv" target="_blank" rel="noopener">{{ global.footer.maps }}</a>
+        <a href="https://goo.gl/maps/MmadgQgZRBv" target="_blank" rel="noopener">{{ t('footer.maps') }}</a>
       </p>
 
       <p>
         <a :href="`tel:+213${common.phone.slice(1).replace(/ /g, '')}`">
-          <span class="visually-hidden">{{ global.label.phone }}</span>
+          <span class="visually-hidden">{{ t('label.phone') }}</span>
           <span dir="ltr">{{ common.phone }}</span>
         </a>
         —
         <a :href="`tel:+213${common.mobile.slice(1).replace(/ /g, '')}`">
-          <span class="visually-hidden">{{ global.label.mobile }}</span>
+          <span class="visually-hidden">{{ t('label.mobile') }}</span>
           <span dir="ltr">{{ common.mobile }}</span>
         </a>
       </p>
@@ -34,7 +34,7 @@
       <ul class="social">
         <li v-for="(value, name) in common.social" :key="name">
           <a :href="value">
-            <span class="visually-hidden">{{ global.footer.social[name] }}</span>
+            <span class="visually-hidden">{{ t(`footer.social.${name}`) }}</span>
             <NuxtIcon :name="`${name}`" />
           </a>
         </li>
@@ -50,27 +50,26 @@
         </span>
         <Transition name="from-bottom-to-bottom" mode="out-in">
           <span v-if="colorMode.preference === 'dark'">
-            {{ global.footer.colorMode.dark }}
+            {{ t('footer.colorMode.dark') }}
           </span>
           <span v-else-if="colorMode.preference === 'system'">
-            {{ global.footer.colorMode.system }}
+            {{ t('footer.colorMode.system') }}
           </span>
           <span v-else-if="colorMode.preference === 'light'">
-            {{ global.footer.colorMode.light }}
+            {{ t('footer.colorMode.light') }}
           </span>
         </Transition>
       </button>
     </div>
 
-    <p class="copy">{{ global.footer.copy }}</p>
+    <p class="copy">{{ t('footer.copy') }}</p>
   </footer>
 </template>
 
 <script setup lang="ts">
-const { locale } = useI18n()
+const { locale, t } = useI18n()
 const colorMode = useColorMode()
 
-const { data: global } = await useAsyncData('footerGlobal', () => queryContent(locale.value, 'global').only(['footer', 'label']).findOne())
 const { data: common } = await useAsyncData('footerCommon', () => queryContent('common').only(['social', 'phone', 'mobile', 'postalCode']).findOne())
 
 const coma = locale.value === 'ar'
