@@ -31,13 +31,12 @@
 </template>
 
 <script setup lang="ts">
-const { locale } = useI18n()
+const { locale, t } = useI18n()
 const config = useRuntimeConfig()
 
 const { data: agency } = await useAsyncData('agencyPage', () =>
   queryContent(locale.value, 'agence').only(['title', 'desc', 'headline', 'lead', 'method', 'choose']).findOne()
 )
-const { data: global } = await useAsyncData('agencyGlobal', () => queryContent(locale.value, 'global').only(['name']).findOne())
 
 useHead({
   title: agency.value!.title,
@@ -58,7 +57,7 @@ useHead({
           {
             '@type': 'ListItem',
             position: 1,
-            name: global.value!.name,
+            name: t('name'),
             item: locale.value !== 'fr' ? `${config.public.baseURL}/${locale.value}` : `${config.public.baseURL}/`
           },
           { '@type': 'ListItem', position: 2, name: agency.value!.title }

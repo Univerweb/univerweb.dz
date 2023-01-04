@@ -1,5 +1,5 @@
 <template>
-  <main v-if="contact && global">
+  <main v-if="contact">
     <div class="container details">
       <div class="item">
         <h1 class="h2">{{ contact.title }}</h1>
@@ -13,11 +13,11 @@
       </div>
       <div class="details">
         <div class="item">
-          <h3 class="h6">{{ global.label.manager }}</h3>
+          <h3 class="h6">{{ t('label.manager') }}</h3>
           <a :href="`mailto:${config.public.managerEmail}`" class="link move-arrow">{{ config.public.managerEmail }}</a>
         </div>
         <div class="item">
-          <h3 class="h6">{{ global.label.support }}</h3>
+          <h3 class="h6">{{ t('label.support') }}</h3>
           <a :href="`mailto:${config.public.supportEmail}`" class="link move-arrow">{{ config.public.supportEmail }}</a>
         </div>
       </div>
@@ -26,11 +26,10 @@
 </template>
 
 <script setup lang="ts">
-const { locale } = useI18n()
+const { locale, t } = useI18n()
 const config = useRuntimeConfig()
 
 const { data: contact } = await useAsyncData('contactPage', () => queryContent(locale.value, 'contact').only(['title', 'desc', 'other']).findOne())
-const { data: global } = await useAsyncData('contactGlobal', () => queryContent(locale.value, 'global').only(['name', 'label']).findOne())
 
 useHead({
   title: contact.value!.title,
@@ -51,7 +50,7 @@ useHead({
           {
             '@type': 'ListItem',
             position: 1,
-            name: global.value!.name,
+            name: t('name'),
             item: locale.value !== 'fr' ? `${config.public.baseURL}/${locale.value}` : `${config.public.baseURL}/`
           },
           { '@type': 'ListItem', position: 2, name: contact.value!.title }

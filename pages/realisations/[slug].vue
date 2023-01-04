@@ -1,5 +1,5 @@
 <template>
-  <main id="main" class="work" v-if="data && global">
+  <main id="main" class="work" v-if="data">
     <article vocab="https://schema.org/" typeof="Article">
       <div property="mainEntityOfPage" typeof="WebPage">
         <meta property="id" :content="`${config.public.baseURL}${route.path}`" />
@@ -7,10 +7,10 @@
       <!-- <meta property="dateCreated datePublished" :content="data.createdAt" /> -->
       <!-- <meta property="dateModified" :content="data.updatedAt" /> -->
       <div property="author publisher" typeof="Organization">
-        <meta property="name" :content="global.name" />
+        <meta property="name" :content="t('name')" />
         <meta property="url" :content="config.public.baseURL" />
       </div>
-      <meta property="articleSection" :content="global.menu.realisations" />
+      <meta property="articleSection" :content="t('menu[0].title')" />
       <meta property="description" :content="data.desc" />
       <div class="container intro">
         <WorkBack />
@@ -27,17 +27,17 @@
       <div class="container client">
         <div class="details">
           <div class="item">
-            <h2 class="h6">{{ global.label.client }}</h2>
+            <h2 class="h6">{{ t('label.client') }}</h2>
             <p class="lead">{{ data.title }}</p>
           </div>
           <div class="item">
-            <h2 class="h6">{{ global.label.features }}</h2>
+            <h2 class="h6">{{ t('label.features') }}</h2>
             <ul class="lead tags">
               <li v-for="tag in data.tags" :key="tag" property="keywords">{{ tag }}</li>
             </ul>
           </div>
           <div class="item">
-            <h2 class="h6">{{ global.label.industry }}</h2>
+            <h2 class="h6">{{ t('label.industry') }}</h2>
             <p class="lead">{{ data.industry }}</p>
           </div>
         </div>
@@ -47,13 +47,13 @@
           <div class="item">
             <div class="inner">
               <p property="articleBody" class="lead">{{ data.lead }}</p>
-              <a :href="data.link" class="link">{{ global.label.visit }}</a>
+              <a :href="data.link" class="link">{{ t('label.visit') }}</a>
             </div>
           </div>
           <div class="item card">
             <AppImg
               :src="`/images/${route.params.slug}_preview.jpg`"
-              :alt="`${global.alt.workpage} ${data.title}`"
+              :alt="`${t('alt.workpage')} ${data.title}`"
               sizes="xs:288px sm:607px md:719px lg:619px xl:1280px"
             />
           </div>
@@ -69,7 +69,7 @@
 import { createError } from 'h3'
 
 const localePath = useLocalePath()
-const { locale } = useI18n()
+const { locale, t } = useI18n()
 const route = useRoute()
 const config = useRuntimeConfig()
 
@@ -78,7 +78,6 @@ const fullPath = locale.value === 'fr' ? `/${locale.value}${route.path}` : `${ro
 const { data, error } = await useAsyncData(`${fullPath}Page`, () => {
   return queryContent().where({ _path: fullPath }).only(['title', 'desc', 'tags', 'industry', 'lead', 'link']).findOne()
 })
-const { data: global } = await useAsyncData('workGlobal', () => queryContent(locale.value, 'global').only(['name', 'menu', 'label', 'alt']).findOne())
 
 if (error.value) {
   showError(
@@ -116,10 +115,10 @@ useHead({
           {
             '@type': 'ListItem',
             position: 1,
-            name: global.value!.name,
+            name: t('name'),
             item: locale.value === 'fr' ? `${config.public.baseURL}/` : `${config.public.baseURL}/${locale.value}`
           },
-          { '@type': 'ListItem', position: 2, name: global.value!.menu.realisations, item: `${config.public.baseURL}${localePath('realisations')}` },
+          { '@type': 'ListItem', position: 2, name: t('menu[0].title'), item: `${config.public.baseURL}${localePath('realisations')}` },
           { '@type': 'ListItem', position: 3, name: data.value!.title }
         ]
       }
