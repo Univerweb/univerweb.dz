@@ -4,25 +4,25 @@
       <address class="address" title="Adresse postale">
         <strong>{{ t('name') }}</strong>
         <br />
-        {{ t('footer.address.streetAddress') }}
+        {{ t('address.streetAddress') }}
         <br />
-        {{ t('footer.address.addressLocality') }}
+        {{ t('address.addressLocality') }}
         {{ common.postalCode }}<span v-if="coma">، </span><span v-else>, </span>
-        {{ t('footer.address.addressRegion') }}
+        {{ t('address.addressRegion') }}
       </address>
 
       <p>
-        <a href="https://goo.gl/maps/MmadgQgZRBv" target="_blank" rel="noopener">{{ t('footer.maps') }}</a>
+        <a href="https://goo.gl/maps/MmadgQgZRBv" target="_blank" rel="noopener">{{ t('maps') }}</a>
       </p>
 
       <p>
         <a :href="`tel:+213${common.phone.slice(1).replace(/ /g, '')}`">
-          <span class="visually-hidden">{{ t('label.phone') }}</span>
+          <span class="visually-hidden">{{ t('phone') }}</span>
           <span dir="ltr">{{ common.phone }}</span>
         </a>
         —
         <a :href="`tel:+213${common.mobile.slice(1).replace(/ /g, '')}`">
-          <span class="visually-hidden">{{ t('label.mobile') }}</span>
+          <span class="visually-hidden">{{ t('mobile') }}</span>
           <span dir="ltr">{{ common.mobile }}</span>
         </a>
       </p>
@@ -34,7 +34,7 @@
       <ul class="social">
         <li v-for="(value, name) in common.social" :key="name">
           <a :href="value">
-            <span class="visually-hidden">{{ t(`footer.social.${name}`) }}</span>
+            <span class="visually-hidden">{{ t(`social.${name}`) }}</span>
             <NuxtIcon :name="`${name}`" />
           </a>
         </li>
@@ -50,19 +50,19 @@
         </span>
         <Transition name="from-bottom-to-bottom" mode="out-in">
           <span v-if="colorMode.preference === 'dark'">
-            {{ t('footer.colorMode.dark') }}
+            {{ t('colorMode.dark') }}
           </span>
           <span v-else-if="colorMode.preference === 'system'">
-            {{ t('footer.colorMode.system') }}
+            {{ t('colorMode.system') }}
           </span>
           <span v-else-if="colorMode.preference === 'light'">
-            {{ t('footer.colorMode.light') }}
+            {{ t('colorMode.light') }}
           </span>
         </Transition>
       </button>
     </div>
 
-    <p class="copy">{{ t('footer.copy') }}</p>
+    <p class="copy">{{ t('copy') }}</p>
   </footer>
 </template>
 

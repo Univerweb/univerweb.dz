@@ -92,9 +92,9 @@ useHead({
         ],
         address: {
           '@type': 'PostalAddress',
-          streetAddress: `${t('footer.address.streetAddress')}${locale.value === 'ar' ? '، ' : ', '}${t('footer.address.addressLocality')}`,
+          streetAddress: `${t('address.streetAddress')}${locale.value === 'ar' ? '، ' : ', '}${t('address.addressLocality')}`,
           postalCode: config.public.postalCode,
-          addressLocality: `${t('footer.address.addressRegion')}${locale.value === 'ar' ? '، ' : ', '}${t('footer.address.addressCountry')}`
+          addressLocality: `${t('address.addressRegion')}${locale.value === 'ar' ? '، ' : ', '}${t('address.addressCountry')}`
         }
       }
     }

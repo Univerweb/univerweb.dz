@@ -13,11 +13,11 @@
       </div>
       <div class="details">
         <div class="item">
-          <h3 class="h6">{{ t('label.manager') }}</h3>
+          <h3 class="h6">{{ t('contact.manager') }}</h3>
           <a :href="`mailto:${config.public.managerEmail}`" class="link move-arrow">{{ config.public.managerEmail }}</a>
         </div>
         <div class="item">
-          <h3 class="h6">{{ t('label.support') }}</h3>
+          <h3 class="h6">{{ t('contact.support') }}</h3>
           <a :href="`mailto:${config.public.supportEmail}`" class="link move-arrow">{{ config.public.supportEmail }}</a>
         </div>
       </div>

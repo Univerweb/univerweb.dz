@@ -27,17 +27,17 @@
       <div class="container client">
         <div class="details">
           <div class="item">
-            <h2 class="h6">{{ t('label.client') }}</h2>
+            <h2 class="h6">{{ t('work.client') }}</h2>
             <p class="lead">{{ data.title }}</p>
           </div>
           <div class="item">
-            <h2 class="h6">{{ t('label.features') }}</h2>
+            <h2 class="h6">{{ t('work.features') }}</h2>
             <ul class="lead tags">
               <li v-for="tag in data.tags" :key="tag" property="keywords">{{ tag }}</li>
             </ul>
           </div>
           <div class="item">
-            <h2 class="h6">{{ t('label.industry') }}</h2>
+            <h2 class="h6">{{ t('work.industry') }}</h2>
             <p class="lead">{{ data.industry }}</p>
           </div>
         </div>
@@ -47,13 +47,13 @@
           <div class="item">
             <div class="inner">
               <p property="articleBody" class="lead">{{ data.lead }}</p>
-              <a :href="data.link" class="link">{{ t('label.visit') }}</a>
+              <a :href="data.link" class="link">{{ t('work.visit') }}</a>
             </div>
           </div>
           <div class="item card">
             <AppImg
               :src="`/images/${route.params.slug}_preview.jpg`"
-              :alt="`${t('alt.workpage')} ${data.title}`"
+              :alt="`${t('work.alt')} ${data.title}`"
               sizes="xs:288px sm:607px md:719px lg:619px xl:1280px"
             />
           </div>

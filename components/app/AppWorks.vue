@@ -37,7 +37,7 @@
       </div>
     </div>
     <Component v-if="more" :is="more" class="more">
-      <NuxtLink :to="localePath('realisations')" class="btn">{{ t('label.more') }}<NuxtIcon name="arrow" /></NuxtLink>
+      <NuxtLink :to="localePath('realisations')" class="btn">{{ t('home.more') }}<NuxtIcon name="arrow" /></NuxtLink>
     </Component>
   </section>
 </template>

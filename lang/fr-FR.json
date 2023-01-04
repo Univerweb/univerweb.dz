@@ -15,18 +15,52 @@
     { "slug": "agence", "title": "L'agence" },
     { "slug": "contact", "title": "Contact" }
   ],
+  "switcher": "Choisir la langue",
+  "toggle": "Ouvrir le menu",
 
-  "label": {
-    "menu": "Ouvrir le menu",
-    "lang": "Choisir la langue",
-    "more": "Plus de bonheur",
+  "request": {
+    "headline": "Convaincu ? Prenons un café ensemble.",
+    "link": "Contactez-nous"
+  },
+
+  "address": {
+    "name": "@:name Eurl",
+    "streetAddress": "62 Coop. El Mebnia",
+    "addressLocality": "Birkhadem",
+    "addressRegion": "Alger",
+    "addressCountry": "Algérie"
+  },
+  "maps": "Obtenir un itinéraire",
+  "phone": "Téléphone / fax",
+  "mobile": "Mobile",
+  "about": "Créer des sites web professionnels, c'est ce que nous faisons. Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
+  "email": "E-mail",
+  "social": {
+    "twitter": "Rejoignez-nous sur Twitter",
+    "facebook": "Rejoignez-nous sur Facebook",
+    "linkedin": "Rejoignez-nous sur LinkedIn",
+    "github": "Rejoignez-nous sur GitHub"
+  },
+  "colorMode": {
+    "dark": "Sombre",
+    "system": "Système",
+    "light": "Clair"
+  },
+  "copy": "Copyright 2023 @:name{'.'} Tous droits réservés.",
+
+  "home": {
+    "more": "Plus de bonheur"
+  },
+
+  "work": {
     "client": "Client",
     "features": "Fonctionnalités",
     "industry": "Secteur",
     "visit": "Visiter le site web",
-    "phone": "Téléphone / fax :",
-    "mobile": "Mobile :",
-    "email": "E-mail :",
+    "alt": "Un aperçu du site web de"
+  },
+
+  "contact": {
     "manager": "Gérant",
     "support": "Soutien technique"
   },
@@ -34,39 +68,6 @@
   "nav": {
     "prev": "Précédent",
     "next": "Suivant"
-  },
-
-  "alt": {
-    "workpage": "Un aperçu du site web de"
-  },
-
-  "footer": {
-    "address": {
-      "name": "@:name Eurl",
-      "streetAddress": "62 Coop. El Mebnia",
-      "addressLocality": "Birkhadem",
-      "addressRegion": "Alger",
-      "addressCountry": "Algérie"
-    },
-    "maps": "Obtenir un itinéraire",
-    "about": "Créer des sites web professionnels, c'est ce que nous faisons. Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
-    "social": {
-      "twitter": "Rejoignez-nous sur Twitter",
-      "facebook": "Rejoignez-nous sur Facebook",
-      "linkedin": "Rejoignez-nous sur LinkedIn",
-      "github": "Rejoignez-nous sur GitHub"
-    },
-    "colorMode": {
-      "dark": "Sombre",
-      "system": "Système",
-      "light": "Clair"
-    },
-    "copy": "Copyright 2022 @:name{'.'} Tous droits réservés."
-  },
-
-  "request": {
-    "headline": "Convaincu ? Prenons un café ensemble.",
-    "link": "Contactez-nous"
   },
 
   "error": {
