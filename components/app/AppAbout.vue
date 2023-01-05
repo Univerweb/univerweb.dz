@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <p class="lead">
-      {{ t('about') }}
+      {{ t('contact.about') }}
     </p>
     <a :href="`mailto:${config.public.baseEmail}`" class="link">
       <span class="visually-hidden">
