@@ -42,23 +42,20 @@
     </div>
 
     <div class="colorSwitcher">
-      <button class="btn" @click="setCurrentMode">
-        <span>
-          <NuxtIcon name="dark" filled :class="colorMode.preference === 'dark' ? 'show' : 'hide'" />
-          <NuxtIcon name="system" filled :class="colorMode.preference === 'system' ? 'show' : 'hide'" />
-          <NuxtIcon name="light" filled :class="colorMode.preference === 'light' ? 'show' : 'hide'" />
-        </span>
-        <Transition name="from-bottom-to-bottom" mode="out-in">
-          <span v-if="colorMode.preference === 'dark'">
+      <button @click="toggleDark">
+        <template v-if="color.value === 'dark'">
+          <NuxtIcon name="dark" :class="color.value === 'dark' ? 'show' : 'hide'" />
+          <span class="visually-hidden">
             {{ t('colorMode.dark') }}
           </span>
-          <span v-else-if="colorMode.preference === 'system'">
-            {{ t('colorMode.system') }}
-          </span>
-          <span v-else-if="colorMode.preference === 'light'">
+        </template>
+
+        <template v-else>
+          <NuxtIcon name="light" :class="color.value === 'light' ? 'show' : 'hide'" />
+          <span class="visually-hidden">
             {{ t('colorMode.light') }}
           </span>
-        </Transition>
+        </template>
       </button>
     </div>
 
@@ -68,9 +65,11 @@
 
 <script setup lang="ts">
 const { locale, t, tm, rt } = useI18n()
-const colorMode = useColorMode()
+const color = useColorMode()
 
-const setCurrentMode = () => (colorMode.preference = colorMode.preference === 'system' ? 'light' : colorMode.preference === 'light' ? 'dark' : 'system')
+const toggleDark = () => {
+  color.preference = color.value === 'dark' ? 'light' : 'dark'
+}
 </script>
 
 <style lang="scss">
@@ -133,42 +132,15 @@ footer {
     @media (min-width: $lg) {
       justify-self: end;
     }
-    .btn {
-      width: 140px;
+    button {
+      background-color: transparent;
+      color: var(--secondary);
       outline: 0;
-      span:first-child {
-        position: relative;
-        width: 16px;
-        height: 16px;
-        svg {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 16px;
-          height: 16px;
-        }
-        .show {
-          animation: show-icon 300ms forwards;
-        }
-        .hide {
-          animation: hide-icon 300ms forwards;
-        }
+      .show {
+        animation: show-icon 300ms forwards;
       }
-      .from-bottom-to-bottom-enter-active {
-        opacity: 1;
-        transition: opacity 100ms, transform 100ms cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      .from-bottom-to-bottom-leave-active {
-        opacity: 1;
-        transition: opacity 100ms, transform 100ms cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      .from-bottom-to-bottom-enter {
-        opacity: 0;
-        transform: scaleY(0);
-      }
-      .from-bottom-to-bottom-leave-active {
-        opacity: 0;
-        transform: scaleY(0);
+      .hide {
+        animation: hide-icon 300ms forwards;
       }
     }
   }
