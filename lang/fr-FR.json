@@ -27,23 +27,28 @@
     "name": "@:name Eurl",
     "streetAddress": "62 Coop. El Mebnia",
     "addressLocality": "Birkhadem",
+    "postalCode": "16029",
     "addressRegion": "Alger",
     "addressCountry": "Algérie"
   },
   "maps": "Obtenir un itinéraire",
-  "phone": "Téléphone / fax",
-  "mobile": "Mobile",
-  "about": "Créer des sites web professionnels, c'est ce que nous faisons. Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
-  "email": "E-mail",
-  "social": {
-    "twitter": "Rejoignez-nous sur Twitter",
-    "facebook": "Rejoignez-nous sur Facebook",
-    "linkedin": "Rejoignez-nous sur LinkedIn",
-    "github": "Rejoignez-nous sur GitHub"
+  "phone": {
+    "label": "Téléphone / fax",
+    "value": "021 44 08 11"
   },
+  "mobile": {
+    "label": "Mobile",
+    "value": "0551 90 46 22"
+  },
+  "email": "E-mail",
+  "socials": [
+    { "name": "twitter", "value": "Rejoignez-nous sur Twitter", "url": "https://twitter.com/Univerweb" },
+    { "name": "facebook", "value": "Rejoignez-nous sur Facebook", "url": "https://www.facebook.com/Univerweb" },
+    { "name": "linkedin", "value": "Rejoignez-nous sur LinkedIn", "url": "https://www.linkedin.com/company/Univerweb" },
+    { "name": "github", "value": "Rejoignez-nous sur GitHub", "url": "https://github.com/Univerweb" }
+  ],
   "colorMode": {
     "dark": "Sombre",
-    "system": "Système",
     "light": "Clair"
   },
   "copy": "Copyright 2023 @:name{'.'} Tous droits réservés.",
@@ -61,6 +66,10 @@
   },
 
   "contact": {
+    "title": "Contact",
+    "desc": "Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
+    "about": "Créer des sites web professionnels, c'est ce que nous faisons. Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
+    "other": "Autres moyens de nous contacter",
     "manager": "Gérant",
     "support": "Soutien technique"
   },

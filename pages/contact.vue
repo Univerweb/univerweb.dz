@@ -1,15 +1,15 @@
 <template>
-  <main v-if="contact">
+  <main>
     <div class="container details">
       <div class="item">
-        <h1 class="h2">{{ contact.title }}</h1>
+        <h1 class="h2">{{ t('contact.title') }}</h1>
         <AppAbout />
       </div>
     </div>
     <div id="map"></div>
     <div class="container contact">
       <div class="intro">
-        <h2>{{ contact.other }}</h2>
+        <h2>{{ t('contact.other') }}</h2>
       </div>
       <div class="details">
         <div class="item">
@@ -29,15 +29,13 @@
 const { locale, t } = useI18n()
 const config = useRuntimeConfig()
 
-const { data: contact } = await useAsyncData('contactPage', () => queryContent(locale.value, 'contact').only(['title', 'desc', 'other']).findOne())
-
 useHead({
-  title: contact.value!.title,
+  title: t('contact.title'),
 
   meta: [
-    { name: 'description', content: contact.value!.desc },
-    { property: 'og:title', content: contact.value!.title },
-    { property: 'og:description', content: contact.value!.desc }
+    { name: 'description', content: t('contact.desc') },
+    { property: 'og:title', content: t('contact.title') },
+    { property: 'og:description', content: t('contact.desc') }
   ],
 
   script: [
@@ -53,7 +51,7 @@ useHead({
             name: t('name'),
             item: locale.value !== 'fr' ? `${config.public.baseURL}/${locale.value}` : `${config.public.baseURL}/`
           },
-          { '@type': 'ListItem', position: 2, name: contact.value!.title }
+          { '@type': 'ListItem', position: 2, name: t('contact.title') }
         ]
       }
     }

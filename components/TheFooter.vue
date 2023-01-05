@@ -1,5 +1,5 @@
 <template>
-  <footer v-if="common">
+  <footer>
     <div>
       <address class="address" title="Adresse postale">
         <strong>{{ t('name') }}</strong>
@@ -7,7 +7,7 @@
         {{ t('address.streetAddress') }}
         <br />
         {{ t('address.addressLocality') }}
-        {{ common.postalCode }}<span v-if="coma">، </span><span v-else>, </span>
+        {{ t('address.postalCode') }}<span v-if="locale === 'ar'"> ، </span><span v-else>, </span>
         {{ t('address.addressRegion') }}
       </address>
 
@@ -16,14 +16,14 @@
       </p>
 
       <p>
-        <a :href="`tel:+213${common.phone.slice(1).replace(/ /g, '')}`">
-          <span class="visually-hidden">{{ t('phone') }}</span>
-          <span dir="ltr">{{ common.phone }}</span>
+        <a :href="`tel:+213${t('phone.value').slice(1).replace(/ /g, '')}`">
+          <span class="visually-hidden">{{ t('phone.label') }}</span>
+          <span dir="ltr">{{ t('phone.value') }}</span>
         </a>
         —
-        <a :href="`tel:+213${common.mobile.slice(1).replace(/ /g, '')}`">
-          <span class="visually-hidden">{{ t('mobile') }}</span>
-          <span dir="ltr">{{ common.mobile }}</span>
+        <a :href="`tel:+213${t('mobile.value').slice(1).replace(/ /g, '')}`">
+          <span class="visually-hidden">{{ t('mobile.label') }}</span>
+          <span dir="ltr">{{ t('mobile.value') }}</span>
         </a>
       </p>
     </div>
@@ -32,10 +32,10 @@
       <AppAbout />
 
       <ul class="social">
-        <li v-for="(value, name) in common.social" :key="name">
-          <a :href="value">
-            <span class="visually-hidden">{{ t(`social.${name}`) }}</span>
-            <NuxtIcon :name="`${name}`" />
+        <li v-for="social in tm('socials')">
+          <a :href="rt(social.url)">
+            <span class="visually-hidden">{{ rt(social.value) }}</span>
+            <NuxtIcon :name="rt(social.name)" />
           </a>
         </li>
       </ul>
@@ -67,12 +67,8 @@
 </template>
 
 <script setup lang="ts">
-const { locale, t } = useI18n()
+const { locale, t, tm, rt } = useI18n()
 const colorMode = useColorMode()
-
-const { data: common } = await useAsyncData('footerCommon', () => queryContent('common').only(['social', 'phone', 'mobile', 'postalCode']).findOne())
-
-const coma = locale.value === 'ar'
 
 const setCurrentMode = () => (colorMode.preference = colorMode.preference === 'system' ? 'light' : colorMode.preference === 'light' ? 'dark' : 'system')
 </script>
