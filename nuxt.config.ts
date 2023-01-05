@@ -26,6 +26,9 @@ export default defineNuxtConfig({
   // plugins: [{ src: '~plugins/ga.js', mode: 'client' }],
 
   i18n: {
+    vueI18n: {
+      fallbackLocale: 'fr'
+    },
     locales: [
       { code: 'fr', file: 'fr-FR.json', iso: 'fr-FR', name: 'Français', dir: 'ltr' },
       { code: 'ar', file: 'ar-DZ.json', iso: 'ar-DZ', name: 'العربية', dir: 'rtl' },
