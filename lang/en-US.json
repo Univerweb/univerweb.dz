@@ -68,7 +68,7 @@
   },
 
   "presta": {
-    "title": "Services",
+    "title": "@:menu[1].title",
     "desc": "An accomplished web presence strategy, on technological foundations and a rigorous methodology.",
     "headline": "What we are capable of.",
     "lead": "These days anyone can make a website, including your 13 year old nephew! But who can really materialize an accomplished web presence strategy, on technological foundations and a rigorous methodology.",
@@ -90,7 +90,7 @@
   },
 
   "agency": {
-    "title": "The agency",
+    "title": "@:menu[2].title",
     "desc": "We are a young team of creative-perfectionists and passionate about our work, we like to code beautiful websites while drinking coffee in the morning.",
     "headline": "We are a web agency.",
     "lead": "Founded in 2011 in Algiers, we are a young team of creative-perfectionists and passionate about our work, we like to code beautiful websites while drinking coffee in the morning.",
@@ -115,7 +115,7 @@
   },
 
   "contact": {
-    "title": "Contact",
+    "title": "@:menu[2].title",
     "desc": "Tell us about your needs, we'd love to collaborate with you.",
     "other": "Other ways to contact us",
     "about": "Creating professional websites is what we do. Tell us about your needs, we'd love to collaborate with you.",
