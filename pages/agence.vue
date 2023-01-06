@@ -9,7 +9,7 @@
         <h2 class="h1">{{ t('agency.method.title') }}</h2>
       </div>
       <ol class="details">
-        <li v-for="(value, name) in tm('agency.method.content')" class="item">
+        <li v-for="(value, name) in <Array<string>>tm('agency.method.content')" class="item">
           <h3>{{ name }}</h3>
           <p class="lead">{{ rt(value) }}</p>
         </li>
@@ -20,7 +20,7 @@
         <h2 class="h1">{{ t('agency.choose.title') }}</h2>
       </div>
       <div class="details">
-        <div v-for="(value, name) in tm('agency.choose.content')" class="item">
+        <div v-for="(value, name) in <Array<string>>tm('agency.choose.content')" class="item">
           <h3>{{ name }}</h3>
           <p class="lead">{{ rt(value) }}</p>
         </div>
