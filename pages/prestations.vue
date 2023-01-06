@@ -11,7 +11,7 @@
       <div class="details">
         <p class="item lead">{{ t('presta.webDesign.content') }}</p>
         <ul class="item tags">
-          <li v-for="tag in tm('presta.webDesign.tags')">{{ rt(tag) }}</li>
+          <li v-for="tag in <Array<string>>tm('presta.webDesign.tags')">{{ rt(tag) }}</li>
         </ul>
       </div>
     </div>
@@ -22,7 +22,7 @@
       <div class="details">
         <p class="item lead">{{ t('presta.dev.content') }}</p>
         <ul class="item tags">
-          <li v-for="tag in tm('presta.dev.tags')">{{ rt(tag) }}</li>
+          <li v-for="tag in <Array<string>>tm('presta.dev.tags')">{{ rt(tag) }}</li>
         </ul>
       </div>
     </div>
@@ -33,7 +33,7 @@
       <div class="details">
         <p class="item lead">{{ t('presta.support.content') }}</p>
         <ul class="item tags">
-          <li v-for="tag in tm('presta.support.tags')">{{ rt(tag) }}</li>
+          <li v-for="tag in <Array<string>>tm('presta.support.tags')">{{ rt(tag) }}</li>
         </ul>
       </div>
     </div>
