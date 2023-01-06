@@ -1,39 +1,39 @@
 <template>
-  <main v-if="presta">
+  <main>
     <div class="container intro">
-      <h1>{{ presta.headline }}</h1>
-      <p class="lead">{{ presta.lead }}</p>
+      <h1>{{ t('presta.headline') }}</h1>
+      <p class="lead">{{ t('presta.lead') }}</p>
     </div>
     <div class="container prestations">
       <div class="intro">
-        <h2>{{ presta.webDesign.title }}</h2>
+        <h2>{{ t('presta.webDesign.title') }}</h2>
       </div>
       <div class="details">
-        <p class="item lead">{{ presta.webDesign.content }}</p>
+        <p class="item lead">{{ t('presta.webDesign.content') }}</p>
         <ul class="item tags">
-          <li v-for="item in presta.webDesign.tags" :key="item">{{ item }}</li>
+          <li v-for="tag in tm('presta.webDesign.tags')">{{ rt(tag) }}</li>
         </ul>
       </div>
     </div>
     <div class="container prestations">
       <div class="intro">
-        <h2>{{ presta.dev.title }}</h2>
+        <h2>{{ t('presta.dev.title') }}</h2>
       </div>
       <div class="details">
-        <p class="item lead">{{ presta.dev.content }}</p>
+        <p class="item lead">{{ t('presta.dev.content') }}</p>
         <ul class="item tags">
-          <li v-for="item in presta.dev.tags" :key="item">{{ item }}</li>
+          <li v-for="tag in tm('presta.dev.tags')">{{ rt(tag) }}</li>
         </ul>
       </div>
     </div>
     <div class="container prestations">
       <div class="intro">
-        <h2>{{ presta.support.title }}</h2>
+        <h2>{{ t('presta.support.title') }}</h2>
       </div>
       <div class="details">
-        <p class="item lead">{{ presta.support.content }}</p>
+        <p class="item lead">{{ t('presta.support.content') }}</p>
         <ul class="item tags">
-          <li v-for="item in presta.support.tags" :key="item">{{ item }}</li>
+          <li v-for="tag in tm('presta.support.tags')">{{ rt(tag) }}</li>
         </ul>
       </div>
     </div>
@@ -42,20 +42,16 @@
 </template>
 
 <script setup lang="ts">
-const { locale, t } = useI18n()
+const { locale, t, tm, rt } = useI18n()
 const config = useRuntimeConfig()
 
-const { data: presta } = await useAsyncData('prestaPage', () =>
-  queryContent(locale.value, 'prestations').only(['title', 'desc', 'headline', 'lead', 'webDesign', 'dev', 'support']).findOne()
-)
-
 useHead({
-  title: presta.value!.title,
+  title: t('presta.title'),
 
   meta: [
-    { name: 'description', content: presta.value!.desc },
-    { property: 'og:title', content: presta.value!.title },
-    { property: 'og:description', content: presta.value!.desc }
+    { name: 'description', content: t('presta.desc') },
+    { property: 'og:title', content: t('presta.title') },
+    { property: 'og:description', content: t('presta.desc') }
   ],
 
   script: [
@@ -71,7 +67,7 @@ useHead({
             name: t('name'),
             item: locale.value !== 'fr' ? `${config.public.baseURL}/${locale.value}` : `${config.public.baseURL}/`
           },
-          { '@type': 'ListItem', position: 2, name: presta.value!.title }
+          { '@type': 'ListItem', position: 2, name: t('presta.title') }
         ]
       }
     }
