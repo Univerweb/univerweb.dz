@@ -3,7 +3,7 @@
     <HeaderLogo />
     <nav class="nav">
       <HeaderMenu />
-      <HeaderSwitcher />
+      <HeaderLangSwitcher />
     </nav>
     <HeaderToggle />
   </header>
