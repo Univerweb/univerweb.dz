@@ -115,7 +115,7 @@
   },
 
   "contact": {
-    "title": "@:menu[2].title",
+    "title": "@:menu[3].title",
     "desc": "Tell us about your needs, we'd love to collaborate with you.",
     "other": "Other ways to contact us",
     "about": "Creating professional websites is what we do. Tell us about your needs, we'd love to collaborate with you.",
