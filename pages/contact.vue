@@ -1,30 +1,3 @@
-<template>
-  <main>
-    <div class="container details">
-      <div class="item">
-        <h1 class="h2">{{ t('contact.title') }}</h1>
-        <AppAbout />
-      </div>
-    </div>
-    <div id="map"></div>
-    <div class="container contact">
-      <div class="intro">
-        <h2>{{ t('contact.other') }}</h2>
-      </div>
-      <div class="details">
-        <div class="item">
-          <h3 class="h6">{{ t('contact.manager') }}</h3>
-          <a :href="`mailto:${config.public.managerEmail}`" class="link move-arrow">{{ config.public.managerEmail }}</a>
-        </div>
-        <div class="item">
-          <h3 class="h6">{{ t('contact.support') }}</h3>
-          <a :href="`mailto:${config.public.supportEmail}`" class="link move-arrow">{{ config.public.supportEmail }}</a>
-        </div>
-      </div>
-    </div>
-  </main>
-</template>
-
 <script setup lang="ts">
 const { locale, t } = useI18n()
 const config = useRuntimeConfig()
@@ -98,6 +71,39 @@ useHead({
 //   }
 // }
 </script>
+
+<template>
+  <main>
+    <div class="container details">
+      <div class="item">
+        <h1 class="h2">
+          {{ t('contact.title') }}
+        </h1>
+        <AppAbout />
+      </div>
+    </div>
+    <div id="map" />
+    <div class="container contact">
+      <div class="intro">
+        <h2>{{ t('contact.other') }}</h2>
+      </div>
+      <div class="details">
+        <div class="item">
+          <h3 class="h6">
+            {{ t('contact.manager') }}
+          </h3>
+          <a :href="`mailto:${config.public.managerEmail}`" class="link move-arrow">{{ config.public.managerEmail }}</a>
+        </div>
+        <div class="item">
+          <h3 class="h6">
+            {{ t('contact.support') }}
+          </h3>
+          <a :href="`mailto:${config.public.supportEmail}`" class="link move-arrow">{{ config.public.supportEmail }}</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</template>
 
 <style lang="scss" scoped>
 #map {

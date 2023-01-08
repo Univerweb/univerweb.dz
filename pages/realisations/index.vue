@@ -1,10 +1,3 @@
-<template>
-  <main v-if="works">
-    <AppWorks :headline="works[0].headline" :works="works" />
-    <AppRequest />
-  </main>
-</template>
-
 <script setup lang="ts">
 const { locale, t } = useI18n()
 const config = useRuntimeConfig()
@@ -42,3 +35,10 @@ useHead({
   ]
 })
 </script>
+
+<template>
+  <main v-if="works">
+    <AppWorks :headline="works[0].headline" :works="works" />
+    <AppRequest />
+  </main>
+</template>

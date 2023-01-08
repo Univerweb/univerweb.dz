@@ -1,35 +1,3 @@
-<template>
-  <main>
-    <div class="container intro">
-      <h1>{{ t('agency.headline') }}</h1>
-      <p class="lead">{{ t('agency.lead') }}</p>
-    </div>
-    <div class="container">
-      <div class="intro">
-        <h2 class="h1">{{ t('agency.method.title') }}</h2>
-      </div>
-      <ol class="details">
-        <li v-for="(value, name) in <Array<string>>tm('agency.method.content')" class="item">
-          <h3>{{ name }}</h3>
-          <p class="lead">{{ rt(value) }}</p>
-        </li>
-      </ol>
-    </div>
-    <div class="container">
-      <div class="intro">
-        <h2 class="h1">{{ t('agency.choose.title') }}</h2>
-      </div>
-      <div class="details">
-        <div v-for="(value, name) in <Array<string>>tm('agency.choose.content')" class="item">
-          <h3>{{ name }}</h3>
-          <p class="lead">{{ rt(value) }}</p>
-        </div>
-      </div>
-    </div>
-    <AppRequest />
-  </main>
-</template>
-
 <script setup lang="ts">
 const { t, tm, rt, locale } = useI18n()
 const config = useRuntimeConfig()
@@ -63,6 +31,40 @@ useHead({
   ]
 })
 </script>
+
+<template>
+  <main>
+    <div class="container intro">
+      <h1>{{ t('agency.headline') }}</h1>
+      <p class="lead">{{ t('agency.lead') }}</p>
+    </div>
+    <div class="container">
+      <div class="intro">
+        <h2 class="h1">{{ t('agency.method.title') }}</h2>
+      </div>
+      <ol class="details">
+        <li v-for="(value, name) in <Array<string>>tm('agency.method.content')" class="item">
+          <h3>{{ name }}</h3>
+          <p class="lead">
+            {{ rt(value) }}
+          </p>
+        </li>
+      </ol>
+    </div>
+    <div class="container">
+      <div class="intro">
+        <h2 class="h1">{{ t('agency.choose.title') }}</h2>
+      </div>
+      <div class="details">
+        <div v-for="(value, name) in <Array<string>>tm('agency.choose.content')" class="item">
+          <h3>{{ name }}</h3>
+          <p class="lead">{{ rt(value) }}</p>
+        </div>
+      </div>
+    </div>
+    <AppRequest />
+  </main>
+</template>
 
 <style lang="scss" scoped>
 ol {

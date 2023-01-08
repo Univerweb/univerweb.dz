@@ -1,46 +1,3 @@
-<template>
-  <main>
-    <div class="container intro">
-      <h1>{{ t('presta.headline') }}</h1>
-      <p class="lead">{{ t('presta.lead') }}</p>
-    </div>
-    <div class="container prestations">
-      <div class="intro">
-        <h2>{{ t('presta.webDesign.title') }}</h2>
-      </div>
-      <div class="details">
-        <p class="item lead">{{ t('presta.webDesign.content') }}</p>
-        <ul class="item tags">
-          <li v-for="tag in <Array<string>>tm('presta.webDesign.tags')">{{ rt(tag) }}</li>
-        </ul>
-      </div>
-    </div>
-    <div class="container prestations">
-      <div class="intro">
-        <h2>{{ t('presta.dev.title') }}</h2>
-      </div>
-      <div class="details">
-        <p class="item lead">{{ t('presta.dev.content') }}</p>
-        <ul class="item tags">
-          <li v-for="tag in <Array<string>>tm('presta.dev.tags')">{{ rt(tag) }}</li>
-        </ul>
-      </div>
-    </div>
-    <div class="container prestations">
-      <div class="intro">
-        <h2>{{ t('presta.support.title') }}</h2>
-      </div>
-      <div class="details">
-        <p class="item lead">{{ t('presta.support.content') }}</p>
-        <ul class="item tags">
-          <li v-for="tag in <Array<string>>tm('presta.support.tags')">{{ rt(tag) }}</li>
-        </ul>
-      </div>
-    </div>
-    <AppRequest />
-  </main>
-</template>
-
 <script setup lang="ts">
 const { locale, t, tm, rt } = useI18n()
 const config = useRuntimeConfig()
@@ -74,6 +31,63 @@ useHead({
   ]
 })
 </script>
+
+<template>
+  <main>
+    <div class="container intro">
+      <h1>{{ t('presta.headline') }}</h1>
+      <p class="lead">
+        {{ t('presta.lead') }}
+      </p>
+    </div>
+    <div class="container prestations">
+      <div class="intro">
+        <h2>{{ t('presta.webDesign.title') }}</h2>
+      </div>
+      <div class="details">
+        <p class="item lead">
+          {{ t('presta.webDesign.content') }}
+        </p>
+        <ul class="item tags">
+          <li v-for="tag in <Array<string>>tm('presta.webDesign.tags')">
+            {{ rt(tag) }}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container prestations">
+      <div class="intro">
+        <h2>{{ t('presta.dev.title') }}</h2>
+      </div>
+      <div class="details">
+        <p class="item lead">
+          {{ t('presta.dev.content') }}
+        </p>
+        <ul class="item tags">
+          <li v-for="tag in <Array<string>>tm('presta.dev.tags')">
+            {{ rt(tag) }}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container prestations">
+      <div class="intro">
+        <h2>{{ t('presta.support.title') }}</h2>
+      </div>
+      <div class="details">
+        <p class="item lead">
+          {{ t('presta.support.content') }}
+        </p>
+        <ul class="item tags">
+          <li v-for="tag in <Array<string>>tm('presta.support.tags')">
+            {{ rt(tag) }}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <AppRequest />
+  </main>
+</template>
 
 <style lang="scss" scoped>
 .prestations {
