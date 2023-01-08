@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const { locale, t, tm, rt } = useI18n()
+</script>
+
 <template>
   <footer>
     <div>
@@ -32,7 +36,7 @@
       <AppAbout />
 
       <ul class="social">
-        <li v-for="social in tm('socials')">
+        <li v-for="social in tm('socials')" :key="rt(social.name)">
           <a :href="rt(social.url)">
             <span class="visually-hidden">{{ rt(social.value) }}</span>
             <NuxtIcon :name="rt(social.name)" />
@@ -41,13 +45,11 @@
       </ul>
     </div>
 
-    <p class="copy">{{ t('copy') }}</p>
+    <p class="copy">
+      {{ t('copy') }}
+    </p>
   </footer>
 </template>
-
-<script setup lang="ts">
-const { locale, t, tm, rt } = useI18n()
-</script>
 
 <style lang="scss">
 footer {

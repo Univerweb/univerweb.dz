@@ -1,14 +1,14 @@
+<script setup lang="ts">
+const localePath = useLocalePath()
+const { t } = useI18n()
+</script>
+
 <template>
   <NuxtLink :to="localePath('realisations')" class="back">
     <NuxtIcon name="arrow" />
     {{ t('menu[0].title') }}
   </NuxtLink>
 </template>
-
-<script setup lang="ts">
-const localePath = useLocalePath()
-const { t } = useI18n()
-</script>
 
 <style lang="scss">
 .back {

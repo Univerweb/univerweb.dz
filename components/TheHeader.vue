@@ -1,3 +1,12 @@
+<script setup lang="ts">
+const show = useShow()
+
+useHead({
+  htmlAttrs: { style: computed(() => (show.value === true ? 'height: 100%; overflow: hidden' : 'height: initial; overflow: initial')) },
+  bodyAttrs: { style: computed(() => (show.value === true ? 'height: 100%; overflow: hidden' : 'height: initial; overflow: initial')) }
+})
+</script>
+
 <template>
   <header :class="{ show: show, hide: !show }">
     <HeaderLogo />
@@ -11,15 +20,6 @@
     <HeaderToggle />
   </header>
 </template>
-
-<script setup lang="ts">
-const show = useShow()
-
-useHead({
-  htmlAttrs: { style: computed(() => (show.value === true ? 'height: 100%; overflow: hidden' : 'height: initial; overflow: initial')) },
-  bodyAttrs: { style: computed(() => (show.value === true ? 'height: 100%; overflow: hidden' : 'height: initial; overflow: initial')) }
-})
-</script>
 
 <style lang="scss">
 header {

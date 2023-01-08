@@ -1,3 +1,30 @@
+<script setup lang="ts">
+defineProps({
+  prev: {
+    type: Object,
+    default: null
+  },
+  next: {
+    type: Object,
+    default: null
+  }
+})
+
+const { t } = useI18n()
+
+// methods: {
+//   toLink(slug) {
+//     if (slug === 'index') {
+//       return this.localePath('realisations')
+//     }
+//     return this.localePath({
+//       name: 'realisations-slug',
+//       params: { slug }
+//     })
+//   }
+// }
+</script>
+
 <template>
   <div class="container workNav">
     <NuxtLink v-if="prev" :to="prev.slug" class="link prev" :data-text="t('nav.prev')">
@@ -10,37 +37,6 @@
     </NuxtLink>
   </div>
 </template>
-
-<script setup lang="ts">
-const { t } = useI18n()
-
-defineProps({
-  prev: {
-    type: Object,
-    default: null
-  },
-  next: {
-    type: Object,
-    default: null
-  }
-})
-</script>
-
-<!-- <script>
-export default {
-  methods: {
-    toLink(slug) {
-      if (slug === 'index') {
-        return this.localePath('realisations')
-      }
-      return this.localePath({
-        name: 'realisations-slug',
-        params: { slug }
-      })
-    }
-  }
-}
-</script> -->
 
 <style lang="scss">
 .workNav {
