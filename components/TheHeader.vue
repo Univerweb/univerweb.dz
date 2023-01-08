@@ -3,7 +3,10 @@
     <HeaderLogo />
     <nav class="nav">
       <HeaderMenu />
-      <HeaderLangSwitcher />
+      <div class="switchers">
+        <HeaderLangSwitcher />
+        <HeaderColorSwitcher />
+      </div>
     </nav>
     <HeaderToggle />
   </header>
@@ -82,5 +85,10 @@ header {
     opacity: 1;
     pointer-events: auto;
   }
+}
+
+.switchers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 </style>

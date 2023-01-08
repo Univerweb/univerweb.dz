@@ -41,35 +41,12 @@
       </ul>
     </div>
 
-    <div class="colorSwitcher">
-      <button @click="toggleDark">
-        <template v-if="color.value === 'dark'">
-          <NuxtIcon name="dark" :class="color.value === 'dark' ? 'show' : 'hide'" />
-          <span class="visually-hidden">
-            {{ t('colorMode.dark') }}
-          </span>
-        </template>
-
-        <template v-else>
-          <NuxtIcon name="light" :class="color.value === 'light' ? 'show' : 'hide'" />
-          <span class="visually-hidden">
-            {{ t('colorMode.light') }}
-          </span>
-        </template>
-      </button>
-    </div>
-
     <p class="copy">{{ t('copy') }}</p>
   </footer>
 </template>
 
 <script setup lang="ts">
 const { locale, t, tm, rt } = useI18n()
-const color = useColorMode()
-
-const toggleDark = () => {
-  color.preference = color.value === 'dark' ? 'light' : 'dark'
-}
 </script>
 
 <style lang="scss">
@@ -124,24 +101,6 @@ footer {
     list-style: none;
     a {
       display: grid;
-    }
-  }
-
-  .colorSwitcher {
-    justify-self: start;
-    @media (min-width: $lg) {
-      justify-self: end;
-    }
-    button {
-      background-color: transparent;
-      color: var(--secondary);
-      outline: 0;
-      .show {
-        animation: show-icon 300ms forwards;
-      }
-      .hide {
-        animation: hide-icon 300ms forwards;
-      }
     }
   }
 
