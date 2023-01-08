@@ -12,5 +12,5 @@ export default <RouterConfig>{
     }
 
     return savedPosition || { top: 0 }
-  }
+  },
 }

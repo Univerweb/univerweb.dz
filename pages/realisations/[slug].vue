@@ -18,7 +18,7 @@ if (error.value) {
     createError({
       statusCode: 404,
       statusMessage: 'Not Found',
-    })
+    }),
   )
 }
 
@@ -45,10 +45,10 @@ useHead({
       children: {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: t('name'), item: seoItem },
-          { '@type': 'ListItem', position: 2, name: t('menu[0].title'), item: `${config.public.baseURL}${localePath('realisations')}` },
-          { '@type': 'ListItem', position: 3, name: data.value!.title },
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': t('name'), 'item': seoItem },
+          { '@type': 'ListItem', 'position': 2, 'name': t('menu[0].title'), 'item': `${config.public.baseURL}${localePath('realisations')}` },
+          { '@type': 'ListItem', 'position': 3, 'name': data.value!.title },
         ],
       },
     },
@@ -60,16 +60,16 @@ useHead({
   <main v-if="data" id="main" class="work">
     <article vocab="https://schema.org/" typeof="Article">
       <div property="mainEntityOfPage" typeof="WebPage">
-        <meta property="id" :content="`${config.public.baseURL}${route.path}`" />
+        <meta property="id" :content="`${config.public.baseURL}${route.path}`">
       </div>
       <!-- <meta property="dateCreated datePublished" :content="data.createdAt" /> -->
       <!-- <meta property="dateModified" :content="data.updatedAt" /> -->
       <div property="author publisher" typeof="Organization">
-        <meta property="name" :content="t('name')" />
-        <meta property="url" :content="config.public.baseURL" />
+        <meta property="name" :content="t('name')">
+        <meta property="url" :content="config.public.baseURL">
       </div>
-      <meta property="articleSection" :content="t('menu[0].title')" />
-      <meta property="description" :content="data.desc" />
+      <meta property="articleSection" :content="t('menu[0].title')">
+      <meta property="description" :content="data.desc">
       <div class="container intro">
         <WorkBack />
         <h1 property="headline">

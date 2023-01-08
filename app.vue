@@ -17,7 +17,7 @@ useHead({
     dir: computed(() => i18nHead.value.htmlAttrs!.dir),
   },
 
-  titleTemplate: titleChunk => {
+  titleTemplate: (titleChunk) => {
     return titleChunk ? `${titleChunk} — ${t('name')}` : `${t('title')} — ${t('name')}`
   },
 
@@ -58,34 +58,34 @@ useHead({
       children: {
         '@context': 'https://schema.org',
         '@type': 'Organization',
-        name: t('name'),
-        url: config.public.baseURL,
-        image: {
+        'name': t('name'),
+        'url': config.public.baseURL,
+        'image': {
           '@type': 'ImageObject',
-          url: locale.value === 'ar' ? `${config.public.baseURL}/images/univerweb-ar_share.jpg` : `${config.public.baseURL}/images/univerweb_share.jpg`,
-          width: '1920px',
-          height: '1080px',
+          'url': locale.value === 'ar' ? `${config.public.baseURL}/images/univerweb-ar_share.jpg` : `${config.public.baseURL}/images/univerweb_share.jpg`,
+          'width': '1920px',
+          'height': '1080px',
         },
-        logo: {
+        'logo': {
           '@type': 'ImageObject',
-          url: `${config.public.baseURL}/logo.svg`,
-          width: '512px',
-          height: '512px',
+          'url': `${config.public.baseURL}/logo.svg`,
+          'width': '512px',
+          'height': '512px',
         },
-        email: config.public.baseEmail,
-        telephone: config.public.mobile,
-        faxNumber: config.public.phone,
-        sameAs: [
+        'email': config.public.baseEmail,
+        'telephone': config.public.mobile,
+        'faxNumber': config.public.phone,
+        'sameAs': [
           'https://twitter.com/Univerweb',
           'https://www.facebook.com/Univerweb',
           'https://www.linkedin.com/company/Univerweb',
           'https://github.com/Univerweb',
         ],
-        address: {
+        'address': {
           '@type': 'PostalAddress',
-          streetAddress: `${t('address.streetAddress')}${coma.value}${t('address.addressLocality')}`,
-          postalCode: config.public.postalCode,
-          addressLocality: `${t('address.addressRegion')}${coma.value}${t('address.addressCountry')}`,
+          'streetAddress': `${t('address.streetAddress')}${coma.value}${t('address.addressLocality')}`,
+          'postalCode': config.public.postalCode,
+          'addressLocality': `${t('address.addressRegion')}${coma.value}${t('address.addressCountry')}`,
         },
       },
     },
