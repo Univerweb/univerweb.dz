@@ -41,6 +41,10 @@ export default defineNuxtConfig({
 
   image: {
     staticFilename: 'images/[name]-[hash][ext]'
+  },
+
+  colorMode: {
+    preference: 'light'
   }
 
   // pwa: {
