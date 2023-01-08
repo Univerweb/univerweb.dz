@@ -9,6 +9,7 @@ const onBeforeEnter = async () => {
 const i18nHead = useLocaleHead({ addSeoAttributes: true, addDirAttribute: true })
 const route = useRoute()
 const config = useRuntimeConfig()
+const coma = useComa()
 
 useHead({
   htmlAttrs: {
@@ -82,9 +83,9 @@ useHead({
         ],
         address: {
           '@type': 'PostalAddress',
-          streetAddress: `${t('address.streetAddress')}${locale.value === 'ar' ? '، ' : ', '}${t('address.addressLocality')}`,
+          streetAddress: `${t('address.streetAddress')}${coma.value}${t('address.addressLocality')}`,
           postalCode: config.public.postalCode,
-          addressLocality: `${t('address.addressRegion')}${locale.value === 'ar' ? '، ' : ', '}${t('address.addressCountry')}`
+          addressLocality: `${t('address.addressRegion')}${coma.value}${t('address.addressCountry')}`
         }
       }
     }
