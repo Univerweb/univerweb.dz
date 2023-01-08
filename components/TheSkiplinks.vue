@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const { t } = useI18n()
+</script>
+
 <template>
   <div class="skip-links">
     <button v-scroll-to="'header'">
@@ -13,10 +17,6 @@
     </button>
   </div>
 </template>
-
-<script setup lang="ts">
-const { t } = useI18n()
-</script>
 
 <style lang="scss">
 .skip-links {
