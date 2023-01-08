@@ -1,13 +1,3 @@
-<template>
-  <div class="wrapper" :class="{ scrolled: y }">
-    <NuxtLoadingIndicator />
-    <!-- <TheSkiplinks /> -->
-    <TheHeader />
-    <NuxtPage :transition="{ name: 'page', mode: 'out-in', onBeforeEnter }" />
-    <TheFooter />
-  </div>
-</template>
-
 <script setup lang="ts">
 const { y } = useWindowScroll()
 
@@ -101,3 +91,13 @@ useHead({
   ]
 })
 </script>
+
+<template>
+  <div class="wrapper" :class="{ scrolled: y }">
+    <NuxtLoadingIndicator />
+    <!-- <TheSkiplinks /> -->
+    <TheHeader />
+    <NuxtPage :transition="{ name: 'page', mode: 'out-in', onBeforeEnter }" />
+    <TheFooter />
+  </div>
+</template>
