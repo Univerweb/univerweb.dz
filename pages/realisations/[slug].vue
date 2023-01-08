@@ -1,70 +1,3 @@
-<template>
-  <main id="main" class="work" v-if="data">
-    <article vocab="https://schema.org/" typeof="Article">
-      <div property="mainEntityOfPage" typeof="WebPage">
-        <meta property="id" :content="`${config.public.baseURL}${route.path}`" />
-      </div>
-      <!-- <meta property="dateCreated datePublished" :content="data.createdAt" /> -->
-      <!-- <meta property="dateModified" :content="data.updatedAt" /> -->
-      <div property="author publisher" typeof="Organization">
-        <meta property="name" :content="t('name')" />
-        <meta property="url" :content="config.public.baseURL" />
-      </div>
-      <meta property="articleSection" :content="t('menu[0].title')" />
-      <meta property="description" :content="data.desc" />
-      <div class="container intro">
-        <WorkBack />
-        <h1 property="headline">{{ data.title }}</h1>
-      </div>
-      <div class="banner card">
-        <AppImg
-          property="image"
-          :src="`/images/${route.params.slug}_banner.jpg`"
-          :alt="data.desc"
-          sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw"
-        />
-      </div>
-      <div class="container client">
-        <div class="details">
-          <div class="item">
-            <h2 class="h6">{{ t('work.client') }}</h2>
-            <p class="lead">{{ data.title }}</p>
-          </div>
-          <div class="item">
-            <h2 class="h6">{{ t('work.features') }}</h2>
-            <ul class="lead tags">
-              <li v-for="tag in data.tags" :key="tag" property="keywords">{{ tag }}</li>
-            </ul>
-          </div>
-          <div class="item">
-            <h2 class="h6">{{ t('work.industry') }}</h2>
-            <p class="lead">{{ data.industry }}</p>
-          </div>
-        </div>
-      </div>
-      <div class="container project">
-        <div class="details">
-          <div class="item">
-            <div class="inner">
-              <p property="articleBody" class="lead">{{ data.lead }}</p>
-              <a :href="data.link" class="link">{{ t('work.visit') }}</a>
-            </div>
-          </div>
-          <div class="item card">
-            <AppImg
-              :src="`/images/${route.params.slug}_preview.jpg`"
-              :alt="`${t('work.alt')} ${data.title}`"
-              sizes="xs:288px sm:607px md:719px lg:619px xl:1280px"
-            />
-          </div>
-        </div>
-      </div>
-    </article>
-    <WorkNav :prev="prev" :next="next" />
-    <AppRequest />
-  </main>
-</template>
-
 <script setup lang="ts">
 import { createError } from 'h3'
 
@@ -126,6 +59,91 @@ useHead({
   ]
 })
 </script>
+
+<template>
+  <main v-if="data" id="main" class="work">
+    <article vocab="https://schema.org/" typeof="Article">
+      <div property="mainEntityOfPage" typeof="WebPage">
+        <meta property="id" :content="`${config.public.baseURL}${route.path}`" />
+      </div>
+      <!-- <meta property="dateCreated datePublished" :content="data.createdAt" /> -->
+      <!-- <meta property="dateModified" :content="data.updatedAt" /> -->
+      <div property="author publisher" typeof="Organization">
+        <meta property="name" :content="t('name')" />
+        <meta property="url" :content="config.public.baseURL" />
+      </div>
+      <meta property="articleSection" :content="t('menu[0].title')" />
+      <meta property="description" :content="data.desc" />
+      <div class="container intro">
+        <WorkBack />
+        <h1 property="headline">
+          {{ data.title }}
+        </h1>
+      </div>
+      <div class="banner card">
+        <AppImg
+          property="image"
+          :src="`/images/${route.params.slug}_banner.jpg`"
+          :alt="data.desc"
+          sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw"
+        />
+      </div>
+      <div class="container client">
+        <div class="details">
+          <div class="item">
+            <h2 class="h6">
+              {{ t('work.client') }}
+            </h2>
+            <p class="lead">
+              {{ data.title }}
+            </p>
+          </div>
+          <div class="item">
+            <h2 class="h6">
+              {{ t('work.features') }}
+            </h2>
+            <ul class="lead tags">
+              <li v-for="tag in data.tags" :key="tag" property="keywords">
+                {{ tag }}
+              </li>
+            </ul>
+          </div>
+          <div class="item">
+            <h2 class="h6">
+              {{ t('work.industry') }}
+            </h2>
+            <p class="lead">
+              {{ data.industry }}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container project">
+        <div class="details">
+          <div class="item">
+            <div class="inner">
+              <p property="articleBody" class="lead">
+                {{ data.lead }}
+              </p>
+              <a :href="data.link" class="link">{{ t('work.visit') }}</a>
+            </div>
+          </div>
+          <div class="item card">
+            <AppImg
+              :src="`/images/${route.params.slug}_preview.jpg`"
+              :alt="`${t('work.alt')} ${data.title}`"
+              sizes="xs:288px sm:607px md:719px lg:619px xl:1280px"
+            />
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <WorkNav :prev="prev" :next="next" />
+
+    <AppRequest />
+  </main>
+</template>
 
 <style lang="scss" scoped>
 .work {
