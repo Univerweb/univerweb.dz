@@ -1,6 +1,6 @@
 <script setup lang="ts">
-const { t, tm, rt, locale } = useI18n()
-const config = useRuntimeConfig()
+const { t, tm, rt } = useI18n()
+const seoItem = useSeoItem()
 
 useHead({
   title: t('agency.title'),
@@ -18,12 +18,7 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
-          {
-            '@type': 'ListItem',
-            position: 1,
-            name: t('name'),
-            item: locale.value !== 'fr' ? `${config.public.baseURL}/${locale.value}` : `${config.public.baseURL}/`
-          },
+          { '@type': 'ListItem', position: 1, name: t('name'), item: seoItem },
           { '@type': 'ListItem', position: 2, name: t('agency.title') }
         ]
       }
