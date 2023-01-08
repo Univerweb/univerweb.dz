@@ -5,18 +5,18 @@ export default defineNuxtConfig({
       baseEmail: process.env.BASE_EMAIL,
       managerEmail: process.env.MANAGER_EMAIL,
       supportEmail: process.env.SUPPORT_EMAIL,
-      apiKey: process.env.API_KEY || ''
-    }
+      apiKey: process.env.API_KEY || '',
+    },
   },
 
   vite: {
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@use "@/assets/scss/var.scss" as *; @use "@/assets/scss/mixin.scss" as *;'
-        }
-      }
-    }
+          additionalData: '@use "@/assets/scss/var.scss" as *; @use "@/assets/scss/mixin.scss" as *;',
+        },
+      },
+    },
   },
 
   css: ['@/assets/css/font.css', '@/assets/scss/main.scss', '@/assets/css/keyframes.css'],
@@ -29,23 +29,23 @@ export default defineNuxtConfig({
     locales: [
       { code: 'fr', file: 'fr-FR.json', iso: 'fr-FR', name: 'Français', dir: 'ltr' },
       { code: 'ar', file: 'ar-DZ.json', iso: 'ar-DZ', name: 'العربية', dir: 'rtl' },
-      { code: 'en', file: 'en-US.json', iso: 'en-US', name: 'English' }
+      { code: 'en', file: 'en-US.json', iso: 'en-US', name: 'English' },
     ],
     lazy: true,
     langDir: 'lang',
     skipSettingLocaleOnNavigate: true,
     defaultLocale: 'fr',
     detectBrowserLanguage: false,
-    baseUrl: process.env.BASE_URL
+    baseUrl: process.env.BASE_URL,
   },
 
   image: {
-    staticFilename: 'images/[name]-[hash][ext]'
+    staticFilename: 'images/[name]-[hash][ext]',
   },
 
   colorMode: {
-    preference: 'light'
-  }
+    preference: 'light',
+  },
 
   // pwa: {
   //   manifest: {

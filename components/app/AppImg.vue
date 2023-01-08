@@ -2,16 +2,16 @@
 defineProps({
   src: {
     type: String,
-    default: null
+    default: null,
   },
   alt: {
     type: String,
-    default: null
+    default: null,
   },
   sizes: {
     type: String,
-    default: null
-  }
+    default: null,
+  },
 })
 </script>
 

@@ -8,7 +8,7 @@ useHead({
   meta: [
     { name: 'description', content: t('presta.desc') },
     { property: 'og:title', content: t('presta.title') },
-    { property: 'og:description', content: t('presta.desc') }
+    { property: 'og:description', content: t('presta.desc') },
   ],
 
   script: [
@@ -19,11 +19,11 @@ useHead({
         '@type': 'BreadcrumbList',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: t('name'), item: seoItem },
-          { '@type': 'ListItem', position: 2, name: t('presta.title') }
-        ]
-      }
-    }
-  ]
+          { '@type': 'ListItem', position: 2, name: t('presta.title') },
+        ],
+      },
+    },
+  ],
 })
 </script>
 

@@ -12,7 +12,7 @@ useHead({
   meta: [
     { name: 'description', content: works.value![0].desc },
     { property: 'og:title', content: works.value![0].title },
-    { property: 'og:description', content: works.value![0].desc }
+    { property: 'og:description', content: works.value![0].desc },
   ],
 
   script: [
@@ -23,11 +23,11 @@ useHead({
         '@type': 'BreadcrumbList',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: t('name'), item: seoItem },
-          { '@type': 'ListItem', position: 2, name: works.value![0].title }
-        ]
-      }
-    }
-  ]
+          { '@type': 'ListItem', position: 2, name: works.value![0].title },
+        ],
+      },
+    },
+  ],
 })
 </script>
 

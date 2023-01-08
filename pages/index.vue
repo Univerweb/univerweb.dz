@@ -2,20 +2,20 @@
 defineProps({
   h1: {
     type: String,
-    default: 'h2'
+    default: 'h2',
   },
   likeH1: {
     type: String,
-    default: 'h1'
+    default: 'h1',
   },
   h2: {
     type: String,
-    default: 'h3'
+    default: 'h3',
   },
   more: {
     type: String,
-    default: 'div'
-  }
+    default: 'div',
+  },
 })
 
 const { locale } = useI18n()

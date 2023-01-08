@@ -2,28 +2,28 @@
 defineProps({
   headline: {
     type: String,
-    required: true
+    required: true,
   },
   works: {
     type: Array,
-    default: () => []
+    default: () => [],
   },
   h1: {
     type: String,
-    default: 'h1'
+    default: 'h1',
   },
   likeH1: {
     type: String,
-    default: null
+    default: null,
   },
   h2: {
     type: String,
-    default: 'h2'
+    default: 'h2',
   },
   more: {
     type: String,
-    default: null
-  }
+    default: null,
+  },
 })
 
 const { t } = useI18n()
@@ -34,7 +34,9 @@ const localePath = useLocalePath()
 <template>
   <section class="container works">
     <div class="intro">
-      <Component :is="h1" :class="likeH1">{{ headline }}</Component>
+      <Component :is="h1" :class="likeH1">
+        {{ headline }}
+      </Component>
     </div>
     <div class="details">
       <div v-for="work in <Array<any>>works.slice(1)" class="item">
@@ -58,19 +60,28 @@ const localePath = useLocalePath()
             height="624"
             sizes="xs:288px sm:607px md:354px lg:456px xl:588px"
           />
-          <div class="overlay"></div>
+          <div class="overlay" />
           <div class="inner">
-            <Component :is="h2" property="headline">{{ work.title }}</Component>
+            <Component :is="h2" property="headline">
+              {{ work.title }}
+            </Component>
             <ul class="tags">
-              <li v-for="tag in work.tags" :key="tag" property="keywords">{{ tag }}</li>
+              <li v-for="tag in work.tags" :key="tag" property="keywords">
+                {{ tag }}
+              </li>
             </ul>
-            <p property="articleBody" class="lead">{{ work.lead }}</p>
+            <p property="articleBody" class="lead">
+              {{ work.lead }}
+            </p>
           </div>
         </NuxtLink>
       </div>
     </div>
-    <Component v-if="more" :is="more" class="more">
-      <NuxtLink :to="localePath('realisations')" class="btn">{{ t('home.more') }}<NuxtIcon name="arrow" /></NuxtLink>
+    <Component :is="more" v-if="more" class="more">
+      <NuxtLink :to="localePath('realisations')" class="btn">
+        {{ t('home.more') }}
+        <NuxtIcon name="arrow" />
+      </NuxtLink>
     </Component>
   </section>
 </template>
