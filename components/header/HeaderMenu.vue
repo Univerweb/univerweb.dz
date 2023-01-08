@@ -1,17 +1,17 @@
+<script setup lang="ts">
+const { tm, rt } = useI18n()
+const localePath = useLocalePath()
+</script>
+
 <template>
   <ul class="menu">
-    <li v-for="link in tm('menu')">
+    <li v-for="link in tm('menu')" :key="rt(link.slug)">
       <NuxtLink :to="localePath(rt(link.slug))">
         {{ rt(link.title) }}
       </NuxtLink>
     </li>
   </ul>
 </template>
-
-<script setup lang="ts">
-const { tm, rt } = useI18n()
-const localePath = useLocalePath()
-</script>
 
 <style lang="scss">
 .menu {

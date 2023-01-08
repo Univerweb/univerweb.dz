@@ -1,3 +1,36 @@
+<script setup lang="ts">
+defineProps({
+  headline: {
+    type: String,
+    required: true
+  },
+  works: {
+    type: Array,
+    default: () => []
+  },
+  h1: {
+    type: String,
+    default: 'h1'
+  },
+  likeH1: {
+    type: String,
+    default: null
+  },
+  h2: {
+    type: String,
+    default: 'h2'
+  },
+  more: {
+    type: String,
+    default: null
+  }
+})
+
+const { t } = useI18n()
+const config = useRuntimeConfig()
+const localePath = useLocalePath()
+</script>
+
 <template>
   <section class="container works">
     <div class="intro">
@@ -41,39 +74,6 @@
     </Component>
   </section>
 </template>
-
-<script setup lang="ts">
-const { t } = useI18n()
-const config = useRuntimeConfig()
-const localePath = useLocalePath()
-
-defineProps({
-  headline: {
-    type: String,
-    required: true
-  },
-  works: {
-    type: Array,
-    default: () => []
-  },
-  h1: {
-    type: String,
-    default: 'h1'
-  },
-  likeH1: {
-    type: String,
-    default: null
-  },
-  h2: {
-    type: String,
-    default: 'h2'
-  },
-  more: {
-    type: String,
-    default: null
-  }
-})
-</script>
 
 <style lang="scss" scoped>
 .works {

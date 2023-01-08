@@ -1,3 +1,8 @@
+<script setup lang="ts">
+const { t } = useI18n()
+const config = useRuntimeConfig()
+</script>
+
 <template>
   <div class="about">
     <p class="lead">
@@ -11,8 +16,3 @@
     </a>
   </div>
 </template>
-
-<script setup lang="ts">
-const { t } = useI18n()
-const config = useRuntimeConfig()
-</script>
