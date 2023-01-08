@@ -1,49 +1,34 @@
 <template>
-  <div class="btn switcher">
+  <NuxtLink v-if="locale === 'fr'" :to="switchLocalePath('en')" :title="t('switcher')" class="langSwitcher">
     <NuxtIcon name="globe" />
-    <select v-model="locale" :aria-label="t('switcher')" @change="setLocale(locale)">
-      <option v-for="l in <Array<any>>locales" :key="l.code" :value="l.code">
-        {{ l.name }}
-      </option>
-    </select>
-    <NuxtIcon name="arrow" />
-  </div>
+    <span class="visually-hidden">{{ locales[2].name }}</span>
+  </NuxtLink>
+
+  <NuxtLink v-if="locale === 'en'" :to="switchLocalePath('ar')" :title="t('switcher')" class="langSwitcher">
+    <NuxtIcon name="globe" />
+    <span class="visually-hidden">{{ locales[1].name }}</span>
+  </NuxtLink>
+
+  <NuxtLink v-if="locale === 'ar'" :to="switchLocalePath('fr')" :title="t('switcher')" class="langSwitcher">
+    <NuxtIcon name="globe" />
+    <span class="visually-hidden">{{ locales[0].name }}</span>
+  </NuxtLink>
 </template>
 
 <script setup lang="ts">
-const { t, locale, locales, setLocale } = useI18n()
+const { t, locale, locales } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
 </script>
 
 <style lang="scss">
-.switcher {
-  padding: 0 12px;
-  .globe {
-    margin-inline-end: -28px;
-    margin-inline-start: 12px;
-  }
-  select {
-    background-color: transparent;
-    color: currentColor;
-    appearance: none;
-    padding: 0 24px;
-    height: 48px;
-    border: 0;
-    font-family: var(--fontMedium);
-    font-size: initial;
-    cursor: pointer;
-    outline: 0;
-    z-index: 2;
-    option {
-      color: initial;
-    }
-  }
-  .arrow {
-    height: 8px;
-    margin-inline-start: -25px;
-  }
+.langSwitcher {
+  color: var(--secondary);
+  transition: color $transition;
   &:hover {
-    background-color: var(--secondary);
     color: var(--primary);
+    .dark-mode & {
+      color: var(--white);
+    }
   }
 }
 </style>
