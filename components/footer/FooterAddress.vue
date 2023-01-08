@@ -1,5 +1,6 @@
 <script setup lang="ts">
-const { locale, t } = useI18n()
+const { t } = useI18n()
+const coma = useComa()
 </script>
 
 <template>
@@ -9,7 +10,7 @@ const { locale, t } = useI18n()
     {{ t('address.streetAddress') }}
     <br />
     {{ t('address.addressLocality') }}
-    {{ t('address.postalCode') }}<span v-if="locale === 'ar'"> ، </span><span v-else>, </span>
+    {{ t('address.postalCode') }}{{ coma }}
     {{ t('address.addressRegion') }}
   </address>
 </template>
