@@ -42,16 +42,16 @@ const localePath = useLocalePath()
       <div v-for="work in <Array<any>>works.slice(1)" class="item">
         <NuxtLink :to="localePath(`/realisations/${work._path.slice(17)}`)" vocab="https://schema.org/" typeof="Article">
           <div property="mainEntityOfPage" typeof="WebPage">
-            <meta property="id" :content="config.public.baseURL + localePath(`/realisations/${work._path.slice(17)}`)" />
+            <meta property="id" :content="config.public.baseURL + localePath(`/realisations/${work._path.slice(17)}`)">
           </div>
-          <!-- <meta property="dateCreated datePublished" :content="work.createdAt" />
-          <meta property="dateModified" :content="work.updatedAt" /> -->
+          <!-- <meta property="dateCreated datePublished" :content="work.createdAt">
+          <meta property="dateModified" :content="work.updatedAt"> -->
           <div property="author publisher" typeof="Organization">
-            <meta property="name" :content="t('name')" />
-            <meta property="url" :content="config.public.baseURL" />
+            <meta property="name" :content="t('name')">
+            <meta property="url" :content="config.public.baseURL">
           </div>
-          <meta property="articleSection" :content="t('menu[0].title')" />
-          <meta property="description" :content="work.desc" />
+          <meta property="articleSection" :content="t('menu[0].title')">
+          <meta property="description" :content="work.desc">
           <AppImg
             property="image"
             :src="`/images/${work._path.slice(17)}_thumbnail.jpg`"

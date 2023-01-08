@@ -18,9 +18,9 @@ useHead({
       children: {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: t('name'), item: seoItem },
-          { '@type': 'ListItem', position: 2, name: t('contact.title') },
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': t('name'), 'item': seoItem },
+          { '@type': 'ListItem', 'position': 2, 'name': t('contact.title') },
         ],
       },
     },

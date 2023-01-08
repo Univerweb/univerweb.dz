@@ -6,9 +6,9 @@ const coma = useComa()
 <template>
   <address class="address" title="Adresse postale">
     <strong>{{ t('name') }}</strong>
-    <br />
+    <br>
     {{ t('address.streetAddress') }}
-    <br />
+    <br>
     {{ t('address.addressLocality') }}
     {{ t('address.postalCode') }}{{ coma }}
     {{ t('address.addressRegion') }}

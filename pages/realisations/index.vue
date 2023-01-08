@@ -3,7 +3,7 @@ const { locale, t } = useI18n()
 const seoItem = useSeoItem()
 
 const { data: works } = await useAsyncData('WorksPage', () =>
-  queryContent(locale.value, 'realisations').only(['title', 'desc', 'headline', 'tags', 'lead', '_path']).sort({ _id: -1 }).find()
+  queryContent(locale.value, 'realisations').only(['title', 'desc', 'headline', 'tags', 'lead', '_path']).sort({ _id: -1 }).find(),
 )
 
 useHead({
@@ -21,9 +21,9 @@ useHead({
       children: {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: t('name'), item: seoItem },
-          { '@type': 'ListItem', position: 2, name: works.value![0].title },
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': t('name'), 'item': seoItem },
+          { '@type': 'ListItem', 'position': 2, 'name': works.value![0].title },
         ],
       },
     },

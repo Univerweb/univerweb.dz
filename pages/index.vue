@@ -21,7 +21,7 @@ defineProps({
 const { locale } = useI18n()
 
 const { data: works } = await useAsyncData('HomeWorks', () =>
-  queryContent(locale.value, 'realisations').only(['headline', 'title', 'tags', 'lead', '_path']).limit(7).sort({ _id: -1 }).find()
+  queryContent(locale.value, 'realisations').only(['headline', 'title', 'tags', 'lead', '_path']).limit(7).sort({ _id: -1 }).find(),
 )
 </script>
 

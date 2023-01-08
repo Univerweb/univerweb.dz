@@ -8,7 +8,7 @@ useHead({
 </script>
 
 <template>
-  <header :class="{ show: show, hide: !show }">
+  <header :class="{ show, hide: !show }">
     <HeaderLogo />
     <nav class="nav">
       <HeaderMenu />
