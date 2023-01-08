@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { locale, t } = useI18n()
-const config = useRuntimeConfig()
+const seoItem = useSeoItem()
 
 const { data: works } = await useAsyncData('WorksPage', () =>
   queryContent(locale.value, 'realisations').only(['title', 'desc', 'headline', 'tags', 'lead', '_path']).sort({ _id: -1 }).find()
@@ -22,12 +22,7 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
-          {
-            '@type': 'ListItem',
-            position: 1,
-            name: t('name'),
-            item: locale.value !== 'fr' ? `${config.public.baseURL}/${locale.value}` : `${config.public.baseURL}/`
-          },
+          { '@type': 'ListItem', position: 1, name: t('name'), item: seoItem },
           { '@type': 'ListItem', position: 2, name: works.value![0].title }
         ]
       }
