@@ -1,3 +1,8 @@
+<script setup lang="ts">
+const { t, locale, locales } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
+</script>
+
 <template>
   <NuxtLink v-if="locale === 'fr'" :to="switchLocalePath('en')" :title="t('switcher')" class="langSwitcher">
     <NuxtIcon name="globe" />
@@ -14,11 +19,6 @@
     <span class="visually-hidden">{{ locales[0].name }}</span>
   </NuxtLink>
 </template>
-
-<script setup lang="ts">
-const { t, locale, locales } = useI18n()
-const switchLocalePath = useSwitchLocalePath()
-</script>
 
 <style lang="scss">
 .langSwitcher {

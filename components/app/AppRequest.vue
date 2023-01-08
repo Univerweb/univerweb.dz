@@ -1,20 +1,13 @@
-<template>
-  <div class="container request">
-    <h2 class="h3">{{ t('request.headline') }}</h2>
-    <NuxtLink :to="localePath('contact')" :class="home" class="move-arrow">{{ t('request.link') }}</NuxtLink>
-  </div>
-</template>
-
 <script setup lang="ts">
-const { t } = useI18n()
-const localePath = useLocalePath()
-
 defineProps({
   home: {
     type: String,
     default: 'h2'
   }
 })
+
+const { t } = useI18n()
+const localePath = useLocalePath()
 </script>
 
 <style lang="scss" scoped>
@@ -29,3 +22,10 @@ defineProps({
   }
 }
 </style>
+
+<template>
+  <div class="container request">
+    <h2 class="h3">{{ t('request.headline') }}</h2>
+    <NuxtLink :to="localePath('contact')" :class="home" class="move-arrow">{{ t('request.link') }}</NuxtLink>
+  </div>
+</template>

@@ -1,7 +1,3 @@
-<template>
-  <nuxt-img format="webp" quality="100" :src="src" :alt="alt" :sizes="sizes" loading="lazy" />
-</template>
-
 <script setup lang="ts">
 defineProps({
   src: {
@@ -18,3 +14,7 @@ defineProps({
   }
 })
 </script>
+
+<template>
+  <nuxt-img format="webp" quality="100" :src="src" :alt="alt" :sizes="sizes" loading="lazy" />
+</template>

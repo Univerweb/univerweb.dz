@@ -1,3 +1,8 @@
+<script setup lang="ts">
+const { t, locale } = useI18n()
+const localePath = useLocalePath()
+</script>
+
 <template>
   <NuxtLink :to="localePath('/')" :title="t('name')" class="logo">
     <span class="visually-hidden">{{ t('name') }}</span>
@@ -87,11 +92,6 @@
     </svg>
   </NuxtLink>
 </template>
-
-<script setup lang="ts">
-const { t, locale } = useI18n()
-const localePath = useLocalePath()
-</script>
 
 <style lang="scss">
 .logo svg {
