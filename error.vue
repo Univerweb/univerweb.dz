@@ -2,8 +2,8 @@
 defineProps({
   error: {
     type: Object,
-    default: () => {}
-  }
+    default: () => {},
+  },
 })
 
 const { t } = useI18n()

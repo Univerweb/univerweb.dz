@@ -2,12 +2,12 @@
 defineProps({
   prev: {
     type: Object,
-    default: null
+    default: null,
   },
   next: {
     type: Object,
-    default: null
-  }
+    default: null,
+  },
 })
 
 const { t } = useI18n()

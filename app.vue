@@ -14,7 +14,7 @@ const coma = useComa()
 useHead({
   htmlAttrs: {
     lang: computed(() => i18nHead.value.htmlAttrs!.lang),
-    dir: computed(() => i18nHead.value.htmlAttrs!.dir)
+    dir: computed(() => i18nHead.value.htmlAttrs!.dir),
   },
 
   titleTemplate: titleChunk => {
@@ -33,23 +33,23 @@ useHead({
     { property: 'og:url', content: `${config.public.baseURL}${route.path}` },
     {
       property: 'og:image',
-      content: locale.value === 'ar' ? `${config.public.baseURL}/images/univerweb-ar_share.jpg` : `${config.public.baseURL}/images/univerweb_share.jpg`
+      content: locale.value === 'ar' ? `${config.public.baseURL}/images/univerweb-ar_share.jpg` : `${config.public.baseURL}/images/univerweb_share.jpg`,
     },
     {
       property: 'og:image:secure_url',
-      content: locale.value === 'ar' ? `${config.public.baseURL}/images/univerweb-ar_share.jpg` : `${config.public.baseURL}/images/univerweb_share.jpg`
+      content: locale.value === 'ar' ? `${config.public.baseURL}/images/univerweb-ar_share.jpg` : `${config.public.baseURL}/images/univerweb_share.jpg`,
     },
     { property: 'og:image:type', content: 'image/jpeg' },
     { property: 'og:image:width', content: 1920 },
     { property: 'og:image:height', content: 1080 },
     { property: 'og:image:alt', content: `${t('name')} — ${t('title')}` },
-    ...(i18nHead.value.meta || [])
+    ...(i18nHead.value.meta || []),
   ],
 
   link: [
     { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
     { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
-    ...(i18nHead.value.link || [])
+    ...(i18nHead.value.link || []),
   ],
 
   script: [
@@ -64,13 +64,13 @@ useHead({
           '@type': 'ImageObject',
           url: locale.value === 'ar' ? `${config.public.baseURL}/images/univerweb-ar_share.jpg` : `${config.public.baseURL}/images/univerweb_share.jpg`,
           width: '1920px',
-          height: '1080px'
+          height: '1080px',
         },
         logo: {
           '@type': 'ImageObject',
           url: `${config.public.baseURL}/logo.svg`,
           width: '512px',
-          height: '512px'
+          height: '512px',
         },
         email: config.public.baseEmail,
         telephone: config.public.mobile,
@@ -79,17 +79,17 @@ useHead({
           'https://twitter.com/Univerweb',
           'https://www.facebook.com/Univerweb',
           'https://www.linkedin.com/company/Univerweb',
-          'https://github.com/Univerweb'
+          'https://github.com/Univerweb',
         ],
         address: {
           '@type': 'PostalAddress',
           streetAddress: `${t('address.streetAddress')}${coma.value}${t('address.addressLocality')}`,
           postalCode: config.public.postalCode,
-          addressLocality: `${t('address.addressRegion')}${coma.value}${t('address.addressCountry')}`
-        }
-      }
-    }
-  ]
+          addressLocality: `${t('address.addressRegion')}${coma.value}${t('address.addressCountry')}`,
+        },
+      },
+    },
+  ],
 })
 </script>
 

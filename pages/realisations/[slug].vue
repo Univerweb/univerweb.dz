@@ -17,7 +17,7 @@ if (error.value) {
   showError(
     createError({
       statusCode: 404,
-      statusMessage: 'Not Found'
+      statusMessage: 'Not Found',
     })
   )
 }
@@ -36,7 +36,7 @@ useHead({
     { property: 'og:description', content: data.value!.desc },
     { property: 'og:image', content: `${config.public.baseURL}/images/${route.params.slug}_share.jpg` },
     { property: 'og:image:secure_url', content: `${config.public.baseURL}/images/${route.params.slug}_share.jpg` },
-    { property: 'og:image:alt', content: `${data.value!.title} — ${data.value!.industry}` }
+    { property: 'og:image:alt', content: `${data.value!.title} — ${data.value!.industry}` },
   ],
 
   script: [
@@ -48,11 +48,11 @@ useHead({
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: t('name'), item: seoItem },
           { '@type': 'ListItem', position: 2, name: t('menu[0].title'), item: `${config.public.baseURL}${localePath('realisations')}` },
-          { '@type': 'ListItem', position: 3, name: data.value!.title }
-        ]
-      }
-    }
-  ]
+          { '@type': 'ListItem', position: 3, name: data.value!.title },
+        ],
+      },
+    },
+  ],
 })
 </script>
 

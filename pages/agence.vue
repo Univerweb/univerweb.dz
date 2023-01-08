@@ -8,7 +8,7 @@ useHead({
   meta: [
     { name: 'description', content: t('agency.desc') },
     { property: 'og:title', content: t('agency.title') },
-    { property: 'og:description', content: t('agency.desc') }
+    { property: 'og:description', content: t('agency.desc') },
   ],
 
   script: [
@@ -19,11 +19,11 @@ useHead({
         '@type': 'BreadcrumbList',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: t('name'), item: seoItem },
-          { '@type': 'ListItem', position: 2, name: t('agency.title') }
-        ]
-      }
-    }
-  ]
+          { '@type': 'ListItem', position: 2, name: t('agency.title') },
+        ],
+      },
+    },
+  ],
 })
 </script>
 

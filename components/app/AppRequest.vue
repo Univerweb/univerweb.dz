@@ -2,8 +2,8 @@
 defineProps({
   home: {
     type: String,
-    default: 'h2'
-  }
+    default: 'h2',
+  },
 })
 
 const { t } = useI18n()
