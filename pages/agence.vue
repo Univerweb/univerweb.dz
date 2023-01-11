@@ -42,7 +42,7 @@ useHead({
         </h2>
       </div>
       <ol class="details">
-        <li v-for="(value, name) in <Array<string>>tm('agency.method.content')" class="item">
+        <li v-for="(value, name) in (tm('agency.method.content') as { value: string, name: string })" :key="name" class="item">
           <h3>{{ name }}</h3>
           <p class="lead">
             {{ rt(value) }}
@@ -57,7 +57,7 @@ useHead({
         </h2>
       </div>
       <div class="details">
-        <div v-for="(value, name) in <Array<string>>tm('agency.choose.content')" class="item">
+        <div v-for="(value, name) in (tm('agency.choose.content') as { value: string, name: string })" :key="name" class="item">
           <h3>{{ name }}</h3>
           <p class="lead">
             {{ rt(value) }}
