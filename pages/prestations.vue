@@ -44,7 +44,7 @@ useHead({
           {{ t('presta.webDesign.content') }}
         </p>
         <ul class="item tags">
-          <li v-for="tag in (tm('presta.webDesign.tags') as { tag:string })" :key="rt(tag)">
+          <li v-for="tag in (tm('presta.webDesign.tags') as string[])" :key="rt(tag)">
             {{ rt(tag) }}
           </li>
         </ul>
@@ -59,7 +59,7 @@ useHead({
           {{ t('presta.dev.content') }}
         </p>
         <ul class="item tags">
-          <li v-for="tag in (tm('presta.dev.tags') as { tag:string })" :key="rt(tag)">
+          <li v-for="tag in (tm('presta.dev.tags') as string[])" :key="rt(tag)">
             {{ rt(tag) }}
           </li>
         </ul>
@@ -74,7 +74,7 @@ useHead({
           {{ t('presta.support.content') }}
         </p>
         <ul class="item tags">
-          <li v-for="tag in (tm('presta.support.tags') as { tag:string })" :key="rt(tag)">
+          <li v-for="tag in (tm('presta.support.tags') as string[])" :key="rt(tag)">
             {{ rt(tag) }}
           </li>
         </ul>
