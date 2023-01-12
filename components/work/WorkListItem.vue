@@ -16,8 +16,8 @@ const localePath = useLocalePath()
 </script>
 
 <template>
-  <div class="item">
-    <NuxtLink :to="localePath(`/realisations/${work._path.slice(17)}`)" vocab="https://schema.org/" typeof="Article">
+  <article vocab="https://schema.org/" typeof="Article" class="item">
+    <NuxtLink :to="localePath(`/realisations/${work._path.slice(17)}`)">
       <div property="mainEntityOfPage" typeof="WebPage">
         <meta property="id" :content="config.public.baseURL + localePath(`/realisations/${work._path.slice(17)}`)">
       </div>
@@ -55,7 +55,7 @@ const localePath = useLocalePath()
         </p>
       </div>
     </NuxtLink>
-  </div>
+  </article>
 </template>
 
 <style lang="scss" scoped>
