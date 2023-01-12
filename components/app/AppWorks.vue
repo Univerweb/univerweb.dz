@@ -39,7 +39,7 @@ const localePath = useLocalePath()
       </Component>
     </div>
     <div class="details">
-      <div v-for="work in <Array<any>>works.slice(1)" class="item">
+      <div v-for="work in works.slice(1)" :key="work._path" class="item">
         <NuxtLink :to="localePath(`/realisations/${work._path.slice(17)}`)" vocab="https://schema.org/" typeof="Article">
           <div property="mainEntityOfPage" typeof="WebPage">
             <meta property="id" :content="config.public.baseURL + localePath(`/realisations/${work._path.slice(17)}`)">
