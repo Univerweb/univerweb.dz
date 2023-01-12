@@ -4,10 +4,6 @@ defineProps({
     type: String,
     default: 'h1',
   },
-  works: {
-    type: Array,
-    default: () => [],
-  },
   likeH1: {
     type: String,
     default: null,
@@ -16,10 +12,18 @@ defineProps({
     type: String,
     default: null,
   },
+  limit: {
+    type: Number,
+    default: Infinity,
+  },
 })
 
-const { t } = useI18n()
+const { locale, t } = useI18n()
 const localePath = useLocalePath()
+
+const { data: works } = await useAsyncData('works', async () => await
+queryContent(locale.value, 'realisations').sort({ _id: -1 }).find(),
+)
 </script>
 
 <template>
@@ -30,8 +34,8 @@ const localePath = useLocalePath()
       </Component>
     </div>
 
-    <div class="details">
-      <WorkListItem v-for="(work, index) in works" :key="index" :work="work" />
+    <div v-if="works?.length" class="details">
+      <WorkListItem v-for="(work, index) in works.slice(0, limit)" :key="index" :work="work" />
     </div>
 
     <Component :is="more" v-if="more" class="more">

@@ -1,10 +1,6 @@
 <script setup lang="ts">
-const { locale, t } = useI18n()
+const { t } = useI18n()
 const seoItem = useSeoItem()
-
-const { data: works } = await useAsyncData('WorksPage', () =>
-  queryContent(locale.value, 'realisations').only(['title', 'desc', 'headline', 'tags', 'lead', '_path']).sort({ _id: -1 }).find(),
-)
 
 useHead({
   title: t('works.title'),
@@ -32,8 +28,8 @@ useHead({
 </script>
 
 <template>
-  <main v-if="works">
-    <WorkList :works="works" />
+  <main>
+    <WorkList />
     <AppRequest />
   </main>
 </template>
