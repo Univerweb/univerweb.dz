@@ -7,12 +7,12 @@ const { data: works } = await useAsyncData('WorksPage', () =>
 )
 
 useHead({
-  title: works.value![0].title,
+  title: t('works.title'),
 
   meta: [
-    { name: 'description', content: works.value![0].desc },
-    { property: 'og:title', content: works.value![0].title },
-    { property: 'og:description', content: works.value![0].desc },
+    { name: 'description', content: t('works.desc') },
+    { property: 'og:title', content: t('works.title') },
+    { property: 'og:description', content: t('works.desc') },
   ],
 
   script: [
@@ -23,7 +23,7 @@ useHead({
         '@type': 'BreadcrumbList',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': t('name'), 'item': seoItem },
-          { '@type': 'ListItem', 'position': 2, 'name': works.value![0].title },
+          { '@type': 'ListItem', 'position': 2, 'name': t('works.title') },
         ],
       },
     },
@@ -33,7 +33,7 @@ useHead({
 
 <template>
   <main v-if="works">
-    <WorkList :headline="works[0].headline" :works="works" />
+    <WorkList :works="works" />
     <AppRequest />
   </main>
 </template>
