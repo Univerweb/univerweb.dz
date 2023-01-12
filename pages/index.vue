@@ -8,8 +8,8 @@ const { data: works } = await useAsyncData('HomeWorks', () =>
 
 <template>
   <main v-if="works">
-    <HomeWelcome />
-    <AppWorks :headline="works[0].headline" :works="works" h1="h2" like-h1="h1" h2="h3" more="div" />
+    <AppWelcome />
+    <WorkList :headline="works[0].headline" :works="works" h1="h2" like-h1="h1" h2="h3" more="div" />
     <AppRequest home="h1" />
   </main>
 </template>
