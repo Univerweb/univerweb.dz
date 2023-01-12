@@ -33,7 +33,7 @@ useHead({
 
 <template>
   <main v-if="works">
-    <AppWorks :headline="works[0].headline" :works="works" />
+    <WorkList :headline="works[0].headline" :works="works" />
     <AppRequest />
   </main>
 </template>
