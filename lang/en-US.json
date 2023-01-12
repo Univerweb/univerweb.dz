@@ -2,27 +2,35 @@
   "name": "Univerweb",
   "title": "Website Design in Algeria",
   "desc": "Even more than websites, we design and innovate human-centered digital experiences for you that reflect your brand image.",
-
   "skiplinks": {
     "menu": "Skip to menu",
     "content": "Skip to content",
     "contact": "Skip to contact"
   },
-
   "menu": [
-    { "slug": "realisations", "title": "Latest work" },
-    { "slug": "prestations", "title": "Services" },
-    { "slug": "agence", "title": "The agency" },
-    { "slug": "contact", "title": "Contact" }
+    {
+      "slug": "realisations",
+      "title": "Latest work"
+    },
+    {
+      "slug": "prestations",
+      "title": "Services"
+    },
+    {
+      "slug": "agence",
+      "title": "The agency"
+    },
+    {
+      "slug": "contact",
+      "title": "Contact"
+    }
   ],
   "switcher": "Select language",
   "toggle": "Open menu",
-
   "request": {
     "headline": "Convinced? Let's have a coffee together.",
     "link": "Get in Touch"
   },
-
   "address": {
     "name": "@:name Eurl",
     "streetAddress": "62 Coop. El Mebnia",
@@ -42,23 +50,42 @@
   },
   "email": "E-mail",
   "socials": [
-    { "name": "twitter", "value": "Join us on Twitter", "url": "https://twitter.com/Univerweb" },
-    { "name": "facebook", "value": "Join us on Facebook", "url": "https://www.facebook.com/Univerweb" },
-    { "name": "linkedin", "value": "Join us on LinkedIn", "url": "https://www.linkedin.com/company/Univerweb" },
-    { "name": "github", "value": "Join us on GitHub", "url": "https://github.com/Univerweb" }
+    {
+      "name": "twitter",
+      "value": "Join us on Twitter",
+      "url": "https://twitter.com/Univerweb"
+    },
+    {
+      "name": "facebook",
+      "value": "Join us on Facebook",
+      "url": "https://www.facebook.com/Univerweb"
+    },
+    {
+      "name": "linkedin",
+      "value": "Join us on LinkedIn",
+      "url": "https://www.linkedin.com/company/Univerweb"
+    },
+    {
+      "name": "github",
+      "value": "Join us on GitHub",
+      "url": "https://github.com/Univerweb"
+    }
   ],
   "colorMode": {
     "dark": "Dark",
     "light": "Light"
   },
   "copy": "Copyright 2023 @:name{'.'} All rights reserved.",
-
   "home": {
     "headline": "We create such memorable websites.",
     "lead": "Even more than websites, we design and innovate human-centered digital experiences for you that reflect your brand image, our primary mission is to satisfy you!",
     "more": "More happiness"
   },
-
+  "works": {
+    "title": "@:menu[0].title",
+    "desc": "Discover our latest creations. We would be delighted to work with you.",
+    "headline": "They believed in us and they are fulfilled."
+  },
   "work": {
     "client": "Client",
     "features": "Features",
@@ -66,7 +93,6 @@
     "visit": "Visit Website",
     "alt": "A website overview of"
   },
-
   "presta": {
     "title": "@:menu[1].title",
     "desc": "An accomplished web presence strategy, on technological foundations and a rigorous methodology.",
@@ -75,20 +101,33 @@
     "webDesign": {
       "title": "Web design",
       "content": "A clever and precise mix of attractive design, respected graphic charter and user experience at the top of the priorities. We will find the perfect balance for you.",
-      "tags": ["#Responsive", "#StructuredData", "#ValidHTML", "#Accessibility"]
+      "tags": [
+        "#Responsive",
+        "#StructuredData",
+        "#ValidHTML",
+        "#Accessibility"
+      ]
     },
     "dev": {
       "title": "Development",
       "content": "Your business and your business needs are unique. You are unique! We will code the application for you that meets your exact needs, without frills and with agility.",
-      "tags": ["#CMS", "#Drupal", "#MobileApp", "#NuxtJS"]
+      "tags": [
+        "#CMS",
+        "#Drupal",
+        "#MobileApp",
+        "#NuxtJS"
+      ]
     },
     "support": {
       "title": "Support + Hosting",
       "content": "Imagine a dish in a restaurant without a plate and without a waiter. A site without reliable hosting and 24/7 support is exactly the same thing.",
-      "tags": ["#HTTPS", "#HTTP/2", "#FullBackup"]
+      "tags": [
+        "#HTTPS",
+        "#HTTP/2",
+        "#FullBackup"
+      ]
     }
   },
-
   "agency": {
     "title": "@:menu[2].title",
     "desc": "We are a young team of creative-perfectionists and passionate about our work, we like to code beautiful websites while drinking coffee in the morning.",
@@ -113,7 +152,6 @@
       }
     }
   },
-
   "contact": {
     "title": "@:menu[3].title",
     "desc": "Tell us about your needs, we'd love to collaborate with you.",
@@ -122,12 +160,10 @@
     "manager": "Manager",
     "support": "Technical support"
   },
-
   "nav": {
     "prev": "Previous",
     "next": "Next"
   },
-
   "error": {
     "headline": "Oops…",
     "error404": "This page cannot be found.",

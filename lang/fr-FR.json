@@ -2,27 +2,35 @@
   "name": "Univerweb",
   "title": "Création de sites web en Algérie",
   "desc": "Plus que des sites web, nous concevons et innovons pour vous des expériences numériques centrées sur l'humain et qui reflètent votre image de marque.",
-
   "skiplinks": {
     "menu": "Aller au menu",
     "content": "Aller au contenu",
     "contact": "Aller au contact"
   },
-
   "menu": [
-    { "slug": "realisations", "title": "Réalisations" },
-    { "slug": "prestations", "title": "Prestations" },
-    { "slug": "agence", "title": "L'agence" },
-    { "slug": "contact", "title": "Contact" }
+    {
+      "slug": "realisations",
+      "title": "Réalisations"
+    },
+    {
+      "slug": "prestations",
+      "title": "Prestations"
+    },
+    {
+      "slug": "agence",
+      "title": "L'agence"
+    },
+    {
+      "slug": "contact",
+      "title": "Contact"
+    }
   ],
   "switcher": "Choisir la langue",
   "toggle": "Ouvrir le menu",
-
   "request": {
     "headline": "Convaincu ? Prenons un café ensemble.",
     "link": "Contactez-nous"
   },
-
   "address": {
     "name": "@:name Eurl",
     "streetAddress": "62 Coop. El Mebnia",
@@ -42,23 +50,42 @@
   },
   "email": "E-mail",
   "socials": [
-    { "name": "twitter", "value": "Rejoignez-nous sur Twitter", "url": "https://twitter.com/Univerweb" },
-    { "name": "facebook", "value": "Rejoignez-nous sur Facebook", "url": "https://www.facebook.com/Univerweb" },
-    { "name": "linkedin", "value": "Rejoignez-nous sur LinkedIn", "url": "https://www.linkedin.com/company/Univerweb" },
-    { "name": "github", "value": "Rejoignez-nous sur GitHub", "url": "https://github.com/Univerweb" }
+    {
+      "name": "twitter",
+      "value": "Rejoignez-nous sur Twitter",
+      "url": "https://twitter.com/Univerweb"
+    },
+    {
+      "name": "facebook",
+      "value": "Rejoignez-nous sur Facebook",
+      "url": "https://www.facebook.com/Univerweb"
+    },
+    {
+      "name": "linkedin",
+      "value": "Rejoignez-nous sur LinkedIn",
+      "url": "https://www.linkedin.com/company/Univerweb"
+    },
+    {
+      "name": "github",
+      "value": "Rejoignez-nous sur GitHub",
+      "url": "https://github.com/Univerweb"
+    }
   ],
   "colorMode": {
     "dark": "Sombre",
     "light": "Clair"
   },
   "copy": "Copyright 2023 @:name{'.'} Tous droits réservés.",
-
   "home": {
     "headline": "Nous créons des sites web tellement mémorables.",
     "lead": "Encore plus que des sites web, nous concevons et innovons pour vous des expériences numériques centrées sur l'humain et qui reflètent votre image de marque, notre mission première est de vous satisfaire !",
     "more": "Plus de bonheur"
   },
-
+  "works": {
+    "title": "@:menu[0].title",
+    "desc": "Découvrez nos toutes dernières créations. Nous serions ravis de collaborer avec vous.",
+    "headline": "Ils ont cru en nous et ils sont comblés."
+  },
   "work": {
     "client": "Client",
     "features": "Fonctionnalités",
@@ -66,7 +93,6 @@
     "visit": "Visiter le site web",
     "alt": "Un aperçu du site web de"
   },
-
   "presta": {
     "title": "@:menu[1].title",
     "desc": "Une stratégie de présence web accomplie, sur des fondements technologiques et une méthodologie rigoureuse.",
@@ -75,20 +101,33 @@
     "webDesign": {
       "title": "Web design",
       "content": "Un mélange savant et millimétré entre design attrayant, charte graphique respectée et expérience utilisateur au top des priorités. Nous trouverons pour vous l'équilibre parfait.",
-      "tags": ["#Responsive", "#DonnéesStructurées", "#HtmlValide", "#Accessibilité"]
+      "tags": [
+        "#Responsive",
+        "#DonnéesStructurées",
+        "#HtmlValide",
+        "#Accessibilité"
+      ]
     },
     "dev": {
       "title": "Développement",
       "content": "Votre entreprise et vos besoins métiers sont uniques. Vous êtes uniques ! Nos coderons pour vous l'application qui répond exactement à vos besoins, sans fioritures et avec agilité.",
-      "tags": ["#CMS", "#Drupal", "#ApplicationMobile", "#NuxtJS"]
+      "tags": [
+        "#CMS",
+        "#Drupal",
+        "#ApplicationMobile",
+        "#NuxtJS"
+      ]
     },
     "support": {
       "title": "Support + Hébergement",
       "content": "Imaginez un plat au restaurant sans assiette et sans serveur. Un site sans hébergement fiable et un support présent 24/7 c'est exactement la même chose.",
-      "tags": ["#HTTPS", "##HTTP/2", "#SauvegardeComplète"]
+      "tags": [
+        "#HTTPS",
+        "##HTTP/2",
+        "#SauvegardeComplète"
+      ]
     }
   },
-
   "agency": {
     "title": "@:menu[2].title",
     "desc": "Nous sommes une jeunes équipe de créativo-perfectionnistes et passionnée par notre travail, nous aimons coder de magnifiques sites web.",
@@ -113,7 +152,6 @@
       }
     }
   },
-
   "contact": {
     "title": "@:menu[3].title",
     "desc": "Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
@@ -122,12 +160,10 @@
     "manager": "Gérant",
     "support": "Soutien technique"
   },
-
   "nav": {
     "prev": "Précédent",
     "next": "Suivant"
   },
-
   "error": {
     "headline": "Oops…",
     "error404": "Cette page est introuvable.",

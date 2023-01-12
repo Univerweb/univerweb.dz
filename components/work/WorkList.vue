@@ -4,10 +4,6 @@ defineProps({
     type: String,
     default: 'h1',
   },
-  headline: {
-    type: String,
-    required: true,
-  },
   works: {
     type: Array,
     default: () => [],
@@ -30,12 +26,12 @@ const localePath = useLocalePath()
   <section class="container works">
     <div class="intro">
       <Component :is="h1" :class="likeH1">
-        {{ headline }}
+        {{ t('works.headline') }}
       </Component>
     </div>
 
     <div class="details">
-      <WorkListItem v-for="(work, index) in works.slice(1)" :key="index" :work="work" />
+      <WorkListItem v-for="(work, index) in works" :key="index" :work="work" />
     </div>
 
     <Component :is="more" v-if="more" class="more">
