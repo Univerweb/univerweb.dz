@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import type { PropType } from 'vue'
+import type { Work } from '../../types'
+
 defineProps({
   work: {
-    type: Object,
+    type: Object as PropType<Work>,
     default: () => {},
   },
   h2: {

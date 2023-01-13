@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import type { PropType } from 'vue'
+import type { Work } from '../../types'
+
 defineProps({
   h1: {
     type: String,
@@ -8,22 +11,24 @@ defineProps({
     type: String,
     default: null,
   },
-  more: {
-    type: String,
-    default: null,
-  },
   limit: {
     type: Number,
     default: Infinity,
+  },
+  works: {
+    type: Array as PropType<Work[]>,
+    default: () => [],
+  },
+  more: {
+    type: String,
+    default: null,
   },
 })
 
 const { locale, t } = useI18n()
 const localePath = useLocalePath()
 
-const { data: works } = await useAsyncData('works', async () => await
-queryContent(locale.value, 'realisations').sort({ _id: -1 }).find(),
-)
+const { data: works } = await useAsyncData('works', () => queryContent(locale.value, 'realisations').sort({ _id: -1 }).find())
 </script>
 
 <template>
@@ -35,7 +40,7 @@ queryContent(locale.value, 'realisations').sort({ _id: -1 }).find(),
     </div>
 
     <div v-if="works?.length" class="details">
-      <WorkListItem v-for="(work, index) in works.slice(0, limit)" :key="index" :work="work" />
+      <WorkListItem v-for="work in works.slice(0, limit)" :key="work._path" :work="work" />
     </div>
 
     <Component :is="more" v-if="more" class="more">
