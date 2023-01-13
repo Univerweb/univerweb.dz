@@ -5,3 +5,8 @@ export interface Work {
   tags: string[]
   lead: string
 }
+
+export interface Nav {
+  slug: string
+  title: string
+}

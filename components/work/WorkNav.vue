@@ -1,11 +1,14 @@
 <script setup lang="ts">
+import type { PropType } from 'vue'
+import type { Nav } from '../../types'
+
 defineProps({
   prev: {
-    type: Object,
+    type: Object as PropType<Nav>,
     default: null,
   },
   next: {
-    type: Object,
+    type: Object as PropType<Nav>,
     default: null,
   },
 })
