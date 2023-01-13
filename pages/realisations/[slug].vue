@@ -9,7 +9,7 @@ const seoItem = useSeoItem()
 
 const fullPath = locale.value === 'fr' ? `/${locale.value}${route.path}` : `${route.path}`
 
-const { data, error } = await useAsyncData(`${fullPath}Page`, () => {
+const { data, error } = await useAsyncData(`content-${fullPath}`, () => {
   return queryContent().where({ _path: fullPath }).only(['title', 'desc', 'tags', 'industry', 'lead', 'link']).findOne()
 })
 
