@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import type { PropType } from 'vue'
+import type { Error } from './types'
+
 defineProps({
   error: {
-    type: Object,
+    type: Object as PropType<Error>,
     default: () => {},
   },
 })

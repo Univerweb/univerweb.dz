@@ -10,3 +10,11 @@ export interface Nav {
   slug: string
   title: string
 }
+
+export interface Error {
+  url: string
+  statusCode: number
+  statusMessage: string
+  message: string
+  stack: string
+}
