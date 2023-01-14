@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { t } = useI18n()
 const config = useRuntimeConfig()
-const seoItem = useSeoItem()
+const seo = useSeo()
 
 useHead({
   title: t('contact.title'),
@@ -19,7 +19,7 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': t('name'), 'item': seoItem },
+          { '@type': 'ListItem', 'position': 1, 'name': seo.name, 'item': seo.breadcrumbItemOne },
           { '@type': 'ListItem', 'position': 2, 'name': t('contact.title') },
         ],
       },

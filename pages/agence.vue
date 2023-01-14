@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { t, tm, rt } = useI18n()
-const seoItem = useSeoItem()
+const seo = useSeo()
 
 interface Content {
   name: string
@@ -23,7 +23,7 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': t('name'), 'item': seoItem },
+          { '@type': 'ListItem', 'position': 1, 'name': seo.name, 'item': seo.breadcrumbItemOne },
           { '@type': 'ListItem', 'position': 2, 'name': t('agency.title') },
         ],
       },
