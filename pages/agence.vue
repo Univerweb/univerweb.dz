@@ -8,12 +8,12 @@ interface Content {
 }
 
 useHead({
-  title: t('agency.title'),
+  title: seo.agency.title,
 
   meta: [
-    { name: 'description', content: t('agency.desc') },
-    { property: 'og:title', content: t('agency.title') },
-    { property: 'og:description', content: t('agency.desc') },
+    { name: 'description', content: seo.agency.desc },
+    { property: 'og:title', content: seo.agency.title },
+    { property: 'og:description', content: seo.agency.desc },
   ],
 
   script: [
@@ -24,7 +24,7 @@ useHead({
         '@type': 'BreadcrumbList',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': seo.name, 'item': seo.breadcrumbItemOne },
-          { '@type': 'ListItem', 'position': 2, 'name': t('agency.title') },
+          { '@type': 'ListItem', 'position': 2, 'name': seo.agency.title },
         ],
       },
     },
