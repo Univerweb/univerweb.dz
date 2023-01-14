@@ -21,6 +21,22 @@ export const useSeo = () => {
     postalCode: t('address.postalCode'),
     addressLocality: computed(() => `${t('address.addressRegion')}${coma.value}${t('address.addressCountry')}`),
     breadcrumbItemOne: computed(() => locale.value !== 'fr' ? `${baseUrl}/${locale.value}` : `${baseUrl}/`),
+    works: {
+      title: computed(() => t('works.title')),
+      desc: computed(() => t('works.desc')),
+    },
+    presta: {
+      title: computed(() => t('presta.title')),
+      desc: computed(() => t('presta.desc')),
+    },
+    agency: {
+      title: computed(() => t('agency.title')),
+      desc: computed(() => t('agency.desc')),
+    },
+    contact: {
+      title: computed(() => t('contact.title')),
+      desc: computed(() => t('contact.desc')),
+    },
   }
 
   return seo

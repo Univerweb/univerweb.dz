@@ -4,12 +4,12 @@ const config = useRuntimeConfig()
 const seo = useSeo()
 
 useHead({
-  title: t('contact.title'),
+  title: seo.contact.title,
 
   meta: [
-    { name: 'description', content: t('contact.desc') },
-    { property: 'og:title', content: t('contact.title') },
-    { property: 'og:description', content: t('contact.desc') },
+    { name: 'description', content: seo.contact.desc },
+    { property: 'og:title', content: seo.contact.title },
+    { property: 'og:description', content: seo.contact.desc },
   ],
 
   script: [
@@ -20,7 +20,7 @@ useHead({
         '@type': 'BreadcrumbList',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': seo.name, 'item': seo.breadcrumbItemOne },
-          { '@type': 'ListItem', 'position': 2, 'name': t('contact.title') },
+          { '@type': 'ListItem', 'position': 2, 'name': seo.contact.title },
         ],
       },
     },
