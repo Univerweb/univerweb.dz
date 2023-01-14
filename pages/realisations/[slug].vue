@@ -5,7 +5,7 @@ const localePath = useLocalePath()
 const { locale, t } = useI18n()
 const route = useRoute()
 const config = useRuntimeConfig()
-const seoItem = useSeoItem()
+const seo = useSeo()
 
 const fullPath = locale.value === 'fr' ? `/${locale.value}${route.path}` : `${route.path}`
 
@@ -46,7 +46,7 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': t('name'), 'item': seoItem },
+          { '@type': 'ListItem', 'position': 1, 'name': seo.name, 'item': seo.breadcrumbItemOne },
           { '@type': 'ListItem', 'position': 2, 'name': t('menu[0].title'), 'item': `${config.public.baseURL}${localePath('realisations')}` },
           { '@type': 'ListItem', 'position': 3, 'name': data.value!.title },
         ],

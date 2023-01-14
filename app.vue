@@ -1,15 +1,13 @@
 <script setup lang="ts">
 const { y } = useWindowScroll()
 
-const { finalizePendingLocaleChange, t, locale } = useI18n()
+const { finalizePendingLocaleChange } = useI18n()
 const onBeforeEnter = async () => {
   await finalizePendingLocaleChange()
 }
 
 const i18nHead = useLocaleHead({ addSeoAttributes: true, addDirAttribute: true })
-const route = useRoute()
-const config = useRuntimeConfig()
-const coma = useComa()
+const seo = useSeo()
 
 useHead({
   htmlAttrs: {
@@ -18,31 +16,25 @@ useHead({
   },
 
   titleTemplate: (titleChunk) => {
-    return titleChunk ? `${titleChunk} — ${t('name')}` : `${t('title')} — ${t('name')}`
+    return titleChunk ? `${titleChunk} — ${seo.name.value}` : `${seo.title.value} — ${seo.name.value}`
   },
 
   meta: [
     { name: 'theme-color', content: '#50c8f0' },
     { name: 'apple-mobile-web-app-capable', content: 'yes' },
     { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
-    { name: 'description', content: t('desc') },
-    { property: 'og:title', content: t('title') },
-    { property: 'og:description', content: t('desc') },
+    { name: 'description', content: seo.desc },
+    { property: 'og:title', content: seo.title },
+    { property: 'og:description', content: seo.desc },
     { property: 'og:type', content: 'website' },
-    { property: 'og:site_name', content: t('name') },
-    { property: 'og:url', content: `${config.public.baseURL}${route.path}` },
-    {
-      property: 'og:image',
-      content: locale.value === 'ar' ? `${config.public.baseURL}/images/univerweb-ar_share.jpg` : `${config.public.baseURL}/images/univerweb_share.jpg`,
-    },
-    {
-      property: 'og:image:secure_url',
-      content: locale.value === 'ar' ? `${config.public.baseURL}/images/univerweb-ar_share.jpg` : `${config.public.baseURL}/images/univerweb_share.jpg`,
-    },
+    { property: 'og:site_name', content: seo.name },
+    { property: 'og:url', content: seo.ogUrl },
+    { property: 'og:image', content: seo.ogImage },
+    { property: 'og:image:secure_url', content: seo.ogImage },
     { property: 'og:image:type', content: 'image/jpeg' },
     { property: 'og:image:width', content: 1920 },
     { property: 'og:image:height', content: 1080 },
-    { property: 'og:image:alt', content: `${t('name')} — ${t('title')}` },
+    { property: 'og:image:alt', content: seo.ogImageAlt },
     ...(i18nHead.value.meta || []),
   ],
 
@@ -58,23 +50,23 @@ useHead({
       children: {
         '@context': 'https://schema.org',
         '@type': 'Organization',
-        'name': t('name'),
-        'url': config.public.baseURL,
+        'name': seo.name,
+        'url': seo.baseUrl,
         'image': {
           '@type': 'ImageObject',
-          'url': locale.value === 'ar' ? `${config.public.baseURL}/images/univerweb-ar_share.jpg` : `${config.public.baseURL}/images/univerweb_share.jpg`,
+          'url': seo.ogImage,
           'width': '1920px',
           'height': '1080px',
         },
         'logo': {
           '@type': 'ImageObject',
-          'url': `${config.public.baseURL}/logo.svg`,
+          'url': seo.logo,
           'width': '512px',
           'height': '512px',
         },
-        'email': config.public.baseEmail,
-        'telephone': config.public.mobile,
-        'faxNumber': config.public.phone,
+        'email': seo.email,
+        'telephone': seo.mobile,
+        'faxNumber': seo.phone,
         'sameAs': [
           'https://twitter.com/Univerweb',
           'https://www.facebook.com/Univerweb',
@@ -83,9 +75,9 @@ useHead({
         ],
         'address': {
           '@type': 'PostalAddress',
-          'streetAddress': `${t('address.streetAddress')}${coma.value}${t('address.addressLocality')}`,
-          'postalCode': config.public.postalCode,
-          'addressLocality': `${t('address.addressRegion')}${coma.value}${t('address.addressCountry')}`,
+          'streetAddress': seo.streetAddress,
+          'postalCode': seo.postalCode,
+          'addressLocality': seo.addressLocality,
         },
       },
     },
