@@ -94,7 +94,7 @@ useHead({
       <div class="banner card">
         <AppImg
           property="image"
-          :src="`/images/${route.params.slug}_banner.jpg`"
+          :src="`/images/${work.slug}_banner.jpg`"
           :alt="work.desc"
           sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw"
         />
@@ -143,7 +143,7 @@ useHead({
           </div>
           <div class="item card">
             <AppImg
-              :src="`/images/${route.params.slug}_preview.jpg`"
+              :src="`/images/${work.slug}_preview.jpg`"
               :alt="`${t('work.alt')} ${work.title}`"
               sizes="xs:288px sm:607px md:719px lg:619px xl:1280px"
             />
