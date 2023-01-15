@@ -13,28 +13,17 @@ defineProps({
   },
 })
 
+const localePath = useLocalePath()
 const { t } = useI18n()
-
-// methods: {
-//   toLink(slug) {
-//     if (slug === 'index') {
-//       return this.localePath('realisations')
-//     }
-//     return this.localePath({
-//       name: 'realisations-slug',
-//       params: { slug }
-//     })
-//   }
-// }
 </script>
 
 <template>
   <div class="container workNav">
-    <NuxtLink v-if="prev" :to="prev.slug" class="link prev" :data-text="t('nav.prev')">
+    <NuxtLink v-if="prev" :to="localePath(`/realisations/${prev.slug}`)" class="link prev" :data-text="t('nav.prev')">
       <NuxtIcon name="arrow" />
       {{ prev.title }}
     </NuxtLink>
-    <NuxtLink v-if="next" :to="prev.slug" class="link next" :data-text="t('nav.next')">
+    <NuxtLink v-if="next" :to="localePath(`/realisations/${next.slug}`)" class="link next" :data-text="t('nav.next')">
       <NuxtIcon name="arrow" />
       {{ next.title }}
     </NuxtLink>
