@@ -28,7 +28,9 @@ defineProps({
 const { locale, t } = useI18n()
 const localePath = useLocalePath()
 
-const { data: works } = await useAsyncData('works', () => queryContent(locale.value, 'realisations').sort({ _id: -1 }).find())
+const { data: works } = await useAsyncData('works', () => queryContent(locale.value, 'realisations')
+  .sort({ _id: -1 })
+  .find())
 </script>
 
 <template>
@@ -40,7 +42,7 @@ const { data: works } = await useAsyncData('works', () => queryContent(locale.va
     </div>
 
     <div v-if="works?.length" class="details">
-      <WorkListItem v-for="work in works.slice(0, limit)" :key="work._path" :work="work" />
+      <WorkListItem v-for="work in works.slice(0, limit)" :key="work.slug" :work="work" />
     </div>
 
     <Component :is="more" v-if="more" class="more">
