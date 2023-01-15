@@ -13,29 +13,28 @@ defineProps({
   },
 })
 
-const { t } = useI18n()
-const config = useRuntimeConfig()
+const seo = useSeo()
 const localePath = useLocalePath()
 </script>
 
 <template>
   <article vocab="https://schema.org/" typeof="Article" class="item">
-    <NuxtLink :to="localePath(`/realisations/${work._path.slice(17)}`)">
+    <NuxtLink :to="localePath(`/realisations/${work.slug}`)">
       <div property="mainEntityOfPage" typeof="WebPage">
-        <meta property="id" :content="config.public.baseURL + localePath(`/realisations/${work._path.slice(17)}`)">
+        <meta property="id" :content="`${seo.baseUrl}${localePath(`/realisations/${work.slug}`)}`">
       </div>
       <!-- <meta property="dateCreated datePublished" :content="work.createdAt"> -->
       <!-- <meta property="dateModified" :content="work.updatedAt"> -->
       <div property="author publisher" typeof="Organization">
-        <meta property="name" :content="t('name')">
-        <meta property="url" :content="config.public.baseURL">
+        <meta property="name" :content="seo.name.value">
+        <meta property="url" :content="seo.baseUrl">
       </div>
-      <meta property="articleSection" :content="t('menu[0].title')">
+      <meta property="articleSection" :content="seo.works.title.value">
       <meta property="description" :content="work.desc">
 
       <AppImg
         property="image"
-        :src="`/images/${work._path.slice(17)}_thumbnail.jpg`"
+        :src="`/images/${work.slug}_thumbnail.jpg`"
         :alt="work.desc"
         width="588"
         height="624"
