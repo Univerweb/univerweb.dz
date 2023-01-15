@@ -1,5 +1,5 @@
 export interface Work {
-  _path: string
+  slug: string
   title: string
   desc: string
   tags: string[]
