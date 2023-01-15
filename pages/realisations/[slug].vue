@@ -23,8 +23,7 @@ if (error.value) {
 }
 
 const [prev, next] = await queryContent(locale.value, 'realisations')
-  // .only(['_path', 'title'])
-  // .where({ _id: { $not: { $contains: 'index' } } })
+  .only(['_path', 'title'])
   .findSurround({ _path: fullPath })
 
 useHead({
@@ -62,8 +61,8 @@ useHead({
       <div property="mainEntityOfPage" typeof="WebPage">
         <meta property="id" :content="`${config.public.baseURL}${route.path}`">
       </div>
-      <!-- <meta property="dateCreated datePublished" :content="data.createdAt" /> -->
-      <!-- <meta property="dateModified" :content="data.updatedAt" /> -->
+      <!-- <meta property="dateCreated datePublished" :content="data.createdAt"> -->
+      <!-- <meta property="dateModified" :content="data.updatedAt"> -->
       <div property="author publisher" typeof="Organization">
         <meta property="name" :content="t('name')">
         <meta property="url" :content="config.public.baseURL">
