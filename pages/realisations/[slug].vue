@@ -1,16 +1,31 @@
 <script setup lang="ts">
 import { createError } from 'h3'
+import type { PropType } from 'vue'
+import type { Nav } from '../../types'
+
+defineProps({
+  prev: {
+    type: Object as PropType<Nav>,
+    default: null,
+  },
+  next: {
+    type: Object as PropType<Nav>,
+    default: null,
+  },
+})
 
 const localePath = useLocalePath()
 const { locale, t } = useI18n()
 const route = useRoute()
-const config = useRuntimeConfig()
 const seo = useSeo()
 
 const fullPath = locale.value === 'fr' ? `/${locale.value}${route.path}` : `${route.path}`
 
-const { data, error } = await useAsyncData(`content-${fullPath}`, () => {
-  return queryContent().where({ _path: fullPath }).only(['title', 'desc', 'tags', 'industry', 'lead', 'link']).findOne()
+const { data: work, error } = await useAsyncData(`content-${fullPath}`, () => {
+  return queryContent()
+    .where({ _path: fullPath })
+    .only(['title', 'desc', 'tags', 'industry', 'lead', 'link', 'slug'])
+    .findOne()
 })
 
 if (error.value) {
@@ -23,19 +38,19 @@ if (error.value) {
 }
 
 const [prev, next] = await queryContent(locale.value, 'realisations')
-  .only(['_path', 'title'])
+  .only(['slug', 'title'])
   .findSurround({ _path: fullPath })
 
 useHead({
-  title: data.value!.title,
+  title: work.value!.title,
 
   meta: [
-    { name: 'description', content: data.value!.desc },
-    { property: 'og:title', content: data.value!.title },
-    { property: 'og:description', content: data.value!.desc },
-    { property: 'og:image', content: `${config.public.baseURL}/images/${route.params.slug}_share.jpg` },
-    { property: 'og:image:secure_url', content: `${config.public.baseURL}/images/${route.params.slug}_share.jpg` },
-    { property: 'og:image:alt', content: `${data.value!.title} — ${data.value!.industry}` },
+    { name: 'description', content: work.value!.desc },
+    { property: 'og:title', content: work.value!.title },
+    { property: 'og:description', content: work.value!.desc },
+    { property: 'og:image', content: `${seo.baseUrl}/images/${route.params.slug}_share.jpg` },
+    { property: 'og:image:secure_url', content: `${seo.baseUrl}/images/${route.params.slug}_share.jpg` },
+    { property: 'og:image:alt', content: `${seo.baseUrl} — ${work.value!.industry}` },
   ],
 
   script: [
@@ -46,8 +61,8 @@ useHead({
         '@type': 'BreadcrumbList',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': seo.name, 'item': seo.breadcrumbItemOne },
-          { '@type': 'ListItem', 'position': 2, 'name': t('menu[0].title'), 'item': `${config.public.baseURL}${localePath('realisations')}` },
-          { '@type': 'ListItem', 'position': 3, 'name': data.value!.title },
+          { '@type': 'ListItem', 'position': 2, 'name': seo.works.title.value, 'item': `${seo.baseUrl}${localePath('realisations')}` },
+          { '@type': 'ListItem', 'position': 3, 'name': work.value!.title },
         ],
       },
     },
@@ -56,30 +71,30 @@ useHead({
 </script>
 
 <template>
-  <main v-if="data" id="main" class="work">
+  <main v-if="work" id="main" class="work">
     <article vocab="https://schema.org/" typeof="Article">
       <div property="mainEntityOfPage" typeof="WebPage">
-        <meta property="id" :content="`${config.public.baseURL}${route.path}`">
+        <meta property="id" :content="`${seo.baseUrl}${route.path}`">
       </div>
-      <!-- <meta property="dateCreated datePublished" :content="data.createdAt"> -->
-      <!-- <meta property="dateModified" :content="data.updatedAt"> -->
+      <!-- <meta property="dateCreated datePublished" :content="work.createdAt"> -->
+      <!-- <meta property="dateModified" :content="work.updatedAt"> -->
       <div property="author publisher" typeof="Organization">
-        <meta property="name" :content="t('name')">
-        <meta property="url" :content="config.public.baseURL">
+        <meta property="name" :content="seo.name.value">
+        <meta property="url" :content="seo.baseUrl">
       </div>
-      <meta property="articleSection" :content="t('menu[0].title')">
-      <meta property="description" :content="data.desc">
+      <meta property="articleSection" :content="seo.works.title.value">
+      <meta property="description" :content="work.desc">
       <div class="container intro">
         <WorkBack />
         <h1 property="headline">
-          {{ data.title }}
+          {{ work.title }}
         </h1>
       </div>
       <div class="banner card">
         <AppImg
           property="image"
           :src="`/images/${route.params.slug}_banner.jpg`"
-          :alt="data.desc"
+          :alt="work.desc"
           sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw"
         />
       </div>
@@ -90,7 +105,7 @@ useHead({
               {{ t('work.client') }}
             </h2>
             <p class="lead">
-              {{ data.title }}
+              {{ work.title }}
             </p>
           </div>
           <div class="item">
@@ -98,7 +113,7 @@ useHead({
               {{ t('work.features') }}
             </h2>
             <ul class="lead tags">
-              <li v-for="tag in data.tags" :key="tag" property="keywords">
+              <li v-for="tag in work.tags" :key="tag" property="keywords">
                 {{ tag }}
               </li>
             </ul>
@@ -108,7 +123,7 @@ useHead({
               {{ t('work.industry') }}
             </h2>
             <p class="lead">
-              {{ data.industry }}
+              {{ work.industry }}
             </p>
           </div>
         </div>
@@ -118,15 +133,15 @@ useHead({
           <div class="item">
             <div class="inner">
               <p property="articleBody" class="lead">
-                {{ data.lead }}
+                {{ work.lead }}
               </p>
-              <a :href="data.link" class="link">{{ t('work.visit') }}</a>
+              <a :href="work.link" class="link">{{ t('work.visit') }}</a>
             </div>
           </div>
           <div class="item card">
             <AppImg
               :src="`/images/${route.params.slug}_preview.jpg`"
-              :alt="`${t('work.alt')} ${data.title}`"
+              :alt="`${t('work.alt')} ${work.title}`"
               sizes="xs:288px sm:607px md:719px lg:619px xl:1280px"
             />
           </div>
@@ -145,12 +160,14 @@ useHead({
   h1 {
     margin-bottom: 0;
   }
+
   .banner {
     position: relative;
     aspect-ratio: 3/2;
     @media (min-width: $lg) {
       aspect-ratio: 3/1;
     }
+
     img {
       position: absolute;
       left: 0;
@@ -162,6 +179,7 @@ useHead({
       object-fit: cover;
     }
   }
+
   .client {
     @media (min-width: $md) {
       .item:nth-child(1) {
@@ -175,6 +193,7 @@ useHead({
       }
     }
   }
+
   .project {
     padding-top: 0;
     @media (min-width: $md) {
