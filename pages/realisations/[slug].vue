@@ -90,6 +90,7 @@ useHead({
           {{ work.title }}
         </h1>
       </div>
+
       <div class="banner card">
         <AppImg
           property="image"
@@ -98,6 +99,7 @@ useHead({
           sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw"
         />
       </div>
+
       <div class="container client">
         <div class="details">
           <div class="item">
@@ -128,6 +130,7 @@ useHead({
           </div>
         </div>
       </div>
+
       <div class="container project">
         <div class="details">
           <div class="item">
