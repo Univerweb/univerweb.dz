@@ -1,18 +1,5 @@
 <script setup lang="ts">
 import { createError } from 'h3'
-import type { PropType } from 'vue'
-import type { Nav } from '../../types'
-
-defineProps({
-  prev: {
-    type: Object as PropType<Nav>,
-    default: null,
-  },
-  next: {
-    type: Object as PropType<Nav>,
-    default: null,
-  },
-})
 
 const localePath = useLocalePath()
 const { locale, t } = useI18n()

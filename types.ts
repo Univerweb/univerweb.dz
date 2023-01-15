@@ -7,8 +7,8 @@ export interface Work {
 }
 
 export interface Nav {
-  slug: string
-  title: string
+  slug?: string
+  title?: string
 }
 
 export interface Error {
