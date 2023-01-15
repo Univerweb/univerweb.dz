@@ -13,7 +13,7 @@ export interface Nav {
 
 export interface Error {
   url: string
-  statusCode: number
+  statusCode: string
   statusMessage: string
   message: string
   stack: string
