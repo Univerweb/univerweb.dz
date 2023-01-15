@@ -24,7 +24,7 @@ const handleError = () => clearError({ redirect: '/' })
     <h1>
       {{ t('error.headline') }}
     </h1>
-    <p v-if="error.statusCode === 404" class="lead">
+    <p v-if="error.statusCode === '404'" class="lead">
       {{ t('error.error404') }}
     </p>
     <p v-else class="lead">
