@@ -5,8 +5,6 @@ const localePath = useLocalePath()
 
 <template>
   <NuxtLink :to="localePath('/')" :title="t('name')" class="logo">
-    <span class="visually-hidden">{{ t('name') }}</span>
-
     <svg v-if="locale === 'ar'" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" width="155.07" height="24" viewBox="0 0 155.07 24">
       <g>
         <path d="M149.85,13.57c2.88,0,5.22,2.34,5.22,5.22c0,2.88-2.34,5.22-5.22,5.22s-5.22-2.34-5.22-5.22C144.64,15.9,146.97,13.57,149.85,13.57" />
@@ -90,6 +88,8 @@ const localePath = useLocalePath()
         <path d="M189.53,21.69c0-1.2,0.89-2.06,2.12-2.06c1.27,0,2.12,0.85,2.12,2.06c0,1.23-0.85,2.12-2.12,2.12C190.42,23.81,189.53,22.92,189.53,21.69" />
       </g>
     </svg>
+
+    <span class="visually-hidden">{{ t('name') }}</span>
   </NuxtLink>
 </template>
 
