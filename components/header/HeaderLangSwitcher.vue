@@ -1,34 +1,13 @@
 <script setup lang="ts">
-const { t, locale, locales } = useI18n()
+const { t, locale } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
+
+const switcher = computed(() => locale.value === 'fr' ? 'en' : locale.value === 'en' ? 'ar' : 'fr')
 </script>
 
 <template>
-  <NuxtLink v-if="locale === 'fr'" :to="switchLocalePath('en')" :title="t('switcher')" class="langSwitcher">
-    <NuxtIcon name="globe" />
-    <span class="visually-hidden">{{ locales[2].name }}</span>
-  </NuxtLink>
-
-  <NuxtLink v-if="locale === 'en'" :to="switchLocalePath('ar')" :title="t('switcher')" class="langSwitcher">
-    <NuxtIcon name="globe" />
-    <span class="visually-hidden">{{ locales[1].name }}</span>
-  </NuxtLink>
-
-  <NuxtLink v-if="locale === 'ar'" :to="switchLocalePath('fr')" :title="t('switcher')" class="langSwitcher">
-    <NuxtIcon name="globe" />
-    <span class="visually-hidden">{{ locales[0].name }}</span>
+  <NuxtLink :to="switchLocalePath(switcher)" class="switcher">
+    <NuxtIcon name="lang" />
+    <span class="visually-hidden">{{ t('switcher') }}</span>
   </NuxtLink>
 </template>
-
-<style lang="scss">
-.langSwitcher {
-  color: var(--secondary);
-  transition: color $transition;
-  &:hover {
-    color: var(--primary);
-    .dark-mode & {
-      color: var(--white);
-    }
-  }
-}
-</style>
