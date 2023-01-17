@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const { t } = useI18n()
-const config = useRuntimeConfig()
 const seo = useSeo()
 
 useHead({
@@ -89,16 +88,16 @@ useHead({
           <h3 class="h6">
             {{ t('contact.manager') }}
           </h3>
-          <a :href="`mailto:${config.public.managerEmail}`" class="link move-arrow">
-            {{ config.public.managerEmail }}
+          <a :href="`mailto:${seo.supportEmail}`" class="link move-arrow">
+            {{ seo.managerEmail }}
           </a>
         </div>
         <div class="item">
           <h3 class="h6">
             {{ t('contact.support') }}
           </h3>
-          <a :href="`mailto:${config.public.supportEmail}`" class="link move-arrow">
-            {{ config.public.supportEmail }}
+          <a :href="`mailto:${seo.supportEmail}`" class="link move-arrow">
+            {{ seo.supportEmail }}
           </a>
         </div>
       </div>
