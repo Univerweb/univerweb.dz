@@ -88,7 +88,7 @@ useHead({
 <template>
   <div class="wrapper" :class="{ scrolled: y }">
     <NuxtLoadingIndicator />
-    <!-- <TheSkiplinks /> -->
+    <!-- <TheSkipLinks /> -->
     <TheHeader />
     <NuxtPage :transition="{ name: 'page', mode: 'out-in', onBeforeEnter }" />
     <TheFooter />
