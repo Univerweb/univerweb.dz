@@ -3,7 +3,9 @@ export interface Work {
   title: string
   desc: string
   tags: string[]
+  industry: string
   lead: string
+  link: string
 }
 
 export interface Nav {
