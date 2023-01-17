@@ -1,11 +1,11 @@
 export interface Work {
-  slug: string
   title: string
   desc: string
+  slug: string
   tags: string[]
-  industry: string
+  industry?: string
   lead: string
-  link: string
+  link?: string
 }
 
 export interface Nav {
