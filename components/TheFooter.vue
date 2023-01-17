@@ -6,8 +6,10 @@
       <FooterPhone />
     </div>
 
+    <FooterAbout />
+
     <div>
-      <AppAbout />
+      <FooterLink />
       <FooterSocials />
     </div>
 
@@ -33,26 +35,16 @@ footer {
   }
 
   @media (min-width: $md) {
-    grid-template-columns: auto auto;
     padding: 96px 48px;
   }
 
   @media (min-width: $lg) {
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: repeat(3, auto);
     padding: 144px 96px;
   }
 
   a:hover {
     color: $primary;
-  }
-
-  .lead {
-    color: var(--textPrimary);
-    transition: color $transition;
-
-    @media (min-width: $md) {
-      max-width: 310px;
-    }
   }
 }
 </style>

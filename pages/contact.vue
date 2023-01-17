@@ -75,7 +75,8 @@ useHead({
         <h1 class="h2">
           {{ t('contact.title') }}
         </h1>
-        <AppAbout />
+        <FooterAbout />
+        <FooterLink />
       </div>
     </div>
     <div id="map" />
@@ -115,6 +116,7 @@ useHead({
 .contact {
   background-color: var(--secondary);
   color: $white;
+
   a {
     color: $white;
   }
