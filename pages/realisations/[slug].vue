@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { createError } from 'h3'
+import type { Work } from '../../types'
 
 const localePath = useLocalePath()
 const { locale, t } = useI18n()
@@ -8,12 +9,14 @@ const seo = useSeo()
 
 const fullPath = locale.value === 'fr' ? `/${locale.value}${route.path}` : `${route.path}`
 
-const { data: work, error } = await useAsyncData(`content-${fullPath}`, () => {
+const { data: _work, error } = await useAsyncData(`content-${fullPath}`, () => {
   return queryContent()
     .where({ _path: fullPath })
     .only(['title', 'desc', 'tags', 'industry', 'lead', 'link', 'slug'])
     .findOne()
 })
+
+const work = _work.value as Work
 
 if (error.value) {
   showError(
@@ -29,15 +32,15 @@ const [prev, next] = await queryContent(locale.value, 'realisations')
   .findSurround({ _path: fullPath })
 
 useHead({
-  title: work.value!.title,
+  title: work.title,
 
   meta: [
-    { name: 'description', content: work.value!.desc },
-    { property: 'og:title', content: work.value!.title },
-    { property: 'og:description', content: work.value!.desc },
-    { property: 'og:image', content: `${seo.baseUrl}/images/${route.params.slug}_share.jpg` },
-    { property: 'og:image:secure_url', content: `${seo.baseUrl}/images/${route.params.slug}_share.jpg` },
-    { property: 'og:image:alt', content: `${seo.baseUrl} — ${work.value!.industry}` },
+    { name: 'description', content: work.desc },
+    { property: 'og:title', content: work.title },
+    { property: 'og:description', content: work.desc },
+    { property: 'og:image', content: `${seo.baseUrl}/images/${work.slug}_share.jpg` },
+    { property: 'og:image:secure_url', content: `${seo.baseUrl}/images/${work.slug}_share.jpg` },
+    { property: 'og:image:alt', content: `${seo.baseUrl} — ${work.industry}` },
   ],
 
   script: [
@@ -49,7 +52,7 @@ useHead({
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': seo.name, 'item': seo.breadcrumbItemOne },
           { '@type': 'ListItem', 'position': 2, 'name': seo.works.title.value, 'item': `${seo.baseUrl}${localePath('realisations')}` },
-          { '@type': 'ListItem', 'position': 3, 'name': work.value!.title },
+          { '@type': 'ListItem', 'position': 3, 'name': work.title },
         ],
       },
     },
@@ -58,7 +61,7 @@ useHead({
 </script>
 
 <template>
-  <main v-if="work" id="main" class="work">
+  <main id="main" class="work">
     <article vocab="https://schema.org/" typeof="Article">
       <div property="mainEntityOfPage" typeof="WebPage">
         <meta property="id" :content="`${seo.baseUrl}${route.path}`">
