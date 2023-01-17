@@ -2,7 +2,7 @@
 import type { PropType } from 'vue'
 import type { Work } from '../../types'
 
-defineProps({
+const props = defineProps({
   h1: {
     type: String,
     default: 'h1',
@@ -13,7 +13,7 @@ defineProps({
   },
   limit: {
     type: Number,
-    default: Infinity,
+    default: 0,
   },
   works: {
     type: Array as PropType<Work[]>,
@@ -29,7 +29,9 @@ const { locale, t } = useI18n()
 const localePath = useLocalePath()
 
 const { data: works } = await useAsyncData('works', () => queryContent(locale.value, 'realisations')
+  .only(['title', 'desc', 'slug', 'tags', 'lead'])
   .sort({ _id: -1 })
+  .limit(props.limit)
   .find())
 </script>
 
@@ -42,7 +44,7 @@ const { data: works } = await useAsyncData('works', () => queryContent(locale.va
     </div>
 
     <div v-if="works?.length" class="details">
-      <WorkListItem v-for="work in works.slice(0, limit)" :key="work.slug" :work="work" />
+      <WorkListItem v-for="work in works" :key="work.slug" :work="work" />
     </div>
 
     <Component :is="more" v-if="more" class="more">
