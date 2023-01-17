@@ -18,12 +18,14 @@ const localePath = useLocalePath()
   display: grid;
   grid-auto-columns: max-content;
   row-gap: 24px;
+  list-style: none;
   margin: 0;
   padding: 48px 0 0;
+
   @media screen and (orientation: landscape) {
     padding-top: 24px;
   }
-  list-style: none;
+
   @media (min-width: $lg) {
     grid-template-columns: repeat(4, auto);
     justify-content: space-around;
@@ -36,11 +38,13 @@ const localePath = useLocalePath()
     font-family: var(--fontMedium);
     @include size(20);
     color: var(--textPrimary);
+
     @media (min-width: $lg) {
       font-size: 1rem;
       line-height: 1.5;
       text-align: center;
     }
+
     &::after {
       content: '';
       display: block;
@@ -50,6 +54,7 @@ const localePath = useLocalePath()
       height: 3px;
       transition: width $transition;
     }
+
     &:hover::after,
     &.router-link-active::after {
       width: 25%;
