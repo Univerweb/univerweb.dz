@@ -60,7 +60,7 @@ header {
     padding: 36px;
 
     .scrolled & {
-      padding: 12px 36px;
+      padding-block: 24px;
     }
   }
 }

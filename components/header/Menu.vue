@@ -28,7 +28,7 @@ const localePath = useLocalePath()
 
   @media (min-width: $lg) {
     grid-template-columns: repeat(4, auto);
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding: 0;
   }
 
