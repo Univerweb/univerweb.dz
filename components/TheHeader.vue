@@ -10,13 +10,16 @@ useHead({
 <template>
   <header :class="{ show, hide: !show }">
     <HeaderLogo />
+
     <nav class="nav">
       <HeaderMenu />
+
       <div class="switchers">
-        <HeaderLangSwitcher />
-        <HeaderColorSwitcher />
+        <HeaderLangSwitch />
+        <HeaderColorSwitch />
       </div>
     </nav>
+
     <HeaderToggle />
   </header>
 </template>
@@ -96,7 +99,29 @@ header {
 }
 
 .switchers {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  column-gap: 12px;
+
+  .switcher {
+    position: relative;
+    background-color: transparent;
+    color: var(--textPrimary);
+    transition: color $transition;
+    padding: 0;
+    width: 16px;
+    height: 16px;
+
+    &:hover {
+      color: $primary;
+    }
+
+    .nuxt-icon svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 16px;
+      height: 16px;
+    }
+  }
 }
 </style>
