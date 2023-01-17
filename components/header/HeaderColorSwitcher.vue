@@ -8,44 +8,8 @@ const toggleDark = () => {
 </script>
 
 <template>
-  <button class="colorSwitcher" @click="toggleDark">
-    <NuxtIcon name="light" />
-    <NuxtIcon name="dark" />
-
-    <span class="visually-hidden">
-      {{ t(`colorMode.${color.preference}`) }}
-    </span>
+  <button class="switcher" :aria-label="t(`colorMode.${color.preference}`)" @click="toggleDark">
+    <NuxtIcon v-if="color.preference === 'light'" name="dark" />
+    <NuxtIcon v-else name="light" />
   </button>
 </template>
-
-<style lang="scss">
-.colorSwitcher {
-  position: relative;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: var(--secondary);
-  color: white;
-  width: 50px;
-  height: 28px;
-  border-radius: 50px;
-  padding: 0;
-  outline: 0;
-  transition: background-color $transition;
-  &:after {
-    position: absolute;
-    content: '';
-    background-color: var(--primary);
-    width: 24px;
-    height: 24px;
-    border-radius: 50px;
-    left: 0;
-    top: 2px;
-    transform: translateX(2px);
-    transition: background-color $transition, transform $transition;
-    .dark-mode & {
-      transform: translateX(24px);
-    }
-  }
-}
-</style>
