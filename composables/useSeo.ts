@@ -12,6 +12,8 @@ export const useSeo = () => {
     baseUrl,
     logo: `${baseUrl}/logo.svg`,
     email: config.public.baseEmail,
+    managerEmail: config.public.managerEmail,
+    supportEmail: config.public.supportEmail,
     mobile: t('mobile.value'),
     phone: t('phone.value'),
     ogUrl: computed(() => `${baseUrl}${route.path}`),
