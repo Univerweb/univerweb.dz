@@ -1,10 +1,11 @@
 <script setup lang="ts">
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
+const show = useShow()
 </script>
 
 <template>
-  <NuxtLink :to="localePath('/')" :title="t('name')" class="logo">
+  <NuxtLink :to="localePath('/')" :title="t('name')" class="logo" @click="show = false">
     <svg v-if="locale === 'ar'" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" width="155.07" height="24" viewBox="0 0 155.07 24">
       <g>
         <path d="M149.85,13.57c2.88,0,5.22,2.34,5.22,5.22c0,2.88-2.34,5.22-5.22,5.22s-5.22-2.34-5.22-5.22C144.64,15.9,146.97,13.57,149.85,13.57" />
