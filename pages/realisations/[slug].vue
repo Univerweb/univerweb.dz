@@ -26,7 +26,7 @@ if (error.value) {
   )
 }
 
-const [prev, next] = await queryContent(locale.value, 'realisations')
+const [prev, next] = await queryContent(locale.value)
   .only(['slug', 'title'])
   .findSurround({ _path: path })
 
