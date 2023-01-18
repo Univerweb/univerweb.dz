@@ -54,32 +54,37 @@ const works = ref<Work[]>(_works)
 </template>
 
 <style lang="scss" scoped>
-.works {
-  .details {
-    grid-template-columns: 1fr;
-    @media (min-width: $sm) {
-      grid-template-columns: 1fr 1fr;
-    }
-    gap: 12px;
-    @media (min-width: $md) {
-      gap: 16px;
-    }
-    @media (min-width: $lg) {
-      gap: 24px;
-    }
+.works .details {
+  grid-template-columns: 1fr;
+
+  @media (min-width: $sm) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  gap: 12px;
+
+  @media (min-width: $md) {
+    gap: 16px;
+  }
+
+  @media (min-width: $lg) {
+    gap: 24px;
   }
 }
 
 .more {
   display: grid;
   margin-top: 48px;
+
   .btn {
     justify-self: end;
+
     .arrow {
       fill: currentColor;
       height: 8px;
       margin-bottom: 2px;
       transform: rotate(-90deg);
+
       [lang='ar-DZ'] & {
         transform: rotate(90deg);
       }
