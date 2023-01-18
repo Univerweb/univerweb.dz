@@ -66,6 +66,7 @@ const localePath = useLocalePath()
   overflow: hidden;
   z-index: 1;
   border-radius: 12px;
+
   @media (min-width: $xl) {
     border-radius: 24px;
   }
@@ -73,10 +74,12 @@ const localePath = useLocalePath()
   a {
     display: grid;
     position: relative;
+
     &:hover {
       .overlay {
         opacity: 0.6;
       }
+
       p {
         transform: translateY(0);
       }
@@ -99,13 +102,16 @@ const localePath = useLocalePath()
     height: 100%;
     color: $white;
     padding: 24px;
+
     @media (min-width: $md) {
       padding: 24px;
     }
+
     @media (min-width: $lg) {
       padding: 36px;
       grid-auto-rows: auto auto 1fr;
     }
+
     @media (min-width: $xl) {
       padding: 48px;
     }
@@ -119,9 +125,11 @@ const localePath = useLocalePath()
 
   p {
     display: none;
+
     @media (min-width: $lg) {
       display: block;
     }
+
     color: $white;
     align-self: end;
     transform: translateY(calc(100% + 48px));
