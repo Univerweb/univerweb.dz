@@ -4,14 +4,13 @@ import type { Work } from '../../types'
 
 const localePath = useLocalePath()
 const { locale, t } = useI18n()
-const route = useRoute()
 const seo = useSeo()
+const route = useRoute()
+const path = `/${locale.value}/${route.params.slug}`
 
-const fullPath = locale.value === 'fr' ? `/${locale.value}${route.path}` : `${route.path}`
-
-const { data: _work, error } = await useAsyncData(`content-${fullPath}`, () => {
+const { data: _work, error } = await useAsyncData(`work-${locale.value}-${route.params.slug}`, () => {
   return queryContent()
-    .where({ _path: fullPath })
+    .where({ _path: path })
     .only(['title', 'desc', 'tags', 'industry', 'lead', 'link', 'slug'])
     .findOne()
 })
@@ -29,7 +28,7 @@ if (error.value) {
 
 const [prev, next] = await queryContent(locale.value, 'realisations')
   .only(['slug', 'title'])
-  .findSurround({ _path: fullPath })
+  .findSurround({ _path: path })
 
 useHead({
   title: work.title,
