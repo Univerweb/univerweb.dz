@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type { PropType } from 'vue'
 import type { Work } from '../../types'
 
 const props = defineProps({
@@ -15,10 +14,6 @@ const props = defineProps({
     type: Number,
     default: 0,
   },
-  works: {
-    type: Array as PropType<Work[]>,
-    default: () => [],
-  },
   more: {
     type: String,
     default: null,
@@ -28,11 +23,13 @@ const props = defineProps({
 const { locale, t } = useI18n()
 const localePath = useLocalePath()
 
-const { data: works } = await useAsyncData('works', () => queryContent(locale.value, 'realisations')
+const { data: _works } = await useAsyncData('works', () => queryContent(locale.value)
   .only(['title', 'desc', 'slug', 'tags', 'lead'])
   .sort({ _id: -1 })
   .limit(props.limit)
   .find())
+
+const works = ref<Work[]>(_works)
 </script>
 
 <template>
