@@ -156,6 +156,7 @@ useHead({
   .banner {
     position: relative;
     aspect-ratio: 3/2;
+
     @media (min-width: $lg) {
       aspect-ratio: 3/1;
     }
@@ -177,9 +178,11 @@ useHead({
       .item:nth-child(1) {
         grid-column: 1 / 4;
       }
+
       .item:nth-child(2) {
         grid-column: 5 / 8;
       }
+
       .item:nth-child(3) {
         grid-column: 9 / 12;
       }
@@ -188,18 +191,22 @@ useHead({
 
   .project {
     padding-top: 0;
+
     @media (min-width: $md) {
       .item:nth-child(1) {
         grid-column: 1 / 4;
       }
+
       .item:nth-child(2) {
         grid-column: 5 / 13;
       }
+
       .inner {
         position: sticky;
         top: 120px;
       }
     }
+
     .card img {
       border-radius: 0.25rem;
       box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1);
