@@ -7,7 +7,7 @@ defineProps({
     type: Object as PropType<Work>,
     default: () => {},
   },
-  h2: {
+  titleTag: {
     type: String,
     default: 'h2',
   },
@@ -44,7 +44,7 @@ const localePath = useLocalePath()
       <div class="overlay" />
 
       <div class="inner">
-        <Component :is="h2" property="headline">
+        <Component :is="titleTag" property="headline">
           {{ work.title }}
         </Component>
         <ul class="tags">

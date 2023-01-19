@@ -1,7 +1,7 @@
 <template>
   <main>
     <AppWelcome />
-    <WorkList :limit="6" h1="h2" like-h1="h1" h2="h3" more="div" />
+    <WorkList headline-tag="h2" title-tag="h3" :limit="6" more />
     <AppRequest class-name="h1" />
   </main>
 </template>
