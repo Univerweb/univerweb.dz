@@ -45,14 +45,16 @@ main {
       margin-top: 72px;
     }
   }
-  &.page-enter-active,
-  &.page-leave-active {
-    transition: opacity $transition;
-  }
-  &.page-enter,
-  &.page-leave-active {
-    opacity: 0;
-  }
+}
+
+/* Global transition */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity $transition;
+}
+.page-enter,
+.page-leave-active {
+  opacity: 0;
 }
 
 /* Container */
