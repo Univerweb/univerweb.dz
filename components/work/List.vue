@@ -2,21 +2,17 @@
 import type { Work } from '../../types'
 
 const props = defineProps({
-  h1: {
+  headlineTag: {
     type: String,
     default: 'h1',
-  },
-  likeH1: {
-    type: String,
-    default: null,
   },
   limit: {
     type: Number,
     default: 0,
   },
   more: {
-    type: String,
-    default: null,
+    type: Boolean,
+    default: false,
   },
 })
 
@@ -35,7 +31,7 @@ const works = ref<Work[]>(_works)
 <template>
   <section class="container works">
     <div class="intro">
-      <Component :is="h1" :class="likeH1">
+      <Component :is="headlineTag" class="h1">
         {{ t('works.headline') }}
       </Component>
     </div>
@@ -44,12 +40,12 @@ const works = ref<Work[]>(_works)
       <WorkListItem v-for="work in works" :key="work.slug" :work="work" />
     </div>
 
-    <Component :is="more" v-if="more" class="more">
+    <div v-if="more" class="more">
       <NuxtLink :to="localePath('realisations')" class="btn">
         {{ t('home.more') }}
         <NuxtIcon name="arrow" />
       </NuxtLink>
-    </Component>
+    </div>
   </section>
 </template>
 
