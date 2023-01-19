@@ -91,6 +91,6 @@ useHead({
     <!-- <TheSkipLinks /> -->
     <TheHeader />
     <NuxtPage :transition="{ name: 'page', mode: 'out-in', onBeforeEnter }" />
-    <TheFooter />
+    <LazyTheFooter />
   </div>
 </template>
