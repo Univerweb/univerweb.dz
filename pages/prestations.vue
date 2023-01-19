@@ -80,7 +80,8 @@ useHead({
         </ul>
       </div>
     </div>
-    <AppRequest />
+
+    <LazyAppRequest />
   </main>
 </template>
 
