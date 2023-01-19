@@ -24,7 +24,7 @@ const { data: _works } = await useAsyncData('works', () => queryContent(locale.v
   .limit(props.limit)
   .find())
 
-const works = ref<Work[]>(_works)
+const works = _works.value as Work[]
 </script>
 
 <template>
