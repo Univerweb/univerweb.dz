@@ -33,10 +33,10 @@ export default defineNuxtConfig({
     ],
     lazy: true,
     langDir: 'lang',
-    skipSettingLocaleOnNavigate: true,
     defaultLocale: 'fr',
     detectBrowserLanguage: false,
     baseUrl: process.env.BASE_URL,
+    skipSettingLocaleOnNavigate: true,
   },
 
   // image: {
