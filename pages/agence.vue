@@ -81,6 +81,7 @@ ol {
   padding: 0;
   list-style: none;
   counter-reset: counterName;
+
   li:before {
     counter-increment: counterName;
     content: counters(counterName, '-');
