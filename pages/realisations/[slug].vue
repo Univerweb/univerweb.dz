@@ -141,9 +141,9 @@ useHead({
       </div>
     </article>
 
-    <WorkNav :prev="prev" :next="next" />
+    <LazyWorkNav :prev="prev" :next="next" />
 
-    <AppRequest />
+    <LazyAppRequest />
   </main>
 </template>
 

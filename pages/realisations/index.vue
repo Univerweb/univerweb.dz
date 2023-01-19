@@ -29,6 +29,6 @@ useHead({
 <template>
   <main>
     <WorkList />
-    <AppRequest />
+    <LazyAppRequest />
   </main>
 </template>
