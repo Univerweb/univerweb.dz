@@ -1,13 +1,9 @@
 <script setup lang="ts">
-import type { PropType } from 'vue'
 import type { Error } from './types'
 
-defineProps({
-  error: {
-    type: Object as PropType<Error>,
-    default: () => {},
-  },
-})
+defineProps<{
+  error: Error
+}>()
 
 const { t } = useI18n()
 
