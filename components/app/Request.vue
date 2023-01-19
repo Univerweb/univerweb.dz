@@ -1,9 +1,10 @@
 <script setup lang="ts">
-defineProps({
-  home: {
-    type: String,
-    default: 'h2',
-  },
+export interface Props {
+  className?: string
+}
+
+withDefaults(defineProps<Props>(), {
+  className: 'h2',
 })
 
 const { t } = useI18n()
@@ -15,7 +16,7 @@ const localePath = useLocalePath()
     <h2 class="h3">
       {{ t('request.headline') }}
     </h2>
-    <NuxtLink :to="localePath('contact')" :class="home" class="move-arrow">
+    <NuxtLink :to="localePath('contact')" :class="className" class="move-arrow">
       {{ t('request.link') }}
     </NuxtLink>
   </div>
