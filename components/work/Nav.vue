@@ -1,17 +1,10 @@
 <script setup lang="ts">
-import type { PropType } from 'vue'
 import type { Nav } from '../../types'
 
-defineProps({
-  prev: {
-    type: Object as PropType<Nav>,
-    default: null,
-  },
-  next: {
-    type: Object as PropType<Nav>,
-    default: null,
-  },
-})
+defineProps<{
+  prev: Nav
+  next: Nav
+}>()
 
 const localePath = useLocalePath()
 const { t } = useI18n()
