@@ -5,12 +5,14 @@ export interface Props {
   headlineTag?: string
   limit?: number
   more?: boolean
+  titleTag?: string
 }
 
 const props = withDefaults(defineProps<Props>(), {
   headlineTag: 'h1',
   limit: 0,
   more: false,
+  titleTag: 'h2',
 })
 
 const { locale, t } = useI18n()
@@ -34,7 +36,7 @@ const works = ref<Work[]>(_works)
     </div>
 
     <div v-if="works?.length" class="details">
-      <WorkListItem v-for="work in works" :key="work.slug" :work="work" />
+      <WorkListItem v-for="work in works" :key="work.slug" :work="work" :title-tag="titleTag" />
     </div>
 
     <div v-if="more" class="more">

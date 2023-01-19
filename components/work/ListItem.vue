@@ -1,17 +1,10 @@
 <script setup lang="ts">
-import type { PropType } from 'vue'
 import type { Work } from '../../types'
 
-defineProps({
-  work: {
-    type: Object as PropType<Work>,
-    default: () => {},
-  },
-  titleTag: {
-    type: String,
-    default: 'h2',
-  },
-})
+defineProps<{
+  work: Work
+  titleTag?: string
+}>()
 
 const seo = useSeo()
 const localePath = useLocalePath()
