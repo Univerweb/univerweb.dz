@@ -1,19 +1,16 @@
 <script setup lang="ts">
 import type { Work } from '../../types'
 
-const props = defineProps({
-  headlineTag: {
-    type: String,
-    default: 'h1',
-  },
-  limit: {
-    type: Number,
-    default: 0,
-  },
-  more: {
-    type: Boolean,
-    default: false,
-  },
+export interface Props {
+  headlineTag?: string
+  limit?: number
+  more?: boolean
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  headlineTag: 'h1',
+  limit: 0,
+  more: false,
 })
 
 const { locale, t } = useI18n()
