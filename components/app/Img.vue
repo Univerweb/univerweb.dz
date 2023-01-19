@@ -1,20 +1,12 @@
 <script setup lang="ts">
-defineProps({
-  src: {
-    type: String,
-    default: null,
-  },
-  alt: {
-    type: String,
-    default: null,
-  },
-  sizes: {
-    type: String,
-    default: null,
-  },
-})
+defineProps<{
+  src: string
+  alt: string
+  sizes: string
+}>()
 </script>
 
 <template>
-  <nuxt-img format="webp" quality="100" :src="src" :alt="alt" :sizes="sizes" loading="lazy" />
+  <!-- add: format="webp" -->
+  <nuxt-img :src="src" :alt="alt" :sizes="sizes" quality="100" loading="lazy" />
 </template>
