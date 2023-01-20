@@ -78,7 +78,9 @@ useHead({
         <FooterLink />
       </div>
     </div>
+
     <div id="map" />
+
     <div class="container contact">
       <div class="intro">
         <h2>{{ t('contact.other') }}</h2>

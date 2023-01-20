@@ -35,6 +35,7 @@ useHead({
         {{ t('presta.lead') }}
       </p>
     </div>
+
     <div class="container prestations">
       <div class="intro">
         <h2>{{ t('presta.webDesign.title') }}</h2>
@@ -50,6 +51,7 @@ useHead({
         </ul>
       </div>
     </div>
+
     <div class="container prestations">
       <div class="intro">
         <h2>{{ t('presta.dev.title') }}</h2>
@@ -65,6 +67,7 @@ useHead({
         </ul>
       </div>
     </div>
+
     <div class="container prestations">
       <div class="intro">
         <h2>{{ t('presta.support.title') }}</h2>
