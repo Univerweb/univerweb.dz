@@ -40,6 +40,7 @@ useHead({
         {{ t('agency.lead') }}
       </p>
     </div>
+
     <div class="container">
       <div class="intro">
         <h2 class="h1">
@@ -55,6 +56,7 @@ useHead({
         </li>
       </ol>
     </div>
+
     <div class="container">
       <div class="intro">
         <h2 class="h1">
