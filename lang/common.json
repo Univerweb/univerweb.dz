@@ -1,0 +1,23 @@
+{
+  "address": {
+    "postalCode": "16029"
+  },
+  "phone": {
+    "value": "021 44 08 11"
+  },
+  "mobile": {
+    "value": "0551 90 46 22"
+  },
+  "works": {
+    "title": "@:menu[0].title"
+  },
+  "presta": {
+    "title": "@:menu[1].title"
+  },
+  "agency": {
+    "title": "@:menu[2].title"
+  },
+  "contact": {
+    "title": "@:menu[3].title"
+  }
+}

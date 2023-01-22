@@ -20,21 +20,17 @@
     "link": "Contactez-nous"
   },
   "address": {
-    "name": "@:name Eurl",
     "streetAddress": "62 Coop. El Mebnia",
     "addressLocality": "Birkhadem",
-    "postalCode": "16029",
     "addressRegion": "Alger",
     "addressCountry": "Algérie"
   },
   "maps": "Obtenir un itinéraire",
   "phone": {
-    "label": "Téléphone / fax",
-    "value": "021 44 08 11"
+    "label": "Téléphone / fax"
   },
   "mobile": {
-    "label": "Mobile",
-    "value": "0551 90 46 22"
+    "label": "Mobile"
   },
   "email": "E-mail",
   "socials": [
@@ -70,7 +66,6 @@
     "more": "Plus de bonheur"
   },
   "works": {
-    "title": "@:menu[0].title",
     "desc": "Découvrez nos toutes dernières créations. Nous serions ravis de collaborer avec vous.",
     "headline": "Ils ont cru en nous et ils sont comblés."
   },
@@ -82,7 +77,6 @@
     "alt": "Un aperçu du site web de"
   },
   "presta": {
-    "title": "@:menu[1].title",
     "desc": "Une stratégie de présence web accomplie, sur des fondements technologiques et une méthodologie rigoureuse.",
     "headline": "Ce dont nous sommes capables.",
     "lead": "De nos jours quiconque peut faire un site web, y compris votre neveu de 13 ans ! Mais qui peut réellement concrétiser une stratégie de présence web accomplie, sur des fondements technologiques et une méthodologie rigoureuse.",
@@ -117,7 +111,6 @@
     }
   },
   "agency": {
-    "title": "@:menu[2].title",
     "desc": "Nous sommes une jeunes équipe de créativo-perfectionnistes et passionnée par notre travail, nous aimons coder de magnifiques sites web.",
     "headline": "Nous sommes une agence web.",
     "lead": "Créée en 2011 à Alger, nous sommes une jeunes équipe de créativo-perfectionnistes et passionnée par notre travail, nous aimons coder de magnifiques sites web en buvant du café le matin.",
@@ -141,7 +134,6 @@
     }
   },
   "contact": {
-    "title": "@:menu[3].title",
     "desc": "Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
     "about": "Créer des sites web professionnels, c'est ce que nous faisons. Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
     "other": "Autres moyens de nous contacter",
