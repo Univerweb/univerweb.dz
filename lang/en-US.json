@@ -20,21 +20,17 @@
     "link": "Get in Touch"
   },
   "address": {
-    "name": "@:name Eurl",
     "streetAddress": "62 Coop. El Mebnia",
     "addressLocality": "Birkhadem",
-    "postalCode": "16029",
     "addressRegion": "Algiers",
     "addressCountry": "Algeria"
   },
   "maps": "Get directions",
   "phone": {
-    "label": "Telephone / fax",
-    "value": "021 44 08 11"
+    "label": "Telephone / fax"
   },
   "mobile": {
-    "label": "Mobile",
-    "value": "0551 90 46 22"
+    "label": "Mobile"
   },
   "email": "E-mail",
   "socials": [
@@ -70,7 +66,6 @@
     "more": "More happiness"
   },
   "works": {
-    "title": "@:menu[0].title",
     "desc": "Discover our latest creations. We would be delighted to work with you.",
     "headline": "They believed in us and they are fulfilled."
   },
@@ -82,7 +77,6 @@
     "alt": "A website overview of"
   },
   "presta": {
-    "title": "@:menu[1].title",
     "desc": "An accomplished web presence strategy, on technological foundations and a rigorous methodology.",
     "headline": "What we are capable of.",
     "lead": "These days anyone can make a website, including your 13 year old nephew! But who can really materialize an accomplished web presence strategy, on technological foundations and a rigorous methodology.",
@@ -117,7 +111,6 @@
     }
   },
   "agency": {
-    "title": "@:menu[2].title",
     "desc": "We are a young team of creative-perfectionists and passionate about our work, we like to code beautiful websites while drinking coffee in the morning.",
     "headline": "We are a web agency.",
     "lead": "Founded in 2011 in Algiers, we are a young team of creative-perfectionists and passionate about our work, we like to code beautiful websites while drinking coffee in the morning.",
@@ -141,7 +134,6 @@
     }
   },
   "contact": {
-    "title": "@:menu[3].title",
     "desc": "Tell us about your needs, we'd love to collaborate with you.",
     "other": "Other ways to contact us",
     "about": "Creating professional websites is what we do. Tell us about your needs, we'd love to collaborate with you.",
