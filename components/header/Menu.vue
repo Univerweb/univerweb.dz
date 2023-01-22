@@ -6,9 +6,9 @@ const show = useShow()
 
 <template>
   <ul class="menu">
-    <li v-for="link in tm('menu')" :key="rt(link.slug)">
-      <NuxtLink :to="localePath(rt(link.slug))" @click="show = false">
-        {{ rt(link.title) }}
+    <li v-for="(name, value) in (tm('menu') as { value: string })" :key="value">
+      <NuxtLink :to="localePath(value)" @click="show = false">
+        {{ rt(name) }}
       </NuxtLink>
     </li>
   </ul>
