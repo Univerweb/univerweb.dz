@@ -22,6 +22,10 @@ export const useSeo = () => {
     streetAddress: computed(() => `${t('streetAddress')}${coma.value}${t('addressLocality')}`),
     postalCode: t('postalCode'),
     addressLocality: computed(() => `${t('addressRegion')}${coma.value}${t('addressCountry')}`),
+    twitter: t('twitter'),
+    facebook: t('facebook'),
+    linkedin: t('linkedin'),
+    github: t('github'),
     breadcrumbItemOne: computed(() => locale.value !== 'fr' ? `${baseUrl}/${locale.value}` : `${baseUrl}/`),
     works: {
       title: computed(() => t('works.title')),
