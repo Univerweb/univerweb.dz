@@ -7,24 +7,12 @@
     "content": "إذهب الى المحتوى",
     "contact": "إذهب إلى التواصل"
   },
-  "menu": [
-    {
-      "slug": "realisations",
-      "title": "آخر الأعمال"
-    },
-    {
-      "slug": "prestations",
-      "title": "الخدمات"
-    },
-    {
-      "slug": "agence",
-      "title": "الوكالة"
-    },
-    {
-      "slug": "contact",
-      "title": "التواصل معنا"
-    }
-  ],
+  "menu": {
+    "realisations": "آخر الأعمال",
+    "prestations": "الخدمات",
+    "agence": "الوكالة",
+    "contact": "التواصل معنا"
+  },
   "switcher": "Choisir l'arabe",
   "toggle": "افتح القائمة",
   "request": {

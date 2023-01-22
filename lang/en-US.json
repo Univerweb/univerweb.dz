@@ -7,24 +7,12 @@
     "content": "Skip to content",
     "contact": "Skip to contact"
   },
-  "menu": [
-    {
-      "slug": "realisations",
-      "title": "Latest work"
-    },
-    {
-      "slug": "prestations",
-      "title": "Services"
-    },
-    {
-      "slug": "agence",
-      "title": "The agency"
-    },
-    {
-      "slug": "contact",
-      "title": "Contact"
-    }
-  ],
+  "menu": {
+    "realisations": "Latest work",
+    "prestations": "Services",
+    "agence": "The agency",
+    "contact": "Contact"
+  },
   "switcher": "اختر اللغة العربية",
   "toggle": "Open menu",
   "request": {

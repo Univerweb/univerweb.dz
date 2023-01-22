@@ -7,24 +7,12 @@
     "content": "Aller au contenu",
     "contact": "Aller au contact"
   },
-  "menu": [
-    {
-      "slug": "realisations",
-      "title": "Réalisations"
-    },
-    {
-      "slug": "prestations",
-      "title": "Prestations"
-    },
-    {
-      "slug": "agence",
-      "title": "L'agence"
-    },
-    {
-      "slug": "contact",
-      "title": "Contact"
-    }
-  ],
+  "menu": {
+    "realisations": "Réalisations",
+    "prestations": "Prestations",
+    "agence": "L'agence",
+    "contact": "Contact"
+  },
   "switcher": "Choose English",
   "toggle": "Ouvrir le menu",
   "request": {
