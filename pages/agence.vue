@@ -2,11 +2,6 @@
 const { t, tm, rt } = useI18n()
 const seo = useSeo()
 
-interface Content {
-  name: string
-  value: string
-}
-
 useHead({
   title: seo.agency.title,
 
@@ -48,7 +43,7 @@ useHead({
         </h2>
       </div>
       <ol class="details">
-        <li v-for="(value, name) in (tm('agency.method.content') as Content)" :key="name" class="item">
+        <li v-for="(value, name) in (tm('agency.method.content') as { name: string })" :key="name" class="item">
           <h3>{{ name }}</h3>
           <p class="lead">
             {{ rt(value) }}
@@ -64,7 +59,7 @@ useHead({
         </h2>
       </div>
       <div class="details">
-        <div v-for="(value, name) in (tm('agency.choose.content') as Content)" :key="name" class="item">
+        <div v-for="(value, name) in (tm('agency.choose.content') as { name: string })" :key="name" class="item">
           <h3>{{ name }}</h3>
           <p class="lead">
             {{ rt(value) }}
