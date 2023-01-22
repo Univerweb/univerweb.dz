@@ -6,7 +6,7 @@ const { t } = useI18n()
 <template>
   <NuxtLink :to="localePath('realisations')" class="back">
     <NuxtIcon name="arrow" />
-    {{ t('menu[0].title') }}
+    {{ t('menu.realisations') }}
   </NuxtLink>
 </template>
 
@@ -18,15 +18,18 @@ const { t } = useI18n()
   line-height: 1.875;
   text-transform: uppercase;
   margin-bottom: 12px;
+
   &:hover {
     color: $primary;
   }
+
   .arrow {
     fill: currentColor;
     height: 5px;
     transform: rotate(90deg);
     margin-inline-end: 6px;
     margin-bottom: 2px;
+
     [lang='ar-DZ'] & {
       transform: rotate(-90deg);
     }

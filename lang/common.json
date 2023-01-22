@@ -11,16 +11,8 @@
   "facebook": "https://www.facebook.com/Univerweb",
   "linkedin": "https://www.linkedin.com/company/Univerweb",
   "github": "https://github.com/Univerweb",
-  "works": {
-    "title": "@:menu[0].title"
-  },
-  "presta": {
-    "title": "@:menu[1].title"
-  },
-  "agency": {
-    "title": "@:menu[2].title"
-  },
-  "contact": {
-    "title": "@:menu[3].title"
-  }
+  "works.title": "@:menu.realisations",
+  "presta.title": "@:menu.prestations",
+  "agency.title": "@:menu.agence",
+  "contact.title": "@:menu.contact"
 }
