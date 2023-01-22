@@ -19,40 +19,34 @@
     "headline": "مقتنع؟ لنشرب القهوة معًا.",
     "link": "اتصل بنا"
   },
-  "address": {
-    "streetAddress": "62 تعاونية المبنية",
-    "addressLocality": "بئر خادم",
-    "addressRegion": "الجزائر العاصمة",
-    "addressCountry": "الجزائر"
-  },
+  "streetAddress": "62 تعاونية المبنية",
+  "addressLocality": "بئر خادم",
+  "addressRegion": "الجزائر العاصمة",
+  "addressCountry": "الجزائر",
   "maps": "احصل على الاتجاهات",
-  "phone": {
-    "label": "الهاتف / الفاكس"
-  },
-  "mobile": {
-    "label": "جوال"
-  },
+  "phoneLabel": "الهاتف / الفاكس",
+  "mobileLabel": "جوال",
   "email": "البريد الإلكتروني",
   "socials": [
     {
       "name": "twitter",
       "value": "انضم إلينا على تويتر",
-      "url": "https://twitter.com/Univerweb"
+      "url": "@:twitter"
     },
     {
       "name": "facebook",
       "value": "انضم إلينا على فيس بوك",
-      "url": "https://www.facebook.com/Univerweb"
+      "url": "@:facebook"
     },
     {
       "name": "linkedin",
       "value": "انضم إلينا على لينكد إن",
-      "url": "https://www.linkedin.com/company/Univerweb"
+      "url": "@:linkedin"
     },
     {
       "name": "github",
       "value": "انضم إلينا على جيت هاب",
-      "url": "https://github.com/Univerweb"
+      "url": "@:github"
     }
   ],
   "colorMode": {

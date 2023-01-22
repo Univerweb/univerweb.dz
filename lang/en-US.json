@@ -1,5 +1,4 @@
 {
-  "name": "Univerweb",
   "title": "Website Design in Algeria",
   "desc": "Even more than websites, we design and innovate human-centered digital experiences for you that reflect your brand image.",
   "skiplinks": {
@@ -19,40 +18,30 @@
     "headline": "Convinced? Let's have a coffee together.",
     "link": "Get in Touch"
   },
-  "address": {
-    "streetAddress": "62 Coop. El Mebnia",
-    "addressLocality": "Birkhadem",
-    "addressRegion": "Algiers",
-    "addressCountry": "Algeria"
-  },
+  "addressRegion": "Algiers",
+  "addressCountry": "Algeria",
   "maps": "Get directions",
-  "phone": {
-    "label": "Telephone / fax"
-  },
-  "mobile": {
-    "label": "Mobile"
-  },
-  "email": "E-mail",
+  "phoneLabel": "Telephone / fax",
   "socials": [
     {
       "name": "twitter",
       "value": "Join us on Twitter",
-      "url": "https://twitter.com/Univerweb"
+      "url": "@:twitter"
     },
     {
       "name": "facebook",
       "value": "Join us on Facebook",
-      "url": "https://www.facebook.com/Univerweb"
+      "url": "@:facebook"
     },
     {
       "name": "linkedin",
       "value": "Join us on LinkedIn",
-      "url": "https://www.linkedin.com/company/Univerweb"
+      "url": "@:linkedin"
     },
     {
       "name": "github",
       "value": "Join us on GitHub",
-      "url": "https://github.com/Univerweb"
+      "url": "@:github"
     }
   ],
   "colorMode": {

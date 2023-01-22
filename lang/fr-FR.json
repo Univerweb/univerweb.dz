@@ -1,5 +1,4 @@
 {
-  "name": "Univerweb",
   "title": "Création de sites web en Algérie",
   "desc": "Plus que des sites web, nous concevons et innovons pour vous des expériences numériques centrées sur l'humain et qui reflètent votre image de marque.",
   "skiplinks": {
@@ -19,40 +18,30 @@
     "headline": "Convaincu ? Prenons un café ensemble.",
     "link": "Contactez-nous"
   },
-  "address": {
-    "streetAddress": "62 Coop. El Mebnia",
-    "addressLocality": "Birkhadem",
-    "addressRegion": "Alger",
-    "addressCountry": "Algérie"
-  },
+  "addressRegion": "Alger",
+  "addressCountry": "Algérie",
   "maps": "Obtenir un itinéraire",
-  "phone": {
-    "label": "Téléphone / fax"
-  },
-  "mobile": {
-    "label": "Mobile"
-  },
-  "email": "E-mail",
+  "phoneLabel": "Téléphone / fax",
   "socials": [
     {
       "name": "twitter",
       "value": "Rejoignez-nous sur Twitter",
-      "url": "https://twitter.com/Univerweb"
+      "url": "@:twitter"
     },
     {
       "name": "facebook",
       "value": "Rejoignez-nous sur Facebook",
-      "url": "https://www.facebook.com/Univerweb"
+      "url": "@:facebook"
     },
     {
       "name": "linkedin",
       "value": "Rejoignez-nous sur LinkedIn",
-      "url": "https://www.linkedin.com/company/Univerweb"
+      "url": "@:linkedin"
     },
     {
       "name": "github",
       "value": "Rejoignez-nous sur GitHub",
-      "url": "https://github.com/Univerweb"
+      "url": "@:github"
     }
   ],
   "colorMode": {
