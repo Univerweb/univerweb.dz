@@ -67,12 +67,7 @@ useHead({
         'email': seo.email,
         'telephone': seo.mobile,
         'faxNumber': seo.phone,
-        'sameAs': [
-          'https://twitter.com/Univerweb',
-          'https://www.facebook.com/Univerweb',
-          'https://www.linkedin.com/company/Univerweb',
-          'https://github.com/Univerweb',
-        ],
+        'sameAs': [seo.twitter, seo.facebook, seo.linkedin, seo.github],
         'address': {
           '@type': 'PostalAddress',
           'streetAddress': seo.streetAddress,
