@@ -1,11 +1,11 @@
 export default defineNuxtConfig({
   runtimeConfig: {
     public: {
-      baseURL: process.env.BASE_URL || 'http://localhost:3000',
+      baseURL: process.env.BASE_URL,
       baseEmail: process.env.BASE_EMAIL,
       managerEmail: process.env.MANAGER_EMAIL,
       supportEmail: process.env.SUPPORT_EMAIL,
-      apiKey: process.env.API_KEY || '',
+      apiKey: process.env.API_KEY,
     },
   },
 
@@ -19,9 +19,20 @@ export default defineNuxtConfig({
     },
   },
 
-  css: ['@/assets/css/font.css', '@/assets/scss/main.scss', '@/assets/css/keyframes.css'],
+  css: [
+    '@/assets/css/font.css',
+    '@/assets/scss/main.scss',
+    '@/assets/css/keyframes.css',
+  ],
 
-  modules: ['@nuxtjs/i18n', '@nuxt/content', '@nuxt/image-edge', '@nuxtjs/color-mode', '@vueuse/nuxt', 'nuxt-icons'],
+  modules: [
+    '@nuxtjs/i18n',
+    '@nuxt/content',
+    '@nuxt/image-edge',
+    '@nuxtjs/color-mode',
+    '@vueuse/nuxt',
+    'nuxt-icons',
+  ],
 
   // plugins: [{ src: '~plugins/ga.js', mode: 'client' }],
 
