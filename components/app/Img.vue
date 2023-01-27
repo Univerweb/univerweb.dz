@@ -7,6 +7,5 @@ defineProps<{
 </script>
 
 <template>
-  <!-- add: format="webp" -->
-  <nuxt-img :src="src" :alt="alt" :sizes="sizes" quality="100" loading="lazy" />
+  <nuxt-img :src="src" :alt="alt" :sizes="sizes" format="webp" quality="100" loading="lazy" />
 </template>
