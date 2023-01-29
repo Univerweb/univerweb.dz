@@ -11,15 +11,14 @@
     "lint": "eslint ."
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.34.1",
+    "@antfu/eslint-config": "^0.35.0",
     "@nuxt/content": "^2.4.2",
     "@nuxt/image-edge": "^1.0.0-27913696.5d122a3",
     "@nuxtjs/color-mode": "^3.2.0",
     "@nuxtjs/i18n": "^8.0.0-beta.9",
-    "@types/node": "^18.11.18",
-    "@vueuse/core": "^9.11.1",
-    "@vueuse/nuxt": "^9.11.1",
-    "eslint": "^8.32.0",
+    "@vueuse/core": "^9.12.0",
+    "@vueuse/nuxt": "^9.12.0",
+    "eslint": "^8.33.0",
     "nuxt": "^3.1.1",
     "nuxt-icons": "^3.1.0",
     "sass": "^1.57.1"
