@@ -34,8 +34,6 @@ export default defineNuxtConfig({
     'nuxt-icons',
   ],
 
-  // plugins: [{ src: '~plugins/ga.js', mode: 'client' }],
-
   i18n: {
     locales: [
       { code: 'fr', files: ['common.json', 'fr-FR.json'], iso: 'fr-FR', name: 'Français', dir: 'ltr' },
