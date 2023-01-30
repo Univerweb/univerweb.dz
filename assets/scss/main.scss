@@ -40,9 +40,8 @@ main {
   margin-top: 72px;
   transition: margin-top $transition;
   @media (min-width: $lg) {
-    margin-top: 120px;
-    .scrolled & {
-      margin-top: 72px;
+    .wrapper:not(.scrolled) & {
+      margin-top: 96px;
     }
   }
 }
@@ -87,7 +86,7 @@ main {
   padding-bottom: 0;
   min-height: calc(100vh - 96px);
   @media (min-width: $lg) {
-    min-height: calc(100vh - 156px);
+    min-height: calc(100vh - 132px);
   }
   transition: min-height $transition;
   .arrow {
