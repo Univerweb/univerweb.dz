@@ -39,6 +39,7 @@ body {
 main {
   margin-top: 72px;
   transition: margin-top $transition;
+
   @media (min-width: $lg) {
     .wrapper:not(.scrolled) & {
       margin-top: 96px;
@@ -51,6 +52,7 @@ main {
 .page-leave-active {
   transition: opacity $transition;
 }
+
 .page-enter,
 .page-leave-active {
   opacity: 0;
@@ -59,18 +61,23 @@ main {
 /* Container */
 .container {
   padding: 24px 12px;
+
   @media (min-width: $xs) {
     padding: 32px 16px;
   }
+
   @media (min-width: $sm) {
     padding: 48px 24px;
   }
+
   @media (min-width: $md) {
     padding: 96px 48px;
   }
+
   @media (min-width: $lg) {
     padding: 144px calc(50% - 928px / 2);
   }
+
   @media (min-width: $xl) {
     padding: 144px calc(50% - 1200px / 2);
   }
@@ -85,14 +92,18 @@ main {
   padding-top: 0;
   padding-bottom: 0;
   min-height: calc(100vh - 96px);
+
   @media (min-width: $lg) {
     min-height: calc(100vh - 132px);
   }
+
   transition: min-height $transition;
+
   .arrow {
     justify-self: center;
     cursor: pointer;
   }
+
   &.error {
     grid-auto-rows: auto auto;
     justify-items: center;
@@ -105,14 +116,18 @@ main {
 .intro {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+
   .hero & {
     align-self: center;
   }
+
   * {
     grid-column: 1 / 13;
+
     @media (min-width: $lg) {
       grid-column: 1 / 10;
     }
+
     @media (min-width: $xl) {
       grid-column: 1 / 8;
     }
@@ -124,9 +139,11 @@ main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   row-gap: 12px;
+
   @media (min-width: $xs) {
     row-gap: 16px;
   }
+
   @media (min-width: $sm) {
     row-gap: 24px;
   }
@@ -135,10 +152,12 @@ main {
 /* Item */
 .item {
   grid-column: 1 / 13;
+
   @media (min-width: $md) {
     &:nth-child(odd) {
       grid-column: 1 / 6;
     }
+
     &:nth-child(even) {
       grid-column: 7 / 12;
     }
@@ -154,10 +173,12 @@ h1,
   letter-spacing: -0.05em;
   margin-top: 0;
   margin-bottom: 24px;
+
   @media (min-width: $md) {
     @include size(56);
     margin-bottom: 36px;
   }
+
   @media (min-width: $lg) {
     @include size(80);
     margin-bottom: 48px;
@@ -173,9 +194,11 @@ h2,
   letter-spacing: -0.05em;
   margin-top: 0;
   margin-bottom: 24px;
+
   @media (min-width: $md) {
     @include size(42);
   }
+
   @media (min-width: $lg) {
     @include size(56);
   }
@@ -201,6 +224,7 @@ h6,
 p {
   margin-top: 0;
   margin-bottom: 12px;
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -212,6 +236,7 @@ p {
   letter-spacing: -0.02em;
   color: var(--textSecondary);
   transition: color $transition;
+
   footer & {
     font-family: var(--font);
   }
@@ -232,10 +257,12 @@ strong {
   font-family: var(--fontMedium);
   display: inline-block;
   @include size(20);
+
   @media (min-width: $md) {
     @include size(28);
     line-height: 1.286;
   }
+
   &:hover {
     color: $primary;
   }
@@ -263,6 +290,7 @@ button {
   padding: 0 24px;
   border-radius: 2em;
   transition: background-color $transition, color $transition;
+
   &:hover {
     background-color: var(--primary);
     color: var(--secondary);
@@ -272,9 +300,11 @@ button {
 .move-arrow {
   position: relative;
   display: inline-block;
+
   &:hover {
     color: $white;
   }
+
   &::before {
     content: '';
     position: absolute;
@@ -285,13 +315,17 @@ button {
     background-color: var(--primary);
     transform: scaleX(0.05);
     transform-origin: left;
+
     [lang='ar-DZ'] & {
       transform-origin: right;
     }
+
     transition: background-color $transition, transform $transition;
   }
+
   &:hover::before {
     animation: move-arrow $animation;
+
     [lang='ar-DZ'] & {
       animation: move-arrow-ar $animation;
     }
@@ -302,6 +336,7 @@ button {
   display: grid;
   background-color: $light;
   transition: background-color $transition;
+
   .dark-mode & {
     background-color: $textSecondary;
   }
@@ -316,6 +351,7 @@ img {
   background-color: $light;
   opacity: 0;
   transition: opacity $transition;
+
   .dark-mode & {
     background-color: $textSecondary;
   }
@@ -329,9 +365,11 @@ img {
   margin: 0;
   padding: 0;
   list-style: none;
+
   * {
     display: inline-block;
     margin-inline-end: 12px;
+
     &:last-child {
       margin-inline-end: 0;
     }
