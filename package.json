@@ -16,7 +16,6 @@
     "@nuxt/image-edge": "^1.0.0-27913696.5d122a3",
     "@nuxtjs/color-mode": "^3.2.0",
     "@nuxtjs/i18n": "^8.0.0-beta.9",
-    "@vueuse/core": "^9.12.0",
     "@vueuse/nuxt": "^9.12.0",
     "eslint": "^8.33.0",
     "nuxt": "^3.1.1",
