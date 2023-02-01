@@ -26,13 +26,22 @@ export default defineNuxtConfig({
   ],
 
   modules: [
-    '@nuxtjs/i18n',
     '@nuxt/content',
     '@nuxt/image-edge',
     '@nuxtjs/color-mode',
+    '@nuxtjs/i18n',
     '@vueuse/nuxt',
     'nuxt-icons',
   ],
+
+  image: {
+    // staticFilename: 'images/[name]-[hash][ext]',
+    // dir: 'assets/images',
+  },
+
+  colorMode: {
+    preference: 'light',
+  },
 
   i18n: {
     locales: [
@@ -46,15 +55,6 @@ export default defineNuxtConfig({
     detectBrowserLanguage: false,
     baseUrl: process.env.BASE_URL,
     skipSettingLocaleOnNavigate: true,
-  },
-
-  // image: {
-  //   staticFilename: 'images/[name]-[hash][ext]',
-  //   dir: 'assets/images',
-  // },
-
-  colorMode: {
-    preference: 'light',
   },
 
   // pwa: {
