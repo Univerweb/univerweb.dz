@@ -1,10 +1,9 @@
 node_modules
-dist
-package-lock.json
 *.log*
 .nuxt
 .nitro
 .cache
 .output
 .env
+dist
 .DS_Store
