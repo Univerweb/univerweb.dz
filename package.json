@@ -13,16 +13,16 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.35.1",
     "@nuxt/content": "^2.4.3",
-    "@nuxt/image-edge": "^1.0.0-27913696.5d122a3",
+    "@nuxt/image-edge": "1.0.0-27919678.2f5b64b",
     "@nuxtjs/color-mode": "^3.2.0",
-    "@nuxtjs/i18n": "^8.0.0-beta.9",
+    "@nuxtjs/i18n": "8.0.0-beta.9",
     "@vueuse/nuxt": "^9.12.0",
     "eslint": "^8.33.0",
     "nuxt": "^3.1.1",
     "nuxt-icons": "^3.1.0",
     "sass": "^1.58.0",
     "typescript": "^4.9.5",
-    "vue": "^3.2.45",
+    "vue": "^3.2.47",
     "vue-gtag-next": "^1.14.0"
   }
 }
