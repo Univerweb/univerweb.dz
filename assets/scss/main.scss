@@ -32,7 +32,7 @@ body {
 
 /* Nuxt Progress */
 .nuxt-loading-indicator {
-  background: repeating-linear-gradient(to right, $primary 0%, $secondary 50%, $primary 100%) !important;
+  background: repeating-linear-gradient(to right, $secondary 0%, $primary 100%) !important;
 }
 
 /* Main */
