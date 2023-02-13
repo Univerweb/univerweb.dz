@@ -16,8 +16,8 @@ const localePath = useLocalePath()
       <div property="mainEntityOfPage" typeof="WebPage">
         <meta property="id" :content="`${seo.baseUrl}${localePath(`/realisations/${work.slug}`)}`">
       </div>
-      <!-- <meta property="dateCreated datePublished" :content="work.createdAt"> -->
-      <!-- <meta property="dateModified" :content="work.updatedAt"> -->
+      <meta property="dateCreated datePublished" :content="work.createdAt">
+      <meta property="dateModified" :content="work.updatedAt">
       <div property="author publisher" typeof="Organization">
         <meta property="name" :content="seo.name.value">
         <meta property="url" :content="seo.baseUrl">
