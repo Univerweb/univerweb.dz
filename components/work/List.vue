@@ -35,9 +35,9 @@ const works = _works.value as Work[]
       </Component>
     </div>
 
-    <div v-if="works?.length" class="details">
+    <ul v-if="works?.length" class="details">
       <WorkListItem v-for="work in works" :key="work.slug" :work="work" :title-tag="titleTag" />
-    </div>
+    </ul>
 
     <div v-if="more" class="more">
       <NuxtLink :to="localePath('realisations')" class="btn">
@@ -50,6 +50,9 @@ const works = _works.value as Work[]
 
 <style lang="scss" scoped>
 .works .details {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   grid-template-columns: 1fr;
 
   @media (min-width: $sm) {
