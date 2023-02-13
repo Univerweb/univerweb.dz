@@ -10,6 +10,6 @@ const { t } = useI18n()
         {{ t('home.lead') }}
       </p>
     </div>
-    <!-- <NuxtIcon name="arrow" v-scroll-to="'.works'" /> -->
+    <NuxtIcon name="arrow" />
   </section>
 </template>
