@@ -11,46 +11,48 @@ const localePath = useLocalePath()
 </script>
 
 <template>
-  <article vocab="https://schema.org/" typeof="Article" class="item">
+  <li class="item">
     <NuxtLink :to="localePath(`/realisations/${work.slug}`)">
-      <div property="mainEntityOfPage" typeof="WebPage">
-        <meta property="id" :content="`${seo.baseUrl}${localePath(`/realisations/${work.slug}`)}`">
-      </div>
-      <meta property="dateCreated datePublished" :content="work.createdAt">
-      <meta property="dateModified" :content="work.updatedAt">
-      <div property="author publisher" typeof="Organization">
-        <meta property="name" :content="seo.name.value">
-        <meta property="url" :content="seo.baseUrl">
-      </div>
-      <meta property="articleSection" :content="seo.works.title.value">
-      <meta property="description" :content="work.desc">
+      <article vocab="https://schema.org/" typeof="Article">
+        <div property="mainEntityOfPage" typeof="WebPage">
+          <meta property="id" :content="`${seo.baseUrl}${localePath(`/realisations/${work.slug}`)}`">
+        </div>
+        <meta property="dateCreated datePublished" :content="work.createdAt">
+        <meta property="dateModified" :content="work.updatedAt">
+        <div property="author publisher" typeof="Organization">
+          <meta property="name" :content="seo.name.value">
+          <meta property="url" :content="seo.baseUrl">
+        </div>
+        <meta property="articleSection" :content="seo.works.title.value">
+        <meta property="description" :content="work.desc">
 
-      <AppImg
-        property="image"
-        :src="`/images/${work.slug}_thumbnail.jpg`"
-        :alt="work.desc"
-        width="588"
-        height="624"
-        sizes="xs:288px sm:607px md:354px lg:456px xl:588px"
-      />
+        <AppImg
+          property="image"
+          :src="`/images/${work.slug}_thumbnail.jpg`"
+          :alt="work.desc"
+          width="588"
+          height="624"
+          sizes="xs:288px sm:607px md:354px lg:456px xl:588px"
+        />
 
-      <div class="overlay" />
+        <div class="overlay" />
 
-      <div class="inner">
-        <Component :is="titleTag" property="headline">
-          {{ work.title }}
-        </Component>
-        <ul class="tags">
-          <li v-for="tag in work.tags" :key="tag" property="keywords">
-            {{ tag }}
-          </li>
-        </ul>
-        <p property="articleBody" class="lead">
-          {{ work.lead }}
-        </p>
-      </div>
+        <div class="inner">
+          <Component :is="titleTag" property="headline">
+            {{ work.title }}
+          </Component>
+          <ul class="tags">
+            <li v-for="tag in work.tags" :key="tag" property="keywords">
+              {{ tag }}
+            </li>
+          </ul>
+          <p property="articleBody" class="lead">
+            {{ work.lead }}
+          </p>
+        </div>
+      </article>
     </NuxtLink>
-  </article>
+  </li>
 </template>
 
 <style lang="scss" scoped>
@@ -64,19 +66,9 @@ const localePath = useLocalePath()
     border-radius: 24px;
   }
 
-  a {
+  article {
     display: grid;
     position: relative;
-
-    &:hover {
-      .overlay {
-        opacity: 0.6;
-      }
-
-      p {
-        transform: translateY(0);
-      }
-    }
   }
 
   .overlay {
@@ -86,6 +78,10 @@ const localePath = useLocalePath()
     background-color: $textPrimary;
     opacity: 0.1;
     transition: opacity $transition;
+  }
+
+  &:hover .overlay {
+    opacity: 0.6;
   }
 
   .inner {
@@ -127,6 +123,10 @@ const localePath = useLocalePath()
     align-self: end;
     transform: translateY(calc(100% + 48px));
     transition: transform $transition;
+  }
+
+  &:hover p {
+    transform: translateY(0);
   }
 }
 </style>
