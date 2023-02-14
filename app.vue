@@ -1,10 +1,10 @@
 <script setup lang="ts">
 const { y } = useWindowScroll()
 
-const { finalizePendingLocaleChange } = useI18n()
-const onBeforeEnter = async () => {
-  await finalizePendingLocaleChange()
-}
+// const { finalizePendingLocaleChange } = useI18n()
+// const onBeforeEnter = async () => {
+//   await finalizePendingLocaleChange()
+// }
 
 const i18nHead = useLocaleHead({ addSeoAttributes: true, addDirAttribute: true })
 const seo = useSeo()
@@ -85,7 +85,8 @@ useHead({
     <NuxtLoadingIndicator />
     <TheSkipLinks />
     <TheHeader />
-    <NuxtPage :transition="{ name: 'page', mode: 'out-in', onBeforeEnter }" />
+    <!-- onBeforeEnter -->
+    <NuxtPage :transition="{ name: 'page', mode: 'out-in' }" />
     <LazyTheFooter />
   </div>
 </template>
