@@ -48,7 +48,7 @@ const works = _works.value as Work[]
   </section>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .works .details {
   margin: 0;
   padding: 0;
@@ -78,9 +78,7 @@ const works = _works.value as Work[]
     justify-self: end;
 
     .arrow {
-      fill: currentColor;
       height: 8px;
-      margin-bottom: 2px;
       transform: rotate(-90deg);
 
       [lang='ar-DZ'] & {
