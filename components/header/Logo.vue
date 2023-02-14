@@ -24,7 +24,7 @@ const show = useShow()
 
   g:last-child {
     color: $secondary;
-    transition: fill $transition;
+    transition: color $transition;
 
     .dark-mode & {
       color: $white;
