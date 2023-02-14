@@ -32,7 +32,6 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@vueuse/nuxt',
     'nuxt-icons',
-    'nuxt-svgo',
   ],
 
   image: {
@@ -56,10 +55,6 @@ export default defineNuxtConfig({
     detectBrowserLanguage: false,
     baseUrl: process.env.BASE_URL,
     // skipSettingLocaleOnNavigate: true,
-  },
-
-  svgo: {
-    svgo: false,
   },
 
   // pwa: {
