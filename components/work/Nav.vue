@@ -89,26 +89,29 @@ const { t } = useI18n()
 
   .nuxt-icon {
     position: absolute;
+  }
+
+  .prev .nuxt-icon {
     left: -6px;
 
     [lang='ar-DZ'] & {
       right: -6px;
-      left: auto;
     }
   }
 
   .next .nuxt-icon {
     right: -6px;
-    left: auto;
 
     [lang='ar-DZ'] & {
-      right: auto;
       left: -6px;
     }
   }
 
   .arrow {
     height: 6px;
+  }
+
+  .prev .arrow {
     transform: rotate(90deg);
 
     [lang='ar-DZ'] & {
