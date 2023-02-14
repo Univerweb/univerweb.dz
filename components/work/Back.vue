@@ -24,11 +24,9 @@ const { t } = useI18n()
   }
 
   .arrow {
-    fill: currentColor;
     height: 5px;
     transform: rotate(90deg);
     margin-inline-end: 6px;
-    margin-bottom: 2px;
 
     [lang='ar-DZ'] & {
       transform: rotate(-90deg);
