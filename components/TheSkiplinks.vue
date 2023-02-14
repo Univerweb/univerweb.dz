@@ -4,15 +4,15 @@ const { t } = useI18n()
 
 <template>
   <div class="skip-links">
-    <button v-scroll-to="'header'">
+    <button>
       {{ t('skiplinks.menu') }}
     </button>
 
-    <button v-scroll-to="'main'">
+    <button>
       {{ t('skiplinks.content') }}
     </button>
 
-    <button v-scroll-to="'footer'">
+    <button>
       {{ t('skiplinks.contact') }}
     </button>
   </div>
@@ -22,6 +22,7 @@ const { t } = useI18n()
 .skip-links {
   position: absolute;
   z-index: 10;
+
   button {
     position: absolute;
     clip: rect(1px, 1px, 1px, 1px);
@@ -33,6 +34,7 @@ const { t } = useI18n()
     text-transform: uppercase;
     height: 25px;
     padding: 5px 10px;
+
     &:focus {
       position: static;
       overflow: visible;
