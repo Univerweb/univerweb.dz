@@ -87,35 +87,40 @@ const { t } = useI18n()
     }
   }
 
-  .arrow {
+  .nuxt-icon {
     position: absolute;
-    left: 0;
-    top: 9px;
+    left: -6px;
 
-    @media (min-width: $md) {
-      top: 15px;
+    [lang='ar-DZ'] & {
+      right: -6px;
+      left: auto;
     }
+  }
 
-    fill: currentColor;
+  .next .nuxt-icon {
+    right: -6px;
+    left: auto;
+
+    [lang='ar-DZ'] & {
+      right: auto;
+      left: -6px;
+    }
+  }
+
+  .arrow {
     height: 6px;
     transform: rotate(90deg);
 
     [lang='ar-DZ'] & {
       transform: rotate(-90deg);
-      right: 0;
-      left: auto;
     }
   }
 
   .next .arrow {
     transform: rotate(-90deg);
-    right: 0;
-    left: auto;
 
     [lang='ar-DZ'] & {
       transform: rotate(90deg);
-      right: auto;
-      left: 0;
     }
   }
 }
