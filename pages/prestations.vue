@@ -3,12 +3,12 @@ const { t, tm, rt } = useI18n()
 const seo = useSeo()
 
 useHead({
-  title: seo.presta.title,
+  title: t('presta.title'),
 
   meta: [
-    { name: 'description', content: seo.presta.desc },
-    { property: 'og:title', content: seo.presta.title },
-    { property: 'og:description', content: seo.presta.desc },
+    { name: 'description', content: t('presta.desc') },
+    { property: 'og:title', content: t('presta.title') },
+    { property: 'og:description', content: t('presta.desc') },
   ],
 
   script: [
@@ -19,7 +19,7 @@ useHead({
         '@type': 'BreadcrumbList',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': seo.name, 'item': seo.breadcrumbItemOne },
-          { '@type': 'ListItem', 'position': 2, 'name': seo.presta.title },
+          { '@type': 'ListItem', 'position': 2, 'name': t('presta.title') },
         ],
       },
     },
