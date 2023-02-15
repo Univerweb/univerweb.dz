@@ -12,8 +12,6 @@ export const useSeo = () => {
     baseUrl,
     logo: `${baseUrl}/logo.svg`,
     email: config.public.baseEmail,
-    managerEmail: config.public.managerEmail,
-    supportEmail: config.public.supportEmail,
     mobile: t('mobile'),
     phone: t('phone'),
     ogUrl: computed(() => `${baseUrl}${route.path}`),
@@ -30,10 +28,6 @@ export const useSeo = () => {
     works: {
       title: computed(() => t('works.title')),
       desc: computed(() => t('works.desc')),
-    },
-    contact: {
-      title: computed(() => t('contact.title')),
-      desc: computed(() => t('contact.desc')),
     },
   }
 

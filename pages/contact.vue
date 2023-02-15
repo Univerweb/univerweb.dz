@@ -1,14 +1,15 @@
 <script setup lang="ts">
 const { t } = useI18n()
 const seo = useSeo()
+const config = useRuntimeConfig()
 
 useHead({
-  title: seo.contact.title,
+  title: t('contact.title'),
 
   meta: [
-    { name: 'description', content: seo.contact.desc },
-    { property: 'og:title', content: seo.contact.title },
-    { property: 'og:description', content: seo.contact.desc },
+    { name: 'description', content: t('contact.desc') },
+    { property: 'og:title', content: t('contact.title') },
+    { property: 'og:description', content: t('contact.desc') },
   ],
 
   script: [
@@ -19,7 +20,7 @@ useHead({
         '@type': 'BreadcrumbList',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': seo.name, 'item': seo.breadcrumbItemOne },
-          { '@type': 'ListItem', 'position': 2, 'name': seo.contact.title },
+          { '@type': 'ListItem', 'position': 2, 'name': t('contact.title') },
         ],
       },
     },
@@ -90,16 +91,16 @@ useHead({
           <h3 class="h6">
             {{ t('contact.manager') }}
           </h3>
-          <a :href="`mailto:${seo.supportEmail}`" class="link move-arrow">
-            {{ seo.managerEmail }}
+          <a :href="`mailto:${config.public.managerEmail}`" class="link move-arrow">
+            {{ config.public.managerEmail }}
           </a>
         </div>
         <div class="item">
           <h3 class="h6">
             {{ t('contact.support') }}
           </h3>
-          <a :href="`mailto:${seo.supportEmail}`" class="link move-arrow">
-            {{ seo.supportEmail }}
+          <a :href="`mailto:${config.public.supportEmail}`" class="link move-arrow">
+            {{ config.public.supportEmail }}
           </a>
         </div>
       </div>
