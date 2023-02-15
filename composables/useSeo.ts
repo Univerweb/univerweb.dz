@@ -9,8 +9,6 @@ export const useSeo = () => {
     name: computed(() => t('name')),
     desc: computed(() => t('desc')),
     baseUrl,
-    logo: `${baseUrl}/logo.svg`,
-    email: config.public.baseEmail,
     ogUrl: computed(() => `${baseUrl}${route.path}`),
     ogImage: computed(() => locale.value === 'ar' ? `${baseUrl}/images/univerweb-ar_share.jpg` : `${baseUrl}/images/univerweb_share.jpg`),
     ogImageAlt: computed(() => `${t('name')} — ${t('title')}`),
