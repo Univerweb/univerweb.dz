@@ -31,10 +31,6 @@ export const useSeo = () => {
       title: computed(() => t('works.title')),
       desc: computed(() => t('works.desc')),
     },
-    presta: {
-      title: computed(() => t('presta.title')),
-      desc: computed(() => t('presta.desc')),
-    },
     agency: {
       title: computed(() => t('agency.title')),
       desc: computed(() => t('agency.desc')),
