@@ -10,6 +10,7 @@ const i18nHead = useLocaleHead({ addSeoAttributes: true, addDirAttribute: true }
 const { t } = useI18n()
 const seo = useSeo()
 const config = useRuntimeConfig()
+const route = useRoute()
 
 useHead({
   htmlAttrs: {
@@ -25,18 +26,18 @@ useHead({
     { name: 'theme-color', content: '#50c8f0' },
     { name: 'apple-mobile-web-app-capable', content: 'yes' },
     { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
-    { name: 'description', content: seo.desc },
+    { name: 'description', content: computed(() => t('desc')) },
     { property: 'og:title', content: t('title') },
-    { property: 'og:description', content: seo.desc },
+    { property: 'og:description', content: computed(() => t('desc')) },
     { property: 'og:type', content: 'website' },
-    { property: 'og:site_name', content: seo.name },
-    { property: 'og:url', content: seo.ogUrl },
+    { property: 'og:site_name', content: computed(() => t('name')) },
+    { property: 'og:url', content: computed(() => `${seo.baseUrl}${route.path}`) },
     { property: 'og:image', content: seo.ogImage },
     { property: 'og:image:secure_url', content: seo.ogImage },
     { property: 'og:image:type', content: 'image/jpeg' },
     { property: 'og:image:width', content: 1920 },
     { property: 'og:image:height', content: 1080 },
-    { property: 'og:image:alt', content: seo.ogImageAlt },
+    { property: 'og:image:alt', content: computed(() => `${t('name')} — ${t('title')}`) },
     ...(i18nHead.value.meta || []),
   ],
 
@@ -52,7 +53,7 @@ useHead({
       children: {
         '@context': 'https://schema.org',
         '@type': 'Organization',
-        'name': seo.name,
+        'name': computed(() => t('name')),
         'url': seo.baseUrl,
         'image': {
           '@type': 'ImageObject',
@@ -62,7 +63,7 @@ useHead({
         },
         'logo': {
           '@type': 'ImageObject',
-          'url': `${config.public.baseURL}/logo.svg`,
+          'url': `${seo.baseUrl}/logo.svg`,
           'width': '512px',
           'height': '512px',
         },
