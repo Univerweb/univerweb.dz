@@ -25,10 +25,6 @@ export const useSeo = () => {
     linkedin: t('linkedin'),
     github: t('github'),
     breadcrumbItemOne: computed(() => locale.value !== 'fr' ? `${baseUrl}/${locale.value}` : `${baseUrl}/`),
-    works: {
-      title: computed(() => t('works.title')),
-      desc: computed(() => t('works.desc')),
-    },
   }
 
   return seo
