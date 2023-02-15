@@ -21,7 +21,7 @@ const localePath = useLocalePath()
         <meta property="dateCreated datePublished" :content="work.createdAt">
         <meta property="dateModified" :content="work.updatedAt">
         <div property="author publisher" typeof="Organization">
-          <meta property="name" :content="seo.name.value">
+          <meta property="name" :content="t('name')">
           <meta property="url" :content="seo.baseUrl">
         </div>
         <meta property="articleSection" :content="t('works.title')">
