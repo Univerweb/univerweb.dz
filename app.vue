@@ -9,6 +9,7 @@ const { y } = useWindowScroll()
 const i18nHead = useLocaleHead({ addSeoAttributes: true, addDirAttribute: true })
 const { t } = useI18n()
 const seo = useSeo()
+const config = useRuntimeConfig()
 
 useHead({
   htmlAttrs: {
@@ -61,11 +62,11 @@ useHead({
         },
         'logo': {
           '@type': 'ImageObject',
-          'url': seo.logo,
+          'url': `${config.public.baseURL}/logo.svg`,
           'width': '512px',
           'height': '512px',
         },
-        'email': seo.email,
+        'email': config.public.baseEmail,
         'telephone': t('mobile'),
         'faxNumber': t('phone'),
         'sameAs': [t('twitter'), t('facebook'), t('linkedin'), t('github')],

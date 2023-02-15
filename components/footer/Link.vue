@@ -1,11 +1,11 @@
 <script setup lang="ts">
-const seo = useSeo()
+const config = useRuntimeConfig()
 const { t } = useI18n()
 </script>
 
 <template>
-  <a :href="`mailto:${seo.email}`" class="link">
+  <a :href="`mailto:${config.public.baseEmail}`" class="link">
     <span class="visually-hidden">{{ t('email') }}</span>
-    {{ seo.email }}
+    {{ config.public.baseEmail }}
   </a>
 </template>
