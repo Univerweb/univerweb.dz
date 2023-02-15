@@ -12,18 +12,11 @@ export const useSeo = () => {
     baseUrl,
     logo: `${baseUrl}/logo.svg`,
     email: config.public.baseEmail,
-    mobile: t('mobile'),
-    phone: t('phone'),
     ogUrl: computed(() => `${baseUrl}${route.path}`),
     ogImage: computed(() => locale.value === 'ar' ? `${baseUrl}/images/univerweb-ar_share.jpg` : `${baseUrl}/images/univerweb_share.jpg`),
     ogImageAlt: computed(() => `${t('name')} — ${t('title')}`),
     streetAddress: computed(() => `${t('streetAddress')}${coma.value}${t('addressLocality')}`),
-    postalCode: t('postalCode'),
     addressLocality: computed(() => `${t('addressRegion')}${coma.value}${t('addressCountry')}`),
-    twitter: t('twitter'),
-    facebook: t('facebook'),
-    linkedin: t('linkedin'),
-    github: t('github'),
     breadcrumbItemOne: computed(() => locale.value !== 'fr' ? `${baseUrl}/${locale.value}` : `${baseUrl}/`),
   }
 
