@@ -7,6 +7,7 @@ const { y } = useWindowScroll()
 // }
 
 const i18nHead = useLocaleHead({ addSeoAttributes: true, addDirAttribute: true })
+const { t } = useI18n()
 const seo = useSeo()
 
 useHead({
@@ -65,13 +66,13 @@ useHead({
           'height': '512px',
         },
         'email': seo.email,
-        'telephone': seo.mobile,
-        'faxNumber': seo.phone,
-        'sameAs': [seo.twitter, seo.facebook, seo.linkedin, seo.github],
+        'telephone': t('mobile'),
+        'faxNumber': t('phone'),
+        'sameAs': [t('twitter'), t('facebook'), t('linkedin'), t('github')],
         'address': {
           '@type': 'PostalAddress',
           'streetAddress': seo.streetAddress,
-          'postalCode': seo.postalCode,
+          'postalCode': t('postalCode'),
           'addressLocality': seo.addressLocality,
         },
       },
