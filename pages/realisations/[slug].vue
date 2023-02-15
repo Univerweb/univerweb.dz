@@ -50,7 +50,7 @@ useHead({
         '@type': 'BreadcrumbList',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': seo.name, 'item': seo.breadcrumbItemOne },
-          { '@type': 'ListItem', 'position': 2, 'name': seo.works.title.value, 'item': `${seo.baseUrl}${localePath('realisations')}` },
+          { '@type': 'ListItem', 'position': 2, 'name': t('works.title'), 'item': `${seo.baseUrl}${localePath('realisations')}` },
           { '@type': 'ListItem', 'position': 3, 'name': work.title },
         ],
       },
@@ -71,7 +71,7 @@ useHead({
         <meta property="name" :content="seo.name.value">
         <meta property="url" :content="seo.baseUrl">
       </div>
-      <meta property="articleSection" :content="seo.works.title.value">
+      <meta property="articleSection" :content="t('works.title')">
       <meta property="description" :content="work.desc">
       <div class="container intro">
         <WorkBack />

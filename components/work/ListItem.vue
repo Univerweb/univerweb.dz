@@ -6,6 +6,7 @@ defineProps<{
   titleTag?: string
 }>()
 
+const { t } = useI18n()
 const seo = useSeo()
 const localePath = useLocalePath()
 </script>
@@ -23,7 +24,7 @@ const localePath = useLocalePath()
           <meta property="name" :content="seo.name.value">
           <meta property="url" :content="seo.baseUrl">
         </div>
-        <meta property="articleSection" :content="seo.works.title.value">
+        <meta property="articleSection" :content="t('works.title')">
         <meta property="description" :content="work.desc">
 
         <AppImg
