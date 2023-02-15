@@ -11,7 +11,7 @@ const handleError = () => clearError({ redirect: '/' })
 </script>
 
 <template>
-  <main class="container hero error">
+  <main class="container error">
     <Head>
       <Title>{{ error.statusCode }} — {{ t('name') }}</Title>
       <Meta name="robots" content="noindex, follow" />
@@ -33,7 +33,17 @@ const handleError = () => clearError({ redirect: '/' })
 </template>
 
 <style lang="scss" scoped>
-.btn {
-  margin-top: 96px;
+.error {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  min-height: calc(100vh);
+
+  .btn {
+    margin-top: 96px;
+  }
 }
 </style>
