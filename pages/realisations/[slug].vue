@@ -49,7 +49,7 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': seo.name, 'item': seo.breadcrumbItemOne },
+          { '@type': 'ListItem', 'position': 1, 'name': t('name'), 'item': seo.breadcrumbItemOne },
           { '@type': 'ListItem', 'position': 2, 'name': t('works.title'), 'item': `${seo.baseUrl}${localePath('realisations')}` },
           { '@type': 'ListItem', 'position': 3, 'name': work.title },
         ],
@@ -68,7 +68,7 @@ useHead({
       <meta property="dateCreated datePublished" :content="work.createdAt">
       <meta property="dateModified" :content="work.updatedAt">
       <div property="author publisher" typeof="Organization">
-        <meta property="name" :content="seo.name.value">
+        <meta property="name" :content="t('name')">
         <meta property="url" :content="seo.baseUrl">
       </div>
       <meta property="articleSection" :content="t('works.title')">
