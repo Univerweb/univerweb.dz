@@ -83,43 +83,10 @@ main {
   }
 }
 
-/* Hero */
-.hero {
-  display: grid;
-  grid-auto-rows: 1fr auto;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  min-height: calc(100vh - 96px);
-
-  @media (min-width: $lg) {
-    min-height: calc(100vh - 132px);
-  }
-
-  transition: min-height $transition;
-
-  .nuxt-icon {
-    justify-self: center;
-    cursor: pointer;
-  }
-
-  &.error {
-    grid-auto-rows: auto auto;
-    justify-items: center;
-    align-content: center;
-    min-height: calc(100vh);
-  }
-}
-
 /* Intro */
 .intro {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-
-  .hero & {
-    align-self: center;
-  }
 
   * {
     grid-column: 1 / 13;
