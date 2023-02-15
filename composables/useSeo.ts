@@ -17,7 +17,7 @@ export const useSeo = () => {
     ogImageAlt: computed(() => `${t('name')} — ${t('title')}`),
     streetAddress: computed(() => `${t('streetAddress')}${coma.value}${t('addressLocality')}`),
     addressLocality: computed(() => `${t('addressRegion')}${coma.value}${t('addressCountry')}`),
-    breadcrumbItemOne: computed(() => locale.value !== 'fr' ? `${baseUrl}/${locale.value}` : `${baseUrl}/`),
+    breadcrumbItemOne: locale.value !== 'fr' ? `${baseUrl}/${locale.value}` : `${baseUrl}/`,
   }
 
   return seo
