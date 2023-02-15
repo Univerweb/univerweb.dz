@@ -18,7 +18,7 @@ useHead({
   },
 
   titleTemplate: (titleChunk) => {
-    return titleChunk ? `${titleChunk} — ${seo.name.value}` : `${t('title')} — ${seo.name.value}`
+    return titleChunk ? `${titleChunk} — ${t('name')}` : `${t('title')} — ${t('name')}`
   },
 
   meta: [
