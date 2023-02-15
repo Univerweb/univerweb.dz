@@ -17,7 +17,7 @@ useHead({
   },
 
   titleTemplate: (titleChunk) => {
-    return titleChunk ? `${titleChunk} — ${seo.name.value}` : `${seo.title.value} — ${seo.name.value}`
+    return titleChunk ? `${titleChunk} — ${seo.name.value}` : `${t('title')} — ${seo.name.value}`
   },
 
   meta: [
@@ -25,7 +25,7 @@ useHead({
     { name: 'apple-mobile-web-app-capable', content: 'yes' },
     { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
     { name: 'description', content: seo.desc },
-    { property: 'og:title', content: seo.title },
+    { property: 'og:title', content: t('title') },
     { property: 'og:description', content: seo.desc },
     { property: 'og:type', content: 'website' },
     { property: 'og:site_name', content: seo.name },

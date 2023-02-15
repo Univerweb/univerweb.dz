@@ -7,7 +7,6 @@ export const useSeo = () => {
 
   const seo = {
     name: computed(() => t('name')),
-    title: computed(() => t('title')),
     desc: computed(() => t('desc')),
     baseUrl,
     logo: `${baseUrl}/logo.svg`,
