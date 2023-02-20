@@ -30,6 +30,5 @@ const show = useShow()
       color: $white;
     }
   }
-
 }
 </style>
