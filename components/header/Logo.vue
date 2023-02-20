@@ -15,8 +15,8 @@ const show = useShow()
 <style lang="scss">
 .logo svg {
   display: flex;
-  width: auto;
-  height: auto;
+  width: auto !important;
+  height: auto !important;
 
   g:first-child {
     color: $primary;
