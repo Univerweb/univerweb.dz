@@ -35,8 +35,8 @@ export default defineNuxtConfig({
   ],
 
   image: {
-    // staticFilename: 'images/[name]-[hash][ext]',
     // dir: 'assets/images',
+    // staticFilename: 'images/[name]-[hash][ext]',
   },
 
   colorMode: {
