@@ -1,7 +1,51 @@
 <script setup lang="ts">
+import { Loader } from '@googlemaps/js-api-loader'
+
 const { t } = useI18n()
 const seo = useSeo()
 const config = useRuntimeConfig()
+
+const map = ref<google.maps.Map | null>(null)
+const marker = ref<google.maps.Marker | null>(null)
+const center: google.maps.LatLngLiteral = { lat: 36.721043, lng: 3.047502 }
+
+onMounted(async () => {
+  const loader = new Loader({
+    apiKey: config.public.apiKey,
+    version: 'weekly',
+  })
+  await loader.load()
+
+  const mapOptions: google.maps.MapOptions = {
+    mapId: '101a5bf427dc0726',
+    zoom: 14,
+    streetViewControl: false,
+    center,
+    backgroundColor: '#fafafa',
+  }
+
+  map.value = new google.maps.Map(
+    document.getElementById('map') as HTMLElement,
+    mapOptions,
+  )
+
+  marker.value = new google.maps.Marker({
+    position: center,
+    map: map.value,
+    icon: {
+      path: google.maps.SymbolPath.CIRCLE,
+      fillColor: '#50c8f0',
+      fillOpacity: 1,
+      strokeColor: '#28285a',
+      scale: 10,
+    },
+  })
+
+  marker.value.addListener('click', () => {
+    map.value?.setZoom(16)
+    map.value?.setCenter(marker.value?.getPosition() as google.maps.LatLng)
+  })
+})
 
 useHead({
   title: t('contact.title'),
@@ -26,46 +70,6 @@ useHead({
     },
   ],
 })
-
-// mounted() {
-//   if (typeof google === 'undefined') {
-//     const script = document.createElement('script')
-//     script.onload = this.onScriptLoaded
-//     script.type = 'text/javascript'
-//     script.src = `https://maps.googleapis.com/maps/api/js?key=${this.$config.public.apiKey}&map_ids=101a5bf427dc0726`
-//     document.head.appendChild(script)
-//   } else {
-//     this.onScriptLoaded()
-//   }
-// },
-
-// methods: {
-//   onScriptLoaded(event = null) {
-//     const hq = { lat: 36.721043, lng: 3.047502 }
-//     const map = new google.maps.Map(document.getElementById('map'), {
-//       mapId: '101a5bf427dc0726',
-//       zoom: 14,
-//       streetViewControl: false,
-//       center: hq,
-//       backgroundColor: '#fafafa'
-//     })
-//     const marker = new google.maps.Marker({
-//       position: hq,
-//       icon: {
-//         path: google.maps.SymbolPath.CIRCLE,
-//         fillColor: '#50c8f0',
-//         fillOpacity: 1,
-//         strokeColor: '#28285a',
-//         scale: 10
-//       },
-//       map
-//     })
-//     marker.addListener('click', function () {
-//       map.setZoom(16)
-//       map.setCenter(marker.getPosition())
-//     })
-//   }
-// }
 </script>
 
 <template>
