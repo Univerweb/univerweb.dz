@@ -10,7 +10,10 @@ const { t } = useI18n()
         {{ t('home.lead') }}
       </p>
     </div>
-    <NuxtIcon name="arrow" />
+    <NuxtLink to="#realisations">
+      <NuxtIcon name="arrow" />
+      <span class="visually-hidden">{{ t('menu.realisations') }}</span>
+    </NuxtLink>
   </section>
 </template>
 
@@ -32,9 +35,8 @@ const { t } = useI18n()
     align-self: center;
   }
 
-  .nuxt-icon {
+  a {
     justify-self: center;
-    cursor: pointer;
   }
 }
 </style>

@@ -4,17 +4,17 @@ const { t } = useI18n()
 
 <template>
   <div class="skip-links">
-    <button>
+    <NuxtLink to="#header">
       {{ t('skiplinks.menu') }}
-    </button>
+    </NuxtLink>
 
-    <button>
+    <NuxtLink to="#main">
       {{ t('skiplinks.content') }}
-    </button>
+    </NuxtLink>
 
-    <button>
+    <NuxtLink to="#footer">
       {{ t('skiplinks.contact') }}
-    </button>
+    </NuxtLink>
   </div>
 </template>
 
@@ -23,7 +23,7 @@ const { t } = useI18n()
   position: absolute;
   z-index: 10;
 
-  button {
+  a {
     position: absolute;
     clip: rect(1px, 1px, 1px, 1px);
     background-color: $primary;
