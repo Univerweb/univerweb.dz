@@ -61,7 +61,7 @@ export default defineNuxtConfig({
   //   manifest: {
   //     name: 'Univerweb',
   //     description: 'Univerweb website',
-  //     theme_color: '#50c8f0'
-  //   }
+  //     theme_color: '#50c8f0',
+  //   },
   // },
 })
