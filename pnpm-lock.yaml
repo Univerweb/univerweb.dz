@@ -14,8 +14,6 @@ specifiers:
   nuxt: ^3.2.3
   nuxt-icons: ^3.1.0
   sass: ^1.58.3
-  typescript: ^4.9.5
-  vue: ^3.2.47
   vue-gtag-next: ^1.14.0
 
 devDependencies:
@@ -32,8 +30,6 @@ devDependencies:
   nuxt: 3.2.3_ri57m45qwj3w3bp7j6kmujfsry
   nuxt-icons: 3.1.0
   sass: 1.58.3
-  typescript: 4.9.5
-  vue: 3.2.47
   vue-gtag-next: 1.14.0_vue@3.2.47
 
 packages:
