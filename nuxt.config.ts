@@ -56,12 +56,4 @@ export default defineNuxtConfig({
     baseUrl: process.env.BASE_URL,
     // skipSettingLocaleOnNavigate: true,
   },
-
-  // pwa: {
-  //   manifest: {
-  //     name: 'Univerweb',
-  //     description: 'Univerweb website',
-  //     theme_color: '#50c8f0',
-  //   },
-  // },
 })
