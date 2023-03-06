@@ -4,7 +4,7 @@ specifiers:
   '@antfu/eslint-config': ^0.36.0
   '@googlemaps/js-api-loader': ^1.15.1
   '@nuxt/content': ^2.4.3
-  '@nuxt/image-edge': 1.0.0-27954023.4cee565
+  '@nuxt/image-edge': 1.0.0-27968280.9739e4d
   '@nuxtjs/color-mode': ^3.2.0
   '@nuxtjs/i18n': 8.0.0-beta.10
   '@types/google.maps': ^3.52.1
@@ -19,7 +19,7 @@ devDependencies:
   '@antfu/eslint-config': 0.36.0_ycpbpc6yetojsgtrx3mwntkhsu
   '@googlemaps/js-api-loader': 1.15.1
   '@nuxt/content': 2.4.3
-  '@nuxt/image-edge': 1.0.0-27954023.4cee565
+  '@nuxt/image-edge': 1.0.0-27968280.9739e4d
   '@nuxtjs/color-mode': 3.2.0
   '@nuxtjs/i18n': 8.0.0-beta.10_vue@3.2.47
   '@types/google.maps': 3.52.1
@@ -1502,8 +1502,8 @@ packages:
     resolution: {integrity: sha512-YBI/6o2EBz02tdEJRBK8xkt3zvOFOWlLBf7WKYGBsSYSRtjjgrqPe2skp6VLLmKx5WbHHDNcW+6oACaurxGzeA==}
     dev: true
 
-  /@nuxt/image-edge/1.0.0-27954023.4cee565:
-    resolution: {integrity: sha512-HBanm2MKV1Ac1hQYJz49ajUCJRIol5clbgrYTiScWAM0UXCyk5YIHGTb4x2w3aj3BRsWZlrB0UtA1O/QmSPu8Q==}
+  /@nuxt/image-edge/1.0.0-27968280.9739e4d:
+    resolution: {integrity: sha512-fT0jxdaQi4Oh8BW6vXfTCW4ile18cZeB6t+U51U2EsxaiYKLtob4z2Z3XYJ+LGkOsFR4vooa8wnHZStHqIyTOg==}
     engines: {node: ^14.16.0 || ^16.11.0 || ^17.0.0 || ^18.0.0 || ^19.0.0}
     dependencies:
       '@nuxt/kit': 3.2.3
@@ -2200,42 +2200,42 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
-  /@unhead/dom/1.1.15:
-    resolution: {integrity: sha512-b1S8avVokif15pankINlFrKrxW2pEJ4R4vt/IEDLhjsAq4oDeLpbFUQNvFeEQafaXBdryCTWICJX8MQrzs9INA==}
+  /@unhead/dom/1.1.16:
+    resolution: {integrity: sha512-4JlwF4pNVynZsxT5687ntvS2yafGtWg7Y76IAPmLSOVrZ6fpYqF/vUn5+eCbMb0Og4C9ECrkbD9NSIqAiQ/0/Q==}
     dependencies:
-      '@unhead/schema': 1.1.15
-      '@unhead/shared': 1.1.15
+      '@unhead/schema': 1.1.16
+      '@unhead/shared': 1.1.16
     dev: true
 
-  /@unhead/schema/1.1.15:
-    resolution: {integrity: sha512-331yP1JrJfvaa2TvfiVGLlgwl9bVgFVJ0pMy1hPBM/0+J09d6SKy4khZb2j0WtgVofY6FnThmKWDNCngCzRZhg==}
+  /@unhead/schema/1.1.16:
+    resolution: {integrity: sha512-I9xIM9A5q4MBkHM0GTleed47WztJKpA8tJ0HSM74dVl887R3H5qwH9h3RMOo6y9xVhqgFt1MGL6wxTDAjqRczg==}
     dependencies:
       hookable: 5.4.2
       zhead: 2.0.4
     dev: true
 
-  /@unhead/shared/1.1.15:
-    resolution: {integrity: sha512-s41AbZFeTAV982pP5+MUno3UlKcSxziMjs+D6TAKP+OdNhyN/W557TUVKbBY/4EWWYl5c0wJhjeuVduJBQpSSQ==}
+  /@unhead/shared/1.1.16:
+    resolution: {integrity: sha512-Fien3han5vZ4sIaH89Tk9o7eensIDEdRynbwnik+WNo0PTfmaN/LCa3EYsacOdNYeZ3eMjjYpmQt6r+FJCqzSA==}
     dependencies:
-      '@unhead/schema': 1.1.15
+      '@unhead/schema': 1.1.16
     dev: true
 
-  /@unhead/ssr/1.1.15:
-    resolution: {integrity: sha512-ZDj3lJuMOTrhDrNFQLETC1xQN2z53GzXV4kRQ6Baeqb9uDR+3q1yeHV+eL7DEqR8aPCHt26gs5c8OYJsfE1HFQ==}
+  /@unhead/ssr/1.1.16:
+    resolution: {integrity: sha512-SCay47uCx7jHL30iX/D0chxOLLY5m2/WCU5bepCQlzFO25OFC6cEEYtG6/BQOIRVnyN8a2KvOU38jgL9xQZN9A==}
     dependencies:
-      '@unhead/schema': 1.1.15
-      '@unhead/shared': 1.1.15
+      '@unhead/schema': 1.1.16
+      '@unhead/shared': 1.1.16
     dev: true
 
-  /@unhead/vue/1.1.15_vue@3.2.47:
-    resolution: {integrity: sha512-EX8zsb3dNhC72tpz6BExK3oIpy2t6f2QbpYsr6gthgtLMJqe8SPjgJlKGcVEegZhPw4bmMzMk72Dak3qomb98A==}
+  /@unhead/vue/1.1.16_vue@3.2.47:
+    resolution: {integrity: sha512-EbE0kqJHDmebF+X6fL7HqGnbTa+b6h6SzIvE+D0i0/IwhD2lXRrPcBy0XyLV9CLBpAbLVG4OByxnBX+7Kk/vUA==}
     peerDependencies:
       vue: '>=2.7 || >=3'
     dependencies:
-      '@unhead/schema': 1.1.15
-      '@unhead/shared': 1.1.15
+      '@unhead/schema': 1.1.16
+      '@unhead/shared': 1.1.16
       hookable: 5.4.2
-      unhead: 1.1.15
+      unhead: 1.1.16
       vue: 3.2.47
     dev: true
 
@@ -2412,10 +2412,10 @@ packages:
     peerDependencies:
       vue: '>=2.7 || >=3'
     dependencies:
-      '@unhead/dom': 1.1.15
-      '@unhead/schema': 1.1.15
-      '@unhead/ssr': 1.1.15
-      '@unhead/vue': 1.1.15_vue@3.2.47
+      '@unhead/dom': 1.1.16
+      '@unhead/schema': 1.1.16
+      '@unhead/ssr': 1.1.16
+      '@unhead/vue': 1.1.16_vue@3.2.47
       vue: 3.2.47
     dev: true
 
@@ -5522,8 +5522,8 @@ packages:
       yallist: 4.0.0
     dev: true
 
-  /lru-cache/7.18.2:
-    resolution: {integrity: sha512-KytVYmZ3reaw/f3d7GCISvWWjTYxszNdvD5rDvm/zECga3eSWzryRY7iauJsjo6aaw03lHYTSNTk7lW83Bv+zQ==}
+  /lru-cache/7.18.3:
+    resolution: {integrity: sha512-jumlc0BIUrS3qJGgIkWZsyfAM7NCWiBcCDhnd+3NNM5KbBmLTgHVfWBcg6W+rLUsIpzpERPsvwUP7CckAQSOoA==}
     engines: {node: '>=12'}
     dev: true
 
@@ -6379,7 +6379,7 @@ packages:
       '@nuxt/telemetry': 2.1.10
       '@nuxt/ui-templates': 1.1.1
       '@nuxt/vite-builder': 3.2.3_cu3nkwnntzquawm4jc2a3e2rw4
-      '@unhead/ssr': 1.1.15
+      '@unhead/ssr': 1.1.16
       '@vue/reactivity': 3.2.47
       '@vue/shared': 3.2.47
       '@vueuse/head': 1.1.15_vue@3.2.47
@@ -6409,7 +6409,7 @@ packages:
       ufo: 1.1.1
       unctx: 2.1.2
       unenv: 1.2.1
-      unhead: 1.1.15
+      unhead: 1.1.16
       unimport: 2.2.4
       unplugin: 1.1.0
       untyped: 1.2.2
@@ -8168,12 +8168,12 @@ packages:
       pathe: 1.1.0
     dev: true
 
-  /unhead/1.1.15:
-    resolution: {integrity: sha512-rpOTD35CDz9KFvBKt42KRKZRsYIDY7Sjh5XhBL2SH6XUHdRdqTDIVjHtrxIwRQkfnMdUAZUSy6KYaiAMQFUOiw==}
+  /unhead/1.1.16:
+    resolution: {integrity: sha512-m2cPqEkgwHnA/di9P17TRS21p4aAJw4QolwTyXM+gzrlnFPe8gqOYuwEVnLRMS/NgoNWH7iPDOGyf5bbbrnTaw==}
     dependencies:
-      '@unhead/dom': 1.1.15
-      '@unhead/schema': 1.1.15
-      '@unhead/shared': 1.1.15
+      '@unhead/dom': 1.1.16
+      '@unhead/schema': 1.1.16
+      '@unhead/shared': 1.1.16
       hookable: 5.4.2
     dev: true
 
@@ -8308,7 +8308,7 @@ packages:
       h3: 1.5.0
       ioredis: 5.3.1
       listhen: 1.0.3
-      lru-cache: 7.18.2
+      lru-cache: 7.18.3
       mri: 1.2.0
       node-fetch-native: 1.0.2
       ofetch: 1.0.1
