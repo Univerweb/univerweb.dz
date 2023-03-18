@@ -17,12 +17,12 @@
     "@nuxt/image-edge": "1.0.0-27968280.9739e4d",
     "@nuxtjs/color-mode": "^3.2.0",
     "@nuxtjs/i18n": "8.0.0-beta.10",
-    "@types/google.maps": "^3.52.2",
+    "@types/google.maps": "^3.52.3",
     "@vueuse/nuxt": "^9.13.0",
-    "eslint": "^8.35.0",
-    "nuxt": "^3.2.3",
+    "eslint": "^8.36.0",
+    "nuxt": "^3.3.1",
     "nuxt-icons": "^3.1.0",
-    "sass": "^1.58.3",
+    "sass": "^1.59.3",
     "vue-gtag-next": "^1.14.0"
   }
 }
