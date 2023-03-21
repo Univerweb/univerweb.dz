@@ -14,7 +14,7 @@
     "@antfu/eslint-config": "^0.37.0",
     "@googlemaps/js-api-loader": "^1.15.1",
     "@nuxt/content": "^2.5.2",
-    "@nuxt/image-edge": "1.0.0-27989975.3a856bd",
+    "@nuxt/image-edge": "1.0.0-27990059.c3f31ce",
     "@nuxtjs/color-mode": "^3.2.0",
     "@nuxtjs/i18n": "8.0.0-beta.10",
     "@types/google.maps": "^3.52.3",
