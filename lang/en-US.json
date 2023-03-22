@@ -100,6 +100,10 @@
     "manager": "Manager",
     "support": "Technical support"
   },
+  "blog": {
+    "desc": "Explore our Blog for website building tips and tricks, thoughts on current trends and more.",
+    "headline": "The Digital Blog."
+  },
   "nav": {
     "prev": "Previous",
     "next": "Next"
