@@ -18,7 +18,7 @@ const props = withDefaults(defineProps<Props>(), {
 const { locale, t } = useI18n()
 const localePath = useLocalePath()
 
-const { data: _works } = await useAsyncData('works', () => queryContent(locale.value)
+const { data: _works } = await useAsyncData('works', () => queryContent('works', locale.value)
   .only(['title', 'desc', 'slug', 'createdAt', 'updatedAt', 'tags', 'lead'])
   .sort({ _id: -1 })
   .limit(props.limit)
