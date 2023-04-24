@@ -1,4 +1,4 @@
-export const useSeo = () => {
+export default function () {
   const { t, locale } = useI18n()
   const coma = useComa()
   const config = useRuntimeConfig()
