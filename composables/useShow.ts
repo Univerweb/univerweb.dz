@@ -1,3 +1,3 @@
-export const useShow = () => {
+export default function () {
   return useState('show', () => ref(false))
 }

@@ -2,7 +2,7 @@
 const { t } = useI18n()
 const color = useColorMode()
 
-const toggleDark = () => {
+function toggleDark() {
   color.preference = color.value === 'dark' ? 'light' : 'dark'
 }
 </script>
