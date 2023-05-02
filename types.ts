@@ -11,4 +11,11 @@ export interface Work extends Post {
   link: string
 }
 
+export interface Blog extends Post {
+  author: {
+    name: string
+    url: string
+  }
+}
+
 export type Nav = null | Pick<Post, '_path' | 'title'>
