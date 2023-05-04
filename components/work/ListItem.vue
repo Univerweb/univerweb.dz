@@ -3,7 +3,7 @@ import type { Work } from '../../types'
 
 defineProps<{
   work: Work
-  titleTag?: string
+  titleTag: string
 }>()
 
 const { t } = useI18n()
