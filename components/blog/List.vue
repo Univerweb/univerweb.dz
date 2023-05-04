@@ -19,7 +19,7 @@ const { locale, t } = useI18n()
 const localePath = useLocalePath()
 
 const { data: blog } = await useAsyncData('blog', () => queryContent('blog', locale.value)
-  .only(['title', 'slug'])
+  .only(['title', 'slug', 'desc', 'createdAt', 'updatedAt', 'tags', 'lead'])
   .sort({ _id: -1 })
   .limit(props.limit)
   .find())
