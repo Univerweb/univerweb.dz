@@ -28,16 +28,16 @@ const works = _works.value as Work[]
 </script>
 
 <template>
-  <section class="container works">
+  <section class="container">
     <div class="intro">
       <Component :is="headlineTag" class="h1">
         {{ t('works.headline') }}
       </Component>
     </div>
 
-    <ul v-if="works?.length" class="details">
+    <div v-if="works?.length" class="details detailsCard">
       <WorkListItem v-for="work in works" :key="work.slug" :work="work" :title-tag="titleTag" />
-    </ul>
+    </div>
 
     <div v-if="more" class="more">
       <NuxtLink :to="localePath('realisations')" class="btn">
@@ -47,44 +47,3 @@ const works = _works.value as Work[]
     </div>
   </section>
 </template>
-
-<style lang="scss">
-.works .details {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  grid-template-columns: 1fr;
-
-  @media (min-width: $sm) {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  gap: 12px;
-
-  @media (min-width: $md) {
-    gap: 16px;
-  }
-
-  @media (min-width: $lg) {
-    gap: 24px;
-  }
-}
-
-.more {
-  display: grid;
-  margin-top: 48px;
-
-  .btn {
-    justify-self: end;
-
-    .arrow {
-      height: 8px;
-      transform: rotate(-90deg);
-
-      [lang='ar-DZ'] & {
-        transform: rotate(90deg);
-      }
-    }
-  }
-}
-</style>

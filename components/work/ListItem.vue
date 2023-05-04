@@ -12,122 +12,44 @@ const localePath = useLocalePath()
 </script>
 
 <template>
-  <li class="item">
-    <NuxtLink :to="localePath(`/realisations/${work.slug}`)">
-      <article vocab="https://schema.org/" typeof="Article">
-        <div property="mainEntityOfPage" typeof="WebPage">
-          <meta property="id" :content="`${seo.baseUrl}${localePath(`/realisations/${work.slug}`)}`">
-        </div>
-        <meta property="dateCreated datePublished" :content="work.createdAt">
-        <meta property="dateModified" :content="work.updatedAt">
-        <div property="author publisher" typeof="Organization">
-          <meta property="name" :content="t('name')">
-          <meta property="url" :content="seo.baseUrl">
-        </div>
-        <meta property="articleSection" :content="t('works.title')">
-        <meta property="description" :content="work.desc">
+  <NuxtLink :to="localePath(`/realisations/${work.slug}`)" class="item">
+    <article vocab="https://schema.org/" typeof="Article">
+      <div property="mainEntityOfPage" typeof="WebPage">
+        <meta property="id" :content="`${seo.baseUrl}${localePath(`/realisations/${work.slug}`)}`">
+      </div>
+      <meta property="dateCreated datePublished" :content="work.createdAt">
+      <meta property="dateModified" :content="work.updatedAt">
+      <div property="author publisher" typeof="Organization">
+        <meta property="name" :content="t('name')">
+        <meta property="url" :content="seo.baseUrl">
+      </div>
+      <meta property="articleSection" :content="t('works.title')">
+      <meta property="description" :content="work.desc">
 
-        <AppImg
-          property="image"
-          :src="`/images/works/${work.slug}_thumbnail.jpg`"
-          :alt="work.desc"
-          width="588"
-          height="624"
-          sizes="xs:288px sm:607px md:354px lg:456px xl:588px"
-        />
+      <AppImg
+        property="image"
+        :src="`/images/works/${work.slug}_thumbnail.jpg`"
+        :alt="work.desc"
+        width="588"
+        height="624"
+        sizes="xs:288px sm:607px md:354px lg:456px xl:588px"
+      />
 
-        <div class="overlay" />
+      <div class="overlay" />
 
-        <div class="inner">
-          <Component :is="titleTag" property="headline">
-            {{ work.title }}
-          </Component>
-          <ul class="tags">
-            <li v-for="tag in work.tags" :key="tag" property="keywords">
-              {{ tag }}
-            </li>
-          </ul>
-          <p property="articleBody" class="lead">
-            {{ work.lead }}
-          </p>
-        </div>
-      </article>
-    </NuxtLink>
-  </li>
+      <div class="inner">
+        <Component :is="titleTag" property="headline">
+          {{ work.title }}
+        </Component>
+        <ul class="tags">
+          <li v-for="tag in work.tags" :key="tag" property="keywords">
+            {{ tag }}
+          </li>
+        </ul>
+        <p property="articleBody" class="lead">
+          {{ work.lead }}
+        </p>
+      </div>
+    </article>
+  </NuxtLink>
 </template>
-
-<style lang="scss" scoped>
-.works .item {
-  grid-column: initial;
-  overflow: hidden;
-  z-index: 1;
-  border-radius: 12px;
-
-  @media (min-width: $xl) {
-    border-radius: 24px;
-  }
-
-  article {
-    display: grid;
-    position: relative;
-  }
-
-  .overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: $textPrimary;
-    opacity: 0.1;
-    transition: opacity $transition;
-  }
-
-  &:hover .overlay {
-    opacity: 0.6;
-  }
-
-  .inner {
-    display: grid;
-    grid-auto-rows: auto 1fr;
-    position: absolute;
-    height: 100%;
-    color: $white;
-    padding: 24px;
-
-    @media (min-width: $md) {
-      padding: 24px;
-    }
-
-    @media (min-width: $lg) {
-      padding: 36px;
-      grid-auto-rows: auto auto 1fr;
-    }
-
-    @media (min-width: $xl) {
-      padding: 48px;
-    }
-  }
-
-  h2,
-  h3 {
-    @include size(32);
-    margin-bottom: 12px;
-  }
-
-  p {
-    display: none;
-
-    @media (min-width: $lg) {
-      display: block;
-    }
-
-    color: $white;
-    align-self: end;
-    transform: translateY(calc(100% + 48px));
-    transition: transform $transition;
-  }
-
-  &:hover p {
-    transform: translateY(0);
-  }
-}
-</style>
