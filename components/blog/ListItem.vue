@@ -46,8 +46,8 @@ const localePath = useLocalePath()
             {{ tag }}
           </li>
         </ul>
-        <p property="articleBody" class="lead">
-          {{ blog.lead }}
+        <p property="articleBody" class="lead meta">
+          {{ blog.createdAt }}
         </p>
       </div>
     </article>
