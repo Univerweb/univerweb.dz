@@ -37,8 +37,8 @@ useHead({
     { name: 'description', content: work.desc },
     { property: 'og:title', content: work.title },
     { property: 'og:description', content: work.desc },
-    { property: 'og:image', content: `${seo.baseUrl}/images/${work.slug}_share.jpg` },
-    { property: 'og:image:secure_url', content: `${seo.baseUrl}/images/${work.slug}_share.jpg` },
+    { property: 'og:image', content: `${seo.baseUrl}/images/share/${work.slug}.jpg` },
+    { property: 'og:image:secure_url', content: `${seo.baseUrl}/images/share/${work.slug}.jpg` },
     { property: 'og:image:alt', content: `${seo.baseUrl} — ${work.industry}` },
   ],
 
