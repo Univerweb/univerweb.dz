@@ -28,16 +28,16 @@ const articles = blog.value as Blog[]
 </script>
 
 <template>
-  <section class="container works">
+  <section class="container">
     <div class="intro">
       <Component :is="headlineTag" class="h1">
         {{ t('blog.headline') }}
       </Component>
     </div>
 
-    <ul v-if="articles?.length" class="details">
+    <div v-if="articles?.length" class="details detailsCard">
       <BlogListItem v-for="article in articles" :key="article.slug" :blog="article" :title-tag="titleTag" />
-    </ul>
+    </div>
 
     <div v-if="more" class="more">
       <NuxtLink :to="localePath('blog')" class="btn">
