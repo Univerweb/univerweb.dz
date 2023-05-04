@@ -6,7 +6,7 @@ export default function () {
 
   const seo = {
     baseUrl,
-    ogImage: computed(() => locale.value === 'ar' ? `${baseUrl}/images/univerweb-ar_share.jpg` : `${baseUrl}/images/univerweb_share.jpg`),
+    ogImage: computed(() => locale.value === 'ar' ? `${baseUrl}/images/share/univerweb-ar.jpg` : `${baseUrl}/images/share/univerweb.jpg`),
     streetAddress: computed(() => `${t('streetAddress')}${coma.value}${t('addressLocality')}`),
     addressLocality: computed(() => `${t('addressRegion')}${coma.value}${t('addressCountry')}`),
     breadcrumbItemOne: locale.value !== 'fr' ? `${baseUrl}/${locale.value}` : `${baseUrl}/`,
