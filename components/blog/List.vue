@@ -4,14 +4,17 @@ import type { Blog } from '../../types'
 export interface Props {
   headlineTag?: string
   limit?: number
+  more?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
   headlineTag: 'h1',
   limit: 0,
+  more: false,
 })
 
 const { locale, t } = useI18n()
+const localePath = useLocalePath()
 
 const { data: blog } = await useAsyncData('blog', () => queryContent('blog', locale.value)
   .only(['title', 'slug'])
@@ -33,5 +36,12 @@ const articles = blog.value as Blog[]
     <ul v-if="articles?.length" class="details">
       <BlogListItem v-for="article in articles" :key="article.slug" :blog="article" />
     </ul>
+
+    <div v-if="more" class="more">
+      <NuxtLink :to="localePath('blog')" class="btn">
+        {{ t('home.more') }}
+        <NuxtIcon name="arrow" />
+      </NuxtLink>
+    </div>
   </section>
 </template>
