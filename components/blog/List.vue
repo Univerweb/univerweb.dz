@@ -5,12 +5,14 @@ export interface Props {
   headlineTag?: string
   limit?: number
   more?: boolean
+  titleTag?: string
 }
 
 const props = withDefaults(defineProps<Props>(), {
   headlineTag: 'h1',
   limit: 0,
   more: false,
+  titleTag: 'h2',
 })
 
 const { locale, t } = useI18n()
@@ -34,7 +36,7 @@ const articles = blog.value as Blog[]
     </div>
 
     <ul v-if="articles?.length" class="details">
-      <BlogListItem v-for="article in articles" :key="article.slug" :blog="article" />
+      <BlogListItem v-for="article in articles" :key="article.slug" :blog="article" :title-tag="titleTag" />
     </ul>
 
     <div v-if="more" class="more">

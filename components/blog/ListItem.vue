@@ -3,6 +3,7 @@ import type { Blog } from '../../types'
 
 defineProps<{
   blog: Blog
+  titleTag: string
 }>()
 
 const localePath = useLocalePath()
@@ -11,7 +12,9 @@ const localePath = useLocalePath()
 <template>
   <li class="item">
     <NuxtLink :to="localePath(`/blog/${blog.slug}`)">
-      {{ blog.title }}
+      <Component :is="titleTag" property="headline">
+        {{ blog.title }}
+      </Component>
     </NuxtLink>
   </li>
 </template>
