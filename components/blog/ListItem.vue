@@ -1,14 +1,18 @@
 <script setup lang="ts">
 import type { Blog } from '../../types'
 
-defineProps<{
+const { blog } = defineProps<{
   blog: Blog
   titleTag: string
 }>()
 
-const { t } = useI18n()
+const { locale, t } = useI18n()
 const seo = useSeo()
 const localePath = useLocalePath()
+
+const createdAt = new Intl.DateTimeFormat(locale.value, { dateStyle: 'long' }).format(new Date(blog.createdAt))
+const createdAtIso = new Date(blog.createdAt).toISOString()
+const UpdatedAtIso = new Date(blog.updatedAt).toISOString()
 </script>
 
 <template>
@@ -17,8 +21,6 @@ const localePath = useLocalePath()
       <div property="mainEntityOfPage" typeof="WebPage">
         <meta property="id" :content="`${seo.baseUrl}${localePath(`/blog/${blog.slug}`)}`">
       </div>
-      <meta property="dateCreated datePublished" :content="blog.createdAt">
-      <meta property="dateModified" :content="blog.updatedAt">
       <div property="author publisher" typeof="Organization">
         <meta property="name" :content="t('name')">
         <meta property="url" :content="seo.baseUrl">
@@ -46,8 +48,11 @@ const localePath = useLocalePath()
             {{ tag }}
           </li>
         </ul>
-        <p property="articleBody" class="lead meta">
-          {{ blog.createdAt }}
+        <p class="lead meta">
+          <time property="dateCreated datePublished" :datetime="createdAtIso">
+            {{ createdAt }}
+          </time>
+          <time property="dateModified" :datetime="UpdatedAtIso" :content="UpdatedAtIso" />
         </p>
       </div>
     </article>
