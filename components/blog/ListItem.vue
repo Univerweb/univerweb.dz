@@ -21,10 +21,6 @@ const UpdatedAtIso = new Date(blog.updatedAt).toISOString()
       <div property="mainEntityOfPage" typeof="WebPage">
         <meta property="id" :content="`${seo.baseUrl}${localePath(`/blog/${blog.slug}`)}`">
       </div>
-      <div property="author publisher" typeof="Organization">
-        <meta property="name" :content="t('name')">
-        <meta property="url" :content="seo.baseUrl">
-      </div>
       <meta property="articleSection" :content="t('blog.title')">
       <meta property="description" :content="blog.desc">
 
@@ -53,6 +49,19 @@ const UpdatedAtIso = new Date(blog.updatedAt).toISOString()
             {{ createdAt }}
           </time>
           <time property="dateModified" :datetime="UpdatedAtIso" :content="UpdatedAtIso" />
+          —
+          <span v-if="blog.author" property="author" typeof="Person">
+            <span property="name">{{ blog.author.name }}</span>
+            <meta property="url" :content="blog.author.url">
+          </span>
+          <span v-else property="author" typeof="Organization">
+            <span property="name">{{ t('name') }}</span>
+            <meta property="url" :content="seo.baseUrl">
+          </span>
+          <span property="publisher" typeof="Organization">
+            <meta property="name" :content="t('name')">
+            <meta property="url" :content="seo.baseUrl">
+          </span>
         </p>
       </div>
     </article>
