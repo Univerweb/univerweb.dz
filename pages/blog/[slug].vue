@@ -9,7 +9,7 @@ const path = `/blog/${locale.value}/${route.params.slug}`
 const { data: _blog, error } = await useAsyncData(`blog-${locale.value}-${route.params.slug}`, () => {
   return queryContent()
     .where({ _path: path })
-    .only(['title', 'desc', 'slug', 'createdAt', 'updatedAt', 'tags', 'industry', 'lead', 'link'])
+    .only(['title', 'desc', 'slug', 'createdAt', 'updatedAt', 'tags', 'author'])
     .findOne()
 })
 
