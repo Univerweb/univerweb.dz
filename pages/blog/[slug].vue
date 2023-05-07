@@ -36,6 +36,11 @@ useHead({
         <h1 property="headline">
           {{ blog.title }}
         </h1>
+        <ul class="tags">
+          <li v-for="tag in blog.tags" :key="tag" property="keywords">
+            {{ tag }}
+          </li>
+        </ul>
       </div>
     </article>
     <LazyAppRequest />
