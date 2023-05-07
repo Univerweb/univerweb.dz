@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { Work } from '../../types'
 
-defineProps<{
+const { work } = defineProps<{
   work: Work
   titleTag: string
 }>()
@@ -9,6 +9,9 @@ defineProps<{
 const { t } = useI18n()
 const seo = useSeo()
 const localePath = useLocalePath()
+
+const createdAtIso = new Date(work.createdAt).toISOString()
+const UpdatedAtIso = new Date(work.updatedAt).toISOString()
 </script>
 
 <template>
@@ -17,8 +20,8 @@ const localePath = useLocalePath()
       <div property="mainEntityOfPage" typeof="WebPage">
         <meta property="id" :content="`${seo.baseUrl}${localePath(`/realisations/${work.slug}`)}`">
       </div>
-      <meta property="dateCreated datePublished" :content="work.createdAt">
-      <meta property="dateModified" :content="work.updatedAt">
+      <time property="dateCreated datePublished" :datetime="createdAtIso" />
+      <time property="dateModified" :datetime="UpdatedAtIso" />
       <div property="author publisher" typeof="Organization">
         <meta property="name" :content="t('name')">
         <meta property="url" :content="seo.baseUrl">

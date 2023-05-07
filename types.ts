@@ -2,8 +2,8 @@ export interface Work {
   title: string
   desc: string
   slug: string
-  createdAt: string
-  updatedAt: string
+  createdAt: Date
+  updatedAt: Date
   tags: string[]
   industry?: string
   lead: string
