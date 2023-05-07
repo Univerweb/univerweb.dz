@@ -49,7 +49,7 @@ const UpdatedAtIso = new Date(blog.updatedAt).toISOString()
             {{ createdAt }}
           </time>
           <time property="dateModified" :datetime="UpdatedAtIso" :content="UpdatedAtIso" />
-          —
+          — {{ t('blog.by') }}
           <span v-if="blog.author" property="author" typeof="Person">
             <span property="name">{{ blog.author.name }}</span>
             <meta property="url" :content="blog.author.url">
