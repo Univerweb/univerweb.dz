@@ -1,20 +1,20 @@
 <script setup lang="ts">
 import { createError } from 'h3'
-import type { Blog } from '../../types'
+import type { Post } from '../../types'
 
 const { locale, t } = useI18n()
 const seo = useSeo()
 const route = useRoute()
 const path = `/blog/${locale.value}/${route.params.slug}`
 
-const { data: _blog, error } = await useAsyncData(`blog-${locale.value}-${route.params.slug}`, () => {
+const { data: _post, error } = await useAsyncData(`blog-${locale.value}-${route.params.slug}`, () => {
   return queryContent()
     .where({ _path: path })
     .only(['title', 'desc', 'slug', 'createdAt', 'updatedAt', 'tags', 'author', 'body'])
     .findOne()
 })
 
-const blog = _blog.value as Blog
+const post = _post.value as Post
 
 if (error.value) {
   showError(
@@ -25,12 +25,12 @@ if (error.value) {
   )
 }
 
-const createdAt = new Intl.DateTimeFormat(locale.value, { dateStyle: 'long' }).format(new Date(blog.createdAt))
-const createdAtIso = new Date(blog.createdAt).toISOString()
-const UpdatedAtIso = new Date(blog.updatedAt).toISOString()
+const createdAt = new Intl.DateTimeFormat(locale.value, { dateStyle: 'long' }).format(new Date(post.createdAt))
+const createdAtIso = new Date(post.createdAt).toISOString()
+const UpdatedAtIso = new Date(post.updatedAt).toISOString()
 
 useHead({
-  title: blog.title,
+  title: post.title,
 })
 </script>
 
@@ -39,10 +39,10 @@ useHead({
     <article vocab="https://schema.org/" typeof="Article">
       <div class="container intro">
         <h1 property="headline">
-          {{ blog.title }}
+          {{ post.title }}
         </h1>
         <ul class="tags">
-          <li v-for="tag in blog.tags" :key="tag" property="keywords">
+          <li v-for="tag in post.tags" :key="tag" property="keywords">
             {{ tag }}
           </li>
         </ul>
@@ -52,9 +52,9 @@ useHead({
           </time>
           <time property="dateModified" :datetime="UpdatedAtIso" :content="UpdatedAtIso" />
           — {{ t('blog.by') }}
-          <span v-if="blog.author" property="author" typeof="Person">
-            <span property="name">{{ blog.author.name }}</span>
-            <meta property="url" :content="blog.author.url">
+          <span v-if="post.author" property="author" typeof="Person">
+            <span property="name">{{ post.author.name }}</span>
+            <meta property="url" :content="post.author.url">
           </span>
           <span v-else property="author" typeof="Organization">
             <span property="name">{{ t('name') }}</span>
@@ -71,15 +71,15 @@ useHead({
         <div class="banner card">
           <AppImg
             property="image"
-            :src="`/images/blog/${blog.slug}_thumbnail.jpg`"
-            :alt="blog.desc"
+            :src="`/images/blog/${post.slug}_thumbnail.jpg`"
+            :alt="post.desc"
             sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw"
           />
         </div>
       </div>
 
       <ContentRenderer>
-        <ContentRendererMarkdown :value="blog" class="container" />
+        <ContentRendererMarkdown :value="post" class="container" />
       </ContentRenderer>
     </article>
     <LazyAppRequest />

@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { Blog } from '../../types'
+import type { Post } from '../../types'
 
-const { blog } = defineProps<{
-  blog: Blog
+const { post } = defineProps<{
+  post: Post
   titleTag: string
 }>()
 
@@ -10,24 +10,24 @@ const { locale, t } = useI18n()
 const seo = useSeo()
 const localePath = useLocalePath()
 
-const createdAt = new Intl.DateTimeFormat(locale.value, { dateStyle: 'long' }).format(new Date(blog.createdAt))
-const createdAtIso = new Date(blog.createdAt).toISOString()
-const UpdatedAtIso = new Date(blog.updatedAt).toISOString()
+const createdAt = new Intl.DateTimeFormat(locale.value, { dateStyle: 'long' }).format(new Date(post.createdAt))
+const createdAtIso = new Date(post.createdAt).toISOString()
+const UpdatedAtIso = new Date(post.updatedAt).toISOString()
 </script>
 
 <template>
-  <NuxtLink :to="localePath(`/blog/${blog.slug}`)" class="item">
+  <NuxtLink :to="localePath(`/blog/${post.slug}`)" class="item">
     <article vocab="https://schema.org/" typeof="Article">
       <div property="mainEntityOfPage" typeof="WebPage">
-        <meta property="id" :content="`${seo.baseUrl}${localePath(`/blog/${blog.slug}`)}`">
+        <meta property="id" :content="`${seo.baseUrl}${localePath(`/blog/${post.slug}`)}`">
       </div>
       <meta property="articleSection" :content="t('blog.title')">
-      <meta property="description" :content="blog.desc">
+      <meta property="description" :content="post.desc">
 
       <AppImg
         property="image"
-        :src="`/images/blog/${blog.slug}_thumbnail.jpg`"
-        :alt="blog.desc"
+        :src="`/images/blog/${post.slug}_thumbnail.jpg`"
+        :alt="post.desc"
         width="588"
         height="624"
         sizes="xs:288px sm:607px md:354px lg:456px xl:588px"
@@ -37,10 +37,10 @@ const UpdatedAtIso = new Date(blog.updatedAt).toISOString()
 
       <div class="inner">
         <Component :is="titleTag" property="headline">
-          {{ blog.title }}
+          {{ post.title }}
         </Component>
         <ul class="tags">
-          <li v-for="tag in blog.tags" :key="tag" property="keywords">
+          <li v-for="tag in post.tags" :key="tag" property="keywords">
             {{ tag }}
           </li>
         </ul>
@@ -50,9 +50,9 @@ const UpdatedAtIso = new Date(blog.updatedAt).toISOString()
           </time>
           <time property="dateModified" :datetime="UpdatedAtIso" :content="UpdatedAtIso" />
           — {{ t('blog.by') }}
-          <span v-if="blog.author" property="author" typeof="Person">
-            <span property="name">{{ blog.author.name }}</span>
-            <meta property="url" :content="blog.author.url">
+          <span v-if="post.author" property="author" typeof="Person">
+            <span property="name">{{ post.author.name }}</span>
+            <meta property="url" :content="post.author.url">
           </span>
           <span v-else property="author" typeof="Organization">
             <span property="name">{{ t('name') }}</span>

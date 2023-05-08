@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Blog } from '../../types'
+import type { Post } from '../../types'
 
 export interface Props {
   headlineTag?: string
@@ -18,13 +18,13 @@ const props = withDefaults(defineProps<Props>(), {
 const { locale, t } = useI18n()
 const localePath = useLocalePath()
 
-const { data: blog } = await useAsyncData('blog', () => queryContent('blog', locale.value)
+const { data: _posts } = await useAsyncData('blog', () => queryContent('blog', locale.value)
   .only(['title', 'desc', 'slug', 'createdAt', 'updatedAt', 'tags', 'author'])
   .sort({ _id: -1 })
   .limit(props.limit)
   .find())
 
-const articles = blog.value as Blog[]
+const posts = _posts.value as Post[]
 </script>
 
 <template>
@@ -35,8 +35,8 @@ const articles = blog.value as Blog[]
       </Component>
     </div>
 
-    <div v-if="articles?.length" class="details detailsCard">
-      <BlogListItem v-for="article in articles" :key="article.slug" :blog="article" :title-tag="titleTag" />
+    <div v-if="posts?.length" class="details detailsCard">
+      <BlogListItem v-for="post in posts" :key="post.slug" :post="post" :title-tag="titleTag" />
     </div>
 
     <div v-if="more" class="more">
