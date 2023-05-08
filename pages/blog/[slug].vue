@@ -2,7 +2,8 @@
 import { createError } from 'h3'
 import type { Blog } from '../../types'
 
-const { locale } = useI18n()
+const { locale, t } = useI18n()
+const seo = useSeo()
 const route = useRoute()
 const path = `/blog/${locale.value}/${route.params.slug}`
 
@@ -24,6 +25,10 @@ if (error.value) {
   )
 }
 
+const createdAt = new Intl.DateTimeFormat(locale.value, { dateStyle: 'long' }).format(new Date(blog.createdAt))
+const createdAtIso = new Date(blog.createdAt).toISOString()
+const UpdatedAtIso = new Date(blog.updatedAt).toISOString()
+
 useHead({
   title: blog.title,
 })
@@ -41,6 +46,25 @@ useHead({
             {{ tag }}
           </li>
         </ul>
+        <p class="lead meta">
+          <time property="dateCreated datePublished" :datetime="createdAtIso">
+            {{ createdAt }}
+          </time>
+          <time property="dateModified" :datetime="UpdatedAtIso" :content="UpdatedAtIso" />
+          — {{ t('blog.by') }}
+          <span v-if="blog.author" property="author" typeof="Person">
+            <span property="name">{{ blog.author.name }}</span>
+            <meta property="url" :content="blog.author.url">
+          </span>
+          <span v-else property="author" typeof="Organization">
+            <span property="name">{{ t('name') }}</span>
+            <meta property="url" :content="seo.baseUrl">
+          </span>
+          <span property="publisher" typeof="Organization">
+            <meta property="name" :content="t('name')">
+            <meta property="url" :content="seo.baseUrl">
+          </span>
+        </p>
       </div>
     </article>
     <LazyAppRequest />
