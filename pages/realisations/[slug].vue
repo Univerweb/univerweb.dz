@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { createError } from 'h3'
-import type { Work } from '../../types'
+import type { Post } from '../../types'
 
 const localePath = useLocalePath()
 const { locale, t } = useI18n()
@@ -8,14 +8,14 @@ const seo = useSeo()
 const route = useRoute()
 const path = `/works/${locale.value}/${route.params.slug}`
 
-const { data: _work, error } = await useAsyncData(`work-${locale.value}-${route.params.slug}`, () => {
+const { data: _post, error } = await useAsyncData(`work-${locale.value}-${route.params.slug}`, () => {
   return queryContent()
     .where({ _path: path })
     .only(['title', 'desc', 'slug', 'createdAt', 'updatedAt', 'tags', 'industry', 'lead', 'link'])
     .findOne()
 })
 
-const work = _work.value as Work
+const post = _post.value as Post
 
 if (error.value) {
   showError(
@@ -31,15 +31,15 @@ const [prev, next] = await queryContent('works', locale.value)
   .findSurround({ _path: path })
 
 useHead({
-  title: work.title,
+  title: post.title,
 
   meta: [
-    { name: 'description', content: work.desc },
-    { property: 'og:title', content: work.title },
-    { property: 'og:description', content: work.desc },
-    { property: 'og:image', content: `${seo.baseUrl}/images/share/${work.slug}.jpg` },
-    { property: 'og:image:secure_url', content: `${seo.baseUrl}/images/share/${work.slug}.jpg` },
-    { property: 'og:image:alt', content: `${seo.baseUrl} — ${work.industry}` },
+    { name: 'description', content: post.desc },
+    { property: 'og:title', content: post.title },
+    { property: 'og:description', content: post.desc },
+    { property: 'og:image', content: `${seo.baseUrl}/images/share/${post.slug}.jpg` },
+    { property: 'og:image:secure_url', content: `${seo.baseUrl}/images/share/${post.slug}.jpg` },
+    { property: 'og:image:alt', content: `${seo.baseUrl} — ${post.industry}` },
   ],
 
   script: [
@@ -51,7 +51,7 @@ useHead({
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': t('name'), 'item': seo.breadcrumbItemOne },
           { '@type': 'ListItem', 'position': 2, 'name': t('works.title'), 'item': `${seo.baseUrl}${localePath('realisations')}` },
-          { '@type': 'ListItem', 'position': 3, 'name': work.title },
+          { '@type': 'ListItem', 'position': 3, 'name': post.title },
         ],
       },
     },
@@ -65,26 +65,26 @@ useHead({
       <div property="mainEntityOfPage" typeof="WebPage">
         <meta property="id" :content="`${seo.baseUrl}${route.path}`">
       </div>
-      <meta property="dateCreated datePublished" :content="work.createdAt">
-      <meta property="dateModified" :content="work.updatedAt">
+      <meta property="dateCreated datePublished" :content="post.createdAt">
+      <meta property="dateModified" :content="post.updatedAt">
       <div property="author publisher" typeof="Organization">
         <meta property="name" :content="t('name')">
         <meta property="url" :content="seo.baseUrl">
       </div>
       <meta property="articleSection" :content="t('works.title')">
-      <meta property="description" :content="work.desc">
+      <meta property="description" :content="post.desc">
       <div class="container intro">
         <WorkBack />
         <h1 property="headline">
-          {{ work.title }}
+          {{ post.title }}
         </h1>
       </div>
 
       <div class="banner card">
         <AppImg
           property="image"
-          :src="`/images/works/${work.slug}_banner.jpg`"
-          :alt="work.desc"
+          :src="`/images/works/${post.slug}_banner.jpg`"
+          :alt="post.desc"
           sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw"
         />
       </div>
@@ -96,7 +96,7 @@ useHead({
               {{ t('work.client') }}
             </h2>
             <p class="lead">
-              {{ work.title }}
+              {{ post.title }}
             </p>
           </div>
           <div class="item">
@@ -104,7 +104,7 @@ useHead({
               {{ t('work.features') }}
             </h2>
             <ul class="lead tags">
-              <li v-for="tag in work.tags" :key="tag" property="keywords">
+              <li v-for="tag in post.tags" :key="tag" property="keywords">
                 {{ tag }}
               </li>
             </ul>
@@ -114,7 +114,7 @@ useHead({
               {{ t('work.industry') }}
             </h2>
             <p class="lead">
-              {{ work.industry }}
+              {{ post.industry }}
             </p>
           </div>
         </div>
@@ -125,15 +125,15 @@ useHead({
           <div class="item">
             <div class="inner">
               <p property="articleBody" class="lead">
-                {{ work.lead }}
+                {{ post.lead }}
               </p>
-              <a :href="work.link" class="link">{{ t('work.visit') }}</a>
+              <a :href="post.link" class="link">{{ t('work.visit') }}</a>
             </div>
           </div>
           <div class="item card">
             <AppImg
-              :src="`/images/works/${work.slug}_preview.jpg`"
-              :alt="`${t('work.alt')} ${work.title}`"
+              :src="`/images/works/${post.slug}_preview.jpg`"
+              :alt="`${t('work.alt')} ${post.title}`"
               sizes="xs:288px sm:607px md:719px lg:619px xl:1280px"
             />
           </div>

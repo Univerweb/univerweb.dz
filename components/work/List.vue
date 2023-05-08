@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Work } from '../../types'
+import type { Post } from '../../types'
 
 export interface Props {
   headlineTag?: string
@@ -18,13 +18,13 @@ const props = withDefaults(defineProps<Props>(), {
 const { locale, t } = useI18n()
 const localePath = useLocalePath()
 
-const { data: _works } = await useAsyncData('works', () => queryContent('works', locale.value)
+const { data: _posts } = await useAsyncData('works', () => queryContent('works', locale.value)
   .only(['title', 'desc', 'slug', 'createdAt', 'updatedAt', 'tags', 'lead'])
   .sort({ _id: -1 })
   .limit(props.limit)
   .find())
 
-const works = _works.value as Work[]
+const posts = _posts.value as Post[]
 </script>
 
 <template>
@@ -35,8 +35,8 @@ const works = _works.value as Work[]
       </Component>
     </div>
 
-    <div v-if="works?.length" class="details detailsCard">
-      <WorkListItem v-for="work in works" :key="work.slug" :work="work" :title-tag="titleTag" />
+    <div v-if="posts?.length" class="details detailsCard">
+      <WorkListItem v-for="post in posts" :key="post.slug" :post="post" :title-tag="titleTag" />
     </div>
 
     <div v-if="more" class="more">
