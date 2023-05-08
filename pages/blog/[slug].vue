@@ -66,6 +66,17 @@ useHead({
           </span>
         </p>
       </div>
+
+      <div class="container">
+        <div class="banner card">
+          <AppImg
+            property="image"
+            :src="`/images/blog/${blog.slug}_thumbnail.jpg`"
+            :alt="blog.desc"
+            sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw"
+          />
+        </div>
+      </div>
     </article>
     <LazyAppRequest />
   </main>
