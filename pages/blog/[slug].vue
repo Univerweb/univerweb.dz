@@ -25,13 +25,13 @@ if (error.value) {
   )
 }
 
-const [prev, next] = await queryContent('blog', locale.value)
-  .only(['slug', 'title'])
-  .findSurround({ _path: path })
-
 const createdAt = new Intl.DateTimeFormat(locale.value, { dateStyle: 'long' }).format(new Date(post.createdAt))
 const createdAtIso = new Date(post.createdAt).toISOString()
 const UpdatedAtIso = new Date(post.updatedAt).toISOString()
+
+const [prev, next] = await queryContent('blog', locale.value)
+  .only(['slug', 'title'])
+  .findSurround({ _path: path })
 
 useHead({
   title: post.title,
@@ -46,7 +46,7 @@ useHead({
       </div>
       <meta property="articleSection" :content="t('blog.title')">
       <meta property="description" :content="post.desc">
-      
+
       <div class="container intro">
         <h1 property="headline">
           {{ post.title }}
