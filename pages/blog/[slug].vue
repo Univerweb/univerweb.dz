@@ -25,6 +25,10 @@ if (error.value) {
   )
 }
 
+const [prev, next] = await queryContent('blog', locale.value)
+  .only(['slug', 'title'])
+  .findSurround({ _path: path })
+
 const createdAt = new Intl.DateTimeFormat(locale.value, { dateStyle: 'long' }).format(new Date(post.createdAt))
 const createdAtIso = new Date(post.createdAt).toISOString()
 const UpdatedAtIso = new Date(post.updatedAt).toISOString()
@@ -82,6 +86,9 @@ useHead({
         <ContentRendererMarkdown :value="post" class="container" />
       </ContentRenderer>
     </article>
+
+    <LazyBlogNav :prev="prev" :next="next" />
+
     <LazyAppRequest />
   </main>
 </template>
