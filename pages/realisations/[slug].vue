@@ -76,6 +76,7 @@ useHead({
       </div>
       <meta property="articleSection" :content="t('works.title')">
       <meta property="description" :content="post.desc">
+
       <div class="container intro">
         <WorkBack />
         <h1 property="headline">
