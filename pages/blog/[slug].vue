@@ -51,22 +51,15 @@ useHead({
         <h1 property="headline">
           {{ post.title }}
         </h1>
-        <ul class="tags">
-          <li v-for="tag in post.tags" :key="tag" property="keywords">
-            {{ tag }}
-          </li>
-        </ul>
-        <p class="lead meta">
-          <time property="dateCreated datePublished" :datetime="createdAtIso">
-            {{ createdAt }}
-          </time>
+        <div class="meta">
+          <time property="dateCreated datePublished" :datetime="createdAtIso">{{ createdAt }}</time>
           <time property="dateModified" :datetime="UpdatedAtIso" :content="UpdatedAtIso" />
           — {{ t('blog.by') }}
-          <span v-if="post.author" property="author" typeof="Person">
+          <span v-if="post.author" property="author" typeof="Person" class="author">
             <span property="name">{{ post.author.name }}</span>
             <meta property="url" :content="post.author.url">
           </span>
-          <span v-else property="author" typeof="Organization">
+          <span v-else property="author" typeof="Organization" class="author">
             <span property="name">{{ t('name') }}</span>
             <meta property="url" :content="seo.baseUrl">
           </span>
@@ -74,7 +67,12 @@ useHead({
             <meta property="name" :content="t('name')">
             <meta property="url" :content="seo.baseUrl">
           </span>
-        </p>
+          <ul>
+            <li v-for="tag in post.tags" :key="tag" property="keywords">
+              {{ tag }}
+            </li>
+          </ul>
+        </div>
       </div>
 
       <div class="container">
@@ -98,3 +96,38 @@ useHead({
     <LazyAppRequest />
   </main>
 </template>
+
+<style lang="scss" scoped>
+.meta {
+  color: var(--textSecondary);
+  font-family: var(--fontMedium);
+  transition: color $transition;
+
+  .author {
+    position: relative;
+    padding-right: 12px;
+    margin-right: 12px;
+    color: var(--textPrimary);
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 1px;
+      height: 10px;
+      margin-top: -5px;
+      background-color: var(--textSecondary);
+      opacity: 0.2;
+    }
+  }
+
+  ul {
+    display: inline-flex;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+</style>
