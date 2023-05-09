@@ -92,7 +92,7 @@ useHead({
       </ContentRenderer>
     </article>
 
-    <LazyBlogNav :prev="prev" :next="next" />
+    <LazyAppNav :prev="prev" :next="next" path="blog" />
 
     <LazyAppRequest />
   </main>
