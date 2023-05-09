@@ -48,7 +48,7 @@ useHead({
       <meta property="description" :content="post.desc">
 
       <div class="container intro">
-        <BlogBack />
+        <AppBack path="blog" menu="menu.blog" />
         <h1 property="headline">
           {{ post.title }}
         </h1>
