@@ -1,11 +1,11 @@
 <script setup lang="ts">
-const localePath = useLocalePath()
-const { t } = useI18n()
-
 defineProps<{
   path: string
   menu: string
 }>()
+
+const localePath = useLocalePath()
+const { t } = useI18n()
 </script>
 
 <template>
