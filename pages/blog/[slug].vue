@@ -39,7 +39,7 @@ useHead({
 </script>
 
 <template>
-  <main id="main" class="work">
+  <main id="main" class="blog">
     <article vocab="https://schema.org/" typeof="Article">
       <div property="mainEntityOfPage" typeof="WebPage">
         <meta property="id" :content="`${seo.baseUrl}${route.path}`">
@@ -75,7 +75,7 @@ useHead({
         </div>
       </div>
 
-      <div class="container">
+      <div class="container containerBanner">
         <div class="banner card">
           <AppImg
             property="image"
@@ -98,36 +98,62 @@ useHead({
 </template>
 
 <style lang="scss" scoped>
-.meta {
-  color: var(--textSecondary);
-  font-family: var(--fontMedium);
-  transition: color $transition;
+.blog {
+  h1 {
+    margin-bottom: 24px;
+  }
 
-  .author {
-    position: relative;
-    padding-right: 12px;
-    margin-right: 12px;
-    color: var(--textPrimary);
+  .meta {
+    color: var(--textSecondary);
+    font-family: var(--fontMedium);
+    transition: color $transition;
 
-    &:after {
-      content: "";
-      position: absolute;
-      right: 0;
-      top: 50%;
-      width: 1px;
-      height: 10px;
-      margin-top: -5px;
-      background-color: var(--textSecondary);
-      opacity: 0.2;
+    .author {
+      position: relative;
+      padding-right: 12px;
+      margin-right: 12px;
+      color: var(--textPrimary);
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 1px;
+        height: 10px;
+        margin-top: -5px;
+        background-color: var(--textSecondary);
+        opacity: 0.2;
+      }
+    }
+
+    ul {
+      display: inline-flex;
+      gap: 6px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
     }
   }
 
-  ul {
-    display: inline-flex;
-    gap: 6px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  .containerBanner {
+    padding-block: 0;
+
+    .banner {
+      position: relative;
+      aspect-ratio: 4/2;
+
+      img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
   }
 }
 </style>
