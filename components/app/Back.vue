@@ -1,12 +1,17 @@
 <script setup lang="ts">
 const localePath = useLocalePath()
 const { t } = useI18n()
+
+defineProps<{
+  path: string
+  menu: string
+}>()
 </script>
 
 <template>
-  <NuxtLink :to="localePath('realisations')" class="back">
+  <NuxtLink :to="localePath(path)" class="back">
     <NuxtIcon name="arrow" />
-    {{ t('menu.realisations') }}
+    {{ t(menu) }}
   </NuxtLink>
 </template>
 
