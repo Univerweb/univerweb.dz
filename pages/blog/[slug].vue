@@ -41,6 +41,12 @@ useHead({
 <template>
   <main id="main" class="work">
     <article vocab="https://schema.org/" typeof="Article">
+      <div property="mainEntityOfPage" typeof="WebPage">
+        <meta property="id" :content="`${seo.baseUrl}${route.path}`">
+      </div>
+      <meta property="articleSection" :content="t('blog.title')">
+      <meta property="description" :content="post.desc">
+      
       <div class="container intro">
         <h1 property="headline">
           {{ post.title }}
