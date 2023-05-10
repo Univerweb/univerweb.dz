@@ -37,7 +37,7 @@ useHead({
         <meta property="id" :content="`${seo.baseUrl}${route.path}`">
       </div>
       <meta property="articleSection" :content="t('blog.title')">
-      <meta property="description" :content="post.desc">
+      <meta property="description" :content="post.description">
 
       <div class="container intro">
         <AppBack path="blog" menu="menu.blog" />
@@ -75,7 +75,7 @@ useHead({
           <AppImg
             property="image"
             :src="`/images/blog/${post.slug}_thumbnail.jpg`"
-            :alt="post.desc"
+            :alt="post.description"
             sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw"
           />
         </div>
