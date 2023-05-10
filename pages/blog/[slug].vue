@@ -7,14 +7,10 @@ const seo = useSeo()
 const route = useRoute()
 const path = `/blog/${locale.value}/${route.params.slug}`
 
-const { data: _post, error } = await useAsyncData(`blog-${locale.value}-${route.params.slug}`, () => {
-  return queryContent()
-    .where({ _path: path })
-    .only(['title', 'desc', 'slug', 'createdAt', 'updatedAt', 'tags', 'author', 'body'])
-    .findOne()
-})
-
-const post = _post.value as Post
+const { data: post, error } = await useAsyncData(
+  `blog-${locale.value}-${route.params.slug}`,
+  () => queryContent<Post>().where({ _path: path }).findOne(),
+)
 
 if (error.value) {
   showError(
@@ -30,12 +26,12 @@ const [prev, next] = await queryContent('blog', locale.value)
   .findSurround({ _path: path })
 
 useHead({
-  title: post.title,
+  title: post.value?.title,
 })
 </script>
 
 <template>
-  <main id="main" class="blog">
+  <main v-if="post" id="main" class="blog">
     <article vocab="https://schema.org/" typeof="Article">
       <div property="mainEntityOfPage" typeof="WebPage">
         <meta property="id" :content="`${seo.baseUrl}${route.path}`">
