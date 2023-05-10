@@ -108,15 +108,22 @@ useHead({
     transition: color $transition;
 
     .author {
-      position: relative;
-      padding-right: 12px;
-      margin-right: 12px;
       color: var(--textPrimary);
+    }
 
-      &:after {
+    ul {
+      position: relative;
+      display: inline-flex;
+      gap: 6px;
+      margin-block: 0;
+      margin-inline-start: 12px;
+      padding-inline-start: 12px;
+      list-style: none;
+
+      &:before {
         content: "";
         position: absolute;
-        right: 0;
+        inset-inline-start: 0;
         top: 50%;
         width: 1px;
         height: 10px;
@@ -124,14 +131,6 @@ useHead({
         background-color: var(--textSecondary);
         opacity: 0.2;
       }
-    }
-
-    ul {
-      display: inline-flex;
-      gap: 6px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
     }
   }
 
