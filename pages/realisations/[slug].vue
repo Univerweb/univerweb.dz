@@ -27,7 +27,7 @@ if (error.value) {
 }
 
 const createdAt = new Date(post.createdAt).toISOString()
-const UpdatedAt = new Date(post.updatedAt).toISOString()
+const updatedAt = new Date(post.updatedAt).toISOString()
 
 const [prev, next] = await queryContent('works', locale.value)
   .only(['slug', 'title'])
@@ -69,7 +69,7 @@ useHead({
         <meta property="id" :content="`${seo.baseUrl}${route.path}`">
       </div>
       <time property="dateCreated datePublished" :datetime="createdAt" />
-      <time property="dateModified" :datetime="UpdatedAt" />
+      <time property="dateModified" :datetime="updatedAt" />
       <div property="author publisher" typeof="Organization">
         <meta property="name" :content="t('name')">
         <meta property="url" :content="seo.baseUrl">
