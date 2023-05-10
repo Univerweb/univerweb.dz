@@ -25,10 +25,6 @@ if (error.value) {
   )
 }
 
-const createdAt = new Intl.DateTimeFormat(locale.value, { dateStyle: 'long' }).format(new Date(post.createdAt))
-const createdAtIso = new Date(post.createdAt).toISOString()
-const updatedAtIso = new Date(post.updatedAt).toISOString()
-
 const [prev, next] = await queryContent('blog', locale.value)
   .only(['slug', 'title'])
   .findSurround({ _path: path })
@@ -53,8 +49,10 @@ useHead({
           {{ post.title }}
         </h1>
         <div class="meta">
-          <time property="dateCreated datePublished" :datetime="createdAtIso">{{ createdAt }}</time>
-          <time property="dateModified" :datetime="updatedAtIso" :content="updatedAtIso" />
+          <time property="dateCreated datePublished" :datetime="post.createdAt.toString()">
+            {{ new Intl.DateTimeFormat(locale, { dateStyle: 'long' }).format(new Date(post.createdAt)) }}
+          </time>
+          <time property="dateModified" :datetime="post.updatedAt.toString()" :content="post.updatedAt.toString()" />
           — {{ t('blog.by') }}
           <span v-if="post.author" property="author" typeof="Person" class="author">
             <span property="name">{{ post.author.name }}</span>
