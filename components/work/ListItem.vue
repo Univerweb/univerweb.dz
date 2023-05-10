@@ -11,7 +11,7 @@ const seo = useSeo()
 const localePath = useLocalePath()
 
 const createdAtIso = new Date(post.createdAt).toISOString()
-const UpdatedAtIso = new Date(post.updatedAt).toISOString()
+const updatedAtIso = new Date(post.updatedAt).toISOString()
 </script>
 
 <template>
@@ -21,7 +21,7 @@ const UpdatedAtIso = new Date(post.updatedAt).toISOString()
         <meta property="id" :content="`${seo.baseUrl}${localePath(`/realisations/${post.slug}`)}`">
       </div>
       <time property="dateCreated datePublished" :datetime="createdAtIso" />
-      <time property="dateModified" :datetime="UpdatedAtIso" />
+      <time property="dateModified" :datetime="updatedAtIso" />
       <div property="author publisher" typeof="Organization">
         <meta property="name" :content="t('name')">
         <meta property="url" :content="seo.baseUrl">
