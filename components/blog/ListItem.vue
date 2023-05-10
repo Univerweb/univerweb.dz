@@ -12,7 +12,7 @@ const localePath = useLocalePath()
 
 const createdAt = new Intl.DateTimeFormat(locale.value, { dateStyle: 'long' }).format(new Date(post.createdAt))
 const createdAtIso = new Date(post.createdAt).toISOString()
-const UpdatedAtIso = new Date(post.updatedAt).toISOString()
+const updatedAtIso = new Date(post.updatedAt).toISOString()
 </script>
 
 <template>
@@ -48,7 +48,7 @@ const UpdatedAtIso = new Date(post.updatedAt).toISOString()
           <time property="dateCreated datePublished" :datetime="createdAtIso">
             {{ createdAt }}
           </time>
-          <time property="dateModified" :datetime="UpdatedAtIso" :content="UpdatedAtIso" />
+          <time property="dateModified" :datetime="updatedAtIso" :content="updatedAtIso" />
           — {{ t('blog.by') }}
           <span v-if="post.author" property="author" typeof="Person">
             <span property="name">{{ post.author.name }}</span>
