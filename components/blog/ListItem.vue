@@ -9,10 +9,6 @@ const { post } = defineProps<{
 const { locale, t } = useI18n()
 const seo = useSeo()
 const localePath = useLocalePath()
-
-const createdAt = new Intl.DateTimeFormat(locale.value, { dateStyle: 'long' }).format(new Date(post.createdAt))
-const createdAtIso = new Date(post.createdAt).toISOString()
-const updatedAtIso = new Date(post.updatedAt).toISOString()
 </script>
 
 <template>
@@ -45,10 +41,10 @@ const updatedAtIso = new Date(post.updatedAt).toISOString()
           </li>
         </ul>
         <p class="lead meta">
-          <time property="dateCreated datePublished" :datetime="createdAtIso">
-            {{ createdAt }}
+          <time property="dateCreated datePublished" :datetime="post.createdAt.toString()">
+            {{ new Intl.DateTimeFormat(locale, { dateStyle: 'long' }).format(new Date(post.createdAt)) }}
           </time>
-          <time property="dateModified" :datetime="updatedAtIso" :content="updatedAtIso" />
+          <time property="dateModified" :datetime="post.updatedAt.toString()" :content="post.updatedAt.toString()" />
           — {{ t('blog.by') }}
           <span v-if="post.author" property="author" typeof="Person">
             <span property="name">{{ post.author.name }}</span>
