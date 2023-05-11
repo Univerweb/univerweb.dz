@@ -18,13 +18,10 @@ const props = withDefaults(defineProps<Props>(), {
 const { locale, t } = useI18n()
 const localePath = useLocalePath()
 
-const { data: _posts } = await useAsyncData('works', () => queryContent('works', locale.value)
-  .only(['title', 'description', 'slug', 'createdAt', 'updatedAt', 'tags', 'lead'])
-  .sort({ _id: -1 })
-  .limit(props.limit)
-  .find())
-
-const posts = _posts.value as Post[]
+const { data: posts } = await useAsyncData(
+  'works',
+  () => queryContent<Post>('works', locale.value).sort({ _id: -1 }).limit(props.limit).find(),
+)
 </script>
 
 <template>
