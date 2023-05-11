@@ -28,11 +28,6 @@ const { t } = useI18n()
 .postNav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-
-  @media (min-width: $md) {
-    grid-template-columns: repeat(2, max-content);
-  }
-
   justify-content: space-between;
   padding-top: 72px;
   padding-bottom: 48px;
