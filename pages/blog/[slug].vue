@@ -2,6 +2,7 @@
 import { createError } from 'h3'
 import type { Post } from '../../types'
 
+const localePath = useLocalePath()
 const { locale, t } = useI18n()
 const seo = useSeo()
 const route = useRoute()
@@ -27,6 +28,30 @@ const [prev, next] = await queryContent('blog', locale.value)
 
 useHead({
   title: post.value?.title,
+
+  meta: [
+    { name: 'description', content: post.value?.description },
+    { property: 'og:title', content: post.value?.title },
+    { property: 'og:description', content: post.value?.description },
+    { property: 'og:image', content: `${seo.baseUrl}/images/blog/${post.value?.slug}_thumbnail.jpg` },
+    { property: 'og:image:secure_url', content: `${seo.baseUrl}/images/blog/${post.value?.slug}_thumbnail.jpg` },
+    { property: 'og:image:alt', content: `${post.value?.description}` },
+  ],
+
+  script: [
+    {
+      type: 'application/ld+json',
+      children: {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': t('name'), 'item': seo.breadcrumbItemOne },
+          { '@type': 'ListItem', 'position': 2, 'name': t('blog.title'), 'item': `${seo.baseUrl}${localePath('blog')}` },
+          { '@type': 'ListItem', 'position': 3, 'name': post.value?.title },
+        ],
+      },
+    },
+  ],
 })
 </script>
 
