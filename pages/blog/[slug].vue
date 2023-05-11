@@ -179,7 +179,7 @@ useHead({
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 
-    &::v-deep * {
+    :deep(*) {
       grid-column: 1 / 13;
       margin-bottom: 24px;
 
