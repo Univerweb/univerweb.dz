@@ -24,12 +24,12 @@ const localePath = useLocalePath()
         <meta property="url" :content="seo.baseUrl">
       </div>
       <meta property="articleSection" :content="t('works.title')">
-      <meta property="description" :content="post.desc">
+      <meta property="description" :content="post.description">
 
       <AppImg
         property="image"
         :src="`/images/works/${post.slug}_thumbnail.jpg`"
-        :alt="post.desc"
+        :alt="post.description"
         width="588"
         height="624"
         sizes="xs:288px sm:607px md:354px lg:456px xl:588px"
