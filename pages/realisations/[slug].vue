@@ -26,9 +26,6 @@ if (error.value) {
   )
 }
 
-const createdAt = new Date(post.createdAt).toISOString()
-const updatedAt = new Date(post.updatedAt).toISOString()
-
 const [prev, next] = await queryContent('works', locale.value)
   .only(['slug', 'title'])
   .findSurround({ _path: path })
@@ -68,8 +65,8 @@ useHead({
       <div property="mainEntityOfPage" typeof="WebPage">
         <meta property="id" :content="`${seo.baseUrl}${route.path}`">
       </div>
-      <time property="dateCreated datePublished" :datetime="createdAt" />
-      <time property="dateModified" :datetime="updatedAt" />
+      <time property="dateCreated datePublished" :datetime="post.createdAt.toString()" />
+      <time property="dateModified" :datetime="post.updatedAt.toString()" />
       <div property="author publisher" typeof="Organization">
         <meta property="name" :content="t('name')">
         <meta property="url" :content="seo.baseUrl">
