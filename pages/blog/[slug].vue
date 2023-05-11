@@ -33,8 +33,8 @@ useHead({
     { name: 'description', content: post.value?.description },
     { property: 'og:title', content: post.value?.title },
     { property: 'og:description', content: post.value?.description },
-    { property: 'og:image', content: `${seo.baseUrl}/images/blog/${post.value?.slug}_thumbnail.jpg` },
-    { property: 'og:image:secure_url', content: `${seo.baseUrl}/images/blog/${post.value?.slug}_thumbnail.jpg` },
+    { property: 'og:image', content: `${seo.baseUrl}/images/blog/${post.value?.slug}.jpg` },
+    { property: 'og:image:secure_url', content: `${seo.baseUrl}/images/blog/${post.value?.slug}.jpg` },
     { property: 'og:image:alt', content: `${post.value?.description}` },
   ],
 
@@ -99,7 +99,7 @@ useHead({
         <div class="banner card">
           <AppImg
             property="image"
-            :src="`/images/blog/${post.slug}_thumbnail.jpg`"
+            :src="`/images/blog/${post.slug}.jpg`"
             :alt="post.description"
             sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw"
           />

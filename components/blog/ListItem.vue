@@ -22,7 +22,7 @@ const localePath = useLocalePath()
 
       <AppImg
         property="image"
-        :src="`/images/blog/${post.slug}_thumbnail.jpg`"
+        :src="`/images/blog/${post.slug}.jpg`"
         :alt="post.description"
         width="588"
         height="624"
