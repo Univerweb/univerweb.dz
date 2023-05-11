@@ -101,7 +101,7 @@ useHead({
             property="image"
             :src="`/images/blog/${post.slug}.jpg`"
             :alt="post.description"
-            sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw"
+            sizes="xs:288px sm:592px md:672px lg:928px xl:1200px"
           />
         </div>
       </div>
