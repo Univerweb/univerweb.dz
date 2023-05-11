@@ -8,14 +8,10 @@ const seo = useSeo()
 const route = useRoute()
 const path = `/works/${locale.value}/${route.params.slug}`
 
-const { data: _post, error } = await useAsyncData(`work-${locale.value}-${route.params.slug}`, () => {
-  return queryContent()
-    .where({ _path: path })
-    .only(['title', 'description', 'slug', 'createdAt', 'updatedAt', 'tags', 'industry', 'lead', 'link'])
-    .findOne()
-})
-
-const post = _post.value as Post
+const { data: post, error } = await useAsyncData(
+  `work-${locale.value}-${route.params.slug}`,
+  () => queryContent<Post>().where({ _path: path }).findOne(),
+)
 
 if (error.value) {
   showError(
@@ -31,15 +27,15 @@ const [prev, next] = await queryContent('works', locale.value)
   .findSurround({ _path: path })
 
 useHead({
-  title: post.title,
+  title: post.value?.title,
 
   meta: [
-    { name: 'description', content: post.description },
-    { property: 'og:title', content: post.title },
-    { property: 'og:description', content: post.description },
-    { property: 'og:image', content: `${seo.baseUrl}/images/share/${post.slug}.jpg` },
-    { property: 'og:image:secure_url', content: `${seo.baseUrl}/images/share/${post.slug}.jpg` },
-    { property: 'og:image:alt', content: `${post.title} — ${post.industry}` },
+    { name: 'description', content: post.value?.description },
+    { property: 'og:title', content: post.value?.title },
+    { property: 'og:description', content: post.value?.description },
+    { property: 'og:image', content: `${seo.baseUrl}/images/share/${post.value?.slug}.jpg` },
+    { property: 'og:image:secure_url', content: `${seo.baseUrl}/images/share/${post.value?.slug}.jpg` },
+    { property: 'og:image:alt', content: `${post.value?.title} — ${post.value?.industry}` },
   ],
 
   script: [
@@ -51,7 +47,7 @@ useHead({
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': t('name'), 'item': seo.breadcrumbItemOne },
           { '@type': 'ListItem', 'position': 2, 'name': t('works.title'), 'item': `${seo.baseUrl}${localePath('realisations')}` },
-          { '@type': 'ListItem', 'position': 3, 'name': post.title },
+          { '@type': 'ListItem', 'position': 3, 'name': post.value?.title },
         ],
       },
     },
@@ -60,7 +56,7 @@ useHead({
 </script>
 
 <template>
-  <main id="main" class="work">
+  <main v-if="post" id="main" class="work">
     <article vocab="https://schema.org/" typeof="Article">
       <div property="mainEntityOfPage" typeof="WebPage">
         <meta property="id" :content="`${seo.baseUrl}${route.path}`">
