@@ -6,7 +6,6 @@ export interface Post extends MarkdownParsedContent {
   updatedAt: Date
   tags: string[]
   industry?: string
-  lead: string
   link?: string
 }
 
