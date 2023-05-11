@@ -11,7 +11,7 @@ const path = `/works/${locale.value}/${route.params.slug}`
 const { data: _post, error } = await useAsyncData(`work-${locale.value}-${route.params.slug}`, () => {
   return queryContent()
     .where({ _path: path })
-    .only(['title', 'desc', 'slug', 'createdAt', 'updatedAt', 'tags', 'industry', 'lead', 'link'])
+    .only(['title', 'description', 'slug', 'createdAt', 'updatedAt', 'tags', 'industry', 'lead', 'link'])
     .findOne()
 })
 
@@ -34,9 +34,9 @@ useHead({
   title: post.title,
 
   meta: [
-    { name: 'description', content: post.desc },
+    { name: 'description', content: post.description },
     { property: 'og:title', content: post.title },
-    { property: 'og:description', content: post.desc },
+    { property: 'og:description', content: post.description },
     { property: 'og:image', content: `${seo.baseUrl}/images/share/${post.slug}.jpg` },
     { property: 'og:image:secure_url', content: `${seo.baseUrl}/images/share/${post.slug}.jpg` },
     { property: 'og:image:alt', content: `${post.title} — ${post.industry}` },
@@ -72,7 +72,7 @@ useHead({
         <meta property="url" :content="seo.baseUrl">
       </div>
       <meta property="articleSection" :content="t('works.title')">
-      <meta property="description" :content="post.desc">
+      <meta property="description" :content="post.description">
 
       <div class="container intro">
         <AppBack path="realisations" menu="menu.realisations" />
@@ -85,7 +85,7 @@ useHead({
         <AppImg
           property="image"
           :src="`/images/works/${post.slug}_banner.jpg`"
-          :alt="post.desc"
+          :alt="post.description"
           sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw"
         />
       </div>
