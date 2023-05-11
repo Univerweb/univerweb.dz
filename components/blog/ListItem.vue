@@ -22,12 +22,12 @@ const updatedAtIso = new Date(post.updatedAt).toISOString()
         <meta property="id" :content="`${seo.baseUrl}${localePath(`/blog/${post.slug}`)}`">
       </div>
       <meta property="articleSection" :content="t('blog.title')">
-      <meta property="description" :content="post.desc">
+      <meta property="description" :content="post.description">
 
       <AppImg
         property="image"
         :src="`/images/blog/${post.slug}_thumbnail.jpg`"
-        :alt="post.desc"
+        :alt="post.description"
         width="588"
         height="624"
         sizes="xs:288px sm:607px md:354px lg:456px xl:588px"
