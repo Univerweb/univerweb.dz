@@ -42,7 +42,7 @@ useHead({
     { property: 'og:description', content: post.desc },
     { property: 'og:image', content: `${seo.baseUrl}/images/share/${post.slug}.jpg` },
     { property: 'og:image:secure_url', content: `${seo.baseUrl}/images/share/${post.slug}.jpg` },
-    { property: 'og:image:alt', content: `${seo.baseUrl} — ${post.industry}` },
+    { property: 'og:image:alt', content: `${post.title} — ${post.industry}` },
   ],
 
   script: [
