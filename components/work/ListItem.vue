@@ -46,9 +46,13 @@ const localePath = useLocalePath()
             {{ tag }}
           </li>
         </ul>
-        <p property="articleBody" class="lead">
-          {{ post.lead }}
-        </p>
+        <ContentRendererMarkdown
+          :value="post"
+          :components="{ p: 'span' }"
+          tag="p"
+          property="articleBody"
+          class="lead"
+        />
       </div>
     </article>
   </NuxtLink>

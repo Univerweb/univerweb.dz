@@ -121,9 +121,13 @@ useHead({
         <div class="details">
           <div class="item">
             <div class="inner">
-              <p property="articleBody" class="lead">
-                {{ post.lead }}
-              </p>
+              <ContentRendererMarkdown
+                :value="post"
+                :components="{ p: 'span' }"
+                tag="p"
+                property="articleBody"
+                class="lead"
+              />
               <a :href="post.link" class="link">{{ t('work.visit') }}</a>
             </div>
           </div>
