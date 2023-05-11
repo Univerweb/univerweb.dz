@@ -107,7 +107,7 @@ useHead({
       </div>
 
       <ContentRenderer>
-        <ContentRendererMarkdown :value="post" class="container" />
+        <ContentRendererMarkdown :value="post" class="container containerContent" />
       </ContentRenderer>
     </article>
 
@@ -141,7 +141,7 @@ useHead({
       padding-inline-start: 12px;
       list-style: none;
 
-      &:before {
+      &::before {
         content: "";
         position: absolute;
         inset-inline-start: 0;
@@ -171,6 +171,28 @@ useHead({
         width: 100%;
         height: 100%;
         object-fit: cover;
+      }
+    }
+  }
+
+  .containerContent {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    &::v-deep * {
+      grid-column: 1 / 13;
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @media (min-width: $lg) {
+        grid-column: 1 / 11;
+      }
+
+      @media (min-width: $xl) {
+        grid-column: 1 / 9;
       }
     }
   }
