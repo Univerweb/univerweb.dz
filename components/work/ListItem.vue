@@ -9,9 +9,6 @@ const { post } = defineProps<{
 const { t } = useI18n()
 const seo = useSeo()
 const localePath = useLocalePath()
-
-const createdAtIso = new Date(post.createdAt).toISOString()
-const updatedAtIso = new Date(post.updatedAt).toISOString()
 </script>
 
 <template>
@@ -20,8 +17,8 @@ const updatedAtIso = new Date(post.updatedAt).toISOString()
       <div property="mainEntityOfPage" typeof="WebPage">
         <meta property="id" :content="`${seo.baseUrl}${localePath(`/realisations/${post.slug}`)}`">
       </div>
-      <time property="dateCreated datePublished" :datetime="createdAtIso" />
-      <time property="dateModified" :datetime="updatedAtIso" />
+      <time property="dateCreated datePublished" :datetime="post.createdAt.toString()" />
+      <time property="dateModified" :datetime="post.updatedAt.toString()" />
       <div property="author publisher" typeof="Organization">
         <meta property="name" :content="t('name')">
         <meta property="url" :content="seo.baseUrl">
