@@ -17,14 +17,14 @@ const localePath = useLocalePath()
       <div property="mainEntityOfPage" typeof="WebPage">
         <meta property="id" :content="`${seo.baseUrl}${localePath(`/realisations/${post.slug}`)}`">
       </div>
+      <meta property="articleSection" :content="t('works.title')">
+      <meta property="description" :content="post.description">
       <time property="dateCreated datePublished" :datetime="post.createdAt.toString()" />
       <time property="dateModified" :datetime="post.updatedAt.toString()" />
       <div property="author publisher" typeof="Organization">
         <meta property="name" :content="t('name')">
         <meta property="url" :content="seo.baseUrl">
       </div>
-      <meta property="articleSection" :content="t('works.title')">
-      <meta property="description" :content="post.description">
 
       <AppImg
         property="image"
