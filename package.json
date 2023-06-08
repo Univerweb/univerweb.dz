@@ -18,9 +18,10 @@
     "@nuxtjs/color-mode": "^3.2.0",
     "@nuxtjs/i18n": "8.0.0-beta.12",
     "@types/google.maps": "^3.53.3",
+    "@types/node": "^18.16.16",
     "@vueuse/nuxt": "^10.1.2",
     "eslint": "^8.42.0",
-    "nuxt": "^3.4.3",
+    "nuxt": "^3.5.3",
     "nuxt-icons": "^3.2.1",
     "sass": "^1.63.2",
     "vue-gtag-next": "^1.14.0"
