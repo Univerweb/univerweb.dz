@@ -11,11 +11,17 @@ const { t } = useI18n()
 const seo = useSeo()
 const config = useRuntimeConfig()
 const route = useRoute()
+const show = useShow()
 
 useHead({
   htmlAttrs: {
     lang: computed(() => i18nHead.value.htmlAttrs!.lang),
     dir: computed(() => i18nHead.value.htmlAttrs!.dir),
+    style: computed(() => (show.value === true ? 'height: 100%; overflow: hidden' : 'height: initial; overflow: initial')),
+  },
+
+  bodyAttrs: {
+    style: computed(() => (show.value === true ? 'height: 100%; overflow: hidden' : 'height: initial; overflow: initial')),
   },
 
   titleTemplate: (titleChunk) => {
