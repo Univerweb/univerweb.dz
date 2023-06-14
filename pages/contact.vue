@@ -47,15 +47,14 @@ onMounted(async () => {
   })
 })
 
-useHead({
+useSeoMeta({
   title: t('contact.title'),
+  description: t('contact.desc'),
+  ogTitle: t('contact.title'),
+  ogDescription: t('contact.desc'),
+})
 
-  meta: [
-    { name: 'description', content: t('contact.desc') },
-    { property: 'og:title', content: t('contact.title') },
-    { property: 'og:description', content: t('contact.desc') },
-  ],
-
+useHead({
   script: [
     {
       type: 'application/ld+json',

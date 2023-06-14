@@ -26,18 +26,18 @@ const [prev, next] = await queryContent('works', locale.value)
   .only(['slug', 'title'])
   .findSurround({ _path: path })
 
-useHead({
+useSeoMeta({
   title: post.value?.title,
+  description: post.value?.description,
+  ogTitle: post.value?.title,
+  ogDescription: post.value?.description,
+  ogType: 'article',
+  ogImage: `${seo.baseUrl}/images/share/${post.value?.slug}.jpg`,
+  ogImageSecureUrl: `${seo.baseUrl}/images/share/${post.value?.slug}.jpg`,
+  ogImageAlt: `${post.value?.title} — ${post.value?.industry}`,
+})
 
-  meta: [
-    { name: 'description', content: post.value?.description },
-    { property: 'og:title', content: post.value?.title },
-    { property: 'og:description', content: post.value?.description },
-    { property: 'og:image', content: `${seo.baseUrl}/images/share/${post.value?.slug}.jpg` },
-    { property: 'og:image:secure_url', content: `${seo.baseUrl}/images/share/${post.value?.slug}.jpg` },
-    { property: 'og:image:alt', content: `${post.value?.title} — ${post.value?.industry}` },
-  ],
-
+useHead({
   script: [
     {
       type: 'application/ld+json',
