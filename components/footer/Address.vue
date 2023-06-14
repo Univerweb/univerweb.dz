@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { t } = useI18n()
-const coma = useComa()
+const seo = useSeo()
 </script>
 
 <template>
@@ -10,7 +10,7 @@ const coma = useComa()
     {{ t('streetAddress') }}
     <br>
     {{ t('addressLocality') }}
-    {{ t('postalCode') }}{{ coma }}
+    {{ t('postalCode') }}{{ seo.coma.value }}
     {{ t('addressRegion') }}
   </address>
 </template>
