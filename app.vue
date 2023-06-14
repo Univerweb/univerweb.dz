@@ -11,6 +11,25 @@ const { t } = useI18n()
 const seo = useSeo()
 const show = useShow()
 
+useSeoMeta({
+  titleTemplate: (titleChunk) => { return titleChunk ? `${titleChunk} — ${t('name')}` : `${t('title')} — ${t('name')}` },
+  description: () => t('desc'),
+  themeColor: '#50c8f0',
+  appleMobileWebAppCapable: 'yes',
+  appleMobileWebAppStatusBarStyle: 'default',
+  ogTitle: () => t('title'),
+  ogDescription: () => t('desc'),
+  ogType: 'website',
+  ogSiteName: () => t('name'),
+  ogUrl: seo.ogUrl,
+  ogImage: seo.ogImage,
+  ogImageSecureUrl: seo.ogImage,
+  ogImageType: 'image/jpeg',
+  ogImageWidth: 1920,
+  ogImageHeight: 1080,
+  ogImageAlt: () => `${t('name')} — ${t('title')}`,
+})
+
 useHead({
   htmlAttrs: {
     lang: () => i18nHead.value.htmlAttrs!.lang,
@@ -21,29 +40,6 @@ useHead({
   bodyAttrs: {
     style: () => (show.value === true ? 'height: 100%; overflow: hidden' : 'height: initial; overflow: initial'),
   },
-
-  titleTemplate: (titleChunk) => {
-    return titleChunk ? `${titleChunk} — ${t('name')}` : `${t('title')} — ${t('name')}`
-  },
-
-  meta: [
-    { name: 'theme-color', content: '#50c8f0' },
-    { name: 'apple-mobile-web-app-capable', content: 'yes' },
-    { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
-    { name: 'description', content: () => t('desc') },
-    { property: 'og:title', content: () => t('title') },
-    { property: 'og:description', content: () => t('desc') },
-    { property: 'og:type', content: 'website' },
-    { property: 'og:site_name', content: () => t('name') },
-    { property: 'og:url', content: seo.ogUrl },
-    { property: 'og:image', content: seo.ogImage },
-    { property: 'og:image:secure_url', content: seo.ogImage },
-    { property: 'og:image:type', content: 'image/jpeg' },
-    { property: 'og:image:width', content: 1920 },
-    { property: 'og:image:height', content: 1080 },
-    { property: 'og:image:alt', content: () => `${t('name')} — ${t('title')}` },
-    ...(i18nHead.value.meta || []),
-  ],
 
   link: [
     { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
