@@ -10,18 +10,17 @@ const i18nHead = useLocaleHead({ addSeoAttributes: true, addDirAttribute: true }
 const { t } = useI18n()
 const seo = useSeo()
 const config = useRuntimeConfig()
-const route = useRoute()
 const show = useShow()
 
 useHead({
   htmlAttrs: {
-    lang: computed(() => i18nHead.value.htmlAttrs!.lang),
-    dir: computed(() => i18nHead.value.htmlAttrs!.dir),
-    style: computed(() => (show.value === true ? 'height: 100%; overflow: hidden' : 'height: initial; overflow: initial')),
+    lang: () => i18nHead.value.htmlAttrs!.lang,
+    dir: () => i18nHead.value.htmlAttrs!.dir,
+    style: () => (show.value === true ? 'height: 100%; overflow: hidden' : 'height: initial; overflow: initial'),
   },
 
   bodyAttrs: {
-    style: computed(() => (show.value === true ? 'height: 100%; overflow: hidden' : 'height: initial; overflow: initial')),
+    style: () => (show.value === true ? 'height: 100%; overflow: hidden' : 'height: initial; overflow: initial'),
   },
 
   titleTemplate: (titleChunk) => {
@@ -32,18 +31,18 @@ useHead({
     { name: 'theme-color', content: '#50c8f0' },
     { name: 'apple-mobile-web-app-capable', content: 'yes' },
     { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
-    { name: 'description', content: computed(() => t('desc')) },
-    { property: 'og:title', content: t('title') },
-    { property: 'og:description', content: computed(() => t('desc')) },
+    { name: 'description', content: () => t('desc') },
+    { property: 'og:title', content: () => t('title') },
+    { property: 'og:description', content: () => t('desc') },
     { property: 'og:type', content: 'website' },
-    { property: 'og:site_name', content: computed(() => t('name')) },
-    { property: 'og:url', content: computed(() => `${seo.baseUrl}${route.path}`) },
+    { property: 'og:site_name', content: () => t('name') },
+    { property: 'og:url', content: seo.ogUrl },
     { property: 'og:image', content: seo.ogImage },
     { property: 'og:image:secure_url', content: seo.ogImage },
     { property: 'og:image:type', content: 'image/jpeg' },
     { property: 'og:image:width', content: 1920 },
     { property: 'og:image:height', content: 1080 },
-    { property: 'og:image:alt', content: computed(() => `${t('name')} — ${t('title')}`) },
+    { property: 'og:image:alt', content: () => `${t('name')} — ${t('title')}` },
     ...(i18nHead.value.meta || []),
   ],
 
@@ -59,7 +58,7 @@ useHead({
       children: {
         '@context': 'https://schema.org',
         '@type': 'Organization',
-        'name': computed(() => t('name')),
+        'name': () => t('name'),
         'url': seo.baseUrl,
         'image': {
           '@type': 'ImageObject',
