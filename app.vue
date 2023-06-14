@@ -28,6 +28,8 @@ useSeoMeta({
   ogImageWidth: 1920,
   ogImageHeight: 1080,
   ogImageAlt: () => `${t('name')} — ${t('title')}`,
+  twitterCard: 'summary_large_image',
+  twitterSite: '@Univerweb',
 })
 
 useHead({
