@@ -2,15 +2,14 @@
 const { t } = useI18n()
 const seo = useSeo()
 
-useHead({
+useSeoMeta({
   title: t('works.title'),
+  description: t('works.desc'),
+  ogTitle: t('works.title'),
+  ogDescription: t('works.desc'),
+})
 
-  meta: [
-    { name: 'description', content: t('works.desc') },
-    { property: 'og:title', content: t('works.title') },
-    { property: 'og:description', content: t('works.desc') },
-  ],
-
+useHead({
   script: [
     {
       type: 'application/ld+json',
