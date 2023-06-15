@@ -18,5 +18,4 @@ export default <RouterConfig>{
       }, 300)
     })
   },
-
 }
