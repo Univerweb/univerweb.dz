@@ -33,6 +33,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxtjs/i18n',
     '@vueuse/nuxt',
+    'nuxt-gtag',
     'nuxt-icons',
   ],
 
@@ -57,5 +58,9 @@ export default defineNuxtConfig({
     detectBrowserLanguage: false,
     baseUrl: process.env.BASE_URL,
     // skipSettingLocaleOnNavigate: true,
+  },
+
+  gtag: {
+    id: 'G-J69WZ5DH50',
   },
 })
