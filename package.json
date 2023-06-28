@@ -22,7 +22,7 @@
     "@types/node": "^18.16.18",
     "@vueuse/nuxt": "^10.2.1",
     "eslint": "^8.43.0",
-    "nuxt": "^3.6.0",
+    "nuxt": "^3.6.1",
     "nuxt-gtag": "^0.5.7",
     "nuxt-icons": "^3.2.1",
     "sass": "^1.63.6"
