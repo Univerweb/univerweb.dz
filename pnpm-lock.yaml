@@ -1064,7 +1064,7 @@ packages:
       pathe: 1.1.1
       picocolors: 1.0.0
       source-map: 0.6.1
-      unplugin: 1.3.1
+      unplugin: 1.3.2
       vue-i18n: 9.3.0-beta.17(vue@3.3.4)
     transitivePeerDependencies:
       - rollup
@@ -1409,7 +1409,7 @@ packages:
       rc9: 2.1.1
       semver: 7.5.3
       sirv: 2.0.3
-      unimport: 3.0.11(rollup@3.26.0)
+      unimport: 3.0.12(rollup@3.26.0)
       vite: 4.3.9(@types/node@18.16.19)(sass@1.63.6)
       vite-plugin-inspect: 0.7.32(vite@4.3.9)
       vite-plugin-vue-inspector: 3.4.2(vite@4.3.9)
@@ -1465,7 +1465,7 @@ packages:
       scule: 1.0.0
       semver: 7.5.3
       unctx: 2.3.1
-      unimport: 3.0.11(rollup@3.26.0)
+      unimport: 3.0.12(rollup@3.26.0)
       untyped: 1.3.2
     transitivePeerDependencies:
       - rollup
@@ -1483,7 +1483,7 @@ packages:
       postcss-import-resolver: 2.0.0
       std-env: 3.3.3
       ufo: 1.1.2
-      unimport: 3.0.11(rollup@3.26.0)
+      unimport: 3.0.12(rollup@3.26.0)
       untyped: 1.3.2
     transitivePeerDependencies:
       - rollup
@@ -1559,7 +1559,7 @@ packages:
       std-env: 3.3.3
       strip-literal: 1.0.1
       ufo: 1.1.2
-      unplugin: 1.3.1
+      unplugin: 1.3.2
       vite: 4.3.9(@types/node@18.16.19)(sass@1.63.6)
       vite-node: 0.32.4(@types/node@18.16.19)(sass@1.63.6)
       vite-plugin-checker: 0.6.1(eslint@8.44.0)(typescript@5.1.6)(vite@4.3.9)
@@ -1617,7 +1617,7 @@ packages:
       pathe: 1.1.1
       pkg-types: 1.0.3
       ufo: 1.1.2
-      unplugin: 1.3.1
+      unplugin: 1.3.2
       unstorage: 1.7.0
       vue-i18n: 9.3.0-beta.17(vue@3.3.4)
       vue-i18n-routing: 0.13.0(vue-i18n@9.3.0-beta.17)(vue@3.3.4)
@@ -6667,7 +6667,7 @@ packages:
       ufo: 1.1.2
       uncrypto: 0.1.3
       unenv: 1.5.1
-      unimport: 3.0.11(rollup@3.26.0)
+      unimport: 3.0.12(rollup@3.26.0)
       unstorage: 1.7.0
     transitivePeerDependencies:
       - '@azure/app-configuration'
@@ -6996,8 +6996,8 @@ packages:
       uncrypto: 0.1.3
       unctx: 2.3.1
       unenv: 1.5.1
-      unimport: 3.0.11(rollup@3.26.0)
-      unplugin: 1.3.1
+      unimport: 3.0.12(rollup@3.26.0)
+      unplugin: 1.3.2
       unplugin-vue-router: 0.6.4(vue-router@4.2.2)(vue@3.3.4)
       untyped: 1.3.2
       vue: 3.3.4
@@ -9016,7 +9016,7 @@ packages:
       acorn: 8.9.0
       estree-walker: 3.0.3
       magic-string: 0.30.0
-      unplugin: 1.3.1
+      unplugin: 1.3.2
     dev: true
 
   /undici@5.22.1:
@@ -9057,8 +9057,8 @@ packages:
       vfile: 5.3.7
     dev: true
 
-  /unimport@3.0.11(rollup@3.26.0):
-    resolution: {integrity: sha512-UaaLu7TiqiEwjm5a9FGsL8RL87U65wyr1jBeIAAvLChgJZRMTTkknU9bkWjBsVGutXLT2Yq8/dPyWXSC3/ELRg==}
+  /unimport@3.0.12(rollup@3.26.0):
+    resolution: {integrity: sha512-wETYjro+wK0lGlate7JNDu4OI89m6hNt2bfqL8ysAGgStXyIplISZrktAqr2psfY9/ft/jU5HWatk7wZeUUPdQ==}
     dependencies:
       '@rollup/pluginutils': 5.0.2(rollup@3.26.0)
       escape-string-regexp: 5.0.0
@@ -9070,7 +9070,7 @@ packages:
       pkg-types: 1.0.3
       scule: 1.0.0
       strip-literal: 1.0.1
-      unplugin: 1.3.1
+      unplugin: 1.3.2
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -9162,7 +9162,7 @@ packages:
       mlly: 1.4.0
       pathe: 1.1.1
       scule: 1.0.0
-      unplugin: 1.3.1
+      unplugin: 1.3.2
       vue-router: 4.2.2(vue@3.3.4)
       yaml: 2.3.1
     transitivePeerDependencies:
@@ -9170,8 +9170,8 @@ packages:
       - vue
     dev: true
 
-  /unplugin@1.3.1:
-    resolution: {integrity: sha512-h4uUTIvFBQRxUKS2Wjys6ivoeofGhxzTe2sRWlooyjHXVttcVfV/JiavNd3d4+jty0SVV0dxGw9AkY9MwiaCEw==}
+  /unplugin@1.3.2:
+    resolution: {integrity: sha512-Lh7/2SryjXe/IyWqx9K7IKwuKhuOFZEhotiBquOODsv2IVyDkI9lv/XhgfjdXf/xdbv32txmnBNnC/JVTDJlsA==}
     dependencies:
       acorn: 8.9.0
       chokidar: 3.5.3
