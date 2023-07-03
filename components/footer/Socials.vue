@@ -1,10 +1,16 @@
 <script setup lang="ts">
+interface Socials {
+  name: string
+  url: string
+  value: string
+}
+
 const { tm, rt } = useI18n()
 </script>
 
 <template>
   <ul class="socials">
-    <li v-for="social in tm('socials')" :key="rt(social.name)">
+    <li v-for="social in (tm('socials') as Socials[])" :key="rt(social.name)">
       <a :href="rt(social.url)">
         <NuxtIcon :name="rt(social.name)" />
         <span class="visually-hidden">{{ rt(social.value) }}</span>
