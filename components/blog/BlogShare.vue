@@ -90,7 +90,7 @@ const { copy, copied } = useClipboard()
     position: relative;
 
     .tooltip-text {
-      font-family: var(--fontMedium);
+      font-family: var(--font-medium);
       @include size(13);
       width: max-content;
       color: #00D282;

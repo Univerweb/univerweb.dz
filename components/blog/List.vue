@@ -32,7 +32,7 @@ const { data: posts } = await useAsyncData(
       </Component>
     </div>
 
-    <div v-if="posts?.length" class="details detailsCard">
+    <div v-if="posts?.length" class="details details-card">
       <BlogListItem v-for="post in posts" :key="post.slug" :post="post" :title-tag="titleTag" />
     </div>
 

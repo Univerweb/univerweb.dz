@@ -126,12 +126,12 @@ useHead({
   }
 
   .meta {
-    color: var(--textSecondary);
-    font-family: var(--fontMedium);
+    color: var(--text-secondary);
+    font-family: var(--font-medium);
     transition: color $transition;
 
     .author {
-      color: var(--textPrimary);
+      color: var(--text-primary);
     }
 
     ul {
@@ -151,7 +151,7 @@ useHead({
         width: 1px;
         height: 10px;
         margin-top: -5px;
-        background-color: var(--textSecondary);
+        background-color: var(--text-secondary);
         opacity: 0.2;
       }
     }
