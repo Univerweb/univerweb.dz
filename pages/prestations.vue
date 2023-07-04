@@ -90,8 +90,8 @@ useHead({
 <style lang="scss" scoped>
 .prestations {
   .tags {
-    color: var(--textSecondary);
-    font-family: var(--fontMedium);
+    color: var(--text-secondary);
+    font-family: var(--font-medium);
     transition: color $transition;
     margin: 0;
   }

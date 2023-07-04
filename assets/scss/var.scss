@@ -3,32 +3,32 @@ $sm: 640px;
 $md: 768px;
 $lg: 1024px;
 $xl: 1280px;
-$textPrimary: #111;
-$textSecondary: #666;
+$text-primary: #111;
+$text-secondary: #666;
 $primary: #50c8f0;
 $secondary: #28285a;
 $white: #fff;
 $light: #fafafa;
 $dark: #091a28;
 $font: 'Sofia Pro Light', 'Almarai Regular', Arial;
-$fontMedium: 'Sofia Pro Medium', 'Almarai Bold', Arial;
+$font-medium: 'Sofia Pro Medium', 'Almarai Bold', Arial;
 $transition: 0.3s linear;
 $animation: 0.5s forwards;
 
 :root {
   --bg: #{$white};
-  --textPrimary: #{$textPrimary};
-  --textSecondary: #{$textSecondary};
+  --text-primary: #{$text-primary};
+  --text-secondary: #{$text-secondary};
   --primary: #{$primary};
   --secondary: #{$secondary};
   --font: #{$font};
-  --fontMedium: #{$fontMedium};
+  --font-medium: #{$font-medium};
 }
 
 .dark-mode {
   --bg: #{$dark};
-  --textPrimary: #{$white};
-  --textSecondary: #{$white};
+  --text-primary: #{$white};
+  --text-secondary: #{$white};
   --primary: #{$secondary};
   --secondary: #{$primary};
 }

@@ -10,7 +10,7 @@ const { t } = useI18n()
 
 <style lang="scss">
 footer .lead {
-  color: var(--textPrimary);
+  color: var(--text-primary);
   transition: color $transition;
   margin: 0;
   max-width: 400px;

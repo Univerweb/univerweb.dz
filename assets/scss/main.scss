@@ -22,7 +22,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--bg);
-  color: var(--textPrimary);
+  color: var(--text-primary);
   transition: background-color $transition, color $transition;
   font-family: var(--font);
   font-size: 1rem;
@@ -115,7 +115,7 @@ main {
     row-gap: 24px;
   }
 
-  &.detailsCard {
+  &.details-card {
     grid-template-columns: 1fr;
 
     @media (min-width: $sm) {
@@ -148,7 +148,7 @@ main {
     }
   }
 
-  .detailsCard & {
+  .details-card & {
     grid-column: initial;
     overflow: hidden;
     z-index: 1;
@@ -167,7 +167,7 @@ main {
       position: absolute;
       width: 100%;
       height: 100%;
-      background-color: $textPrimary;
+      background-color: $text-primary;
       opacity: 0.1;
       transition: opacity $transition;
     }
@@ -245,7 +245,7 @@ main {
 /* Headings */
 h1,
 .h1 {
-  font-family: var(--fontMedium);
+  font-family: var(--font-medium);
   @include size(44);
   font-weight: 400;
   letter-spacing: -0.05em;
@@ -266,7 +266,7 @@ h1,
 
 h2,
 .h2 {
-  font-family: var(--fontMedium);
+  font-family: var(--font-medium);
   @include size(32);
   font-weight: 400;
   letter-spacing: -0.05em;
@@ -284,7 +284,7 @@ h2,
 
 h3,
 .h3 {
-  font-family: var(--fontMedium);
+  font-family: var(--font-medium);
   @include size(20);
   font-weight: 400;
   letter-spacing: -0.02em;
@@ -309,10 +309,10 @@ p {
 }
 
 .lead {
-  font-family: var(--fontMedium);
+  font-family: var(--font-medium);
   @include size(20);
   letter-spacing: -0.02em;
-  color: var(--textSecondary);
+  color: var(--text-secondary);
   transition: color $transition;
 
   footer & {
@@ -321,18 +321,18 @@ p {
 }
 
 a {
-  color: var(--textPrimary);
+  color: var(--text-primary);
   text-decoration: none;
   transition: color $transition;
 }
 
 strong {
-  font-family: var(--fontMedium);
+  font-family: var(--font-medium);
   font-weight: 400;
 }
 
 .link {
-  font-family: var(--fontMedium);
+  font-family: var(--font-medium);
   display: inline-block;
   @include size(20);
 
@@ -361,7 +361,7 @@ button {
   column-gap: 12px;
   background-color: var(--secondary);
   color: var(--primary);
-  font-family: var(--fontMedium);
+  font-family: var(--font-medium);
   line-height: 48px;
   width: fit-content;
   height: 48px;
@@ -417,7 +417,7 @@ button {
   transition: background-color $transition;
 
   .dark-mode & {
-    background-color: $textSecondary;
+    background-color: $text-secondary;
   }
 }
 
@@ -432,7 +432,7 @@ img {
   transition: opacity $transition;
 
   .dark-mode & {
-    background-color: $textSecondary;
+    background-color: $text-secondary;
   }
 }
 
