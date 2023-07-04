@@ -100,7 +100,7 @@ header {
   .switcher {
     position: relative;
     background-color: transparent;
-    color: var(--textPrimary);
+    color: var(--text-primary);
     transition: color $transition;
     padding: 0;
     width: 16px;

@@ -82,7 +82,7 @@ ol {
     counter-increment: counterName;
     content: counters(counterName, '-');
     color: $primary;
-    font-family: var(--fontMedium);
+    font-family: var(--font-medium);
     @include size(56);
   }
 }
