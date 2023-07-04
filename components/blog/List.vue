@@ -16,7 +16,6 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const { locale, t } = useI18n()
-const localePath = useLocalePath()
 
 const { data: posts } = await useAsyncData(
   'blog',
@@ -36,11 +35,6 @@ const { data: posts } = await useAsyncData(
       <BlogListItem v-for="post in posts" :key="post.slug" :post="post" :title-tag="titleTag" />
     </div>
 
-    <div v-if="more" class="more">
-      <NuxtLink :to="localePath('blog')" class="btn">
-        {{ t('home.more') }}
-        <NuxtIcon name="arrow" />
-      </NuxtLink>
-    </div>
+    <LazyAppMore v-if="more" to="blog" />
   </section>
 </template>
