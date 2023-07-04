@@ -6,7 +6,7 @@ const localePath = useLocalePath()
 const { locale, t } = useI18n()
 const seo = useSeo()
 const route = useRoute()
-const path = `/works/${locale.value}/${route.params.slug}`
+const path = `/realisations/${locale.value}/${route.params.slug}`
 
 const { data: post, error } = await useAsyncData(
   `work-${locale.value}-${route.params.slug}`,
@@ -22,7 +22,7 @@ if (error.value) {
   )
 }
 
-const [prev, next] = await queryContent('works', locale.value)
+const [prev, next] = await queryContent('realisations', locale.value)
   .only(['slug', 'title'])
   .findSurround({ _path: path })
 
