@@ -109,6 +109,8 @@ useHead({
       <ContentRenderer>
         <ContentRendererMarkdown :value="post" class="container containerContent" />
       </ContentRenderer>
+
+      <LazyBlogShare :title="post.title" :url="`${seo.baseUrl}${route.path}`" />
     </article>
 
     <LazyAppNav :prev="prev" :next="next" path="blog" />
