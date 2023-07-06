@@ -122,6 +122,7 @@ const { data: posts } = await useAsyncData(
     h2,
     h3 {
       @include size(32);
+
       margin-bottom: 12px;
     }
 
