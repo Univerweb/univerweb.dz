@@ -28,6 +28,7 @@ const localePath = useLocalePath()
   color: $white;
   transition: background-color $transition, color $transition;
   text-align: center;
+
   a {
     color: $white;
     margin: 0;
