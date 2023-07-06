@@ -88,38 +88,32 @@ const { t } = useI18n()
   }
 
   .prev .nuxt-icon {
-    left: -6px;
-
-    [lang='ar-DZ'] & {
-      right: -6px;
-    }
+    inset-inline-start: -6px;
   }
 
   .next .nuxt-icon {
-    right: -6px;
-
-    [lang='ar-DZ'] & {
-      left: -6px;
-    }
+    inset-inline-end: -6px;
   }
 
   .arrow {
     height: 6px;
   }
 
-  .prev .arrow {
-    transform: rotate(90deg);
-
-    [lang='ar-DZ'] & {
-      transform: rotate(-90deg);
-    }
-  }
-
   .next .arrow {
     transform: rotate(-90deg);
+  }
 
-    [lang='ar-DZ'] & {
+  .prev .arrow {
+    transform: rotate(90deg);
+  }
+
+  [lang='ar-DZ'] & {
+    .next .arrow {
       transform: rotate(90deg);
+    }
+
+    .prev .arrow {
+      transform: rotate(-90deg);
     }
   }
 }
