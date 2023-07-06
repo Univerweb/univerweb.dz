@@ -95,7 +95,7 @@ useHead({
         </div>
       </div>
 
-      <div class="container containerBanner">
+      <div class="container container-banner">
         <div class="banner card">
           <AppImg
             property="image"
@@ -107,7 +107,7 @@ useHead({
       </div>
 
       <ContentRenderer>
-        <ContentRendererMarkdown :value="post" class="container containerContent" />
+        <ContentRendererMarkdown :value="post" class="container container-content" />
       </ContentRenderer>
 
       <LazyBlogShare :title="post.title" :url="`${seo.baseUrl}${route.path}`" />
@@ -157,7 +157,7 @@ useHead({
     }
   }
 
-  .containerBanner {
+  .container-banner {
     padding-block: 0;
 
     .banner {
@@ -166,10 +166,7 @@ useHead({
 
       img {
         position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
+        inset: 0;
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -177,7 +174,7 @@ useHead({
     }
   }
 
-  .containerContent {
+  .container-content {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 

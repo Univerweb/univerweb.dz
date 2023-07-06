@@ -91,7 +91,9 @@ const { copy, copied } = useClipboard()
 
     .tooltip-text {
       font-family: var(--font-medium);
+
       @include size(13);
+
       width: max-content;
       color: #00D282;
       border: 1px solid #00D282;
