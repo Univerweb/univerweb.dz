@@ -12,7 +12,7 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <div class="container postNav">
+  <div class="container post-nav">
     <NuxtLink v-if="prev" :to="localePath(`/${path}/${prev.slug}`)" class="link prev" :data-text="t('nav.prev')">
       <NuxtIcon name="arrow" />
       {{ prev.title }}
@@ -25,7 +25,7 @@ const { t } = useI18n()
 </template>
 
 <style lang="scss">
-.postNav {
+.post-nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: space-between;
