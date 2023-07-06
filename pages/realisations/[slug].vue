@@ -164,10 +164,7 @@ useHead({
 
     img {
       position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
+      inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -210,7 +207,7 @@ useHead({
 
     .card img {
       border-radius: 0.25rem;
-      box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 40px 0 rgba(0 0 0 / 10%);
     }
   }
 }
