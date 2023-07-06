@@ -35,10 +35,10 @@ header {
   z-index: 100;
 
   .scrolled &:not(.show) {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 10%);
+    box-shadow: 0 0 10px rgba(0 0 0 / 10%);
 
     .dark-mode & {
-      box-shadow: 0 0 10px rgba(255, 255, 255, 10%);
+      box-shadow: 0 0 10px rgba(255 255 255 / 10%);
     }
   }
 
