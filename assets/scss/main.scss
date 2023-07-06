@@ -135,7 +135,9 @@ main {
 h1,
 .h1 {
   font-family: var(--font-medium);
+
   @include size(44);
+
   font-weight: 400;
   letter-spacing: -0.05em;
   margin-top: 0;
@@ -143,11 +145,13 @@ h1,
 
   @media (min-width: $md) {
     @include size(56);
+
     margin-bottom: 36px;
   }
 
   @media (min-width: $lg) {
     @include size(80);
+
     margin-bottom: 48px;
     letter-spacing: -0.05em;
   }
@@ -156,7 +160,9 @@ h1,
 h2,
 .h2 {
   font-family: var(--font-medium);
+
   @include size(32);
+
   font-weight: 400;
   letter-spacing: -0.05em;
   margin-top: 0;
@@ -174,7 +180,9 @@ h2,
 h3,
 .h3 {
   font-family: var(--font-medium);
+
   @include size(20);
+
   font-weight: 400;
   letter-spacing: -0.02em;
   margin-top: 0;
@@ -199,7 +207,9 @@ p {
 
 .lead {
   font-family: var(--font-medium);
+
   @include size(20);
+
   letter-spacing: -0.02em;
   color: var(--text-secondary);
   transition: color $transition;
@@ -223,10 +233,12 @@ strong {
 .link {
   font-family: var(--font-medium);
   display: inline-block;
+
   @include size(20);
 
   @media (min-width: $md) {
     @include size(28);
+
     line-height: 1.286;
   }
 
