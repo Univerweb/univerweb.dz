@@ -15,7 +15,7 @@
     "@antfu/eslint-config": "^0.39.7",
     "@googlemaps/js-api-loader": "^1.16.2",
     "@nuxt/content": "^2.7.0",
-    "@nuxt/devtools": "^0.6.6",
+    "@nuxt/devtools": "^0.6.7",
     "@nuxt/image": "1.0.0-rc.1",
     "@nuxtjs/color-mode": "^3.3.0",
     "@nuxtjs/i18n": "8.0.0-beta.12",
@@ -27,7 +27,7 @@
     "nuxt-gtag": "^0.5.7",
     "nuxt-icons": "^3.2.1",
     "sass": "^1.63.6",
-    "stylelint": "^15.9.0",
+    "stylelint": "^15.10.1",
     "stylelint-config-standard-scss": "^10.0.0"
   }
 }
