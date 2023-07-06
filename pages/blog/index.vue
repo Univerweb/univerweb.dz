@@ -28,7 +28,7 @@ useHead({
 
 <template>
   <main>
-    <BlogList />
+    <AppList slug="blog" headline="blog.headline" list-item="BlogListItem" />
     <LazyAppRequest />
   </main>
 </template>
