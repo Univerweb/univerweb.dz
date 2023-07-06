@@ -78,11 +78,12 @@ ol {
   list-style: none;
   counter-reset: counterName;
 
-  li:before {
+  li::before {
     counter-increment: counterName;
     content: counters(counterName, '-');
     color: $primary;
     font-family: var(--font-medium);
+
     @include size(56);
   }
 }
