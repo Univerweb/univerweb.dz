@@ -1,7 +1,7 @@
 <template>
   <main>
     <AppWelcome />
-    <LazyWorkList id="realisations" headline-tag="h2" title-tag="h3" :limit="6" more />
+    <LazyAppList headline-tag="h2" title-tag="h3" :limit="6" more />
     <LazyAppRequest class-name="h1" />
   </main>
 </template>
