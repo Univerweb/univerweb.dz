@@ -21,6 +21,11 @@ export default defineNuxtConfig({
     },
   },
 
+  components: [{
+    path: '~/components',
+    global: true,
+  }],
+
   css: [
     '@/assets/css/font.css',
     '@/assets/scss/main.scss',
