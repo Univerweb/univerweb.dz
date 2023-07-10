@@ -87,7 +87,7 @@ useHead({
 
 <template>
   <div class="wrapper" :class="{ scrolled: y }">
-    <NuxtLoadingIndicator />
+    <NuxtLoadingIndicator color="repeating-linear-gradient(to right, #28285a 0%, #50c8f0 100%)" />
     <TheSkiplinks />
     <TheHeader id="header" />
     <!-- onBeforeEnter -->
