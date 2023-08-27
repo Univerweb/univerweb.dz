@@ -29,9 +29,6 @@ devDependencies:
   '@types/google.maps':
     specifier: ^3.54.0
     version: 3.54.0
-  '@types/node':
-    specifier: ^18.17.11
-    version: 18.17.11
   '@vueuse/nuxt':
     specifier: ^10.4.0
     version: 10.4.0(nuxt@3.6.5)(vue@3.3.4)
