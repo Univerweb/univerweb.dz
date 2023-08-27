@@ -20,7 +20,6 @@
     "@nuxtjs/color-mode": "^3.3.0",
     "@nuxtjs/i18n": "8.0.0-rc.3",
     "@types/google.maps": "^3.54.0",
-    "@types/node": "^18.17.11",
     "@vueuse/nuxt": "^10.4.0",
     "eslint": "^8.48.0",
     "nuxt": "^3.6.5",
