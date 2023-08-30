@@ -1,15 +1,14 @@
 <script setup lang="ts">
 const { y } = useWindowScroll()
+const i18nHead = useLocaleHead({ addSeoAttributes: true, addDirAttribute: true })
+const { t } = useI18n()
+// const { t, finalizePendingLocaleChange } = useI18n()
+const seo = useSeo()
+const show = useShow()
 
-// const { finalizePendingLocaleChange } = useI18n()
 // const onBeforeEnter = async () => {
 //   await finalizePendingLocaleChange()
 // }
-
-const i18nHead = useLocaleHead({ addSeoAttributes: true, addDirAttribute: true })
-const { t } = useI18n()
-const seo = useSeo()
-const show = useShow()
 
 useSeoMeta({
   titleTemplate: (titleChunk) => { return titleChunk ? `${titleChunk} — ${t('name')}` : `${t('title')} — ${t('name')}` },
