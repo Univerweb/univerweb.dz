@@ -43,7 +43,7 @@ export default defineNuxtConfig({
   ],
 
   image: {
-    // dir: 'assets/images',
+    dir: 'assets/images',
     // staticFilename: 'images/[name]-[hash][ext]',
   },
 

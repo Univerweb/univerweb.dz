@@ -80,7 +80,7 @@ useHead({
       <div class="banner card">
         <AppImg
           property="image"
-          :src="`/images/works/${post.slug}_banner.jpg`"
+          :src="`/works/${post.slug}_banner.jpg`"
           :alt="post.description"
           sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw"
         />
@@ -133,7 +133,7 @@ useHead({
           </div>
           <div class="item card">
             <AppImg
-              :src="`/images/works/${post.slug}_preview.jpg`"
+              :src="`/works/${post.slug}_preview.jpg`"
               :alt="`${t('work.alt')} ${post.title}`"
               sizes="xs:288px sm:607px md:719px lg:619px xl:1280px"
             />
