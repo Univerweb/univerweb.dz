@@ -11,7 +11,7 @@ defineProps<{
   <NuxtPicture :src="src" :alt="alt" :sizes="sizes" format="avif" quality="80" loading="lazy" />
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 picture {
   display: grid;
   background-color: $light;
