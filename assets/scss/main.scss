@@ -317,20 +317,6 @@ button {
   }
 }
 
-[lazy='loading'] {
-  background-color: $light;
-  opacity: 0;
-  transition: opacity $transition;
-
-  .dark-mode & {
-    background-color: $text-secondary;
-  }
-}
-
-[lazy='loaded'] {
-  opacity: 1;
-}
-
 .tags {
   margin: 0;
   padding: 0;
