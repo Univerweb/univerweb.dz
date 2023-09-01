@@ -26,9 +26,9 @@ const localePath = useLocalePath()
         <meta property="url" :content="seo.baseUrl">
       </div>
 
-      <AppImg
-        property="image"
+      <AppPicture
         :src="`/works/${post.slug}_thumbnail.jpg`"
+        :img-attrs="{ property: 'image' }"
         :alt="post.description"
         width="588"
         height="624"
