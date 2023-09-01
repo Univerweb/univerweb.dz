@@ -77,14 +77,13 @@ useHead({
         </h1>
       </div>
 
-      <div class="banner card">
-        <AppImg
-          property="image"
-          :src="`/works/${post.slug}_banner.jpg`"
-          :alt="post.description"
-          sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw"
-        />
-      </div>
+      <AppPicture
+        :src="`/works/${post.slug}_banner.jpg`"
+        class="banner"
+        :img-attrs="{ property: 'image' }"
+        :alt="post.description"
+        sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw"
+      />
 
       <div class="container client">
         <div class="details">
@@ -131,13 +130,12 @@ useHead({
               <a :href="post.link" class="link">{{ t('work.visit') }}</a>
             </div>
           </div>
-          <div class="item card">
-            <AppImg
-              :src="`/works/${post.slug}_preview.jpg`"
-              :alt="`${t('work.alt')} ${post.title}`"
-              sizes="xs:288px sm:607px md:719px lg:619px xl:1280px"
-            />
-          </div>
+          <AppPicture
+            :src="`/works/${post.slug}_preview.jpg`"
+            :alt="`${t('work.alt')} ${post.title}`"
+            sizes="xs:288px sm:607px md:719px lg:619px xl:1280px"
+            class="item"
+          />
         </div>
       </div>
     </article>
@@ -148,7 +146,7 @@ useHead({
   </main>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .work {
   h1 {
     margin-bottom: 0;
@@ -205,7 +203,7 @@ useHead({
       }
     }
 
-    .card img {
+    picture img {
       border-radius: 0.25rem;
       box-shadow: 0 0 40px 0 rgba(0 0 0 / 10%);
     }
