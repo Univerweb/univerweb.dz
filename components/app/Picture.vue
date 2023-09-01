@@ -14,6 +14,12 @@ defineProps<{
 <style lang="scss" scoped>
 picture {
   display: grid;
+  background-color: $light;
+  transition: background-color $transition;
+
+  .dark-mode & {
+    background-color: $text-secondary;
+  }
 
   img {
     width: 100%;
