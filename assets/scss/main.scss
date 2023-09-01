@@ -307,16 +307,6 @@ button {
   }
 }
 
-.card {
-  display: grid;
-  background-color: $light;
-  transition: background-color $transition;
-
-  .dark-mode & {
-    background-color: $text-secondary;
-  }
-}
-
 .tags {
   margin: 0;
   padding: 0;
