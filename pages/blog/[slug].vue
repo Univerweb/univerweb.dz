@@ -96,14 +96,13 @@ useHead({
       </div>
 
       <div class="container container-banner">
-        <div class="banner card">
-          <AppImg
-            property="image"
-            :src="`/images/blog/${post.slug}.jpg`"
-            :alt="post.description"
-            sizes="xs:288px sm:592px md:672px lg:928px xl:1200px"
-          />
-        </div>
+        <AppPicture
+          :src="`/blog/${post.slug}.jpg`"
+          class="banner"
+          :img-attrs="{ property: 'image' }"
+          :alt="post.description"
+          sizes="xs:288px sm:592px md:672px lg:928px xl:1200px"
+        />
       </div>
 
       <ContentRenderer>

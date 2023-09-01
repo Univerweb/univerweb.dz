@@ -20,9 +20,9 @@ const localePath = useLocalePath()
       <meta property="articleSection" :content="t('blog.title')">
       <meta property="description" :content="post.description">
 
-      <AppImg
-        property="image"
-        :src="`/images/blog/${post.slug}.jpg`"
+      <AppPicture
+        :src="`/blog/${post.slug}.jpg`"
+        :img-attrs="{ property: 'image' }"
         :alt="post.description"
         width="588"
         height="624"
