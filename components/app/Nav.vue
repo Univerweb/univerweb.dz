@@ -27,7 +27,6 @@ const { t } = useI18n()
 <style lang="scss">
 .post-nav {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   justify-content: space-between;
   padding-top: 72px;
   padding-bottom: 48px;
