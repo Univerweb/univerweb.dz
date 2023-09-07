@@ -12,7 +12,7 @@ export default function () {
     baseEmail,
     coma,
     ogUrl: () => `${baseUrl}${route.path}`,
-    ogImage: () => locale.value === 'ar' ? `${baseUrl}/images/share/univerweb-ar.jpg` : `${baseUrl}/images/share/univerweb.jpg`,
+    ogImage: () => locale.value === 'ar' ? `${baseUrl}/images/univerweb-ar.jpg` : `${baseUrl}/images/univerweb.jpg`,
     streetAddress: () => `${t('streetAddress')}${coma.value}${t('addressLocality')}`,
     addressLocality: () => `${t('addressRegion')}${coma.value}${t('addressCountry')}`,
     logo: `${baseUrl}/logo.svg`,
