@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { t, tm, rt } = useI18n()
-const seo = useSeo()
+const breadcrumb = useBreadcrumb()
 
 useSeoMeta({
   title: t('agency.title'),
@@ -16,7 +16,7 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': t('name'), 'item': seo.breadcrumbItemOne },
+          { '@type': 'ListItem', 'position': 1, 'name': t('name'), 'item': breadcrumb },
           { '@type': 'ListItem', 'position': 2, 'name': t('agency.title') },
         ],
       },

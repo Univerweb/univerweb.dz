@@ -4,7 +4,8 @@ import type { Post } from '../../types'
 
 const localePath = useLocalePath()
 const { locale, t } = useI18n()
-const seo = useSeo()
+const breadcrumb = useBreadcrumb()
+const config = useRuntimeConfig()
 const route = useRoute()
 const path = `/realisations/${locale.value}/${route.params.slug}`
 
@@ -31,7 +32,7 @@ useSeoMeta({
   description: post.value?.description,
   ogTitle: post.value?.title,
   ogType: 'article',
-  ogImage: `${seo.baseUrl}/_ipx/w_1536&f_jpg&q_80/works/${post.value?.slug}_banner.jpg`,
+  ogImage: `${config.public.baseURL}/_ipx/w_1536&f_jpg&q_80/works/${post.value?.slug}_banner.jpg`,
 })
 
 useHead({
@@ -42,8 +43,8 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': t('name'), 'item': seo.breadcrumbItemOne },
-          { '@type': 'ListItem', 'position': 2, 'name': t('works.title'), 'item': `${seo.baseUrl}${localePath('realisations')}` },
+          { '@type': 'ListItem', 'position': 1, 'name': t('name'), 'item': breadcrumb },
+          { '@type': 'ListItem', 'position': 2, 'name': t('works.title'), 'item': `${config.public.baseURL}${localePath('realisations')}` },
           { '@type': 'ListItem', 'position': 3, 'name': post.value?.title },
         ],
       },
@@ -56,13 +57,13 @@ useHead({
   <main v-if="post" id="main" class="work">
     <article vocab="https://schema.org/" typeof="Article">
       <div property="mainEntityOfPage" typeof="WebPage">
-        <meta property="id" :content="`${seo.baseUrl}${route.path}`">
+        <meta property="id" :content="`${config.public.baseURL}${route.path}`">
       </div>
       <time property="dateCreated datePublished" :datetime="post.createdAt.toString()" />
       <time property="dateModified" :datetime="post.updatedAt.toString()" />
       <div property="author publisher" typeof="Organization">
         <meta property="name" :content="t('name')">
-        <meta property="url" :content="seo.baseUrl">
+        <meta property="url" :content="config.public.baseURL">
       </div>
       <meta property="articleSection" :content="t('works.title')">
       <meta property="description" :content="post.description">

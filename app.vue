@@ -1,9 +1,11 @@
 <script setup lang="ts">
+const config = useRuntimeConfig()
+const route = useRoute()
 const { y } = useWindowScroll()
 const i18nHead = useLocaleHead({ addSeoAttributes: true, addDirAttribute: true })
-const { t } = useI18n()
+const { t, locale } = useI18n()
 // const { t, finalizePendingLocaleChange } = useI18n()
-const seo = useSeo()
+const coma = useComa()
 const show = useShow()
 
 // const onBeforeEnter = async () => {
@@ -18,8 +20,8 @@ useSeoMeta({
   appleMobileWebAppStatusBarStyle: 'default',
   ogTitle: () => t('title'),
   ogType: 'website',
-  ogUrl: seo.ogUrl,
-  ogImage: seo.ogImage,
+  ogUrl: () => `${config.public.baseURL}${route.path}`,
+  ogImage: () => locale.value === 'ar' ? `${config.public.baseURL}/images/univerweb-ar.jpg` : `${config.public.baseURL}/images/univerweb.jpg`,
 })
 
 useHead({
@@ -46,28 +48,28 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'Organization',
         'name': () => t('name'),
-        'url': seo.baseUrl,
+        'url': config.public.baseURL,
         'image': {
           '@type': 'ImageObject',
-          'url': seo.ogImage,
+          'url': () => locale.value === 'ar' ? `${config.public.baseURL}/images/univerweb-ar.jpg` : `${config.public.baseURL}/images/univerweb.jpg`,
           'width': '1920px',
           'height': '1080px',
         },
         'logo': {
           '@type': 'ImageObject',
-          'url': seo.logo,
+          'url': `${config.public.baseURL}/logo.svg`,
           'width': '512px',
           'height': '512px',
         },
-        'email': seo.baseEmail,
+        'email': config.public.baseEmail,
         'telephone': t('mobile'),
         'faxNumber': t('phone'),
         'sameAs': [t('twitter'), t('facebook'), t('linkedin'), t('github')],
         'address': {
           '@type': 'PostalAddress',
-          'streetAddress': seo.streetAddress,
+          'streetAddress': () => `${t('streetAddress')}${coma.value}${t('addressLocality')}`,
           'postalCode': t('postalCode'),
-          'addressLocality': seo.addressLocality,
+          'addressLocality': () => `${t('addressRegion')}${coma.value}${t('addressCountry')}`,
         },
       },
     },
