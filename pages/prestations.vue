@@ -6,7 +6,6 @@ useSeoMeta({
   title: t('presta.title'),
   description: t('presta.desc'),
   ogTitle: t('presta.title'),
-  ogDescription: t('presta.desc'),
 })
 
 useHead({

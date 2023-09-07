@@ -30,11 +30,8 @@ useSeoMeta({
   title: post.value?.title,
   description: post.value?.description,
   ogTitle: post.value?.title,
-  ogDescription: post.value?.description,
   ogType: 'article',
   ogImage: `${seo.baseUrl}/_ipx/w_1536&f_jpg&q_80/works/${post.value?.slug}_banner.jpg`,
-  ogImageSecureUrl: `${seo.baseUrl}/images/share/${post.value?.slug}.jpg`,
-  ogImageAlt: `${post.value?.title} — ${post.value?.industry}`,
 })
 
 useHead({

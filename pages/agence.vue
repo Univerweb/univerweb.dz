@@ -6,7 +6,6 @@ useSeoMeta({
   title: t('agency.title'),
   description: t('agency.desc'),
   ogTitle: t('agency.title'),
-  ogDescription: t('agency.desc'),
 })
 
 useHead({

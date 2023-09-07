@@ -17,18 +17,9 @@ useSeoMeta({
   appleMobileWebAppCapable: 'yes',
   appleMobileWebAppStatusBarStyle: 'default',
   ogTitle: () => t('title'),
-  ogDescription: () => t('desc'),
   ogType: 'website',
-  ogSiteName: () => t('name'),
   ogUrl: seo.ogUrl,
   ogImage: seo.ogImage,
-  ogImageSecureUrl: seo.ogImage,
-  ogImageType: 'image/jpeg',
-  ogImageWidth: 1920,
-  ogImageHeight: 1080,
-  ogImageAlt: () => `${t('name')} — ${t('title')}`,
-  twitterCard: 'summary_large_image',
-  twitterSite: '@Univerweb',
 })
 
 useHead({

@@ -51,7 +51,6 @@ useSeoMeta({
   title: t('contact.title'),
   description: t('contact.desc'),
   ogTitle: t('contact.title'),
-  ogDescription: t('contact.desc'),
 })
 
 useHead({
