@@ -7,7 +7,7 @@ const { post } = defineProps<{
 }>()
 
 const { locale, t } = useI18n()
-const seo = useSeo()
+const config = useRuntimeConfig()
 const localePath = useLocalePath()
 </script>
 
@@ -15,7 +15,7 @@ const localePath = useLocalePath()
   <NuxtLink :to="localePath(`/blog/${post.slug}`)" class="item">
     <article vocab="https://schema.org/" typeof="Article">
       <div property="mainEntityOfPage" typeof="WebPage">
-        <meta property="id" :content="`${seo.baseUrl}${localePath(`/blog/${post.slug}`)}`">
+        <meta property="id" :content="`${config.public.baseURL}${localePath(`/blog/${post.slug}`)}`">
       </div>
       <meta property="articleSection" :content="t('blog.title')">
       <meta property="description" :content="post.description">
@@ -52,11 +52,11 @@ const localePath = useLocalePath()
           </span>
           <span v-else property="author" typeof="Organization">
             <span property="name">{{ t('name') }}</span>
-            <meta property="url" :content="seo.baseUrl">
+            <meta property="url" :content="config.public.baseURL">
           </span>
           <span property="publisher" typeof="Organization">
             <meta property="name" :content="t('name')">
-            <meta property="url" :content="seo.baseUrl">
+            <meta property="url" :content="config.public.baseURL">
           </span>
         </p>
       </div>

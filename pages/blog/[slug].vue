@@ -4,7 +4,8 @@ import type { Post } from '../../types'
 
 const localePath = useLocalePath()
 const { locale, t } = useI18n()
-const seo = useSeo()
+const breadcrumb = useBreadcrumb()
+const config = useRuntimeConfig()
 const route = useRoute()
 const path = `/blog/${locale.value}/${route.params.slug}`
 
@@ -31,7 +32,7 @@ useSeoMeta({
   description: post.value?.description,
   ogTitle: post.value?.title,
   ogType: 'article',
-  ogImage: `${seo.baseUrl}/_ipx/w_1536&f_jpg&q_80/blog/${post.value?.slug}.jpg`,
+  ogImage: `${config.public.baseURL}/_ipx/w_1536&f_jpg&q_80/blog/${post.value?.slug}.jpg`,
 })
 
 useHead({
@@ -42,8 +43,8 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': t('name'), 'item': seo.breadcrumbItemOne },
-          { '@type': 'ListItem', 'position': 2, 'name': t('blog.title'), 'item': `${seo.baseUrl}${localePath('blog')}` },
+          { '@type': 'ListItem', 'position': 1, 'name': t('name'), 'item': breadcrumb },
+          { '@type': 'ListItem', 'position': 2, 'name': t('blog.title'), 'item': `${config.public.baseURL}${localePath('blog')}` },
           { '@type': 'ListItem', 'position': 3, 'name': post.value?.title },
         ],
       },
@@ -56,7 +57,7 @@ useHead({
   <main v-if="post" id="main" class="blog">
     <article vocab="https://schema.org/" typeof="Article">
       <div property="mainEntityOfPage" typeof="WebPage">
-        <meta property="id" :content="`${seo.baseUrl}${route.path}`">
+        <meta property="id" :content="`${config.public.baseURL}${route.path}`">
       </div>
       <meta property="articleSection" :content="t('blog.title')">
       <meta property="description" :content="post.description">
@@ -78,11 +79,11 @@ useHead({
           </span>
           <span v-else property="author" typeof="Organization" class="author">
             <span property="name">{{ t('name') }}</span>
-            <meta property="url" :content="seo.baseUrl">
+            <meta property="url" :content="config.public.baseURL">
           </span>
           <span property="publisher" typeof="Organization">
             <meta property="name" :content="t('name')">
-            <meta property="url" :content="seo.baseUrl">
+            <meta property="url" :content="config.public.baseURL">
           </span>
           <ul>
             <li v-for="tag in post.tags" :key="tag" property="keywords">
@@ -106,7 +107,7 @@ useHead({
         <ContentRendererMarkdown :value="post" class="container container-content" />
       </ContentRenderer>
 
-      <LazyBlogShare :title="post.title" :url="`${seo.baseUrl}${route.path}`" />
+      <LazyBlogShare :title="post.title" :url="`${config.public.baseURL}${route.path}`" />
     </article>
 
     <LazyAppNav :prev="prev" :next="next" path="blog" />
