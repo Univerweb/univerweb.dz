@@ -5,7 +5,7 @@ export default function () {
 
   const baseUrl = config.public.baseURL
   const baseEmail = config.public.baseEmail
-  const coma = computed(() => (locale.value === 'ar' ? '، ' : ', '))
+  const coma = useComa()
 
   const seo = {
     baseUrl,
