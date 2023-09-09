@@ -34,13 +34,13 @@ useHead({
       </p>
     </div>
 
-    <div class="container agence">
+    <div class="container">
       <div class="intro">
         <h2 class="h1">
           {{ t('agency.method.title') }}
         </h2>
       </div>
-      <ol class="details">
+      <ol class="details method">
         <li v-for="(value, name) in (tm('agency.method.content') as { name: string })" :key="name" class="item">
           <h3>{{ name }}</h3>
           <p class="lead">
@@ -71,7 +71,7 @@ useHead({
 </template>
 
 <style lang="scss">
-.agence ol {
+.method {
   margin: 0;
   padding: 0;
   list-style: none;
