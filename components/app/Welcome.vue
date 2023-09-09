@@ -17,7 +17,7 @@ const { t } = useI18n()
   </section>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .hero {
   display: grid;
   grid-auto-rows: 1fr auto;

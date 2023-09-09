@@ -86,7 +86,7 @@ useHead({
   </main>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .prestations {
   .tags {
     color: var(--text-secondary);

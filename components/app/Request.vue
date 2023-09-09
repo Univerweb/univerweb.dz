@@ -22,7 +22,7 @@ const localePath = useLocalePath()
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .request {
   background-color: var(--secondary);
   color: $white;

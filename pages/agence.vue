@@ -34,7 +34,7 @@ useHead({
       </p>
     </div>
 
-    <div class="container">
+    <div class="container agence">
       <div class="intro">
         <h2 class="h1">
           {{ t('agency.method.title') }}
@@ -70,8 +70,8 @@ useHead({
   </main>
 </template>
 
-<style lang="scss" scoped>
-ol {
+<style lang="scss">
+.agence ol {
   margin: 0;
   padding: 0;
   list-style: none;

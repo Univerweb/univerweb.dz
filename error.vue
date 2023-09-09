@@ -32,7 +32,7 @@ const handleError = () => clearError({ redirect: '/' })
   </main>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .error {
   display: grid;
   justify-items: center;

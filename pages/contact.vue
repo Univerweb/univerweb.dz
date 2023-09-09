@@ -84,7 +84,7 @@ useHead({
 
     <div id="map" />
 
-    <div class="container contact">
+    <div class="container other">
       <div class="intro">
         <h2>{{ t('contact.other') }}</h2>
       </div>
@@ -110,14 +110,14 @@ useHead({
   </main>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 #map {
   width: 100%;
   height: 720px;
   background-color: #fafafa;
 }
 
-.contact {
+.other {
   background-color: var(--secondary);
   color: $white;
 
