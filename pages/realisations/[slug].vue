@@ -125,7 +125,10 @@ useHead({
                 property="articleBody"
                 class="lead"
               />
-              <a :href="post.link" class="link">{{ t('work.visit') }}</a>
+              <a v-if="post.link" :href="post.link" class="link">{{ t('work.visit') }}</a>
+              <p v-else>
+                {{ t('work.state') }}
+              </p>
             </div>
           </div>
           <AppPicture
