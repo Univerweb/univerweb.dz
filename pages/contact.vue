@@ -14,7 +14,7 @@ onMounted(async () => {
     apiKey: config.public.apiKey,
     version: 'weekly',
   })
-  await loader.load()
+  await loader.importLibrary('maps')
 
   const mapOptions: google.maps.MapOptions = {
     mapId: '101a5bf427dc0726',
