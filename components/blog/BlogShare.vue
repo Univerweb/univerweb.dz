@@ -5,7 +5,7 @@ defineProps<{
 }>()
 
 const { t } = useI18n()
-const { copy, copied } = useClipboard()
+const { copy, copied, isSupported } = useClipboard()
 </script>
 
 <template>
@@ -16,7 +16,7 @@ const { copy, copied } = useClipboard()
       </h2>
 
       <ul>
-        <li>
+        <li v-if="isSupported">
           <button class="tooltip" @click="copy(url)">
             <Transition>
               <span v-if="copied" class="tooltip-text">
