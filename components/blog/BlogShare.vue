@@ -41,7 +41,7 @@ const { copy, copied, isSupported } = useClipboard()
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .container-share {
   display: grid;
   grid-template-columns: repeat(12, 1fr);

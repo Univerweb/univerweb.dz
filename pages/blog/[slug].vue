@@ -116,7 +116,7 @@ useHead({
   </main>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .blog {
   h1 {
     margin-bottom: 24px;
@@ -175,7 +175,7 @@ useHead({
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 
-    :deep(*) {
+    * {
       grid-column: 1 / 13;
       margin-bottom: 24px;
 
