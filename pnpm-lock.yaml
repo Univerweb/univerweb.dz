@@ -39,8 +39,8 @@ devDependencies:
     specifier: ^3.7.1
     version: 3.7.1(eslint@8.49.0)(sass@1.66.1)(stylelint@15.10.3)(typescript@5.2.2)
   nuxt-gtag:
-    specifier: ^1.0.0
-    version: 1.0.0
+    specifier: ^1.1.0
+    version: 1.1.0
   nuxt-icons:
     specifier: ^3.2.1
     version: 3.2.1
@@ -7678,8 +7678,8 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /nuxt-gtag@1.0.0:
-    resolution: {integrity: sha512-RlOnaXQ9rfsaR3MOtENXpIl9bziAJ6cS/l1R545Hq2R4Xch4DnvS4Y2FfprmBSJmRqeyd3mkhwiU03NN9XRe+A==}
+  /nuxt-gtag@1.1.0:
+    resolution: {integrity: sha512-ErpG7WGOkTJEuVz7/akIsS15TilPyn8aAhJXmetTWrzG/nhsCKE8KyOT4z2Z+tvxrS0rNrQKfz2CKiSpsLBvAw==}
     dependencies:
       '@nuxt/kit': 3.7.1
       defu: 6.1.2
