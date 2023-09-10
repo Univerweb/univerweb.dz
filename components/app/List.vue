@@ -11,7 +11,7 @@ export interface Props {
   titleTag?: string
 }
 
-const props = withDefaults(defineProps<Props>(), {
+withDefaults(defineProps<Props>(), {
   slug: 'realisations',
   limit: 0,
   headlineTag: 'h1',
@@ -23,11 +23,6 @@ const props = withDefaults(defineProps<Props>(), {
 
 const { locale, t } = useI18n()
 const localePath = useLocalePath()
-
-const { data: posts } = await useAsyncData(
-  props.slug,
-  () => queryContent<Post>(props.slug, locale.value).sort({ _id: -1 }).limit(props.limit).find(),
-)
 </script>
 
 <template>
@@ -38,9 +33,11 @@ const { data: posts } = await useAsyncData(
       </Component>
     </div>
 
-    <div v-if="posts?.length" class="details details-card">
-      <Component :is="listItem" v-for="post in posts" :key="post.slug" :post="post" :title-tag="titleTag" />
-    </div>
+    <ContentList v-slot="{ list }" :path="`/${slug}/${locale}`" :sort="{ _id: -1 }" :limit="limit">
+      <div class="details details-card">
+        <Component :is="listItem" v-for="article in (list as Post[])" :key="article.slug" :post="article" :title-tag="titleTag" />
+      </div>
+    </ContentList>
 
     <div v-if="more" class="more">
       <NuxtLink :to="localePath(slug)" class="btn">
