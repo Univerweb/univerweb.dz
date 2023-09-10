@@ -15,13 +15,11 @@ const show = useShow()
 useSeoMeta({
   titleTemplate: (titleChunk) => { return titleChunk ? `${titleChunk} — ${t('name')}` : `${t('title')} — ${t('name')}` },
   description: () => t('desc'),
-  themeColor: '#50c8f0',
-  appleMobileWebAppCapable: 'yes',
-  appleMobileWebAppStatusBarStyle: 'default',
   ogTitle: () => t('title'),
   ogType: 'website',
   ogUrl: () => `${config.public.baseURL}${route.path}`,
   ogImage: () => locale.value === 'ar' ? `${config.public.baseURL}/images/univerweb-ar.jpg` : `${config.public.baseURL}/images/univerweb.jpg`,
+  themeColor: '#28285a',
 })
 
 useHead({
