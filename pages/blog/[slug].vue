@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { createError } from 'h3'
 import type { Post } from '../../types'
 
 const localePath = useLocalePath()
@@ -9,30 +8,24 @@ const config = useRuntimeConfig()
 const route = useRoute()
 const path = `/blog/${locale.value}/${route.params.slug}`
 
-const { data: post, error } = await useAsyncData(
+const { data } = await useAsyncData(
   `blog-${locale.value}-${route.params.slug}`,
   () => queryContent<Post>().where({ _path: path }).findOne(),
 )
 
-if (error.value) {
-  showError(
-    createError({
-      statusCode: 404,
-      statusMessage: 'Not Found',
-    }),
-  )
-}
+if (!data.value)
+  throw createError({ statusCode: 404, statusMessage: 'Page Not Found' })
 
 const [prev, next] = await queryContent('blog', locale.value)
   .only(['slug', 'title'])
   .findSurround({ _path: path })
 
 useSeoMeta({
-  title: post.value?.title,
-  description: post.value?.description,
-  ogTitle: post.value?.title,
+  title: data.value?.title,
+  description: data.value?.description,
+  ogTitle: data.value?.title,
   ogType: 'article',
-  ogImage: `${config.public.baseURL}/_ipx/w_1536&f_jpg&q_80/blog/${post.value?.slug}.jpg`,
+  ogImage: `${config.public.baseURL}/_ipx/w_1536&f_jpg&q_80/blog/${data.value?.slug}.jpg`,
 })
 
 useHead({
@@ -45,7 +38,7 @@ useHead({
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': t('name'), 'item': breadcrumb },
           { '@type': 'ListItem', 'position': 2, 'name': t('blog.title'), 'item': `${config.public.baseURL}${localePath('blog')}` },
-          { '@type': 'ListItem', 'position': 3, 'name': post.value?.title },
+          { '@type': 'ListItem', 'position': 3, 'name': data.value?.title },
         ],
       },
     },
@@ -54,28 +47,28 @@ useHead({
 </script>
 
 <template>
-  <main v-if="post" id="main" class="blog">
+  <main v-if="data" id="main" class="blog">
     <article vocab="https://schema.org/" typeof="Article">
       <div property="mainEntityOfPage" typeof="WebPage">
         <meta property="id" :content="`${config.public.baseURL}${route.path}`">
       </div>
       <meta property="articleSection" :content="t('blog.title')">
-      <meta property="description" :content="post.description">
+      <meta property="description" :content="data.description">
 
       <div class="container intro">
         <AppBack path="blog" menu="menu.blog" />
         <h1 property="headline">
-          {{ post.title }}
+          {{ data.title }}
         </h1>
         <div class="meta">
-          <time property="dateCreated datePublished" :datetime="post.createdAt.toString()">
-            {{ new Intl.DateTimeFormat(locale, { dateStyle: 'long' }).format(new Date(post.createdAt)) }}
+          <time property="dateCreated datePublished" :datetime="data.createdAt.toString()">
+            {{ new Intl.DateTimeFormat(locale, { dateStyle: 'long' }).format(new Date(data.createdAt)) }}
           </time>
-          <time property="dateModified" :datetime="post.updatedAt.toString()" :content="post.updatedAt.toString()" />
+          <time property="dateModified" :datetime="data.updatedAt.toString()" :content="data.updatedAt.toString()" />
           — {{ t('blog.by') }}
-          <span v-if="post.author" property="author" typeof="Person" class="author">
-            <span property="name">{{ post.author.name }}</span>
-            <meta property="url" :content="post.author.url">
+          <span v-if="data.author" property="author" typeof="Person" class="author">
+            <span property="name">{{ data.author.name }}</span>
+            <meta property="url" :content="data.author.url">
           </span>
           <span v-else property="author" typeof="Organization" class="author">
             <span property="name">{{ t('name') }}</span>
@@ -86,7 +79,7 @@ useHead({
             <meta property="url" :content="config.public.baseURL">
           </span>
           <ul>
-            <li v-for="tag in post.tags" :key="tag" property="keywords">
+            <li v-for="tag in data.tags" :key="tag" property="keywords">
               {{ tag }}
             </li>
           </ul>
@@ -95,19 +88,19 @@ useHead({
 
       <div class="container container-banner">
         <AppPicture
-          :src="`/blog/${post.slug}.jpg`"
+          :src="`/blog/${data.slug}.jpg`"
           class="banner"
           :img-attrs="{ property: 'image' }"
-          :alt="post.description"
+          :alt="data.description"
           sizes="xs:288px sm:592px md:672px lg:928px xl:1200px"
         />
       </div>
 
       <ContentRenderer>
-        <ContentRendererMarkdown :value="post" class="container container-content" />
+        <ContentRendererMarkdown :value="data" class="container container-content" />
       </ContentRenderer>
 
-      <LazyBlogShare :title="post.title" :url="`${config.public.baseURL}${route.path}`" />
+      <LazyBlogShare :title="data.title" :url="`${config.public.baseURL}${route.path}`" />
     </article>
 
     <LazyAppNav :prev="prev" :next="next" path="blog" />
