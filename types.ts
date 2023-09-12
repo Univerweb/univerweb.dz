@@ -10,7 +10,7 @@ export interface Post extends MarkdownParsedContent {
 }
 
 export interface Nav {
-  slug?: string
+  _path?: string
   title?: string
 }
 

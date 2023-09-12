@@ -133,7 +133,7 @@ useHead({
       </div>
     </article>
 
-    <LazyAppNav :prev="prev" :next="next" path="realisations" />
+    <LazyAppNav :prev="prev" :next="next" />
 
     <LazyAppRequest />
   </main>

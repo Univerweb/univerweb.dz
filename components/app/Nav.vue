@@ -4,7 +4,6 @@ import type { Nav } from '../../types'
 defineProps<{
   prev?: Nav
   next?: Nav
-  path: string
 }>()
 
 const localePath = useLocalePath()
@@ -13,11 +12,11 @@ const { t } = useI18n()
 
 <template>
   <div class="container post-nav">
-    <NuxtLink v-if="prev" :to="localePath(`/${path}/${prev.slug}`)" class="link prev" :data-text="t('nav.prev')">
+    <NuxtLink v-if="prev" :to="localePath(`${prev._path}`)" class="link prev" :data-text="t('nav.prev')">
       <NuxtIcon name="arrow" />
       {{ prev.title }}
     </NuxtLink>
-    <NuxtLink v-if="next" :to="localePath(`/${path}/${next.slug}`)" class="link next" :data-text="t('nav.next')">
+    <NuxtLink v-if="next" :to="localePath(`${next._path}`)" class="link next" :data-text="t('nav.next')">
       <NuxtIcon name="arrow" />
       {{ next.title }}
     </NuxtLink>
