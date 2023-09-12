@@ -102,7 +102,7 @@ useHead({
       <LazyBlogShare :title="data.title" :url="`${config.public.baseURL}${path}`" />
     </article>
 
-    <LazyAppNav :prev="prev" :next="next" path="blog" />
+    <LazyAppNav :prev="prev" :next="next" />
 
     <LazyAppRequest />
   </main>
