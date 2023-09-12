@@ -3,7 +3,7 @@ const { t } = useI18n()
 const breadcrumb = useBreadcrumb()
 
 useSeoMeta({
-  title: t('works.title'),
+  title: () => t('works.title'),
   description: t('works.desc'),
   ogTitle: t('works.title'),
 })
