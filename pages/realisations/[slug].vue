@@ -5,11 +5,10 @@ const localePath = useLocalePath()
 const { locale, t } = useI18n()
 const breadcrumb = useBreadcrumb()
 const config = useRuntimeConfig()
-const route = useRoute()
-const path = `/realisations/${locale.value}/${route.params.slug}`
+const { path } = useRoute()
 
 const { data } = await useAsyncData(
-  `work-${locale.value}-${route.params.slug}`,
+  `content-${path}`,
   () => queryContent<Post>().where({ _path: path }).findOne(),
 )
 
@@ -50,7 +49,7 @@ useHead({
   <main v-if="data" id="main" class="work">
     <article vocab="https://schema.org/" typeof="Article">
       <div property="mainEntityOfPage" typeof="WebPage">
-        <meta property="id" :content="`${config.public.baseURL}${route.path}`">
+        <meta property="id" :content="`${config.public.baseURL}${path}`">
       </div>
       <time property="dateCreated datePublished" :datetime="data.createdAt.toString()" />
       <time property="dateModified" :datetime="data.updatedAt.toString()" />

@@ -21,8 +21,9 @@ withDefaults(defineProps<Props>(), {
   more: false,
 })
 
-const { locale, t } = useI18n()
+const { t } = useI18n()
 const localePath = useLocalePath()
+const { path } = useRoute()
 </script>
 
 <template>
@@ -33,7 +34,7 @@ const localePath = useLocalePath()
       </Component>
     </div>
 
-    <ContentList v-slot="{ list }" :path="`/${slug}/${locale}`" :sort="{ _id: -1 }" :limit="limit">
+    <ContentList v-slot="{ list }" :path="path" :sort="{ _id: -1 }" :limit="limit">
       <div class="details details-card">
         <Component :is="listItem" v-for="article in (list as Post[])" :key="article.slug" :post="article" :title-tag="titleTag" />
       </div>
