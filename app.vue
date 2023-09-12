@@ -3,14 +3,13 @@ const config = useRuntimeConfig()
 const route = useRoute()
 const { y } = useWindowScroll()
 const i18nHead = useLocaleHead({ addSeoAttributes: true, addDirAttribute: true })
-const { t, locale } = useI18n()
-// const { t, finalizePendingLocaleChange } = useI18n()
+const { t, locale, finalizePendingLocaleChange } = useI18n()
 const coma = useComa()
 const show = useShow()
 
-// const onBeforeEnter = async () => {
-//   await finalizePendingLocaleChange()
-// }
+async function onBeforeEnter() {
+  await finalizePendingLocaleChange()
+}
 
 useSeoMeta({
   titleTemplate: (titleChunk) => { return titleChunk ? `${titleChunk} — ${t('name')}` : `${t('title')} — ${t('name')}` },
@@ -80,8 +79,7 @@ useHead({
     <NuxtLoadingIndicator color="repeating-linear-gradient(to right, #28285a 0%, #50c8f0 100%)" />
     <TheSkiplinks />
     <TheHeader id="header" />
-    <!-- onBeforeEnter -->
-    <NuxtPage id="main" :transition="{ name: 'page', mode: 'out-in' }" />
+    <NuxtPage id="main" :transition="{ name: 'page', mode: 'out-in', onBeforeEnter }" />
     <LazyTheFooter id="footer" />
   </div>
 </template>

@@ -64,7 +64,7 @@ export default defineNuxtConfig({
     defaultLocale: 'fr',
     detectBrowserLanguage: false,
     baseUrl: process.env.BASE_URL,
-    // skipSettingLocaleOnNavigate: true,
+    skipSettingLocaleOnNavigate: true,
   },
 
   gtag: {
