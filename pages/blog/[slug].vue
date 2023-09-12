@@ -5,11 +5,10 @@ const localePath = useLocalePath()
 const { locale, t } = useI18n()
 const breadcrumb = useBreadcrumb()
 const config = useRuntimeConfig()
-const route = useRoute()
-const path = `/blog/${locale.value}/${route.params.slug}`
+const { path } = useRoute()
 
 const { data } = await useAsyncData(
-  `blog-${locale.value}-${route.params.slug}`,
+  `content-${path}`,
   () => queryContent<Post>().where({ _path: path }).findOne(),
 )
 
@@ -50,7 +49,7 @@ useHead({
   <main v-if="data" id="main" class="blog">
     <article vocab="https://schema.org/" typeof="Article">
       <div property="mainEntityOfPage" typeof="WebPage">
-        <meta property="id" :content="`${config.public.baseURL}${route.path}`">
+        <meta property="id" :content="`${config.public.baseURL}${path}`">
       </div>
       <meta property="articleSection" :content="t('blog.title')">
       <meta property="description" :content="data.description">
@@ -100,7 +99,7 @@ useHead({
         <ContentRendererMarkdown :value="data" class="container container-content" />
       </ContentRenderer>
 
-      <LazyBlogShare :title="data.title" :url="`${config.public.baseURL}${route.path}`" />
+      <LazyBlogShare :title="data.title" :url="`${config.public.baseURL}${path}`" />
     </article>
 
     <LazyAppNav :prev="prev" :next="next" path="blog" />
