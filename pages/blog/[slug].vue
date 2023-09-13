@@ -87,7 +87,7 @@ useHead({
 
       <div class="container container-banner">
         <AppPicture
-          :src="`/blog/${data.slug}.jpg`"
+          :src="`/blog/${$route.params.slug}.jpg`"
           class="banner"
           :img-attrs="{ property: 'image' }"
           :alt="data.description"
