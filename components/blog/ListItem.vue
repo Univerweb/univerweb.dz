@@ -12,10 +12,10 @@ const localePath = useLocalePath()
 </script>
 
 <template>
-  <NuxtLink :to="localePath(`/blog/${post.slug}`)" class="item">
+  <NuxtLink :to="localePath(`${post._path}`)" class="item">
     <article vocab="https://schema.org/" typeof="Article">
       <div property="mainEntityOfPage" typeof="WebPage">
-        <meta property="id" :content="`${config.public.baseURL}${localePath(`/blog/${post.slug}`)}`">
+        <meta property="id" :content="`${config.public.baseURL}${localePath(`${post._path}`)}`">
       </div>
       <meta property="articleSection" :content="t('blog.title')">
       <meta property="description" :content="post.description">
