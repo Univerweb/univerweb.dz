@@ -68,7 +68,7 @@ useHead({
       </div>
 
       <AppPicture
-        :src="`/realisations/${data.slug}_banner.jpg`"
+        :src="`/realisations/${$route.params.slug}_banner.jpg`"
         class="banner"
         :img-attrs="{ property: 'image' }"
         :alt="data.description"
@@ -124,7 +124,7 @@ useHead({
             </div>
           </div>
           <AppPicture
-            :src="`/realisations/${data.slug}_preview.jpg`"
+            :src="`/realisations/${$route.params.slug}_preview.jpg`"
             :alt="`${t('work.alt')} ${data.title}`"
             sizes="xs:288px sm:607px md:719px lg:619px xl:1280px"
             class="item"
