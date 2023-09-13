@@ -27,7 +27,7 @@ const localePath = useLocalePath()
       </div>
 
       <AppPicture
-        :src="`/works/${post.slug}_thumbnail.jpg`"
+        :src="`/realisations/${post.slug}_thumbnail.jpg`"
         :img-attrs="{ property: 'image' }"
         :alt="post.description"
         width="588"

@@ -24,7 +24,7 @@ useSeoMeta({
   description: data.value?.description,
   ogTitle: data.value?.title,
   ogType: 'article',
-  ogImage: `${config.public.baseURL}/_ipx/w_1536&f_jpg&q_80/works/${data.value?.slug}_banner.jpg`,
+  ogImage: `${config.public.baseURL}/_ipx/w_1536&f_jpg&q_80/realisations/${data.value?.slug}_banner.jpg`,
 })
 
 useHead({
@@ -68,7 +68,7 @@ useHead({
       </div>
 
       <AppPicture
-        :src="`/works/${data.slug}_banner.jpg`"
+        :src="`/realisations/${data.slug}_banner.jpg`"
         class="banner"
         :img-attrs="{ property: 'image' }"
         :alt="data.description"
@@ -124,7 +124,7 @@ useHead({
             </div>
           </div>
           <AppPicture
-            :src="`/works/${data.slug}_preview.jpg`"
+            :src="`/realisations/${data.slug}_preview.jpg`"
             :alt="`${t('work.alt')} ${data.title}`"
             sizes="xs:288px sm:607px md:719px lg:619px xl:1280px"
             class="item"
