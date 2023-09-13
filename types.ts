@@ -1,7 +1,6 @@
 import type { MarkdownParsedContent } from '@nuxt/content/dist/runtime/types'
 
 export interface Post extends MarkdownParsedContent {
-  slug: string
   createdAt: Date
   updatedAt: Date
   tags: string[]
