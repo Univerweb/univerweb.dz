@@ -16,7 +16,7 @@ if (!data.value)
   throw createError({ statusCode: 404, statusMessage: 'Page Not Found' })
 
 const [prev, next] = await queryContent('realisations', locale.value)
-  .only(['slug', 'title'])
+  .only(['_path', 'title'])
   .findSurround({ _path: path })
 
 useSeoMeta({
