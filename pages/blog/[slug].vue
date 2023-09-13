@@ -24,7 +24,7 @@ useSeoMeta({
   description: data.value?.description,
   ogTitle: data.value?.title,
   ogType: 'article',
-  ogImage: `${config.public.baseURL}/_ipx/w_1536&f_jpg&q_80/blog/${slug}.jpg`,
+  ogImage: `${config.public.baseURL}/_ipx/w_1536&f_jpg&q_80/blog/${slug}_banner.jpg`,
 })
 
 useHead({
@@ -87,10 +87,10 @@ useHead({
 
       <div class="container container-banner">
         <AppPicture
-          :src="`/blog/${slug}.jpg`"
+          :post="data"
+          type="banner"
           class="banner"
           :img-attrs="{ property: 'image' }"
-          :alt="data.description"
           sizes="xs:288px sm:592px md:672px lg:928px xl:1200px"
         />
       </div>

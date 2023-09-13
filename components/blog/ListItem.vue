@@ -21,9 +21,9 @@ const localePath = useLocalePath()
       <meta property="description" :content="post.description">
 
       <AppPicture
-        :src="`/blog/${post.slug}.jpg`"
+        :post="post"
+        type="banner"
         :img-attrs="{ property: 'image' }"
-        :alt="post.description"
         width="588"
         height="624"
         sizes="xs:288px sm:607px md:354px lg:456px xl:588px"
