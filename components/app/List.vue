@@ -36,7 +36,7 @@ const { path } = useRoute()
 
     <ContentList v-slot="{ list }" :path="path" :sort="{ _id: -1 }" :limit="limit">
       <div class="details details-card">
-        <Component :is="listItem" v-for="article in (list as Post[])" :key="article.slug" :post="article" :title-tag="titleTag" />
+        <Component :is="listItem" v-for="article in (list as Post[])" :key="article._path" :post="article" :title-tag="titleTag" />
       </div>
     </ContentList>
 
