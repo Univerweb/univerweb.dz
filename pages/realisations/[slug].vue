@@ -5,7 +5,7 @@ const localePath = useLocalePath()
 const { locale, t } = useI18n()
 const breadcrumb = useBreadcrumb()
 const config = useRuntimeConfig()
-const { path } = useRoute()
+const { path, params: { slug } } = useRoute()
 
 const { data } = await useAsyncData(
   `content-${path}`,
@@ -24,7 +24,7 @@ useSeoMeta({
   description: data.value?.description,
   ogTitle: data.value?.title,
   ogType: 'article',
-  ogImage: `${config.public.baseURL}/_ipx/w_1536&f_jpg&q_80/realisations/${data.value?.slug}_banner.jpg`,
+  ogImage: `${config.public.baseURL}/_ipx/w_1536&f_jpg&q_80/realisations/${slug}_banner.jpg`,
 })
 
 useHead({
@@ -68,7 +68,7 @@ useHead({
       </div>
 
       <AppPicture
-        :src="`/realisations/${$route.params.slug}_banner.jpg`"
+        :src="`/realisations/${slug}_banner.jpg`"
         class="banner"
         :img-attrs="{ property: 'image' }"
         :alt="data.description"
@@ -124,7 +124,7 @@ useHead({
             </div>
           </div>
           <AppPicture
-            :src="`/realisations/${$route.params.slug}_preview.jpg`"
+            :src="`/realisations/${slug}_preview.jpg`"
             :alt="`${t('work.alt')} ${data.title}`"
             sizes="xs:288px sm:607px md:719px lg:619px xl:1280px"
             class="item"
