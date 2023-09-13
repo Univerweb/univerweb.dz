@@ -4,7 +4,7 @@ import type { Post } from '../../types'
 defineProps<{
   post: Post
   type: string
-  alt: string
+  alt?: string
   sizes: string
 }>()
 
@@ -15,7 +15,7 @@ const { locale } = useI18n()
   <!-- format="avif,webp" -->
   <NuxtPicture
     :src="locale === 'fr' ? `${post._path}_${type}.jpg` : `${post._path}_${type}.jpg`.slice(3)"
-    :alt="alt"
+    :alt="alt || post.description"
     :sizes="sizes"
     format="avif"
     quality="80"
