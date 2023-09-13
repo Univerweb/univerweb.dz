@@ -1,14 +1,26 @@
 <script setup lang="ts">
+import type { Post } from '../../types'
+
 defineProps<{
-  src: string
+  post: Post
+  type: string
   alt: string
   sizes: string
 }>()
+
+const { locale } = useI18n()
 </script>
 
 <template>
   <!-- format="avif,webp" -->
-  <NuxtPicture :src="src" :alt="alt" :sizes="sizes" format="avif" quality="80" loading="lazy" />
+  <NuxtPicture
+    :src="locale === 'fr' ? `${post._path}_${type}.jpg` : `${post._path}_${type}.jpg`.slice(3)"
+    :alt="alt"
+    :sizes="sizes"
+    format="avif"
+    quality="80"
+    loading="lazy"
+  />
 </template>
 
 <style lang="scss">
