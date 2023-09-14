@@ -5,11 +5,12 @@ export interface Props {
   post: Post
   type?: string
   alt?: string
-  sizes: string
+  sizes?: string
 }
 
 withDefaults(defineProps<Props>(), {
   type: 'banner',
+  sizes: 'xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:1280px',
 })
 
 const { locale } = useI18n()
