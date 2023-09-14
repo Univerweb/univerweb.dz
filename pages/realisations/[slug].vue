@@ -69,7 +69,6 @@ useHead({
 
       <AppPicture
         :post="data"
-        class="banner"
         :img-attrs="{ property: 'image' }"
       />
 
@@ -126,7 +125,7 @@ useHead({
             type="preview"
             :alt="`${t('work.alt')} ${data.title}`"
             sizes="xs:288px sm:607px md:719px lg:619px xl:1280px"
-            class="item"
+            class-name="item"
           />
         </div>
       </div>

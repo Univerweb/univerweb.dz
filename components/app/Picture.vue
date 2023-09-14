@@ -6,11 +6,13 @@ export interface Props {
   type?: string
   alt?: string
   sizes?: string
+  className?: string
 }
 
 withDefaults(defineProps<Props>(), {
   type: 'banner',
   sizes: 'xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:1280px',
+  className: 'banner',
 })
 
 const { locale } = useI18n()
@@ -25,6 +27,7 @@ const { locale } = useI18n()
     format="avif"
     quality="80"
     loading="lazy"
+    :class="className"
   />
 </template>
 
