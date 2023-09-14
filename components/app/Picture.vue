@@ -28,6 +28,7 @@ const { locale } = useI18n()
     quality="80"
     loading="lazy"
     :class="className"
+    :img-attrs="{ property: 'image' } || null"
   />
 </template>
 

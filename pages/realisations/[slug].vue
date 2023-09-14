@@ -67,10 +67,7 @@ useHead({
         </h1>
       </div>
 
-      <AppPicture
-        :post="data"
-        :img-attrs="{ property: 'image' }"
-      />
+      <AppPicture :post="data" />
 
       <div class="container client">
         <div class="details">
@@ -126,6 +123,7 @@ useHead({
             :alt="`${t('work.alt')} ${data.title}`"
             sizes="xs:288px sm:607px md:719px lg:619px xl:1280px"
             class-name="item"
+            :img-attrs="null"
           />
         </div>
       </div>
