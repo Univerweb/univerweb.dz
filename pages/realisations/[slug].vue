@@ -69,7 +69,6 @@ useHead({
 
       <AppPicture
         :post="data"
-        type="banner"
         class="banner"
         :img-attrs="{ property: 'image' }"
         sizes="xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:100vw"

@@ -1,12 +1,16 @@
 <script setup lang="ts">
 import type { Post } from '../../types'
 
-defineProps<{
+export interface Props {
   post: Post
-  type: string
+  type?: string
   alt?: string
   sizes: string
-}>()
+}
+
+withDefaults(defineProps<Props>(), {
+  type: 'banner',
+})
 
 const { locale } = useI18n()
 </script>
