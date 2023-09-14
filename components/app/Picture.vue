@@ -4,6 +4,7 @@ import type { Post } from '../../types'
 export interface Props {
   post: Post
   type?: string
+  ext?: string
   alt?: string
   sizes?: string
   className?: string
@@ -11,6 +12,7 @@ export interface Props {
 
 withDefaults(defineProps<Props>(), {
   type: 'banner',
+  ext: 'jpg',
   sizes: 'xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:1280px',
   className: 'banner',
 })
@@ -21,7 +23,7 @@ const { locale } = useI18n()
 <template>
   <!-- format="avif,webp" -->
   <NuxtPicture
-    :src="locale === 'fr' ? `${post._path}_${type}.jpg` : `${post._path}_${type}.jpg`.slice(3)"
+    :src="locale === 'fr' ? `${post._path}_${type}.${ext}` : `${post._path}_${type}.${ext}`.slice(3)"
     :alt="alt || post.description"
     :sizes="sizes"
     format="avif"
