@@ -148,18 +148,31 @@ useHead({
 
   .banner {
     position: relative;
-    aspect-ratio: 3/2;
+    overflow: hidden;
+    aspect-ratio: 16 / 12;
+
+    @media (min-width: $md) {
+      aspect-ratio: 16 / 9;
+    }
 
     @media (min-width: $lg) {
-      aspect-ratio: 3/1;
+      aspect-ratio: 16 / 8;
+    }
+
+    @media (min-width: $xl) {
+      aspect-ratio: 16 / 6;
+    }
+
+    @media (min-width: $xxl) {
+      aspect-ratio: 16 / 4;
     }
 
     img {
       position: absolute;
       inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      max-width: $xl;
+      height: auto;
+      margin: 40px auto 0;
     }
   }
 
