@@ -86,11 +86,7 @@ useHead({
       </div>
 
       <div class="container container-banner">
-        <AppPicture
-          :post="data"
-          :img-attrs="{ property: 'image' }"
-          sizes="xs:288px sm:592px md:672px lg:928px xl:1200px"
-        />
+        <AppPicture :post="data" sizes="xs:288px sm:592px md:672px lg:928px xl:1200px" />
       </div>
 
       <ContentRenderer>

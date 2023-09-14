@@ -22,7 +22,6 @@ const localePath = useLocalePath()
 
       <AppPicture
         :post="post"
-        :img-attrs="{ property: 'image' }"
         width="588"
         height="624"
         sizes="xs:288px sm:607px md:354px lg:456px xl:588px"
