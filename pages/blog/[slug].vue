@@ -46,7 +46,7 @@ useHead({
 </script>
 
 <template>
-  <main v-if="data" id="main" class="blog">
+  <main v-if="data" class="blog">
     <article vocab="https://schema.org/" typeof="Article">
       <div property="mainEntityOfPage" typeof="WebPage">
         <meta property="id" :content="`${config.public.baseURL}${path}`">
