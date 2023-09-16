@@ -18,7 +18,6 @@ useSeoMeta({
   ogType: 'website',
   ogUrl: () => `${config.public.baseURL}${route.path}`,
   ogImage: () => locale.value === 'ar' ? `${config.public.baseURL}/images/univerweb-ar.jpg` : `${config.public.baseURL}/images/univerweb.jpg`,
-  themeColor: '#28285a',
 })
 
 useHead({
