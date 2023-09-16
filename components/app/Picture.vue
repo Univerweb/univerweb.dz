@@ -21,7 +21,6 @@ const { locale } = useI18n()
 </script>
 
 <template>
-  <!-- format="avif,webp" -->
   <NuxtPicture
     :src="locale === 'fr' ? `${post._path}_${type}.${ext}` : `${post._path}_${type}.${ext}`.slice(3)"
     :alt="alt || post.description"
