@@ -35,7 +35,7 @@ const { path } = useRoute()
     </div>
 
     <ContentList v-slot="{ list }" :path="path" :sort="{ _id: -1 }" :limit="limit">
-      <div class="details details-card">
+      <div class="card">
         <Component :is="listItem" v-for="article in (list as Post[])" :key="article._path" :post="article" :title-tag="titleTag" />
       </div>
     </ContentList>
@@ -50,7 +50,8 @@ const { path } = useRoute()
 </template>
 
 <style lang="scss">
-.details-card {
+.card {
+  display: grid;
   grid-template-columns: 1fr;
 
   @media (min-width: $sm) {
@@ -67,8 +68,7 @@ const { path } = useRoute()
     gap: 24px;
   }
 
-  .item {
-    grid-column: initial;
+  a {
     overflow: hidden;
     z-index: 1;
     border-radius: 12px;
