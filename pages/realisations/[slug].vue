@@ -67,7 +67,7 @@ useHead({
         </h1>
       </div>
 
-      <AppPicture :post="data" />
+      <AppPicture :post="data" ext="png" />
 
       <div class="container client">
         <div class="details">
