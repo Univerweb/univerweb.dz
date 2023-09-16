@@ -27,8 +27,8 @@ devDependencies:
     specifier: 8.0.0-rc.4
     version: 8.0.0-rc.4(vue@3.3.4)
   '@types/google.maps':
-    specifier: ^3.54.0
-    version: 3.54.0
+    specifier: ^3.54.1
+    version: 3.54.1
   '@vueuse/nuxt':
     specifier: ^10.4.1
     version: 10.4.1(nuxt@3.7.3)(vue@3.3.4)
@@ -2442,8 +2442,8 @@ packages:
     resolution: {integrity: sha512-LG4opVs2ANWZ1TJoKc937iMmNstM/d0ae1vNbnBvBhqCSezgVUOzcLCqbI5elV8Vy6WKwKjaqR+zO9VKirBBCA==}
     dev: true
 
-  /@types/google.maps@3.54.0:
-    resolution: {integrity: sha512-b1MBy2eGrZoEFLnzq1RrlHbfzuWHz+Nitgqbb5N+MFA0kAUv0kYPmAXtczpb4dHlFZyu58EYzcKXtWNqSInyXg==}
+  /@types/google.maps@3.54.1:
+    resolution: {integrity: sha512-zh6333O/yPfcvRxpBTjnNFJjiHiujvy+tTAWwvNj3LMy90Y+VLTom8n9gvmgjXhOHgHvYpgO2Xyz31wYEYN27A==}
     dev: true
 
   /@types/hast@2.3.5:
@@ -4488,7 +4488,7 @@ packages:
     dependencies:
       debug: 3.2.7
       is-core-module: 2.13.0
-      resolve: 1.22.5
+      resolve: 1.22.6
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -4574,7 +4574,7 @@ packages:
       get-tsconfig: 4.7.0
       is-glob: 4.0.3
       minimatch: 3.1.2
-      resolve: 1.22.5
+      resolve: 1.22.6
       semver: 7.5.4
     transitivePeerDependencies:
       - '@typescript-eslint/parser'
@@ -7638,7 +7638,7 @@ packages:
     resolution: {integrity: sha512-/5CMN3T0R4XTj4DcGaexo+roZSdSFW/0AOOTROrjxzCG1wrWXEsGbRKevjlIL+ZDE4sZlJr5ED4YW0yqmkK+eA==}
     dependencies:
       hosted-git-info: 2.8.9
-      resolve: 1.22.5
+      resolve: 1.22.6
       semver: 5.7.2
       validate-npm-package-license: 3.0.4
     dev: true
@@ -9024,6 +9024,15 @@ packages:
 
   /resolve@1.22.5:
     resolution: {integrity: sha512-qWhv7PF1V95QPvRoUGHxOtnAlEvlXBylMZcjUR9pAumMmveFtcHJRXGIr+TkjfNJVQypqv2qcDiiars2y1PsSg==}
+    hasBin: true
+    dependencies:
+      is-core-module: 2.13.0
+      path-parse: 1.0.7
+      supports-preserve-symlinks-flag: 1.0.0
+    dev: true
+
+  /resolve@1.22.6:
+    resolution: {integrity: sha512-njhxM7mV12JfufShqGy3Rz8j11RPdLy4xi15UurGJeoHLfJpVXKdh3ueuOqbYUcDZnffr6X739JBo5LzyahEsw==}
     hasBin: true
     dependencies:
       is-core-module: 2.13.0
