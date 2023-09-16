@@ -78,7 +78,9 @@ useHead({
     <NuxtLoadingIndicator color="repeating-linear-gradient(to right, #28285a 0%, #50c8f0 100%)" />
     <TheSkiplinks />
     <TheHeader id="header" />
-    <NuxtPage id="main" :transition="{ name: 'page', mode: 'out-in', onBeforeEnter }" />
+    <NuxtLayout>
+      <NuxtPage id="main" :transition="{ name: 'page', mode: 'out-in', onBeforeEnter }" />
+    </NuxtLayout>
     <LazyTheFooter id="footer" />
   </div>
 </template>
