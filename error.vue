@@ -1,22 +1,20 @@
 <script setup lang="ts">
-import type { Error } from './types'
-
-defineProps<{
-  error: Error
+const props = defineProps<{
+  error: { statusCode: number }
 }>()
 
 const { t } = useI18n()
 
 const handleError = () => clearError({ redirect: '/' })
+
+useSeoMeta({
+  title: `${props.error.statusCode} —  ${t('name')}`,
+  robots: { noindex: true, follow: true },
+})
 </script>
 
 <template>
   <main class="container error">
-    <Head>
-      <Title>{{ error.statusCode }} — {{ t('name') }}</Title>
-      <Meta name="robots" content="noindex, follow" />
-    </Head>
-
     <h1>
       {{ t('error.headline') }}
     </h1>

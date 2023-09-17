@@ -12,11 +12,3 @@ export interface Nav {
   _path?: string
   title?: string
 }
-
-export interface Error {
-  url: string
-  statusCode: number
-  statusMessage: string
-  message: string
-  stack: string
-}
