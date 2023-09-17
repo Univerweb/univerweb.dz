@@ -4,8 +4,8 @@ export interface Post extends MarkdownParsedContent {
   createdAt: Date
   updatedAt: Date
   tags: string[]
-  industry?: string
-  link?: string
+  industry: string
+  link: string
 }
 
 export interface Nav {
