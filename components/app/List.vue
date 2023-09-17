@@ -9,9 +9,10 @@ export interface Props {
   listItem?: string
   more?: boolean
   titleTag?: string
+  posts?: Post[]
 }
 
-withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<Props>(), {
   slug: 'realisations',
   limit: 0,
   headlineTag: 'h1',
@@ -24,6 +25,14 @@ withDefaults(defineProps<Props>(), {
 const { t } = useI18n()
 const localePath = useLocalePath()
 const { path } = useRoute()
+
+const { data: posts } = await useAsyncData('works', () =>
+  queryContent<Post>(path)
+    .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'body'])
+    .sort({ _id: -1 })
+    .limit(props.limit)
+    .find(),
+)
 </script>
 
 <template>
@@ -34,11 +43,9 @@ const { path } = useRoute()
       </Component>
     </div>
 
-    <ContentList v-slot="{ list }" :path="path" :sort="{ _id: -1 }" :limit="limit">
-      <div class="card">
-        <Component :is="listItem" v-for="article in (list as Post[])" :key="article._path" :post="article" :title-tag="titleTag" />
-      </div>
-    </ContentList>
+    <div class="card">
+      <Component :is="listItem" v-for="post in posts" :key="post._path" :post="post" :title-tag="titleTag" />
+    </div>
 
     <div v-if="more" class="more">
       <NuxtLink :to="localePath(slug)" class="btn">
