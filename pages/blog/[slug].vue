@@ -9,6 +9,7 @@ const { path, params: { slug } } = useRoute()
 
 const { data: post } = await useAsyncData(`content-${path}`, () =>
   queryContent<Post>()
+    .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'body'])
     .where({ _path: path })
     .findOne(),
 )
