@@ -2,7 +2,7 @@
 import type { Post } from '../../types'
 
 export interface Props {
-  post: Post
+  post: Pick<Post, '_path' | 'description'>
   type?: string
   ext?: string
   alt?: string
