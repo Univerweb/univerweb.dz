@@ -2,7 +2,6 @@
 import type { Post } from '../../types'
 
 export interface Props {
-  slug?: string
   limit?: number
   headlineTag?: string
   headline?: string
@@ -13,7 +12,6 @@ export interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  slug: 'realisations',
   limit: 0,
   headlineTag: 'h1',
   headline: 'works.headline',
@@ -23,7 +21,6 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const { t } = useI18n()
-const localePath = useLocalePath()
 const { path } = useRoute()
 
 const { data: posts } = await useAsyncData('works', () =>
@@ -36,7 +33,7 @@ const { data: posts } = await useAsyncData('works', () =>
 </script>
 
 <template>
-  <section :id="slug" class="container">
+  <section class="container">
     <div class="intro">
       <Component :is="headlineTag" class="h1">
         {{ t(headline) }}
@@ -47,12 +44,7 @@ const { data: posts } = await useAsyncData('works', () =>
       <Component :is="listItem" v-for="post in posts" :key="post._path" :post="post" :title-tag="titleTag" />
     </div>
 
-    <div v-if="more" class="more">
-      <NuxtLink :to="localePath(slug)" class="btn">
-        {{ t('home.more') }}
-        <NuxtIcon name="arrow" />
-      </NuxtLink>
-    </div>
+    <LazyAppMore v-if="more" />
   </section>
 </template>
 
@@ -146,24 +138,6 @@ const { data: posts } = await useAsyncData('works', () =>
 
     &:hover p {
       transform: translateY(0);
-    }
-  }
-}
-
-.more {
-  display: grid;
-  margin-top: 48px;
-
-  .btn {
-    justify-self: end;
-
-    .arrow {
-      height: 8px;
-      transform: rotate(-90deg);
-
-      [lang='ar-DZ'] & {
-        transform: rotate(90deg);
-      }
     }
   }
 }
