@@ -2,27 +2,32 @@
 import type { Post } from '../../types'
 
 const localePath = useLocalePath()
-const { locale, t } = useI18n()
+const { t } = useI18n()
 const breadcrumb = useBreadcrumb()
 const config = useRuntimeConfig()
 const { path, params: { slug } } = useRoute()
 
-const { data } = await useAsyncData(
-  `content-${path}`,
-  () => queryContent<Post>().where({ _path: path }).findOne(),
+const { data: post } = await useAsyncData(`content-${path}`, () =>
+  queryContent<Post>()
+    .where({ _path: path })
+    .findOne(),
 )
 
-if (!data.value)
-  throw createError({ statusCode: 404, statusMessage: 'Page Not Found' })
+if (!post.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: 'Page Not Found',
+  })
+}
 
-const [prev, next] = await queryContent('realisations', locale.value)
+const [prev, next] = await queryContent<Post>()
   .only(['_path', 'title'])
   .findSurround({ _path: path })
 
 useSeoMeta({
-  title: data.value?.title,
-  description: data.value?.description,
-  ogTitle: data.value?.title,
+  title: post.value?.title,
+  description: post.value?.description,
+  ogTitle: post.value?.title,
   ogType: 'article',
   ogImage: `${config.public.baseURL}/_ipx/w_1536&f_jpg&q_80/realisations/${slug}_banner.jpg`,
 })
@@ -37,7 +42,7 @@ useHead({
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': t('name'), 'item': breadcrumb },
           { '@type': 'ListItem', 'position': 2, 'name': t('works.title'), 'item': `${config.public.baseURL}${localePath('realisations')}` },
-          { '@type': 'ListItem', 'position': 3, 'name': data.value?.title },
+          { '@type': 'ListItem', 'position': 3, 'name': post.value?.title },
         ],
       },
     },
@@ -46,28 +51,28 @@ useHead({
 </script>
 
 <template>
-  <main v-if="data" class="work">
+  <main v-if="post" class="work">
     <article vocab="https://schema.org/" typeof="Article">
       <div property="mainEntityOfPage" typeof="WebPage">
         <meta property="id" :content="`${config.public.baseURL}${path}`">
       </div>
-      <time property="dateCreated datePublished" :datetime="data.createdAt.toString()" />
-      <time property="dateModified" :datetime="data.updatedAt.toString()" />
+      <time property="dateCreated datePublished" :datetime="post.createdAt.toString()" />
+      <time property="dateModified" :datetime="post.updatedAt.toString()" />
       <div property="author publisher" typeof="Organization">
         <meta property="name" :content="t('name')">
         <meta property="url" :content="config.public.baseURL">
       </div>
       <meta property="articleSection" :content="t('works.title')">
-      <meta property="description" :content="data.description">
+      <meta property="description" :content="post.description">
 
       <div class="container intro">
         <AppBack path="realisations" menu="menu.realisations" />
         <h1 property="headline">
-          {{ data.title }}
+          {{ post.title }}
         </h1>
       </div>
 
-      <AppPicture :post="data" ext="png" />
+      <AppPicture :post="post" ext="png" />
 
       <div class="container client">
         <div class="details">
@@ -76,7 +81,7 @@ useHead({
               {{ t('work.client') }}
             </h2>
             <p class="lead">
-              {{ data.title }}
+              {{ post.title }}
             </p>
           </div>
           <div class="item">
@@ -84,7 +89,7 @@ useHead({
               {{ t('work.features') }}
             </h2>
             <ul class="lead tags">
-              <li v-for="tag in data.tags" :key="tag" property="keywords">
+              <li v-for="tag in post.tags" :key="tag" property="keywords">
                 {{ tag }}
               </li>
             </ul>
@@ -94,7 +99,7 @@ useHead({
               {{ t('work.industry') }}
             </h2>
             <p class="lead">
-              {{ data.industry }}
+              {{ post.industry }}
             </p>
           </div>
         </div>
@@ -105,22 +110,22 @@ useHead({
           <div class="item">
             <div class="inner">
               <ContentRendererMarkdown
-                :value="data"
+                :value="post"
                 :components="{ p: 'span' }"
                 tag="p"
                 property="articleBody"
                 class="lead"
               />
-              <a v-if="data.link" :href="data.link" class="link">{{ t('work.visit') }}</a>
+              <a v-if="post.link" :href="post.link" class="link">{{ t('work.visit') }}</a>
               <p v-else>
                 {{ t('work.state') }}
               </p>
             </div>
           </div>
           <AppPicture
-            :post="data"
+            :post="post"
             type="preview"
-            :alt="`${t('work.alt')} ${data.title}`"
+            :alt="`${t('work.alt')} ${post.title}`"
             sizes="xs:288px sm:607px md:719px lg:619px xl:1280px"
             class-name="item"
             :img-attrs="null"
