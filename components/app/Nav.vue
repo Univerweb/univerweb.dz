@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { Nav } from '../../types'
+import type { Post } from '../../types'
 
 defineProps<{
-  prev?: Nav
-  next?: Nav
+  prev?: Pick<Post, '_path' | 'title'>
+  next?: Pick<Post, '_path' | 'title'>
 }>()
 
 const localePath = useLocalePath()

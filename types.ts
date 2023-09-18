@@ -7,8 +7,3 @@ export interface Post extends MarkdownParsedContent {
   industry: string
   link: string
 }
-
-export interface Nav {
-  _path?: string
-  title?: string
-}
