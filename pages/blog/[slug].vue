@@ -82,7 +82,7 @@ useHead({
             <meta property="name" :content="t('name')">
             <meta property="url" :content="config.public.baseURL">
           </span>
-          <ul>
+          <ul class="tags">
             <li v-for="tag in post.tags" :key="tag" property="keywords">
               {{ tag }}
             </li>
@@ -125,11 +125,8 @@ useHead({
     ul {
       position: relative;
       display: inline-flex;
-      gap: 6px;
-      margin-block: 0;
       margin-inline-start: 12px;
       padding-inline-start: 12px;
-      list-style: none;
 
       &::before {
         content: "";
