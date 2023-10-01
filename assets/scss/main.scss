@@ -319,6 +319,12 @@ button {
     &:last-child {
       margin-inline-end: 0;
     }
+
+    &:before {
+      content: '#';
+      color: $primary;
+      margin-inline-end: 3px;
+    }
   }
 }
 
