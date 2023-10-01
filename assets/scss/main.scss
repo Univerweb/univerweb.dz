@@ -320,7 +320,7 @@ button {
       margin-inline-end: 0;
     }
 
-    &:before {
+    &::before {
       content: '#';
       color: $primary;
       margin-inline-end: 3px;
