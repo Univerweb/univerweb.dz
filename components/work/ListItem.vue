@@ -30,8 +30,6 @@ const localePath = useLocalePath()
         :post="post"
         type="thumbnail"
         :img-attrs="{ property: 'image' }"
-        width="588"
-        height="624"
         sizes="xs:288px sm:607px md:354px lg:456px xl:588px"
         class-name="thumbnail"
       />

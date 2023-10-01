@@ -48,4 +48,14 @@ picture {
     height: auto;
   }
 }
+
+.thumbnail {
+  aspect-ratio: 49 / 52;
+
+  img {
+    position: absolute;
+    inset: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
 </style>
