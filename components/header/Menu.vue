@@ -24,7 +24,7 @@ const show = useShow()
   padding: 48px 0 0;
 
   @media screen and (orientation: landscape) {
-    padding-top: 24px;
+    padding-top: 0;
   }
 
   @media (min-width: $lg) {

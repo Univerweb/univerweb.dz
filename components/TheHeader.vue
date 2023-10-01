@@ -76,9 +76,15 @@ header {
 
   .show & {
     display: grid;
+    grid-template-rows: 1fr auto;
+    align-items: start;
     height: 100%;
     opacity: 1;
     pointer-events: auto;
+
+    @media screen and (orientation: landscape) {
+      align-items: center;
+    }
   }
 
   @media (min-width: $lg) {
@@ -95,7 +101,7 @@ header {
 
 .switchers {
   display: flex;
-  column-gap: 12px;
+  column-gap: 16px;
 
   .switcher {
     position: relative;
