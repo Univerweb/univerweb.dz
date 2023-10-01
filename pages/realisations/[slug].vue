@@ -197,24 +197,42 @@ useHead({
   .project {
     padding-top: 0;
 
-    @media (min-width: $md) {
-      .item:nth-child(1) {
+    .item:nth-child(1) {
+      @media (min-width: $md) {
         grid-column: 1 / 4;
-      }
 
-      .item:nth-child(2) {
-        grid-column: 5 / 13;
-      }
-
-      .inner {
-        position: sticky;
-        top: 120px;
+        .inner {
+          position: sticky;
+          top: 120px;
+        }
       }
     }
 
-    picture img {
-      border-radius: 0.25rem;
-      box-shadow: 0 0 40px 0 rgba(0 0 0 / 10%);
+    .item:nth-child(2) {
+      aspect-ratio: 3 / 2;
+      padding: 40px;
+      overflow-y: scroll;
+
+      @media (min-width: $md) {
+        grid-column: 5 / 13;
+      }
+
+      &::-webkit-scrollbar {
+        width: 6px;
+
+        &-thumb {
+          background-color: var(--secondary);
+        }
+
+        &-track {
+          background-color: var(--primary);
+        }
+      }
+
+      img {
+        border-radius: 0.25rem;
+        box-shadow: 0 0 40px 0 rgba(0 0 0 / 10%);
+      }
     }
   }
 }
