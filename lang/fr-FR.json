@@ -74,8 +74,8 @@
       "content": "Un mélange savant et millimétré entre design attrayant, charte graphique respectée et expérience utilisateur au top des priorités. Nous trouverons pour vous l'équilibre parfait.",
       "tags": [
         "Responsive",
-        "DonnéesStructurées",
-        "HtmlValide",
+        "Données structurées",
+        "Html valide",
         "Accessibilité"
       ]
     },
@@ -85,8 +85,8 @@
       "tags": [
         "CMS",
         "Drupal",
-        "ApplicationMobile",
-        "NuxtJS"
+        "Application mobile",
+        "Nuxt"
       ]
     },
     "support": {
@@ -95,7 +95,7 @@
       "tags": [
         "HTTPS",
         "HTTP/2",
-        "SauvegardeComplète"
+        "Sauvegarde complète"
       ]
     }
   },

@@ -74,8 +74,8 @@
       "content": "A clever and precise mix of attractive design, respected graphic charter and user experience at the top of the priorities. We will find the perfect balance for you.",
       "tags": [
         "Responsive",
-        "StructuredData",
-        "ValidHTML",
+        "Structured data",
+        "Valid HTML",
         "Accessibility"
       ]
     },
@@ -85,8 +85,8 @@
       "tags": [
         "CMS",
         "Drupal",
-        "MobileApp",
-        "NuxtJS"
+        "Mobile app",
+        "Nuxt"
       ]
     },
     "support": {
@@ -95,7 +95,7 @@
       "tags": [
         "HTTPS",
         "HTTP/2",
-        "FullBackup"
+        "Full backup"
       ]
     }
   },
