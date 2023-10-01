@@ -22,8 +22,7 @@ const localePath = useLocalePath()
 
       <AppPicture
         :post="post"
-        width="588"
-        height="624"
+        type="thumbnail"
         sizes="xs:288px sm:607px md:354px lg:456px xl:588px"
         class-name="thumbnail"
       />
