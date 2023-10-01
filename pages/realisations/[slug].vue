@@ -86,7 +86,7 @@ useHead({
           </div>
           <div class="item">
             <h2 class="h6">
-              {{ t('work.features') }}
+              {{ t('work.services') }}
             </h2>
             <ul class="lead tags">
               <li v-for="tag in post.tags" :key="tag" property="keywords">
