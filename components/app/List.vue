@@ -28,8 +28,7 @@ const { data: posts } = await useAsyncData('works', () =>
     .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'body'])
     .sort({ _id: -1 })
     .limit(props.limit)
-    .find(),
-)
+    .find())
 </script>
 
 <template>
