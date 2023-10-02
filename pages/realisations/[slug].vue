@@ -9,7 +9,7 @@ const { path, params: { slug } } = useRoute()
 
 const { data: post } = await useAsyncData(`content-${path}`, () =>
   queryContent<Work>()
-    .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'industry', 'link', 'body'])
+    .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'category', 'link', 'body'])
     .where({ _path: path })
     .findOne() as Promise<Work>)
 
@@ -96,10 +96,10 @@ useHead({
           </div>
           <div class="item">
             <h2 class="h6">
-              {{ t('work.industry') }}
+              {{ t('work.category') }}
             </h2>
             <p class="lead">
-              {{ post.industry }}
+              {{ post.category }}
             </p>
           </div>
         </div>

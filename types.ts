@@ -7,6 +7,6 @@ export interface Post extends MarkdownParsedContent {
 }
 
 export interface Work extends Post {
-  industry: string
+  category: string
   link: string
 }
