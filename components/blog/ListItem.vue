@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { Post } from '../../types'
+import type { Blog } from '../../types'
 
 const { post } = defineProps<{
-  post: Post
+  post: Blog
   titleTag: string
 }>()
 
