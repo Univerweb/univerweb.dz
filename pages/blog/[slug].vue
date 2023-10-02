@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Post } from '../../types'
+import type { Blog } from '../../types'
 
 const localePath = useLocalePath()
 const { locale, t } = useI18n()
@@ -8,10 +8,10 @@ const config = useRuntimeConfig()
 const { path, params: { slug } } = useRoute()
 
 const { data: post } = await useAsyncData(`content-${path}`, () =>
-  queryContent<Post>()
+  queryContent<Blog>()
     .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'body'])
     .where({ _path: path })
-    .findOne() as Promise<Post>)
+    .findOne() as Promise<Blog>)
 
 if (!post.value) {
   throw createError({
@@ -20,14 +20,14 @@ if (!post.value) {
   })
 }
 
-const [prev, next] = await queryContent<Post>()
+const [prev, next] = await queryContent<Blog>()
   .only(['_path', 'title'])
-  .findSurround({ _path: path })
+  .findSurround(path)
 
 useSeoMeta({
-  title: post.value?.title,
-  description: post.value?.description,
-  ogTitle: post.value?.title,
+  title: post.value.title,
+  description: post.value.description,
+  ogTitle: post.value.title,
   ogType: 'article',
   ogImage: `${config.public.baseURL}/_ipx/w_1536&f_jpg&q_80/blog/${slug}_banner.jpg`,
 })
@@ -42,7 +42,7 @@ useHead({
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': t('name'), 'item': breadcrumb },
           { '@type': 'ListItem', 'position': 2, 'name': t('blog.title'), 'item': `${config.public.baseURL}${localePath('blog')}` },
-          { '@type': 'ListItem', 'position': 3, 'name': post.value?.title },
+          { '@type': 'ListItem', 'position': 3, 'name': post.value.title },
         ],
       },
     },
