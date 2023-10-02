@@ -21,7 +21,7 @@ onMounted(async () => {
     zoom: 14,
     streetViewControl: false,
     center,
-    backgroundColor: '#fafafa',
+    backgroundColor: 'var(--light)',
   }
 
   map.value = new google.maps.Map(
@@ -114,7 +114,8 @@ useHead({
 #map {
   width: 100%;
   height: 720px;
-  background-color: #fafafa;
+  background-color: var(--light);
+  transition: background-color $transition;
 }
 
 .other {

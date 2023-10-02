@@ -11,6 +11,7 @@ $secondary: #28285a;
 $white: #fff;
 $light: #fafafa;
 $dark: #091a28;
+$semi-dark: #1c2731;
 $font: 'Sofia Pro Light', 'Almarai Regular', Arial;
 $font-medium: 'Sofia Pro Medium', 'Almarai Bold', Arial;
 $transition: 0.3s linear;
@@ -22,6 +23,7 @@ $animation: 0.5s forwards;
   --text-secondary: #{$text-secondary};
   --primary: #{$primary};
   --secondary: #{$secondary};
+  --light: #{$light};
   --font: #{$font};
   --font-medium: #{$font-medium};
 }
@@ -32,4 +34,5 @@ $animation: 0.5s forwards;
   --text-secondary: #{$white};
   --primary: #{$secondary};
   --secondary: #{$primary};
+  --light: #{$semi-dark};
 }

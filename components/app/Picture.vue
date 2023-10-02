@@ -36,12 +36,8 @@ const { locale } = useI18n()
 <style lang="scss">
 picture {
   display: grid;
-  background-color: $light;
+  background-color: var(--light);
   transition: background-color $transition;
-
-  .dark-mode & {
-    background-color: $text-secondary;
-  }
 
   img {
     width: 100%;
