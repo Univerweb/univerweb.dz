@@ -5,18 +5,14 @@ const { t } = useI18n()
 const breadcrumb = useBreadcrumb()
 const config = useRuntimeConfig()
 
-const map = ref<google.maps.Map | null>(null)
-const marker = ref<google.maps.Marker | null>(null)
-const center: google.maps.LatLngLiteral = { lat: 36.721043, lng: 3.047502 }
-
 onMounted(async () => {
   const loader = new Loader({
     apiKey: config.public.apiKey,
     version: 'weekly',
   })
-  await loader.importLibrary('maps')
 
-  const mapOptions: google.maps.MapOptions = {
+  const center = { lat: 36.721043, lng: 3.047502 }
+  const mapOptions = {
     mapId: '101a5bf427dc0726',
     zoom: 14,
     streetViewControl: false,
@@ -24,14 +20,12 @@ onMounted(async () => {
     backgroundColor: 'var(--light)',
   }
 
-  map.value = new google.maps.Map(
-    document.getElementById('map') as HTMLElement,
-    mapOptions,
-  )
+  const { Map } = await loader.importLibrary('maps')
+  const map = new Map(document.getElementById('map') as HTMLElement, mapOptions)
 
-  marker.value = new google.maps.Marker({
+  const marker = new google.maps.Marker({
+    map,
     position: center,
-    map: map.value,
     icon: {
       path: google.maps.SymbolPath.CIRCLE,
       fillColor: '#50c8f0',
@@ -41,9 +35,9 @@ onMounted(async () => {
     },
   })
 
-  marker.value.addListener('click', () => {
-    map.value?.setZoom(16)
-    map.value?.setCenter(marker.value?.getPosition() as google.maps.LatLng)
+  marker.addListener('click', () => {
+    map.setZoom(16)
+    map.setCenter(marker.getPosition() as google.maps.LatLng)
   })
 })
 
