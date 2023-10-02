@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Post } from '../../types'
+import type { Work } from '../../types'
 
 const localePath = useLocalePath()
 const { t } = useI18n()
@@ -8,10 +8,10 @@ const config = useRuntimeConfig()
 const { path, params: { slug } } = useRoute()
 
 const { data: post } = await useAsyncData(`content-${path}`, () =>
-  queryContent<Post>()
+  queryContent<Work>()
     .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'industry', 'link', 'body'])
     .where({ _path: path })
-    .findOne() as Promise<Post>)
+    .findOne() as Promise<Work>)
 
 if (!post.value) {
   throw createError({
@@ -20,7 +20,7 @@ if (!post.value) {
   })
 }
 
-const [prev, next] = await queryContent<Post>()
+const [prev, next] = await queryContent<Work>()
   .only(['_path', 'title'])
   .findSurround(path)
 
