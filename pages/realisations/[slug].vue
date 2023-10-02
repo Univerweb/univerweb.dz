@@ -22,12 +22,12 @@ if (!post.value) {
 
 const [prev, next] = await queryContent<Post>()
   .only(['_path', 'title'])
-  .findSurround({ _path: path })
+  .findSurround(path)
 
 useSeoMeta({
-  title: post.value?.title,
-  description: post.value?.description,
-  ogTitle: post.value?.title,
+  title: post.value.title,
+  description: post.value.description,
+  ogTitle: post.value.title,
   ogType: 'article',
   ogImage: `${config.public.baseURL}/_ipx/w_1536&f_jpg&q_80/realisations/${slug}_banner.jpg`,
 })
@@ -42,7 +42,7 @@ useHead({
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': t('name'), 'item': breadcrumb },
           { '@type': 'ListItem', 'position': 2, 'name': t('works.title'), 'item': `${config.public.baseURL}${localePath('realisations')}` },
-          { '@type': 'ListItem', 'position': 3, 'name': post.value?.title },
+          { '@type': 'ListItem', 'position': 3, 'name': post.value.title },
         ],
       },
     },
