@@ -39,7 +39,7 @@ const { data: posts } = await useAsyncData('works', () =>
       </Component>
     </div>
 
-    <div class="card">
+    <div class="list-card">
       <Component :is="listItem" v-for="post in posts" :key="post._path" :post="post" :title-tag="titleTag" />
     </div>
 
@@ -48,7 +48,7 @@ const { data: posts } = await useAsyncData('works', () =>
 </template>
 
 <style lang="scss">
-.card {
+.list-card {
   display: grid;
   grid-template-columns: 1fr;
 
@@ -74,70 +74,70 @@ const { data: posts } = await useAsyncData('works', () =>
     @media (min-width: $xl) {
       border-radius: 24px;
     }
+  }
 
-    article {
-      display: grid;
-      position: relative;
-    }
+  article {
+    display: grid;
+    position: relative;
+  }
 
-    .overlay {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: $text-primary;
-      opacity: 0.1;
-      transition: opacity $transition;
-    }
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $text-primary;
+    opacity: 0.1;
+    transition: opacity $transition;
+  }
 
-    &:hover .overlay {
-      opacity: 0.6;
-    }
+  a:hover .overlay {
+    opacity: 0.6;
+  }
 
-    .inner {
-      display: grid;
-      grid-auto-rows: auto 1fr;
-      position: absolute;
-      height: 100%;
-      color: $white;
+  .inner {
+    display: grid;
+    grid-auto-rows: auto 1fr;
+    position: absolute;
+    height: 100%;
+    color: $white;
+    padding: 24px;
+
+    @media (min-width: $md) {
       padding: 24px;
-
-      @media (min-width: $md) {
-        padding: 24px;
-      }
-
-      @media (min-width: $lg) {
-        padding: 36px;
-        grid-auto-rows: auto auto 1fr;
-      }
-
-      @media (min-width: $xl) {
-        padding: 48px;
-      }
     }
 
-    h2,
-    h3 {
-      @include size(32);
-
-      margin-bottom: 12px;
+    @media (min-width: $lg) {
+      padding: 36px;
+      grid-auto-rows: auto auto 1fr;
     }
 
-    p {
-      display: none;
+    @media (min-width: $xl) {
+      padding: 48px;
+    }
+  }
 
-      @media (min-width: $lg) {
-        display: block;
-      }
+  h2,
+  h3 {
+    @include size(32);
 
-      color: $white;
-      align-self: end;
-      transform: translateY(calc(100% + 48px));
-      transition: transform $transition;
+    margin-bottom: 12px;
+  }
+
+  p {
+    display: none;
+
+    @media (min-width: $lg) {
+      display: block;
     }
 
-    &:hover p {
-      transform: translateY(0);
-    }
+    color: $white;
+    align-self: end;
+    transform: translateY(calc(100% + 48px));
+    transition: transform $transition;
+  }
+
+  a:hover p {
+    transform: translateY(0);
   }
 }
 </style>
