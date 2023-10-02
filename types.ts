@@ -1,8 +1,11 @@
 import type { MarkdownParsedContent } from '@nuxt/content/dist/runtime/types'
 
-export interface Post extends MarkdownParsedContent {
+interface Timestamps {
   createdAt: Date
   updatedAt: Date
+}
+
+export interface Post extends MarkdownParsedContent, Timestamps {
   tags: string[]
   industry: string
   link: string
