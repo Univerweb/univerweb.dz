@@ -39,7 +39,7 @@ const { data: posts } = await useAsyncData('works', () =>
       </Component>
     </div>
 
-    <div class="list-card">
+    <div class="card-group">
       <Component :is="card" v-for="post in posts" :key="post._path" :post="post" :title-tag="titleTag" />
     </div>
 
@@ -48,7 +48,7 @@ const { data: posts } = await useAsyncData('works', () =>
 </template>
 
 <style lang="scss">
-.list-card {
+.card-group {
   display: grid;
   grid-template-columns: 1fr;
 
@@ -66,7 +66,7 @@ const { data: posts } = await useAsyncData('works', () =>
     gap: 24px;
   }
 
-  a {
+  .card {
     overflow: hidden;
     z-index: 1;
     border-radius: 12px;
@@ -90,7 +90,7 @@ const { data: posts } = await useAsyncData('works', () =>
     transition: opacity $transition;
   }
 
-  a:hover .overlay {
+  .card:hover .overlay {
     opacity: 0.6;
   }
 
@@ -136,7 +136,7 @@ const { data: posts } = await useAsyncData('works', () =>
     transition: transform $transition;
   }
 
-  a:hover p {
+  .card:hover p {
     transform: translateY(0);
   }
 }
