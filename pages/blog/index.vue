@@ -28,7 +28,7 @@ useHead({
 
 <template>
   <main>
-    <AppList headline="blog.headline" list-item="BlogListItem" />
+    <AppCardGroup headline="blog.headline" card="BlogCard" />
     <LazyAppRequest />
   </main>
 </template>
