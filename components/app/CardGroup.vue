@@ -25,7 +25,7 @@ const { path } = useRoute()
 
 const { data: posts } = await useAsyncData('works', () =>
   queryContent<Post>(path)
-    .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'body'])
+    .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'body', 'category'])
     .sort({ _id: -1 })
     .limit(props.limit)
     .find())
@@ -102,6 +102,10 @@ const { data: posts } = await useAsyncData('works', () =>
     color: $white;
     padding: 24px;
 
+    &.work {
+      grid-auto-rows: auto auto 1fr;
+    }
+
     @media (min-width: $md) {
       padding: 24px;
     }
@@ -109,6 +113,10 @@ const { data: posts } = await useAsyncData('works', () =>
     @media (min-width: $lg) {
       padding: 36px;
       grid-auto-rows: auto auto 1fr;
+
+      &.work {
+        grid-auto-rows: auto auto auto 1fr;
+      }
     }
 
     @media (min-width: $xl) {
@@ -119,6 +127,12 @@ const { data: posts } = await useAsyncData('works', () =>
   h2,
   h3 {
     @include size(32);
+
+    &.work {
+      @media (min-width: $xl) {
+        @include size(56);
+      }
+    }
 
     margin-bottom: 12px;
   }

@@ -36,8 +36,11 @@ const localePath = useLocalePath()
 
       <div class="overlay" />
 
-      <div class="inner">
-        <Component :is="titleTag" property="headline">
+      <div class="inner work">
+        <span class="h3">
+          {{ post.category }}
+        </span>
+        <Component :is="titleTag" property="headline" class="work">
           {{ post.title }}
         </Component>
         <ul class="tags">
