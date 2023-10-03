@@ -42,6 +42,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-gtag',
     'nuxt-icons',
+    'nuxt-simple-sitemap',
   ],
 
   image: {
@@ -69,5 +70,10 @@ export default defineNuxtConfig({
 
   gtag: {
     id: process.env.GTAG_ID,
+  },
+
+  sitemap: {
+    autoLastmod: false,
+    xsl: false,
   },
 })
