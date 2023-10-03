@@ -8,7 +8,7 @@ function toggleDark() {
 </script>
 
 <template>
-  <button class="switcher" :aria-label="t(`colorMode.${color.preference}`)" @click="toggleDark">
+  <button class="switcher" :aria-label="t(`colorMode.${color.preference}`)" type="button" @click="toggleDark">
     <NuxtIcon v-if="color.preference === 'light'" name="dark" />
     <NuxtIcon v-else name="light" />
   </button>

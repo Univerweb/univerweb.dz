@@ -15,15 +15,15 @@ const localePath = useLocalePath()
   <NuxtLink :to="localePath(`${post._path}`)" class="card">
     <article vocab="https://schema.org/" typeof="Article">
       <div property="mainEntityOfPage" typeof="WebPage">
-        <meta property="id" :content="`${config.public.baseURL}${localePath(`${post._path}`)}`">
+        <span property="id" :content="`${config.public.baseURL}${localePath(`${post._path}`)}`" />
       </div>
-      <meta property="articleSection" :content="t('works.title')">
-      <meta property="description" :content="post.description">
+      <span property="articleSection" :content="t('works.title')" />
+      <span property="description" :content="post.description" />
       <time property="dateCreated datePublished" :datetime="post.createdAt.toString()" />
       <time property="dateModified" :datetime="post.updatedAt.toString()" />
       <div property="author publisher" typeof="Organization">
-        <meta property="name" :content="t('name')">
-        <meta property="url" :content="config.public.baseURL">
+        <span property="name" :content="t('name')" />
+        <span property="url" :content="config.public.baseURL" />
       </div>
 
       <AppPicture
