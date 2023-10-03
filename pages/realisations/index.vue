@@ -27,7 +27,7 @@ useHead({
 
 <template>
   <main>
-    <AppList />
+    <AppCardGroup />
     <LazyAppRequest />
   </main>
 </template>

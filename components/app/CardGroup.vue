@@ -5,7 +5,7 @@ export interface Props {
   limit?: number
   headlineTag?: string
   headline?: string
-  listItem?: string
+  card?: string
   more?: boolean
   titleTag?: string
   posts?: Post[]
@@ -15,7 +15,7 @@ const props = withDefaults(defineProps<Props>(), {
   limit: 0,
   headlineTag: 'h1',
   headline: 'works.headline',
-  listItem: 'WorkListItem',
+  card: 'WorkCard',
   titleTag: 'h2',
   more: false,
 })
@@ -40,7 +40,7 @@ const { data: posts } = await useAsyncData('works', () =>
     </div>
 
     <div class="list-card">
-      <Component :is="listItem" v-for="post in posts" :key="post._path" :post="post" :title-tag="titleTag" />
+      <Component :is="card" v-for="post in posts" :key="post._path" :post="post" :title-tag="titleTag" />
     </div>
 
     <LazyAppMore v-if="more" />
