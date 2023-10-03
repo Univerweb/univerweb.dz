@@ -54,10 +54,10 @@ useHead({
   <main v-if="post" class="blog">
     <article vocab="https://schema.org/" typeof="Article">
       <div property="mainEntityOfPage" typeof="WebPage">
-        <meta property="id" :content="`${config.public.baseURL}${path}`">
+        <span property="id" :content="`${config.public.baseURL}${path}`" />
       </div>
-      <meta property="articleSection" :content="t('blog.title')">
-      <meta property="description" :content="post.description">
+      <span property="articleSection" :content="t('blog.title')" />
+      <span property="description" :content="post.description" />
 
       <div class="container intro">
         <AppBack path="blog" menu="menu.blog" />
@@ -72,15 +72,15 @@ useHead({
           — {{ t('blog.by') }}
           <span v-if="post.author" property="author" typeof="Person" class="author">
             <span property="name">{{ post.author.name }}</span>
-            <meta property="url" :content="post.author.url">
+            <span property="url" :content="post.author.url" />
           </span>
           <span v-else property="author" typeof="Organization" class="author">
             <span property="name">{{ t('name') }}</span>
-            <meta property="url" :content="config.public.baseURL">
+            <span property="url" :content="config.public.baseURL" />
           </span>
           <span property="publisher" typeof="Organization">
-            <meta property="name" :content="t('name')">
-            <meta property="url" :content="config.public.baseURL">
+            <span property="name" :content="t('name')" />
+            <span property="url" :content="config.public.baseURL" />
           </span>
           <ul class="tags">
             <li v-for="tag in post.tags" :key="tag" property="keywords">
