@@ -37,7 +37,7 @@ const { data: posts } = await useAsyncData(`card-group-${path}`, () =>
       </Component>
     </div>
 
-    <div v-if="path === localePath('realisations')" class="card-group">
+    <div v-if="path !== localePath('blog')" class="card-group">
       <WorkCard v-for="post in (posts as Work[])" :key="post._path" :post="post" :title-tag="titleTag" />
     </div>
 
