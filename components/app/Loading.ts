@@ -66,7 +66,7 @@ export default defineComponent({
         width: 'auto',
         height: '3px',
         opacity: indicator.isLoading.value ? 1 : 0,
-        background: 'repeating-linear-gradient(to right, var(--secondary) 0%, var(--primary) 100%)',
+        background: 'repeating-linear-gradient(to right,#50c8f0 0%,#28285a 100%)',
         backgroundSize: indicator.progress.value === 0 ? 'auto' : `${(100 / indicator.progress.value) * 100}% auto`,
         transform: `scaleX(${indicator.progress.value / 100})`,
         transformOrigin: 'left',
