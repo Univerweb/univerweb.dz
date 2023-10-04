@@ -6,7 +6,7 @@ import { useRouter } from '#app/composables/router'
 import { globalMiddleware } from '#build/middleware'
 
 export default defineComponent({
-  name: 'NuxtLoadingIndicator',
+  name: 'AppLoading',
   props: {
     throttle: {
       type: Number,
