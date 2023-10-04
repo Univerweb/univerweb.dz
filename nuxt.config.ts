@@ -41,7 +41,6 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@vueuse/nuxt',
     'nuxt-gtag',
-    'nuxt-icons',
     'nuxt-simple-sitemap',
   ],
 

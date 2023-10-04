@@ -104,24 +104,17 @@ header {
   column-gap: 16px;
 
   .switcher {
-    position: relative;
+    display: grid;
+    align-items: center;
+    justify-content: center;
     background-color: transparent;
     color: var(--text-primary);
     transition: color $transition;
-    padding: 0;
-    width: 16px;
-    height: 16px;
+    width: 24px;
+    height: 24px;
 
     &:hover {
       color: $primary;
-    }
-
-    .nuxt-icon svg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 16px;
-      height: 16px;
     }
   }
 }

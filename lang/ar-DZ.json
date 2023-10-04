@@ -29,22 +29,18 @@
   "email": "البريد الإلكتروني",
   "socials": [
     {
-      "name": "twitter",
       "value": "انضم إلينا على تويتر",
       "url": "@:twitter"
     },
     {
-      "name": "facebook",
       "value": "انضم إلينا على فيس بوك",
       "url": "@:facebook"
     },
     {
-      "name": "linkedin",
       "value": "انضم إلينا على لينكد إن",
       "url": "@:linkedin"
     },
     {
-      "name": "github",
       "value": "انضم إلينا على جيت هاب",
       "url": "@:github"
     }

@@ -24,22 +24,18 @@
   "phoneLabel": "Téléphone / fax",
   "socials": [
     {
-      "name": "twitter",
       "value": "Rejoignez-nous sur Twitter",
       "url": "@:twitter"
     },
     {
-      "name": "facebook",
       "value": "Rejoignez-nous sur Facebook",
       "url": "@:facebook"
     },
     {
-      "name": "linkedin",
       "value": "Rejoignez-nous sur LinkedIn",
       "url": "@:linkedin"
     },
     {
-      "name": "github",
       "value": "Rejoignez-nous sur GitHub",
       "url": "@:github"
     }

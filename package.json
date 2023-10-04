@@ -26,7 +26,6 @@
     "eslint": "^8.50.0",
     "nuxt": "^3.7.4",
     "nuxt-gtag": "^1.1.1",
-    "nuxt-icons": "^3.2.1",
     "nuxt-simple-sitemap": "^3.3.5",
     "sass": "^1.68.0",
     "stylelint": "^15.10.3",
