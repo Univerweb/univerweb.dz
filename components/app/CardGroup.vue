@@ -1,27 +1,25 @@
 <script setup lang="ts">
-import type { Post } from '../../types'
+import type { Post, Work } from '../../types'
 
 export interface Props {
   limit?: number
   headlineTag?: string
   headline?: string
-  card?: string
   more?: boolean
   titleTag?: string
-  posts?: Post[]
 }
 
 const props = withDefaults(defineProps<Props>(), {
   limit: 0,
   headlineTag: 'h1',
   headline: 'works.headline',
-  card: 'WorkCard',
   titleTag: 'h2',
   more: false,
 })
 
 const { t } = useI18n()
 const { path } = useRoute()
+const localePath = useLocalePath()
 
 const { data: posts } = await useAsyncData(`card-group-${path}`, () =>
   queryContent<Post>(path)
@@ -39,8 +37,8 @@ const { data: posts } = await useAsyncData(`card-group-${path}`, () =>
       </Component>
     </div>
 
-    <div class="card-group">
-      <Component :is="card" v-for="post in posts" :key="post._path" :post="post" :title-tag="titleTag" />
+    <div v-if="path === localePath('realisations')" class="card-group">
+      <WorkCard v-for="post in (posts as Work[])" :key="post._path" :post="post" :title-tag="titleTag" />
     </div>
 
     <LazyAppMore v-if="more" />
