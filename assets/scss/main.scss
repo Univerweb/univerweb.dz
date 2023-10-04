@@ -1,3 +1,24 @@
+/* Var */
+:root {
+  --bg: #{$white};
+  --text-primary: #{$text-primary};
+  --text-secondary: #{$text-secondary};
+  --primary: #{$primary};
+  --secondary: #{$secondary};
+  --light: #{$light};
+  --font: #{$font};
+  --font-medium: #{$font-medium};
+}
+
+.dark-mode {
+  --bg: #{$dark};
+  --text-primary: #{$white};
+  --text-secondary: #{$white};
+  --primary: #{$secondary};
+  --secondary: #{$primary};
+  --light: #{$semi-dark};
+}
+
 /* Global */
 *,
 *::before,
