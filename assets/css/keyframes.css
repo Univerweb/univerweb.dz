@@ -179,27 +179,3 @@
     transform-origin: right;
   }
 }
-
-@keyframes show-icon {
-  from {
-    opacity: 0;
-    transform: scaleY(0);
-  }
-
-  to {
-    opacity: 1;
-    transform: scaleY(1);
-  }
-}
-
-@keyframes hide-icon {
-  from {
-    opacity: 1;
-    transform: scaleY(1);
-  }
-
-  to {
-    opacity: 0;
-    transform: scaleY(0);
-  }
-}
