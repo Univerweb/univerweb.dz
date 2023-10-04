@@ -75,10 +75,10 @@ useHead({
 
 <template>
   <div class="wrapper" :class="{ scrolled: y }">
-    <NuxtLoadingIndicator color="repeating-linear-gradient(to right, #28285a 0%, #50c8f0 100%)" />
     <TheSkiplinks />
     <TheHeader id="header" />
     <NuxtLayout>
+      <AppLoading />
       <NuxtPage id="main" :transition="{ name: 'page', mode: 'out-in', onBeforeEnter }" />
     </NuxtLayout>
     <LazyTheFooter id="footer" />
