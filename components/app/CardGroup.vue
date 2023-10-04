@@ -30,7 +30,7 @@ const { data: posts } = await useAsyncData(`card-group-${path}`, () =>
 </script>
 
 <template>
-  <section class="container">
+  <section :id="path !== localePath('blog') ? 'realisations' : 'blog'" class="container">
     <div class="intro">
       <Component :is="headlineTag" class="h1">
         {{ t(headline) }}
