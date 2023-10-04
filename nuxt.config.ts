@@ -68,9 +68,9 @@ export default defineNuxtConfig({
     skipSettingLocaleOnNavigate: true,
   },
 
-  gtag: {
-    id: process.env.GTAG_ID,
-  },
+  // gtag: {
+  //   id: process.env.GTAG_ID,
+  // },
 
   sitemap: {
     autoLastmod: false,
