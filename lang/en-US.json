@@ -24,8 +24,8 @@
   "phoneLabel": "Telephone / fax",
   "socials": [
     {
-      "value": "Join us on Twitter",
-      "url": "@:twitter"
+      "value": "Join us on X",
+      "url": "@:x"
     },
     {
       "value": "Join us on Facebook",

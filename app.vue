@@ -60,7 +60,7 @@ useHead({
         'email': config.public.baseEmail,
         'telephone': t('mobile'),
         'faxNumber': t('phone'),
-        'sameAs': [t('twitter'), t('facebook'), t('linkedin'), t('github')],
+        'sameAs': [t('x'), t('facebook'), t('linkedin'), t('github')],
         'address': {
           '@type': 'PostalAddress',
           'streetAddress': () => `${t('streetAddress')}${coma.value}${t('addressLocality')}`,

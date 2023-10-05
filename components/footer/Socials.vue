@@ -11,8 +11,8 @@ const { t, tm, rt } = useI18n()
   <ul class="socials">
     <li v-for="social in (tm('socials') as Socials[])" :key="rt(social.url)">
       <a :href="rt(social.url)">
-        <svg v-if="rt(social.url) === t('twitter')" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" role="img">
-          <path d="M21.5 7.1v.6c0 6.5-4.9 14-14 14-2.8 0-5.4-.8-7.6-2.2.4 0 .8.1 1.2.1 2.3 0 4.4-.8 6.1-2.1-2.2 0-4-1.5-4.6-3.4.3 0 .6.1.9.1.4 0 .9-.1 1.3-.2C2.7 13.5 1 11.6 1 9.2v-.1c.7.4 1.4.6 2.2.6C1.9 8.8 1 7.3 1 5.6c0-.9.2-1.8.7-2.5 2.4 3 6.1 4.9 10.1 5.1-.1-.4-.1-.7-.1-1.1 0-2.7 2.2-4.9 4.9-4.9 1.4 0 2.7.6 3.6 1.6 1.1-.2 2.2-.6 3.1-1.2-.4 1.1-1.1 2.1-2.2 2.7 1-.1 1.9-.4 2.8-.8-.6 1-1.4 1.9-2.4 2.6z" />
+        <svg v-if="rt(social.url) === t('x')" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" role="img">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
         </svg>
         <svg v-else-if="rt(social.url) === t('facebook')" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" role="img">
           <path d="M24 12.1C24 5.4 18.6 0 12 0S0 5.4 0 12.1c0 6 4.4 11 10.1 11.9v-8.4h-3v-3.5h3V9.4c0-3 1.8-4.7 4.5-4.7 1.4 0 2.7.3 2.7.3v3h-1.5c-1.5 0-2 .9-2 1.9v2.3h3.3l-.5 3.5h-2.8V24c5.8-.9 10.2-5.9 10.2-11.9z" />
