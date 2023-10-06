@@ -25,7 +25,7 @@ const { locale } = useI18n()
     :src="locale === 'fr' ? `${post._path}_${type}.${ext}` : `${post._path}_${type}.${ext}`.slice(3)"
     :alt="alt || post.description"
     :sizes="sizes"
-    format="avif"
+    format="avif,webp"
     quality="80"
     loading="lazy"
     :class="className"
