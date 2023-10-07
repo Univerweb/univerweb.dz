@@ -16,3 +16,13 @@ $font: 'Sofia Pro Light', 'Almarai Regular', Arial;
 $font-medium: 'Sofia Pro Medium', 'Almarai Bold', Arial;
 $transition: 0.3s linear;
 $animation: 0.5s forwards;
+
+@mixin size($number) {
+  font-size: #{$number + 'px'};
+  line-height: calc(($number + 4) / $number);
+}
+
+@mixin grid($number, $value) {
+  display: grid;
+  grid-template-columns: repeat($number, $value);
+}
