@@ -31,8 +31,8 @@ const { t, tm, rt } = useI18n()
 
 <style lang="scss">
 .socials {
-  display: grid;
-  grid-template-columns: repeat(4, auto);
+  @include grid(4, auto);
+
   justify-content: space-between;
   max-width: 210px;
 

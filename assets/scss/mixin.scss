@@ -2,3 +2,8 @@
   font-size: #{$number + 'px'};
   line-height: calc(($number + 4) / $number);
 }
+
+@mixin grid($number, $value) {
+  display: grid;
+  grid-template-columns: repeat($number, $value);
+}

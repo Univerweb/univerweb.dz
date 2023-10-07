@@ -99,8 +99,7 @@ main {
 
 /* Intro */
 .intro {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  @include grid(12, 1fr);
 
   * {
     grid-column: 1 / 13;
@@ -117,8 +116,8 @@ main {
 
 /* Details */
 .details {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  @include grid(12, 1fr);
+
   row-gap: 12px;
 
   @media (min-width: $xs) {

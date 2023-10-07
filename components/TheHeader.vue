@@ -25,8 +25,9 @@ header {
   width: 100%;
   top: 0;
   left: 0;
-  display: grid;
-  grid-template-columns: auto auto;
+
+  @include grid(2, auto);
+
   justify-content: space-between;
   align-items: center;
   background-color: var(--bg);

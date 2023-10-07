@@ -47,8 +47,7 @@ const { data: posts } = await useAsyncData(`card-group-${path}`, () =>
 
 <style lang="scss">
 .card-group {
-  display: grid;
-  grid-template-columns: 1fr;
+  @include grid(1, 1fr);
 
   @media (min-width: $sm) {
     grid-template-columns: 1fr 1fr;
