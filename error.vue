@@ -36,8 +36,7 @@ useSeoMeta({
   justify-items: center;
   align-content: center;
   margin-top: 0;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-block: 0;
   min-height: calc(100vh);
 
   .btn {
