@@ -31,8 +31,7 @@ const { t } = useI18n()
 .post-nav {
   display: grid;
   justify-content: space-between;
-  padding-top: 72px;
-  padding-bottom: 48px;
+  padding-block: 72px 48px;
   background-color: $primary;
   transition: background-color $transition;
 
