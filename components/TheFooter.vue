@@ -24,24 +24,10 @@ footer {
   justify-content: space-between;
   gap: 24px;
 
-  @media (min-width: $xs) {
-    padding: 32px 16px;
-    gap: 32px;
-  }
-
-  @media (min-width: $sm) {
-    padding: 48px 24px;
-    gap: 48px;
-  }
-
-  @media (min-width: $md) {
-    padding: 96px 48px;
-  }
-
-  @media (min-width: $lg) {
-    grid-template-columns: repeat(3, auto);
-    padding: 144px 96px;
-  }
+  @include media($xs, 32px, 16px, 32px);
+  @include media($sm, 48px, 24px, 48px);
+  @include media($md, 96px, 48px);
+  @include media($lg, 144px, 96px, $template-columns: repeat(3, auto));
 
   a:hover {
     color: $primary;

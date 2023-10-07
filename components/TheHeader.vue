@@ -35,29 +35,20 @@ header {
   transition: background-color $transition, padding $transition;
   z-index: 100;
 
-  .scrolled &:not(.show) {
-    box-shadow: 0 0 10px rgba(0 0 0 / 10%);
+  @include media($xs, 24px, 16px);
+  @include media($sm, 24px, 24px);
+  @include media($lg, 36px, 36px, $template-columns: auto 1fr);
 
-    .dark-mode & {
-      box-shadow: 0 0 10px rgba(255 255 255 / 10%);
+  .scrolled & {
+    &:not(.show) {
+      box-shadow: 0 0 10px rgba(0 0 0 / 10%);
+
+      .dark-mode & {
+        box-shadow: 0 0 10px rgba(255 255 255 / 10%);
+      }
     }
-  }
 
-  @media (min-width: $xs) {
-    padding: 24px 16px;
-  }
-
-  @media (min-width: $sm) {
-    padding: 24px;
-  }
-
-  @media (min-width: $lg) {
-    grid-template-columns: auto 1fr;
-    padding: 36px;
-
-    .scrolled & {
-      padding-block: 24px;
-    }
+    @include media($lg, 24px, 36px);
   }
 }
 

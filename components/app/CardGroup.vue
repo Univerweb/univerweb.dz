@@ -103,22 +103,9 @@ const { data: posts } = await useAsyncData(`card-group-${path}`, () =>
       grid-auto-rows: auto auto 1fr;
     }
 
-    @media (min-width: $md) {
-      padding: 24px;
-    }
-
-    @media (min-width: $lg) {
-      padding: 36px;
-      grid-auto-rows: auto auto 1fr;
-
-      &.work {
-        grid-auto-rows: auto auto auto 1fr;
-      }
-    }
-
-    @media (min-width: $xl) {
-      padding: 48px;
-    }
+    @include media($md, 24px, 24px);
+    @include media($lg, 36px, 36px);
+    @include media($xl, 48px, 48px);
   }
 
   h2,
