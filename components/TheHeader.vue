@@ -52,6 +52,23 @@ header {
   }
 }
 
+.logo svg {
+  display: flex;
+
+  path:first-child {
+    fill: $primary;
+  }
+
+  path:not(:first-child) {
+    fill: $secondary;
+    transition: fill $transition;
+
+    .dark-mode & {
+      fill: $white;
+    }
+  }
+}
+
 .nav {
   display: none;
   position: fixed;
@@ -91,6 +108,55 @@ header {
   }
 }
 
+.menu {
+  display: grid;
+  grid-auto-columns: max-content;
+  row-gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 48px 0 0;
+
+  @media screen and (orientation: landscape) {
+    padding-top: 0;
+  }
+
+  @media (min-width: $lg) {
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-evenly;
+    padding: 0;
+  }
+
+  a {
+    position: relative;
+    display: block;
+
+    @include font(20);
+
+    color: var(--text-primary);
+
+    @media (min-width: $lg) {
+      font-size: 1rem;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      background-color: $primary;
+      width: 0%;
+      height: 3px;
+      transition: width $transition;
+    }
+
+    &:hover::after,
+    &.router-link-active::after {
+      width: 25%;
+    }
+  }
+}
+
 .switchers {
   display: flex;
   column-gap: 16px;
@@ -107,6 +173,56 @@ header {
 
     &:hover {
       color: $primary;
+    }
+  }
+}
+
+.toggle {
+  display: grid;
+
+  @media (min-width: $lg) {
+    display: none;
+  }
+
+  align-content: space-between;
+  background-color: transparent;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  outline: none;
+
+  span {
+    background-color: $primary;
+    height: 3px;
+    border-radius: 2em;
+    transition: all $transition;
+  }
+
+  .middle {
+    animation: collapse-middle $animation;
+    transform-origin: left;
+
+    .show & {
+      animation: collapse-show-middle $animation;
+    }
+  }
+
+  .top {
+    animation: collapse-top $animation;
+
+    .show & {
+      animation: collapse-show-top $animation;
+    }
+  }
+
+  .bottom {
+    animation: collapse-bottom $animation;
+    transform-origin: left;
+
+    .show & {
+      animation: collapse-show-bottom $animation;
+      transform-origin: center;
     }
   }
 }

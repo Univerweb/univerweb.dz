@@ -18,22 +18,3 @@ const show = useShow()
     <span class="visually-hidden">{{ t('name') }}</span>
   </NuxtLink>
 </template>
-
-<style lang="scss">
-.logo svg {
-  display: flex;
-
-  path:first-child {
-    fill: $primary;
-  }
-
-  path:not(:first-child) {
-    fill: $secondary;
-    transition: fill $transition;
-
-    .dark-mode & {
-      fill: $white;
-    }
-  }
-}
-</style>
