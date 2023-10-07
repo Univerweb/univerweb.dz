@@ -36,9 +36,8 @@ const show = useShow()
   a {
     position: relative;
     display: block;
-    font-family: $font-medium;
 
-    @include size(20);
+    @include font(20);
 
     color: var(--text-primary);
 

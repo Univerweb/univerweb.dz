@@ -147,11 +147,8 @@ main {
 /* Headings */
 h1,
 .h1 {
-  font-family: $font-medium;
+  @include font(44);
 
-  @include size(44);
-
-  font-weight: 400;
   letter-spacing: -0.05em;
   margin-top: 0;
   margin-bottom: 24px;
@@ -172,11 +169,8 @@ h1,
 
 h2,
 .h2 {
-  font-family: $font-medium;
+  @include font(32);
 
-  @include size(32);
-
-  font-weight: 400;
   letter-spacing: -0.05em;
   margin-top: 0;
   margin-bottom: 24px;
@@ -192,11 +186,8 @@ h2,
 
 h3,
 .h3 {
-  font-family: $font-medium;
+  @include font(20);
 
-  @include size(20);
-
-  font-weight: 400;
   letter-spacing: -0.02em;
   margin-top: 0;
   margin-bottom: 12px;
@@ -219,9 +210,7 @@ p {
 }
 
 .lead {
-  font-family: $font-medium;
-
-  @include size(20);
+  @include font(20);
 
   letter-spacing: -0.02em;
   color: var(--text-secondary);
@@ -244,10 +233,9 @@ strong {
 }
 
 .link {
-  font-family: $font-medium;
   display: inline-block;
 
-  @include size(20);
+  @include font(20);
 
   @media (min-width: $md) {
     @include size(28);
