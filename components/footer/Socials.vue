@@ -28,24 +28,3 @@ const { t, tm, rt } = useI18n()
     </li>
   </ul>
 </template>
-
-<style lang="scss">
-.socials {
-  @include grid(4, auto);
-
-  justify-content: space-between;
-  max-width: 210px;
-
-  @media (min-width: $md) {
-    max-width: 295px;
-  }
-
-  margin: 12px 0 0;
-  padding: 0;
-  list-style: none;
-
-  a {
-    display: grid;
-  }
-}
-</style>

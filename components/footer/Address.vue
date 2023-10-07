@@ -14,9 +14,3 @@ const coma = useComa()
     {{ t('addressRegion') }}
   </address>
 </template>
-
-<style lang="scss">
-address {
-  font-style: normal;
-}
-</style>
