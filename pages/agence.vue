@@ -81,7 +81,7 @@ useHead({
     counter-increment: counterName;
     content: counters(counterName, '-');
     color: $primary;
-    font-family: var(--font-medium);
+    font-family: $font-medium;
 
     @include size(56);
   }

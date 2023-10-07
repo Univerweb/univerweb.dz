@@ -36,7 +36,7 @@ const show = useShow()
   a {
     position: relative;
     display: block;
-    font-family: var(--font-medium);
+    font-family: $font-medium;
 
     @include size(20);
 
