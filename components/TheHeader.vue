@@ -8,11 +8,7 @@ const show = useShow()
 
     <nav class="nav">
       <HeaderMenu />
-
-      <div class="switchers">
-        <HeaderSwitchLang />
-        <HeaderSwitchColor />
-      </div>
+      <HeaderSwitchers />
     </nav>
 
     <HeaderToggle />
