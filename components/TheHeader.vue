@@ -156,6 +156,16 @@ header {
 .switchers {
   display: flex;
   column-gap: 16px;
+  justify-content: flex-end;
+
+  .lang {
+    font-size: 13px;
+    line-height: 24px;
+    width: max-content;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: lang 2s forwards;
+  }
 
   > * {
     position: relative;

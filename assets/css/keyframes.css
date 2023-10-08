@@ -179,3 +179,25 @@
     transform-origin: right;
   }
 }
+
+@keyframes lang {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translateX(8px);
+  }
+
+  90% {
+    opacity: 1;
+    transform: translateX(8px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(8px);
+  }
+}
