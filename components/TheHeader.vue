@@ -10,8 +10,8 @@ const show = useShow()
       <HeaderMenu />
 
       <div class="switchers">
-        <HeaderLangSwitch />
-        <HeaderColorSwitch />
+        <HeaderSwitchLang />
+        <HeaderSwitchColor />
       </div>
     </nav>
 
