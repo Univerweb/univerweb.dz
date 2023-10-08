@@ -123,7 +123,9 @@ function useLoadingIndicator(opts: {
     if (import.meta.client) {
       setTimeout(() => {
         isLoading.value = false
-        setTimeout(() => { progress.value = 0 }, 400)
+        setTimeout(() => {
+          progress.value = 0
+        }, 400)
       }, 500)
     }
   }
