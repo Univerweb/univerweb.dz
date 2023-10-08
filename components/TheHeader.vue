@@ -112,7 +112,7 @@ header {
   }
 
   @media (min-width: $lg) {
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(5, auto);
     justify-content: space-evenly;
     padding: 0;
   }
