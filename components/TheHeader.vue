@@ -161,10 +161,8 @@ header {
   display: flex;
   column-gap: 16px;
 
-  .switcher {
-    display: grid;
-    align-items: center;
-    justify-content: center;
+  > * {
+    position: relative;
     background-color: transparent;
     color: var(--text-primary);
     transition: color $transition;
@@ -173,6 +171,22 @@ header {
 
     &:hover {
       color: $primary;
+    }
+
+    svg {
+      position: absolute;
+      inset: 2px;
+    }
+
+    .color-scale-enter-active,
+    .color-scale-leave-active {
+      transition: transform $transition, opacity $transition;
+    }
+
+    .color-scale-enter-from,
+    .color-scale-leave-to {
+      transform: scaleY(0);
+      opacity: 0;
     }
   }
 }
