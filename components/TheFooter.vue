@@ -32,32 +32,32 @@ footer {
   a:hover {
     color: $primary;
   }
-}
 
-address {
-  font-style: normal;
-}
-
-.socials {
-  @include grid(4, auto);
-
-  justify-content: space-between;
-  margin: 12px 0 0;
-  padding: 0;
-  list-style: none;
-  max-width: 210px;
-
-  @media (min-width: $md) {
-    max-width: 295px;
+  address {
+    font-style: normal;
   }
 
-  a {
-    display: grid;
-  }
-}
+  .socials {
+    @include grid(4, auto);
 
-.copy {
-  font-size: 0.8rem;
-  line-height: 1.875;
+    justify-content: space-between;
+    margin: 12px 0 0;
+    padding: 0;
+    list-style: none;
+    max-width: 210px;
+
+    @media (min-width: $md) {
+      max-width: 295px;
+    }
+
+    a {
+      display: grid;
+    }
+  }
+
+  .copy {
+    font-size: 0.8rem;
+    line-height: 1.875;
+  }
 }
 </style>
