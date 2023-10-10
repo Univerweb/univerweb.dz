@@ -2,7 +2,7 @@
 import type { Post } from '../../types'
 
 export interface Props {
-  post: Pick<Post, '_path' | 'description'>
+  picture: Pick<Post, '_path' | 'description'>
   type?: string
   ext?: string
   alt?: string
@@ -22,8 +22,8 @@ const { locale } = useI18n()
 
 <template>
   <NuxtPicture
-    :src="locale === 'fr' ? `${post._path}_${type}.${ext}` : `${post._path}_${type}.${ext}`.slice(3)"
-    :alt="alt || post.description"
+    :src="locale === 'fr' ? `${picture._path}_${type}.${ext}` : `${picture._path}_${type}.${ext}`.slice(3)"
+    :alt="alt || picture.description"
     :sizes="sizes"
     format="avif,webp"
     quality="80"

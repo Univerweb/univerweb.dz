@@ -72,7 +72,7 @@ useHead({
         </h1>
       </div>
 
-      <AppPicture :post="post" ext="png" />
+      <AppPicture :picture="post" ext="png" />
 
       <div class="container client">
         <div class="details">
@@ -125,7 +125,7 @@ useHead({
             </div>
           </div>
           <AppPicture
-            :post="post"
+            :picture="post"
             type="preview"
             :alt="`${t('work.alt')} ${post.title}`"
             sizes="xs:288px sm:607px md:719px lg:619px xl:1280px"
