@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { Blog } from '../../types'
 
-const { post } = defineProps<{
-  post: Blog
+defineProps<{
+  card: Blog
   titleTag: string
 }>()
 
@@ -12,16 +12,16 @@ const localePath = useLocalePath()
 </script>
 
 <template>
-  <NuxtLink :to="localePath(`${post._path}`)" class="card">
+  <NuxtLink :to="localePath(`${card._path}`)" class="card">
     <article vocab="https://schema.org/" typeof="Article">
       <div property="mainEntityOfPage" typeof="WebPage">
-        <meta property="id" :content="`${config.public.baseURL}${localePath(`${post._path}`)}`">
+        <meta property="id" :content="`${config.public.baseURL}${localePath(`${card._path}`)}`">
       </div>
       <meta property="articleSection" :content="t('blog.title')">
-      <meta property="description" :content="post.description">
+      <meta property="description" :content="card.description">
 
       <AppPicture
-        :post="post"
+        :picture="card"
         type="thumbnail"
         sizes="xs:288px sm:607px md:354px lg:456px xl:588px"
         class-name="thumbnail"
@@ -31,22 +31,22 @@ const localePath = useLocalePath()
 
       <div class="inner">
         <Component :is="titleTag" property="headline">
-          {{ post.title }}
+          {{ card.title }}
         </Component>
         <ul class="tags">
-          <li v-for="tag in post.tags" :key="tag" property="keywords">
+          <li v-for="tag in card.tags" :key="tag" property="keywords">
             {{ tag }}
           </li>
         </ul>
         <p class="lead meta">
-          <time property="dateCreated datePublished" :datetime="post.createdAt.toString()">
-            {{ new Intl.DateTimeFormat(locale, { dateStyle: 'long' }).format(new Date(post.createdAt)) }}
+          <time property="dateCreated datePublished" :datetime="card.createdAt.toString()">
+            {{ new Intl.DateTimeFormat(locale, { dateStyle: 'long' }).format(new Date(card.createdAt)) }}
           </time>
-          <time property="dateModified" :datetime="post.updatedAt.toString()" :content="post.updatedAt.toString()" />
+          <time property="dateModified" :datetime="card.updatedAt.toString()" :content="card.updatedAt.toString()" />
           — {{ t('blog.by') }}
-          <span v-if="post.author" property="author" typeof="Person">
-            <span property="name">{{ post.author.name }}</span>
-            <meta property="url" :content="post.author.url">
+          <span v-if="card.author" property="author" typeof="Person">
+            <span property="name">{{ card.author.name }}</span>
+            <meta property="url" :content="card.author.url">
           </span>
           <span v-else property="author" typeof="Organization">
             <span property="name">{{ t('name') }}</span>

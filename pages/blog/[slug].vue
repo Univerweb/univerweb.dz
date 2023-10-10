@@ -91,7 +91,7 @@ useHead({
       </div>
 
       <div class="container container-banner">
-        <AppPicture :post="post" sizes="xs:288px sm:592px md:672px lg:928px xl:1200px" />
+        <AppPicture :picture="post" sizes="xs:288px sm:592px md:672px lg:928px xl:1200px" />
       </div>
 
       <ContentRenderer>
