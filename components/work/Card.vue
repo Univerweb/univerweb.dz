@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { Work } from '../../types'
 
-const { post } = defineProps<{
-  post: Work
+defineProps<{
+  card: Work
   titleTag: string
 }>()
 
@@ -12,22 +12,22 @@ const localePath = useLocalePath()
 </script>
 
 <template>
-  <NuxtLink :to="localePath(`${post._path}`)" class="card">
+  <NuxtLink :to="localePath(`${card._path}`)" class="card">
     <article vocab="https://schema.org/" typeof="Article">
       <div property="mainEntityOfPage" typeof="WebPage">
-        <span property="id" :content="`${config.public.baseURL}${localePath(`${post._path}`)}`" />
+        <span property="id" :content="`${config.public.baseURL}${localePath(`${card._path}`)}`" />
       </div>
       <span property="articleSection" :content="t('works.title')" />
-      <span property="description" :content="post.description" />
-      <time property="dateCreated datePublished" :datetime="post.createdAt.toString()" />
-      <time property="dateModified" :datetime="post.updatedAt.toString()" />
+      <span property="description" :content="card.description" />
+      <time property="dateCreated datePublished" :datetime="card.createdAt.toString()" />
+      <time property="dateModified" :datetime="card.updatedAt.toString()" />
       <div property="author publisher" typeof="Organization">
         <span property="name" :content="t('name')" />
         <span property="url" :content="config.public.baseURL" />
       </div>
 
       <AppPicture
-        :post="post"
+        :post="card"
         type="thumbnail"
         :img-attrs="{ property: 'image' }"
         sizes="xs:288px sm:607px md:354px lg:456px xl:588px"
@@ -38,18 +38,18 @@ const localePath = useLocalePath()
 
       <div class="inner work">
         <span class="h3">
-          {{ post.category }}
+          {{ card.category }}
         </span>
         <Component :is="titleTag" property="headline" class="work">
-          {{ post.title }}
+          {{ card.title }}
         </Component>
         <ul class="tags">
-          <li v-for="tag in post.tags" :key="tag" property="keywords">
+          <li v-for="tag in card.tags" :key="tag" property="keywords">
             {{ tag }}
           </li>
         </ul>
         <ContentRendererMarkdown
-          :value="post"
+          :value="card"
           :components="{ p: 'span' }"
           tag="p"
           property="articleBody"
