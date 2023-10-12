@@ -154,6 +154,7 @@ header {
 }
 
 .switchers {
+  position: relative;
   display: flex;
   column-gap: 16px;
   justify-content: flex-end;
@@ -163,8 +164,12 @@ header {
     line-height: 24px;
     width: max-content;
     opacity: 0;
-    transform: translateX(-50px);
     animation: lang 2s forwards;
+    position: absolute;
+    inset-inline-end:calc(100% + 4px);
+    [lang=ar-DZ] & {
+      animation-name: lang-ar;
+    }
   }
 
   > * {
