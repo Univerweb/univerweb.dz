@@ -51,12 +51,12 @@ body {
 
 /* Main */
 main {
-  margin-top: 72px;
-  transition: margin-top $transition;
+  transform: translateY(72px);
+  transition: transform $transition;
 
   @media (min-width: $lg) {
     .wrapper:not(.scrolled) & {
-      margin-top: 96px;
+      transform: translateY(96px);
     }
   }
 }
