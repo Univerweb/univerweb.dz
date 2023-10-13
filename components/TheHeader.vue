@@ -141,14 +141,20 @@ header {
       display: block;
       position: absolute;
       background-color: $primary;
-      width: 0%;
+      width: 25%;
       height: 3px;
-      transition: width $transition;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform $transition;
+
+      [lang='ar-DZ'] & {
+        transform-origin: right;
+      }
     }
 
     &:hover::after,
     &.router-link-active::after {
-      width: 25%;
+      transform: scaleX(1);
     }
   }
 }
