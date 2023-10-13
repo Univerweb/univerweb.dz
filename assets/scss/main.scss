@@ -49,6 +49,17 @@ body {
   line-height: 1.5;
 }
 
+/* Global transition */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity $transition;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}
+
 /* Main */
 main {
   transform: translateY(72px);
@@ -59,17 +70,6 @@ main {
       transform: translateY(96px);
     }
   }
-}
-
-/* Global transition */
-.page-enter-active,
-.page-leave-active {
-  transition: opacity $transition;
-}
-
-.page-enter-from,
-.page-leave-to {
-  opacity: 0;
 }
 
 /* Container */
