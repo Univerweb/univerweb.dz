@@ -167,7 +167,8 @@ header {
     animation: lang 2s forwards;
     position: absolute;
     inset-inline-end:calc(100% + 4px);
-    [lang=ar-DZ] & {
+
+    [lang='ar-DZ'] & {
       animation-name: lang-ar;
     }
   }
