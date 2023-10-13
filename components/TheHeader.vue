@@ -166,7 +166,7 @@ header {
     opacity: 0;
     animation: lang 2s forwards;
     position: absolute;
-    inset-inline-end:calc(100% + 4px);
+    inset-inline-end: 72px;
 
     [lang='ar-DZ'] & {
       animation-name: lang-ar;
