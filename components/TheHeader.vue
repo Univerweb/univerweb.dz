@@ -191,7 +191,7 @@ header {
 
     .color-scale-enter-active,
     .color-scale-leave-active {
-      transition: transform $transition, opacity $transition;
+      transition: transform 150ms linear, opacity 150ms linear;
     }
 
     .color-scale-enter-from,
