@@ -1,45 +1,34 @@
 <script setup lang="ts">
-import { Loader } from '@googlemaps/js-api-loader'
+import { GoogleMap, Marker } from 'vue3-google-map'
 
 const { t } = useI18n()
 const breadcrumb = useBreadcrumb()
 const config = useRuntimeConfig()
 
-onMounted(async () => {
-  const loader = new Loader({
-    apiKey: config.public.apiKey,
-    version: 'weekly',
-  })
+const markerOptions = {
+  position: {
+    lat: 36.721043,
+    lng: 3.047502,
+  },
+  icon: {
+    path: 'M -1,-1 A 1,1 0 1,0 1,-1 A 1,1 0 1,0 -1,-1',
+    fillColor: '#50c8f0',
+    fillOpacity: 1,
+    strokeColor: '#28285a',
+    scale: 10,
+  },
+}
 
-  const center = { lat: 36.721043, lng: 3.047502 }
-  const mapOptions = {
-    mapId: '101a5bf427dc0726',
-    zoom: 14,
-    streetViewControl: false,
-    center,
-    backgroundColor: 'var(--light)',
+const mapRef = ref<InstanceType<typeof GoogleMap>>()
+
+function zoom() {
+  const gmap = mapRef.value
+
+  if (gmap?.ready) {
+    gmap.map?.setZoom(16)
+    gmap.map?.setCenter(markerOptions.position)
   }
-
-  const { Map } = await loader.importLibrary('maps')
-  const map = new Map(document.getElementById('map') as HTMLElement, mapOptions)
-
-  const marker = new google.maps.Marker({
-    map,
-    position: center,
-    icon: {
-      path: google.maps.SymbolPath.CIRCLE,
-      fillColor: '#50c8f0',
-      fillOpacity: 1,
-      strokeColor: '#28285a',
-      scale: 10,
-    },
-  })
-
-  marker.addListener('click', () => {
-    map.setZoom(16)
-    map.setCenter(marker.getPosition() as google.maps.LatLng)
-  })
-})
+}
 
 useSeoMeta({
   title: () => t('contact.title'),
@@ -76,7 +65,18 @@ useHead({
       </div>
     </div>
 
-    <div id="map" />
+    <GoogleMap
+      id="map"
+      ref="mapRef"
+      :api-key="config.public.gmapsKey"
+      :map-id="config.public.gmapsId"
+      :center="markerOptions.position"
+      :zoom="14"
+      :street-view-control="false"
+      background-color="var(--light)"
+    >
+      <Marker :options="markerOptions" @click="zoom" />
+    </GoogleMap>
 
     <div class="container other">
       <div class="intro">

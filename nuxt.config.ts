@@ -9,7 +9,8 @@ export default defineNuxtConfig({
       baseEmail: process.env.BASE_EMAIL,
       managerEmail: process.env.MANAGER_EMAIL,
       supportEmail: process.env.SUPPORT_EMAIL,
-      apiKey: process.env.API_KEY,
+      gmapsKey: process.env.GMAPS_KEY,
+      gmapsId: process.env.GMAPS_ID,
     },
   },
 
