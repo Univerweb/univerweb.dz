@@ -35,9 +35,9 @@ useSeoMeta({
   display: grid;
   justify-items: center;
   align-content: center;
-  margin-top: 0;
   padding-block: 0;
   min-height: calc(100vh);
+  transform: translateY(0);
 
   .btn {
     margin-top: 96px;
