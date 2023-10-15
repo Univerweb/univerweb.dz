@@ -81,6 +81,11 @@ main {
   @include media($md, 96px, 48px);
   @include media($lg, 144px, calc(50% - 928px / 2));
   @include media($xl, 144px, calc(50% - 1200px / 2));
+
+  &.post-nav {
+    padding-top: 72px;
+    padding-bottom: 48px;
+  }
 }
 
 /* Intro */
