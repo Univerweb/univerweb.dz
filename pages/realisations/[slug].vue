@@ -20,10 +20,6 @@ if (!post.value) {
   })
 }
 
-const [prev, next] = await queryContent<Work>()
-  .only(['_path', 'title'])
-  .findSurround(path)
-
 useSeoMeta({
   title: post.value.title,
   description: post.value.description,
@@ -48,6 +44,10 @@ useHead({
     },
   ],
 })
+
+const [prev, next] = await queryContent<Work>(localePath('realisations'))
+  .only(['_path', 'title'])
+  .findSurround(path)
 </script>
 
 <template>
