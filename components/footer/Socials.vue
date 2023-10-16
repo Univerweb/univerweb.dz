@@ -16,7 +16,7 @@ const socials = [
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" role="img">
           <path :d="social.path" />
         </svg>
-        <span class="visually-hidde">{{ t('join') }} {{ t(`socialsName.${value}`) }}</span>
+        <span class="visually-hidden">{{ t('join') }} {{ t(`socialsName.${value}`) }}</span>
       </a>
     </li>
   </ul>
