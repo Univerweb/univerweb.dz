@@ -10,7 +10,7 @@ const coma = useComa()
     {{ t('streetAddress') }}
     <br>
     {{ t('addressLocality') }}
-    {{ t('postalCode') }}{{ coma }}
+    <span dir="ltr">16 029</span>{{ coma }}
     {{ t('addressRegion') }}
   </address>
 </template>
