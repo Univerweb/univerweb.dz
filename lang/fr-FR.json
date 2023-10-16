@@ -1,4 +1,5 @@
 {
+  "name": "Univerweb",
   "title": "Création de sites web en Algérie",
   "desc": "Plus que des sites web, nous concevons et innovons pour vous des expériences numériques centrées sur l'humain et qui reflètent votre image de marque.",
   "skiplinks": {
@@ -17,10 +18,14 @@
     "headline": "Convaincu ? Prenons un café ensemble.",
     "link": "Contactez-nous"
   },
+  "streetAddress": "62 Coop. El Mebnia",
+  "addressLocality": "Birkhadem",
   "addressRegion": "Alger",
   "addressCountry": "Algérie",
   "maps": "Obtenir un itinéraire",
   "phoneLabel": "Téléphone / fax",
+  "mobileLabel": "Mobile",
+  "emailLabel": "E-mail",
   "socials": [
     {
       "value": "Rejoignez-nous sur X",
@@ -50,10 +55,12 @@
     "more": "Plus de bonheur"
   },
   "works": {
+    "title": "@:menu.realisations",
     "desc": "Découvrez nos toutes dernières créations. Nous serions ravis de collaborer avec vous.",
     "headline": "Ils ont cru en nous et ils sont comblés."
   },
   "work": {
+    "client": "Client",
     "services": "Prestations",
     "category": "Catégorie",
     "visit": "Visiter le site web",
@@ -61,6 +68,7 @@
     "state": "Ce site n'est plus disponible 😔"
   },
   "presta": {
+    "title": "@:menu.prestations",
     "desc": "Une stratégie de présence web accomplie, sur des fondements technologiques et une méthodologie rigoureuse.",
     "headline": "Ce dont nous sommes capables.",
     "lead": "De nos jours quiconque peut faire un site web, y compris votre neveu de 13 ans ! Mais qui peut réellement concrétiser une stratégie de présence web accomplie, sur des fondements technologiques et une méthodologie rigoureuse.",
@@ -95,6 +103,7 @@
     }
   },
   "agency": {
+    "title": "@:menu.agence",
     "desc": "Nous sommes une jeunes équipe de créativo-perfectionnistes et passionnée par notre travail, nous aimons coder de magnifiques sites web.",
     "headline": "Nous sommes une agence web.",
     "lead": "Créée en 2011 à Alger, nous sommes une jeunes équipe de créativo-perfectionnistes et passionnée par notre travail, nous aimons coder de magnifiques sites web en buvant du café le matin.",
@@ -118,6 +127,7 @@
     }
   },
   "contact": {
+    "title": "@:menu.contact",
     "desc": "Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
     "about": "Créer des sites web professionnels, c'est ce que nous faisons. Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
     "other": "Autres moyens de nous contacter",

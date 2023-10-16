@@ -1,4 +1,5 @@
 {
+  "name": "Univerweb",
   "title": "Website Design in Algeria",
   "desc": "Even more than websites, we design and innovate human-centered digital experiences for you that reflect your brand image.",
   "skiplinks": {
@@ -17,10 +18,14 @@
     "headline": "Convinced? Let's have a coffee together.",
     "link": "Get in Touch"
   },
+  "streetAddress": "62 Coop. El Mebnia",
+  "addressLocality": "Birkhadem",
   "addressRegion": "Algiers",
   "addressCountry": "Algeria",
   "maps": "Get directions",
   "phoneLabel": "Telephone / fax",
+  "mobileLabel": "Mobile",
+  "emailLabel": "E-mail",
   "socials": [
     {
       "value": "Join us on X",
@@ -50,10 +55,12 @@
     "more": "More happiness"
   },
   "works": {
+    "title": "@:menu.realisations",
     "desc": "Discover our latest creations. We would be delighted to work with you.",
     "headline": "They believed in us and they are fulfilled."
   },
   "work": {
+    "client": "Client",
     "services": "Services",
     "category": "Category",
     "visit": "Visit Website",
@@ -61,6 +68,7 @@
     "state": "This site is no longer available 😔"
   },
   "presta": {
+    "title": "@:menu.prestations",
     "desc": "An accomplished web presence strategy, on technological foundations and a rigorous methodology.",
     "headline": "What we are capable of.",
     "lead": "These days anyone can make a website, including your 13 year old nephew! But who can really materialize an accomplished web presence strategy, on technological foundations and a rigorous methodology.",
@@ -95,6 +103,7 @@
     }
   },
   "agency": {
+    "title": "@:menu.agence",
     "desc": "We are a young team of creative-perfectionists and passionate about our work, we like to code beautiful websites while drinking coffee in the morning.",
     "headline": "We are a web agency.",
     "lead": "Founded in 2011 in Algiers, we are a young team of creative-perfectionists and passionate about our work, we like to code beautiful websites while drinking coffee in the morning.",
@@ -118,6 +127,7 @@
     }
   },
   "contact": {
+    "title": "@:menu.contact",
     "desc": "Tell us about your needs, we'd love to collaborate with you.",
     "other": "Other ways to contact us",
     "about": "Creating professional websites is what we do. Tell us about your needs, we'd love to collaborate with you.",

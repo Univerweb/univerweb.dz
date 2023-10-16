@@ -1,19 +1,9 @@
 {
-  "name": "Univerweb",
-  "streetAddress": "62 Coop. El Mebnia",
-  "addressLocality": "Birkhadem",
   "postalCode": "16029",
   "phone": "021 44 08 11",
   "mobile": "0551 90 46 22",
-  "mobileLabel": "Mobile",
-  "email": "E-mail",
   "x": "https://twitter.com/Univerweb",
   "facebook": "https://www.facebook.com/Univerweb",
   "linkedin": "https://www.linkedin.com/company/Univerweb",
-  "github": "https://github.com/Univerweb",
-  "works.title": "@:menu.realisations",
-  "work.client": "Client",
-  "presta.title": "@:menu.prestations",
-  "agency.title": "@:menu.agence",
-  "contact.title": "@:menu.contact"
+  "github": "https://github.com/Univerweb"
 }

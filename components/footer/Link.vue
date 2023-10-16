@@ -5,7 +5,7 @@ const { t } = useI18n()
 
 <template>
   <a :href="`mailto:${config.public.baseEmail}`" class="link">
-    <span class="visually-hidden">{{ t('email') }}</span>
+    <span class="visually-hidden">{{ t('emailLabel') }}</span>
     {{ config.public.baseEmail }}
   </a>
 </template>
