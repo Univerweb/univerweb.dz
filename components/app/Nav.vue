@@ -2,8 +2,8 @@
 import type { Post } from '../../types'
 
 defineProps<{
-  prev?: Pick<Post, '_path' | 'title'>
-  next?: Pick<Post, '_path' | 'title'>
+  prev: null | Pick<Post, '_path' | 'title'>
+  next: null | Pick<Post, '_path' | 'title'>
 }>()
 
 const localePath = useLocalePath()
