@@ -45,9 +45,20 @@ useHead({
   ],
 })
 
-const [prev, next] = await queryContent<Work>(localePath('realisations'))
-  .only(['_path', 'title'])
-  .findSurround(path)
+const prev = ref<null | Pick<Work, '_path' | 'title'>>(null)
+const next = ref<null | Pick<Work, '_path' | 'title'>>(null)
+
+async function fetchPrevNext() {
+  const [prevNav, nextNav] = await queryContent<Pick<Work, '_path' | 'title'>>(localePath('realisations'))
+    .only(['_path', 'title'])
+    .findSurround(path)
+  prev.value = prevNav
+  next.value = nextNav
+}
+
+onMounted(() => {
+  fetchPrevNext()
+})
 </script>
 
 <template>
