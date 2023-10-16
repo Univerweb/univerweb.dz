@@ -61,7 +61,8 @@ body {
 }
 
 /* Main */
-main {
+main,
+footer {
   transform: translateY(72px);
   transition: transform $transition;
 
