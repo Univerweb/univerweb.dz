@@ -26,24 +26,8 @@
   "phoneLabel": "Téléphone / fax",
   "mobileLabel": "Mobile",
   "emailLabel": "E-mail",
-  "socials": [
-    {
-      "value": "Rejoignez-nous sur X",
-      "url": "@:x"
-    },
-    {
-      "value": "Rejoignez-nous sur Facebook",
-      "url": "@:facebook"
-    },
-    {
-      "value": "Rejoignez-nous sur LinkedIn",
-      "url": "@:linkedin"
-    },
-    {
-      "value": "Rejoignez-nous sur GitHub",
-      "url": "@:github"
-    }
-  ],
+  "join": "Rejoignez-nous sur",
+  "socialsName": ["X", "Facebook", "LinkedIn", "GitHub"],
   "colorMode": {
     "dark": "Sombre",
     "light": "Clair"
