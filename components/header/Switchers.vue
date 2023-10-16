@@ -29,7 +29,7 @@ function toggleDark() {
 <template>
   <div class="switchers">
     <span v-for="l in currentLocales" :key="l.code" class="lang">
-      {{ l.name }}
+      {{ t('lang') }}
     </span>
 
     <NuxtLink :to="switchLocalePath(lang)">
