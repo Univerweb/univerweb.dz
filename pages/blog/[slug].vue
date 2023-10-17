@@ -7,11 +7,13 @@ const breadcrumb = useBreadcrumb()
 const config = useRuntimeConfig()
 const { path, params: { slug } } = useRoute()
 
-const { data: post } = await useAsyncData(`content-${path}`, () =>
-  queryContent()
+const { data: post } = await useAsyncData(
+  `post${path}`,
+  () => queryContent()
     .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'body'])
     .where({ _path: path })
-    .findOne() as Promise<Blog>)
+    .findOne() as Promise<Blog>,
+)
 
 if (!post.value) {
   throw createError({
@@ -46,16 +48,13 @@ useHead({
 })
 
 const { data: surround } = await useAsyncData(
-  `surround-${path}`,
+  `surround${path}`,
   async () => {
     const [prev, next] = await queryContent<Nav>(localePath('blog'))
       .only(['_path', 'title'])
       .findSurround(path)
 
-    return {
-      prev,
-      next,
-    }
+    return { prev, next }
   },
   { watch: [localePath] },
 )
