@@ -101,6 +101,7 @@
     "support": "Technical support"
   },
   "blog": {
+    "title": "@:menu.blog",
     "desc": "Explore our Blog for website building tips and tricks, thoughts on current trends and more.",
     "headline": "The Digital Blog.",
     "by": "by",

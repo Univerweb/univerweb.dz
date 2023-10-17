@@ -106,6 +106,7 @@
     "support": "Soutien technique"
   },
   "blog": {
+    "title": "@:menu.blog",
     "desc": "Explorez notre Blog pour des conseils et astuces en matière de création de sites web, des réflexions sur les tendances actuelles et plus encore.",
     "headline": "Le Blog du numérique.",
     "by": "par",
