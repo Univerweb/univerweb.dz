@@ -10,3 +10,5 @@ export interface Work extends Post {
   category: string
   link: string
 }
+
+export type Nav = null | Pick<Post, '_path' | 'title'>

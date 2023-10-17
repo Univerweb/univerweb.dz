@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Work } from '../../types'
+import type { Nav, Work } from '../../types'
 
 const localePath = useLocalePath()
 const { t } = useI18n()
@@ -47,11 +47,11 @@ useHead({
   ],
 })
 
-const prev = ref<null | Pick<Work, '_path' | 'title'>>(null)
-const next = ref<null | Pick<Work, '_path' | 'title'>>(null)
+const prev = ref<Nav>(null)
+const next = ref<Nav>(null)
 
 async function fetchPrevNext() {
-  const [prevNav, nextNav] = await queryContent<Pick<Work, '_path' | 'title'>>(localePath('realisations'))
+  const [prevNav, nextNav] = await queryContent(localePath('realisations'))
     .only(['_path', 'title'])
     .findSurround(path)
   prev.value = prevNav
