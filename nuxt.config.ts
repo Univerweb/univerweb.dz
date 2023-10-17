@@ -69,5 +69,6 @@ export default defineNuxtConfig({
   sitemap: {
     autoLastmod: false,
     xsl: false,
+    discoverImages: false,
   },
 })
