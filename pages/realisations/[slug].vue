@@ -47,20 +47,20 @@ useHead({
   ],
 })
 
-const prev = ref<Nav>(null)
-const next = ref<Nav>(null)
+const { data: surround } = await useAsyncData(
+  `surround-${path}`,
+  async () => {
+    const [prev, next] = await queryContent<Nav>(localePath('realisations'))
+      .only(['_path', 'title'])
+      .findSurround(path)
 
-async function fetchPrevNext() {
-  const [prevNav, nextNav] = await queryContent(localePath('realisations'))
-    .only(['_path', 'title'])
-    .findSurround(path)
-  prev.value = prevNav
-  next.value = nextNav
-}
-
-onMounted(() => {
-  fetchPrevNext()
-})
+    return {
+      prev,
+      next,
+    }
+  },
+  { watch: [localePath] },
+)
 </script>
 
 <template>
@@ -149,7 +149,7 @@ onMounted(() => {
       </div>
     </article>
 
-    <LazyAppNav :prev="prev" :next="next" />
+    <LazyAppNav :prev="surround!.prev" :next="surround!.next" />
 
     <LazyAppRequest />
   </main>
