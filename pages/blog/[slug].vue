@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Blog } from '../../types'
+import type { Blog, Nav } from '../../types'
 
 const localePath = useLocalePath()
 const { locale, t } = useI18n()
@@ -19,10 +19,6 @@ if (!post.value) {
     statusMessage: 'Page Not Found',
   })
 }
-
-const [prev, next] = await queryContent<Blog>()
-  .only(['_path', 'title'])
-  .findSurround(path)
 
 useSeoMeta({
   title: post.value.title,
@@ -48,6 +44,21 @@ useHead({
     },
   ],
 })
+
+const { data: surround } = await useAsyncData(
+  `surround-${path}`,
+  async () => {
+    const [prev, next] = await queryContent<Nav>(localePath('blog'))
+      .only(['_path', 'title'])
+      .findSurround(path)
+
+    return {
+      prev,
+      next,
+    }
+  },
+  { watch: [localePath] },
+)
 </script>
 
 <template>
@@ -101,7 +112,7 @@ useHead({
       <LazyBlogShare :title="post.title" :url="`${config.public.baseURL}${path}`" />
     </article>
 
-    <LazyAppNav :prev="prev" :next="next" />
+    <LazyAppNav :prev="surround!.prev" :next="surround!.next" />
 
     <LazyAppRequest />
   </main>
