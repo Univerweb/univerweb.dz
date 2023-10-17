@@ -77,8 +77,7 @@ const { t } = useI18n()
       padding-inline: 12px 18px;
 
       &::before {
-        inset-inline-start: 0;
-        inset-inline-end: 18px;
+        inset-inline: 0 18px;
       }
     }
   }
