@@ -21,12 +21,14 @@ const { t } = useI18n()
 const { path } = useRoute()
 const localePath = useLocalePath()
 
-const { data: posts } = await useAsyncData(`card-group-${path}`, () =>
-  queryContent<Post>(path)
+const { data: posts } = await useAsyncData(
+  `posts${path}`,
+  () => queryContent<Post>(path)
     .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'body', 'category'])
     .sort({ _id: -1 })
     .limit(props.limit)
-    .find())
+    .find(),
+)
 </script>
 
 <template>

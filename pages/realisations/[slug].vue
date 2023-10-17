@@ -9,11 +9,13 @@ const { path, params: { slug } } = useRoute()
 const img = useImage()
 const ogImagePath = img(`realisations/${slug}_banner.png`, { width: 1920, height: 1080, position: 'top', format: 'jpg', quality: 80 })
 
-const { data: post } = await useAsyncData(`content-${path}`, () =>
-  queryContent()
+const { data: post } = await useAsyncData(
+  `post${path}`,
+  () => queryContent()
     .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'category', 'link', 'body'])
     .where({ _path: path })
-    .findOne() as Promise<Work>)
+    .findOne() as Promise<Work>,
+)
 
 if (!post.value) {
   throw createError({
@@ -48,16 +50,13 @@ useHead({
 })
 
 const { data: surround } = await useAsyncData(
-  `surround-${path}`,
+  `surround${path}`,
   async () => {
     const [prev, next] = await queryContent<Nav>(localePath('realisations'))
       .only(['_path', 'title'])
       .findSurround(path)
 
-    return {
-      prev,
-      next,
-    }
+    return { prev, next }
   },
   { watch: [localePath] },
 )
