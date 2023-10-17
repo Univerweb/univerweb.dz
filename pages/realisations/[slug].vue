@@ -62,7 +62,14 @@ const { data: surround } = await useAsyncData(
   { watch: [localePath] },
 )
 
-const query: QueryBuilderParams = { where: [{ category: post.value.category, _path: { $ne: path } }] }
+const query: QueryBuilderParams = {
+  where: [
+    {
+      category: post.value.category,
+      _path: { $ne: path },
+    },
+  ],
+}
 </script>
 
 <template>
