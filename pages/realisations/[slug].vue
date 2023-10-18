@@ -180,7 +180,6 @@ const { data: surround } = await useAsyncData(
       max-width: $xl;
       height: auto;
       border-radius: 0.5rem 0.5rem 0 0;
-      box-shadow: 0 0 40px 0 rgba(0 0 0 / 10%);
     }
   }
 
@@ -237,7 +236,6 @@ const { data: surround } = await useAsyncData(
 
       img {
         border-radius: 0.25rem;
-        box-shadow: 0 0 40px 0 rgba(0 0 0 / 10%);
       }
     }
   }

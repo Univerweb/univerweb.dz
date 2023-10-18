@@ -39,20 +39,28 @@ picture {
   background-color: var(--light);
   transition: background-color $transition;
 
+  &.thumbnail {
+    aspect-ratio: 49 / 52;
+  }
+
   img {
     width: 100%;
     height: auto;
   }
-}
 
-.thumbnail {
-  aspect-ratio: 49 / 52;
-
-  img {
+  &.thumbnail img {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+  }
+
+  &:not(.thumbnail) img {
+    box-shadow: 0 0 40px 0 rgba(0 0 0 / 10%);
+
+    .dark-mode & {
+      box-shadow: 0 0 40px 0 rgba(255 255 255 / 10%);
+    }
   }
 }
 </style>
