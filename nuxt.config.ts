@@ -1,8 +1,6 @@
 import process from 'node:process'
 
 export default defineNuxtConfig({
-  devtools: { enabled: true },
-
   runtimeConfig: {
     public: {
       baseURL: process.env.BASE_URL,
@@ -32,6 +30,7 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxt/content',
+    '@nuxt/devtools',
     '@nuxt/image',
     '@nuxtjs/color-mode',
     '@nuxtjs/i18n',
