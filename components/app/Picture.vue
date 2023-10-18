@@ -18,6 +18,14 @@ withDefaults(defineProps<Props>(), {
 })
 
 const { locale } = useI18n()
+
+function pictureLoaded() {
+  const images = document.querySelectorAll('picture img')
+  images.forEach((image) => {
+    if (image instanceof HTMLImageElement && image.complete)
+      image.classList.add('loaded')
+  })
+}
 </script>
 
 <template>
@@ -30,6 +38,7 @@ const { locale } = useI18n()
     loading="lazy"
     :class="className"
     :img-attrs="{ property: 'image' } || null"
+    @load="pictureLoaded"
   />
 </template>
 
@@ -46,6 +55,12 @@ picture {
   img {
     width: 100%;
     height: auto;
+    opacity: 0;
+    transition: opacity $transition;
+
+    &.loaded {
+      opacity: 1;
+    }
   }
 
   &.thumbnail img {
