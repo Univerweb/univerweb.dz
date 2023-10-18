@@ -13,7 +13,7 @@ export interface Props {
 withDefaults(defineProps<Props>(), {
   type: 'banner',
   ext: 'jpg',
-  sizes: 'xs:100vw sm:100vw md:100vw lg:100vw xl:100vw xxl:1280px',
+  sizes: '288px xs:607px sm:719px md:927px lg:1136px xl:1280px',
   className: 'banner',
 })
 

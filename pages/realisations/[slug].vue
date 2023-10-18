@@ -84,7 +84,12 @@ const { data: surround } = await useAsyncData(
         </h1>
       </div>
 
-      <AppPicture :picture="post" ext="png" />
+      <AppPicture
+        :picture="post"
+        :width="2560"
+        :height="1280"
+        ext="png"
+      />
 
       <div class="container client">
         <div class="details">
@@ -161,32 +166,21 @@ const { data: surround } = await useAsyncData(
   }
 
   .banner {
-    position: relative;
     overflow: hidden;
-    aspect-ratio: 16 / 12;
+    justify-items: center;
+    padding: 12px;
+    padding-bottom: 0 !important;
 
-    @media (min-width: $md) {
-      aspect-ratio: 16 / 9;
-    }
-
-    @media (min-width: $lg) {
-      aspect-ratio: 16 / 8;
-    }
-
-    @media (min-width: $xl) {
-      aspect-ratio: 16 / 6;
-    }
-
-    @media (min-width: $xxl) {
-      aspect-ratio: 16 / 4;
-    }
+    @include media($xs, 16px, 16px);
+    @include media($sm, 24px, 24px);
+    @include media($md, 48px, 48px);
+    @include media($lg, 72px, 72px);
 
     img {
-      position: absolute;
-      inset: 0;
       max-width: $xl;
       height: auto;
-      margin: 40px auto 0;
+      border-radius: 0.5rem 0.5rem 0 0;
+      box-shadow: 0 0 40px 0 rgba(0 0 0 / 10%);
     }
   }
 
