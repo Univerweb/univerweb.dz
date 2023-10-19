@@ -83,6 +83,18 @@ footer {
   @include media($lg, 144px, calc(50% - 928px / 2));
   @include media($xl, 144px, calc(50% - 1200px / 2));
 
+  &.hero {
+    display: grid;
+    grid-auto-rows: 1fr auto;
+    padding-block: 0;
+    transition: min-height $transition;
+    min-height: calc(100vh - 96px);
+
+    @media (min-width: $lg) {
+    min-height: calc(100vh - 132px);
+    }
+  }
+
   &.post-nav {
     padding-top: 72px;
     padding-bottom: 48px;
@@ -92,6 +104,10 @@ footer {
 /* Intro */
 .intro {
   @include grid(12, 1fr);
+
+  &.intro {
+    align-self: center;
+  }
 
   * {
     grid-column: 1 / 13;
@@ -220,6 +236,11 @@ a {
   color: var(--text-primary);
   text-decoration: none;
   transition: color $transition;
+
+  .hero & {
+    display: grid;
+    justify-self: center;
+  }
 }
 
 strong {

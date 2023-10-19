@@ -18,26 +18,3 @@ const { t } = useI18n()
     </a>
   </section>
 </template>
-
-<style lang="scss">
-.hero {
-  display: grid;
-  grid-auto-rows: 1fr auto;
-  padding-block: 0;
-  min-height: calc(100vh - 96px);
-
-  @media (min-width: $lg) {
-    min-height: calc(100vh - 132px);
-  }
-
-  transition: min-height $transition;
-
-  .intro {
-    align-self: center;
-  }
-
-  a {
-    justify-self: center;
-  }
-}
-</style>
