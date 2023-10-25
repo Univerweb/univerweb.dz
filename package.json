@@ -24,7 +24,7 @@
     "eslint": "^8.52.0",
     "nuxt": "^3.8.0",
     "nuxt-gtag": "^1.1.1",
-    "nuxt-simple-sitemap": "^3.4.0",
+    "nuxt-simple-sitemap": "^3.4.1",
     "sass": "^1.69.4",
     "stylelint": "^15.11.0",
     "stylelint-config-recommended-vue": "^1.5.0",
