@@ -16,7 +16,7 @@
   "lang": "English",
   "toggle": "Open menu",
   "request": {
-    "headline": "Convinced? Let's have a coffee together.",
+    "headline": "Convinced? Let’s have a coffee together.",
     "link": "Get in Touch"
   },
   "streetAddress": "62 Coop. El Mebnia",
@@ -113,9 +113,9 @@
   },
   "contact": {
     "title": "@:menu.contact",
-    "desc": "Tell us about your needs, we'd love to collaborate with you.",
+    "desc": "Tell us about your needs, we’d love to collaborate with you.",
     "other": "Other ways to contact us",
-    "about": "Creating professional websites is what we do. Tell us about your needs, we'd love to collaborate with you.",
+    "about": "Creating professional websites is what we do. Tell us about your needs, we’d love to collaborate with you.",
     "manager": "Manager",
     "support": "Technical support"
   },

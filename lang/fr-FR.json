@@ -1,7 +1,7 @@
 {
   "name": "Univerweb",
   "title": "Création de sites web en Algérie",
-  "desc": "Plus que des sites web, nous concevons et innovons pour vous des expériences numériques centrées sur l'humain et qui reflètent votre image de marque.",
+  "desc": "Plus que des sites web, nous concevons et innovons pour vous des expériences numériques centrées sur l’humain et qui reflètent votre image de marque.",
   "skiplinks": {
     "menu": "Aller au menu",
     "content": "Aller au contenu",
@@ -10,7 +10,7 @@
   "menu": {
     "realisations": "Réalisations",
     "prestations": "Prestations",
-    "agence": "L'agence",
+    "agence": "L’agence",
     "contact": "Contact"
   },
   "lang": "Français",
@@ -36,7 +36,7 @@
   "copy": "Copyright 2023 @:name{'.'} Tous droits réservés.",
   "home": {
     "headline": "Nous créons des sites web tellement mémorables.",
-    "lead": "Encore plus que des sites web, nous concevons et innovons pour vous des expériences numériques centrées sur l'humain et qui reflètent votre image de marque, notre mission première est de vous satisfaire !",
+    "lead": "Encore plus que des sites web, nous concevons et innovons pour vous des expériences numériques centrées sur l’humain et qui reflètent votre image de marque, notre mission première est de vous satisfaire !",
     "more": "Plus de bonheur"
   },
   "works": {
@@ -50,7 +50,7 @@
     "category": "Catégorie",
     "visit": "Visiter le site web",
     "alt": "Un aperçu du site web de",
-    "state": "Ce site n'est plus disponible 😔"
+    "state": "Ce site n’est plus disponible 😔"
   },
   "presta": {
     "title": "@:menu.prestations",
@@ -59,7 +59,7 @@
     "lead": "De nos jours quiconque peut faire un site web, y compris votre neveu de 13 ans ! Mais qui peut réellement concrétiser une stratégie de présence web accomplie, sur des fondements technologiques et une méthodologie rigoureuse.",
     "webDesign": {
       "title": "Web design",
-      "content": "Un mélange savant et millimétré entre design attrayant, charte graphique respectée et expérience utilisateur au top des priorités. Nous trouverons pour vous l'équilibre parfait.",
+      "content": "Un mélange savant et millimétré entre design attrayant, charte graphique respectée et expérience utilisateur au top des priorités. Nous trouverons pour vous l’équilibre parfait.",
       "tags": [
         "Responsive",
         "Données structurées",
@@ -69,7 +69,7 @@
     },
     "dev": {
       "title": "Développement",
-      "content": "Votre entreprise et vos besoins métiers sont uniques. Vous êtes uniques ! Nos coderons pour vous l'application qui répond exactement à vos besoins, sans fioritures et avec agilité.",
+      "content": "Votre entreprise et vos besoins métiers sont uniques. Vous êtes uniques ! Nos coderons pour vous l’application qui répond exactement à vos besoins, sans fioritures et avec agilité.",
       "tags": [
         "CMS",
         "Drupal",
@@ -79,7 +79,7 @@
     },
     "support": {
       "title": "Support + Hébergement",
-      "content": "Imaginez un plat au restaurant sans assiette et sans serveur. Un site sans hébergement fiable et un support présent 24/7 c'est exactement la même chose.",
+      "content": "Imaginez un plat au restaurant sans assiette et sans serveur. Un site sans hébergement fiable et un support présent 24/7 c’est exactement la même chose.",
       "tags": [
         "HTTPS",
         "HTTP/2",
@@ -107,14 +107,14 @@
         "Une prestation complète": "Création du site web, nom du domaine et hébergement, nous vous offrirons un service complet.",
         "À la pointe de la technique": "Nous utilisons les dernières techniques et langages du web afin de vous offrir le meilleur service possible.",
         "Un projet qui vous ressemble": "Nous concevons des sites web qui reflètent votre image de marque et qui sont adaptés à votre budget.",
-        "Un design innovant": "Nous concevons un design sur mesure afin de refléter au mieux l'identité de votre entreprise."
+        "Un design innovant": "Nous concevons un design sur mesure afin de refléter au mieux l’identité de votre entreprise."
       }
     }
   },
   "contact": {
     "title": "@:menu.contact",
     "desc": "Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
-    "about": "Créer des sites web professionnels, c'est ce que nous faisons. Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
+    "about": "Créer des sites web professionnels, c’est ce que nous faisons. Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
     "other": "Autres moyens de nous contacter",
     "manager": "Gérant",
     "support": "Soutien technique"
@@ -126,7 +126,7 @@
   "error": {
     "headline": "Oops…",
     "error404": "Cette page est introuvable.",
-    "error500": "Une erreur s'est produite.",
-    "back": "Retour à l'accueil"
+    "error500": "Une erreur s’est produite.",
+    "back": "Retour à l’accueil"
   }
 }
