@@ -50,7 +50,8 @@
     "category": "Catégorie",
     "visit": "Visiter le site web",
     "alt": "Un aperçu du site web de",
-    "state": "Ce site n’est plus disponible 😔"
+    "state": "Ce site n’est plus disponible 😔",
+    "related": "Projets liés"
   },
   "presta": {
     "title": "@:menu.prestations",

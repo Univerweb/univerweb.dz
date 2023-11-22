@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
 import type { Nav, Work } from '../../types'
 
 const localePath = useLocalePath()
@@ -60,6 +61,15 @@ const { data: surround } = await useAsyncData(
   },
   { watch: [localePath] },
 )
+
+const query: QueryBuilderParams = {
+  where: [
+    {
+      category: post.value.category,
+      _path: { $ne: path },
+    },
+  ],
+}
 </script>
 
 <template>
@@ -154,6 +164,22 @@ const { data: surround } = await useAsyncData(
     </article>
 
     <LazyAppNav :prev="surround!.prev" :next="surround!.next" />
+
+    <ContentList :query="query" :path="localePath('realisations')">
+      <template #default="{ list }">
+        <div class="container">
+          <div class="intro">
+            <h2 class="h1">
+              {{ t('work.related') }}
+            </h2>
+          </div>
+          <div class="card-group">
+            <WorkCard v-for="p in (list as Work[])" :key="p._path" :card="p" title-tag="h2" />
+          </div>
+        </div>
+      </template>
+      <template #not-found />
+    </ContentList>
 
     <LazyAppRequest />
   </main>
