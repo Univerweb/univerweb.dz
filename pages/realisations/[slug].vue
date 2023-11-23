@@ -37,16 +37,15 @@ const { data: surround } = await useAsyncData(
   { watch: [localePath] },
 )
 
-const query: QueryBuilderParams = {
-  only: ['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'body', 'category'],
-  where: [{
-    category: post.value.category,
-    _path: { $ne: path },
-  }],
-  sort: [{
-    _id: -1,
-  }],
-}
+const { data: related } = await useAsyncData(
+  `related${path}`,
+  () => queryContent<Work>(localePath('realisations'))
+    .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'body', 'category'])
+    .where({ category: post.value!.category, _path: { $ne: path } })
+    .sort({ _id: -1 })
+    .find(),
+  { watch: [localePath] },
+)
 
 useSeoMeta({
   title: post.value.title,
@@ -167,21 +166,16 @@ useHead({
 
     <LazyAppNav :prev="surround!.prev" :next="surround!.next" />
 
-    <ContentList :query="query" :path="localePath('realisations')">
-      <template #default="{ list }">
-        <div class="container">
-          <div class="intro">
-            <h2 class="h1">
-              {{ t('work.related') }}
-            </h2>
-          </div>
-          <div class="card-group">
-            <WorkCard v-for="p in (list as Work[])" :key="p._path" :card="p" title-tag="h2" />
-          </div>
-        </div>
-      </template>
-      <template #not-found />
-    </ContentList>
+    <div v-if="related && related.length" class="container">
+      <div class="intro">
+        <h2 class="h1">
+          {{ t('work.related') }}
+        </h2>
+      </div>
+      <div class="card-group">
+        <WorkCard v-for="p in (related as Work[])" :key="p._path" :card="p" title-tag="h3" />
+      </div>
+    </div>
 
     <LazyAppRequest />
   </main>
