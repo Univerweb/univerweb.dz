@@ -38,6 +38,7 @@ const { data: surround } = await useAsyncData(
 )
 
 const query: QueryBuilderParams = {
+  only: ['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'body', 'category'],
   where: [{
     category: post.value.category,
     _path: { $ne: path },
