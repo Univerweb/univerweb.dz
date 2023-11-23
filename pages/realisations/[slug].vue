@@ -42,6 +42,9 @@ const query: QueryBuilderParams = {
     category: post.value.category,
     _path: { $ne: path },
   }],
+  sort: [{
+    _id: -1,
+  }],
 }
 
 useSeoMeta({
