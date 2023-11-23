@@ -25,6 +25,25 @@ if (!post.value) {
   })
 }
 
+const { data: surround } = await useAsyncData(
+  `surround${path}`,
+  async () => {
+    const [prev, next] = await queryContent<Nav>(localePath('realisations'))
+      .only(['_path', 'title'])
+      .findSurround(path)
+
+    return { prev, next }
+  },
+  { watch: [localePath] },
+)
+
+const query: QueryBuilderParams = {
+  where: [{
+    category: post.value.category,
+    _path: { $ne: path },
+  }],
+}
+
 useSeoMeta({
   title: post.value.title,
   description: post.value.description,
@@ -49,27 +68,6 @@ useHead({
     },
   ],
 })
-
-const { data: surround } = await useAsyncData(
-  `surround${path}`,
-  async () => {
-    const [prev, next] = await queryContent<Nav>(localePath('realisations'))
-      .only(['_path', 'title'])
-      .findSurround(path)
-
-    return { prev, next }
-  },
-  { watch: [localePath] },
-)
-
-const query: QueryBuilderParams = {
-  where: [
-    {
-      category: post.value.category,
-      _path: { $ne: path },
-    },
-  ],
-}
 </script>
 
 <template>
