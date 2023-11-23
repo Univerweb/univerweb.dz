@@ -22,6 +22,18 @@ if (!post.value) {
   })
 }
 
+const { data: surround } = await useAsyncData(
+  `surround${path}`,
+  async () => {
+    const [prev, next] = await queryContent<Nav>(localePath('blog'))
+      .only(['_path', 'title'])
+      .findSurround(path)
+
+    return { prev, next }
+  },
+  { watch: [localePath] },
+)
+
 useSeoMeta({
   title: post.value.title,
   description: post.value.description,
@@ -46,18 +58,6 @@ useHead({
     },
   ],
 })
-
-const { data: surround } = await useAsyncData(
-  `surround${path}`,
-  async () => {
-    const [prev, next] = await queryContent<Nav>(localePath('blog'))
-      .only(['_path', 'title'])
-      .findSurround(path)
-
-    return { prev, next }
-  },
-  { watch: [localePath] },
-)
 </script>
 
 <template>
