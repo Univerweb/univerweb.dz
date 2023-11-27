@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
 import type { Nav, Work } from '../../types'
 
 const localePath = useLocalePath()
