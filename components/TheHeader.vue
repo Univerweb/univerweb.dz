@@ -173,6 +173,7 @@ header {
     animation: lang 2s forwards;
     position: absolute;
     inset-inline-end: 72px;
+    cursor: default;
 
     [lang='ar-DZ'] & {
       animation-name: lang-ar;
