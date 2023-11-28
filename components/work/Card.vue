@@ -19,6 +19,7 @@ const localePath = useLocalePath()
       </div>
       <span property="articleSection" :content="t('works.title')" />
       <span property="description" :content="card.description" />
+      <span v-for="tag in card.tags" :key="tag" property="keywords" :content="tag" />
       <time property="dateCreated datePublished" :datetime="card.createdAt.toString()" />
       <time property="dateModified" :datetime="card.updatedAt.toString()" />
       <div property="author publisher" typeof="Organization">
@@ -43,11 +44,6 @@ const localePath = useLocalePath()
         <Component :is="titleTag" property="headline" class="work">
           {{ card.title }}
         </Component>
-        <ul class="tags">
-          <li v-for="tag in card.tags" :key="tag" property="keywords">
-            {{ tag }}
-          </li>
-        </ul>
         <ContentRendererMarkdown
           :value="card"
           :components="{ p: 'span' }"

@@ -84,12 +84,13 @@ const { data: posts } = await useAsyncData(
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: $text-primary;
-    opacity: 0.1;
+    background: linear-gradient(0deg, rgba(17 17 17 / 0%) 0%, rgba(17 17 17 / 0%) 60%, rgba(17 17 17 / 60%) 100%);
+    opacity: 1;
     transition: opacity $transition;
   }
 
   .card:hover .overlay {
+    background-color: $text-primary;
     opacity: 0.6;
   }
 
@@ -100,10 +101,6 @@ const { data: posts } = await useAsyncData(
     height: 100%;
     color: $white;
     padding: 24px;
-
-    &.work {
-      grid-auto-rows: auto auto 1fr;
-    }
 
     @include media($md, 24px, 24px);
     @include media($lg, 36px, 36px);
@@ -120,7 +117,7 @@ const { data: posts } = await useAsyncData(
       }
     }
 
-    margin-bottom: 12px;
+    margin-bottom: 0;
   }
 
   p {
