@@ -70,7 +70,7 @@ picture {
     transform: translate(-50%, -50%);
   }
 
-  &:not(.thumbnail) img {
+  .work & img {
     box-shadow: 0 0 40px 0 rgba(0 0 0 / 10%);
 
     .dark-mode & {
