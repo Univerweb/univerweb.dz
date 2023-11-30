@@ -176,18 +176,32 @@ useHead({
 
     * {
       grid-column: 1 / 13;
-      margin-bottom: 24px;
-
-      &:last-child {
-        margin-bottom: 0;
-      }
 
       @media (min-width: $lg) {
-        grid-column: 1 / 11;
+        grid-column: 2 / 12;
       }
 
       @media (min-width: $xl) {
-        grid-column: 1 / 9;
+        grid-column: 3 / 11;
+      }
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-block: 48px 12px;
+      letter-spacing: 0;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 0;
+
+      +p {
+        margin-top: 12px;
+      }
+
+      &:first-child {
+        font-size: 20px;
       }
     }
   }

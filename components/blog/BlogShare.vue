@@ -60,11 +60,11 @@ const { copy, copied, isSupported } = useClipboard()
   grid-column: 1 / 13;
 
   @media (min-width: $lg) {
-    grid-column: 1 / 11;
+    grid-column: 2 / 12;
   }
 
   @media (min-width: $xl) {
-    grid-column: 1 / 9;
+    grid-column: 3 / 11;
   }
 
   h2 {
