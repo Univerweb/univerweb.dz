@@ -21,10 +21,8 @@
     "javascript",
     "typescript",
     "vue",
-    "html",
     "markdown",
     "json",
-    "jsonc",
-    "yaml"
+    "jsonc"
   ]
 }
