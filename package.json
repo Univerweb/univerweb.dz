@@ -10,8 +10,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "lint:style": "stylelint \"**/*.(vue|scss)\""
+    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.3.4",
@@ -26,9 +25,6 @@
     "nuxt-gtag": "^1.1.1",
     "nuxt-simple-sitemap": "^4.1.7",
     "sass": "^1.69.5",
-    "stylelint": "^15.11.0",
-    "stylelint-config-recommended-vue": "^1.5.0",
-    "stylelint-config-standard-scss": "^11.1.0",
     "vue3-google-map": "^0.18.0"
   }
 }
