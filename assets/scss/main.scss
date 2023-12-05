@@ -91,7 +91,7 @@ footer {
     min-height: calc(100vh - 96px);
 
     @media (min-width: $lg) {
-    min-height: calc(100vh - 132px);
+      min-height: calc(100vh - 132px);
     }
   }
 
