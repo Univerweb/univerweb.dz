@@ -316,8 +316,7 @@ button {
       transform-origin: right;
     }
 
-    transition: background-color $transition,
-    transform $transition;
+    transition: background-color $transition, transform $transition;
   }
 
   &:hover::before {
