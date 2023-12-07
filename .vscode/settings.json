@@ -1,7 +1,5 @@
 {
   "eslint.experimental.useFlatConfig": true,
-  "prettier.enable": false,
-  "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
     "source.organizeImports": "never"
@@ -17,12 +15,5 @@
     { "rule": "*quotes", "severity": "off" },
     { "rule": "*semi", "severity": "off" }
   ],
-  "eslint.validate": [
-    "javascript",
-    "typescript",
-    "vue",
-    "markdown",
-    "json",
-    "jsonc"
-  ]
+  "eslint.validate": ["javascript", "typescript", "vue"]
 }
