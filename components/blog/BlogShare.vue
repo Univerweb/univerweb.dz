@@ -96,7 +96,7 @@ const { copy, copied, isSupported } = useClipboard()
     position: relative;
 
     .tooltip-text {
-      font-family: var(--font-medium);
+      font-family: $font-medium;
 
       @include size(13);
 

@@ -126,7 +126,7 @@ useHead({
 
   .meta {
     color: var(--text-secondary);
-    font-family: var(--font-medium);
+    font-family: $font-medium;
     transition: color $transition;
 
     .author {
