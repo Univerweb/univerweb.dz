@@ -19,10 +19,8 @@
     "headline": "Convaincu ? Prenons un café ensemble.",
     "link": "Contactez-nous"
   },
-  "streetAddress": "62 Coop. El Mebnia",
-  "addressLocality": "Birkhadem",
-  "addressRegion": "Alger",
-  "addressCountry": "Algérie",
+  "streetAddress": "62 Coop. El Mebnia, Birkhadem",
+  "addressLocality": "Alger",
   "maps": "Obtenir un itinéraire",
   "phoneLabel": "Téléphone / fax",
   "mobileLabel": "Mobile",
@@ -71,21 +69,12 @@
     "dev": {
       "title": "Développement",
       "content": "Votre entreprise et vos besoins métiers sont uniques. Vous êtes uniques ! Nos coderons pour vous l’application qui répond exactement à vos besoins, sans fioritures et avec agilité.",
-      "tags": [
-        "CMS",
-        "Drupal",
-        "Application mobile",
-        "Nuxt"
-      ]
+      "tags": ["CMS", "Drupal", "Application mobile", "Nuxt"]
     },
     "support": {
       "title": "Support + Hébergement",
       "content": "Imaginez un plat au restaurant sans assiette et sans serveur. Un site sans hébergement fiable et un support présent 24/7 c’est exactement la même chose.",
-      "tags": [
-        "HTTPS",
-        "HTTP/2",
-        "Sauvegarde complète"
-      ]
+      "tags": ["HTTPS", "HTTP/2", "Sauvegarde complète"]
     }
   },
   "agency": {

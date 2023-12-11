@@ -4,7 +4,6 @@ const route = useRoute()
 const { y } = useWindowScroll()
 const i18nHead = useLocaleHead({ addSeoAttributes: true, addDirAttribute: true })
 const { t, locale, finalizePendingLocaleChange } = useI18n()
-const coma = useComa()
 const show = useShow()
 
 async function onBeforeEnter() {
@@ -63,9 +62,11 @@ useHead({
         'sameAs': ['https://twitter.com/Univerweb', 'https://www.facebook.com/Univerweb', 'https://www.linkedin.com/company/Univerweb', 'https://github.com/Univerweb'],
         'address': {
           '@type': 'PostalAddress',
-          'streetAddress': () => `${t('streetAddress')}${coma.value}${t('addressLocality')}`,
+          'streetAddress': () => t('streetAddress'),
           'postalCode': '16 029',
-          'addressLocality': () => `${t('addressRegion')}${coma.value}${t('addressCountry')}`,
+          'addressLocality': () => t('addressLocality'),
+          'addressRegion': () => t('addressLocality'),
+          'addressCountry': 'DZ',
         },
       },
     },
