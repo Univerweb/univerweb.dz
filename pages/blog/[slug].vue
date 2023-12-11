@@ -80,7 +80,7 @@ useHead({
             {{ new Intl.DateTimeFormat(locale, { dateStyle: 'long' }).format(new Date(post.createdAt)) }}
           </time>
           <time property="dateModified" :datetime="post.updatedAt.toString()" :content="post.updatedAt.toString()" />
-          — {{ t('blog.by') }}
+          {{ t('blog.by') }}
           <span v-if="post.author && post.author.name && post.author.url" property="author" typeof="Person" class="author">
             <a :href="post.author.url" rel="author" target="_blank" property="url" :content="post.author.url">
               <span property="name">@{{ post.author.name }}</span>
