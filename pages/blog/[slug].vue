@@ -64,9 +64,9 @@ useHead({
 <template>
   <main v-if="post" class="blog">
     <article vocab="https://schema.org/" typeof="Article">
-      <div property="mainEntityOfPage" typeof="WebPage">
+      <span property="mainEntityOfPage" typeof="WebPage">
         <span property="id" :content="`${config.public.baseURL}${path}`" />
-      </div>
+      </span>
       <span property="publisher" typeof="Organization">
         <span property="name" :content="t('name')" />
         <span property="url" :content="config.public.baseURL" />

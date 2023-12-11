@@ -14,9 +14,9 @@ const localePath = useLocalePath()
 <template>
   <NuxtLink :to="localePath(`${card._path}`)" class="card">
     <article vocab="https://schema.org/" typeof="Article">
-      <div property="mainEntityOfPage" typeof="WebPage">
+      <span property="mainEntityOfPage" typeof="WebPage">
         <meta property="id" :content="`${config.public.baseURL}${localePath(`${card._path}`)}`">
-      </div>
+      </span>
       <span property="publisher" typeof="Organization">
         <meta property="name" :content="t('name')">
         <meta property="url" :content="config.public.baseURL">
