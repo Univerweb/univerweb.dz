@@ -6,7 +6,7 @@ defineProps<{
   titleTag: string
 }>()
 
-const { locale, t } = useI18n()
+const { t } = useI18n()
 const config = useRuntimeConfig()
 const localePath = useLocalePath()
 </script>
@@ -17,8 +17,21 @@ const localePath = useLocalePath()
       <div property="mainEntityOfPage" typeof="WebPage">
         <meta property="id" :content="`${config.public.baseURL}${localePath(`${card._path}`)}`">
       </div>
+      <span property="publisher" typeof="Organization">
+        <meta property="name" :content="t('name')">
+        <meta property="url" :content="config.public.baseURL">
+      </span>
+      <span v-if="card.author && card.author.name && card.author.url" property="author" typeof="Person">
+        <meta property="name" :content="card.author.name">
+        <meta property="url" :content="card.author.url">
+      </span>
+      <span v-else property="author" typeof="Organization">
+        <meta property="name" :content="t('name')">
+        <meta property="url" :content="config.public.baseURL">
+      </span>
+      <time property="dateCreated datePublished" :datetime="card.createdAt.toString()" />
+      <time property="dateModified" :datetime="card.updatedAt.toString()" />
       <meta property="articleSection" :content="t('blog.title')">
-      <meta property="description" :content="card.description">
 
       <AppPicture
         :picture="card"
@@ -38,24 +51,8 @@ const localePath = useLocalePath()
         <Component :is="titleTag" property="headline">
           {{ card.title }}
         </Component>
-        <p class="lead meta">
-          <time property="dateCreated datePublished" :datetime="card.createdAt.toString()">
-            {{ new Intl.DateTimeFormat(locale, { dateStyle: 'long' }).format(new Date(card.createdAt)) }}
-          </time>
-          <time property="dateModified" :datetime="card.updatedAt.toString()" :content="card.updatedAt.toString()" />
-          {{ t('blog.by') }}
-          <span v-if="card.author" property="author" typeof="Person">
-            <span property="name">{{ card.author.name }}</span>
-            <meta property="url" :content="card.author.url">
-          </span>
-          <span v-else property="author" typeof="Organization">
-            <span property="name">{{ t('name') }}</span>
-            <meta property="url" :content="config.public.baseURL">
-          </span>
-          <span property="publisher" typeof="Organization">
-            <meta property="name" :content="t('name')">
-            <meta property="url" :content="config.public.baseURL">
-          </span>
+        <p property="description" class="lead">
+          {{ card.description }}
         </p>
       </div>
     </article>
