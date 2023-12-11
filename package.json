@@ -23,7 +23,7 @@
     "eslint": "^8.55.0",
     "nuxt": "^3.8.2",
     "nuxt-gtag": "^1.1.1",
-    "nuxt-simple-sitemap": "^4.1.11",
+    "nuxt-simple-sitemap": "^4.1.13",
     "sass": "^1.69.5",
     "vue3-google-map": "^0.18.0"
   }

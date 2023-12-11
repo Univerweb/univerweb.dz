@@ -36,8 +36,8 @@ devDependencies:
     specifier: ^1.1.1
     version: 1.1.1
   nuxt-simple-sitemap:
-    specifier: ^4.1.11
-    version: 4.1.12(@nuxt/devtools@1.0.5)(@vue/compiler-core@3.3.11)(nuxt@3.8.2)(postcss@8.4.32)(vite@5.0.7)(vue@3.3.11)(webpack@5.89.0)
+    specifier: ^4.1.13
+    version: 4.1.13(@nuxt/devtools@1.0.5)(@vue/compiler-core@3.3.11)(nuxt@3.8.2)(postcss@8.4.32)(vite@5.0.7)(vue@3.3.11)(webpack@5.89.0)
   sass:
     specifier: ^1.69.5
     version: 1.69.5
@@ -1942,6 +1942,7 @@ packages:
     dependencies:
       is-glob: 4.0.3
       micromatch: 4.0.5
+      napi-wasm: 1.1.0
     dev: true
     bundledDependencies:
       - napi-wasm
@@ -7364,6 +7365,10 @@ packages:
     dev: true
     optional: true
 
+  /napi-wasm@1.1.0:
+    resolution: {integrity: sha512-lHwIAJbmLSjF9VDRm9GoVOy9AGp3aIvkjv+Kvz9h16QR3uSVYH78PNQUnT2U4X53mhlnV2M7wrhibQ3GHicDmg==}
+    dev: true
+
   /natural-compare-lite@1.4.0:
     resolution: {integrity: sha512-Tj+HTDSJJKaZnfiuw+iaF9skdPpTo2GtEly5JHnWV/hfv2Qj/9RKsGISQtLh2ox3l5EAGw487hnBee0sIJ6v2g==}
     dev: true
@@ -7704,8 +7709,8 @@ packages:
       - supports-color
     dev: true
 
-  /nuxt-simple-sitemap@4.1.12(@nuxt/devtools@1.0.5)(@vue/compiler-core@3.3.11)(nuxt@3.8.2)(postcss@8.4.32)(vite@5.0.7)(vue@3.3.11)(webpack@5.89.0):
-    resolution: {integrity: sha512-EyE7q8n08L2wva/ur5qt7aGZhBQrvhJbwXO8/a4jHatCHm6hNArUaN5ju1T6CtbpXrRIapLa2+wSE/JTN7xvlA==}
+  /nuxt-simple-sitemap@4.1.13(@nuxt/devtools@1.0.5)(@vue/compiler-core@3.3.11)(nuxt@3.8.2)(postcss@8.4.32)(vite@5.0.7)(vue@3.3.11)(webpack@5.89.0):
+    resolution: {integrity: sha512-uWCMm+ickzi5hMQXT6/qN/hs0OVdun4Mf/IGmbuM8MZGyGPxe3IQPSbWwDMCi2RQ3HQ7y5DIq6iofsHri4AI1g==}
     dependencies:
       '@nuxt/devtools-kit': 1.0.5(nuxt@3.8.2)(vite@5.0.7)
       '@nuxt/devtools-ui-kit': 1.0.5(@nuxt/devtools@1.0.5)(@vue/compiler-core@3.3.11)(nuxt@3.8.2)(postcss@8.4.32)(vite@5.0.7)(vue@3.3.11)(webpack@5.89.0)
