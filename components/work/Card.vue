@@ -14,18 +14,18 @@ const localePath = useLocalePath()
 <template>
   <NuxtLink :to="localePath(`${card._path}`)" class="card">
     <article vocab="https://schema.org/" typeof="Article">
-      <div property="mainEntityOfPage" typeof="WebPage">
+      <span property="mainEntityOfPage" typeof="WebPage">
         <span property="id" :content="`${config.public.baseURL}${localePath(`${card._path}`)}`" />
-      </div>
-      <span property="articleSection" :content="t('works.title')" />
-      <span property="description" :content="card.description" />
-      <span v-for="tag in card.tags" :key="tag" property="keywords" :content="tag" />
-      <time property="dateCreated datePublished" :datetime="card.createdAt.toString()" />
-      <time property="dateModified" :datetime="card.updatedAt.toString()" />
-      <div property="author publisher" typeof="Organization">
+      </span>
+      <span property="author publisher" typeof="Organization">
         <span property="name" :content="t('name')" />
         <span property="url" :content="config.public.baseURL" />
-      </div>
+      </span>
+      <time property="dateCreated datePublished" :datetime="card.createdAt.toString()" />
+      <time property="dateModified" :datetime="card.updatedAt.toString()" />
+      <span v-for="tag in card.tags" :key="tag" property="keywords" :content="tag" />
+      <span property="articleSection" :content="t('works.title')" />
+      <span property="description" :content="card.description" />
 
       <AppPicture
         :picture="card"

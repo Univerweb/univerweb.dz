@@ -76,15 +76,15 @@ useHead({
 <template>
   <main v-if="post" class="work">
     <article vocab="https://schema.org/" typeof="Article">
-      <div property="mainEntityOfPage" typeof="WebPage">
+      <span property="mainEntityOfPage" typeof="WebPage">
         <span property="id" :content="`${config.public.baseURL}${path}`" />
-      </div>
-      <time property="dateCreated datePublished" :datetime="post.createdAt.toString()" />
-      <time property="dateModified" :datetime="post.updatedAt.toString()" />
-      <div property="author publisher" typeof="Organization">
+      </span>
+      <span property="author publisher" typeof="Organization">
         <span property="name" :content="t('name')" />
         <span property="url" :content="config.public.baseURL" />
-      </div>
+      </span>
+      <time property="dateCreated datePublished" :datetime="post.createdAt.toString()" />
+      <time property="dateModified" :datetime="post.updatedAt.toString()" />
       <span property="articleSection" :content="t('works.title')" />
       <span property="description" :content="post.description" />
 
