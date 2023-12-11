@@ -10,7 +10,7 @@ const { path, params: { slug } } = useRoute()
 const { data: post } = await useAsyncData(
   `post${path}`,
   () => queryContent()
-    .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'body'])
+    .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'author', 'body'])
     .where({ _path: path })
     .findOne() as Promise<Blog>,
 )
@@ -81,7 +81,7 @@ useHead({
           </time>
           <time property="dateModified" :datetime="post.updatedAt.toString()" :content="post.updatedAt.toString()" />
           — {{ t('blog.by') }}
-          <span v-if="post.author" property="author" typeof="Person" class="author">
+          <span v-if="post.author && post.author.name && post.author.url" property="author" typeof="Person" class="author">
             <span property="name">{{ post.author.name }}</span>
             <span property="url" :content="post.author.url" />
           </span>
