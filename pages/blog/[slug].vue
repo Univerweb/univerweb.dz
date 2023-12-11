@@ -82,11 +82,12 @@ useHead({
           <time property="dateModified" :datetime="post.updatedAt.toString()" :content="post.updatedAt.toString()" />
           — {{ t('blog.by') }}
           <span v-if="post.author && post.author.name && post.author.url" property="author" typeof="Person" class="author">
-            <span property="name">{{ post.author.name }}</span>
-            <span property="url" :content="post.author.url" />
+            <a :href="post.author.url" rel="author" target="_blank" property="url" :content="post.author.url">
+              <span property="name">@{{ post.author.name }}</span>
+            </a>
           </span>
           <span v-else property="author" typeof="Organization" class="author">
-            <span property="name">{{ t('name') }}</span>
+            <span property="name">@{{ t('name') }}</span>
             <span property="url" :content="config.public.baseURL" />
           </span>
           <span property="publisher" typeof="Organization">
