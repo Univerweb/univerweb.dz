@@ -30,20 +30,20 @@ const localePath = useLocalePath()
       <div class="overlay" />
 
       <div class="inner">
-        <Component :is="titleTag" property="headline">
-          {{ card.title }}
-        </Component>
         <ul class="tags">
-          <li v-for="tag in card.tags" :key="tag" property="keywords">
+          <li v-for="tag in card.tags" :key="tag" property="keywords" class="h3">
             {{ tag }}
           </li>
         </ul>
+        <Component :is="titleTag" property="headline">
+          {{ card.title }}
+        </Component>
         <p class="lead meta">
           <time property="dateCreated datePublished" :datetime="card.createdAt.toString()">
             {{ new Intl.DateTimeFormat(locale, { dateStyle: 'long' }).format(new Date(card.createdAt)) }}
           </time>
           <time property="dateModified" :datetime="card.updatedAt.toString()" :content="card.updatedAt.toString()" />
-          — {{ t('blog.by') }}
+          {{ t('blog.by') }}
           <span v-if="card.author" property="author" typeof="Person">
             <span property="name">{{ card.author.name }}</span>
             <meta property="url" :content="card.author.url">
