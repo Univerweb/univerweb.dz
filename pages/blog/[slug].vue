@@ -67,6 +67,10 @@ useHead({
       <div property="mainEntityOfPage" typeof="WebPage">
         <span property="id" :content="`${config.public.baseURL}${path}`" />
       </div>
+      <span property="publisher" typeof="Organization">
+        <span property="name" :content="t('name')" />
+        <span property="url" :content="config.public.baseURL" />
+      </span>
       <span property="articleSection" :content="t('blog.title')" />
       <span property="description" :content="post.description" />
 
@@ -88,10 +92,6 @@ useHead({
           </span>
           <span v-else property="author" typeof="Organization" class="author">
             <span property="name">@{{ t('name') }}</span>
-            <span property="url" :content="config.public.baseURL" />
-          </span>
-          <span property="publisher" typeof="Organization">
-            <span property="name" :content="t('name')" />
             <span property="url" :content="config.public.baseURL" />
           </span>
           <ul class="tags">
