@@ -161,7 +161,7 @@ useHead({
 
     .banner {
       position: relative;
-      aspect-ratio: 4/2;
+      aspect-ratio: 16/9;
 
       img {
         position: absolute;
