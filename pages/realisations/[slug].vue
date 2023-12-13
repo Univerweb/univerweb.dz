@@ -7,7 +7,7 @@ const breadcrumb = useBreadcrumb()
 const config = useRuntimeConfig()
 const { path, params: { slug } } = useRoute()
 const img = useImage()
-const ogImagePath = img(`realisations/${slug}_banner.png`, { width: 1920, height: 1080, position: 'top', format: 'jpg', quality: 80 })
+const ogImagePath = img(`realisations/${slug}_banner.png`, { width: 2560, height: 1280, quality: 80 })
 
 const { data: post } = await useAsyncData(
   `post${path}`,
