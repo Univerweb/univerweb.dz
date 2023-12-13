@@ -6,6 +6,8 @@ const { locale, t } = useI18n()
 const breadcrumb = useBreadcrumb()
 const config = useRuntimeConfig()
 const { path, params: { slug } } = useRoute()
+const img = useImage()
+const ogImagePath = img(`blog/${slug}_banner.jpg`, { width: 2400, height: 1350, quality: 80 })
 
 const { data: post } = await useAsyncData(
   `post${path}`,
@@ -40,7 +42,7 @@ useSeoMeta({
   description: post.value.description,
   ogTitle: post.value.title,
   ogType: 'article',
-  ogImage: `${config.public.baseURL}/_ipx/w_1536&f_jpg&q_80/blog/${slug}_banner.jpg`,
+  ogImage: `${config.public.baseURL}${ogImagePath}`,
 })
 
 useHead({
