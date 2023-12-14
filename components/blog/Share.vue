@@ -101,16 +101,15 @@ const { copy, copied } = useClipboard()
 
     .tooltip-text {
       font-family: $font-medium;
-
-      @include size(13);
-
+      font-size: 12px;
+      line-height: 22px;
       width: max-content;
       color: #00D282;
-      border: 1px solid #00D282;
+      border: 1px solid currentColor;
       padding: 0 6px;
       border-radius: 2em;
       position: absolute;
-      inset-inline-end: 24px;
+      inset-inline-end: 34px;
       z-index: 1;
     }
 
