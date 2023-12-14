@@ -176,6 +176,7 @@ useHead({
   .container-content {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    font-size: 18px;
 
     * {
       grid-column: 1 / 13;
@@ -196,16 +197,28 @@ useHead({
     }
 
     p {
-      font-size: 18px;
       margin-bottom: 0;
 
-      +p {
+      + p {
         margin-top: 12px;
       }
 
       &:first-child {
         font-size: 20px;
       }
+    }
+
+    a[rel='nofollow'] {
+      text-decoration: underline;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    ul,
+    ol {
+      margin-block: 12px;
     }
   }
 }
