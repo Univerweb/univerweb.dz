@@ -5,7 +5,7 @@ defineProps<{
 }>()
 
 const { t } = useI18n()
-const { copy, copied, isSupported } = useClipboard()
+const { copy, copied } = useClipboard()
 </script>
 
 <template>
@@ -16,7 +16,7 @@ const { copy, copied, isSupported } = useClipboard()
       </h2>
 
       <ul>
-        <li v-if="isSupported">
+        <li>
           <button class="tooltip" @click="copy(url)">
             <Transition>
               <span v-if="copied" class="tooltip-text">
@@ -57,6 +57,9 @@ const { copy, copied, isSupported } = useClipboard()
 .share {
   display: flex;
   justify-content: space-between;
+  padding-block: 24px;
+  border-block: 1px solid var(--light);
+  transition: border-color $transition;
   grid-column: 1 / 13;
 
   @media (min-width: $lg) {
@@ -74,6 +77,7 @@ const { copy, copied, isSupported } = useClipboard()
   ul {
     display: flex;
     column-gap: 24px;
+    height: 24px;
     list-style: none;
     margin: 0;
     padding: 0;
