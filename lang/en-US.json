@@ -28,8 +28,8 @@
   "join": "Join us on",
   "socialsName": ["X", "Facebook", "LinkedIn", "GitHub"],
   "colorMode": {
-    "dark": "Dark",
-    "light": "Light"
+    "dark": "Switch to light mode",
+    "light": "Switch to dark mode"
   },
   "copy": "Copyright {year} @:name{'.'} All rights reserved.",
   "home": {
