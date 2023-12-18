@@ -60,54 +60,45 @@ header {
 }
 
 .nav {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  align-items: center;
   width: 100%;
-  align-content: space-between;
+  height: 100%;
   padding: 72px 24px 24px;
   z-index: -1;
   opacity: 0;
-  pointer-events: none;
   background-color: var(--bg);
-  transition: background-color $transition;
+  visibility: hidden;
+  transition: background-color $transition, opacity $transition, visibility $transition;
 
   .open-menu & {
-    display: grid;
-    grid-template-rows: 1fr auto;
-    align-items: start;
-    height: 100%;
     opacity: 1;
-    pointer-events: auto;
-
-    @media screen and (orientation: landscape) {
-      align-items: center;
-    }
+    visibility: visible;
   }
 
   @media (min-width: $lg) {
-    display: grid;
     grid-template-columns: 1fr auto;
-    align-items: center;
-    position: initial;
-    height: initial;
+    position: relative;
     padding: 0;
     opacity: 1;
-    pointer-events: auto;
+    visibility: visible;
   }
 }
 
 .menu {
   display: grid;
   grid-auto-columns: max-content;
-  row-gap: 24px;
+  row-gap: 48px;
   list-style: none;
   margin: 0;
-  padding: 48px 0 0;
+  padding: 0;
 
   @media screen and (orientation: landscape) {
-    padding-top: 0;
+    row-gap: 12px;
   }
 
   @media (min-width: $lg) {
