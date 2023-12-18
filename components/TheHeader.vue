@@ -17,15 +17,13 @@ header {
   width: 100%;
   top: 0;
   left: 0;
-
-  @include grid(2, auto);
-
   justify-content: space-between;
   background-color: var(--bg);
   padding: 24px 12px;
   transition: background-color $transition, padding $transition;
   z-index: 1;
 
+  @include grid(2, auto);
   @include media($xs, 24px, 16px);
   @include media($sm, 24px, 24px);
   @include media($lg, 36px, 36px, $template-columns: auto 1fr);
