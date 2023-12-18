@@ -23,11 +23,7 @@ useHead({
   htmlAttrs: {
     lang: () => i18nHead.value.htmlAttrs!.lang,
     dir: () => i18nHead.value.htmlAttrs!.dir,
-    style: () => (show.value === true ? 'height: 100%; overflow: hidden' : 'height: initial; overflow: initial'),
-  },
-
-  bodyAttrs: {
-    style: () => (show.value === true ? 'height: 100%; overflow: hidden' : 'height: initial; overflow: initial'),
+    class: ({ 'open-menu': show }),
   },
 
   link: () => [

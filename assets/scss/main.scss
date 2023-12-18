@@ -28,12 +28,11 @@ html {
   text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-}
 
-html,
-body {
-  @media (min-width: $lg) {
-    overflow: visible !important;
+  &.open-menu,
+  &.open-menu body {
+    height: 100%;
+    overflow: hidden;
   }
 }
 
