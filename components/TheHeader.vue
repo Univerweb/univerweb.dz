@@ -107,10 +107,9 @@ header {
   a {
     position: relative;
     display: block;
+    color: var(--text-primary);
 
     @include font(20);
-
-    color: var(--text-primary);
 
     @media (min-width: $lg) {
       font-size: 1rem;
