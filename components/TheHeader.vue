@@ -1,9 +1,5 @@
-<script setup lang="ts">
-const show = useShow()
-</script>
-
 <template>
-  <header :class="{ show, hide: !show }">
+  <header>
     <HeaderLogo />
 
     <nav class="nav">
@@ -36,12 +32,10 @@ header {
   @include media($lg, 36px, 36px, $template-columns: auto 1fr);
 
   .scrolled & {
-    &:not(.show) {
-      box-shadow: 0 0 10px rgba(0 0 0 / 10%);
+    box-shadow: 0 0 10px rgba(0 0 0 / 10%);
 
-      .dark-mode & {
-        box-shadow: 0 0 10px rgba(255 255 255 / 10%);
-      }
+    .dark-mode & {
+      box-shadow: 0 0 10px rgba(255 255 255 / 10%);
     }
 
     @include media($lg, 24px, 36px);
@@ -79,7 +73,7 @@ header {
   background-color: var(--bg);
   transition: background-color $transition;
 
-  .show & {
+  .open-menu & {
     display: grid;
     grid-template-rows: 1fr auto;
     align-items: start;
@@ -236,7 +230,7 @@ header {
     animation: collapse-middle $animation;
     transform-origin: left;
 
-    .show & {
+    .open-menu & {
       animation: collapse-show-middle $animation;
     }
   }
@@ -244,7 +238,7 @@ header {
   .top {
     animation: collapse-top $animation;
 
-    .show & {
+    .open-menu & {
       animation: collapse-show-top $animation;
     }
   }
@@ -253,7 +247,7 @@ header {
     animation: collapse-bottom $animation;
     transform-origin: left;
 
-    .show & {
+    .open-menu & {
       animation: collapse-show-bottom $animation;
       transform-origin: center;
     }
