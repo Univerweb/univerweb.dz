@@ -17,7 +17,7 @@ withDefaults(defineProps<Props>(), {
   className: 'banner',
 })
 
-const { locale } = useI18n()
+const { isFrench } = useLocale()
 
 function pictureLoaded() {
   const images = document.querySelectorAll('picture img')
@@ -30,7 +30,7 @@ function pictureLoaded() {
 
 <template>
   <NuxtPicture
-    :src="locale === 'fr' ? `${picture._path}_${type}.${ext}` : `${picture._path}_${type}.${ext}`.slice(3)"
+    :src="isFrench ? `${picture._path}_${type}.${ext}` : `${picture._path}_${type}.${ext}`.slice(3)"
     :alt="alt || picture.description"
     :sizes="sizes"
     format="avif,webp"
