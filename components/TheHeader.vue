@@ -21,11 +21,10 @@ header {
   @include grid(2, auto);
 
   justify-content: space-between;
-  align-items: center;
   background-color: var(--bg);
   padding: 24px 12px;
   transition: background-color $transition, padding $transition;
-  z-index: 100;
+  z-index: 1;
 
   @include media($xs, 24px, 16px);
   @include media($sm, 24px, 24px);
