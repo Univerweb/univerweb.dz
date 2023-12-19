@@ -99,8 +99,8 @@ const { copy, copied } = useClipboard()
   .tooltip {
     position: relative;
 
-    .tooltip-text {
-      font-family: $font-medium;
+    &-text {
+      font-weight: bold;
       font-size: 12px;
       line-height: 22px;
       width: max-content;

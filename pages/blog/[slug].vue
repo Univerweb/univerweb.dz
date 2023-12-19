@@ -124,12 +124,12 @@ useHead({
 <style lang="scss">
 .blog {
   h1 {
-    margin-bottom: 24px;
+    margin-block-end: 24px;
   }
 
   .meta {
+    font-weight: bold;
     color: var(--text-secondary);
-    font-family: $font-medium;
     transition: color $transition;
 
     .author {
@@ -144,7 +144,7 @@ useHead({
       padding-inline-start: 12px;
 
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         inset-inline-start: 0;
         top: 50%;
