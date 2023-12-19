@@ -116,8 +116,6 @@ const { data: posts } = await useAsyncData(
         @include size(56);
       }
     }
-
-    margin-bottom: 0;
   }
 
   p {
