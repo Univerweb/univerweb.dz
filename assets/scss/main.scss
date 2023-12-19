@@ -44,7 +44,6 @@ body {
   transition: background-color $transition, color $transition;
   font-family: $font;
   font-size: 1rem;
-  font-weight: 400;
   line-height: 1.5;
 }
 
@@ -224,7 +223,7 @@ p {
   transition: color $transition;
 
   footer & {
-    font-family: $font;
+    font-weight: normal;
     color: var(--text-primary);
     margin: 0;
     max-width: 400px;
@@ -240,11 +239,6 @@ a {
     display: grid;
     justify-self: center;
   }
-}
-
-strong {
-  font-family: $font-medium;
-  font-weight: 400;
 }
 
 .link {
@@ -278,7 +272,7 @@ button {
   column-gap: 12px;
   background-color: var(--secondary);
   color: var(--primary);
-  font-family: $font-medium;
+  font-weight: bold;
   line-height: 48px;
   width: fit-content;
   height: 48px;

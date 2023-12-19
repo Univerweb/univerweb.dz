@@ -90,7 +90,7 @@ useHead({
 .prestations {
   .tags {
     color: var(--text-secondary);
-    font-family: $font-medium;
+    font-weight: bold;
     transition: color $transition;
     margin: 0;
   }

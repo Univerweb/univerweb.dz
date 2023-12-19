@@ -28,7 +28,7 @@ const { t } = useI18n()
     clip: rect(1px, 1px, 1px, 1px);
     background-color: $primary;
     color: $secondary;
-    font-family: $font-medium;
+    font-weight: bold;
     line-height: 25px;
     letter-spacing: -0.02em;
     text-transform: uppercase;

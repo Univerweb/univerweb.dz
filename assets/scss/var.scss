@@ -12,8 +12,7 @@ $white: #fff;
 $light: #f3f4f6;
 $semi-dark: #1f2937;
 $dark: #111827;
-$font: 'Sofia Pro Light', 'Almarai Regular', Arial;
-$font-medium: 'Sofia Pro Medium', 'Almarai Bold', Arial;
+$font: 'Sofia Pro', 'Almarai', Arial;
 $transition: 0.3s linear;
 $animation: 0.5s forwards;
 
@@ -23,8 +22,7 @@ $animation: 0.5s forwards;
 }
 
 @mixin font($number) {
-  font-family: $font-medium;
-  font-weight: 400;
+  font-weight: bold;
 
   @include size($number);
 }
