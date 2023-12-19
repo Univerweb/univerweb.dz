@@ -223,8 +223,33 @@ useHead({
     ol {
       color: var(--text-secondary);
       transition: color $transition;
-      margin-block: 12px;
+      margin-block: 0;
       padding-inline-start: 1.25rem;
+      list-style: none;
+
+      &:is(ol) {
+        counter-reset: ol;
+      }
+
+      li {
+        margin-block: 24px;
+
+        &:last-child {
+          margin-block-end: 0;
+        }
+
+        &::before {
+          content: '—';
+          margin-inline-end: 12px;
+          color: $primary;
+          font-weight: bold;
+
+          &:is(ol li) {
+            counter-increment: ol;
+            content: counters(ol, '.') '.';
+          }
+        }
+      }
     }
 
     strong {
