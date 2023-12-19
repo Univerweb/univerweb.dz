@@ -49,13 +49,13 @@ const { data: posts } = await useAsyncData(
 
 <style lang="scss">
 .card-group {
+  gap: 12px;
+
   @include grid(1, 1fr);
 
   @media (min-width: $sm) {
     grid-template-columns: 1fr 1fr;
   }
-
-  gap: 12px;
 
   @media (min-width: $md) {
     gap: 16px;
@@ -119,16 +119,15 @@ const { data: posts } = await useAsyncData(
   }
 
   p {
-    display: none;
-
-    @media (min-width: $lg) {
-      display: block;
-    }
-
     color: $white;
     align-self: end;
     transform: translateY(calc(100% + 48px));
     transition: transform $transition;
+    visibility: hidden;
+
+    @media (min-width: $lg) {
+      visibility: visible;
+    }
   }
 
   .card:hover p {
