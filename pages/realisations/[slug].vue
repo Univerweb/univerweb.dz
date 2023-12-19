@@ -184,7 +184,7 @@ useHead({
 <style lang="scss">
 .work {
   h1 {
-    margin-bottom: 0;
+    margin-block-end: 0;
   }
 
   .banner {
