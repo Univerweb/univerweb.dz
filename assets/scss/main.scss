@@ -176,8 +176,7 @@ h2,
   @include font(32);
 
   letter-spacing: -0.05em;
-  margin-top: 0;
-  margin-bottom: 24px;
+  margin-block: 0 24px;
 
   @media (min-width: $md) {
     @include size(42);
