@@ -134,6 +134,7 @@ useHead({
 
     .author {
       color: var(--text-primary);
+      transition: color $transition;
     }
 
     ul {
@@ -177,6 +178,8 @@ useHead({
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     font-size: 18px;
+    color: var(--text-secondary);
+    transition: color $transition;
 
     * {
       grid-column: 1 / 13;
@@ -219,6 +222,12 @@ useHead({
     ul,
     ol {
       margin-block: 12px;
+      padding-inline-start: 1.25rem;
+    }
+
+    strong {
+      color: var(--text-primary);
+      transition: color $transition;
     }
   }
 }
