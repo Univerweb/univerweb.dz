@@ -178,8 +178,6 @@ useHead({
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     font-size: 18px;
-    color: var(--text-secondary);
-    transition: color $transition;
 
     * {
       grid-column: 1 / 13;
@@ -200,6 +198,8 @@ useHead({
     }
 
     p {
+      color: var(--text-secondary);
+      transition: color $transition;
       margin-bottom: 0;
 
       + p {
@@ -221,6 +221,8 @@ useHead({
 
     ul,
     ol {
+      color: var(--text-secondary);
+      transition: color $transition;
       margin-block: 12px;
       padding-inline-start: 1.25rem;
     }
