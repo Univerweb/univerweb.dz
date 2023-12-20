@@ -1,12 +1,10 @@
 <template>
   <header>
     <HeaderLogo />
-
     <nav class="nav">
       <HeaderMenu />
       <HeaderSwitchers />
     </nav>
-
     <HeaderToggle />
   </header>
 </template>
