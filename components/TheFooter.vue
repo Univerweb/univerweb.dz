@@ -5,14 +5,11 @@
       <FooterMaps />
       <FooterPhone />
     </div>
-
     <FooterAbout />
-
     <div>
       <FooterLink />
       <FooterSocials />
     </div>
-
     <FooterCopy />
   </footer>
 </template>
