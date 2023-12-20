@@ -42,7 +42,7 @@ const { data: related } = await useAsyncData(
   () => queryContent<Work>(localePath('realisations'))
     .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'body', 'category'])
     .where({ category: post.value!.category, _path: { $ne: path } })
-    .sort({ _id: -1 })
+    .sort({ _id: -1, $numeric: true })
     .find(),
   { watch: [localePath] },
 )

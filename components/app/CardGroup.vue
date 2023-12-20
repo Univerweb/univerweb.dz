@@ -25,7 +25,7 @@ const { data: posts } = await useAsyncData(
   `posts${path}`,
   () => queryContent<Post>(path)
     .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'body', 'category'])
-    .sort({ _id: -1 })
+    .sort({ _id: -1, $numeric: true })
     .limit(props.limit)
     .find(),
 )
