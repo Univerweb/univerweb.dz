@@ -72,12 +72,11 @@ useHead({
 
 <template>
   <div class="wrapper" :class="{ scrolled: y }">
-    <TheSkiplinks />
-    <TheHeader id="header" />
+    <TheHeader />
     <NuxtLayout>
       <AppLoading />
       <NuxtPage id="main" :transition="{ name: 'page', onBeforeEnter }" />
     </NuxtLayout>
-    <LazyTheFooter id="footer" />
+    <LazyTheFooter />
   </div>
 </template>

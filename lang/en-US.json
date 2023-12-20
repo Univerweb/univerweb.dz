@@ -2,11 +2,7 @@
   "name": "Univerweb",
   "title": "Website Design in Algeria",
   "desc": "Even more than websites, we design and innovate human-centered digital experiences for you that reflect your brand image.",
-  "skiplinks": {
-    "menu": "Skip to menu",
-    "content": "Skip to content",
-    "contact": "Skip to contact"
-  },
+  "skip": "Skip to main content",
   "menu": {
     "realisations": "Latest work",
     "prestations": "Services",

@@ -1,5 +1,6 @@
 <template>
   <header>
+    <HeaderSkip />
     <HeaderLogo />
     <nav class="nav">
       <HeaderMenu />
@@ -34,6 +35,21 @@ header {
     }
 
     @include media($lg, 24px, 36px);
+  }
+}
+
+.skip {
+  position: absolute;
+  inset-block-start: 0;
+  background-color: var(--secondary);
+  color: var(--primary);
+  padding: 0 4px;
+  transform:translateY(-100%);
+  transition: transform $transition;
+
+  &:focus {
+    position: absolute;
+    transform:translateY(0);
   }
 }
 
