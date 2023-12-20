@@ -12,6 +12,13 @@ export default defineNuxtConfig({
     },
   },
 
+  router: {
+    options: {
+      linkActiveClass: '',
+      linkExactActiveClass: '',
+    },
+  },
+
   vite: {
     css: {
       preprocessorOptions: {

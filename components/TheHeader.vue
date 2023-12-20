@@ -148,7 +148,7 @@ header {
     }
 
     &:hover::after,
-    &.router-link-active::after {
+    &.active::after {
       transform: scaleX(1);
     }
   }
