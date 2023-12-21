@@ -220,6 +220,6 @@
 
   100% {
     opacity: 0;
-    transform: translateX-(0);
+    transform: translateX(0);
   }
 }
