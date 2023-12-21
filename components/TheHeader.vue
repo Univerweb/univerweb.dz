@@ -161,17 +161,20 @@ header {
   justify-content: flex-end;
 
   .lang {
+    position: absolute;
+    inset-inline-end: 30px;
+    width: max-content;
     font-size: 13px;
     line-height: 24px;
-    width: max-content;
     opacity: 0;
-    animation: lang 2s forwards;
-    position: absolute;
-    inset-inline-end: 72px;
-    cursor: default;
+    z-index: -1;
 
-    [lang='ar-DZ'] & {
-      animation-name: lang-ar;
+    &.active {
+      animation: lang 2s ease-in-out;
+
+      [lang='ar-DZ'] & {
+        animation-direction: reverse;
+      }
     }
   }
 
