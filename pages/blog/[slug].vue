@@ -3,8 +3,7 @@ import type { Blog, Nav } from '../../types'
 
 const localePath = useLocalePath()
 const { locale, t } = useI18n()
-const breadcrumb = useBreadcrumb()
-const config = useRuntimeConfig()
+const { baseUrl, localeBaseUrl } = useUrl()
 const { path, params: { slug } } = useRoute()
 const img = useImage()
 const ogImagePath = img(`blog/${slug}_banner.jpg`, { width: 2400, height: 1350, quality: 80 })
@@ -28,9 +27,9 @@ if (!post.value) {
 const { data: surround } = await useAsyncData(
   `surround${path}`,
   async () => {
-    const [prev, next] = await queryContent<Nav>(localePath('blog'))
+    const [prev, next] = await queryContent(localePath('blog'))
       .only(['_path', 'title'])
-      .findSurround(path)
+      .findSurround(path) as Nav[]
 
     return { prev, next }
   },
@@ -42,7 +41,7 @@ useSeoMeta({
   description: post.value.description,
   ogTitle: post.value.title,
   ogType: 'article',
-  ogImage: `${config.public.baseURL}${ogImagePath}`,
+  ogImage: `${baseUrl}${ogImagePath}`,
 })
 
 useHead({
@@ -53,8 +52,8 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': t('name'), 'item': breadcrumb },
-          { '@type': 'ListItem', 'position': 2, 'name': t('blog.title'), 'item': `${config.public.baseURL}${localePath('blog')}` },
+          { '@type': 'ListItem', 'position': 1, 'name': t('name'), 'item': localeBaseUrl },
+          { '@type': 'ListItem', 'position': 2, 'name': t('blog.title'), 'item': `${baseUrl}${localePath('blog')}` },
           { '@type': 'ListItem', 'position': 3, 'name': post.value.title },
         ],
       },
@@ -67,11 +66,11 @@ useHead({
   <main v-if="post" class="blog">
     <article vocab="https://schema.org/" typeof="Article">
       <span property="mainEntityOfPage" typeof="WebPage">
-        <span property="id" :content="`${config.public.baseURL}${path}`" />
+        <span property="id" :content="`${baseUrl}${path}`" />
       </span>
       <span property="publisher" typeof="Organization">
         <span property="name" :content="t('name')" />
-        <span property="url" :content="config.public.baseURL" />
+        <span property="url" :content="baseUrl" />
       </span>
       <span property="articleSection" :content="t('blog.title')" />
       <span property="description" :content="post.description" />
@@ -94,7 +93,7 @@ useHead({
           </span>
           <span v-else property="author" typeof="Organization" class="author">
             <span property="name">@{{ t('name') }}</span>
-            <span property="url" :content="config.public.baseURL" />
+            <span property="url" :content="baseUrl" />
           </span>
           <ul class="tags">
             <li v-for="tag in post.tags" :key="tag" property="keywords">
@@ -112,7 +111,7 @@ useHead({
         <ContentRendererMarkdown :value="post" class="container container-content" />
       </ContentRenderer>
 
-      <LazyBlogShare :title="post.title" :url="`${config.public.baseURL}${path}`" />
+      <LazyBlogShare :title="post.title" :url="`${baseUrl}${path}`" />
     </article>
 
     <LazyAppNav :prev="surround!.prev" :next="surround!.next" />
