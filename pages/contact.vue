@@ -2,7 +2,7 @@
 import { GoogleMap, Marker } from 'vue3-google-map'
 
 const { t } = useI18n()
-const breadcrumb = useBreadcrumb()
+const { localeBaseUrl } = useUrl()
 const config = useRuntimeConfig()
 
 const markerOptions = {
@@ -44,7 +44,7 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': t('name'), 'item': breadcrumb },
+          { '@type': 'ListItem', 'position': 1, 'name': t('name'), 'item': localeBaseUrl },
           { '@type': 'ListItem', 'position': 2, 'name': t('contact.title') },
         ],
       },

@@ -3,8 +3,7 @@ import type { Nav, Work } from '../../types'
 
 const localePath = useLocalePath()
 const { t } = useI18n()
-const breadcrumb = useBreadcrumb()
-const config = useRuntimeConfig()
+const { baseUrl, localeBaseUrl } = useUrl()
 const { path, params: { slug } } = useRoute()
 const img = useImage()
 const ogImagePath = img(`realisations/${slug}_banner.png`, { width: 2560, height: 1280, quality: 80 })
@@ -52,7 +51,7 @@ useSeoMeta({
   description: post.value.description,
   ogTitle: post.value.title,
   ogType: 'article',
-  ogImage: `${config.public.baseURL}${ogImagePath}`,
+  ogImage: `${baseUrl}${ogImagePath}`,
 })
 
 useHead({
@@ -63,8 +62,8 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': t('name'), 'item': breadcrumb },
-          { '@type': 'ListItem', 'position': 2, 'name': t('works.title'), 'item': `${config.public.baseURL}${localePath('realisations')}` },
+          { '@type': 'ListItem', 'position': 1, 'name': t('name'), 'item': localeBaseUrl },
+          { '@type': 'ListItem', 'position': 2, 'name': t('works.title'), 'item': `${baseUrl}${localePath('realisations')}` },
           { '@type': 'ListItem', 'position': 3, 'name': post.value.title },
         ],
       },
@@ -77,11 +76,11 @@ useHead({
   <main v-if="post" class="work">
     <article vocab="https://schema.org/" typeof="Article">
       <span property="mainEntityOfPage" typeof="WebPage">
-        <span property="id" :content="`${config.public.baseURL}${path}`" />
+        <span property="id" :content="`${baseUrl}${path}`" />
       </span>
       <span property="author publisher" typeof="Organization">
         <span property="name" :content="t('name')" />
-        <span property="url" :content="config.public.baseURL" />
+        <span property="url" :content="baseUrl" />
       </span>
       <time property="dateCreated datePublished" :datetime="post.createdAt.toString()" />
       <time property="dateModified" :datetime="post.updatedAt.toString()" />

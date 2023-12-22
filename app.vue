@@ -1,9 +1,9 @@
 <script setup lang="ts">
+const { baseUrl, ogUrl, ogImage } = useUrl()
 const config = useRuntimeConfig()
-const route = useRoute()
 const { y } = useWindowScroll()
 const i18nHead = useLocaleHead({ addSeoAttributes: true, addDirAttribute: true })
-const { t, locale, finalizePendingLocaleChange } = useI18n()
+const { t, finalizePendingLocaleChange } = useI18n()
 const show = useShow()
 
 async function onBeforeEnter() {
@@ -15,8 +15,8 @@ useSeoMeta({
   description: () => t('desc'),
   ogTitle: () => t('title'),
   ogType: 'website',
-  ogUrl: () => `${config.public.baseURL}${route.path}`,
-  ogImage: () => locale.value === 'ar' ? `${config.public.baseURL}/images/univerweb-ar.jpg` : `${config.public.baseURL}/images/univerweb.jpg`,
+  ogUrl,
+  ogImage,
 })
 
 useHead({
@@ -39,16 +39,16 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'Organization',
         'name': () => t('name'),
-        'url': config.public.baseURL,
+        'url': baseUrl,
         'image': {
           '@type': 'ImageObject',
-          'url': () => locale.value === 'ar' ? `${config.public.baseURL}/images/univerweb-ar.jpg` : `${config.public.baseURL}/images/univerweb.jpg`,
+          'url': ogImage,
           'width': '1920px',
           'height': '1080px',
         },
         'logo': {
           '@type': 'ImageObject',
-          'url': `${config.public.baseURL}/logo.svg`,
+          'url': `${baseUrl}/logo.svg`,
           'width': '512px',
           'height': '512px',
         },

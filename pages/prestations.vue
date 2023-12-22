@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { t, tm, rt } = useI18n()
-const breadcrumb = useBreadcrumb()
+const { localeBaseUrl } = useUrl()
 
 useSeoMeta({
   title: () => t('presta.title'),
@@ -16,7 +16,7 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': t('name'), 'item': breadcrumb },
+          { '@type': 'ListItem', 'position': 1, 'name': t('name'), 'item': localeBaseUrl },
           { '@type': 'ListItem', 'position': 2, 'name': t('presta.title') },
         ],
       },
