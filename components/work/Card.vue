@@ -7,7 +7,7 @@ defineProps<{
 }>()
 
 const { t } = useI18n()
-const config = useRuntimeConfig()
+const { baseUrl } = useUrl()
 const localePath = useLocalePath()
 </script>
 
@@ -15,11 +15,11 @@ const localePath = useLocalePath()
   <NuxtLink :to="localePath(`${card._path}`)" class="card">
     <article vocab="https://schema.org/" typeof="Article">
       <span property="mainEntityOfPage" typeof="WebPage">
-        <span property="id" :content="`${config.public.baseURL}${localePath(`${card._path}`)}`" />
+        <span property="id" :content="`${baseUrl}${localePath(`${card._path}`)}`" />
       </span>
       <span property="author publisher" typeof="Organization">
         <span property="name" :content="t('name')" />
-        <span property="url" :content="config.public.baseURL" />
+        <span property="url" :content="baseUrl" />
       </span>
       <time property="dateCreated datePublished" :datetime="card.createdAt.toString()" />
       <time property="dateModified" :datetime="card.updatedAt.toString()" />
