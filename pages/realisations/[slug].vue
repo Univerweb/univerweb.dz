@@ -27,9 +27,9 @@ if (!post.value) {
 const { data: surround } = await useAsyncData(
   `surround${path}`,
   async () => {
-    const [prev, next] = await queryContent<Nav>(localePath('realisations'))
+    const [prev, next] = await queryContent(localePath('realisations'))
       .only(['_path', 'title'])
-      .findSurround(path)
+      .findSurround(path) as Nav[]
 
     return { prev, next }
   },
@@ -38,11 +38,11 @@ const { data: surround } = await useAsyncData(
 
 const { data: related } = await useAsyncData(
   `related${path}`,
-  () => queryContent<Work>(localePath('realisations'))
+  () => queryContent(localePath('realisations'))
     .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'body', 'category'])
     .where({ category: post.value!.category, _path: { $ne: path } })
     .sort({ _id: -1, $numeric: true })
-    .find(),
+    .find() as Promise<Work[]>,
   { watch: [localePath] },
 )
 
