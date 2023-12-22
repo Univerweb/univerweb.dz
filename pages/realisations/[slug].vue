@@ -39,7 +39,7 @@ const { data: surround } = await useAsyncData(
 const { data: related } = await useAsyncData(
   `related${path}`,
   () => queryContent(localePath('realisations'))
-    .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'body', 'category'])
+    .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'category', 'body'])
     .where({ category: post.value!.category, _path: { $ne: path } })
     .sort({ _id: -1, $numeric: true })
     .find() as Promise<Work[]>,
