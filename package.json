@@ -18,7 +18,7 @@
     "@nuxt/devtools": "^1.0.6",
     "@nuxt/image": "^1.1.0",
     "@nuxtjs/color-mode": "^3.3.2",
-    "@nuxtjs/i18n": "8.0.0-rc.11",
+    "@nuxtjs/i18n": "^8.0.0",
     "@vueuse/nuxt": "^10.7.0",
     "eslint": "^8.56.0",
     "nuxt": "^3.8.2",
