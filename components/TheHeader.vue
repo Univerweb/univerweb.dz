@@ -72,8 +72,7 @@ header {
 
 .nav {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   display: grid;
   grid-template-rows: 1fr auto;
   align-items: center;
