@@ -138,12 +138,8 @@ header {
       width: 25%;
       height: 3px;
       transform: scaleX(0);
-      transform-origin: left;
+      transform-origin: var(--transform-origin);
       transition: transform $transition;
-
-      [lang='ar-DZ'] & {
-        transform-origin: right;
-      }
     }
 
     &:hover::after,

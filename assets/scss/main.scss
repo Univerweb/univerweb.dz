@@ -7,10 +7,12 @@
   --secondary: #{$secondary};
   --light: #{$light};
   --font: 'Sofia Pro', Arial;
+  --transform-origin: left;
 }
 
 [lang='ar-DZ'] {
   --font: 'Almarai', sans-serif;
+  --transform-origin: right;
 }
 
 .dark-mode {
@@ -303,12 +305,7 @@ button {
     height: 3px;
     background-color: var(--primary);
     transform: scaleX(0.05);
-    transform-origin: left;
-
-    [lang='ar-DZ'] & {
-      transform-origin: right;
-    }
-
+    transform-origin: var(--transform-origin);
     transition: background-color $transition, transform $transition;
   }
 
