@@ -6,6 +6,11 @@
   --primary: #{$primary};
   --secondary: #{$secondary};
   --light: #{$light};
+  --font: 'Sofia Pro', Arial;
+}
+
+[lang='ar-DZ'] {
+  --font: 'Almarai', sans-serif;
 }
 
 .dark-mode {
@@ -42,7 +47,7 @@ body {
   background-color: var(--bg);
   color: var(--text-primary);
   transition: background-color $transition, color $transition;
-  font-family: $font;
+  font-family: var(--font);
   font-size: 1rem;
   line-height: 1.5;
 }
