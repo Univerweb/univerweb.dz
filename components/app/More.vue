@@ -31,10 +31,8 @@ const localePath = useLocalePath()
     justify-self: end;
   }
 
-  [lang='ar-DZ'] & {
-    svg {
-      transform: rotate(180deg);
-    }
+  [lang='ar-DZ'] & svg {
+    transform: rotate(180deg);
   }
 }
 </style>
