@@ -85,6 +85,10 @@ const { t } = useI18n()
   svg {
     position: absolute;
     top: 45%;
+
+    [lang='ar-DZ'] & {
+      transform: rotate(180deg);
+    }
   }
 
   .prev svg {
@@ -93,16 +97,6 @@ const { t } = useI18n()
 
   .next svg {
     inset-inline-end: -3px;
-  }
-
-  [lang='ar-DZ'] & {
-    .next svg {
-      transform: rotate(180deg);
-    }
-
-    .prev svg {
-      transform: rotate(180deg);
-    }
   }
 }
 </style>
