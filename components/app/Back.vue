@@ -20,7 +20,7 @@ const { t } = useI18n()
 <style lang="scss">
 .back {
   width: max-content;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 0.8rem;
   line-height: 1.875;
   text-transform: uppercase;

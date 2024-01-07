@@ -50,6 +50,7 @@ body {
   color: var(--text-primary);
   transition: background-color $transition, color $transition;
   font-family: var(--font);
+  font-weight: 300;
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -225,7 +226,7 @@ p {
   transition: color $transition;
 
   footer & {
-    font-weight: normal;
+    font-weight: 300;
     color: var(--text-primary);
     margin: 0;
     max-width: 400px;
@@ -274,7 +275,7 @@ button {
   column-gap: 12px;
   background-color: var(--secondary);
   color: var(--primary);
-  font-weight: bold;
+  font-weight: 500;
   line-height: 48px;
   width: fit-content;
   height: 48px;

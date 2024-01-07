@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Sofia Pro';
   font-style: normal;
-  font-weight: normal;
+  font-weight: 300;
   font-display: swap;
   src: url('/assets/fonts/SofiaProLight.woff2') format('woff2');
   ascent-override: 90.5%;
@@ -11,7 +11,7 @@
 @font-face {
   font-family: 'Sofia Pro';
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   font-display: swap;
   src: url('/assets/fonts/SofiaProMedium.woff2') format('woff2');
   ascent-override: 90.5%;
@@ -21,7 +21,7 @@
 @font-face {
   font-family: 'Almarai';
   font-style: normal;
-  font-weight: normal;
+  font-weight: 300;
   font-display: swap;
   src: url('/assets/fonts/AlmaraiRegular.woff2') format('woff2');
 }
@@ -29,7 +29,7 @@
 @font-face {
   font-family: 'Almarai';
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
   font-display: swap;
   src: url('/assets/fonts/AlmaraiBold.woff2') format('woff2');
 }

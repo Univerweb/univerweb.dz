@@ -78,7 +78,7 @@ useHead({
 .prestations {
   .tags {
     color: var(--text-secondary);
-    font-weight: bold;
+    font-weight: 500;
     transition: color $transition;
     margin: 0;
   }

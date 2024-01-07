@@ -21,7 +21,7 @@ $animation: 0.5s forwards;
 }
 
 @mixin font($number) {
-  font-weight: bold;
+  font-weight: 500;
 
   @include size($number);
 }
