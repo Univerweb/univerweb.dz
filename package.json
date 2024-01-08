@@ -19,12 +19,12 @@
     "@nuxt/image": "^1.1.0",
     "@nuxtjs/color-mode": "^3.3.2",
     "@nuxtjs/i18n": "^8.0.0",
+    "@nuxtjs/sitemap": "^5.0.1",
     "@vueuse/nuxt": "^10.7.1",
     "eslint": "^8.56.0",
     "nuxt": "^3.9.0",
     "nuxt-gtag": "^1.1.2",
-    "nuxt-simple-sitemap": "^4.2.3",
-    "sass": "^1.69.6",
+    "sass": "^1.69.7",
     "vue3-google-map": "^0.18.0"
   }
 }

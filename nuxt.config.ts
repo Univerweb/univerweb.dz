@@ -41,9 +41,9 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/color-mode',
     '@nuxtjs/i18n',
+    '@nuxtjs/sitemap',
     '@vueuse/nuxt',
     'nuxt-gtag',
-    'nuxt-simple-sitemap',
   ],
 
   image: {
@@ -68,13 +68,13 @@ export default defineNuxtConfig({
     skipSettingLocaleOnNavigate: true,
   },
 
-  gtag: {
-    id: process.env.GTAG_ID,
-  },
-
   sitemap: {
     autoLastmod: false,
     xsl: false,
     discoverImages: false,
+  },
+
+  gtag: {
+    id: process.env.GTAG_ID,
   },
 })
