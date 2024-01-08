@@ -6,12 +6,12 @@
   --primary: #{$primary};
   --secondary: #{$secondary};
   --light: #{$light};
-  --font: 'Outfit', Arial;
+  --font-family: 'Outfit', Arial;
   --transform-origin: left;
 }
 
 [lang='ar-DZ'] {
-  --font: 'Noto Kufi Arabic', sans-serif;
+  --font-family: 'Noto Kufi Arabic', sans-serif;
   --transform-origin: right;
 }
 
@@ -49,7 +49,7 @@ body {
   background-color: var(--bg);
   color: var(--text-primary);
   transition: background-color $transition, color $transition;
-  font-family: var(--font);
+  font-family: var(--font-family);
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.5;
