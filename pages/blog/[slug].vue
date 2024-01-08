@@ -127,7 +127,7 @@ useHead({
   }
 
   .meta {
-    font-weight: bold;
+    font-weight: 500;
     color: var(--text-secondary);
     transition: color $transition;
 
@@ -241,7 +241,7 @@ useHead({
           content: '—';
           margin-inline-end: 12px;
           color: $primary;
-          font-weight: bold;
+          font-weight: 500;
 
           &:is(ol li) {
             counter-increment: ol;
