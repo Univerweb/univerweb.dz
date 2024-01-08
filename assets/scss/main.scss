@@ -162,7 +162,7 @@ h1,
 .h1 {
   @include font(44);
 
-  letter-spacing: -0.05em;
+  letter-spacing: -0.04em;
   margin-block: 0 24px;
 
   @media (min-width: $md) {
@@ -182,7 +182,7 @@ h2,
 .h2 {
   @include font(32);
 
-  letter-spacing: -0.05em;
+  letter-spacing: -0.04em;
   margin-block: 0 24px;
 
   @media (min-width: $md) {
