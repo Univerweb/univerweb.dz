@@ -16,6 +16,7 @@
 
 <style lang="scss">
 footer {
+  font-weight: 300;
   padding: 24px 12px;
   display: grid;
   justify-content: space-between;
