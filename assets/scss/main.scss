@@ -6,12 +6,12 @@
   --primary: #{$primary};
   --secondary: #{$secondary};
   --light: #{$light};
-  --font-family: 'Outfit', Arial;
+  --font-family: 'Outfit', 'Outfit fallback';
   --transform-origin: left;
 }
 
 [lang='ar-DZ'] {
-  --font-family: 'Noto Kufi Arabic', sans-serif;
+  --font-family: 'Noto Kufi Arabic', 'Noto Kufi Arabic fallback';
   --transform-origin: right;
 }
 
