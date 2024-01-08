@@ -254,6 +254,10 @@ a {
     line-height: 1.286;
   }
 
+  &.outfit {
+    font-family: 'Outfit', 'Outfit fallback';
+  }
+
   &:hover {
     color: $primary;
   }

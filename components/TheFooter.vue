@@ -42,10 +42,10 @@ footer {
     margin: 12px 0 0;
     padding: 0;
     list-style: none;
-    max-width: 210px;
+    max-width: 200px;
 
     @media (min-width: $md) {
-      max-width: 295px;
+      max-width: 280px;
     }
 
     a {

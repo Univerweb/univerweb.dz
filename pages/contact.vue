@@ -75,7 +75,7 @@ useHead({
           <h3 class="h6">
             {{ t('contact.manager') }}
           </h3>
-          <a :href="`mailto:${config.public.managerEmail}`" class="link move-arrow">
+          <a :href="`mailto:${config.public.managerEmail}`" class="link outfit move-arrow">
             {{ config.public.managerEmail }}
           </a>
         </div>
@@ -83,7 +83,7 @@ useHead({
           <h3 class="h6">
             {{ t('contact.support') }}
           </h3>
-          <a :href="`mailto:${config.public.supportEmail}`" class="link move-arrow">
+          <a :href="`mailto:${config.public.supportEmail}`" class="link outfit move-arrow">
             {{ config.public.supportEmail }}
           </a>
         </div>
