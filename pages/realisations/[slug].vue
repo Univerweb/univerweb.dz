@@ -98,7 +98,7 @@ useHead({
         :picture="post"
         :width="2560"
         :height="1280"
-        sizes="288px xs:592px sm:672px md:880px lg:1136px xl:1280px"
+        sizes="295px xs:607px sm:719px md:927px lg:1136px xl:1280px"
         ext="png"
       />
 
@@ -156,7 +156,7 @@ useHead({
             :picture="post"
             type="preview"
             :alt="`${t('work.alt')} ${post.title}`"
-            sizes="250px xs:569px sm:665px md:549px xl:730px"
+            sizes="257px xs:569px sm:665px md:549px xl:730px"
             class-name="item"
             :img-attrs="null"
           />
