@@ -156,7 +156,7 @@ useHead({
             :picture="post"
             type="preview"
             :alt="`${t('work.alt')} ${post.title}`"
-            sizes="xs:288px sm:607px md:719px lg:619px xl:1280px"
+            sizes="250px xs:569px sm:665px md:549px xl:730px"
             class-name="item"
             :img-attrs="null"
           />
@@ -237,11 +237,14 @@ useHead({
 
     .item:nth-child(2) {
       aspect-ratio: 3 / 2;
-      padding: 40px;
+      padding: 16px;
       overflow-y: scroll;
+
+      @include media($sm, 24px, 24px);
 
       @media (min-width: $md) {
         grid-column: 5 / 13;
+        padding: 32px;
       }
 
       &::-webkit-scrollbar {
