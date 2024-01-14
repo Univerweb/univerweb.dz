@@ -98,6 +98,7 @@ useHead({
         :picture="post"
         :width="2560"
         :height="1280"
+        sizes="288px xs:592px sm:672px md:880px lg:1136px xl:1280px"
         ext="png"
       />
 

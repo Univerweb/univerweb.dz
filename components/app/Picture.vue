@@ -6,14 +6,12 @@ export interface Props {
   type?: string
   ext?: string
   alt?: string
-  sizes?: string
   className?: string
 }
 
 withDefaults(defineProps<Props>(), {
   type: 'banner',
   ext: 'jpg',
-  sizes: '288px xs:607px sm:719px md:927px lg:1136px xl:1280px',
   className: 'banner',
 })
 
@@ -32,7 +30,6 @@ function pictureLoaded() {
   <NuxtPicture
     :src="isFrench ? `${picture._path}_${type}.${ext}` : `${picture._path}_${type}.${ext}`.slice(3)"
     :alt="alt || picture.description"
-    :sizes="sizes"
     format="avif,webp"
     quality="80"
     loading="lazy"
