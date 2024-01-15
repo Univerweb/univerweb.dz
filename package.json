@@ -19,7 +19,7 @@
     "@nuxt/image": "^1.2.0",
     "@nuxtjs/color-mode": "^3.3.2",
     "@nuxtjs/i18n": "^8.0.0",
-    "@nuxtjs/sitemap": "^5.0.2",
+    "@nuxtjs/sitemap": "^5.0.3",
     "@vueuse/nuxt": "^10.7.2",
     "eslint": "^8.56.0",
     "nuxt": "^3.9.1",
