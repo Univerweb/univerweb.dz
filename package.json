@@ -22,7 +22,7 @@
     "@nuxtjs/sitemap": "^5.0.4",
     "@vueuse/nuxt": "^10.7.2",
     "eslint": "^8.56.0",
-    "nuxt": "^3.9.1",
+    "nuxt": "^3.9.2",
     "nuxt-gtag": "^1.1.2",
     "sass": "^1.69.7",
     "vue3-google-map": "^0.18.0"
