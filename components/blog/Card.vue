@@ -36,7 +36,7 @@ const localePath = useLocalePath()
       <AppPicture
         :picture="card"
         type="thumbnail"
-        sizes="xs:288px sm:607px md:354px lg:456px xl:588px"
+        sizes="295px xs:607px sm:354px md:456px lg:588px"
         class-name="thumbnail"
       />
 
