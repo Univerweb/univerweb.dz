@@ -83,7 +83,7 @@ header {
   opacity: 0;
   background-color: var(--bg);
   visibility: hidden;
-  transition: opacity $transition;
+  transition: background-color $transition, opacity $transition;
 
   .open-menu & {
     opacity: 1;
