@@ -26,7 +26,7 @@
     "dark": "Passer en mode clair",
     "light": "Passer en mode sombre"
   },
-  "copy": "Copyright {year} @:name{'.'} Tous droits réservés.",
+  "copy": "Copyright © {year} @:name{'.'} Tous droits réservés.",
   "home": {
     "headline": "Nous créons des sites web tellement mémorables.",
     "lead": "Encore plus que des sites web, nous concevons et innovons pour vous des expériences numériques centrées sur l’humain et qui reflètent votre image de marque, notre mission première est de vous satisfaire !",
