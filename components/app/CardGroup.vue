@@ -23,11 +23,11 @@ const localePath = useLocalePath()
 
 const { data: posts } = await useAsyncData(
   `posts${path}`,
-  () => queryContent<Post>(path)
-    .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'body', 'category'])
+  () => queryContent(path)
+    .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'category', 'body'])
     .sort({ _id: -1, $numeric: true })
     .limit(props.limit)
-    .find(),
+    .find() as Promise<Post[]>,
 )
 </script>
 
