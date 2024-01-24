@@ -20,7 +20,7 @@ const { path } = useRoute()
 
 const { data: posts } = await useAsyncData(
   `posts${path}`,
-  () => queryContent('realisations')
+  () => queryContent(path)
     .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'category', 'body'])
     .sort({ _id: -1, $numeric: true })
     .limit(props.limit)
