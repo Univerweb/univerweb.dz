@@ -22,7 +22,7 @@ const { data: posts } = await useAsyncData(
     </div>
 
     <div class="card-group">
-      <BlogCard v-for="post in (posts as Blog[])" :key="post._path" :card="post" title-tag="h2" />
+      <BlogCard v-for="post in posts" :key="post._path" :card="post" title-tag="h2" />
     </div>
   </section>
 </template>
