@@ -1,9 +1,5 @@
-import { computed, defineComponent, h, onBeforeUnmount, ref } from 'vue'
-import { useNuxtApp } from '#app/nuxt'
-import { useRouter } from '#app/composables/router'
-
-// @ts-expect-error virtual file
-import { globalMiddleware } from '#build/middleware'
+import { defineComponent, h } from 'vue'
+import { useLoadingIndicator } from '#app/composables/loading-indicator'
 
 export default defineComponent({
   name: 'AppLoading',
@@ -17,43 +13,18 @@ export default defineComponent({
       default: 2000,
     },
   },
-  setup(props, { slots }) {
-    // TODO: use computed values in useLoadingIndicator
-    const indicator = useLoadingIndicator({
-      duration: props.duration,
-      throttle: props.throttle,
+  setup(slots, { expose }) {
+    const { progress, isLoading, start, finish, clear } = useLoadingIndicator({
+      duration: 2000,
+      throttle: 200,
     })
 
-    // Hook to app lifecycle
-    // TODO: Use unified loading API
-    const nuxtApp = useNuxtApp()
-    const router = useRouter()
-
-    globalMiddleware.unshift(indicator.start)
-    router.onError(() => {
-      indicator.finish()
-    })
-    router.beforeResolve((to, from) => {
-      if (to === from || to.matched.every((comp, index) => comp.components && comp.components?.default === from.matched[index]?.components?.default))
-        indicator.finish()
-    })
-
-    router.afterEach((_to, _from, failure) => {
-      if (failure)
-        indicator.finish()
-    })
-
-    const unsubPage = nuxtApp.hook('page:finish', indicator.finish)
-    const unsubError = nuxtApp.hook('vue:error', indicator.finish)
-
-    onBeforeUnmount(() => {
-      const index = globalMiddleware.indexOf(indicator.start)
-      if (index >= 0)
-        globalMiddleware.splice(index, 1)
-
-      unsubPage()
-      unsubError()
-      indicator.clear()
+    expose({
+      progress,
+      isLoading,
+      start,
+      finish,
+      clear,
     })
 
     return () => h('div', {
@@ -65,10 +36,10 @@ export default defineComponent({
         pointerEvents: 'none',
         width: 'auto',
         height: '3px',
-        opacity: indicator.isLoading.value ? 1 : 0,
-        background: 'repeating-linear-gradient(to right,#50c8f0 0%,#28285a 100%)',
-        backgroundSize: indicator.progress.value === 0 ? 'auto' : `${(100 / indicator.progress.value) * 100}% auto`,
-        transform: `scaleX(${indicator.progress.value / 100})`,
+        opacity: isLoading.value ? 1 : 0,
+        background: 'repeating-linear-gradient(to right, #50c8f0 0%, #28285a 50%, #50c8f0 100%)',
+        backgroundSize: progress.value === 0 ? 'auto' : `${(100 / progress.value) * 100}% auto`,
+        transform: `scaleX(${progress.value / 100})`,
         transformOrigin: 'left',
         transition: 'transform 0.1s, height 0.4s, opacity 0.4s',
         zIndex: 999999,
@@ -76,70 +47,3 @@ export default defineComponent({
     }, slots)
   },
 })
-
-function useLoadingIndicator(opts: {
-  duration: number
-  throttle: number
-}) {
-  const progress = ref(0)
-  const isLoading = ref(false)
-  const step = computed(() => 10000 / opts.duration)
-
-  let _timer: any = null
-  let _throttle: any = null
-
-  function start() {
-    clear()
-    progress.value = 0
-    if (opts.throttle && import.meta.client) {
-      _throttle = setTimeout(() => {
-        isLoading.value = true
-        _startTimer()
-      }, opts.throttle)
-    }
-    else {
-      isLoading.value = true
-      _startTimer()
-    }
-  }
-  function finish() {
-    progress.value = 100
-    _hide()
-  }
-
-  function clear() {
-    clearInterval(_timer)
-    clearTimeout(_throttle)
-    _timer = null
-    _throttle = null
-  }
-
-  function _increase(num: number) {
-    progress.value = Math.min(100, progress.value + num)
-  }
-
-  function _hide() {
-    clear()
-    if (import.meta.client) {
-      setTimeout(() => {
-        isLoading.value = false
-        setTimeout(() => {
-          progress.value = 0
-        }, 400)
-      }, 500)
-    }
-  }
-
-  function _startTimer() {
-    if (import.meta.client)
-      _timer = setInterval(() => { _increase(step.value) }, 100)
-  }
-
-  return {
-    progress,
-    isLoading,
-    start,
-    finish,
-    clear,
-  }
-}
