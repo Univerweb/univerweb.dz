@@ -37,7 +37,7 @@ const { data: posts } = await useAsyncData(
     </div>
 
     <div class="card-group">
-      <WorkCard v-for="post in (posts as Work[])" :key="post._path" :card="post" :title-tag="titleTag" />
+      <WorkCard v-for="post in posts" :key="post._path" :card="post" :title-tag="titleTag" />
     </div>
 
     <LazyAppMore v-if="more" />
