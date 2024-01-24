@@ -44,7 +44,7 @@ header {
   background-color: var(--secondary);
   color: var(--primary);
   padding: 0 4px;
-  transform:translateY(-100%);
+  transform:translateY(-150%);
   transition: transform $transition;
 
   &:focus {
