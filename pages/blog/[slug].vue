@@ -82,7 +82,7 @@ useHead({
         </h1>
         <div class="meta">
           <time property="dateCreated datePublished" :datetime="post.createdAt.toString()">
-            {{ new Intl.DateTimeFormat(locale.toString(), { dateStyle: 'long' }).format(new Date(post.createdAt)) }}
+            {{ new Intl.DateTimeFormat(locale.toString(), { dateStyle: 'long', numberingSystem: 'latn' }).format(new Date(post.createdAt)) }}
           </time>
           <time property="dateModified" :datetime="post.updatedAt.toString()" :content="post.updatedAt.toString()" />
           {{ t('blog.by') }}
