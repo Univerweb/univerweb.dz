@@ -4,12 +4,19 @@ const props = defineProps<{
 }>()
 
 const { t } = useI18n()
-
+const i18nHead = useLocaleHead({ addSeoAttributes: true, addDirAttribute: true })
 const handleError = () => clearError({ redirect: '/' })
 
 useSeoMeta({
   title: `${props.error.statusCode} —  ${t('name')}`,
   robots: { noindex: true, follow: true },
+})
+
+useHead({
+  htmlAttrs: {
+    lang: () => i18nHead.value.htmlAttrs!.lang,
+    dir: () => i18nHead.value.htmlAttrs!.dir,
+  },
 })
 </script>
 
