@@ -68,12 +68,12 @@ body {
 /* Main */
 main,
 footer {
-  transform: translateY(72px);
+  transform: translateY(96px);
   transition: transform $transition;
 
   @media (min-width: $lg) {
-    .wrapper:not(.scrolled) & {
-      transform: translateY(96px);
+    html:is(.scrolled) & {
+      transform: translateY(72px);
     }
   }
 }

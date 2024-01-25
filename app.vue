@@ -23,7 +23,7 @@ useHead({
   htmlAttrs: {
     lang: () => i18nHead.value.htmlAttrs!.lang,
     dir: () => i18nHead.value.htmlAttrs!.dir,
-    class: { 'open-menu': show },
+    class: { 'open-menu': show, 'scrolled': () => y.value > 0 },
   },
 
   link: () => [
@@ -71,7 +71,7 @@ useHead({
 </script>
 
 <template>
-  <div class="wrapper" :class="{ scrolled: y }">
+  <div>
     <TheHeader />
     <NuxtLayout>
       <AppLoading />
