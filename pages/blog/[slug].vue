@@ -110,9 +110,7 @@ useHead({
         />
       </div>
 
-      <ContentRenderer>
-        <ContentRendererMarkdown :value="post" class="container container-content" />
-      </ContentRenderer>
+      <ContentRendererMarkdown :value="post" class="container container-content" />
 
       <LazyBlogShare :title="post.title" :url="`${baseUrl}${path}`" />
     </article>
