@@ -178,6 +178,7 @@ useHead({
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     font-size: 18px;
+    line-height: 1.6;
 
     * {
       grid-column: 1 / 13;
@@ -193,18 +194,18 @@ useHead({
 
     h2 {
       font-size: 24px;
-      margin-block: 48px 12px;
+      margin-block: 36px 12px;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin-block-start: 12px;
       letter-spacing: 0;
     }
 
     p {
       color: var(--text-secondary);
       transition: color $transition;
-      margin-bottom: 0;
-
-      + p {
-        margin-top: 12px;
-      }
 
       &:first-child {
         font-size: 20px;
@@ -223,8 +224,8 @@ useHead({
     ol {
       color: var(--text-secondary);
       transition: color $transition;
-      margin-block: 0;
-      padding-inline-start: 1.25rem;
+      margin-block: 0 12px;
+      padding: 0;
       list-style: none;
 
       &:is(ol) {
@@ -232,21 +233,26 @@ useHead({
       }
 
       li {
-        margin-block: 24px;
+        padding-inline-start: 1rem;
+        margin-bottom: 6px;
 
         &:last-child {
-          margin-block-end: 0;
+          margin-bottom: 0;
+        }
+
+        &:is(ol li) {
+          padding-inline-start: 1.3rem;
         }
 
         &::before {
-          content: '—';
-          margin-inline-end: 12px;
-          color: $primary;
-          font-weight: 500;
+          content: '\002022';
+          margin-inline-start: -.875rem;
+          float: left;
 
           &:is(ol li) {
             counter-increment: ol;
             content: counters(ol, '.') '.';
+            margin-inline-start: -1.2rem;
           }
         }
       }
