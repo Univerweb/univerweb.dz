@@ -247,7 +247,7 @@ useHead({
         &::before {
           content: '\002022';
           margin-inline-start: -.875rem;
-          float: left;
+          float: inline-start;
 
           &:is(ol li) {
             counter-increment: ol;
