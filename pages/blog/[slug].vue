@@ -207,8 +207,10 @@ useHead({
       color: var(--text-secondary);
       transition: color $transition;
 
-      &:first-child {
-        font-size: 20px;
+      &.lead  {
+        color: var(--text-primary);
+        line-height: 1.6;
+        letter-spacing: normal;
       }
     }
 
@@ -256,11 +258,6 @@ useHead({
           }
         }
       }
-    }
-
-    strong {
-      color: var(--text-primary);
-      transition: color $transition;
     }
   }
 }
