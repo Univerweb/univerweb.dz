@@ -16,6 +16,7 @@ export default defineNuxtConfig({
     options: {
       linkActiveClass: '',
       linkExactActiveClass: '',
+      scrollBehaviorType: 'smooth',
     },
   },
 

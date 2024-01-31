@@ -12,11 +12,24 @@ export default defineComponent({
       type: Number,
       default: 2000,
     },
+    height: {
+      type: Number,
+      default: 3,
+    },
+    color: {
+      type: [String, Boolean],
+      default: 'repeating-linear-gradient(to right, #50c8f0 0%, #28285a 50%, #50c8f0 100%)',
+    },
+    estimatedProgress: {
+      type: Function as unknown as () => (duration: number, elapsed: number) => number,
+      required: false,
+    },
   },
-  setup(slots, { expose }) {
+  setup(props, { slots, expose }) {
     const { progress, isLoading, start, finish, clear } = useLoadingIndicator({
-      duration: 2000,
-      throttle: 200,
+      duration: props.duration,
+      throttle: props.throttle,
+      estimatedProgress: props.estimatedProgress,
     })
 
     expose({
@@ -35,9 +48,9 @@ export default defineComponent({
         left: 0,
         pointerEvents: 'none',
         width: 'auto',
-        height: '3px',
+        height: `${props.height}px`,
         opacity: isLoading.value ? 1 : 0,
-        background: 'repeating-linear-gradient(to right, #50c8f0 0%, #28285a 50%, #50c8f0 100%)',
+        background: props.color || undefined,
         backgroundSize: progress.value === 0 ? 'auto' : `${(100 / progress.value) * 100}% auto`,
         transform: `scaleX(${progress.value / 100})`,
         transformOrigin: 'left',
