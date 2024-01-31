@@ -207,7 +207,7 @@ useHead({
       color: var(--text-secondary);
       transition: color $transition;
 
-      &.lead  {
+      &.lead {
         color: var(--text-primary);
         line-height: 1.6;
         letter-spacing: normal;
@@ -248,7 +248,7 @@ useHead({
 
         &::before {
           content: '\002022';
-          margin-inline-start: -.875rem;
+          margin-inline-start: -0.875rem;
           float: inline-start;
 
           &:is(ol li) {
