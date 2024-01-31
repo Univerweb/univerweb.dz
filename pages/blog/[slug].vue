@@ -259,6 +259,22 @@ useHead({
         }
       }
     }
+
+    sup {
+      position: relative;
+      vertical-align: text-top;
+      top: -5px;
+      font-size: 11px;
+      color: $primary;
+
+      a[aria-describedby='footnote-label'] {
+        color: $primary;
+      }
+    }
+
+    .footnotes ol {
+      font-size: 14px;
+    }
   }
 }
 </style>
