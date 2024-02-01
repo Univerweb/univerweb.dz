@@ -47,6 +47,12 @@ export default defineNuxtConfig({
     'nuxt-gtag',
   ],
 
+  content: {
+    markdown: {
+      anchorLinks: false,
+    },
+  },
+
   image: {
     dir: 'assets/images',
   },

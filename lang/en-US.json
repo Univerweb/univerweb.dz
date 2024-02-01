@@ -7,7 +7,8 @@
     "realisations": "Latest work",
     "prestations": "Services",
     "agence": "The agency",
-    "contact": "Contact"
+    "contact": "Contact",
+    "blog": "Blog"
   },
   "toggle": "Open menu",
   "request": {
@@ -98,6 +99,14 @@
     "about": "Creating professional websites is what we do. Tell us about your needs, we’d love to collaborate with you.",
     "manager": "Manager",
     "support": "Technical support"
+  },
+  "blog": {
+    "title": "@:menu.blog",
+    "desc": "Explore our Blog for website building tips and tricks, thoughts on current trends and more.",
+    "headline": "The Digital Blog.",
+    "by": "by",
+    "share": "Share the article",
+    "copy": "Copied!"
   },
   "nav": {
     "prev": "Previous",

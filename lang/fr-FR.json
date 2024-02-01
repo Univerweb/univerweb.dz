@@ -7,7 +7,8 @@
     "realisations": "Réalisations",
     "prestations": "Prestations",
     "agence": "L’agence",
-    "contact": "Contact"
+    "contact": "Contact",
+    "blog": "Blog"
   },
   "toggle": "Ouvrir le menu",
   "request": {
@@ -103,6 +104,14 @@
     "other": "Autres moyens de nous contacter",
     "manager": "Gérant",
     "support": "Soutien technique"
+  },
+  "blog": {
+    "title": "@:menu.blog",
+    "desc": "Explorez notre Blog pour des conseils et astuces en matière de création de sites web, des réflexions sur les tendances actuelles et plus encore.",
+    "headline": "Le Blog du numérique.",
+    "by": "par",
+    "share": "Partager l’article",
+    "copy": "Copié !"
   },
   "nav": {
     "prev": "Précédent",

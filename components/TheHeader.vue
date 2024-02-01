@@ -112,10 +112,14 @@ header {
   }
 
   @media (min-width: $lg) {
-    grid-template-columns: repeat(4, auto);
-    justify-content: space-evenly;
+    grid-template-columns: repeat(5, auto);
+    justify-content: center;
+    gap: 48px;
     padding: 0;
   }
+
+  @include media($xl, 0, 0, 64px);
+  @include media($xxl, 0, 0, 128px);
 
   a {
     position: relative;
