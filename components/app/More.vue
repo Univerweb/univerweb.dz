@@ -30,10 +30,6 @@ const localePath = useLocalePath()
   @include media($md, 16px 0, 0);
   @include media($lg, 24px 0, 0);
 
-  .btn {
-    justify-self: end;
-  }
-
   [lang='ar-DZ'] & svg {
     transform: rotate(180deg);
   }

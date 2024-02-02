@@ -48,6 +48,7 @@ useHead({
 
   .btn {
     margin-top: 96px;
+    justify-self: center;
   }
 }
 </style>
