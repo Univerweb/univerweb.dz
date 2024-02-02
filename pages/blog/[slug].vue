@@ -137,22 +137,24 @@ useHead({
       transition: color $transition;
     }
 
-    ul {
-      position: relative;
-      display: inline-flex;
-      margin-inline-start: 12px;
-      padding-inline-start: 12px;
+    @media (min-width: $sm) {
+      ul {
+        position: relative;
+        display: inline-flex;
+        margin-inline-start: 12px;
+        padding-inline-start: 12px;
 
-      &::before {
-        content: '';
-        position: absolute;
-        inset-inline-start: 0;
-        top: 50%;
-        width: 1px;
-        height: 10px;
-        margin-top: -5px;
-        background-color: var(--text-secondary);
-        opacity: 0.2;
+        &::before {
+          content: '';
+          position: absolute;
+          inset-inline-start: 0;
+          top: 50%;
+          width: 1px;
+          height: 10px;
+          margin-top: -5px;
+          background-color: var(--text-secondary);
+          opacity: 0.2;
+        }
       }
     }
   }
