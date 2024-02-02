@@ -25,7 +25,10 @@ const localePath = useLocalePath()
 <style lang="scss">
 .more {
   display: grid;
-  margin-top: 48px;
+  padding-top: 12px;
+
+  @include media($md, 16px 0, 0);
+  @include media($lg, 24px 0, 0);
 
   .btn {
     justify-self: end;
