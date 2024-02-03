@@ -364,11 +364,11 @@ button {
 }
 
 .btn {
-  display: grid;
-  grid-auto-flow: column;
+  display: flex;
   align-items: center;
-  justify-self: end;
+  justify-content: center;
   column-gap: 12px;
+  background-color: transparent;
   color: $primary;
   border: 1px solid $primary;
   font-weight: 500;
@@ -376,6 +376,16 @@ button {
   padding: 0 20px;
   border-radius: 2em;
   transition: background-color $transition, color $transition;
+
+  .more & {
+    @media (min-width: $sm) {
+      justify-self: end;
+    }
+  }
+
+  .error & {
+    margin-top: 96px;
+  }
 
   &:hover {
     background-color: $primary;
