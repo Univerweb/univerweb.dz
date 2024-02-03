@@ -45,10 +45,5 @@ useHead({
   padding-block: 0;
   min-height: calc(100vh);
   transform: translateY(0);
-
-  .btn {
-    margin-top: 96px;
-    justify-self: center;
-  }
 }
 </style>
