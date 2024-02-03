@@ -36,14 +36,3 @@ useHead({
     </button>
   </main>
 </template>
-
-<style lang="scss">
-.error {
-  display: grid;
-  justify-items: center;
-  align-content: center;
-  padding-block: 0;
-  min-height: calc(100vh);
-  transform: translateY(0);
-}
-</style>
