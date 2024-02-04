@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   '@antfu/eslint-config':
-    specifier: ^2.6.3
-    version: 2.6.3(@vue/compiler-sfc@3.4.15)(eslint@8.56.0)(typescript@5.3.3)
+    specifier: ^2.6.4
+    version: 2.6.4(@vue/compiler-sfc@3.4.15)(eslint@8.56.0)(typescript@5.3.3)
   '@nuxt/content':
     specifier: ^2.11.0
     version: 2.11.0(nuxt@3.10.0)(rollup@4.9.6)(vue@3.4.15)
@@ -60,8 +60,8 @@ packages:
       '@jridgewell/trace-mapping': 0.3.22
     dev: true
 
-  /@antfu/eslint-config@2.6.3(@vue/compiler-sfc@3.4.15)(eslint@8.56.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-sfkamrOatMwMZkp14mBerHKIw8FY0SD1iCb5UZ6Y5hgb+FeDpNQPlVA0i2PN95TQ8NSYyPC1QnoM+UA5NSl0Kg==}
+  /@antfu/eslint-config@2.6.4(@vue/compiler-sfc@3.4.15)(eslint@8.56.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-dMD/QC5KWS1OltdpKLhfZM7W7y7zils85opk8d4lyNr7yn0OFjZs7eMYtcC6DrrN2kQ1JrFvBM7uB0QdWn5PUQ==}
     hasBin: true
     peerDependencies:
       '@unocss/eslint-plugin': '>=0.50.0'
@@ -3862,6 +3862,7 @@ packages:
 
   /boolbase@1.0.0:
     resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}
+    requiresBuild: true
     dev: true
 
   /brace-expansion@1.1.11:
@@ -7542,6 +7543,7 @@ packages:
 
   /nth-check@2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
+    requiresBuild: true
     dependencies:
       boolbase: 1.0.0
     dev: true
@@ -9483,6 +9485,7 @@ packages:
 
   /tslib@2.6.2:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
+    requiresBuild: true
     dev: true
 
   /tuf-js@2.2.0:
