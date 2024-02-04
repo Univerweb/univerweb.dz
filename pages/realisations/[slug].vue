@@ -173,7 +173,7 @@ useHead({
         </h2>
       </div>
       <div class="card-group">
-        <WorkCard v-for="p in related" :key="p._path" :card="p" title-tag="h3" />
+        <WorkCard v-for="p in related" :key="p._path" :work="p" title-tag="h3" />
       </div>
     </div>
 
