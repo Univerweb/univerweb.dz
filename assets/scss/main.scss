@@ -261,9 +261,8 @@ footer {
 /* Headings */
 h1,
 .h1 {
-  @include font(44);
+  @include font(44, 700);
 
-  font-weight: 700;
   letter-spacing: -0.04em;
   margin-block: 0 24px;
 

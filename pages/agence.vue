@@ -66,12 +66,11 @@ useHead({
   counter-reset: counterName;
 
   li::before {
-    @include font(56);
+    @include font(56, 900);
 
     counter-increment: counterName;
     content: counters(counterName, '-');
     color: $primary;
-    font-weight: 900;
   }
 }
 </style>

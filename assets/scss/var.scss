@@ -20,8 +20,8 @@ $animation: 0.5s forwards;
   line-height: calc(($number + 4) / $number);
 }
 
-@mixin font($number) {
-  font-weight: 500;
+@mixin font($number, $font-weight: 500) {
+  font-weight: $font-weight;
 
   @include size($number);
 }
