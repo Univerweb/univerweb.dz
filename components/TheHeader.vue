@@ -74,20 +74,23 @@ header {
   position: fixed;
   inset: 0;
   display: grid;
-  grid-template-rows: 1fr auto;
-  align-items: center;
+  grid-template-rows: auto 1fr;
   width: 100%;
   height: 100%;
-  padding: 72px 24px 24px;
-  z-index: -1;
+  padding: 32px;
   opacity: 0;
   background-color: var(--bg);
   visibility: hidden;
+  overflow-y: scroll;
   transition: background-color $transition, opacity $transition;
 
   .open-menu & {
     opacity: 1;
     visibility: visible;
+  }
+
+  @media (min-width: $xs) {
+    padding: 48px;
   }
 
   @media (min-width: $lg) {
@@ -102,14 +105,10 @@ header {
 .menu {
   display: grid;
   grid-auto-columns: max-content;
-  row-gap: 48px;
+  row-gap: 24px;
   list-style: none;
   margin: 0;
   padding: 0;
-
-  @media screen and (orientation: landscape) {
-    row-gap: 12px;
-  }
 
   @media (min-width: $lg) {
     grid-template-columns: repeat(5, auto);
@@ -126,7 +125,7 @@ header {
     display: block;
     color: var(--text-primary);
 
-    @include font(20);
+    @include font(28);
 
     @media (min-width: $lg) {
       font-size: 1rem;
@@ -157,7 +156,8 @@ header {
   position: relative;
   display: flex;
   column-gap: 16px;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: flex-end;
 
   .lang {
     position: absolute;
