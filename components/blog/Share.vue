@@ -100,7 +100,6 @@ const { copy, copied } = useClipboard()
     position: relative;
 
     &-text {
-      font-weight: bold;
       font-size: 12px;
       line-height: 22px;
       width: max-content;

@@ -263,6 +263,7 @@ h1,
 .h1 {
   @include font(44);
 
+  font-weight: 700;
   letter-spacing: -0.04em;
   margin-block: 0 24px;
 
@@ -402,7 +403,7 @@ button {
 }
 
 strong {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .move-arrow {
