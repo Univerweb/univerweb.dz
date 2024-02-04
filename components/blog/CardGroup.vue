@@ -1,15 +1,16 @@
 <script setup lang="ts">
 import type { Blog } from '../../types'
 
+const localePath = useLocalePath()
 const { t } = useI18n()
-const { path } = useRoute()
 
 const { data: articles } = await useAsyncData(
-  `articles${path}`,
-  () => queryContent(path)
+  localePath('blog'),
+  () => queryContent(localePath('blog'))
     .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'author', 'body'])
     .sort({ _id: -1, $numeric: true })
     .find() as Promise<Blog[]>,
+  { watch: [localePath] },
 )
 </script>
 

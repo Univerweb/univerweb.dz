@@ -15,16 +15,17 @@ const props = withDefaults(defineProps<Props>(), {
   more: false,
 })
 
+const localePath = useLocalePath()
 const { t } = useI18n()
-const { path } = useRoute()
 
 const { data: works } = await useAsyncData(
-  `works${path}`,
-  () => queryContent(path)
+  localePath('realisations'),
+  () => queryContent(localePath('realisations'))
     .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'category', 'body'])
     .sort({ _id: -1, $numeric: true })
     .limit(props.limit)
     .find() as Promise<Work[]>,
+  { watch: [localePath] },
 )
 </script>
 
