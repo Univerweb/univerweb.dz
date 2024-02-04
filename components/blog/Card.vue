@@ -2,7 +2,7 @@
 import type { Blog } from '../../types'
 
 defineProps<{
-  card: Blog
+  article: Blog
   titleTag: string
 }>()
 
@@ -12,29 +12,29 @@ const localePath = useLocalePath()
 </script>
 
 <template>
-  <NuxtLink :to="localePath(`${card._path}`)" class="card">
+  <NuxtLink :to="localePath(`${article._path}`)" class="card">
     <article vocab="https://schema.org/" typeof="Article">
       <span property="mainEntityOfPage" typeof="WebPage">
-        <meta property="id" :content="`${baseUrl}${localePath(`${card._path}`)}`">
+        <meta property="id" :content="`${baseUrl}${localePath(`${article._path}`)}`">
       </span>
       <span property="publisher" typeof="Organization">
         <meta property="name" :content="t('name')">
         <meta property="url" :content="baseUrl">
       </span>
-      <span v-if="card.author && card.author.name && card.author.url" property="author" typeof="Person">
-        <meta property="name" :content="card.author.name">
-        <meta property="url" :content="card.author.url">
+      <span v-if="article.author && article.author.name && article.author.url" property="author" typeof="Person">
+        <meta property="name" :content="article.author.name">
+        <meta property="url" :content="article.author.url">
       </span>
       <span v-else property="author" typeof="Organization">
         <meta property="name" :content="t('name')">
         <meta property="url" :content="baseUrl">
       </span>
-      <time property="dateCreated datePublished" :datetime="card.createdAt.toString()" />
-      <time property="dateModified" :datetime="card.updatedAt.toString()" />
+      <time property="dateCreated datePublished" :datetime="article.createdAt.toString()" />
+      <time property="dateModified" :datetime="article.updatedAt.toString()" />
       <meta property="articleSection" :content="t('blog.title')">
 
       <AppPicture
-        :picture="card"
+        :picture="article"
         type="thumbnail"
         sizes="295px xs:607px sm:354px md:456px lg:588px"
         class-name="thumbnail"
@@ -44,15 +44,15 @@ const localePath = useLocalePath()
 
       <div class="inner">
         <ul class="tags">
-          <li v-for="tag in card.tags" :key="tag" property="keywords" class="h3">
+          <li v-for="tag in article.tags" :key="tag" property="keywords" class="h3">
             {{ tag }}
           </li>
         </ul>
         <Component :is="titleTag" property="headline">
-          {{ card.title }}
+          {{ article.title }}
         </Component>
         <p property="description" class="lead">
-          {{ card.description }}
+          {{ article.description }}
         </p>
       </div>
     </article>

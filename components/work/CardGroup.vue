@@ -18,8 +18,8 @@ const props = withDefaults(defineProps<Props>(), {
 const { t } = useI18n()
 const { path } = useRoute()
 
-const { data: posts } = await useAsyncData(
-  `posts${path}`,
+const { data: works } = await useAsyncData(
+  `works${path}`,
   () => queryContent(path)
     .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'category', 'body'])
     .sort({ _id: -1, $numeric: true })
@@ -37,7 +37,7 @@ const { data: posts } = await useAsyncData(
     </div>
 
     <div class="card-group">
-      <WorkCard v-for="post in posts" :key="post._path" :card="post" :title-tag="titleTag" />
+      <WorkCard v-for="work in works" :key="work._path" :work="work" :title-tag="titleTag" />
     </div>
 
     <LazyAppMore v-if="more" />

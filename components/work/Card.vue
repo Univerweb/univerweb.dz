@@ -2,7 +2,7 @@
 import type { Work } from '../../types'
 
 defineProps<{
-  card: Work
+  work: Work
   titleTag: string
 }>()
 
@@ -12,23 +12,23 @@ const localePath = useLocalePath()
 </script>
 
 <template>
-  <NuxtLink :to="localePath(`${card._path}`)" class="card">
+  <NuxtLink :to="localePath(`${work._path}`)" class="card">
     <article vocab="https://schema.org/" typeof="Article">
       <span property="mainEntityOfPage" typeof="WebPage">
-        <span property="id" :content="`${baseUrl}${localePath(`${card._path}`)}`" />
+        <span property="id" :content="`${baseUrl}${localePath(`${work._path}`)}`" />
       </span>
       <span property="author publisher" typeof="Organization">
         <span property="name" :content="t('name')" />
         <span property="url" :content="baseUrl" />
       </span>
-      <time property="dateCreated datePublished" :datetime="card.createdAt.toString()" />
-      <time property="dateModified" :datetime="card.updatedAt.toString()" />
-      <span v-for="tag in card.tags" :key="tag" property="keywords" :content="tag" />
+      <time property="dateCreated datePublished" :datetime="work.createdAt.toString()" />
+      <time property="dateModified" :datetime="work.updatedAt.toString()" />
+      <span v-for="tag in work.tags" :key="tag" property="keywords" :content="tag" />
       <span property="articleSection" :content="t('works.title')" />
-      <span property="description" :content="card.description" />
+      <span property="description" :content="work.description" />
 
       <AppPicture
-        :picture="card"
+        :picture="work"
         type="thumbnail"
         sizes="295px xs:607px sm:354px md:456px lg:588px"
         class-name="thumbnail"
@@ -39,13 +39,13 @@ const localePath = useLocalePath()
 
       <div class="inner work">
         <span class="h3">
-          {{ card.category }}
+          {{ work.category }}
         </span>
         <Component :is="titleTag" property="headline" class="work">
-          {{ card.title }}
+          {{ work.title }}
         </Component>
         <ContentRendererMarkdown
-          :value="card"
+          :value="work"
           :components="{ p: 'span' }"
           tag="p"
           property="articleBody"

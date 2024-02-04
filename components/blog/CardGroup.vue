@@ -4,8 +4,8 @@ import type { Blog } from '../../types'
 const { t } = useI18n()
 const { path } = useRoute()
 
-const { data: posts } = await useAsyncData(
-  `posts${path}`,
+const { data: articles } = await useAsyncData(
+  `articles${path}`,
   () => queryContent(path)
     .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'author', 'body'])
     .sort({ _id: -1, $numeric: true })
@@ -22,7 +22,7 @@ const { data: posts } = await useAsyncData(
     </div>
 
     <div class="card-group">
-      <BlogCard v-for="post in posts" :key="post._path" :card="post" title-tag="h2" />
+      <BlogCard v-for="article in articles" :key="article._path" :article="article" title-tag="h2" />
     </div>
   </section>
 </template>
