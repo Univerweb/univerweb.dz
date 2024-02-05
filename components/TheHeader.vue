@@ -208,11 +208,6 @@ header {
 
 .toggle {
   display: grid;
-
-  @media (min-width: $lg) {
-    display: none;
-  }
-
   align-content: space-between;
   background-color: transparent;
   width: 24px;
@@ -220,6 +215,10 @@ header {
   margin: 0;
   padding: 0;
   outline: none;
+
+  @media (min-width: $lg) {
+    display: none;
+  }
 
   span {
     background-color: $primary;
