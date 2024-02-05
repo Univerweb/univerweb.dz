@@ -319,9 +319,10 @@ header {
     font-size: 13px;
     line-height: 24px;
     opacity: 0;
-    z-index: -1;
+    visibility: hidden;
 
     &.active {
+      visibility: visible;
       animation: lang 2s ease-in-out;
 
       [lang='ar-DZ'] & {
