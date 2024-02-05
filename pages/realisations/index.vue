@@ -1,16 +1,9 @@
 <script setup lang="ts">
-const { t } = useI18n()
+const meta = useMeta('works')
 const breadcrumb = useBreadcrumb('works')
 
-useSeoMeta({
-  title: () => t('works.title'),
-  description: t('works.desc'),
-  ogTitle: t('works.title'),
-})
-
-useHead({
-  script: [breadcrumb],
-})
+useSeoMeta(meta)
+useHead({ script: [breadcrumb] })
 </script>
 
 <template>

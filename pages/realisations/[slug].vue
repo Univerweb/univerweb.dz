@@ -6,7 +6,7 @@ const { t } = useI18n()
 const { baseUrl, localeBaseUrl } = useUrl()
 const { path, params: { slug } } = useRoute()
 const img = useImage()
-const ogImagePath = img(`realisations/${slug}_banner.png`, { width: 2560, height: 1280, quality: 80 })
+const ogImagePath = img(`realisations/${slug}_banner.png`, { width: 2400, height: 1256, quality: 80 })
 
 const { data: post } = await useAsyncData(
   `post${path}`,
@@ -50,8 +50,12 @@ useSeoMeta({
   title: post.value.title,
   description: post.value.description,
   ogTitle: post.value.title,
+  ogDescription: post.value.description,
   ogType: 'article',
   ogImage: `${baseUrl}${ogImagePath}`,
+  twitterTitle: post.value.title,
+  twitterDescription: post.value.description,
+  twitterImage: `${baseUrl}${ogImagePath}`,
 })
 
 useHead({

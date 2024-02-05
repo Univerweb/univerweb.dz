@@ -14,9 +14,14 @@ useSeoMeta({
   titleTemplate: (titleChunk) => { return titleChunk ? `${titleChunk} — ${t('name')}` : `${t('title')} — ${t('name')}` },
   description: () => t('desc'),
   ogTitle: () => t('title'),
+  ogDescription: () => t('desc'),
   ogType: 'website',
   ogUrl,
   ogImage,
+  twitterCard: 'summary_large_image',
+  twitterTitle: () => t('title'),
+  twitterDescription: () => t('desc'),
+  twitterImage: ogImage,
 })
 
 useHead({
