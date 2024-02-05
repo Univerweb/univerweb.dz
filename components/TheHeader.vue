@@ -236,16 +236,60 @@ header {
     padding: 0;
     outline: none;
 
-    .color-scale-enter-active,
-    .color-scale-leave-active {
-      transition: transform 150ms linear, opacity 150ms linear;
-    }
+    &.toggle {
+      display: grid;
+      align-content: space-between;
+      padding: 2px;
 
-    .color-scale-enter-from,
-    .color-scale-leave-to {
-      transform: scaleY(0);
-      opacity: 0;
+      @media (min-width: $lg) {
+        display: none;
+      }
+
+      span {
+        background-color: currentColor;
+        height: 2px;
+        border-radius: 2em;
+        transition: all $transition;
+      }
+
+      .middle {
+        animation: collapse-middle $animation;
+        transform-origin: left;
+
+        .open-menu & {
+          animation: collapse-show-middle $animation;
+        }
+      }
+
+      .top {
+        animation: collapse-top $animation;
+
+        .open-menu & {
+          animation: collapse-show-top $animation;
+        }
+      }
+
+      .bottom {
+        animation: collapse-bottom $animation;
+        transform-origin: left;
+
+        .open-menu & {
+          animation: collapse-show-bottom $animation;
+          transform-origin: center;
+        }
+      }
     }
+  }
+
+  .color-scale-enter-active,
+  .color-scale-leave-active {
+    transition: transform 150ms linear, opacity 150ms linear;
+  }
+
+  .color-scale-enter-from,
+  .color-scale-leave-to {
+    transform: scaleY(0);
+    opacity: 0;
   }
 
   .lang {
@@ -263,50 +307,6 @@ header {
       [lang='ar-DZ'] & {
         animation-direction: reverse;
       }
-    }
-  }
-}
-
-.toggle {
-  display: grid;
-  align-content: space-between;
-  padding: 2px;
-
-  @media (min-width: $lg) {
-    display: none;
-  }
-
-  span {
-    background-color: currentColor;
-    height: 2px;
-    border-radius: 2em;
-    transition: all $transition;
-  }
-
-  .middle {
-    animation: collapse-middle $animation;
-    transform-origin: left;
-
-    .open-menu & {
-      animation: collapse-show-middle $animation;
-    }
-  }
-
-  .top {
-    animation: collapse-top $animation;
-
-    .open-menu & {
-      animation: collapse-show-top $animation;
-    }
-  }
-
-  .bottom {
-    animation: collapse-bottom $animation;
-    transform-origin: left;
-
-    .open-menu & {
-      animation: collapse-show-bottom $animation;
-      transform-origin: center;
     }
   }
 }
