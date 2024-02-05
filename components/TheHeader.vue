@@ -61,7 +61,7 @@ function toggleDark() {
         </span>
       </NuxtLink>
 
-      <button :aria-label="t(`colorMode.${color.preference}`)" type="button" @click="toggleDark">
+      <button type="button" :aria-label="t(`colorMode.${color.preference}`)" @click="toggleDark">
         <Transition name="color-scale" mode="out-in">
           <svg v-if="$colorMode.preference === 'light'" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" viewBox="0 0 24 24" role="img">
             <circle cx="12" cy="12" r="5" />
