@@ -278,6 +278,10 @@ header {
         }
       }
     }
+
+    .open-menu &:not(.toggle) {
+      z-index: -1;
+    }
   }
 
   .color-scale-enter-active,
