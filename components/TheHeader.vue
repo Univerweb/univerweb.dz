@@ -96,7 +96,7 @@ header {
   @include grid(2, auto);
   @include media($xs, 24px, 16px);
   @include media($sm, 24px, 24px);
-  @include media($lg, 36px, 36px, $template-columns: auto 1fr auto);
+  @include media($lg, 36px, 36px, $template-columns: repeat(3, auto));
 
   .scrolled & {
     box-shadow: 0 0 10px rgba(0 0 0 / 10%);
@@ -197,9 +197,7 @@ header {
 
   @media (min-width: $lg) {
     grid-template-columns: repeat(5, auto);
-    justify-content: center;
     gap: 48px;
-    padding: 0;
   }
 
   @include media($xl, 0, 0, 64px);
@@ -214,8 +212,6 @@ header {
 
     @media (min-width: $lg) {
       font-size: 1rem;
-      line-height: 1.5;
-      text-align: center;
     }
 
     &::after {
