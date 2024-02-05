@@ -250,16 +250,11 @@ header {
     background-color: transparent;
     color: var(--text-primary);
     transition: color $transition;
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
 
     &:hover {
       color: $primary;
-    }
-
-    svg {
-      position: absolute;
-      inset: 2px;
     }
 
     .color-scale-enter-active,
@@ -279,8 +274,6 @@ header {
   display: grid;
   align-content: space-between;
   background-color: transparent;
-  width: 20px;
-  height: 20px;
   margin: 0;
   padding: 2px;
   outline: none;
