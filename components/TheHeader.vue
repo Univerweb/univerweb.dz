@@ -227,24 +227,6 @@ header {
   justify-content: center;
   align-items: flex-end;
 
-  .lang {
-    position: absolute;
-    inset-inline-end: calc(100% + 8px);
-    width: max-content;
-    font-size: 13px;
-    line-height: 24px;
-    opacity: 0;
-    z-index: -1;
-
-    &.active {
-      animation: lang 2s ease-in-out;
-
-      [lang='ar-DZ'] & {
-        animation-direction: reverse;
-      }
-    }
-  }
-
   > * {
     position: relative;
     background-color: transparent;
@@ -266,6 +248,24 @@ header {
     .color-scale-leave-to {
       transform: scaleY(0);
       opacity: 0;
+    }
+  }
+
+  .lang {
+    position: absolute;
+    inset-inline-end: calc(100% + 8px);
+    width: max-content;
+    font-size: 13px;
+    line-height: 24px;
+    opacity: 0;
+    z-index: -1;
+
+    &.active {
+      animation: lang 2s ease-in-out;
+
+      [lang='ar-DZ'] & {
+        animation-direction: reverse;
+      }
     }
   }
 }
