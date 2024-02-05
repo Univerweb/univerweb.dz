@@ -28,11 +28,11 @@
 
 @keyframes collapse-top {
   0% {
-    transform: translateY(10.5px) scaleX(1) rotate(-45deg);
+    transform: translateY(7px) scaleX(1) rotate(-45deg);
   }
 
   25% {
-    transform: translateY(10.5px) rotate(0);
+    transform: translateY(7px) rotate(0);
   }
 
   50% {
@@ -54,21 +54,21 @@
   }
 
   75% {
-    transform: translateY(10.5px) rotate(0);
+    transform: translateY(7px) rotate(0);
   }
 
   100% {
-    transform: translateY(10.5px) scaleX(1) rotate(-45deg);
+    transform: translateY(7px) scaleX(1) rotate(-45deg);
   }
 }
 
 @keyframes collapse-bottom {
   0% {
-    transform: translateY(-10.5px) scaleX(1) rotate(45deg);
+    transform: translateY(-7px) scaleX(1) rotate(45deg);
   }
 
   25% {
-    transform: translateY(-10.5px) rotate(0);
+    transform: translateY(-7px) rotate(0);
   }
 
   50% {
@@ -98,11 +98,11 @@
   }
 
   75% {
-    transform: translateY(-10.5px) rotate(0);
+    transform: translateY(-7px) rotate(0);
   }
 
   100% {
-    transform: translateY(-10.5px) scaleX(1) rotate(45deg);
+    transform: translateY(-7px) scaleX(1) rotate(45deg);
   }
 }
 

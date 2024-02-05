@@ -210,10 +210,10 @@ header {
   display: grid;
   align-content: space-between;
   background-color: transparent;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   margin: 0;
-  padding: 0;
+  padding: 2px;
   outline: none;
 
   @media (min-width: $lg) {
@@ -221,8 +221,8 @@ header {
   }
 
   span {
-    background-color: $primary;
-    height: 3px;
+    background-color: currentColor;
+    height: 2px;
     border-radius: 2em;
     transition: all $transition;
   }
