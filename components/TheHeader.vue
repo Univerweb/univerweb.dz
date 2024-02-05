@@ -224,20 +224,17 @@ header {
   position: relative;
   display: flex;
   column-gap: 16px;
-  justify-content: center;
-  align-items: flex-end;
+  align-items: center;
 
   > * {
-    position: relative;
     background-color: transparent;
     color: var(--text-primary);
     transition: color $transition;
     width: 20px;
     height: 20px;
-
-    &:hover {
-      color: $primary;
-    }
+    margin: 0;
+    padding: 0;
+    outline: none;
 
     .color-scale-enter-active,
     .color-scale-leave-active {
@@ -273,10 +270,7 @@ header {
 .toggle {
   display: grid;
   align-content: space-between;
-  background-color: transparent;
-  margin: 0;
   padding: 2px;
-  outline: none;
 
   @media (min-width: $lg) {
     display: none;
