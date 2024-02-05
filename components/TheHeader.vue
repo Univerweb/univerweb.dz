@@ -40,16 +40,15 @@ header {
 
 .skip {
   position: absolute;
-  inset-block-start: 0;
+  top: 0;
   background-color: var(--secondary);
   color: var(--primary);
   padding: 0 4px;
-  transform:translateY(-150%);
+  transform: translateY(-150%);
   transition: transform $transition;
 
   &:focus {
-    position: absolute;
-    transform:translateY(0);
+    transform: translateY(0);
   }
 }
 
