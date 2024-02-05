@@ -223,8 +223,8 @@ header {
 .switchers {
   position: relative;
   display: flex;
-  column-gap: 16px;
   align-items: center;
+  column-gap: 16px;
 
   > * {
     background-color: transparent;
