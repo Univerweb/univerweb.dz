@@ -249,7 +249,6 @@ header {
         background-color: currentColor;
         height: 2px;
         border-radius: 2em;
-        transition: all $transition;
       }
 
       .middle {
