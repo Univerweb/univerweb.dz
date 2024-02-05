@@ -229,7 +229,7 @@ header {
 
   .lang {
     position: absolute;
-    inset-inline-end: 30px;
+    inset-inline-end: calc(100% + 8px);
     width: max-content;
     font-size: 13px;
     line-height: 24px;
