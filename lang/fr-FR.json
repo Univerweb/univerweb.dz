@@ -3,13 +3,13 @@
   "title": "Création de sites web en Algérie",
   "desc": "Plus que des sites web, nous concevons et innovons pour vous des expériences numériques centrées sur l’humain et qui reflètent votre image de marque.",
   "skip": "Aller au contenu principal",
-  "menu": {
-    "realisations": "Réalisations",
-    "prestations": "Prestations",
-    "agence": "L’agence",
-    "contact": "Contact",
-    "blog": "Blog"
-  },
+  "menu": [
+    { "path": "realisations", "label": "Réalisations" },
+    { "path": "prestations", "label": "Prestations" },
+    { "path": "agence", "label": "L’agence" },
+    { "path": "contact", "label": "Contact" },
+    { "path": "blog", "label": "Blog" }
+  ],
   "toggle": "Ouvrir le menu",
   "request": {
     "headline": "Convaincu ? Prenons un café ensemble.",
@@ -37,7 +37,7 @@
     }
   },
   "works": {
-    "title": "@:menu.realisations",
+    "title": "@:menu[0].label",
     "desc": "Découvrez nos toutes dernières créations. Nous serions ravis de collaborer avec vous.",
     "headline": "Ils ont cru en nous et ils sont comblés."
   },
@@ -51,7 +51,7 @@
     "related": "Projets liés"
   },
   "presta": {
-    "title": "@:menu.prestations",
+    "title": "@:menu[1].label",
     "desc": "Une stratégie de présence web accomplie, sur des fondements technologiques et une méthodologie rigoureuse.",
     "headline": "Ce dont nous sommes capables.",
     "lead": "De nos jours quiconque peut faire un site web, y compris votre neveu de 13 ans ! Mais qui peut réellement concrétiser une stratégie de présence web accomplie, sur des fondements technologiques et une méthodologie rigoureuse.",
@@ -77,7 +77,7 @@
     }
   },
   "agency": {
-    "title": "@:menu.agence",
+    "title": "@:menu[2].label",
     "desc": "Nous sommes une jeunes équipe de créativo-perfectionnistes et passionnée par notre travail, nous aimons coder de magnifiques sites web.",
     "headline": "Nous sommes une agence web.",
     "lead": "Créée en 2011 à Alger, nous sommes une jeunes équipe de créativo-perfectionnistes et passionnée par notre travail, nous aimons coder de magnifiques sites web en buvant du café le matin.",
@@ -101,7 +101,7 @@
     }
   },
   "contact": {
-    "title": "@:menu.contact",
+    "title": "@:menu[3].label",
     "desc": "Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
     "about": "Créer des sites web professionnels, c’est ce que nous faisons. Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
     "other": "Autres moyens de nous contacter",
@@ -109,7 +109,7 @@
     "support": "Soutien technique"
   },
   "blog": {
-    "title": "@:menu.blog",
+    "title": "@:menu[4].label",
     "desc": "Explorez notre Blog pour des conseils et astuces en matière de création de sites web, des réflexions sur les tendances actuelles et plus encore.",
     "headline": "Le Blog du numérique.",
     "by": "par",

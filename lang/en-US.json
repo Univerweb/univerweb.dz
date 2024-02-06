@@ -3,13 +3,13 @@
   "title": "Website Design in Algeria",
   "desc": "Even more than websites, we design and innovate human-centered digital experiences for you that reflect your brand image.",
   "skip": "Skip to main content",
-  "menu": {
-    "realisations": "Latest work",
-    "prestations": "Services",
-    "agence": "The agency",
-    "contact": "Contact",
-    "blog": "Blog"
-  },
+  "menu": [
+    { "path": "realisations", "label": "Latest work" },
+    { "path": "prestations", "label": "Services" },
+    { "path": "agence", "label": "The agency" },
+    { "path": "contact", "label": "Contact" },
+    { "path": "blog", "label": "Blog" }
+  ],
   "toggle": "Open menu",
   "request": {
     "headline": "Convinced? Let’s have a coffee together.",
@@ -37,7 +37,7 @@
     }
   },
   "works": {
-    "title": "@:menu.realisations",
+    "title": "@:menu[0].label",
     "desc": "Discover our latest creations. We would be delighted to work with you.",
     "headline": "They believed in us and they are fulfilled."
   },
@@ -51,7 +51,7 @@
     "related": "Related projects"
   },
   "presta": {
-    "title": "@:menu.prestations",
+    "title": "@:menu[1].label",
     "desc": "An accomplished web presence strategy, on technological foundations and a rigorous methodology.",
     "headline": "What we are capable of.",
     "lead": "These days anyone can make a website, including your 13 year old nephew! But who can really materialize an accomplished web presence strategy, on technological foundations and a rigorous methodology.",
@@ -72,7 +72,7 @@
     }
   },
   "agency": {
-    "title": "@:menu.agence",
+    "title": "@:menu[2].label",
     "desc": "We are a young team of creative-perfectionists and passionate about our work, we like to code beautiful websites while drinking coffee in the morning.",
     "headline": "We are a web agency.",
     "lead": "Founded in 2011 in Algiers, we are a young team of creative-perfectionists and passionate about our work, we like to code beautiful websites while drinking coffee in the morning.",
@@ -96,7 +96,7 @@
     }
   },
   "contact": {
-    "title": "@:menu.contact",
+    "title": "@:menu[3].label",
     "desc": "Tell us about your needs, we’d love to collaborate with you.",
     "other": "Other ways to contact us",
     "about": "Creating professional websites is what we do. Tell us about your needs, we’d love to collaborate with you.",
@@ -104,7 +104,7 @@
     "support": "Technical support"
   },
   "blog": {
-    "title": "@:menu.blog",
+    "title": "@:menu[4].label",
     "desc": "Explore our Blog for website building tips and tricks, thoughts on current trends and more.",
     "headline": "The Digital Blog.",
     "by": "by",

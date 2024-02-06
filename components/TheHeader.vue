@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { Link } from '../types'
+
 const { t, tm, rt, locale } = useI18n()
 const localePath = useLocalePath()
 const switchLocalePath = useSwitchLocalePath()
@@ -40,11 +42,11 @@ function toggleDark() {
       <span class="visually-hidden">{{ t('name') }}</span>
     </NuxtLink>
 
-    <nav class="nav">
+    <nav class="nav" :style="{ '--item-total': tm('menu').length }">
       <ul class="menu">
-        <li v-for="(name, value) in (tm('menu') as { value: string })" :key="value">
-          <NuxtLink :to="localePath(value)" active-class="active" @click="show = false">
-            {{ rt(name) }}
+        <li v-for="(item, index) in (tm('menu') as Link[])" :key="index">
+          <NuxtLink :to="localePath(rt(item.path))" active-class="active" @click="show = false">
+            {{ rt(item.label) }}
           </NuxtLink>
         </li>
       </ul>
@@ -196,7 +198,7 @@ header {
   padding: 0;
 
   @media (min-width: $lg) {
-    grid-template-columns: repeat(5, auto);
+    grid-template-columns: repeat(var(--item-total), auto);
     gap: 48px;
   }
 
