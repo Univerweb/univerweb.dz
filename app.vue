@@ -48,8 +48,8 @@ useHead({
         'image': {
           '@type': 'ImageObject',
           'url': ogImage,
-          'width': '1920px',
-          'height': '1080px',
+          'width': '2400px',
+          'height': '1256px',
         },
         'logo': {
           '@type': 'ImageObject',
