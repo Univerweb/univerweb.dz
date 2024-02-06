@@ -1,10 +1,7 @@
 <script setup lang="ts">
-export interface Props {
-  path?: string
-  label?: string
-}
+import type { Link } from '../../types'
 
-withDefaults(defineProps<Props>(), {
+withDefaults(defineProps<Link>(), {
   path: 'realisations',
   label: 'home.moreLabel.works',
 })

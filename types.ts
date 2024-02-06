@@ -19,3 +19,8 @@ export interface Blog extends Post {
 }
 
 export type Nav = null | Pick<Post, '_path' | 'title'>
+
+export interface Link {
+  path: string
+  label: string
+}
