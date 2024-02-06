@@ -68,12 +68,12 @@ body {
 /* Main */
 main,
 footer {
-  transform: translateY(96px);
+  transform: translateY(72px);
   transition: transform $transition;
 
   @media (min-width: $lg) {
-    html:is(.scrolled) & {
-      transform: translateY(72px);
+    html:not(.scrolled) & {
+      transform: translateY(96px);
     }
   }
 }
@@ -93,10 +93,12 @@ footer {
     grid-auto-rows: 1fr auto;
     padding-block: 0;
     transition: min-height $transition;
-    min-height: calc(100vh - 96px);
+    min-height: calc(100vh - 72px);
 
     @media (min-width: $lg) {
-      min-height: calc(100vh - 132px);
+      html:not(.scrolled) & {
+        min-height: calc(100vh - 96px);
+      }
     }
   }
 
@@ -341,6 +343,11 @@ a {
   .hero & {
     display: grid;
     justify-self: center;
+    margin-bottom: 24px;
+
+    @media (min-width: $lg) {
+      margin-bottom: 36px;
+    }
   }
 }
 
