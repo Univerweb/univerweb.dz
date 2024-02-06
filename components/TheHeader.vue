@@ -168,7 +168,7 @@ header {
   background-color: var(--bg);
   visibility: hidden;
   overflow-y: scroll;
-  transition: background-color $transition, opacity $transition;
+  transition: opacity $transition, background-color $transition;
 
   .open-menu & {
     opacity: 1;
