@@ -170,9 +170,6 @@ header {
 
   @media (min-width: $md) {
     position: relative;
-    display: grid;
-    align-items: center;
-    padding: 0;
     opacity: 1;
     visibility: visible;
   }
