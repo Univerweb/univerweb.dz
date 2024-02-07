@@ -5,7 +5,7 @@ const { t, tm, rt, locale } = useI18n()
 const localePath = useLocalePath()
 const switchLocalePath = useSwitchLocalePath()
 const { isArabic } = useLocale()
-const show = useShow()
+const toggleMenu = useMenu()
 const color = useColorMode()
 
 const lang = computed(() => locale.value === 'fr' ? ['en', 'Français'] : locale.value === 'en' ? ['ar', 'English'] : ['fr', 'العربية'])
@@ -45,7 +45,7 @@ function toggleDark() {
     <nav class="nav" :style="{ '--item-total': tm('menu').length }">
       <ul class="menu">
         <li v-for="(item, index) in (tm('menu') as Link[])" :key="index">
-          <NuxtLink :to="localePath(rt(item.path))" active-class="active" @click="show = false">
+          <NuxtLink :to="localePath(rt(item.path))" active-class="active" @click.enter="toggleMenu">
             {{ rt(item.label) }}
           </NuxtLink>
         </li>
@@ -74,7 +74,7 @@ function toggleDark() {
         </Transition>
       </button>
 
-      <button type="button" :aria-label="t('toggle')" class="toggle" @click="show = !show">
+      <button type="button" :aria-label="t('toggle')" class="toggle" @click="toggleMenu">
         <span class="top" />
         <span class="middle" />
         <span class="bottom" />

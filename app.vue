@@ -4,7 +4,6 @@ const config = useRuntimeConfig()
 const { y } = useWindowScroll()
 const i18nHead = useLocaleHead({ addSeoAttributes: true, addDirAttribute: true })
 const { t, finalizePendingLocaleChange } = useI18n()
-const show = useShow()
 
 async function onBeforeEnter() {
   await finalizePendingLocaleChange()
@@ -28,7 +27,7 @@ useHead({
   htmlAttrs: {
     lang: () => i18nHead.value.htmlAttrs!.lang,
     dir: () => i18nHead.value.htmlAttrs!.dir,
-    class: { 'menu-open': show, 'scrolled': () => y.value > 0 },
+    class: { scrolled: () => y.value > 0 },
   },
 
   link: () => [
