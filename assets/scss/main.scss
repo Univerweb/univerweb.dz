@@ -9,6 +9,21 @@
   --font-family: 'Outfit', 'Outfit fallback';
   --transform-origin: left;
   --shadow: 0 0 0 / 10%;
+  --h-header: 48px;
+
+  @media (min-width: $xs) {
+    --h-header: 52px;
+  }
+
+  @media (min-width: $sm) {
+    --h-header: 72px;
+  }
+
+  @media (min-width: $md) {
+    &:not(.scrolled) {
+      --h-header: 96px;
+    }
+  }
 }
 
 [lang='ar-DZ'] {
@@ -70,23 +85,8 @@ body {
 /* Main */
 main,
 footer {
-  --translateY: 48px;
-  transform: translateY(var(--translateY));
+  transform: translateY(var(--h-header));
   transition: transform $transition;
-
-  @media (min-width: $xs) {
-    --translateY: 52px;
-  }
-
-  @media (min-width: $sm) {
-    --translateY: 72px;
-  }
-
-  @media (min-width: $md) {
-    html:not(.scrolled) & {
-      --translateY: 96px;
-    }
-  }
 }
 
 /* Container */
@@ -104,7 +104,7 @@ footer {
     grid-auto-rows: 1fr auto;
     padding-block: 0;
     transition: min-height $transition;
-    min-height: calc(100vh - var(--translateY));
+    min-height: calc(100vh - var(--h-header));
   }
 
   &.error {
@@ -124,10 +124,6 @@ footer {
 /* Intro */
 .intro {
   @include grid(12, 1fr);
-
-  &.intro {
-    align-self: center;
-  }
 
   * {
     grid-column: 1 / 13;
