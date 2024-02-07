@@ -87,8 +87,6 @@ function toggleDark() {
 header {
   position: fixed;
   width: 100%;
-  top: 0;
-  left: 0;
   justify-content: space-between;
   background-color: var(--bg);
   padding: 12px;
@@ -103,7 +101,7 @@ header {
   .scrolled & {
     box-shadow: 0 0 10px rgba(var(--shadow));
 
-    @include media($md, 24px, 36px);
+    @include media($md, 24px 36px);
   }
 }
 
