@@ -158,20 +158,14 @@ header {
   position: fixed;
   width: 100%;
   height: 100%;
-  padding: 32px;
   opacity: 0;
-  background-color: var(--bg);
   visibility: hidden;
-  overflow-y: scroll;
   transition: opacity $transition, background-color $transition;
 
   .menu-open & {
-    opacity: 1;
+    background-color: var(--light);
     visibility: visible;
-  }
-
-  @media (min-width: $xs) {
-    padding: 48px;
+    overflow-y: auto;
   }
 
   @media (min-width: $md) {
