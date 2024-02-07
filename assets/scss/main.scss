@@ -68,12 +68,21 @@ body {
 /* Main */
 main,
 footer {
-  transform: translateY(72px);
+  --translateY: 48px;
+  transform: translateY(var(--translateY));
   transition: transform $transition;
 
-  @media (min-width: $lg) {
+  @media (min-width: $xs) {
+    --translateY: 52px;
+  }
+
+  @media (min-width: $sm) {
+    --translateY: 72px;
+  }
+
+  @media (min-width: $md) {
     html:not(.scrolled) & {
-      transform: translateY(96px);
+      --translateY: 96px;
     }
   }
 }
@@ -93,13 +102,7 @@ footer {
     grid-auto-rows: 1fr auto;
     padding-block: 0;
     transition: min-height $transition;
-    min-height: calc(100vh - 72px);
-
-    @media (min-width: $lg) {
-      html:not(.scrolled) & {
-        min-height: calc(100vh - 96px);
-      }
-    }
+    min-height: calc(100vh - var(--translateY));
   }
 
   &.error {
@@ -341,12 +344,21 @@ a {
   transition: color $transition;
 
   .hero & {
+    --mb: 12px;
     display: grid;
     justify-self: center;
-    margin-bottom: 24px;
+    margin-bottom: var(--mb);
 
-    @media (min-width: $lg) {
-      margin-bottom: 36px;
+    @media (min-width: $xs) {
+      --mb: 16px;
+    }
+
+    @media (min-width: $sm) {
+      --mb: 24px;
+    }
+
+    @media (min-width: $md) {
+      --mb: 36px;
     }
   }
 }
