@@ -125,6 +125,8 @@ footer {
 .intro {
   @include grid(12, 1fr);
 
+  align-content: center;
+
   * {
     grid-column: 1 / 13;
 
