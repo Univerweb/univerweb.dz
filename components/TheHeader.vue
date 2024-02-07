@@ -91,14 +91,14 @@ header {
   left: 0;
   justify-content: space-between;
   background-color: var(--bg);
-  padding: 24px 12px;
+  padding: 12px;
   transition: background-color $transition, padding $transition;
   z-index: 1;
 
   @include grid(2, auto);
-  @include media($xs, 24px, 16px);
-  @include media($sm, 24px, 24px);
-  @include media($lg, 36px, 36px, $template-columns: repeat(3, auto));
+  @include media($xs, 16px);
+  @include media($sm, 24px);
+  @include media($md, 36px, $template-columns: repeat(3, auto));
 
   .scrolled & {
     box-shadow: 0 0 10px rgba(0 0 0 / 10%);
@@ -107,7 +107,7 @@ header {
       box-shadow: 0 0 10px rgba(255 255 255 / 10%);
     }
 
-    @include media($lg, 24px, 36px);
+    @include media($md, 24px, 36px);
   }
 }
 
@@ -181,8 +181,10 @@ header {
     padding: 48px;
   }
 
-  @media (min-width: $lg) {
+  @media (min-width: $md) {
     position: relative;
+    display: grid;
+    align-items: center;
     padding: 0;
     opacity: 1;
     visibility: visible;
@@ -196,14 +198,12 @@ header {
   list-style: none;
   margin: 0;
   padding: 0;
+  transition: gap $transition;
 
-  @media (min-width: $lg) {
-    grid-template-columns: repeat(var(--item-total), auto);
-    gap: 48px;
-  }
-
-  @include media($xl, 0, 0, 64px);
-  @include media($xxl, 0, 0, 128px);
+  @include media($md,$gap: 24px, $template-columns: repeat(var(--item-total), auto));
+  @include media($lg, $gap: 48px);
+  @include media($xl, $gap: 64px);
+  @include media($xxl, $gap: 128px);
 
   a {
     position: relative;
@@ -212,8 +212,12 @@ header {
 
     @include font(28);
 
+    @media (min-width: $md) {
+      @include font(14);
+    }
+
     @media (min-width: $lg) {
-      font-size: 1rem;
+      @include font(16);
     }
 
     &::after {
@@ -256,7 +260,7 @@ header {
       align-content: space-between;
       padding: 2px;
 
-      @media (min-width: $lg) {
+      @media (min-width: $md) {
         display: none;
       }
 
