@@ -187,43 +187,48 @@ header {
 
 .menu {
   display: grid;
-  grid-auto-columns: max-content;
   row-gap: 24px;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 10%;
   transition: gap $transition;
 
-  @include media($md,$gap: 24px, $template-columns: repeat(var(--item-total), auto));
+  @include media($md, 0, $gap: 24px, $template-columns: repeat(var(--item-total), auto));
   @include media($lg, $gap: 48px);
   @include media($xl, $gap: 64px);
   @include media($xxl, $gap: 128px);
 
   a {
     position: relative;
-    display: block;
+    display: grid;
+    width: fit-content;
     color: var(--text-primary);
-
-    @include font(28);
+    font-size: 28px;
+    font-weight: 500;
 
     @media (min-width: $md) {
-      @include font(14);
+      font-size: 14px;
     }
 
     @media (min-width: $lg) {
-      @include font(16);
+      font-size: 16px;
     }
 
     &::after {
       content: '';
-      display: block;
       position: absolute;
+      bottom: -2px;
       background-color: $primary;
-      width: 25%;
-      height: 3px;
+      width: 50%;
+      height: 4px;
+      border-radius: 2rem;
       transform: scaleX(0);
       transform-origin: var(--transform-origin);
       transition: transform $transition;
+
+      @media (min-width: $md) {
+        height: 3px;
+      }
     }
 
     &:hover::after,
