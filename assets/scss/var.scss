@@ -31,7 +31,13 @@ $animation: 0.5s forwards;
   grid-template-columns: repeat($number, $value);
 }
 
-@mixin media($breakpoint, $y, $x, $gap: null, $template-columns: null) {
+@mixin media(
+  $breakpoint,
+  $y: null,
+  $x: null,
+  $gap: null,
+  $template-columns: null
+) {
   @media (min-width: $breakpoint) {
     padding: $y $x;
 

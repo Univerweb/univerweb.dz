@@ -197,10 +197,10 @@ useHead({
     padding: 12px;
     padding-bottom: 0 !important;
 
-    @include media($xs, 16px, 16px);
-    @include media($sm, 24px, 24px);
-    @include media($md, 48px, 48px);
-    @include media($lg, 72px, 72px);
+    @include media($xs, 16px);
+    @include media($sm, 24px);
+    @include media($md, 48px);
+    @include media($lg, 72px);
 
     img {
       max-width: $xl;
