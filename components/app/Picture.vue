@@ -68,11 +68,7 @@ picture {
   }
 
   .work & img {
-    box-shadow: 0 0 40px 0 rgba(0 0 0 / 10%);
-
-    .dark-mode & {
-      box-shadow: 0 0 40px 0 rgba(255 255 255 / 10%);
-    }
+    box-shadow: 0 0 40px 0 rgba(var(--shadow));
   }
 }
 </style>

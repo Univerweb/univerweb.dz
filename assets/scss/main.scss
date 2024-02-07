@@ -8,6 +8,7 @@
   --light: #{$light};
   --font-family: 'Outfit', 'Outfit fallback';
   --transform-origin: left;
+  --shadow: 0 0 0 / 10%;
 }
 
 [lang='ar-DZ'] {
@@ -22,6 +23,7 @@
   --primary: #{$secondary};
   --secondary: #{$primary};
   --light: #{$semi-dark};
+  --shadow: 255 255 255 / 10%;
 }
 
 /* Base styles */

@@ -101,11 +101,7 @@ header {
   @include media($md, 36px, $template-columns: repeat(3, auto));
 
   .scrolled & {
-    box-shadow: 0 0 10px rgba(0 0 0 / 10%);
-
-    .dark-mode & {
-      box-shadow: 0 0 10px rgba(255 255 255 / 10%);
-    }
+    box-shadow: 0 0 10px rgba(var(--shadow));
 
     @include media($md, 24px, 36px);
   }
