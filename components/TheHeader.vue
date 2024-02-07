@@ -166,7 +166,7 @@ header {
   overflow-y: scroll;
   transition: opacity $transition, background-color $transition;
 
-  .open-menu & {
+  .menu-open & {
     opacity: 1;
     visibility: visible;
   }
@@ -268,7 +268,7 @@ header {
         animation: collapse-middle $animation;
         transform-origin: left;
 
-        .open-menu & {
+        .menu-open & {
           animation: collapse-show-middle $animation;
         }
       }
@@ -276,7 +276,7 @@ header {
       .top {
         animation: collapse-top $animation;
 
-        .open-menu & {
+        .menu-open & {
           animation: collapse-show-top $animation;
         }
       }
@@ -285,14 +285,14 @@ header {
         animation: collapse-bottom $animation;
         transform-origin: left;
 
-        .open-menu & {
+        .menu-open & {
           animation: collapse-show-bottom $animation;
           transform-origin: center;
         }
       }
     }
 
-    .open-menu &:not(.toggle) {
+    .menu-open &:not(.toggle) {
       z-index: -1;
     }
   }
