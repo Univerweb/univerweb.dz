@@ -29,12 +29,7 @@ export default defineNuxtConfig({
       },
     },
   },
-
-  css: [
-    '@/assets/css/font.css',
-    '@/assets/scss/main.scss',
-    '@/assets/css/keyframes.css',
-  ],
+  css: ['@/assets/scss/main.scss'],
 
   modules: [
     '@nuxt/content',
