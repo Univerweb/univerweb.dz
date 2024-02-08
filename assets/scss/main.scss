@@ -114,22 +114,19 @@ body {
   line-height: 1.5;
 }
 
-/* Page transition */
-.page-enter-active,
-.page-leave-active {
-  transition: opacity $transition;
-}
-
-.page-enter-from,
-.page-leave-to {
-  opacity: 0;
-}
-
 /* Main */
 main,
 footer {
   transform: translateY(var(--h-header));
   transition: transform $transition;
+
+  &:is(.page-enter-active, .page-leave-active) {
+    transition-property: opacity;
+  }
+
+  &:is(.page-enter-from, .page-leave-to) {
+    opacity: 0;
+  }
 }
 
 /* Container */
