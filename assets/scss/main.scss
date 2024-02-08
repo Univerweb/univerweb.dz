@@ -251,17 +251,22 @@ footer {
     height: 100%;
     background: linear-gradient(
       0deg,
-      rgba(17 17 17 / 0%) 0%,
-      rgba(17 17 17 / 0%) 60%,
-      rgba(17 17 17 / 60%) 100%
+      rgba(0 0 0 / 0%) 0%,
+      rgba(0 0 0 / 0%) 60%,
+      rgba(0 0 0 / 60%) 100%
     );
     opacity: 1;
     transition: opacity $transition;
   }
 
   .card:hover .overlay {
-    background-color: $text-primary;
-    opacity: 0.6;
+    background: linear-gradient(
+      0deg,
+      rgba(0 0 0 / 100%) 0%,
+      rgba(0 0 0 / 60%) 50%,
+      rgba(0 0 0 / 100%) 100%
+    );
+    opacity: 0.8;
   }
 
   .inner {
