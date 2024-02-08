@@ -54,6 +54,21 @@
   --shadow: 0 0 0 / 10%;
   --h-header: 48px;
 
+  &[lang='ar-DZ'] {
+    --font-family: 'Noto Kufi Arabic', 'Noto Kufi Arabic fallback';
+    --origin: right;
+  }
+
+  &.dark-mode {
+    --bg: #{$dark};
+    --text-primary: #{$white};
+    --text-secondary: #{$white};
+    --primary: #{$secondary};
+    --secondary: #{$primary};
+    --light: #{$semi-dark};
+    --shadow: 255 255 255 / 10%;
+  }
+
   @media (min-width: $xs) {
     --h-header: 52px;
   }
@@ -67,21 +82,6 @@
       --h-header: 96px;
     }
   }
-}
-
-[lang='ar-DZ'] {
-  --font-family: 'Noto Kufi Arabic', 'Noto Kufi Arabic fallback';
-  --origin: right;
-}
-
-.dark-mode {
-  --bg: #{$dark};
-  --text-primary: #{$white};
-  --text-secondary: #{$white};
-  --primary: #{$secondary};
-  --secondary: #{$primary};
-  --light: #{$semi-dark};
-  --shadow: 255 255 255 / 10%;
 }
 
 /* Base styles */
