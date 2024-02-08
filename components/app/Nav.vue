@@ -31,39 +31,23 @@ const { t } = useI18n()
 .post-nav {
   display: grid;
   justify-content: space-between;
-  background-color: $primary;
+  background-color: var(--light);
   transition: background-color $transition;
-
-  .dark-mode & {
-    background-color: var(--bg);
-  }
 
   .next,
   .prev {
     position: relative;
-    color: $secondary;
-    transition: color $transition;
-
-    .dark-mode & {
-      color: $primary;
-    }
-
     padding-inline: 18px 12px;
 
     &:hover {
-      color: $white;
+      color: $primary;
     }
 
     &::before {
       content: attr(data-text);
       position: absolute;
-      color: $secondary;
-      transition: color $transition;
-
-      .dark-mode & {
-        color: $primary;
-      }
-
+      color: var(--text-secondary);
+      transition-property: color $transition;
       inset-block-start: -12px;
       inset-inline-start: 20px;
       font-size: 0.8rem;
