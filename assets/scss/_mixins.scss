@@ -3,10 +3,10 @@
   line-height: calc(($number + 4) / $number);
 }
 
-@mixin font($number, $font-weight: 500) {
-  font-weight: $font-weight;
-
+@mixin font($number, $weight: 500) {
   @include size($number);
+
+  font-weight: $weight;
 }
 
 @mixin grid($number, $value) {
@@ -14,13 +14,7 @@
   grid-template-columns: repeat($number, $value);
 }
 
-@mixin media(
-  $breakpoint,
-  $y: null,
-  $x: null,
-  $gap: null,
-  $template-columns: null
-) {
+@mixin media($breakpoint, $y: null, $x: null, $gap: null, $col: null) {
   @media (min-width: $breakpoint) {
     padding: $y $x;
 
@@ -28,8 +22,8 @@
       gap: $gap;
     }
 
-    @if $template-columns {
-      grid-template-columns: $template-columns;
+    @if $col {
+      grid-template-columns: $col;
     }
   }
 }

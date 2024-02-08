@@ -96,7 +96,7 @@ header {
   @include grid(2, auto);
   @include media($xs, 16px);
   @include media($sm, 24px);
-  @include media($md, 36px, $template-columns: repeat(3, auto));
+  @include media($md, 36px, $col: repeat(3, auto));
 
   .scrolled & {
     box-shadow: 0 0 10px rgba(var(--shadow));
@@ -212,12 +212,7 @@ header {
   transition: gap $transition;
   visibility: hidden;
 
-  @include media(
-    $md,
-    0,
-    $gap: 24px,
-    $template-columns: repeat(var(--item-total), auto)
-  );
+  @include media($md, 0, $gap: 24px, $col: repeat(var(--item-total), auto));
   @include media($lg, $gap: 48px);
   @include media($xl, $gap: 64px);
   @include media($xxl, $gap: 128px);
@@ -273,7 +268,7 @@ header {
       height: 4px;
       border-radius: 2rem;
       transform: scaleX(0);
-      transform-origin: var(--transform-origin);
+      transform-origin: var(--origin);
       transition: transform $transition;
 
       @media (min-width: $md) {
