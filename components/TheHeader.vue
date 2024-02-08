@@ -89,7 +89,8 @@ header {
   width: 100%;
   justify-content: space-between;
   padding: 12px;
-  transition: padding $transition;
+  background-color: var(--bg);
+  transition: background-color $transition, padding $transition;
   z-index: 1;
 
   @include grid(2, auto);
