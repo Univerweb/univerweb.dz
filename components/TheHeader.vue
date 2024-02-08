@@ -45,7 +45,7 @@ function toggleDark() {
     <nav class="nav" :style="{ '--item-total': tm('menu').length }">
       <ul class="menu">
         <li v-for="(item, index) in (tm('menu') as Link[])" :key="index">
-          <NuxtLink :to="localePath(rt(item.path))" active-class="active" @click.enter="closeMenu()">
+          <NuxtLink :to="localePath(rt(item.path))" active-class="active" :style="{ '--item-number': index }" @click.enter="closeMenu()">
             {{ rt(item.label) }}
           </NuxtLink>
         </li>
@@ -88,9 +88,8 @@ header {
   position: fixed;
   width: 100%;
   justify-content: space-between;
-  background-color: var(--bg);
   padding: 12px;
-  transition: background-color $transition, padding $transition;
+  transition: padding $transition;
   z-index: 1;
 
   @include grid(2, auto);
@@ -122,6 +121,18 @@ header {
 .logo {
   overflow: hidden;
   width: 24px;
+  visibility: visible;
+  opacity: 1;
+  transition-property: visibility, opacity;
+
+  .menu-open & {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .menu-closing & {
+    transition-delay: $duration;
+  }
 
   @media (min-width: $xs) {
     width: fit-content;
@@ -156,22 +167,38 @@ header {
 
 .nav {
   position: fixed;
+  inset: 0;
   width: 100%;
-  height: 100%;
-  opacity: 0;
+  height: var(--h-header);
   visibility: hidden;
-  transition: opacity $transition, background-color $transition;
+  opacity: 0;
+  background-color: transparent;
+
+  .menu-open &,
+  .menu-closing & {
+    transition-property: height, visibility, opacity, background-color;
+    transition-duration: $duration;
+  }
 
   .menu-open & {
-    background-color: var(--light);
+    height: 100%;
     visibility: visible;
+    opacity: 1;
+    background-color: var(--light);
     overflow-y: auto;
+    transition-timing-function: cubic-bezier(0.55, 0.09, 0.68, 0.53);
+  }
+
+  .menu-closing & {
+    transition-delay: $duration;
+    transition-timing-function: cubic-bezier(0.46, 0.03, 0.52, 0.96);
   }
 
   @media (min-width: $md) {
     position: relative;
-    opacity: 1;
+    height: auto;
     visibility: visible;
+    opacity: 1;
   }
 }
 
@@ -182,8 +209,14 @@ header {
   margin: 0;
   padding: 10%;
   transition: gap $transition;
+  visibility: hidden;
 
-  @include media($md, 0, $gap: 24px, $template-columns: repeat(var(--item-total), auto));
+  @include media(
+    $md,
+    0,
+    $gap: 24px,
+    $template-columns: repeat(var(--item-total), auto)
+  );
   @include media($lg, $gap: 48px);
   @include media($xl, $gap: 64px);
   @include media($xxl, $gap: 128px);
@@ -195,9 +228,35 @@ header {
     color: var(--text-primary);
     font-size: 28px;
     font-weight: 500;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-8px);
+
+    .menu-open &,
+    .menu-closing & {
+      transition-property: visibility, opacity, transform;
+    }
+
+    .menu-open & {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: calc($duration + var(--item-number) * 20ms);
+      transition-timing-function: cubic-bezier(0.55, 0.09, 0.68, 0.53);
+    }
+
+    .menu-closing & {
+      transition-delay: calc(
+        -20ms + 20ms * calc(var(--item-total) - var(--item-number))
+      );
+      transition-timing-function: cubic-bezier(0.46, 0.03, 0.52, 0.96);
+    }
 
     @media (min-width: $md) {
       font-size: 14px;
+      visibility: visible;
+      opacity: 1;
+      transform: none;
     }
 
     @media (min-width: $lg) {
@@ -207,7 +266,7 @@ header {
     &::after {
       content: '';
       position: absolute;
-      bottom: -2px;
+      bottom: -4px;
       background-color: $primary;
       width: 50%;
       height: 4px;
@@ -221,7 +280,6 @@ header {
       }
     }
 
-    &:hover::after,
     &.active::after {
       transform: scaleX(1);
     }
@@ -243,6 +301,21 @@ header {
     margin: 0;
     padding: 0;
     outline: none;
+
+    &:not(.toggle) {
+      visibility: visible;
+      opacity: 1;
+      transition-property: visibility, opacity;
+
+      .menu-open & {
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      .menu-closing & {
+        transition-delay: $duration;
+      }
+    }
 
     &.toggle {
       display: grid;
@@ -286,15 +359,12 @@ header {
         }
       }
     }
-
-    .menu-open &:not(.toggle) {
-      z-index: -1;
-    }
   }
 
   .color-scale-enter-active,
   .color-scale-leave-active {
-    transition: transform 150ms linear, opacity 150ms linear;
+    transition-property: transform, opacity;
+    transition-duration: calc($duration / 2);
   }
 
   .color-scale-enter-from,

@@ -9,6 +9,11 @@ export default function useMenu() {
   function toggleMenu() {
     menuOpen.value = !menuOpen.value
     document.documentElement.classList.toggle('menu-open', menuOpen.value)
+    document.documentElement.classList.toggle('menu-closing', !menuOpen.value)
+
+    setTimeout(() => {
+      document.documentElement.classList.remove('menu-closing')
+    }, 480)
   }
 
   function closeMenuOnResize() {
