@@ -16,10 +16,8 @@ const currentYear = ref(new Date().getFullYear())
   <footer>
     <div>
       <address class="address" title="Adresse postale">
-        <strong>{{ t('name') }}</strong>
-        <br>
-        {{ t('streetAddress') }}
-        <br>
+        <strong>{{ t('name') }}</strong><br>
+        {{ t('streetAddress') }}<br>
         <span dir="ltr">16 029</span> {{ t('addressLocality') }}
       </address>
 
@@ -58,7 +56,9 @@ const currentYear = ref(new Date().getFullYear())
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" role="img">
               <path :d="social.path" />
             </svg>
-            <span class="visually-hidden">{{ t('join') }} {{ t(`socialsName.${value}`) }}</span>
+            <span class="visually-hidden">
+              {{ t('join') }} {{ t(`socialsName.${value}`) }}
+            </span>
           </a>
         </li>
       </ul>
@@ -92,13 +92,13 @@ footer {
   }
 
   .socials {
-    @include grid(4, auto);
-
-    justify-content: space-between;
     margin: 12px 0 0;
     padding: 0;
     list-style: none;
     max-width: 200px;
+    justify-content: space-between;
+
+    @include grid(4, auto);
 
     @media (min-width: $md) {
       max-width: 280px;
