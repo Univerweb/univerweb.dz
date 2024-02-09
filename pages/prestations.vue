@@ -74,7 +74,6 @@ useHead({ script: [breadcrumb] })
     color: var(--text-secondary);
     font-weight: 500;
     transition: color $transition;
-    margin: 0;
   }
 
   @media (min-width: $md) {
