@@ -44,11 +44,11 @@
 /* Variables */
 :root {
   --bg: #{$white};
-  --text-primary: #{$text-primary};
-  --text-secondary: #{$text-secondary};
+  --text-primary: #111;
+  --text-secondary: #666;
   --primary: #{$primary};
   --secondary: #{$secondary};
-  --light: #{$light};
+  --light: #f3f4f6;
   --font-family: 'Outfit', 'Outfit fallback';
   --origin: left;
   --shadow: 0 0 0 / 10%;
@@ -60,12 +60,12 @@
   }
 
   &.dark-mode {
-    --bg: #{$dark};
+    --bg: #111827;
     --text-primary: #{$white};
     --text-secondary: #{$white};
     --primary: #{$secondary};
     --secondary: #{$primary};
-    --light: #{$semi-dark};
+    --light: #1f2937;
     --shadow: 255 255 255 / 10%;
   }
 
