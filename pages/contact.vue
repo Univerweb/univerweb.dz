@@ -69,7 +69,7 @@ useHead({ script: [breadcrumb] })
           <h3 class="h6">
             {{ t('contact.manager') }}
           </h3>
-          <a :href="`mailto:${config.public.managerEmail}`" class="link outfit move-arrow">
+          <a :href="`mailto:${config.public.managerEmail}`" class="link outfit move">
             {{ config.public.managerEmail }}
           </a>
         </div>
@@ -77,7 +77,7 @@ useHead({ script: [breadcrumb] })
           <h3 class="h6">
             {{ t('contact.support') }}
           </h3>
-          <a :href="`mailto:${config.public.supportEmail}`" class="link outfit move-arrow">
+          <a :href="`mailto:${config.public.supportEmail}`" class="link outfit move">
             {{ config.public.supportEmail }}
           </a>
         </div>

@@ -468,7 +468,7 @@ strong {
   font-weight: 600;
 }
 
-.move-arrow {
+.move {
   position: relative;
   display: inline-block;
 
@@ -490,10 +490,10 @@ strong {
   }
 
   &:hover::before {
-    animation: move-arrow $animation;
+    animation: move $animation;
 
     [dir='rtl'] & {
-      animation: move-arrow-ar $animation;
+      animation-name: move-ar;
     }
   }
 }
@@ -536,7 +536,7 @@ strong {
 }
 
 /* Keyframes */
-@keyframes collapse-middle {
+@keyframes toggle-middle {
   0% {
     transform: scaleX(0);
   }
@@ -550,7 +550,7 @@ strong {
   }
 }
 
-@keyframes collapse-show-middle {
+@keyframes toggle-middle-scale {
   0% {
     transform: scaleX(0.5);
   }
@@ -564,7 +564,7 @@ strong {
   }
 }
 
-@keyframes collapse-top {
+@keyframes toggle-top {
   0% {
     transform: translateY(7px) scaleX(1) rotate(-45deg);
   }
@@ -582,7 +582,7 @@ strong {
   }
 }
 
-@keyframes collapse-show-top {
+@keyframes toggle-top-scale {
   0% {
     transform: translateY(0) scaleX(1) rotate(0);
   }
@@ -600,7 +600,7 @@ strong {
   }
 }
 
-@keyframes collapse-bottom {
+@keyframes toggle-bottom {
   0% {
     transform: translateY(-7px) scaleX(1) rotate(45deg);
   }
@@ -622,7 +622,7 @@ strong {
   }
 }
 
-@keyframes collapse-show-bottom {
+@keyframes toggle-bottom-scale {
   0% {
     transform: translateY(0) scaleX(0.75) rotate(0);
   }
@@ -644,7 +644,7 @@ strong {
   }
 }
 
-@keyframes move-arrow {
+@keyframes move {
   0% {
     transform: scaleX(0.05);
     transform-origin: left;
@@ -681,7 +681,7 @@ strong {
   }
 }
 
-@keyframes move-arrow-ar {
+@keyframes move-ar {
   0% {
     transform: scaleX(0.05);
     transform-origin: right;

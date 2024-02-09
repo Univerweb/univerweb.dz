@@ -329,28 +329,28 @@ header {
       }
 
       .middle {
-        animation: collapse-middle $animation;
+        animation: toggle-middle $animation;
         transform-origin: left;
 
         .menu-open & {
-          animation: collapse-show-middle $animation;
+          animation: toggle-middle-scale $animation;
         }
       }
 
       .top {
-        animation: collapse-top $animation;
+        animation: toggle-top $animation;
 
         .menu-open & {
-          animation: collapse-show-top $animation;
+          animation: toggle-top-scale $animation;
         }
       }
 
       .bottom {
-        animation: collapse-bottom $animation;
+        animation: toggle-bottom $animation;
         transform-origin: left;
 
         .menu-open & {
-          animation: collapse-show-bottom $animation;
+          animation: toggle-bottom-scale $animation;
           transform-origin: center;
         }
       }
