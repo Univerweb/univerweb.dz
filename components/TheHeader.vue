@@ -347,11 +347,9 @@ header {
 
       .bottom {
         animation: toggle-bottom $animation;
-        transform-origin: var(--origin);
 
         .menu-open & {
           animation: toggle-bottom-scale $animation;
-          transform-origin: center;
         }
       }
     }

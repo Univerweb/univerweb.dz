@@ -619,16 +619,19 @@ strong {
 
   100% {
     transform: translateY(0) scaleX(0.75) rotate(0);
+    transform-origin: var(--origin);
   }
 }
 
 @keyframes toggle-bottom-scale {
   0% {
     transform: translateY(0) scaleX(0.75) rotate(0);
+    transform-origin: var(--origin);
   }
 
   25% {
     transform: translateY(0) scaleX(0.75) rotate(0);
+    transform-origin: var(--origin);
   }
 
   50% {
