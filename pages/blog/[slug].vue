@@ -233,8 +233,6 @@ useHead({
       color: var(--text-secondary);
       transition: color $transition;
       margin-block: 0 12px;
-      padding: 0;
-      list-style: none;
 
       &:is(ol) {
         counter-reset: ol;

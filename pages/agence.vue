@@ -54,16 +54,13 @@ useHead({ script: [breadcrumb] })
 
 <style lang="scss">
 .method {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  counter-reset: counterName;
+  counter-reset: method;
 
   li::before {
     @include font(56, 900);
 
-    counter-increment: counterName;
-    content: counters(counterName, '-');
+    counter-increment: method;
+    content: counters(method, '-');
     color: $primary;
   }
 }

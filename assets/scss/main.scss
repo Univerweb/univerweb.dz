@@ -367,6 +367,28 @@ p {
   }
 }
 
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tags li {
+  display: inline-block;
+  margin-inline-end: 12px;
+
+  &:last-child {
+    margin-inline-end: 0;
+  }
+
+  &::before {
+    content: '#';
+    color: $primary;
+    margin-inline-end: 3px;
+  }
+}
+
 .lead {
   @include font(20);
 
@@ -494,27 +516,6 @@ strong {
 
     [dir='rtl'] & {
       animation-name: move-ar;
-    }
-  }
-}
-
-.tags {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-
-  * {
-    display: inline-block;
-    margin-inline-end: 12px;
-
-    &:last-child {
-      margin-inline-end: 0;
-    }
-
-    &::before {
-      content: '#';
-      color: $primary;
-      margin-inline-end: 3px;
     }
   }
 }

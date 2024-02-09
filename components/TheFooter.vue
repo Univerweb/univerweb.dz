@@ -92,9 +92,7 @@ footer {
   }
 
   .socials {
-    margin: 12px 0 0;
-    padding: 0;
-    list-style: none;
+    margin-top: 12px;
     max-width: 200px;
     justify-content: space-between;
 

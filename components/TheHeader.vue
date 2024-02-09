@@ -206,8 +206,6 @@ header {
 .menu {
   display: grid;
   row-gap: 24px;
-  list-style: none;
-  margin: 0;
   padding: 10%;
   transition: gap $transition;
   visibility: hidden;
