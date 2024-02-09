@@ -25,12 +25,12 @@ const localePath = useLocalePath()
 <style lang="scss">
 .request {
   background-color: var(--secondary);
-  color: $white;
+  color: var(--white);
   transition: background-color $transition, color $transition;
   text-align: center;
 
   a {
-    color: $white;
+    color: var(--white);
     margin: 0;
   }
 }

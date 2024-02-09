@@ -43,11 +43,12 @@
 
 /* Variables */
 :root {
-  --bg: #{$white};
+  --bg: var(--white);
   --text-primary: #111;
   --text-secondary: #666;
   --primary: #{$primary};
   --secondary: #{$secondary};
+  --white: #fff;
   --light: #f3f4f6;
   --font-family: 'Outfit', 'Outfit fallback';
   --origin: left;
@@ -61,8 +62,8 @@
 
   &.dark-mode {
     --bg: #111827;
-    --text-primary: #{$white};
-    --text-secondary: #{$white};
+    --text-primary: var(--white);
+    --text-secondary: var(--white);
     --primary: #{$secondary};
     --secondary: #{$primary};
     --light: #1f2937;
@@ -271,7 +272,7 @@ footer {
     grid-auto-rows: auto 1fr;
     position: absolute;
     height: 100%;
-    color: $white;
+    color: var(--white);
     padding: 24px;
 
     @include media($md, 24px, 24px);
@@ -291,7 +292,7 @@ footer {
   }
 
   p {
-    color: $white;
+    color: var(--white);
     align-self: end;
     transform: translateY(calc(100% + 48px));
     transition: transform $transition;
@@ -495,7 +496,7 @@ strong {
   display: inline-block;
 
   &:hover {
-    color: $white;
+    color: var(--white);
   }
 
   &::before {

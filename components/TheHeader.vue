@@ -161,7 +161,7 @@ header {
     transition: fill $transition;
 
     .dark-mode & {
-      fill: $white;
+      fill: var(--white);
     }
   }
 }
