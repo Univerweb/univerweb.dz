@@ -99,7 +99,7 @@ useHead({ script: [breadcrumb] })
   color: $white;
 
   a {
-    color: $white;
+    color: currentColor;
   }
 }
 </style>
