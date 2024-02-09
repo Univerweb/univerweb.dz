@@ -330,7 +330,7 @@ header {
 
       .middle {
         animation: toggle-middle $animation;
-        transform-origin: left;
+        transform-origin: var(--origin);
 
         .menu-open & {
           animation: toggle-middle-scale $animation;
@@ -347,7 +347,7 @@ header {
 
       .bottom {
         animation: toggle-bottom $animation;
-        transform-origin: left;
+        transform-origin: var(--origin);
 
         .menu-open & {
           animation: toggle-bottom-scale $animation;
