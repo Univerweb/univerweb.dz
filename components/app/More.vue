@@ -29,7 +29,7 @@ const localePath = useLocalePath()
   @include media($md, 16px 0 0);
   @include media($lg, 24px 0 0);
 
-  [lang='ar-DZ'] & svg {
+  [dir='rtl'] & svg {
     transform: rotate(180deg);
   }
 }

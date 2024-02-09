@@ -492,7 +492,7 @@ strong {
   &:hover::before {
     animation: move-arrow $animation;
 
-    [lang='ar-DZ'] & {
+    [dir='rtl'] & {
       animation: move-arrow-ar $animation;
     }
   }

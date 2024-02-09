@@ -70,7 +70,7 @@ const { t } = useI18n()
     position: absolute;
     top: 45%;
 
-    [lang='ar-DZ'] & {
+    [dir='rtl'] & {
       transform: rotate(180deg);
     }
   }

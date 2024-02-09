@@ -33,7 +33,7 @@ const { t } = useI18n()
   svg {
     margin-inline-end: 6px;
 
-    [lang='ar-DZ'] & {
+    [dir='rtl'] & {
       transform: rotate(-180deg);
     }
   }

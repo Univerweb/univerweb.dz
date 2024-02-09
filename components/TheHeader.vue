@@ -382,7 +382,7 @@ header {
       visibility: visible;
       animation: lang 2s ease-in-out;
 
-      [lang='ar-DZ'] & {
+      [dir='rtl'] & {
         animation-direction: reverse;
       }
     }
