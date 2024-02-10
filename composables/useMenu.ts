@@ -29,5 +29,8 @@ export default function useMenu() {
     window.removeEventListener('resize', closeMenuOnResize)
   })
 
-  return { closeMenu, toggleMenu }
+  return {
+    closeMenu,
+    toggleMenu,
+  }
 }
