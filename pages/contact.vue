@@ -42,8 +42,12 @@ useHead({ script: [breadcrumb] })
         <h1 class="h2">
           {{ t('contact.title') }}
         </h1>
-        <FooterAbout />
-        <FooterLink />
+        <p class="lead">
+          {{ t('contact.about') }}
+        </p>
+        <a :href="`mailto:${config.public.baseEmail}`" class="link outfit move">
+          {{ config.public.baseEmail }}
+        </a>
       </div>
     </div>
 
