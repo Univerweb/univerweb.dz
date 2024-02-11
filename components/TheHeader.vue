@@ -330,6 +330,98 @@ header {
         border-radius: 2em;
       }
 
+      @keyframes toggle-middle {
+        0%,
+        75% {
+          transform: scaleX(0);
+        }
+
+        100% {
+          transform: scaleX(0.5);
+        }
+      }
+
+      @keyframes toggle-middle-scale {
+        0% {
+          transform: scaleX(0.5);
+        }
+
+        25%,
+        100% {
+          transform: scaleX(0);
+        }
+      }
+
+      @keyframes toggle-top {
+        0% {
+          transform: translateY(7px) scaleX(1) rotate(-45deg);
+        }
+
+        25% {
+          transform: translateY(7px) scaleX(1) rotate(0);
+        }
+
+        50%,
+        100% {
+          transform: translateY(0) scaleX(1) rotate(0);
+        }
+      }
+
+      @keyframes toggle-top-scale {
+        0%,
+        50% {
+          transform: translateY(0) scaleX(1) rotate(0);
+        }
+
+        75% {
+          transform: translateY(7px) scaleX(1) rotate(0);
+        }
+
+        100% {
+          transform: translateY(7px) scaleX(1) rotate(-45deg);
+        }
+      }
+
+      @keyframes toggle-bottom {
+        0% {
+          transform: translateY(-7px) scaleX(1) rotate(45deg);
+        }
+
+        25% {
+          transform: translateY(-7px) scaleX(1) rotate(0);
+        }
+
+        50% {
+          transform: translateY(0) scaleX(1) rotate(0);
+        }
+
+        75%,
+        100% {
+          transform: translateY(0) scaleX(0.75) rotate(0);
+          transform-origin: var(--origin);
+        }
+      }
+
+      @keyframes toggle-bottom-scale {
+        0%,
+        25% {
+          transform: translateY(0) scaleX(0.75) rotate(0);
+          transform-origin: var(--origin);
+        }
+
+        50% {
+          transform: translateY(0) scaleX(1) rotate(0);
+        }
+
+        75% {
+          transform: translateY(-7px) scaleX(1) rotate(0);
+        }
+
+        100% {
+          transform: translateY(-7px) scaleX(1) rotate(45deg);
+        }
+      }
+
       .middle {
         animation: toggle-middle var(--animation);
         transform-origin: var(--origin);
@@ -377,6 +469,24 @@ header {
     line-height: 24px;
     opacity: 0;
     visibility: hidden;
+
+    @keyframes lang {
+      0% {
+        opacity: 0;
+        transform: translateX(20%);
+      }
+
+      30%,
+      70% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateX(-20%);
+      }
+    }
 
     &.active {
       visibility: visible;

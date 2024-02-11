@@ -521,6 +521,80 @@ strong {
     transition: transform var(--transition);
   }
 
+  @keyframes move {
+    0% {
+      transform: scaleX(0.05);
+      transform-origin: left;
+    }
+
+    25% {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    26% {
+      transform: scaleX(1);
+      transform-origin: right;
+    }
+
+    60% {
+      transform: scaleX(0.05);
+      transform-origin: right;
+    }
+
+    80% {
+      transform: scaleX(0);
+      transform-origin: right;
+    }
+
+    81% {
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+
+    100% {
+      transform: scaleX(0.05);
+      transform-origin: left;
+    }
+  }
+
+  @keyframes move-ar {
+    0% {
+      transform: scaleX(0.05);
+      transform-origin: right;
+    }
+
+    25% {
+      transform: scaleX(1);
+      transform-origin: right;
+    }
+
+    26% {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    60% {
+      transform: scaleX(0.05);
+      transform-origin: left;
+    }
+
+    80% {
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+
+    81% {
+      transform: scaleX(0);
+      transform-origin: right;
+    }
+
+    100% {
+      transform: scaleX(0.05);
+      transform-origin: right;
+    }
+  }
+
   &:hover::before {
     animation: move var(--animation);
 
@@ -544,189 +618,4 @@ strong {
 ::selection {
   color: var(--secondary);
   background-color: var(--primary);
-}
-
-/* Keyframes */
-@keyframes toggle-middle {
-  0%,
-  75% {
-    transform: scaleX(0);
-  }
-
-  100% {
-    transform: scaleX(0.5);
-  }
-}
-
-@keyframes toggle-middle-scale {
-  0% {
-    transform: scaleX(0.5);
-  }
-
-  25%,
-  100% {
-    transform: scaleX(0);
-  }
-}
-
-@keyframes toggle-top {
-  0% {
-    transform: translateY(7px) scaleX(1) rotate(-45deg);
-  }
-
-  25% {
-    transform: translateY(7px) scaleX(1) rotate(0);
-  }
-
-  50%,
-  100% {
-    transform: translateY(0) scaleX(1) rotate(0);
-  }
-}
-
-@keyframes toggle-top-scale {
-  0%,
-  50% {
-    transform: translateY(0) scaleX(1) rotate(0);
-  }
-
-  75% {
-    transform: translateY(7px) scaleX(1) rotate(0);
-  }
-
-  100% {
-    transform: translateY(7px) scaleX(1) rotate(-45deg);
-  }
-}
-
-@keyframes toggle-bottom {
-  0% {
-    transform: translateY(-7px) scaleX(1) rotate(45deg);
-  }
-
-  25% {
-    transform: translateY(-7px) scaleX(1) rotate(0);
-  }
-
-  50% {
-    transform: translateY(0) scaleX(1) rotate(0);
-  }
-
-  75%,
-  100% {
-    transform: translateY(0) scaleX(0.75) rotate(0);
-    transform-origin: var(--origin);
-  }
-}
-
-@keyframes toggle-bottom-scale {
-  0%,
-  25% {
-    transform: translateY(0) scaleX(0.75) rotate(0);
-    transform-origin: var(--origin);
-  }
-
-  50% {
-    transform: translateY(0) scaleX(1) rotate(0);
-  }
-
-  75% {
-    transform: translateY(-7px) scaleX(1) rotate(0);
-  }
-
-  100% {
-    transform: translateY(-7px) scaleX(1) rotate(45deg);
-  }
-}
-
-@keyframes move {
-  0% {
-    transform: scaleX(0.05);
-    transform-origin: left;
-  }
-
-  25% {
-    transform: scaleX(1);
-    transform-origin: left;
-  }
-
-  26% {
-    transform: scaleX(1);
-    transform-origin: right;
-  }
-
-  60% {
-    transform: scaleX(0.05);
-    transform-origin: right;
-  }
-
-  80% {
-    transform: scaleX(0);
-    transform-origin: right;
-  }
-
-  81% {
-    transform: scaleX(0);
-    transform-origin: left;
-  }
-
-  100% {
-    transform: scaleX(0.05);
-    transform-origin: left;
-  }
-}
-
-@keyframes move-ar {
-  0% {
-    transform: scaleX(0.05);
-    transform-origin: right;
-  }
-
-  25% {
-    transform: scaleX(1);
-    transform-origin: right;
-  }
-
-  26% {
-    transform: scaleX(1);
-    transform-origin: left;
-  }
-
-  60% {
-    transform: scaleX(0.05);
-    transform-origin: left;
-  }
-
-  80% {
-    transform: scaleX(0);
-    transform-origin: left;
-  }
-
-  81% {
-    transform: scaleX(0);
-    transform-origin: right;
-  }
-
-  100% {
-    transform: scaleX(0.05);
-    transform-origin: right;
-  }
-}
-
-@keyframes lang {
-  0% {
-    opacity: 0;
-    transform: translateX(20%);
-  }
-
-  30%,
-  70% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  100% {
-    opacity: 0;
-    transform: translateX(-20%);
-  }
 }
