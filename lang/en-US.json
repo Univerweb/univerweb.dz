@@ -23,7 +23,7 @@
   "emailLabel": "E-mail",
   "join": "Join us on",
   "socialsName": ["X", "Facebook", "LinkedIn", "GitHub"],
-  "colorMode": {
+  "theme": {
     "dark": "Switch to light mode",
     "light": "Switch to dark mode"
   },

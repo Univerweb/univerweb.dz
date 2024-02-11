@@ -63,7 +63,7 @@ function toggleDark() {
       </NuxtLink>
 
       <button type="button" :aria-label="t(`colorMode.${color.preference}`)" @click="toggleDark">
-        <Transition name="color-mode" mode="out-in">
+        <Transition name="theme" mode="out-in">
           <svg v-if="$colorMode.preference === 'light'" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" viewBox="0 0 24 24" role="img">
             <circle cx="12" cy="12" r="5" />
             <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
@@ -353,14 +353,14 @@ header {
     }
   }
 
-  .color-mode-enter-active,
-  .color-mode-leave-active {
+  .theme-enter-active,
+  .theme-leave-active {
     transition-property: transform, opacity;
     transition-duration: calc($duration / 2);
   }
 
-  .color-mode-enter-from,
-  .color-mode-leave-to {
+  .theme-enter-from,
+  .theme-leave-to {
     transform: scaleY(0);
     opacity: 0;
   }
