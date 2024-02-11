@@ -110,11 +110,12 @@ header {
 
 .skip {
   position: absolute;
-  top: 0;
-  background-color: var(--secondary);
-  color: var(--primary);
-  padding: 0 4px;
-  transform: translateY(-150%);
+  inset-block-start: 4px;
+  inset-inline-start: 4px;
+  background-color: $primary;
+  color: $secondary;
+  padding: 4px 8px;
+  transform: translateY(calc(-100% - 8px));
   transition: transform $transition;
 
   &:focus {
