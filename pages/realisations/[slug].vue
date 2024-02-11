@@ -253,11 +253,11 @@ useHead({
         width: 6px;
 
         &-thumb {
-          background-color: var(--secondary);
+          background-color: $primary;
         }
 
         &-track {
-          background-color: var(--primary);
+          background-color: var(--text-secondary);
         }
       }
 
