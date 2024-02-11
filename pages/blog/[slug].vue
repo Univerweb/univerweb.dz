@@ -132,11 +132,11 @@ useHead({
   .meta {
     font-weight: 500;
     color: var(--text-secondary);
-    transition: color $transition;
+    transition: color var(--transition);
 
     .author {
       color: var(--text-primary);
-      transition: color $transition;
+      transition: color var(--transition);
     }
 
     @media (min-width: $sm) {
@@ -209,7 +209,7 @@ useHead({
 
     p {
       color: var(--text-secondary);
-      transition: color $transition;
+      transition: color var(--transition);
 
       &.lead {
         color: var(--text-primary);
@@ -222,14 +222,14 @@ useHead({
       text-decoration: underline;
 
       &:hover {
-        color: $primary;
+        color: var(--primary);
       }
     }
 
     ul,
     ol {
       color: var(--text-secondary);
-      transition: color $transition;
+      transition: color var(--transition);
       margin-block: 0 12px;
 
       &:is(ol) {

@@ -32,7 +32,7 @@ const { t } = useI18n()
   display: grid;
   justify-content: space-between;
   background-color: var(--light);
-  transition: background-color $transition;
+  transition: background-color var(--transition);
 
   .next,
   .prev {
@@ -40,14 +40,14 @@ const { t } = useI18n()
     padding-inline: 18px 12px;
 
     &:hover {
-      color: $primary;
+      color: var(--primary);
     }
 
     &::before {
       content: attr(data-text);
       position: absolute;
       color: var(--text-secondary);
-      transition-property: color $transition;
+      transition-property: color var(--transition);
       inset-block-start: -12px;
       inset-inline-start: 20px;
       font-size: 0.8rem;

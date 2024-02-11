@@ -27,7 +27,7 @@ const { t } = useI18n()
   margin-bottom: 12px;
 
   &:hover {
-    color: $primary;
+    color: var(--primary);
   }
 
   svg {

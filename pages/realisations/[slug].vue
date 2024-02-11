@@ -253,7 +253,7 @@ useHead({
         width: 6px;
 
         &-thumb {
-          background-color: $primary;
+          background-color: var(--primary);
         }
 
         &-track {

@@ -43,7 +43,7 @@ function pictureLoaded() {
 picture {
   display: grid;
   background-color: var(--light);
-  transition: background-color $transition;
+  transition: background-color var(--transition);
 
   &.thumbnail {
     aspect-ratio: 49 / 52;
@@ -53,7 +53,7 @@ picture {
     width: 100%;
     height: auto;
     opacity: 0;
-    transition: opacity $transition;
+    transition: opacity var(--transition);
 
     &.loaded {
       opacity: 1;

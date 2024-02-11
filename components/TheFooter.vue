@@ -84,7 +84,7 @@ footer {
   @include media($lg, 144px, 96px, $col: repeat(3, auto));
 
   a:hover {
-    color: $primary;
+    color: var(--primary);
   }
 
   address {

@@ -61,7 +61,7 @@ useHead({ script: [breadcrumb] })
 
     counter-increment: method;
     content: counters(method, '-');
-    color: $primary;
+    color: var(--primary);
   }
 }
 </style>

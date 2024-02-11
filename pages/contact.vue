@@ -95,7 +95,7 @@ useHead({ script: [breadcrumb] })
   width: 100%;
   height: 720px;
   background-color: var(--light);
-  transition: background-color $transition;
+  transition: background-color var(--transition);
 }
 
 .other {

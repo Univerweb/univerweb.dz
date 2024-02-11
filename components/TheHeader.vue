@@ -93,7 +93,7 @@ header {
   justify-content: space-between;
   padding: 12px;
   background-color: var(--bg);
-  transition: background-color $transition, padding $transition;
+  transition: background-color var(--transition), padding var(--transition);
   z-index: 1;
 
   @include grid(2, auto);
@@ -112,11 +112,11 @@ header {
   position: absolute;
   inset-block-start: 4px;
   inset-inline-start: 4px;
-  background-color: $primary;
-  color: $secondary;
+  background-color: var(--primary);
+  color: var(--secondary);
   padding: 4px 8px;
   transform: translateY(calc(-100% - 8px));
-  transition: transform $transition;
+  transition: transform var(--transition);
 
   &:focus {
     transform: translateY(0);
@@ -136,7 +136,7 @@ header {
   }
 
   .menu-closing & {
-    transition-delay: $duration;
+    transition-delay: var(--duration);
   }
 
   @media (min-width: $xs) {
@@ -157,12 +157,12 @@ header {
   }
 
   path:nth-child(1) {
-    fill: $primary;
+    fill: var(--primary);
   }
 
   path:nth-child(2) {
-    fill: $secondary;
-    transition: fill $transition;
+    fill: var(--secondary);
+    transition: fill var(--transition);
 
     .theme-dark & {
       fill: var(--white);
@@ -182,7 +182,7 @@ header {
   .menu-open &,
   .menu-closing & {
     transition-property: height, visibility, opacity, background-color;
-    transition-duration: $duration;
+    transition-duration: var(--duration);
   }
 
   .menu-open & {
@@ -195,7 +195,7 @@ header {
   }
 
   .menu-closing & {
-    transition-delay: $duration;
+    transition-delay: var(--duration);
     transition-timing-function: cubic-bezier(0.46, 0.03, 0.52, 0.96);
   }
 
@@ -211,7 +211,7 @@ header {
   display: grid;
   row-gap: 24px;
   padding: 10%;
-  transition: gap $transition;
+  transition: gap var(--transition);
   visibility: hidden;
 
   @include media($md, 0, $gap: 24px, $col: repeat(var(--item-total), auto));
@@ -239,7 +239,7 @@ header {
       visibility: visible;
       opacity: 1;
       transform: translateY(0);
-      transition-delay: calc($duration + var(--item-number) * 20ms);
+      transition-delay: calc(var(--duration) + var(--item-number) * 20ms);
       transition-timing-function: cubic-bezier(0.55, 0.09, 0.68, 0.53);
     }
 
@@ -265,13 +265,13 @@ header {
       content: '';
       position: absolute;
       bottom: -4px;
-      background-color: $primary;
+      background-color: var(--primary);
       width: 50%;
       height: 4px;
       border-radius: 2rem;
       transform: scaleX(0);
       transform-origin: var(--origin);
-      transition: transform $transition;
+      transition: transform var(--transition);
 
       @media (min-width: $md) {
         height: 3px;
@@ -293,7 +293,7 @@ header {
   > * {
     background-color: transparent;
     color: var(--text-primary);
-    transition: color $transition;
+    transition: color var(--transition);
     width: 20px;
     height: 20px;
     margin: 0;
@@ -311,7 +311,7 @@ header {
       }
 
       .menu-closing & {
-        transition-delay: $duration;
+        transition-delay: var(--duration);
       }
     }
 
@@ -331,27 +331,27 @@ header {
       }
 
       .middle {
-        animation: toggle-middle $animation;
+        animation: toggle-middle var(--animation);
         transform-origin: var(--origin);
 
         .menu-open & {
-          animation: toggle-middle-scale $animation;
+          animation: toggle-middle-scale var(--animation);
         }
       }
 
       .top {
-        animation: toggle-top $animation;
+        animation: toggle-top var(--animation);
 
         .menu-open & {
-          animation: toggle-top-scale $animation;
+          animation: toggle-top-scale var(--animation);
         }
       }
 
       .bottom {
-        animation: toggle-bottom $animation;
+        animation: toggle-bottom var(--animation);
 
         .menu-open & {
-          animation: toggle-bottom-scale $animation;
+          animation: toggle-bottom-scale var(--animation);
         }
       }
     }
@@ -360,7 +360,7 @@ header {
   .theme-enter-active,
   .theme-leave-active {
     transition-property: transform, opacity;
-    transition-duration: calc($duration / 2);
+    transition-duration: calc(var(--duration) / 2);
   }
 
   .theme-enter-from,

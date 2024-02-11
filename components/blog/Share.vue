@@ -59,7 +59,7 @@ const { copy, copied } = useClipboard()
   justify-content: space-between;
   padding-block: 24px;
   border-block: 1px solid var(--light);
-  transition: border-color $transition;
+  transition: border-color var(--transition);
   grid-column: 1 / 13;
 
   @media (min-width: $lg) {
@@ -89,8 +89,8 @@ const { copy, copied } = useClipboard()
 
   a:hover,
   button:hover {
-    transition: color $transition;
-    color: $primary;
+    transition: color var(--transition);
+    color: var(--primary);
   }
 
   .tooltip {
@@ -111,7 +111,7 @@ const { copy, copied } = useClipboard()
 
     .v-enter-active,
     .v-leave-active {
-      transition: opacity $transition;
+      transition: opacity var(--transition);
     }
 
     .v-enter-from,

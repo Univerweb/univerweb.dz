@@ -25,7 +25,7 @@ const localePath = useLocalePath()
 <style lang="scss">
 .request {
   background-color: var(--light);
-  transition: background-color $transition;
+  transition: background-color var(--transition);
   text-align: center;
 
   a {

@@ -73,7 +73,7 @@ useHead({ script: [breadcrumb] })
   .tags {
     color: var(--text-secondary);
     font-weight: 500;
-    transition: color $transition;
+    transition: color var(--transition);
   }
 
   @media (min-width: $md) {

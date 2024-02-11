@@ -43,31 +43,40 @@
 
 /* Variables */
 :root {
-  --bg: var(--white);
-  --text-primary: #111;
-  --text-secondary: #666;
-  --primary: #{$primary};
-  --secondary: #{$secondary};
+  --primary: #50c8f0;
+  --secondary: #28285a;
   --white: #fff;
-  --light: #f3f4f6;
-  --font-family: 'Outfit', 'Outfit fallback';
-  --origin: left;
-  --shadow: 0 0 0 / 10%;
   --h-header: 48px;
+  --duration: 0.24s;
+  --transition: var(--duration) linear;
+  --animation: calc(var(--duration) * 2) forwards;
 
-  &[lang='ar-DZ'] {
-    --font-family: 'Noto Kufi Arabic', 'Noto Kufi Arabic fallback';
-    --origin: right;
+  &.theme-light {
+    color-scheme: light;
+    --bg: var(--white);
+    --text-primary: #111;
+    --text-secondary: #666;
+    --light: #f3f4f6;
+    --shadow: 0 0 0 / 10%;
   }
 
   &.theme-dark {
+    color-scheme: dark;
     --bg: #111827;
     --text-primary: var(--white);
     --text-secondary: var(--white);
-    --primary: #{$secondary};
-    --secondary: #{$primary};
     --light: #1f2937;
     --shadow: 255 255 255 / 10%;
+  }
+
+  &[dir='ltr'] {
+    --font-family: 'Outfit', 'Outfit fallback';
+    --origin: left;
+  }
+
+  &[dir='rtl'] {
+    --font-family: 'Noto Kufi Arabic', 'Noto Kufi Arabic fallback';
+    --origin: right;
   }
 
   @media (min-width: $xs) {
@@ -109,7 +118,7 @@ body {
   padding: 0;
   background-color: var(--bg);
   color: var(--text-primary);
-  transition: background-color $transition, color $transition;
+  transition: background-color var(--transition), color var(--transition);
   font-family: var(--font-family);
   font-size: 1rem;
   line-height: 1.5;
@@ -119,7 +128,7 @@ body {
 main,
 footer {
   transform: translateY(var(--h-header));
-  transition: transform $transition;
+  transition: transform var(--transition);
 
   &:is(.page-enter-active, .page-leave-active) {
     transition-property: opacity;
@@ -144,7 +153,7 @@ footer {
     display: grid;
     grid-auto-rows: 1fr auto;
     padding-block: 0;
-    transition: min-height $transition;
+    transition: min-height var(--transition);
     min-height: calc(100vh - var(--h-header));
   }
 
@@ -254,7 +263,7 @@ footer {
       rgba(0 0 0 / 60%) 100%
     );
     opacity: 1;
-    transition: opacity $transition;
+    transition: opacity var(--transition);
   }
 
   .card:hover .overlay {
@@ -295,7 +304,7 @@ footer {
     color: var(--white);
     align-self: end;
     transform: translateY(calc(100% + 48px));
-    transition: transform $transition;
+    transition: transform var(--transition);
     visibility: hidden;
 
     @media (min-width: $lg) {
@@ -385,7 +394,7 @@ ol {
 
   &::before {
     content: '#';
-    color: $primary;
+    color: var(--primary);
     margin-inline-end: 3px;
   }
 }
@@ -395,7 +404,7 @@ ol {
 
   letter-spacing: -0.02em;
   color: var(--text-secondary);
-  transition: color $transition;
+  transition: color var(--transition);
 
   footer & {
     font-weight: 300;
@@ -408,7 +417,7 @@ ol {
 a {
   color: var(--text-primary);
   text-decoration: none;
-  transition: color $transition;
+  transition: color var(--transition);
 
   .hero & {
     --mb: 12px;
@@ -446,7 +455,7 @@ a {
   }
 
   &:hover {
-    color: $primary;
+    color: var(--primary);
   }
 
   &.move:hover {
@@ -467,13 +476,13 @@ button {
   justify-content: center;
   column-gap: 12px;
   background-color: transparent;
-  color: $primary;
-  border: 1px solid $primary;
+  color: var(--primary);
+  border: 1px solid var(--primary);
   font-weight: 500;
   line-height: 46px;
   padding: 0 20px;
   border-radius: 2em;
-  transition: background-color $transition, color $transition;
+  transition: background-color var(--transition), color var(--transition);
 
   .more & {
     @media (min-width: $sm) {
@@ -486,8 +495,8 @@ button {
   }
 
   &:hover {
-    background-color: $primary;
-    color: $secondary;
+    background-color: var(--primary);
+    color: var(--secondary);
   }
 }
 
@@ -506,14 +515,14 @@ strong {
     right: 0;
     bottom: -2px;
     height: 3px;
-    background-color: $primary;
+    background-color: var(--primary);
     transform: scaleX(0.05);
     transform-origin: var(--origin);
-    transition: transform $transition;
+    transition: transform var(--transition);
   }
 
   &:hover::before {
-    animation: move $animation;
+    animation: move var(--animation);
 
     [dir='rtl'] & {
       animation-name: move-ar;
@@ -533,8 +542,8 @@ strong {
 }
 
 ::selection {
-  color: $secondary;
-  background-color: $primary;
+  color: var(--secondary);
+  background-color: var(--primary);
 }
 
 /* Keyframes */
