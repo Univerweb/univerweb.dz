@@ -448,6 +448,10 @@ a {
   &:hover {
     color: $primary;
   }
+
+  &.move:hover {
+    color: currentColor;
+  }
 }
 
 button {
@@ -495,10 +499,6 @@ strong {
   position: relative;
   display: inline-block;
 
-  &:hover {
-    color: var(--white);
-  }
-
   &::before {
     content: '';
     position: absolute;
@@ -506,10 +506,10 @@ strong {
     right: 0;
     bottom: -2px;
     height: 3px;
-    background-color: var(--primary);
+    background-color: $primary;
     transform: scaleX(0.05);
     transform-origin: var(--origin);
-    transition: background-color $transition, transform $transition;
+    transition: transform $transition;
   }
 
   &:hover::before {

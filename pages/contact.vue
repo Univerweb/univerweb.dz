@@ -99,11 +99,6 @@ useHead({ script: [breadcrumb] })
 }
 
 .other {
-  background-color: var(--secondary);
-  color: var(--white);
-
-  a {
-    color: currentColor;
-  }
+  background-color: var(--light);
 }
 </style>

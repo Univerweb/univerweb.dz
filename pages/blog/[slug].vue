@@ -120,8 +120,6 @@ useHead({
     </article>
 
     <LazyAppNav :prev="surround!.prev" :next="surround!.next" />
-
-    <LazyAppRequest />
   </main>
 </template>
 

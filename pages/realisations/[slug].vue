@@ -168,11 +168,9 @@ useHead({
       </div>
     </article>
 
-    <LazyAppNav :prev="surround!.prev" :next="surround!.next" />
-
     <div v-if="related && related.length" class="container">
       <div class="intro">
-        <h2 class="h1">
+        <h2>
           {{ t('work.related') }}
         </h2>
       </div>
@@ -181,7 +179,7 @@ useHead({
       </div>
     </div>
 
-    <LazyAppRequest />
+    <LazyAppNav :prev="surround!.prev" :next="surround!.next" />
   </main>
 </template>
 
