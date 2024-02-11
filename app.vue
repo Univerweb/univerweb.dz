@@ -21,6 +21,7 @@ useSeoMeta({
   twitterTitle: () => t('title'),
   twitterDescription: () => t('desc'),
   twitterImage: ogImage,
+  colorScheme: 'light dark',
 })
 
 useHead({
