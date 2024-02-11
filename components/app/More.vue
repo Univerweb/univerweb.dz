@@ -23,17 +23,3 @@ const localePath = useLocalePath()
     </NuxtLink>
   </div>
 </template>
-
-<style lang="scss">
-.more {
-  display: grid;
-  padding-top: 12px;
-
-  @include media($md, 16px 0 0);
-  @include media($lg, 24px 0 0);
-
-  [dir='rtl'] & svg {
-    transform: rotate(180deg);
-  }
-}
-</style>

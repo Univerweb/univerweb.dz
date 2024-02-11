@@ -51,17 +51,3 @@ useHead({ script: [breadcrumb] })
     <LazyAppRequest />
   </main>
 </template>
-
-<style lang="scss">
-.method {
-  counter-reset: method;
-
-  li::before {
-    @include font(56, 900);
-
-    counter-increment: method;
-    content: counters(method, '-');
-    color: var(--primary);
-  }
-}
-</style>

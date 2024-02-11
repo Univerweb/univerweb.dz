@@ -16,26 +16,3 @@ const { t } = useI18n()
     {{ t(menu) }}
   </NuxtLink>
 </template>
-
-<style lang="scss">
-.back {
-  width: max-content;
-  font-weight: 500;
-  font-size: 0.8rem;
-  line-height: 1.875;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-
-  &:hover {
-    color: var(--primary);
-  }
-
-  svg {
-    margin-inline-end: 6px;
-
-    [dir='rtl'] & {
-      transform: rotate(-180deg);
-    }
-  }
-}
-</style>

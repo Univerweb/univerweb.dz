@@ -21,15 +21,3 @@ const localePath = useLocalePath()
     </NuxtLink>
   </div>
 </template>
-
-<style lang="scss">
-.request {
-  background-color: var(--light);
-  transition: background-color var(--transition);
-  text-align: center;
-
-  a {
-    margin: 0;
-  }
-}
-</style>

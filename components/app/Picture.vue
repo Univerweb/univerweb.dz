@@ -38,37 +38,3 @@ function pictureLoaded() {
     @load="pictureLoaded"
   />
 </template>
-
-<style lang="scss">
-picture {
-  display: grid;
-  background-color: var(--light);
-  transition: background-color var(--transition);
-
-  &.thumbnail {
-    aspect-ratio: 49 / 52;
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-    opacity: 0;
-    transition: opacity var(--transition);
-
-    &.loaded {
-      opacity: 1;
-    }
-  }
-
-  &.thumbnail img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .work & img {
-    box-shadow: 0 0 40px 0 rgba(var(--shadow));
-  }
-}
-</style>

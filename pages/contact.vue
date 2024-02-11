@@ -89,16 +89,3 @@ useHead({ script: [breadcrumb] })
     </div>
   </main>
 </template>
-
-<style lang="scss">
-#map {
-  width: 100%;
-  height: 720px;
-  background-color: var(--light);
-  transition: background-color var(--transition);
-}
-
-.other {
-  background-color: var(--light);
-}
-</style>
