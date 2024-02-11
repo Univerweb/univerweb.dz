@@ -36,7 +36,6 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/devtools',
     '@nuxt/image',
-    '@nuxtjs/color-mode',
     '@nuxtjs/i18n',
     '@nuxtjs/sitemap',
     '@vueuse/nuxt',
@@ -51,10 +50,6 @@ export default defineNuxtConfig({
 
   image: {
     dir: 'assets/images',
-  },
-
-  colorMode: {
-    preference: 'light',
   },
 
   i18n: {

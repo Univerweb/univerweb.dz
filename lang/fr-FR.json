@@ -23,10 +23,8 @@
   "emailLabel": "E-mail",
   "join": "Rejoignez-nous sur",
   "socialsName": ["X", "Facebook", "LinkedIn", "GitHub"],
-  "theme": {
-    "dark": "Passer en mode clair",
-    "light": "Passer en mode sombre"
-  },
+  "theme-dark": "Passer en mode clair",
+  "theme-light": "Passer en mode sombre",
   "copy": "Copyright © {year} @:name{'.'} Tous droits réservés.",
   "home": {
     "headline": "Nous créons des sites web tellement mémorables.",

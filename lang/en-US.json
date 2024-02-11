@@ -23,10 +23,8 @@
   "emailLabel": "E-mail",
   "join": "Join us on",
   "socialsName": ["X", "Facebook", "LinkedIn", "GitHub"],
-  "theme": {
-    "dark": "Switch to light mode",
-    "light": "Switch to dark mode"
-  },
+  "theme-dark": "Switch to light mode",
+  "theme-light": "Switch to dark mode",
   "copy": "Copyright © {year} @:name{'.'} All rights reserved.",
   "home": {
     "headline": "We create such memorable websites.",
