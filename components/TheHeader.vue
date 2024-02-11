@@ -1,5 +1,8 @@
 <script setup lang="ts">
-import type { Link } from '../types'
+export interface Link {
+  path: string
+  label: string
+}
 
 const { t, tm, rt, locale } = useI18n()
 const localePath = useLocalePath()
