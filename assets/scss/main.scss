@@ -306,6 +306,10 @@ address {
 
   row-gap: 12px;
 
+  .prestations & {
+    align-items: center;
+  }
+
   @media (min-width: $xs) {
     row-gap: 16px;
   }
@@ -1246,10 +1250,6 @@ picture {
   @media (min-width: $md) {
     &:nth-child(even) .intro * {
       grid-column: 7 / 12;
-    }
-
-    .row {
-      align-items: center;
     }
 
     .col:nth-child(even) {
