@@ -73,12 +73,12 @@
 
   &[dir='ltr'] {
     --font-family: 'Outfit', 'Outfit fallback';
-    --origin: left;
+    --origin: 0%;
   }
 
   &[dir='rtl'] {
     --font-family: 'Noto Kufi Arabic', 'Noto Kufi Arabic fallback';
-    --origin: right;
+    --origin: 100%;
   }
 
   @media (min-width: $xs) {
@@ -1012,83 +1012,39 @@ footer {
   @keyframes move {
     0% {
       transform: scaleX(0.05);
-      transform-origin: left;
     }
 
     25% {
       transform: scaleX(1);
-      transform-origin: left;
+      transform-origin: var(--origin);
     }
 
     26% {
       transform: scaleX(1);
-      transform-origin: right;
+      transform-origin: calc(100% - var(--origin));
     }
 
     60% {
       transform: scaleX(0.05);
-      transform-origin: right;
     }
 
     80% {
       transform: scaleX(0);
-      transform-origin: right;
+      transform-origin: calc(100% - var(--origin));
     }
 
     81% {
       transform: scaleX(0);
-      transform-origin: left;
+      transform-origin: var(--origin);
     }
 
     100% {
       transform: scaleX(0.05);
-      transform-origin: left;
-    }
-  }
-
-  @keyframes move-ar {
-    0% {
-      transform: scaleX(0.05);
-      transform-origin: right;
-    }
-
-    25% {
-      transform: scaleX(1);
-      transform-origin: right;
-    }
-
-    26% {
-      transform: scaleX(1);
-      transform-origin: left;
-    }
-
-    60% {
-      transform: scaleX(0.05);
-      transform-origin: left;
-    }
-
-    80% {
-      transform: scaleX(0);
-      transform-origin: left;
-    }
-
-    81% {
-      transform: scaleX(0);
-      transform-origin: right;
-    }
-
-    100% {
-      transform: scaleX(0.05);
-      transform-origin: right;
     }
   }
 
   &:hover::before {
     animation: move var(--animation);
-
-    [dir='rtl'] & {
-      animation-name: move-ar;
-    }
   }
 }
 
