@@ -38,7 +38,7 @@ useHead({ script: [breadcrumb] })
 <template>
   <main>
     <div class="container row">
-      <div class="col">
+      <div class="col col--1-6">
         <h1 class="h2">
           {{ t('contact.title') }}
         </h1>
@@ -69,7 +69,7 @@ useHead({ script: [breadcrumb] })
         <h2>{{ t('contact.other') }}</h2>
       </div>
       <div class="row">
-        <div class="col">
+        <div class="col col--1-6">
           <h3 class="h6">
             {{ t('contact.manager') }}
           </h3>
@@ -77,7 +77,7 @@ useHead({ script: [breadcrumb] })
             {{ config.public.managerEmail }}
           </a>
         </div>
-        <div class="col">
+        <div class="col col--7-12">
           <h3 class="h6">
             {{ t('contact.support') }}
           </h3>

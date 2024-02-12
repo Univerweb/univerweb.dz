@@ -5,6 +5,24 @@ const breadcrumb = useBreadcrumb('agency')
 
 useSeoMeta(meta)
 useHead({ script: [breadcrumb] })
+
+interface Agency {
+  [key: string]: string
+}
+
+const classMethod: Agency = {
+  0: 'col--1-6 col--1-3',
+  1: 'col--7-12 col--4-6',
+  2: 'col--1-6 col--7-9',
+  3: 'col--7-12 col--10-12',
+}
+
+const classChoose: Agency = {
+  0: 'col--1-6',
+  1: 'col--7-12',
+  2: 'col--1-6',
+  3: 'col--7-12',
+}
 </script>
 
 <template>
@@ -23,7 +41,7 @@ useHead({ script: [breadcrumb] })
         </h2>
       </div>
       <ol class="row method">
-        <li v-for="(value, name) in (tm('agency.method.content') as { name: string })" :key="name" class="col">
+        <li v-for="(value, name, index) in (tm('agency.method.content') as Agency)" :key="index" class="col" :class="([classMethod[index]])">
           <h3>{{ name }}</h3>
           <p class="lead">
             {{ rt(value) }}
@@ -39,7 +57,7 @@ useHead({ script: [breadcrumb] })
         </h2>
       </div>
       <div class="row">
-        <div v-for="(value, name) in (tm('agency.choose.content') as { name: string })" :key="name" class="col">
+        <div v-for="(value, name, index) in (tm('agency.choose.content') as Agency)" :key="index" class="col" :class="[classChoose[index]]">
           <h3>{{ name }}</h3>
           <p class="lead">
             {{ rt(value) }}

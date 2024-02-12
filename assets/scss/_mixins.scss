@@ -14,6 +14,13 @@
   grid-template-columns: repeat($number, $value);
 }
 
+@mixin col($start: null, $end: null, $order: null) {
+  &--#{$start}-#{$end} {
+    grid-column: #{$start} / #{$end};
+    order: $order;
+  }
+}
+
 @mixin media($breakpoint, $y: null, $x: null, $gap: null, $col: null) {
   @media (min-width: $breakpoint) {
     padding: $y $x;
