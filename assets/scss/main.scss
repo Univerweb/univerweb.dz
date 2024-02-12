@@ -261,26 +261,14 @@ address {
   @include media($md, 96px, 48px);
   @include media($lg, 144px, calc(50% - 928px / 2));
   @include media($xl, 144px, calc(50% - 1200px / 2));
+}
 
-  &.hero {
-    display: grid;
-    grid-auto-rows: 1fr auto;
-    padding-block: 0;
-    transition: min-height var(--transition);
-    min-height: calc(100vh - var(--h-header));
-  }
-
-  &.error {
-    display: grid;
-    justify-items: center;
-    align-content: center;
-    min-height: calc(100vh);
-    transform: translateY(0);
-  }
-
-  &.post-nav {
-    padding-block: 72px 48px;
-  }
+.hero {
+  display: grid;
+  grid-auto-rows: 1fr auto;
+  padding-block: 0;
+  transition: min-height var(--transition);
+  min-height: calc(100vh - var(--h-header));
 }
 
 .intro {
@@ -331,6 +319,14 @@ address {
       grid-column: 7 / 12;
     }
   }
+}
+
+.error {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  min-height: calc(100vh);
+  transform: translateY(0);
 }
 
 /* Header */
@@ -1153,6 +1149,7 @@ picture {
 
 .post-nav {
   display: grid;
+  padding-block: 72px 48px;
   justify-content: space-between;
   background-color: var(--light);
   transition: background-color var(--transition);
