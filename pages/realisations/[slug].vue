@@ -106,34 +106,32 @@ useHead({
         ext="png"
       />
 
-      <div class="container client">
-        <div class="row">
-          <div class="col col--1-4">
-            <h2 class="h6">
-              {{ t('work.client') }}
-            </h2>
-            <p class="lead">
-              {{ post.title }}
-            </p>
-          </div>
-          <div class="col col--5-8">
-            <h2 class="h6">
-              {{ t('work.services') }}
-            </h2>
-            <ul class="lead tags">
-              <li v-for="tag in post.tags" :key="tag" property="keywords">
-                {{ tag }}
-              </li>
-            </ul>
-          </div>
-          <div class="col col--9-12">
-            <h2 class="h6">
-              {{ t('work.category') }}
-            </h2>
-            <p class="lead">
-              {{ post.category }}
-            </p>
-          </div>
+      <div class="container row row-evenly">
+        <div class="col col--auto-auto">
+          <h2 class="h6">
+            {{ t('work.client') }}
+          </h2>
+          <p class="lead">
+            {{ post.title }}
+          </p>
+        </div>
+        <div class="col col--auto-auto">
+          <h2 class="h6">
+            {{ t('work.category') }}
+          </h2>
+          <p class="lead">
+            {{ post.category }}
+          </p>
+        </div>
+        <div class="col col--auto-auto">
+          <h2 class="h6">
+            {{ t('work.services') }}
+          </h2>
+          <ul class="lead tags">
+            <li v-for="tag in post.tags" :key="tag" property="keywords">
+              {{ tag }}
+            </li>
+          </ul>
         </div>
       </div>
 

@@ -294,6 +294,12 @@ address {
 
   row-gap: 24px;
 
+  &-evenly {
+    @include grid(3, auto);
+
+    justify-content: space-evenly;
+  }
+
   &-center {
     align-items: center;
   }
@@ -321,6 +327,7 @@ address {
     @include col(4, 6);
     @include col(7, 9);
     @include col(10, 12);
+    @include col(auto, auto);
   }
 }
 
