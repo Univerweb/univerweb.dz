@@ -107,8 +107,8 @@ useHead({
       />
 
       <div class="container client">
-        <div class="details">
-          <div class="item">
+        <div class="row">
+          <div class="col">
             <h2 class="h6">
               {{ t('work.client') }}
             </h2>
@@ -116,7 +116,7 @@ useHead({
               {{ post.title }}
             </p>
           </div>
-          <div class="item">
+          <div class="col">
             <h2 class="h6">
               {{ t('work.services') }}
             </h2>
@@ -126,7 +126,7 @@ useHead({
               </li>
             </ul>
           </div>
-          <div class="item">
+          <div class="col">
             <h2 class="h6">
               {{ t('work.category') }}
             </h2>
@@ -138,8 +138,8 @@ useHead({
       </div>
 
       <div class="container project">
-        <div class="details">
-          <div class="item">
+        <div class="row">
+          <div class="col">
             <div class="inner">
               <ContentRendererMarkdown
                 :value="post"
@@ -161,7 +161,7 @@ useHead({
             type="preview"
             :alt="`${t('work.alt')} ${post.title}`"
             sizes="257px xs:569px sm:665px md:549px xl:730px"
-            class-name="item"
+            class-name="col"
             :img-attrs="null"
           />
         </div>

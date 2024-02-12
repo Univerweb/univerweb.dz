@@ -20,11 +20,11 @@ useHead({ script: [breadcrumb] })
       <div class="intro">
         <h2>{{ t('presta.webDesign.title') }}</h2>
       </div>
-      <div class="details">
-        <p class="item lead">
+      <div class="row">
+        <p class="col lead">
           {{ t('presta.webDesign.content') }}
         </p>
-        <ul class="item tags">
+        <ul class="col tags">
           <li v-for="tag in (tm('presta.webDesign.tags') as { tag: string })" :key="rt(tag)">
             {{ rt(tag) }}
           </li>
@@ -36,11 +36,11 @@ useHead({ script: [breadcrumb] })
       <div class="intro">
         <h2>{{ t('presta.dev.title') }}</h2>
       </div>
-      <div class="details">
-        <p class="item lead">
+      <div class="row">
+        <p class="col lead">
           {{ t('presta.dev.content') }}
         </p>
-        <ul class="item tags">
+        <ul class="col tags">
           <li v-for="tag in (tm('presta.dev.tags') as { tag: string })" :key="rt(tag)">
             {{ rt(tag) }}
           </li>
@@ -52,11 +52,11 @@ useHead({ script: [breadcrumb] })
       <div class="intro">
         <h2>{{ t('presta.support.title') }}</h2>
       </div>
-      <div class="details">
-        <p class="item lead">
+      <div class="row">
+        <p class="col lead">
           {{ t('presta.support.content') }}
         </p>
-        <ul class="item tags">
+        <ul class="col tags">
           <li v-for="tag in (tm('presta.support.tags') as { tag: string })" :key="rt(tag)">
             {{ rt(tag) }}
           </li>

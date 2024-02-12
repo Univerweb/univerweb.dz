@@ -22,8 +22,8 @@ useHead({ script: [breadcrumb] })
           {{ t('agency.method.title') }}
         </h2>
       </div>
-      <ol class="details method">
-        <li v-for="(value, name) in (tm('agency.method.content') as { name: string })" :key="name" class="item">
+      <ol class="row method">
+        <li v-for="(value, name) in (tm('agency.method.content') as { name: string })" :key="name" class="col">
           <h3>{{ name }}</h3>
           <p class="lead">
             {{ rt(value) }}
@@ -38,8 +38,8 @@ useHead({ script: [breadcrumb] })
           {{ t('agency.choose.title') }}
         </h2>
       </div>
-      <div class="details">
-        <div v-for="(value, name) in (tm('agency.choose.content') as { name: string })" :key="name" class="item">
+      <div class="row">
+        <div v-for="(value, name) in (tm('agency.choose.content') as { name: string })" :key="name" class="col">
           <h3>{{ name }}</h3>
           <p class="lead">
             {{ rt(value) }}
