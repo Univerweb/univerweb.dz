@@ -584,28 +584,6 @@ header {
         border-radius: 2em;
       }
 
-      @keyframes toggle-middle {
-        0%,
-        75% {
-          transform: scaleX(0);
-        }
-
-        100% {
-          transform: scaleX(0.5);
-        }
-      }
-
-      @keyframes toggle-middle-scale {
-        0% {
-          transform: scaleX(0.5);
-        }
-
-        25%,
-        100% {
-          transform: scaleX(0);
-        }
-      }
-
       @keyframes toggle-top {
         0% {
           transform: translateY(7px) scaleX(1) rotate(-45deg);
@@ -633,6 +611,45 @@ header {
 
         100% {
           transform: translateY(7px) scaleX(1) rotate(-45deg);
+        }
+      }
+
+      .top {
+        animation: toggle-top var(--animation);
+
+        .menu-open & {
+          animation: toggle-top-scale var(--animation);
+        }
+      }
+
+      @keyframes toggle-middle {
+        0%,
+        75% {
+          transform: scaleX(0);
+        }
+
+        100% {
+          transform: scaleX(0.5);
+        }
+      }
+
+      @keyframes toggle-middle-scale {
+        0% {
+          transform: scaleX(0.5);
+        }
+
+        25%,
+        100% {
+          transform: scaleX(0);
+        }
+      }
+
+      .middle {
+        animation: toggle-middle var(--animation);
+        transform-origin: var(--origin);
+
+        .menu-open & {
+          animation: toggle-middle-scale var(--animation);
         }
       }
 
@@ -673,23 +690,6 @@ header {
 
         100% {
           transform: translateY(-7px) scaleX(1) rotate(45deg);
-        }
-      }
-
-      .middle {
-        animation: toggle-middle var(--animation);
-        transform-origin: var(--origin);
-
-        .menu-open & {
-          animation: toggle-middle-scale var(--animation);
-        }
-      }
-
-      .top {
-        animation: toggle-top var(--animation);
-
-        .menu-open & {
-          animation: toggle-top-scale var(--animation);
         }
       }
 
