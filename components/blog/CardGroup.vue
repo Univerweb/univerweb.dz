@@ -20,11 +20,11 @@ const { t } = useI18n()
 
 const { data: articles } = await useAsyncData(
   localePath('blog'),
-  () => queryContent(localePath('blog'))
+  () => queryContent<Blog>(localePath('blog'))
     .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'author', 'body'])
     .sort({ _id: -1, $numeric: true })
     .limit(props.limit)
-    .find() as Promise<Blog[]>,
+    .find(),
   { watch: [localePath] },
 )
 </script>

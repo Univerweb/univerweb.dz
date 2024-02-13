@@ -10,10 +10,10 @@ const ogImagePath = img(`blog/${slug}_banner.jpg`, { width: 2400, height: 1256, 
 
 const { data: post } = await useAsyncData(
   `post${path}`,
-  () => queryContent()
+  () => queryContent<Blog>()
     .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'author', 'body'])
     .where({ _path: path })
-    .findOne() as Promise<Blog>,
+    .findOne(),
 )
 
 if (!post.value) {

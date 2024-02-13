@@ -1,14 +1,16 @@
-import type { MarkdownParsedContent } from '@nuxt/content/dist/runtime/types'
-
-export interface Post extends MarkdownParsedContent {
-  tags: string[]
+export interface Post {
+  _path: string
+  title: string
+  description: string
   createdAt: Date
   updatedAt: Date
+  tags: string[]
+  body: string
 }
 
 export interface Work extends Post {
   category: string
-  link: string
+  link?: string
 }
 
 export interface Blog extends Post {

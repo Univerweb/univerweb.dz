@@ -10,10 +10,10 @@ const ogImagePath = img(`realisations/${slug}_banner.png`, { width: 2400, height
 
 const { data: post } = await useAsyncData(
   `post${path}`,
-  () => queryContent()
+  () => queryContent<Work>()
     .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'category', 'link', 'body'])
     .where({ _path: path })
-    .findOne() as Promise<Work>,
+    .findOne(),
 )
 
 if (!post.value) {
@@ -38,11 +38,11 @@ const { data: surround } = await useAsyncData(
 
 const { data: related } = await useAsyncData(
   `related${path}`,
-  () => queryContent(localePath('realisations'))
+  () => queryContent<Work>(localePath('realisations'))
     .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'category', 'body'])
     .where({ category: post.value!.category, _path: { $ne: path } })
     .sort({ _id: -1, $numeric: true })
-    .find() as Promise<Work[]>,
+    .find(),
   { watch: [localePath] },
 )
 
