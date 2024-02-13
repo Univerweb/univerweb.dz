@@ -55,6 +55,7 @@
 
   &.theme-light {
     color-scheme: light;
+
     --bg: var(--white);
     --text-primary: #111;
     --text-secondary: #666;
@@ -64,6 +65,7 @@
 
   &.theme-dark {
     color-scheme: dark;
+
     --bg: #111827;
     --text-primary: var(--white);
     --text-secondary: var(--white);
@@ -201,10 +203,11 @@ a {
   transition: color var(--transition);
 
   .hero & {
-    --mb: 12px;
     display: grid;
     justify-self: center;
     margin-bottom: var(--mb);
+
+    --mb: 12px;
 
     @media (min-width: $xs) {
       --mb: 16px;
@@ -578,7 +581,7 @@ header {
       }
 
       span {
-        background-color: currentColor;
+        background-color: currentcolor;
         height: 2px;
         border-radius: 2em;
       }
@@ -750,10 +753,9 @@ header {
   }
 }
 
-/* Main & Footer */
+/* Main */
 
-main,
-footer {
+main {
   transform: translateY(var(--h-header));
   transition: transform var(--transition);
 
@@ -774,6 +776,8 @@ footer {
   display: grid;
   justify-content: space-between;
   gap: 24px;
+  transform: translateY(var(--h-header));
+  transition: transform var(--transition);
 
   @include media($xs, 32px, 16px, 32px);
   @include media($sm, 48px, 24px, 48px);
@@ -955,7 +959,7 @@ footer {
   }
 
   &.move:hover {
-    color: currentColor;
+    color: currentcolor;
   }
 }
 
@@ -1449,7 +1453,7 @@ picture {
 
       button {
         background: transparent;
-        color: currentColor;
+        color: currentcolor;
         margin: 0;
         padding: 0;
       }
@@ -1468,7 +1472,7 @@ picture {
           line-height: 22px;
           width: max-content;
           color: #00d282;
-          border: 1px solid currentColor;
+          border: 1px solid currentcolor;
           padding: 0 6px;
           border-radius: 2em;
           position: absolute;
