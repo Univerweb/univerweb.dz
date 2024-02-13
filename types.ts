@@ -20,4 +20,4 @@ export interface Blog extends Post {
   }
 }
 
-export type Nav = null | Pick<Post, '_path' | 'title'>
+export type Nav = Pick<Post, '_path' | 'title'>

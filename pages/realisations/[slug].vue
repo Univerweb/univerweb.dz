@@ -27,9 +27,9 @@ if (!post.value) {
 const { data: surround } = await useAsyncData(
   `surround${path}`,
   async () => {
-    const [prev, next] = await queryContent(localePath('realisations'))
+    const [prev, next] = await queryContent<Nav>(localePath('realisations'))
       .only(['_path', 'title'])
-      .findSurround(path) as Nav[]
+      .findSurround(path)
 
     return { prev, next }
   },
