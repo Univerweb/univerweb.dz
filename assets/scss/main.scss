@@ -712,7 +712,7 @@ header {
     opacity: 0;
   }
 
-  .lang {
+  .lang-tooltip {
     position: absolute;
     inset-inline-end: calc(100% + 8px);
     width: max-content;
@@ -721,7 +721,7 @@ header {
     opacity: 0;
     visibility: hidden;
 
-    @keyframes lang {
+    @keyframes lang-tooltip {
       0% {
         opacity: 0;
         transform: translateX(20%);
@@ -741,7 +741,7 @@ header {
 
     &.active {
       visibility: visible;
-      animation: lang 2s ease-in-out;
+      animation: lang-tooltip 2s ease-in-out;
 
       [dir='rtl'] & {
         animation-direction: reverse;
