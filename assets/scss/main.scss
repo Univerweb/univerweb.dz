@@ -593,14 +593,12 @@ header {
           transform: translateY(7px) scaleX(1) rotate(0);
         }
 
-        50%,
-        100% {
+        50% {
           transform: translateY(0) scaleX(1) rotate(0);
         }
       }
 
       @keyframes toggle-top-scale {
-        0%,
         50% {
           transform: translateY(0) scaleX(1) rotate(0);
         }
@@ -643,7 +641,6 @@ header {
           transform: scaleX(0);
         }
       }
-
       .middle {
         animation: toggle-middle var(--animation);
         transform-origin: var(--origin);
