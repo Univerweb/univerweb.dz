@@ -2,8 +2,8 @@
 import type { Nav } from '../../types'
 
 defineProps<{
-  prev: Nav
-  next: Nav
+  prev?: Nav
+  next?: Nav
 }>()
 
 const localePath = useLocalePath()
