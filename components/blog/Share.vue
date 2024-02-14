@@ -18,7 +18,7 @@ const { copy, copied } = useClipboard()
       <ul>
         <li>
           <button class="tooltip" @click="copy(url)">
-            <Transition>
+            <Transition name="tooltip-text">
               <span v-if="copied" class="tooltip-text">
                 {{ t('blog.copy') }}
               </span>

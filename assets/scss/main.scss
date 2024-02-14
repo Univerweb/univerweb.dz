@@ -609,16 +609,18 @@ header {
     }
   }
 
-  .toggle-theme-enter-active,
-  .toggle-theme-leave-active {
-    transition-property: transform, opacity;
-    transition-duration: calc(var(--duration) / 2);
-  }
+  .toggle-theme {
+    &-enter-active,
+    &-leave-active {
+      transition-property: transform, opacity;
+      transition-duration: calc(var(--duration) / 2);
+    }
 
-  .toggle-theme-enter-from,
-  .toggle-theme-leave-to {
-    transform: scaleY(0);
-    opacity: 0;
+    &-enter-from,
+    &-leave-to {
+      transform: scaleY(0);
+      opacity: 0;
+    }
   }
 
   .toggle-menu {
@@ -1467,16 +1469,16 @@ picture {
           position: absolute;
           inset-inline-end: 34px;
           z-index: 1;
-        }
 
-        .v-enter-active,
-        .v-leave-active {
-          transition: opacity var(--transition);
-        }
+          &-enter-active,
+          &-leave-active {
+            transition: opacity var(--transition);
+          }
 
-        .v-enter-from,
-        .v-leave-to {
-          opacity: 0;
+          &-enter-from,
+          &-leave-to {
+            opacity: 0;
+          }
         }
       }
     }
