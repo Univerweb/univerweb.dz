@@ -201,26 +201,6 @@ a {
   color: var(--text-primary);
   text-decoration: none;
   transition: color var(--transition);
-
-  .hero & {
-    display: grid;
-    justify-self: center;
-    margin-bottom: var(--mb);
-
-    --mb: 12px;
-
-    @media (min-width: $xs) {
-      --mb: 16px;
-    }
-
-    @media (min-width: $sm) {
-      --mb: 24px;
-    }
-
-    @media (min-width: $md) {
-      --mb: 36px;
-    }
-  }
 }
 
 p {
@@ -271,15 +251,39 @@ address {
   padding-block: 0;
   transition: min-height var(--transition);
   min-height: calc(100vh - var(--h-header));
+
+  a {
+    --mb: 12px;
+
+    display: grid;
+    justify-self: center;
+    margin-bottom: var(--mb);
+
+    @media (min-width: $xs) {
+      --mb: 16px;
+    }
+
+    @media (min-width: $sm) {
+      --mb: 24px;
+    }
+
+    @media (min-width: $md) {
+      --mb: 36px;
+    }
+  }
 }
 
 .intro {
-  @include grid(12, 1fr);
-
-  align-content: center;
+  @include grid(12, 1fr, $align: center);
 
   * {
     grid-column: 1 / 13;
+
+    @media (min-width: $sm) {
+      .presta:nth-child(even) & {
+        grid-column: 7 / 12;
+      }
+    }
 
     @media (min-width: $lg) {
       grid-column: 1 / 10;
@@ -292,14 +296,10 @@ address {
 }
 
 .row {
-  @include grid(12, 1fr);
-
-  row-gap: 24px;
+  @include grid(12, 1fr, $gap: 24px 0);
 
   &-evenly {
-    @include grid(3, auto);
-
-    justify-content: space-evenly;
+    @include grid(3, auto, $justify: space-evenly);
   }
 
   &-center {
@@ -346,13 +346,13 @@ address {
 header {
   position: fixed;
   width: 100%;
-  justify-content: space-between;
   padding: 12px;
   background-color: var(--bg);
   transition: background-color var(--transition), padding var(--transition);
   z-index: 1;
 
-  @include grid(2, auto);
+  @include grid(2, auto, $justify: space-between);
+
   @include media($xs, 16px);
   @include media($sm, 24px);
   @include media($md, 36px, $col: repeat(3, auto));
@@ -556,7 +556,7 @@ header {
     padding: 0;
     outline: none;
 
-    &:not(.toggle) {
+    &:not(.toggle-menu) {
       visibility: visible;
       opacity: 1;
       transition-property: visibility, opacity;
@@ -570,149 +570,6 @@ header {
         transition-delay: var(--duration);
       }
     }
-
-    &.toggle {
-      display: grid;
-      align-content: space-between;
-      padding: 2px;
-
-      @media (min-width: $md) {
-        display: none;
-      }
-
-      span {
-        background-color: currentcolor;
-        height: 2px;
-        border-radius: 2em;
-      }
-
-      @keyframes toggle-top {
-        0% {
-          transform: translateY(7px) scaleX(1) rotate(-45deg);
-        }
-
-        25% {
-          transform: translateY(7px) scaleX(1) rotate(0);
-        }
-
-        50% {
-          transform: translateY(0) scaleX(1) rotate(0);
-        }
-      }
-
-      @keyframes toggle-top-scale {
-        50% {
-          transform: translateY(0) scaleX(1) rotate(0);
-        }
-
-        75% {
-          transform: translateY(7px) scaleX(1) rotate(0);
-        }
-
-        100% {
-          transform: translateY(7px) scaleX(1) rotate(-45deg);
-        }
-      }
-
-      .top {
-        animation: toggle-top var(--animation);
-
-        .menu-open & {
-          animation: toggle-top-scale var(--animation);
-        }
-      }
-
-      @keyframes toggle-middle {
-        0%,
-        75% {
-          transform: scaleX(0);
-        }
-
-        100% {
-          transform: scaleX(0.5);
-        }
-      }
-
-      @keyframes toggle-middle-scale {
-        0% {
-          transform: scaleX(0.5);
-        }
-
-        25%,
-        100% {
-          transform: scaleX(0);
-        }
-      }
-
-      .middle {
-        animation: toggle-middle var(--animation);
-        transform-origin: var(--origin);
-
-        .menu-open & {
-          animation: toggle-middle-scale var(--animation);
-        }
-      }
-
-      @keyframes toggle-bottom {
-        0% {
-          transform: translateY(-7px) scaleX(1) rotate(45deg);
-        }
-
-        25% {
-          transform: translateY(-7px) scaleX(1) rotate(0);
-        }
-
-        50% {
-          transform: translateY(0) scaleX(1) rotate(0);
-        }
-
-        75%,
-        100% {
-          transform: translateY(0) scaleX(0.75) rotate(0);
-          transform-origin: var(--origin);
-        }
-      }
-
-      @keyframes toggle-bottom-scale {
-        0%,
-        25% {
-          transform: translateY(0) scaleX(0.75) rotate(0);
-          transform-origin: var(--origin);
-        }
-
-        50% {
-          transform: translateY(0) scaleX(1) rotate(0);
-        }
-
-        75% {
-          transform: translateY(-7px) scaleX(1) rotate(0);
-        }
-
-        100% {
-          transform: translateY(-7px) scaleX(1) rotate(45deg);
-        }
-      }
-
-      .bottom {
-        animation: toggle-bottom var(--animation);
-
-        .menu-open & {
-          animation: toggle-bottom-scale var(--animation);
-        }
-      }
-    }
-  }
-
-  .theme-enter-active,
-  .theme-leave-active {
-    transition-property: transform, opacity;
-    transition-duration: calc(var(--duration) / 2);
-  }
-
-  .theme-enter-from,
-  .theme-leave-to {
-    transform: scaleY(0);
-    opacity: 0;
   }
 
   .lang-tooltip {
@@ -748,6 +605,149 @@ header {
 
       [dir='rtl'] & {
         animation-direction: reverse;
+      }
+    }
+  }
+
+  .toggle-theme-enter-active,
+  .toggle-theme-leave-active {
+    transition-property: transform, opacity;
+    transition-duration: calc(var(--duration) / 2);
+  }
+
+  .toggle-theme-enter-from,
+  .toggle-theme-leave-to {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+
+  .toggle-menu {
+    display: grid;
+    align-content: space-between;
+    padding: 2px;
+
+    @media (min-width: $md) {
+      display: none;
+    }
+
+    span {
+      background-color: currentcolor;
+      height: 2px;
+      border-radius: 2em;
+    }
+
+    @keyframes toggle-top {
+      0% {
+        transform: translateY(7px) scaleX(1) rotate(-45deg);
+      }
+
+      25% {
+        transform: translateY(7px) scaleX(1) rotate(0);
+      }
+
+      50% {
+        transform: translateY(0) scaleX(1) rotate(0);
+      }
+    }
+
+    @keyframes toggle-top-scale {
+      50% {
+        transform: translateY(0) scaleX(1) rotate(0);
+      }
+
+      75% {
+        transform: translateY(7px) scaleX(1) rotate(0);
+      }
+
+      100% {
+        transform: translateY(7px) scaleX(1) rotate(-45deg);
+      }
+    }
+
+    .top {
+      animation: toggle-top var(--animation);
+
+      .menu-open & {
+        animation: toggle-top-scale var(--animation);
+      }
+    }
+
+    @keyframes toggle-middle {
+      0%,
+      75% {
+        transform: scaleX(0);
+      }
+
+      100% {
+        transform: scaleX(0.5);
+      }
+    }
+
+    @keyframes toggle-middle-scale {
+      0% {
+        transform: scaleX(0.5);
+      }
+
+      25%,
+      100% {
+        transform: scaleX(0);
+      }
+    }
+
+    .middle {
+      animation: toggle-middle var(--animation);
+      transform-origin: var(--origin);
+
+      .menu-open & {
+        animation: toggle-middle-scale var(--animation);
+      }
+    }
+
+    @keyframes toggle-bottom {
+      0% {
+        transform: translateY(-7px) scaleX(1) rotate(45deg);
+      }
+
+      25% {
+        transform: translateY(-7px) scaleX(1) rotate(0);
+      }
+
+      50% {
+        transform: translateY(0) scaleX(1) rotate(0);
+      }
+
+      75%,
+      100% {
+        transform: translateY(0) scaleX(0.75) rotate(0);
+        transform-origin: var(--origin);
+      }
+    }
+
+    @keyframes toggle-bottom-scale {
+      0%,
+      25% {
+        transform: translateY(0) scaleX(0.75) rotate(0);
+        transform-origin: var(--origin);
+      }
+
+      50% {
+        transform: translateY(0) scaleX(1) rotate(0);
+      }
+
+      75% {
+        transform: translateY(-7px) scaleX(1) rotate(0);
+      }
+
+      100% {
+        transform: translateY(-7px) scaleX(1) rotate(45deg);
+      }
+    }
+
+    .bottom {
+      animation: toggle-bottom var(--animation);
+
+      .menu-open & {
+        animation: toggle-bottom-scale var(--animation);
       }
     }
   }
@@ -792,9 +792,8 @@ footer {
 .socials {
   margin-top: 12px;
   max-width: 200px;
-  justify-content: space-between;
 
-  @include grid(4, auto);
+  @include grid(4, auto, $justify: space-between);
 
   @media (min-width: $md) {
     max-width: 280px;
@@ -813,9 +812,7 @@ footer {
 /* Components */
 
 .card-group {
-  gap: 12px;
-
-  @include grid(1, 1fr);
+  @include grid(1, 1fr, $gap: 12px);
 
   @media (min-width: $sm) {
     grid-template-columns: 1fr 1fr;
@@ -909,21 +906,6 @@ footer {
   }
 }
 
-.tags li {
-  display: inline-block;
-  margin-inline-end: 12px;
-
-  &:last-child {
-    margin-inline-end: 0;
-  }
-
-  &::before {
-    content: '#';
-    color: var(--primary);
-    margin-inline-end: 3px;
-  }
-}
-
 .lead {
   @include font(20);
 
@@ -936,6 +918,27 @@ footer {
     color: var(--text-primary);
     margin: 0;
     max-width: 400px;
+  }
+}
+
+.tag {
+  display: inline-block;
+  margin-inline-end: 12px;
+
+  &-bold {
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: color var(--transition);
+  }
+
+  &:last-child {
+    margin-inline-end: 0;
+  }
+
+  &::before {
+    content: '#';
+    color: var(--primary);
+    margin-inline-end: 3px;
   }
 }
 
@@ -1202,20 +1205,6 @@ picture {
 
 .other {
   background-color: var(--light);
-}
-
-.prestations {
-  .tags {
-    color: var(--text-secondary);
-    font-weight: 500;
-    transition: color var(--transition);
-  }
-
-  @media (min-width: $sm) {
-    &:nth-child(even) .intro * {
-      grid-column: 7 / 12;
-    }
-  }
 }
 
 .work {

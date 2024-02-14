@@ -99,8 +99,8 @@ useHead({
             <span property="name">@{{ t('name') }}</span>
             <span property="url" :content="baseUrl" />
           </span>
-          <ul class="tags">
-            <li v-for="tag in post.tags" :key="tag" property="keywords">
+          <ul>
+            <li v-for="tag in post.tags" :key="tag" property="keywords" class="tag">
               {{ tag }}
             </li>
           </ul>

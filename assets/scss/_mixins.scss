@@ -9,9 +9,12 @@
   font-weight: $weight;
 }
 
-@mixin grid($number, $value) {
+@mixin grid($number, $value, $gap: null, $align: null, $justify: null) {
   display: grid;
   grid-template-columns: repeat($number, $value);
+  gap: $gap;
+  align-content: $align;
+  justify-content: $justify;
 }
 
 @mixin col($start: null, $end: null, $order: null) {

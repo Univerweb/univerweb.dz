@@ -43,8 +43,8 @@ const localePath = useLocalePath()
       <div class="overlay" />
 
       <div class="inner">
-        <ul class="tags">
-          <li v-for="tag in article.tags" :key="tag" property="keywords" class="h3">
+        <ul>
+          <li v-for="tag in article.tags" :key="tag" property="keywords" class="h3 tag">
             {{ tag }}
           </li>
         </ul>
