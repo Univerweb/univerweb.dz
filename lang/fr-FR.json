@@ -10,7 +10,13 @@
     { "path": "contact", "label": "Contact" },
     { "path": "blog", "label": "Blog" }
   ],
-  "toggle": "Ouvrir le menu",
+  "ariaLabel": {
+    "lang-switch": "Switch to English",
+    "theme-light": "Passer au mode sombre",
+    "theme-dark": "Passer au mode clair",
+    "menu-open": "Ouvrir le menu",
+    "menu-close": "Fermer le menu"
+  },
   "request": {
     "headline": "Convaincu ? Prenons un café ensemble.",
     "link": "Contactez-nous"
@@ -23,8 +29,6 @@
   "emailLabel": "E-mail",
   "join": "Rejoignez-nous sur",
   "socialsName": ["X", "Facebook", "LinkedIn", "GitHub"],
-  "theme-dark": "Passer en mode clair",
-  "theme-light": "Passer en mode sombre",
   "copy": "Copyright © {year} @:name{'.'} Tous droits réservés.",
   "home": {
     "headline": "Nous créons des sites web tellement mémorables.",

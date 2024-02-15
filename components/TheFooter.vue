@@ -28,13 +28,12 @@ const currentYear = ref(new Date().getFullYear())
       </p>
 
       <p>
-        <a href="tel:+21321440811">
-          <span class="visually-hidden">{{ t('phoneLabel') }}</span>
+        <a href="tel:+21321440811" :aria-label="t('phoneLabel')">
           <span dir="ltr">021 44 08 11</span>
         </a>
         —
-        <a href="tel:+213551904622">
-          <span class="visually-hidden">{{ t('mobileLabel') }}</span>
+        <a href="tel:+213551904622" :aria-label="t('mobileLabel')">
+          <span>{{ t('mobileLabel') }}</span>
           <span dir="ltr">0551 90 46 22</span>
         </a>
       </p>
@@ -45,20 +44,16 @@ const currentYear = ref(new Date().getFullYear())
     </p>
 
     <div>
-      <a :href="`mailto:${config.public.baseEmail}`" class="link outfit">
-        <span class="visually-hidden">{{ t('emailLabel') }}</span>
+      <a :href="`mailto:${config.public.baseEmail}`" :aria-label="t('emailLabel')" class="link outfit">
         {{ config.public.baseEmail }}
       </a>
 
       <ul class="socials">
         <li v-for="(social, value) in socials" :key="social.url">
-          <a :href="social.url">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" aria-hidden="true" viewBox="0 0 24 24" role="img">
+          <a :href="social.url" :aria-label="`${t('join')} ${t(`socialsName.${value}`)}`">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" role="img" aria-hidden="true">
               <path :d="social.path" />
             </svg>
-            <span class="visually-hidden">
-              {{ t('join') }} {{ t(`socialsName.${value}`) }}
-            </span>
           </a>
         </li>
       </ul>

@@ -10,7 +10,13 @@
     { "path": "contact", "label": "التواصل معنا" },
     { "path": "blog", "label": "مدونة" }
   ],
-  "toggle": "افتح القائمة",
+  "ariaLabel": {
+    "lang-switch": "Choisir le français",
+    "theme-light": "تفعيل الوضع الداكن",
+    "theme-dark": "تفعيل الوضع الفاتح",
+    "menu-open": "فتح القائمة",
+    "menu-close": "إغلاق القائمة"
+  },
   "request": {
     "headline": "مقتنع؟ لنشرب القهوة معًا.",
     "link": "اتصل بنا"
@@ -23,8 +29,6 @@
   "emailLabel": "البريد الإلكتروني",
   "join": "انضم إلينا على",
   "socialsName": ["X", "فيس بوك", "لينكد إن", "جيت هاب"],
-  "theme-dark": "التبديل إلى الوضع الفاتح",
-  "theme-light": "التبديل إلى الوضع الداكن",
   "copy": "حقوق النشر © {year} @:name{'.'} جميع الحقوق محفوظة.",
   "home": {
     "headline": "نقوم بتصميم مواقع ويب لا تنسى.",

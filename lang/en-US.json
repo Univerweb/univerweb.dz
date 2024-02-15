@@ -10,7 +10,13 @@
     { "path": "contact", "label": "Contact" },
     { "path": "blog", "label": "Blog" }
   ],
-  "toggle": "Open menu",
+  "ariaLabel": {
+    "lang-switch": "اختر اللغة العربية",
+    "theme-light": "Switch to dark mode",
+    "theme-dark": "Switch to light mode",
+    "menu-open": "Open menu",
+    "menu-close": "Close menu"
+  },
   "request": {
     "headline": "Convinced? Let’s have a coffee together.",
     "link": "Get in Touch"
@@ -23,8 +29,6 @@
   "emailLabel": "E-mail",
   "join": "Join us on",
   "socialsName": ["X", "Facebook", "LinkedIn", "GitHub"],
-  "theme-dark": "Switch to light mode",
-  "theme-light": "Switch to dark mode",
   "copy": "Copyright © {year} @:name{'.'} All rights reserved.",
   "home": {
     "headline": "We create such memorable websites.",

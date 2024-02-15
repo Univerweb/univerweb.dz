@@ -30,6 +30,7 @@ export default function useMenu() {
   })
 
   return {
+    menuOpen,
     closeMenu,
     toggleMenu,
   }
