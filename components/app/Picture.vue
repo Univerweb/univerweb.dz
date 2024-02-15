@@ -15,7 +15,7 @@ withDefaults(defineProps<Props>(), {
   className: 'banner',
 })
 
-const { isFrench } = useLocale()
+const localePath = useLocalePath()
 
 function pictureLoaded() {
   const images = document.querySelectorAll('picture img')
@@ -28,7 +28,7 @@ function pictureLoaded() {
 
 <template>
   <NuxtPicture
-    :src="isFrench ? `${picture._path}_${type}.${ext}` : `${picture._path}_${type}.${ext}`.slice(3)"
+    :src="`${localePath(picture._path, 'fr')}_${type}.${ext}`"
     :alt="alt || picture.description"
     format="avif,webp"
     quality="80"
