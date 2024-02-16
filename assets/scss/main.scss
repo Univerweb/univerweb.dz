@@ -385,14 +385,14 @@ header {
   }
 
   @media (min-width: $xs) {
-    width: fit-content;
+    width: auto;
   }
 
   svg {
     display: flex;
 
     @media (min-width: $xs) {
-      width: fit-content;
+      width: auto;
       height: 20px;
     }
 
