@@ -76,12 +76,10 @@ useHead({
 </script>
 
 <template>
-  <div>
+  <NuxtLayout>
     <TheHeader />
-    <NuxtLayout>
-      <AppLoading />
-      <NuxtPage id="main" :transition="{ name: 'page', onBeforeEnter }" />
-    </NuxtLayout>
+    <AppLoading />
+    <NuxtPage id="main" :transition="{ name: 'page', onBeforeEnter }" />
     <LazyTheFooter />
-  </div>
+  </NuxtLayout>
 </template>
