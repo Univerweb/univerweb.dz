@@ -126,8 +126,8 @@ body {
   color: var(--text-primary);
   transition: background-color var(--transition), color var(--transition);
   font-family: var(--font-family);
-  font-size: 1rem;
-  line-height: 1.5;
+
+  @include font(16, $height: 1.5);
 
   .menu-open & {
     height: 100%;
@@ -137,53 +137,38 @@ body {
 
 h1,
 .h1 {
-  @include font(44, 700);
-
-  letter-spacing: -0.04em;
-  margin-block: 0 24px;
+  @include font(44, 700, $spacing: -0.04em, $margin: 0 24px);
 
   @media (min-width: $md) {
-    @include size(56);
-
-    margin-block-end: 36px;
+    @include font(56, $margin: 0 36px);
   }
 
   @media (min-width: $lg) {
-    @include size(80);
-
-    margin-block-end: 48px;
+    @include font(80, $margin: 0 48px);
   }
 }
 
 h2,
 .h2 {
-  @include font(32);
-
-  letter-spacing: -0.04em;
-  margin-block: 0 24px;
+  @include font(32, 500, $spacing: -0.04em, $margin: 0 24px);
 
   @media (min-width: $md) {
-    @include size(42);
+    @include font(42);
   }
 
   @media (min-width: $lg) {
-    @include size(56);
+    @include font(56);
   }
 }
 
 h3,
 .h3 {
-  @include font(20);
-
-  letter-spacing: -0.02em;
-  margin-block: 0 12px;
+  @include font(20, 500, $spacing: -0.02em, $margin: 0 12px);
 }
 
 h6,
 .h6 {
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-block: 0;
+  @include font(16, 500, $height: 1.5, $margin: 0);
 }
 
 a {
@@ -791,8 +776,7 @@ footer {
 }
 
 .copy {
-  font-size: 0.8rem;
-  line-height: 1.875;
+  @include font(12.8, $height: 1.875);
 }
 
 /* Components */
@@ -866,11 +850,11 @@ footer {
 
   h2,
   h3 {
-    @include size(32);
+    @include font(32, 500);
 
     &.work {
       @media (min-width: $xl) {
-        @include size(56);
+        @include font(56);
       }
     }
   }
@@ -893,9 +877,8 @@ footer {
 }
 
 .lead {
-  @include font(20);
+  @include font(20, 500, $spacing: -0.02em);
 
-  letter-spacing: -0.02em;
   color: var(--text-secondary);
   transition: color var(--transition);
 
@@ -931,12 +914,10 @@ footer {
 .link {
   display: inline-block;
 
-  @include font(20);
+  @include font(20, 500);
 
   @media (min-width: $md) {
-    @include size(28);
-
-    line-height: 1.286;
+    @include font(28, $height: 1.286);
   }
 
   &.outfit {
@@ -1074,11 +1055,9 @@ footer {
 
 .back {
   width: max-content;
-  font-weight: 500;
-  font-size: 0.8rem;
-  line-height: 1.875;
   text-transform: uppercase;
-  margin-bottom: 12px;
+
+  @include font(12.8, 500, $height: 1.875, $margin: 0 12px);
 
   &:hover {
     color: var(--primary);
@@ -1351,14 +1330,11 @@ picture {
     }
 
     h2 {
-      font-size: 24px;
-      margin-block: 36px 12px;
-      letter-spacing: 0;
+      @include font(24, $spacing: 0, $margin: 36px 12px);
     }
 
     h3 {
-      margin-block-start: 12px;
-      letter-spacing: 0;
+      @include font(20, $spacing: 0, $margin: 12px);
     }
 
     p {

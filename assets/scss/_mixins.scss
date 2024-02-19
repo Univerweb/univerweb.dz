@@ -1,12 +1,24 @@
-@mixin size($number) {
-  font-size: #{$number + 'px'};
-  line-height: calc(($number + 4) / $number);
-}
+@mixin font(
+  $size,
+  $weight: null,
+  $height: calc(($size + 4) / $size),
+  $spacing: null,
+  $margin: null
+) {
+  font-size: #{$size + 'px'};
+  line-height: $height;
 
-@mixin font($number, $weight: 500) {
-  @include size($number);
+  @if $weight {
+    font-weight: $weight;
+  }
 
-  font-weight: $weight;
+  @if $spacing {
+    letter-spacing: $spacing;
+  }
+
+  @if $margin {
+    margin-block: $margin;
+  }
 }
 
 @mixin grid($number, $value, $gap: null, $align: null, $justify: null) {
