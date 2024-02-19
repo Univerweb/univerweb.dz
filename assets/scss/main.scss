@@ -308,9 +308,7 @@ address {
 
   @media (min-width: $md) {
     @include col(1, 4);
-    @include col(5, 8);
     @include col(5, 13);
-    @include col(9, 12);
   }
 
   @media (min-width: $lg) {
