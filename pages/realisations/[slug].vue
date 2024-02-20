@@ -141,7 +141,6 @@ useHead({
             <div class="inner">
               <ContentRendererMarkdown
                 :value="post"
-                :components="{ p: 'span' }"
                 tag="p"
                 property="articleBody"
                 class="lead"

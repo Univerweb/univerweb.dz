@@ -46,7 +46,6 @@ const localePath = useLocalePath()
         </Component>
         <ContentRendererMarkdown
           :value="work"
-          :components="{ p: 'span' }"
           tag="p"
           property="articleBody"
           class="lead"
