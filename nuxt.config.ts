@@ -50,6 +50,14 @@ export default defineNuxtConfig({
 
   image: {
     dir: 'assets/images',
+    screens: {
+      xs: 374,
+      sm: 424,
+      md: 767,
+      lg: 1023,
+      xl: 1279,
+      xxl: 1439,
+    },
   },
 
   i18n: {

@@ -4,7 +4,7 @@ const { t } = useI18n()
 
 <template>
   <section class="container hero">
-    <div class="intro">
+    <div class="intro intro-justify">
       <h1>{{ t('home.headline') }}</h1>
       <p class="lead">
         {{ t('home.lead') }}

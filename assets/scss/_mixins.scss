@@ -35,17 +35,3 @@
     order: $order;
   }
 }
-
-@mixin media($breakpoint, $y: null, $x: null, $gap: null, $col: null) {
-  @media (min-width: $breakpoint) {
-    padding: $y $x;
-
-    @if $gap {
-      gap: $gap;
-    }
-
-    @if $col {
-      grid-template-columns: $col;
-    }
-  }
-}

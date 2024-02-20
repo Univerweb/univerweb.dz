@@ -48,29 +48,31 @@
   --primary: #50c8f0;
   --secondary: #28285a;
   --white: #fff;
-  --h-header: 48px;
+  --padding-x: 16px;
+  --padding-y: 16px;
+  --h-header: 72px;
   --duration: 0.24s;
   --transition: var(--duration) linear;
   --animation: calc(var(--duration) * 2) forwards;
 
   &.theme-light {
-    color-scheme: light;
-
     --bg: var(--white);
     --text-primary: #111;
     --text-secondary: #666;
     --light: #f3f4f6;
     --shadow: 0 0 0 / 10%;
+
+    color-scheme: light;
   }
 
   &.theme-dark {
-    color-scheme: dark;
-
     --bg: #111827;
     --text-primary: var(--white);
     --text-secondary: var(--white);
     --light: #1f2937;
     --shadow: 255 255 255 / 10%;
+
+    color-scheme: dark;
   }
 
   &[dir='ltr'] {
@@ -83,18 +85,22 @@
     --origin: 100%;
   }
 
-  @media (min-width: $xs) {
-    --h-header: 52px;
-  }
-
-  @media (min-width: $sm) {
-    --h-header: 72px;
-  }
-
   @media (min-width: $md) {
+    --padding-x: 24px;
+    --padding-y: 24px;
+
     &:not(.scrolled) {
-      --h-header: 96px;
+      --h-header: 88px;
     }
+  }
+
+  @media (min-width: $lg) {
+    --padding-x: calc(50% - 952px / 2);
+    --padding-y: 32px;
+  }
+
+  @media (min-width: $xl) {
+    --padding-x: calc(50% - 1200px / 2);
   }
 }
 
@@ -210,13 +216,7 @@ address {
 /* Layout */
 
 .container {
-  padding: 24px 12px;
-
-  @include media($xs, 32px, 16px);
-  @include media($sm, 48px, 24px);
-  @include media($md, 96px, 48px);
-  @include media($lg, 144px, calc(50% - 928px / 2));
-  @include media($xl, 144px, calc(50% - 1200px / 2));
+  padding: calc(var(--padding-y) * 3) var(--padding-x);
 }
 
 .hero {
@@ -227,44 +227,39 @@ address {
   min-height: calc(100vh - var(--h-header));
 
   a {
-    --mb: 12px;
-
     display: grid;
     justify-self: center;
-    margin-bottom: var(--mb);
-
-    @media (min-width: $xs) {
-      --mb: 16px;
-    }
-
-    @media (min-width: $sm) {
-      --mb: 24px;
-    }
-
-    @media (min-width: $md) {
-      --mb: 36px;
-    }
+    margin-bottom: 24px;
   }
 }
 
 .intro {
   @include grid(12, 1fr, $align: center);
 
+  &-justify {
+    max-width: 348px;
+    margin: auto;
+
+    @media (min-width: $md) {
+      max-width: 100%;
+    }
+  }
+
   * {
     grid-column: 1 / 13;
 
-    @media (min-width: $sm) {
-      .presta:nth-child(even) & {
-        grid-column: 7 / 12;
-      }
-    }
-
-    @media (min-width: $lg) {
+    @media (min-width: $md) {
       grid-column: 1 / 10;
     }
 
     @media (min-width: $xl) {
       grid-column: 1 / 8;
+    }
+  }
+
+  &-end * {
+    @media (min-width: $md) {
+      grid-column: 7 / 12;
     }
   }
 }
@@ -284,7 +279,7 @@ address {
 .col {
   grid-column: 1 / 13;
 
-  @media (min-width: $sm) {
+  @media (min-width: $md) {
     @include col(1, 6);
     @include col(3, 6, $order: -1);
     @include col(7, 10);
@@ -313,23 +308,27 @@ address {
 /* Header */
 
 header {
+  --padding-y: 24px;
+
   position: fixed;
   width: 100%;
-  padding: 12px;
+  padding: var(--padding-y) var(--padding-x);
   background-color: var(--bg);
   transition: background-color var(--transition), padding var(--transition);
   z-index: 1;
 
   @include grid(2, auto, $justify: space-between);
 
-  @include media($xs, 16px);
-  @include media($sm, 24px);
-  @include media($md, 36px, $col: repeat(3, auto));
-
   .scrolled & {
     box-shadow: 0 0 10px rgba(var(--shadow));
+  }
 
-    @include media($md, 24px 36px);
+  @media (min-width: $md) {
+    grid-template-columns: repeat(3, auto);
+
+    html:not(.scrolled) & {
+      --padding-y: 32px;
+    }
   }
 }
 
@@ -349,6 +348,7 @@ header {
 }
 
 .logo {
+  display: grid;
   overflow: hidden;
   width: 24px;
   visibility: visible;
@@ -366,19 +366,6 @@ header {
 
   @media (min-width: $xs) {
     width: auto;
-  }
-
-  svg {
-    display: flex;
-
-    @media (min-width: $xs) {
-      width: auto;
-      height: 20px;
-    }
-
-    @media (min-width: $sm) {
-      height: 24px;
-    }
   }
 
   path:nth-child(1) {
@@ -434,15 +421,14 @@ header {
 
 .menu {
   display: grid;
-  row-gap: 24px;
+  gap: 24px;
   padding: 10%;
-  transition: gap var(--transition);
   visibility: hidden;
 
-  @include media($md, 0, $gap: 24px, $col: repeat(var(--item-total), auto));
-  @include media($lg, $gap: 48px);
-  @include media($xl, $gap: 64px);
-  @include media($xxl, $gap: 128px);
+  @media (min-width: $md) {
+    grid-template-columns: repeat(var(--item-total), auto);
+    padding: 0;
+  }
 
   a {
     position: relative;
@@ -476,22 +462,18 @@ header {
     }
 
     @media (min-width: $md) {
-      font-size: 14px;
+      font-size: 16px;
       visibility: visible;
       opacity: 1;
       transform: none;
     }
 
-    @media (min-width: $lg) {
-      font-size: 16px;
-    }
-
     &::after {
       content: '';
       position: absolute;
-      bottom: -4px;
+      bottom: -2px;
       background-color: var(--primary);
-      width: 50%;
+      width: 30%;
       height: 4px;
       border-radius: 2rem;
       transform: scaleX(0);
@@ -569,12 +551,14 @@ header {
     }
   }
 
-  &.active {
-    visibility: visible;
-    animation: lang-tooltip 2s ease-in-out;
+  @media (min-width: $lg) {
+    &.active {
+      visibility: visible;
+      animation: lang-tooltip 2s ease-in-out;
 
-    [dir='rtl'] & {
-      animation-direction: reverse;
+      [dir='rtl'] & {
+        animation-direction: reverse;
+      }
     }
   }
 }
@@ -742,18 +726,22 @@ main {
 /* Footer */
 
 footer {
+  --padding-y: 48px;
+
   font-weight: 300;
-  padding: 24px 12px;
+  padding: var(--padding-y) var(--padding-x);
   display: grid;
-  justify-content: space-between;
-  gap: 24px;
+  justify-content: center;
+  gap: var(--padding-y);
   transform: translateY(var(--h-header));
   transition: transform var(--transition);
 
-  @include media($xs, 32px, 16px, 32px);
-  @include media($sm, 48px, 24px, 48px);
-  @include media($md, 96px 48px);
-  @include media($lg, 144px, 96px, $col: repeat(3, auto));
+  @media (min-width: $lg) {
+    --padding-y: 144px;
+
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-between;
+  }
 
   a:hover {
     color: var(--primary);
@@ -782,28 +770,20 @@ footer {
 /* Components */
 
 .card-group {
-  @include grid(1, 1fr, $gap: 12px);
-
-  @media (min-width: $sm) {
-    grid-template-columns: 1fr 1fr;
-  }
+  @include grid(1, minmax(auto, 348px), var(--padding-y), $justify: center);
 
   @media (min-width: $md) {
-    gap: 16px;
+    grid-template-columns: repeat(2, minmax(348px, 460px));
   }
 
-  @media (min-width: $lg) {
-    gap: 24px;
+  @media (min-width: $xl) {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .card {
     overflow: hidden;
     z-index: 1;
-    border-radius: 12px;
-
-    @media (min-width: $xl) {
-      border-radius: 24px;
-    }
+    border-radius: var(--padding-y);
   }
 
   article {
@@ -841,11 +821,7 @@ footer {
     position: absolute;
     height: 100%;
     color: var(--white);
-    padding: 24px;
-
-    @include media($md, 24px, 24px);
-    @include media($lg, 36px, 36px);
-    @include media($xl, 48px, 48px);
+    padding: var(--padding-y);
   }
 
   h2,
@@ -935,10 +911,7 @@ footer {
 
 .more {
   display: grid;
-  padding-top: 12px;
-
-  @include media($md, 16px 0 0);
-  @include media($lg, 24px 0 0);
+  padding-top: var(--padding-y);
 }
 
 .btn {
@@ -1202,13 +1175,12 @@ picture {
   .banner {
     overflow: hidden;
     justify-items: center;
-    padding: 12px;
+    padding: var(--padding-y);
     padding-bottom: 0 !important;
 
-    @include media($xs, 16px);
-    @include media($sm, 24px);
-    @include media($md, 48px);
-    @include media($lg, 72px);
+    @media (min-width: $lg) {
+      --padding-y: 48px;
+    }
 
     img {
       max-width: $xl;
@@ -1223,20 +1195,14 @@ picture {
     @media (min-width: $md) {
       .inner {
         position: sticky;
-        top: 120px;
+        top: var(--padding-y);
       }
     }
 
     picture {
       aspect-ratio: 3 / 2;
-      padding: 16px;
+      padding: var(--padding-y);
       overflow-y: scroll;
-
-      @include media($sm, 24px, 24px);
-
-      @media (min-width: $md) {
-        padding: 32px;
-      }
 
       &::-webkit-scrollbar {
         width: 6px;

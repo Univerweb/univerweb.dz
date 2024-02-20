@@ -16,8 +16,8 @@ useHead({ script: [breadcrumb] })
       </p>
     </div>
 
-    <div class="container presta">
-      <div class="intro">
+    <div class="container">
+      <div class="intro intro-end">
         <h2>{{ t('presta.webDesign.title') }}</h2>
       </div>
       <div class="row row-center">
@@ -32,7 +32,7 @@ useHead({ script: [breadcrumb] })
       </div>
     </div>
 
-    <div class="container presta">
+    <div class="container">
       <div class="intro">
         <h2>{{ t('presta.dev.title') }}</h2>
       </div>
@@ -48,8 +48,8 @@ useHead({ script: [breadcrumb] })
       </div>
     </div>
 
-    <div class="container presta">
-      <div class="intro">
+    <div class="container">
+      <div class="intro intro-end">
         <h2>{{ t('presta.support.title') }}</h2>
       </div>
       <div class="row row-center">

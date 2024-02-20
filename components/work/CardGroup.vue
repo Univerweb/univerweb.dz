@@ -31,7 +31,7 @@ const { data: works } = await useAsyncData(
 
 <template>
   <section id="realisations" class="container">
-    <div class="intro">
+    <div class="intro intro-justify">
       <Component :is="headlineTag" class="h1">
         {{ t('works.headline') }}
       </Component>
@@ -41,6 +41,6 @@ const { data: works } = await useAsyncData(
       <WorkCard v-for="work in works" :key="work._path" :work="work" :title-tag="titleTag" />
     </div>
 
-    <LazyAppMore v-if="more" />
+    <LazyAppMore v-if="more" class="intro-justify" />
   </section>
 </template>
