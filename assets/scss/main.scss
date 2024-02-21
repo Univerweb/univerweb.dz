@@ -786,6 +786,20 @@ footer {
 
 /* Components */
 
+.lead {
+  @include font(20, 500, $spacing: -0.02em);
+
+  color: var(--text-secondary);
+  transition: color var(--transition);
+
+  footer & {
+    font-weight: 300;
+    color: var(--text-primary);
+    margin: 0;
+    max-width: 400px;
+  }
+}
+
 .card-group {
   @include grid(1, minmax(auto, 348px), var(--padding-y), $justify: center);
 
@@ -799,14 +813,11 @@ footer {
 }
 
 .card {
+  display: grid;
+  position: relative;
   overflow: hidden;
   z-index: 1;
   border-radius: var(--padding-y);
-
-  article {
-    display: grid;
-    position: relative;
-  }
 
   img {
     aspect-ratio: 49 / 52;
@@ -845,7 +856,7 @@ footer {
     }
   }
 
-  p {
+  .lead {
     color: var(--white);
     align-self: end;
     transform: translateY(calc(100% + 48px));
@@ -868,23 +879,9 @@ footer {
       opacity: 0.8;
     }
 
-    p {
+    .lead {
       transform: translateY(0);
     }
-  }
-}
-
-.lead {
-  @include font(20, 500, $spacing: -0.02em);
-
-  color: var(--text-secondary);
-  transition: color var(--transition);
-
-  footer & {
-    font-weight: 300;
-    color: var(--text-primary);
-    margin: 0;
-    max-width: 400px;
   }
 }
 
