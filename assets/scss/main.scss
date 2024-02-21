@@ -285,7 +285,7 @@ img {
   @include grid(12, 1fr, $gap: 24px 0);
 
   &-evenly {
-    @include grid(3, auto, $justify: space-evenly);
+    justify-content: space-evenly;
   }
 
   &-center {
@@ -1170,10 +1170,14 @@ footer {
     }
 
     img {
+      aspect-ratio: 2 / 1;
       max-width: $xl;
-      height: auto;
       border-radius: 0.5rem 0.5rem 0 0;
     }
+  }
+
+  .row-evenly {
+    grid-template-columns: repeat(3, auto);
   }
 
   .project {
@@ -1191,14 +1195,13 @@ footer {
     }
 
     picture {
-      aspect-ratio: 3 / 2;
+      aspect-ratio: 1 / 1;
       padding: var(--padding-y);
       overflow-y: scroll;
     }
 
     img {
       border-radius: 0.25rem;
-      box-shadow: 0 0 40px 0 rgba(var(--shadow));
     }
 
     ::-webkit-scrollbar {
@@ -1212,6 +1215,10 @@ footer {
         background-color: var(--text-secondary);
       }
     }
+  }
+
+  img {
+    box-shadow: 0 0 40px 0 rgba(var(--shadow));
   }
 }
 
@@ -1257,7 +1264,7 @@ footer {
 
     .banner {
       position: relative;
-      aspect-ratio: 16/9;
+      aspect-ratio: 16 / 9;
 
       img {
         position: absolute;

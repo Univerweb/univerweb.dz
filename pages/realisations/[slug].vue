@@ -100,8 +100,6 @@ useHead({
 
       <AppPicture
         :picture="post"
-        :width="2560"
-        :height="1280"
         sizes="342px xs:392px sm:735px md:975px lg:1183px xl:1280px"
         ext="png"
         class="banner"
