@@ -39,11 +39,9 @@ const localePath = useLocalePath()
       <Component :is="titleTag" property="headline" class="work">
         {{ work.title }}
       </Component>
-      <ContentRendererMarkdown
-        :value="work"
-        property="articleBody"
-        class="lead"
-      />
+      <p property="articleBody" class="lead">
+        {{ work.body?.children[0].children[0].value }}
+      </p>
     </div>
   </NuxtLink>
 </template>

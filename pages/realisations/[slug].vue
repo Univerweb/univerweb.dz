@@ -142,7 +142,6 @@ useHead({
             <div class="inner">
               <ContentRendererMarkdown
                 :value="post"
-                tag="p"
                 property="articleBody"
                 class="lead"
               />

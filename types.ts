@@ -5,7 +5,7 @@ export interface Post {
   createdAt: Date
   updatedAt: Date
   tags: string[]
-  body?: string
+  body?: any
 }
 
 export interface Work extends Post {

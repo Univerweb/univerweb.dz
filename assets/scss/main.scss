@@ -863,7 +863,7 @@ footer {
     transition: transform var(--transition);
     visibility: hidden;
 
-    @media (min-width: $lg) {
+    @media (min-width: $md) {
       visibility: visible;
     }
   }
@@ -1184,6 +1184,10 @@ footer {
         position: sticky;
         top: var(--padding-y);
       }
+    }
+
+    .lead {
+      margin-bottom: 16px;
     }
 
     picture {
