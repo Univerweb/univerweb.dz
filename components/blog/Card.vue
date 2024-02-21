@@ -37,7 +37,6 @@ const localePath = useLocalePath()
         :picture="article"
         type="thumbnail"
         sizes="342px xs:348px md:460px xl:584px"
-        class-name="thumbnail"
       />
 
       <div class="overlay" />

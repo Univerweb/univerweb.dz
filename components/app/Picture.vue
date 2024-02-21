@@ -6,13 +6,11 @@ export interface Props {
   type?: string
   ext?: string
   alt?: string
-  className?: string
 }
 
 withDefaults(defineProps<Props>(), {
   type: 'banner',
   ext: 'jpg',
-  className: 'banner',
 })
 
 const localePath = useLocalePath()
@@ -33,7 +31,6 @@ function pictureLoaded() {
     format="avif,webp"
     quality="80"
     loading="lazy"
-    :class="className"
     :img-attrs="{ property: 'image' } || null"
     @load="pictureLoaded"
   />

@@ -31,7 +31,6 @@ const localePath = useLocalePath()
         :picture="work"
         type="thumbnail"
         sizes="342px xs:348px md:460px xl:584px"
-        class-name="thumbnail"
         :img-attrs="{ property: 'image' }"
       />
 

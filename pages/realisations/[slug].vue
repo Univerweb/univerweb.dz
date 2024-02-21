@@ -104,6 +104,7 @@ useHead({
         :height="1280"
         sizes="342px xs:392px sm:735px md:975px lg:1183px xl:1280px"
         ext="png"
+        class="banner"
       />
 
       <div class="container row row-evenly">
@@ -158,7 +159,7 @@ useHead({
             type="preview"
             :alt="`${t('work.alt')} ${post.title}`"
             sizes="304px xs:354px sm:697px md:921px lg:565px xl:730px"
-            class-name="col col--5-13"
+            class="col col--5-13"
             :img-attrs="null"
           />
         </div>
