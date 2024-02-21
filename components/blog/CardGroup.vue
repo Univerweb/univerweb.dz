@@ -21,7 +21,7 @@ const { t } = useI18n()
 const { data: articles } = await useAsyncData(
   localePath('blog'),
   () => queryContent<Blog>(localePath('blog'))
-    .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'author', 'body'])
+    .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'author'])
     .sort({ _id: -1, $numeric: true })
     .limit(props.limit)
     .find(),
