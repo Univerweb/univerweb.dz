@@ -33,7 +33,6 @@ const currentYear = ref(new Date().getFullYear())
         </a>
         —
         <a href="tel:+213551904622" :aria-label="t('mobileLabel')">
-          <span>{{ t('mobileLabel') }}</span>
           <span dir="ltr">0551 90 46 22</span>
         </a>
       </p>
