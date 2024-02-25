@@ -1125,6 +1125,11 @@ footer {
   transition: background-color var(--transition);
   text-align: center;
 
+  .h3 {
+    color: var(--text-secondary);
+    transition: color var(--transition);
+  }
+
   a {
     margin: 0;
   }
