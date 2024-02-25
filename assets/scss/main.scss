@@ -451,7 +451,6 @@ header {
     position: relative;
     display: grid;
     width: fit-content;
-    color: var(--text-primary);
     font-size: 28px;
     font-weight: 500;
     visibility: hidden;
@@ -516,7 +515,7 @@ header {
 
   > * {
     background-color: transparent;
-    color: var(--text-primary);
+    color: currentcolor;
     transition: color var(--transition);
     width: 20px;
     height: 20px;
@@ -1307,7 +1306,7 @@ footer {
       transition: color var(--transition);
 
       &.lead {
-        color: var(--text-primary);
+        color: currentcolor;
         line-height: 1.6;
         letter-spacing: normal;
       }
