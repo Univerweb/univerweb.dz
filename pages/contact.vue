@@ -59,7 +59,7 @@ useHead({ script: [breadcrumb] })
       :center="markerOptions.position"
       :zoom="14"
       :street-view-control="false"
-      background-color="var(--light)"
+      background-color="var(--background-secondary)"
     >
       <Marker :options="markerOptions" @click="zoom" />
     </GoogleMap>

@@ -45,31 +45,30 @@
 /* Variables */
 
 :root {
-  --primary: #50c8f0;
-  --secondary: #28285a;
-  --white: #fff;
-  --padding-x: 16px;
-  --padding-y: 16px;
-  --h-header: 72px;
+  --blue: #50c8f0;
+  --night: #28285a;
   --duration: 0.24s;
   --transition: var(--duration) linear;
   --animation: calc(var(--duration) * 2) forwards;
+  --padding-x: 16px;
+  --padding-y: 16px;
+  --h-header: 72px;
 
   &.theme-light {
-    --bg: var(--white);
-    --text-primary: #111;
-    --text-secondary: #666;
-    --light: #f3f4f6;
+    --background: #fff;
+    --background-secondary: #f9fafb;
+    --color: #111827;
+    --color-secondary: rgba(17 24 39 / 73%);
     --shadow: 0 0 0 / 10%;
 
     color-scheme: light;
   }
 
   &.theme-dark {
-    --bg: #111827;
-    --text-primary: var(--white);
-    --text-secondary: var(--white);
-    --light: #1f2937;
+    --background: #111827;
+    --background-secondary: #1f2937;
+    --color: #fff;
+    --color-secondary: rgba(255 255 255 / 67%);
     --shadow: 255 255 255 / 10%;
 
     color-scheme: dark;
@@ -113,8 +112,8 @@
 }
 
 ::selection {
-  color: var(--secondary);
-  background-color: var(--primary);
+  color: var(--night);
+  background-color: var(--blue);
 }
 
 /* Typography */
@@ -128,8 +127,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--bg);
-  color: var(--text-primary);
+  background-color: var(--background);
+  color: var(--color);
   transition: background-color var(--transition), color var(--transition);
   font-family: var(--font-family);
 
@@ -178,7 +177,7 @@ h6,
 }
 
 a {
-  color: var(--text-primary);
+  color: var(--color);
   text-decoration: none;
   transition: color var(--transition);
 }
@@ -215,7 +214,7 @@ address {
 
 picture {
   display: grid;
-  background-color: var(--light);
+  background-color: var(--background-secondary);
   transition: background-color var(--transition);
 }
 
@@ -330,7 +329,7 @@ header {
   position: fixed;
   width: 100%;
   padding: var(--padding-y) var(--padding-x);
-  background-color: var(--bg);
+  background-color: var(--background);
   transition: background-color var(--transition), padding var(--transition);
   z-index: 1;
 
@@ -353,8 +352,8 @@ header {
   position: absolute;
   inset-block-start: 4px;
   inset-inline-start: 4px;
-  background-color: var(--primary);
-  color: var(--secondary);
+  background-color: var(--blue);
+  color: var(--night);
   padding: 4px 8px;
   transform: translateY(calc(-100% - 8px));
   transition: transform var(--transition);
@@ -385,17 +384,8 @@ header {
     width: auto;
   }
 
-  path:nth-child(1) {
-    fill: var(--primary);
-  }
-
-  path:nth-child(2) {
-    fill: var(--secondary);
+  path {
     transition: fill var(--transition);
-
-    .theme-dark & {
-      fill: var(--white);
-    }
   }
 }
 
@@ -418,7 +408,7 @@ header {
     height: 100%;
     visibility: visible;
     opacity: 1;
-    background-color: var(--light);
+    background-color: var(--background-secondary);
     overflow-y: auto;
     transition-timing-function: cubic-bezier(0.55, 0.09, 0.68, 0.53);
   }
@@ -488,7 +478,7 @@ header {
       content: '';
       position: absolute;
       bottom: -2px;
-      background-color: var(--primary);
+      background-color: var(--blue);
       width: 30%;
       height: 4px;
       border-radius: 2rem;
@@ -760,7 +750,7 @@ footer {
   }
 
   a:hover {
-    color: var(--primary);
+    color: var(--blue);
   }
 }
 
@@ -788,12 +778,12 @@ footer {
 .lead {
   @include font(20, 500, $spacing: -0.02em);
 
-  color: var(--text-secondary);
+  color: var(--color-secondary);
   transition: color var(--transition);
 
   footer & {
     font-weight: 300;
-    color: var(--text-primary);
+    color: var(--color);
     margin: 0;
     max-width: 400px;
   }
@@ -840,7 +830,7 @@ footer {
     grid-auto-rows: auto 1fr;
     position: absolute;
     height: 100%;
-    color: var(--white);
+    color: #fff;
     padding: var(--padding-y);
   }
 
@@ -856,7 +846,7 @@ footer {
   }
 
   .lead {
-    color: var(--white);
+    color: #fff;
     align-self: end;
     transform: translateY(calc(100% + 48px));
     transition: transform var(--transition);
@@ -889,7 +879,7 @@ footer {
   margin-inline-end: 12px;
 
   &-bold {
-    color: var(--text-secondary);
+    color: var(--color-secondary);
     font-weight: 500;
     transition: color var(--transition);
   }
@@ -900,7 +890,7 @@ footer {
 
   &::before {
     content: '#';
-    color: var(--primary);
+    color: var(--blue);
     margin-inline-end: 3px;
   }
 }
@@ -919,7 +909,7 @@ footer {
   }
 
   &:hover {
-    color: var(--primary);
+    color: var(--blue);
   }
 
   &.move:hover {
@@ -937,7 +927,7 @@ footer {
   align-items: center;
   justify-content: center;
   column-gap: 12px;
-  background-color: var(--light);
+  background-color: var(--background-secondary);
   font-weight: 500;
   line-height: 46px;
   padding-inline: 20px 10px;
@@ -954,19 +944,19 @@ footer {
   }
 
   &:hover {
-    background-color: var(--primary);
-    color: var(--secondary);
+    background-color: var(--blue);
+    color: var(--night);
     font-weight: 600;
   }
 
   &:focus {
-    outline: 2px solid var(--primary);
+    outline: 2px solid var(--blue);
     outline-offset: 3px;
   }
 
   svg {
-    background-color: var(--primary);
-    color: var(--light);
+    background-color: var(--blue);
+    color: var(--background-secondary);
     border-radius: 2rem;
     padding: 10px;
     width: 32px;
@@ -979,7 +969,7 @@ footer {
   }
 
   &:hover svg {
-    color: var(--secondary);
+    color: var(--night);
     transform: translateX(5px);
 
     [dir='rtl'] & {
@@ -999,7 +989,7 @@ footer {
     right: 0;
     bottom: -2px;
     height: 3px;
-    background-color: var(--primary);
+    background-color: var(--blue);
     transform: scaleX(0.05);
     transform-origin: var(--origin);
     transition: transform var(--transition);
@@ -1051,7 +1041,7 @@ footer {
   @include font(12.8, 500, $height: 1.875, $margin: 0 12px);
 
   &:hover {
-    color: var(--primary);
+    color: var(--blue);
   }
 
   svg {
@@ -1067,7 +1057,7 @@ footer {
   display: grid;
   padding-block: 72px 48px;
   justify-content: space-between;
-  background-color: var(--light);
+  background-color: var(--background-secondary);
   transition: background-color var(--transition);
 
   .next,
@@ -1076,13 +1066,13 @@ footer {
     padding-inline: 18px 12px;
 
     &:hover {
-      color: var(--primary);
+      color: var(--blue);
     }
 
     &::before {
       content: attr(data-text);
       position: absolute;
-      color: var(--text-secondary);
+      color: var(--color-secondary);
       transition-property: color var(--transition);
       inset-block-start: -12px;
       inset-inline-start: 20px;
@@ -1121,12 +1111,12 @@ footer {
 }
 
 .request {
-  background-color: var(--light);
+  background-color: var(--background-secondary);
   transition: background-color var(--transition);
   text-align: center;
 
   .h3 {
-    color: var(--text-secondary);
+    color: var(--color-secondary);
     transition: color var(--transition);
   }
 
@@ -1143,19 +1133,19 @@ footer {
 
     counter-increment: method;
     content: counters(method, '-');
-    color: var(--primary);
+    color: var(--blue);
   }
 }
 
 #map {
   width: 100%;
   height: 720px;
-  background-color: var(--light);
+  background-color: var(--background-secondary);
   transition: background-color var(--transition);
 }
 
 .other {
-  background-color: var(--light);
+  background-color: var(--background-secondary);
 }
 
 .work {
@@ -1212,11 +1202,11 @@ footer {
       width: 6px;
 
       &-thumb {
-        background-color: var(--primary);
+        background-color: var(--blue);
       }
 
       &-track {
-        background-color: var(--text-secondary);
+        background-color: var(--color-secondary);
       }
     }
   }
@@ -1233,11 +1223,11 @@ footer {
 
   .meta {
     font-weight: 500;
-    color: var(--text-secondary);
+    color: var(--color-secondary);
     transition: color var(--transition);
 
     .author {
-      color: var(--text-primary);
+      color: var(--color);
       transition: color var(--transition);
     }
 
@@ -1256,7 +1246,7 @@ footer {
           width: 1px;
           height: 10px;
           margin-top: -5px;
-          background-color: var(--text-secondary);
+          background-color: var(--color-secondary);
           opacity: 0.2;
         }
       }
@@ -1307,7 +1297,7 @@ footer {
     }
 
     p {
-      color: var(--text-secondary);
+      color: var(--color-secondary);
       transition: color var(--transition);
 
       &.lead {
@@ -1321,13 +1311,13 @@ footer {
       text-decoration: underline;
 
       &:hover {
-        color: var(--primary);
+        color: var(--blue);
       }
     }
 
     ul,
     ol {
-      color: var(--text-secondary);
+      color: var(--color-secondary);
       transition: color var(--transition);
       margin-block: 0 12px;
 
@@ -1371,7 +1361,7 @@ footer {
       display: flex;
       justify-content: space-between;
       padding-block: 24px;
-      border-block: 1px solid var(--light);
+      border-block: 1px solid var(--background-secondary);
       transition: border-color var(--transition);
       grid-column: 1 / 13;
 
@@ -1403,7 +1393,7 @@ footer {
       a:hover,
       button:hover {
         transition: color var(--transition);
-        color: var(--primary);
+        color: var(--blue);
       }
 
       .tooltip {
