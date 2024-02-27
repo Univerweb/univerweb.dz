@@ -789,6 +789,27 @@ footer {
   }
 }
 
+.tag {
+  display: inline-block;
+  margin-inline-end: 12px;
+
+  &-bold {
+    color: var(--color-secondary);
+    font-weight: 500;
+    transition: color var(--transition);
+  }
+
+  &:last-child {
+    margin-inline-end: 0;
+  }
+
+  &::before {
+    content: '#';
+    color: var(--blue);
+    margin-inline-end: 3px;
+  }
+}
+
 .card-group {
   @include grid(1, minmax(auto, 348px), var(--padding-y), $justify: center);
 
@@ -834,6 +855,10 @@ footer {
     padding: var(--padding-y);
   }
 
+  .tag::before {
+    color: #fff;
+  }
+
   h2,
   h3 {
     @include font(32);
@@ -871,27 +896,6 @@ footer {
     .lead {
       transform: translateY(0);
     }
-  }
-}
-
-.tag {
-  display: inline-block;
-  margin-inline-end: 12px;
-
-  &-bold {
-    color: var(--color-secondary);
-    font-weight: 500;
-    transition: color var(--transition);
-  }
-
-  &:last-child {
-    margin-inline-end: 0;
-  }
-
-  &::before {
-    content: '#';
-    color: var(--blue);
-    margin-inline-end: 3px;
   }
 }
 
@@ -1273,8 +1277,6 @@ footer {
   .container-content {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    font-size: 18px;
-    line-height: 1.6;
 
     * {
       grid-column: 1 / 13;
@@ -1289,11 +1291,11 @@ footer {
     }
 
     h2 {
-      @include font(24, $spacing: 0, $margin: 36px 12px);
+      @include font(28, 600, $spacing: -0.03em, $margin: 36px 12px);
     }
 
     h3 {
-      @include font(20, $spacing: 0, $margin: 12px);
+      @include font(20, 600, $spacing: 0, $margin: 24px 12px);
     }
 
     p {
