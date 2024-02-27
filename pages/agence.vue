@@ -40,8 +40,8 @@ const classChoose: Agency = {
           {{ t('agency.method.title') }}
         </h2>
       </div>
-      <ol class="row method">
-        <li v-for="(value, name, index) in (tm('agency.method.content') as Agency)" :key="index" class="col" :class="([classMethod[index]])">
+      <ol class="row">
+        <li v-for="(value, name, index) in (tm('agency.method.content') as Agency)" :key="index" class="col big-count" :class="([classMethod[index]])">
           <h3>{{ name }}</h3>
           <p class="lead">
             {{ rt(value) }}
