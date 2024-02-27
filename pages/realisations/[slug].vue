@@ -134,32 +134,30 @@ useHead({
         </div>
       </div>
 
-      <div class="container container-no-pt">
-        <div class="row">
-          <div class="col col--1-4">
-            <div class="inner">
-              <ContentRendererMarkdown
-                :value="post"
-                property="articleBody"
-                class="lead"
-              />
-              <a v-if="post.link" :href="post.link" class="link">
-                {{ t('work.visit') }}
-              </a>
-              <p v-else>
-                {{ t('work.state') }}
-              </p>
-            </div>
+      <div class="container container-no-pt row">
+        <div class="col col--1-4">
+          <div class="inner">
+            <ContentRendererMarkdown
+              :value="post"
+              property="articleBody"
+              class="lead"
+            />
+            <a v-if="post.link" :href="post.link" class="link">
+              {{ t('work.visit') }}
+            </a>
+            <p v-else>
+              {{ t('work.state') }}
+            </p>
           </div>
-          <AppPicture
-            :picture="post"
-            type="preview"
-            :alt="`${t('work.alt')} ${post.title}`"
-            sizes="304px xs:354px sm:697px md:921px lg:565px xl:730px"
-            class="col col--5-13 preview"
-            :img-attrs="null"
-          />
         </div>
+        <AppPicture
+          :picture="post"
+          type="preview"
+          :alt="`${t('work.alt')} ${post.title}`"
+          sizes="304px xs:354px sm:697px md:921px lg:565px xl:730px"
+          class="col col--5-13 preview"
+          :img-attrs="null"
+        />
       </div>
     </article>
 
