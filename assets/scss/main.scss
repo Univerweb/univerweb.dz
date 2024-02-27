@@ -212,8 +212,11 @@ ol {
 }
 
 button {
+  background-color: transparent;
   font-family: inherit;
   font-size: inherit;
+  margin: 0;
+  padding: 0;
   border: none;
   cursor: pointer;
 }
@@ -531,20 +534,16 @@ header {
   column-gap: 16px;
 
   > * {
-    background-color: transparent;
-    color: currentcolor;
     transition: color var(--transition);
     width: 20px;
     height: 20px;
-    margin: 0;
-    padding: 0;
   }
 
   .toggle-lang,
   .toggle-theme {
     visibility: visible;
     opacity: 1;
-    transition-property: visibility, opacity;
+    transition-property: color, visibility, opacity;
 
     .menu-open & {
       visibility: hidden;
@@ -557,7 +556,7 @@ header {
   }
 }
 
-.lang-tooltip {
+.tooltip-lang {
   position: absolute;
   inset-inline-end: calc(100% + 8px);
   width: max-content;
@@ -566,7 +565,7 @@ header {
   opacity: 0;
   visibility: hidden;
 
-  @keyframes lang-tooltip {
+  @keyframes tooltip-lang {
     0% {
       opacity: 0;
       transform: translateX(20%);
@@ -587,7 +586,7 @@ header {
   @media (min-width: $lg) {
     &.active {
       visibility: visible;
-      animation: lang-tooltip 2s ease-in-out;
+      animation: tooltip-lang 2s ease-in-out;
 
       [dir='rtl'] & {
         animation-direction: reverse;
@@ -1338,24 +1337,20 @@ footer {
       height: 24px;
     }
 
-    .tooltip {
+    .tooltip-clipboard {
       position: relative;
-      background: transparent;
       color: currentcolor;
-      margin: 0;
-      padding: 0;
 
       &-text {
-        font-size: 12px;
-        line-height: 22px;
         width: max-content;
         color: #00d282;
-        border: 1px solid currentcolor;
+        border: 1px solid;
         padding: 0 6px;
         border-radius: 2em;
         position: absolute;
         inset-inline-end: 34px;
-        z-index: 1;
+
+        @include font(12, $height: 22px);
 
         &-enter-active,
         &-leave-active {
@@ -1370,7 +1365,7 @@ footer {
     }
 
     a:hover,
-    .tooltip:hover {
+    .tooltip-clipboard:hover {
       transition: color var(--transition);
       color: var(--blue);
     }
