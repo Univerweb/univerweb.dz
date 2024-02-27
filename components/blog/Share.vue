@@ -9,7 +9,7 @@ const { copy, copied } = useClipboard()
 </script>
 
 <template>
-  <div class="container container-share">
+  <div class="container container-no-pt container-share">
     <div class="share">
       <h2 class="h3">
         {{ t('blog.share') }}

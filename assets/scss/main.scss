@@ -233,6 +233,10 @@ img {
 
 .container {
   padding: calc(var(--padding-y) * 3) var(--padding-x);
+
+  &-no-pt {
+    padding-top: 0;
+  }
 }
 
 .hero {
@@ -1177,31 +1181,27 @@ footer {
     grid-template-columns: repeat(3, auto);
   }
 
-  .project {
-    padding-top: 0;
-
-    @media (min-width: $md) {
-      .inner {
-        position: sticky;
-        top: var(--padding-y);
-      }
+  @media (min-width: $md) {
+    .inner {
+      position: sticky;
+      top: var(--padding-y);
     }
+  }
 
-    .lead {
-      margin-bottom: 16px;
-    }
+  .lead {
+    margin-bottom: 16px;
+  }
 
-    picture {
-      aspect-ratio: 1 / 1;
-      padding: var(--padding-y);
-      overflow-y: scroll;
-    }
+  .preview {
+    aspect-ratio: 1 / 1;
+    padding: var(--padding-y);
+    overflow-y: scroll;
 
     img {
       border-radius: 0.25rem;
     }
 
-    ::-webkit-scrollbar {
+    &::-webkit-scrollbar {
       width: 6px;
 
       &-thumb {
@@ -1343,7 +1343,6 @@ footer {
   .container-share {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    padding-top: 0;
 
     .share {
       display: flex;
