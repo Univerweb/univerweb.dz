@@ -36,7 +36,7 @@ useHead({ script: [breadcrumb] })
 </script>
 
 <template>
-  <main>
+  <main class="contact">
     <div class="container row">
       <div class="col col--1-6">
         <h1 class="h2">
@@ -64,7 +64,7 @@ useHead({ script: [breadcrumb] })
       <Marker :options="markerOptions" @click="zoom" />
     </GoogleMap>
 
-    <div class="container other">
+    <div class="container request">
       <div class="intro">
         <h2>{{ t('contact.other') }}</h2>
       </div>

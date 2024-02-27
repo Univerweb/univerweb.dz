@@ -1143,7 +1143,10 @@ footer {
 .request {
   background-color: var(--background-secondary);
   transition: background-color var(--transition);
-  text-align: center;
+
+  main:not(.contact) & {
+    text-align: center;
+  }
 
   .h3 {
     color: var(--color-secondary);
@@ -1155,15 +1158,11 @@ footer {
   }
 }
 
-#map {
+.contact #map {
   width: 100%;
   height: 720px;
   background-color: var(--background-secondary);
   transition: background-color var(--transition);
-}
-
-.other {
-  background-color: var(--background-secondary);
 }
 
 .work {
