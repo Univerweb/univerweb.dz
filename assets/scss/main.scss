@@ -1337,73 +1337,68 @@ footer {
     }
   }
 
-  .container-share {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
+  .share {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 24px;
+    border-block: 1px solid var(--background-secondary);
+    transition: border-color var(--transition);
+    grid-column: 1 / 13;
 
-    .share {
+    @media (min-width: $lg) {
+      grid-column: 2 / 12;
+    }
+
+    @media (min-width: $xl) {
+      grid-column: 3 / 11;
+    }
+
+    h2 {
+      margin-bottom: 0;
+    }
+
+    ul {
       display: flex;
-      justify-content: space-between;
-      padding-block: 24px;
-      border-block: 1px solid var(--background-secondary);
-      transition: border-color var(--transition);
-      grid-column: 1 / 13;
+      column-gap: 24px;
+      height: 24px;
+    }
 
-      @media (min-width: $lg) {
-        grid-column: 2 / 12;
-      }
+    button {
+      background: transparent;
+      color: currentcolor;
+      margin: 0;
+      padding: 0;
+    }
 
-      @media (min-width: $xl) {
-        grid-column: 3 / 11;
-      }
+    a:hover,
+    button:hover {
+      transition: color var(--transition);
+      color: var(--blue);
+    }
 
-      h2 {
-        margin-bottom: 0;
-      }
+    .tooltip {
+      position: relative;
 
-      ul {
-        display: flex;
-        column-gap: 24px;
-        height: 24px;
-      }
+      &-text {
+        font-size: 12px;
+        line-height: 22px;
+        width: max-content;
+        color: #00d282;
+        border: 1px solid currentcolor;
+        padding: 0 6px;
+        border-radius: 2em;
+        position: absolute;
+        inset-inline-end: 34px;
+        z-index: 1;
 
-      button {
-        background: transparent;
-        color: currentcolor;
-        margin: 0;
-        padding: 0;
-      }
+        &-enter-active,
+        &-leave-active {
+          transition: opacity var(--transition);
+        }
 
-      a:hover,
-      button:hover {
-        transition: color var(--transition);
-        color: var(--blue);
-      }
-
-      .tooltip {
-        position: relative;
-
-        &-text {
-          font-size: 12px;
-          line-height: 22px;
-          width: max-content;
-          color: #00d282;
-          border: 1px solid currentcolor;
-          padding: 0 6px;
-          border-radius: 2em;
-          position: absolute;
-          inset-inline-end: 34px;
-          z-index: 1;
-
-          &-enter-active,
-          &-leave-active {
-            transition: opacity var(--transition);
-          }
-
-          &-enter-from,
-          &-leave-to {
-            opacity: 0;
-          }
+        &-enter-from,
+        &-leave-to {
+          opacity: 0;
         }
       }
     }
