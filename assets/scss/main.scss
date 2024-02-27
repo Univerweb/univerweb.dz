@@ -343,14 +343,6 @@ img {
   }
 }
 
-.error {
-  display: grid;
-  justify-items: center;
-  align-content: center;
-  min-height: calc(100vh);
-  transform: translateY(0);
-}
-
 /* Header */
 
 header {
@@ -752,6 +744,15 @@ main {
 
   &:is(.page-enter-from, .page-leave-to) {
     opacity: 0;
+  }
+
+  &.error {
+    --h-header: 0;
+
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    min-height: calc(100vh);
   }
 }
 
@@ -1158,11 +1159,13 @@ footer {
   }
 }
 
-.contact #map {
-  width: 100%;
-  height: 720px;
-  background-color: var(--background-secondary);
-  transition: background-color var(--transition);
+.contact {
+  #map {
+    width: 100%;
+    height: 720px;
+    background-color: var(--background-secondary);
+    transition: background-color var(--transition);
+  }
 }
 
 .work {
@@ -1271,12 +1274,8 @@ footer {
   }
 
   .content {
-    p,
-    ul,
-    ol {
-      color: var(--color-secondary);
-      transition: color var(--transition);
-    }
+    color: var(--color-secondary);
+    transition: color var(--transition);
 
     .lead {
       line-height: 1.6;
@@ -1285,6 +1284,8 @@ footer {
 
     h2 {
       @include font(28, 600, $spacing: -0.03em, $margin: 36px 12px);
+      color: var(--color);
+      transition: color var(--transition);
     }
 
     h3 {
