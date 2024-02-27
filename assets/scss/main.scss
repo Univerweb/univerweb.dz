@@ -1160,8 +1160,7 @@ footer {
   .banner {
     overflow: hidden;
     justify-items: center;
-    padding: var(--padding-y);
-    padding-bottom: 0 !important;
+    padding: var(--padding-y) var(--padding-y) 0;
 
     @media (min-width: $lg) {
       --padding-y: 48px;
