@@ -107,13 +107,11 @@ useHead({
         </div>
       </div>
 
-      <div class="container container-banner">
-        <AppPicture
-          :picture="post"
-          sizes="295px xs:607px sm:719px md:928px lg:1200px"
-          class="banner"
-        />
-      </div>
+      <AppPicture
+        :picture="post"
+        sizes="100vw xs:100vw sm:100vw md:100vw lg:100vw xl:1200px"
+        class="banner"
+      />
 
       <ContentRendererMarkdown :value="post" class="container container-content" />
 
