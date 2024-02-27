@@ -113,7 +113,9 @@ useHead({
         class="banner"
       />
 
-      <ContentRendererMarkdown :value="post" class="container container-content" />
+      <div class="container row row-no-gap">
+        <ContentRendererMarkdown :value="post" class="col col--2-12 col--3-11 content" />
+      </div>
 
       <LazyBlogShare :title="post.title" :url="`${baseUrl}${path}`" />
     </article>

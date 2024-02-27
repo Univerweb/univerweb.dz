@@ -10,7 +10,7 @@ const { copy, copied } = useClipboard()
 
 <template>
   <div class="container container-no-pt row">
-    <div class="share">
+    <div class="col col--2-12 col--3-11 share">
       <h2 class="h3">
         {{ t('blog.share') }}
       </h2>
