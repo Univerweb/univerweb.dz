@@ -289,7 +289,6 @@ img {
 
   &-evenly {
     justify-content: space-evenly;
-    grid-template-columns: repeat(3, auto);
   }
 
   &-center {
@@ -1185,6 +1184,10 @@ footer {
       max-width: $xl;
       border-radius: 0.5rem 0.5rem 0 0;
     }
+  }
+
+  .row-evenly {
+    grid-template-columns: repeat(3, auto);
   }
 
   @media (min-width: $md) {
