@@ -1277,23 +1277,22 @@ footer {
       }
     }
 
+    p {
+      color: var(--color-secondary);
+      transition: color var(--transition);
+
+      &.lead {
+        line-height: 1.6;
+        letter-spacing: normal;
+      }
+    }
+
     h2 {
       @include font(28, 600, $spacing: -0.03em, $margin: 36px 12px);
     }
 
     h3 {
       @include font(20, 600, $spacing: 0, $margin: 24px 12px);
-    }
-
-    p {
-      color: var(--color-secondary);
-      transition: color var(--transition);
-
-      &.lead {
-        color: currentcolor;
-        line-height: 1.6;
-        letter-spacing: normal;
-      }
     }
 
     a[rel='nofollow'] {
