@@ -1230,12 +1230,7 @@ footer {
     color: var(--color-secondary);
     transition: color var(--transition);
 
-    .author {
-      color: var(--color);
-      transition: color var(--transition);
-    }
-
-    @media (min-width: $sm) {
+    @media (min-width: $md) {
       ul {
         position: relative;
         display: inline-flex;
