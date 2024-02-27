@@ -1338,21 +1338,12 @@ footer {
       height: 24px;
     }
 
-    button {
+    .tooltip {
+      position: relative;
       background: transparent;
       color: currentcolor;
       margin: 0;
       padding: 0;
-    }
-
-    a:hover,
-    button:hover {
-      transition: color var(--transition);
-      color: var(--blue);
-    }
-
-    .tooltip {
-      position: relative;
 
       &-text {
         font-size: 12px;
@@ -1376,6 +1367,12 @@ footer {
           opacity: 0;
         }
       }
+    }
+
+    a:hover,
+    .tooltip:hover {
+      transition: color var(--transition);
+      color: var(--blue);
     }
   }
 }
