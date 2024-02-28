@@ -213,6 +213,7 @@ ol {
 
 button {
   background-color: transparent;
+  color: currentcolor;
   font-family: inherit;
   font-size: inherit;
   margin: 0;
@@ -1312,11 +1313,11 @@ footer {
       &::before {
         margin-inline-start: -0.975rem;
         float: inline-start;
-
-        &:is(ul li) {
-          content: '\002022';
-        }
       }
+    }
+
+    ul li::before {
+      content: '\002022';
     }
   }
 
