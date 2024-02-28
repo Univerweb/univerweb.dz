@@ -238,6 +238,7 @@ picture {
 img {
   width: 100%;
   height: auto;
+  object-fit: cover;
   opacity: 0;
   transition: opacity var(--transition);
 
@@ -1194,7 +1195,7 @@ footer {
   }
 
   @media (min-width: $md) {
-    .inner {
+    .col .inner {
       position: sticky;
       top: var(--padding-y);
     }
@@ -1268,8 +1269,7 @@ footer {
     margin: 0 auto;
 
     img {
-      object-fit: cover;
-      aspect-ratio: 2 / 1;
+      aspect-ratio: 16 / 9;
     }
   }
 
