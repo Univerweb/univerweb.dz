@@ -9,8 +9,8 @@ devDependencies:
     specifier: ^2.8.0
     version: 2.8.0(@vue/compiler-sfc@3.4.21)(eslint@8.57.0)(typescript@5.4.2)
   '@nuxt/content':
-    specifier: ^2.12.0
-    version: 2.12.0(nuxt@3.10.3)(rollup@4.12.1)(vue@3.4.21)
+    specifier: ^2.12.1
+    version: 2.12.1(nuxt@3.10.3)(rollup@4.12.1)(vue@3.4.21)
   '@nuxt/devtools':
     specifier: ^1.0.8
     version: 1.0.8(nuxt@3.10.3)(rollup@4.12.1)(vite@5.1.5)
@@ -1465,11 +1465,11 @@ packages:
       - supports-color
     dev: true
 
-  /@nuxt/content@2.12.0(nuxt@3.10.3)(rollup@4.12.1)(vue@3.4.21):
-    resolution: {integrity: sha512-XQkbkJzFRWKdX4aoVDprqLphbQGDsRX35ZRgHe4i7Phe3F1z2EzXVhZ9WXBTmpXau3MkLlmsQ+NzcRns1kOOvQ==}
+  /@nuxt/content@2.12.1(nuxt@3.10.3)(rollup@4.12.1)(vue@3.4.21):
+    resolution: {integrity: sha512-xW4xjyYm6zqglb17Tu0J+rpKUV1PF9zp6SLu1lopylFnerdyImtce84206HT6Zd/DJgivKtoW4dyyJn0ZaSqCQ==}
     dependencies:
       '@nuxt/kit': 3.10.3(rollup@4.12.1)
-      '@nuxtjs/mdc': 0.5.0(rollup@4.12.1)
+      '@nuxtjs/mdc': 0.6.1(rollup@4.12.1)
       '@vueuse/core': 10.9.0(vue@3.4.21)
       '@vueuse/head': 2.0.0(vue@3.4.21)
       '@vueuse/nuxt': 10.9.0(nuxt@3.10.3)(rollup@4.12.1)(vue@3.4.21)
@@ -1875,8 +1875,8 @@ packages:
       - vue-router
     dev: true
 
-  /@nuxtjs/mdc@0.5.0(rollup@4.12.1):
-    resolution: {integrity: sha512-480Ajc7o/YAl9b21btd0oRtVe/UjUWmVSEWauS+H+izwEGdGvJTVfZRdaiAXcXKl+UmUTpf+POel027sE9HAZQ==}
+  /@nuxtjs/mdc@0.6.1(rollup@4.12.1):
+    resolution: {integrity: sha512-zS5QK7DZ/SBrjqQX1DOy7GnxKy+wbj2+LvooefOWmQqHfLTAqJLVIjuv/BmKnQWiRCq19+uysys3iY42EoY5/A==}
     dependencies:
       '@nuxt/kit': 3.10.3(rollup@4.12.1)
       '@shikijs/transformers': 1.1.7
