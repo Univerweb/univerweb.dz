@@ -9,7 +9,7 @@ const { theme } = useTheme()
 const handleError = () => clearError({ redirect: '/' })
 
 useSeoMeta({
-  title: `${props.error.statusCode} —  ${t('name')}`,
+  title: `${props.error.statusCode} -  ${t('name')}`,
   robots: { noindex: true, follow: true },
 })
 
