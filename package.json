@@ -12,6 +12,9 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
+  "dependencies": {
+    "vue": "^3.4.22"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^2.14.0",
     "@nuxt/content": "^2.12.1",
