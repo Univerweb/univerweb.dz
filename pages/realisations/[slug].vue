@@ -100,8 +100,9 @@ useHead({
 
       <AppPicture
         :picture="post"
-        sizes="342px xs:392px sm:735px md:975px lg:1183px xl:1280px"
+        type="banner"
         ext="png"
+        sizes="342px xs:392px sm:735px md:975px lg:1183px xl:1280px"
         class="banner"
       />
 
@@ -154,9 +155,9 @@ useHead({
           :picture="post"
           type="preview"
           :alt="`${t('work.alt')} ${post.title}`"
+          :img-attrs="null"
           sizes="304px xs:354px sm:697px md:921px lg:565px xl:730px"
           class="col col--5-13 preview"
-          :img-attrs="null"
         />
       </div>
     </article>

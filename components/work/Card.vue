@@ -23,12 +23,7 @@ const localePath = useLocalePath()
     <span property="articleSection" :content="t('works.title')" />
     <span property="description" :content="work.description" />
 
-    <AppPicture
-      :picture="work"
-      type="thumbnail"
-      sizes="342px xs:348px md:460px xl:584px"
-      :img-attrs="{ property: 'image' }"
-    />
+    <AppPicture :picture="work" />
 
     <div class="overlay" />
 

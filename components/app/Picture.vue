@@ -5,11 +5,10 @@ export interface Props {
   picture: Pick<Post, '_path' | 'description'>
   type?: string
   ext?: string
-  alt?: string
 }
 
 withDefaults(defineProps<Props>(), {
-  type: 'banner',
+  type: 'thumbnail',
   ext: 'jpg',
 })
 
@@ -27,11 +26,12 @@ function pictureLoaded() {
 <template>
   <NuxtPicture
     :src="`${localePath(picture._path, 'fr')}_${type}.${ext}`"
-    :alt="alt || picture.description"
+    :alt="picture.description"
+    :img-attrs="{ property: 'image' }"
+    sizes="342px xs:348px md:460px xl:584px"
     format="avif,webp"
     quality="80"
     loading="lazy"
-    :img-attrs="{ property: 'image' } || null"
     @load="pictureLoaded"
   />
 </template>
