@@ -1,3 +1,8 @@
+interface MarkdownNode {
+  value: string
+  children: MarkdownNode[]
+}
+
 export interface Post {
   _path: string
   title: string
@@ -5,7 +10,9 @@ export interface Post {
   createdAt: Date
   updatedAt: Date
   tags: string[]
-  body?: any
+  body?: {
+    children: MarkdownNode[]
+  }
 }
 
 export interface Work extends Post {
