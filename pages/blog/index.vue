@@ -8,7 +8,7 @@ useHead({ script: [breadcrumb] })
 
 <template>
   <main>
-    <BlogCardGroup />
+    <PostCardGroup />
     <LazyAppRequest />
   </main>
 </template>

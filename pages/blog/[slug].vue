@@ -118,7 +118,7 @@ useHead({
         <ContentRendererMarkdown :value="post" class="col col--2-12 col--3-11 content" />
       </div>
 
-      <LazyBlogShare :title="post.title" :url="`${baseUrl}${path}`" />
+      <LazyPostShare :title="post.title" :url="`${baseUrl}${path}`" />
     </article>
 
     <LazyAppNav :prev="postSurround!.prev" :next="postSurround!.next" />
