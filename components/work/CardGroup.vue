@@ -15,11 +15,12 @@ const props = withDefaults(defineProps<Props>(), {
   more: false,
 })
 
+const { path } = useRoute()
 const localePath = useLocalePath()
 const { t } = useI18n()
 
 const { data: works } = await useAsyncData(
-  localePath('realisations'),
+  `works${path}`,
   () => queryContent<Work>(localePath('realisations'))
     .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'category', 'body'])
     .sort({ _id: -1, $numeric: true })
