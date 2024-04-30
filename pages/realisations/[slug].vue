@@ -8,15 +8,15 @@ const { path, params: { slug } } = useRoute()
 const img = useImage()
 const ogImagePath = img(`realisations/${slug}_banner.png`, { width: 2400, height: 1256, quality: 80 })
 
-const { data: post } = await useAsyncData(
-  `post${path}`,
+const { data: work } = await useAsyncData(
+  `work${path}`,
   () => queryContent<Work>()
     .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'category', 'link', 'body'])
     .where({ _path: path })
     .findOne(),
 )
 
-if (!post.value) {
+if (!work.value) {
   throw createError({
     statusCode: 404,
     statusMessage: 'Page Not Found',
@@ -24,8 +24,8 @@ if (!post.value) {
   })
 }
 
-const { data: surround } = await useAsyncData(
-  `surround${path}`,
+const { data: workSurround } = await useAsyncData(
+  `work-surround${path}`,
   async () => {
     const [prev, next] = await queryContent<Pick<Work, '_path' | 'title'>>(localePath('realisations'))
       .only(['_path', 'title'])
@@ -36,25 +36,25 @@ const { data: surround } = await useAsyncData(
   { watch: [localePath] },
 )
 
-const { data: related } = await useAsyncData(
-  `related${path}`,
+const { data: workRelated } = await useAsyncData(
+  `work-related${path}`,
   () => queryContent<Work>(localePath('realisations'))
     .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'category', 'body'])
-    .where({ category: post.value!.category, _path: { $ne: path } })
+    .where({ category: work.value!.category, _path: { $ne: path } })
     .sort({ _id: -1, $numeric: true })
     .find(),
   { watch: [localePath] },
 )
 
 useSeoMeta({
-  title: post.value.title,
-  description: post.value.description,
-  ogTitle: post.value.title,
-  ogDescription: post.value.description,
+  title: work.value.title,
+  description: work.value.description,
+  ogTitle: work.value.title,
+  ogDescription: work.value.description,
   ogType: 'article',
   ogImage: `${baseUrl}${ogImagePath}`,
-  twitterTitle: post.value.title,
-  twitterDescription: post.value.description,
+  twitterTitle: work.value.title,
+  twitterDescription: work.value.description,
   twitterImage: `${baseUrl}${ogImagePath}`,
 })
 
@@ -68,7 +68,7 @@ useHead({
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': t('name'), 'item': localeBaseUrl },
           { '@type': 'ListItem', 'position': 2, 'name': t('works.title'), 'item': `${baseUrl}${localePath('realisations')}` },
-          { '@type': 'ListItem', 'position': 3, 'name': post.value.title },
+          { '@type': 'ListItem', 'position': 3, 'name': work.value.title },
         ],
       },
     },
@@ -77,7 +77,7 @@ useHead({
 </script>
 
 <template>
-  <main v-if="post" class="work">
+  <main v-if="work" class="work">
     <article vocab="https://schema.org/" typeof="Article">
       <span property="mainEntityOfPage" typeof="WebPage">
         <span property="id" :content="`${baseUrl}${path}`" />
@@ -86,20 +86,20 @@ useHead({
         <span property="name" :content="t('name')" />
         <span property="url" :content="baseUrl" />
       </span>
-      <time property="dateCreated datePublished" :datetime="post.createdAt.toString()" />
-      <time property="dateModified" :datetime="post.updatedAt.toString()" />
+      <time property="dateCreated datePublished" :datetime="work.createdAt.toString()" />
+      <time property="dateModified" :datetime="work.updatedAt.toString()" />
       <span property="articleSection" :content="t('works.title')" />
-      <span property="description" :content="post.description" />
+      <span property="description" :content="work.description" />
 
       <div class="container intro">
         <AppBack path="realisations" menu="menu[0].label" />
         <h1 property="headline">
-          {{ post.title }}
+          {{ work.title }}
         </h1>
       </div>
 
       <AppPicture
-        :picture="post"
+        :picture="work"
         type="banner"
         ext="png"
         sizes="342px xs:392px sm:735px md:975px lg:1183px xl:1280px"
@@ -112,7 +112,7 @@ useHead({
             {{ t('work.client') }}
           </h2>
           <p class="lead">
-            {{ post.title }}
+            {{ work.title }}
           </p>
         </div>
         <div class="col col--auto-auto">
@@ -120,7 +120,7 @@ useHead({
             {{ t('work.category') }}
           </h2>
           <p class="lead">
-            {{ post.category }}
+            {{ work.category }}
           </p>
         </div>
         <div class="col col--auto-auto">
@@ -128,7 +128,7 @@ useHead({
             {{ t('work.services') }}
           </h2>
           <ul class="lead">
-            <li v-for="tag in post.tags" :key="tag" property="keywords" class="tag">
+            <li v-for="tag in work.tags" :key="tag" property="keywords" class="tag">
               {{ tag }}
             </li>
           </ul>
@@ -139,11 +139,11 @@ useHead({
         <div class="col col--1-4">
           <div class="inner">
             <ContentRendererMarkdown
-              :value="post"
+              :value="work"
               property="articleBody"
               class="lead"
             />
-            <a v-if="post.link" :href="post.link" class="link">
+            <a v-if="work.link" :href="work.link" class="link">
               {{ t('work.visit') }}
             </a>
             <p v-else>
@@ -152,9 +152,9 @@ useHead({
           </div>
         </div>
         <AppPicture
-          :picture="post"
+          :picture="work"
           type="preview"
-          :alt="`${t('work.alt')} ${post.title}`"
+          :alt="`${t('work.alt')} ${work.title}`"
           :img-attrs="null"
           sizes="304px xs:354px sm:697px md:921px lg:565px xl:730px"
           class="col col--5-13 preview"
@@ -162,17 +162,17 @@ useHead({
       </div>
     </article>
 
-    <div v-if="related && related.length" class="container">
+    <div v-if="workRelated && workRelated.length" class="container">
       <div class="intro">
         <h2>
           {{ t('work.related') }}
         </h2>
       </div>
       <div class="card-group">
-        <WorkCard v-for="p in related" :key="p._path" :work="p" title-tag="h3" />
+        <WorkCard v-for="related in workRelated" :key="related._path" :work="related" title-tag="h3" />
       </div>
     </div>
 
-    <LazyAppNav :prev="surround!.prev" :next="surround!.next" />
+    <LazyAppNav :prev="workSurround!.prev" :next="workSurround!.next" />
   </main>
 </template>

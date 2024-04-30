@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Blog } from '../../types'
+import type { Post } from '../../types'
 
 export interface Props {
   limit?: number
@@ -19,9 +19,9 @@ const { path } = useRoute()
 const localePath = useLocalePath()
 const { t } = useI18n()
 
-const { data: articles } = await useAsyncData(
-  `articles${path}`,
-  () => queryContent<Blog>(localePath('blog'))
+const { data: posts } = await useAsyncData(
+  `posts${path}`,
+  () => queryContent<Post>(localePath('blog'))
     .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'author'])
     .sort({ _id: -1, $numeric: true })
     .limit(props.limit)
@@ -39,7 +39,7 @@ const { data: articles } = await useAsyncData(
     </div>
 
     <div class="card-group">
-      <BlogCard v-for="article in articles" :key="article._path" :article="article" :title-tag="titleTag" />
+      <BlogCard v-for="post in posts" :key="post._path" :post="post" :title-tag="titleTag" />
     </div>
 
     <LazyAppMore v-if="more" path="blog" label="home.moreLabel.blog" class="intro-justify" />

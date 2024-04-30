@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { Blog } from '../../types'
+import type { Post } from '../../types'
 
 defineProps<{
-  article: Blog
+  post: Post
   titleTag: string
 }>()
 
@@ -12,38 +12,38 @@ const localePath = useLocalePath()
 </script>
 
 <template>
-  <NuxtLink :to="localePath(`${article._path}`)" class="card" vocab="https://schema.org/" typeof="Article">
+  <NuxtLink :to="localePath(`${post._path}`)" class="card" vocab="https://schema.org/" typeof="Article">
     <span property="publisher" typeof="Organization">
       <meta property="name" :content="t('name')">
       <meta property="url" :content="baseUrl">
     </span>
-    <span v-if="article.author && article.author.name && article.author.url" property="author" typeof="Person">
-      <meta property="name" :content="article.author.name">
-      <meta property="url" :content="article.author.url">
+    <span v-if="post.author && post.author.name && post.author.url" property="author" typeof="Person">
+      <meta property="name" :content="post.author.name">
+      <meta property="url" :content="post.author.url">
     </span>
     <span v-else property="author" typeof="Organization">
       <meta property="name" :content="t('name')">
       <meta property="url" :content="baseUrl">
     </span>
-    <time property="dateCreated datePublished" :datetime="article.createdAt.toString()" />
-    <time property="dateModified" :datetime="article.updatedAt.toString()" />
+    <time property="dateCreated datePublished" :datetime="post.createdAt.toString()" />
+    <time property="dateModified" :datetime="post.updatedAt.toString()" />
     <meta property="articleSection" :content="t('blog.title')">
 
-    <AppPicture :picture="article" />
+    <AppPicture :picture="post" />
 
     <div class="overlay" />
 
     <div class="inner">
       <ul>
-        <li v-for="tag in article.tags" :key="tag" property="keywords" class="h3 tag">
+        <li v-for="tag in post.tags" :key="tag" property="keywords" class="h3 tag">
           {{ tag }}
         </li>
       </ul>
       <Component :is="titleTag" property="headline">
-        {{ article.title }}
+        {{ post.title }}
       </Component>
       <p property="description" class="lead">
-        {{ article.description }}
+        {{ post.description }}
       </p>
     </div>
   </NuxtLink>

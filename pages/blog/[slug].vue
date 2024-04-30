@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Blog } from '../../types'
+import type { Post } from '../../types'
 
 const localePath = useLocalePath()
 const { locale, t } = useI18n()
@@ -10,7 +10,7 @@ const ogImagePath = img(`blog/${slug}_banner.jpg`, { width: 2400, height: 1256, 
 
 const { data: post } = await useAsyncData(
   `post${path}`,
-  () => queryContent<Blog>()
+  () => queryContent<Post>()
     .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'author', 'body'])
     .where({ _path: path })
     .findOne(),
@@ -24,10 +24,10 @@ if (!post.value) {
   })
 }
 
-const { data: surround } = await useAsyncData(
-  `surround${path}`,
+const { data: postSurround } = await useAsyncData(
+  `post-surround${path}`,
   async () => {
-    const [prev, next] = await queryContent<Pick<Blog, '_path' | 'title'>>(localePath('blog'))
+    const [prev, next] = await queryContent<Pick<Post, '_path' | 'title'>>(localePath('blog'))
       .only(['_path', 'title'])
       .findSurround(path)
 
@@ -121,6 +121,6 @@ useHead({
       <LazyBlogShare :title="post.title" :url="`${baseUrl}${path}`" />
     </article>
 
-    <LazyAppNav :prev="surround!.prev" :next="surround!.next" />
+    <LazyAppNav :prev="postSurround!.prev" :next="postSurround!.next" />
   </main>
 </template>

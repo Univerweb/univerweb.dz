@@ -3,7 +3,7 @@ interface MarkdownNode {
   children: MarkdownNode[]
 }
 
-interface Post {
+interface ParsedContent {
   _path: string
   title: string
   description: string
@@ -15,12 +15,12 @@ interface Post {
   }
 }
 
-export interface Work extends Post {
+export interface Work extends ParsedContent {
   category: string
   link?: string
 }
 
-export interface Blog extends Post {
+export interface Post extends ParsedContent {
   author: {
     name: string
     url: string
