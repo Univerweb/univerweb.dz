@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { Post } from '../../types'
+import type { Work } from '../../types'
 
 export interface Props {
-  picture: Pick<Post, '_path' | 'description'>
+  picture: Pick<Work, '_path' | 'description'>
   type?: string
   ext?: string
 }

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Nav, Work } from '../../types'
+import type { Work } from '../../types'
 
 const localePath = useLocalePath()
 const { t } = useI18n()
@@ -27,7 +27,7 @@ if (!post.value) {
 const { data: surround } = await useAsyncData(
   `surround${path}`,
   async () => {
-    const [prev, next] = await queryContent<Nav>(localePath('realisations'))
+    const [prev, next] = await queryContent<Pick<Work, '_path' | 'title'>>(localePath('realisations'))
       .only(['_path', 'title'])
       .findSurround(path)
 

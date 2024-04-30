@@ -3,7 +3,7 @@ interface MarkdownNode {
   children: MarkdownNode[]
 }
 
-export interface Post {
+interface Post {
   _path: string
   title: string
   description: string
@@ -26,5 +26,3 @@ export interface Blog extends Post {
     url: string
   }
 }
-
-export type Nav = Pick<Post, '_path' | 'title'>

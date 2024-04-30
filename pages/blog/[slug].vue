@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Blog, Nav } from '../../types'
+import type { Blog } from '../../types'
 
 const localePath = useLocalePath()
 const { locale, t } = useI18n()
@@ -27,7 +27,7 @@ if (!post.value) {
 const { data: surround } = await useAsyncData(
   `surround${path}`,
   async () => {
-    const [prev, next] = await queryContent<Nav>(localePath('blog'))
+    const [prev, next] = await queryContent<Pick<Blog, '_path' | 'title'>>(localePath('blog'))
       .only(['_path', 'title'])
       .findSurround(path)
 
