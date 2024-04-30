@@ -33,6 +33,7 @@ export default defineNuxtConfig({
   css: ['@/assets/scss/main.scss'],
 
   modules: [
+    '@nuxt/eslint',
     '@nuxt/content',
     '@nuxt/image',
     '@nuxtjs/i18n',
@@ -40,6 +41,12 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-gtag',
   ],
+
+  eslint: {
+    config: {
+      stylistic: true,
+    },
+  },
 
   content: {
     markdown: {
