@@ -29,7 +29,7 @@ const localePath = useLocalePath()
     <time property="dateModified" :datetime="article.updatedAt.toString()" />
     <meta property="articleSection" :content="t('blog.title')">
 
-    <AppPicture :picture="article"/>
+    <AppPicture :picture="article" />
 
     <div class="overlay" />
 

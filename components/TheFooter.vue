@@ -48,7 +48,15 @@ const socials = [
       <ul class="socials">
         <li v-for="(social, value) in socials" :key="social.url">
           <a :href="social.url" :aria-label="`${t('join')} ${t(`socialsName.${value}`)}`">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" role="img" aria-hidden="true">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              role="img"
+              aria-hidden="true"
+            >
               <path :d="social.path" />
             </svg>
           </a>
