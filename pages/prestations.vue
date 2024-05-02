@@ -25,7 +25,7 @@ useHead({ script: [breadcrumb] })
           {{ t('presta.webDesign.content') }}
         </p>
         <ul class="col col--3-6">
-          <li v-for="tag in (tm('presta.webDesign.tags') as { tag: string })" :key="rt(tag)" class="tag tag-bold">
+          <li v-for="tag in (tm('presta.webDesign.tags') as string[])" :key="rt(tag)" class="tag tag-bold">
             {{ rt(tag) }}
           </li>
         </ul>
@@ -41,7 +41,7 @@ useHead({ script: [breadcrumb] })
           {{ t('presta.dev.content') }}
         </p>
         <ul class="col col--7-10">
-          <li v-for="tag in (tm('presta.dev.tags') as { tag: string })" :key="rt(tag)" class="tag tag-bold">
+          <li v-for="tag in (tm('presta.dev.tags') as string[])" :key="rt(tag)" class="tag tag-bold">
             {{ rt(tag) }}
           </li>
         </ul>
@@ -57,7 +57,7 @@ useHead({ script: [breadcrumb] })
           {{ t('presta.support.content') }}
         </p>
         <ul class="col col--3-6">
-          <li v-for="tag in (tm('presta.support.tags') as { tag: string })" :key="rt(tag)" class="tag tag-bold">
+          <li v-for="tag in (tm('presta.support.tags') as string[])" :key="rt(tag)" class="tag tag-bold">
             {{ rt(tag) }}
           </li>
         </ul>
