@@ -1,5 +1,5 @@
 <template>
   <p class="lead">
-    <ContentSlot unwrap="p" />
+    <ContentSlot :use="$slots.default" unwrap="p" />
   </p>
 </template>
