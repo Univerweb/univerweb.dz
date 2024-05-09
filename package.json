@@ -27,7 +27,7 @@
     "vue3-google-map": "^0.20.0"
   },
   "devDependencies": {
-    "@nuxt/eslint": "^0.3.10",
+    "@nuxt/eslint": "^0.3.12",
     "eslint": "^9.2.0"
   }
 }
