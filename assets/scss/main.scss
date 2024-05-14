@@ -147,7 +147,7 @@ body {
   transition: background-color var(--transition), color var(--transition);
   font-family: var(--font-family);
 
-  @include font(16, $height: 1.5);
+  @include font(16, $height: 1.6);
 
   .menu-open & {
     height: 100%;
@@ -508,6 +508,7 @@ header {
 
     @media (min-width: $md) {
       font-size: 16px;
+      line-height: 1.5;
       visibility: visible;
       opacity: 1;
       transform: none;
@@ -569,8 +570,7 @@ header {
   position: absolute;
   inset-inline-end: calc(100% + 8px);
   width: max-content;
-  font-size: 13px;
-  line-height: 24px;
+  font-size: 12.5px;
   opacity: 0;
   visibility: hidden;
 
@@ -814,13 +814,13 @@ footer {
 }
 
 .copy {
-  @include font(12.8, $height: 1.875);
+  font-size: 12.5px;
 }
 
 /* Components */
 
 .lead {
-  @include font(20, 500, $spacing: -0.02em);
+  @include font(20, 500, $height: 1.3, $spacing: -0.02em);
 
   color: var(--color-secondary);
   transition: color var(--transition);
@@ -949,7 +949,7 @@ footer {
   @include font(20, 500);
 
   @media (min-width: $md) {
-    @include font(28, $height: 1.286);
+    font-size: 28px;
   }
 
   &.outfit {
@@ -977,7 +977,7 @@ footer {
   column-gap: 12px;
   background-color: var(--background-secondary);
   font-weight: 500;
-  line-height: 46px;
+  line-height: 2.875;
   padding-inline: 20px 10px;
   border-radius: 2em;
   transition: background-color var(--transition), color var(--transition),
@@ -1086,7 +1086,7 @@ footer {
   width: max-content;
   text-transform: uppercase;
 
-  @include font(12.8, 500, $height: 1.875, $margin: 0 12px);
+  @include font(12.8, 500, $margin: 0 12px);
 
   &:hover {
     color: var(--blue);
@@ -1366,7 +1366,7 @@ footer {
         position: absolute;
         inset-inline-end: 34px;
 
-        @include font(12, $height: 22px);
+        @include font(12.5, $height: 1.76);
 
         &-enter-active,
         &-leave-active {

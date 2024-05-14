@@ -1,12 +1,20 @@
 @mixin font(
   $size,
   $weight: null,
-  $height: calc(($size + 4) / $size),
+  $height: 1.1,
+  $height-rtl: 1.4,
   $spacing: null,
   $margin: null
 ) {
   font-size: #{$size + 'px'};
-  line-height: $height;
+
+  @if ($height or $height-rtl) {
+    line-height: $height;
+
+    [dir='rtl'] & {
+      line-height: $height-rtl;
+    }
+  }
 
   @if $weight {
     font-weight: $weight;
