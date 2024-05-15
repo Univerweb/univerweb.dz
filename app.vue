@@ -79,7 +79,7 @@ useHead({
   <NuxtLayout>
     <TheHeader />
     <AppLoading />
-    <NuxtPage id="main" :transition="{ name: 'page', onBeforeEnter }" />
+    <NuxtPage id="main" :transition="{ name: 'page', mode: 'out-in', onBeforeEnter }" />
     <LazyTheFooter />
   </NuxtLayout>
 </template>
