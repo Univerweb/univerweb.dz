@@ -255,11 +255,14 @@ img {
   width: 100%;
   height: auto;
   object-fit: cover;
-  opacity: 0;
-  transition: opacity var(--transition);
 
-  &.loaded {
-    opacity: 1;
+  picture & {
+    opacity: 0;
+    transition: opacity var(--transition);
+
+    &.loaded {
+      opacity: 1;
+    }
   }
 }
 
