@@ -8,8 +8,8 @@ const config = useRuntimeConfig()
 
 const markerOptions = {
   position: {
-    lat: 36.721043,
-    lng: 3.047502,
+    lat: 36.720937,
+    lng: 3.047607,
   },
 }
 
