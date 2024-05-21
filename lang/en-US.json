@@ -70,7 +70,7 @@
     "support": {
       "title": "Support + Hosting",
       "content": "Imagine a dish in a restaurant without a plate and without a waiter. A site without reliable hosting and 24/7 support is exactly the same thing.",
-      "tags": ["HTTPS", "HTTP/2", "Full backup"]
+      "tags": ["HTTPS", "HTTP/3", "Full backup"]
     }
   },
   "agency": {
