@@ -255,15 +255,6 @@ img {
   width: 100%;
   height: auto;
   object-fit: cover;
-
-  picture & {
-    opacity: 0;
-    transition: opacity var(--transition);
-
-    &.loaded {
-      opacity: 1;
-    }
-  }
 }
 
 /* Layout */

@@ -55,7 +55,9 @@ export default defineNuxtConfig({
   },
 
   image: {
-    dir: 'assets/images',
+    cloudinary: {
+      baseURL: process.env.CLOUDINARY_URL,
+    },
     screens: {
       xs: 374,
       sm: 424,

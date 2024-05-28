@@ -6,7 +6,7 @@ const { t } = useI18n()
 const { baseUrl, localeBaseUrl } = useUrl()
 const { path, params: { slug } } = useRoute()
 const img = useImage()
-const ogImagePath = img(`realisations/${slug}_banner.png`, { width: 2400, height: 1256, quality: 80 })
+const ogImage = img(`realisations/${slug}_banner`, { format: 'webp', width: 2400, height: 1256 }, { provider: 'cloudinary' })
 
 const { data: work } = await useAsyncData(
   `work${path}`,
@@ -52,10 +52,10 @@ useSeoMeta({
   ogTitle: work.value.title,
   ogDescription: work.value.description,
   ogType: 'article',
-  ogImage: `${baseUrl}${ogImagePath}`,
+  ogImage,
   twitterTitle: work.value.title,
   twitterDescription: work.value.description,
-  twitterImage: `${baseUrl}${ogImagePath}`,
+  twitterImage: ogImage,
 })
 
 useHead({
@@ -101,7 +101,6 @@ useHead({
       <AppPicture
         :picture="work"
         type="banner"
-        ext="png"
         sizes="342px xs:392px sm:735px md:975px lg:1183px xl:1280px"
         class="banner"
       />
@@ -155,9 +154,9 @@ useHead({
           :picture="work"
           type="preview"
           :alt="`${t('work.alt')} ${work.title}`"
-          :img-attrs="null"
           sizes="304px xs:354px sm:697px md:921px lg:565px xl:730px"
           class="col col--5-13 preview"
+          :img-attrs="null"
         />
       </div>
     </article>
