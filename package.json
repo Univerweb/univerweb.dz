@@ -21,13 +21,13 @@
     "@vueuse/nuxt": "^10.10.0",
     "nuxt": "^3.11.2",
     "nuxt-gtag": "^2.0.6",
-    "sass": "^1.77.3",
+    "sass": "^1.77.4",
     "vue": "^3.4.27",
     "vue-router": "^4.3.2",
     "vue3-google-map": "^0.20.0"
   },
   "devDependencies": {
     "@nuxt/eslint": "^0.3.13",
-    "eslint": "^9.3.0"
+    "eslint": "^9.4.0"
   }
 }
