@@ -27,3 +27,5 @@ export interface Post extends ParsedContent {
     children: MarkdownNode[]
   }
 }
+
+export interface Presta extends Pick<ParsedContent, '_path' | 'title' | 'description' | 'tags' | 'body'> { }
