@@ -1,7 +1,41 @@
 <script setup lang="ts">
-const { t, tm, rt } = useI18n()
+import type { Presta } from '../../types'
+
+const { path } = useRoute()
+const localePath = useLocalePath()
+const { t } = useI18n()
 const meta = useMeta('presta')
 const breadcrumb = useBreadcrumb('presta')
+
+const { data: prestations } = await useAsyncData(
+  `prestations${path}`,
+  () => queryContent<Presta>(localePath('prestations'))
+    .only(['_path', 'title', 'description', 'tags', 'body'])
+    .find(),
+  { watch: [localePath] },
+)
+
+type Key = {
+  [key: number]: string
+}
+
+const classTitle: Key = {
+  0: 'intro-end',
+  1: '',
+  2: 'intro-end',
+}
+
+const classDescription: Key = {
+  0: '7-12',
+  1: '1-6',
+  2: '7-12',
+}
+
+const classTags: Key = {
+  0: '3-6',
+  1: '7-10',
+  2: '3-6',
+}
 
 useSeoMeta(meta)
 useHead({ script: [breadcrumb] })
@@ -16,49 +50,19 @@ useHead({ script: [breadcrumb] })
       </p>
     </div>
 
-    <div class="container">
-      <div class="intro intro-end">
-        <h2>{{ t('presta.webDesign.title') }}</h2>
+    <div v-for="(prestation, index) in prestations" :key="index" class="container">
+      <div :class="`intro ${classTitle[index]}`">
+        <h2>
+          {{ prestation.title }}
+        </h2>
       </div>
       <div class="row row-center">
-        <p class="col col--7-12 lead">
-          {{ t('presta.webDesign.content') }}
+        <p :class="`lead col col--${classDescription[index]}`">
+          {{ prestation.description }}
         </p>
-        <ul class="col col--3-6">
-          <li v-for="tag in (tm('presta.webDesign.tags') as string[])" :key="rt(tag)" class="tag tag-bold">
-            {{ rt(tag) }}
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="intro">
-        <h2>{{ t('presta.dev.title') }}</h2>
-      </div>
-      <div class="row row-center">
-        <p class="col col--1-6 lead">
-          {{ t('presta.dev.content') }}
-        </p>
-        <ul class="col col--7-10">
-          <li v-for="tag in (tm('presta.dev.tags') as string[])" :key="rt(tag)" class="tag tag-bold">
-            {{ rt(tag) }}
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="intro intro-end">
-        <h2>{{ t('presta.support.title') }}</h2>
-      </div>
-      <div class="row row-center">
-        <p class="col col--7-12 lead">
-          {{ t('presta.support.content') }}
-        </p>
-        <ul class="col col--3-6">
-          <li v-for="tag in (tm('presta.support.tags') as string[])" :key="rt(tag)" class="tag tag-bold">
-            {{ rt(tag) }}
+        <ul :class="`col col--${classTags[index]}`">
+          <li v-for="tag in prestation.tags" :key="tag" class="tag tag-bold">
+            {{ tag }}
           </li>
         </ul>
       </div>
