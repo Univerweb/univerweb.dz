@@ -66,6 +66,9 @@ useHead({ script: [breadcrumb] })
           </li>
         </ul>
       </div>
+      <div class="row">
+        <AppMore :path="prestation._path" :label="prestation.title" :class="`start col--${classDescription[index]}`" />
+      </div>
     </div>
 
     <LazyAppRequest />
