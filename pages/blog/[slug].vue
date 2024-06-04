@@ -80,7 +80,7 @@ useHead({
       <span property="description" :content="post.description" />
 
       <div class="container intro">
-        <AppBack path="blog" menu="menu[4].label" />
+        <AppBack :path="localePath('blog')" :label="t('menu[4].label')" />
         <h1 property="headline">
           {{ post.title }}
         </h1>
