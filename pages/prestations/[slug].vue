@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { Presta } from '../../types'
 
+const localePath = useLocalePath()
+const { t } = useI18n()
 const { path } = useRoute()
 
 const { data: prestation } = await useAsyncData(
@@ -24,7 +26,7 @@ if (!prestation.value) {
   <main v-if="prestation">
     <article vocab="https://schema.org/" typeof="Article">
       <div class="container intro">
-        <AppBack path="prestations" menu="menu[1].label" />
+        <AppBack :path="localePath('prestations')" :label="t('menu[1].label')" />
         <h1 property="headline">
           {{ prestation.title }}
         </h1>
