@@ -26,3 +26,5 @@ export interface Post extends ParsedContent {
     url: string
   }
 }
+
+export interface Presta extends Pick<ParsedContent, '_path' | 'title' | 'description' | 'tags' | 'body'> { }
