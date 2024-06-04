@@ -7,7 +7,7 @@ useSeoMeta(meta)
 useHead({ script: [breadcrumb] })
 
 interface Agency {
-  [key: string]: string
+  [key: number]: string
 }
 
 const classMethod: Agency = {
@@ -41,7 +41,7 @@ const classChoose: Agency = {
         </h2>
       </div>
       <ol class="row">
-        <li v-for="(value, name, index) in (tm('agency.method.content') as Agency)" :key="index" class="col big-count" :class="([classMethod[index]])">
+        <li v-for="(value, name, index) in (tm('agency.method.content') as Agency)" :key="index" :class="`big-count col ${classMethod[index]}`">
           <h3>{{ name }}</h3>
           <p class="lead">
             {{ rt(value) }}
@@ -57,7 +57,7 @@ const classChoose: Agency = {
         </h2>
       </div>
       <div class="row">
-        <div v-for="(value, name, index) in (tm('agency.choose.content') as Agency)" :key="index" class="col" :class="[classChoose[index]]">
+        <div v-for="(value, name, index) in (tm('agency.choose.content') as Agency)" :key="index" :class="`col ${classChoose[index]}`">
           <h3>{{ name }}</h3>
           <p class="lead">
             {{ rt(value) }}
