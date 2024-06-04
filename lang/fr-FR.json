@@ -56,27 +56,7 @@
     "title": "@:menu[1].label",
     "desc": "Une stratégie de présence web accomplie, sur des fondements technologiques et une méthodologie rigoureuse.",
     "headline": "Ce dont nous sommes capables.",
-    "lead": "De nos jours quiconque peut faire un site web, y compris votre neveu de 13 ans ! Mais qui peut réellement concrétiser une stratégie de présence web accomplie, sur des fondements technologiques et une méthodologie rigoureuse.",
-    "webDesign": {
-      "title": "Web design",
-      "content": "Un mélange savant et millimétré entre design attrayant, charte graphique respectée et expérience utilisateur au top des priorités. Nous trouverons pour vous l’équilibre parfait.",
-      "tags": [
-        "Responsive",
-        "Données structurées",
-        "Html valide",
-        "Accessibilité"
-      ]
-    },
-    "dev": {
-      "title": "Développement",
-      "content": "Votre entreprise et vos besoins métiers sont uniques. Vous êtes uniques ! Nos coderons pour vous l’application qui répond exactement à vos besoins, sans fioritures et avec agilité.",
-      "tags": ["CMS", "Drupal", "Application mobile", "Nuxt"]
-    },
-    "support": {
-      "title": "Support + Hébergement",
-      "content": "Imaginez un plat au restaurant sans assiette et sans serveur. Un site sans hébergement fiable et un support présent 24/7 c’est exactement la même chose.",
-      "tags": ["HTTPS", "HTTP/3", "Sauvegarde complète"]
-    }
+    "lead": "De nos jours quiconque peut faire un site web, y compris votre neveu de 13 ans ! Mais qui peut réellement concrétiser une stratégie de présence web accomplie, sur des fondements technologiques et une méthodologie rigoureuse."
   },
   "agency": {
     "title": "@:menu[2].label",
