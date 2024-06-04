@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import type { Presta } from '../../types'
+
 const { path } = useRoute()
 
 const { data: prestation } = await useAsyncData(
   `prestation${path}`,
-  () => queryContent()
+  () => queryContent<Presta>()
     .only(['title'])
     .where({ _path: path })
     .findOne(),
@@ -19,7 +21,7 @@ if (!prestation.value) {
 </script>
 
 <template>
-  <main>
+  <main v-if="prestation">
     <article vocab="https://schema.org/" typeof="Article">
       <div class="container intro">
         <AppBack path="prestations" menu="menu[1].label" />
