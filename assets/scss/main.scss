@@ -968,6 +968,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: max-content;
   column-gap: 12px;
   background-color: var(--background-secondary);
   font-weight: 500;
@@ -979,6 +980,10 @@ footer {
 
   .more & {
     justify-self: end;
+  }
+
+  .start & {
+    justify-self: start;
   }
 
   .error & {
