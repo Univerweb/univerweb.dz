@@ -1,22 +1,14 @@
 <script setup lang="ts">
-export interface Link {
-  path?: string
-  label?: string
-}
-
-withDefaults(defineProps<Link>(), {
-  path: 'realisations',
-  label: 'home.moreLabel.works',
-})
-
-const { t } = useI18n()
-const localePath = useLocalePath()
+defineProps<{
+  path: string
+  label: string
+}>()
 </script>
 
 <template>
   <div class="more">
-    <NuxtLink :to="localePath(path)" class="btn">
-      {{ t(label) }}
+    <NuxtLink :to="path" class="btn">
+      {{ label }}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="8"

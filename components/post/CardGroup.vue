@@ -42,6 +42,6 @@ const { data: posts } = await useAsyncData(
       <PostCard v-for="post in posts" :key="post._path" :post="post" :title-tag="titleTag" />
     </div>
 
-    <LazyAppMore v-if="more" path="blog" label="home.moreLabel.blog" class="intro-justify" />
+    <LazyAppMore v-if="more" :path="localePath('blog')" :label="t('home.moreLabel.blog')" class="intro-justify" />
   </section>
 </template>
