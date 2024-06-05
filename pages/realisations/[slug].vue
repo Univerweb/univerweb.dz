@@ -162,7 +162,7 @@ useHead({
     </article>
 
     <div v-if="workRelated && workRelated.length" class="container">
-      <div class="intro">
+      <div class="intro intro-justify">
         <h2>
           {{ t('work.related') }}
         </h2>
