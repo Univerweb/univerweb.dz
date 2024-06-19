@@ -19,7 +19,7 @@
     "@nuxtjs/sitemap": "^5.2.0",
     "@vueuse/core": "^10.11.0",
     "@vueuse/nuxt": "^10.11.0",
-    "nuxt": "^3.12.1",
+    "nuxt": "^3.12.2",
     "nuxt-gtag": "^2.0.6",
     "sass": "^1.77.6",
     "vue": "^3.4.29",
