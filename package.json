@@ -13,7 +13,7 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@nuxt/content": "^2.12.1",
+    "@nuxt/content": "^2.13.0",
     "@nuxt/image": "^1.7.0",
     "@nuxtjs/i18n": "^8.3.1",
     "@nuxtjs/sitemap": "^5.2.0",
@@ -22,8 +22,8 @@
     "nuxt": "^3.12.2",
     "nuxt-gtag": "^2.0.6",
     "sass": "^1.77.6",
-    "vue": "^3.4.29",
-    "vue-router": "^4.3.3",
+    "vue": "^3.4.30",
+    "vue-router": "^4.4.0",
     "vue3-google-map": "^0.20.0"
   },
   "devDependencies": {
