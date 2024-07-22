@@ -21,7 +21,7 @@
   }
 
   @if $spacing {
-    letter-spacing: $spacing;
+    letter-spacing: #{$spacing + 'em'};
   }
 
   @if $margin {

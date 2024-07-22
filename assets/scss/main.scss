@@ -157,7 +157,7 @@ body {
 
 h1,
 .h1 {
-  @include font(44, 700, $spacing: -0.04em, $margin: 0 24px);
+  @include font(44, 700, $spacing: -0.04, $margin: 0 24px);
 
   @media (min-width: $md) {
     @include font(56, $margin: 0 36px);
@@ -170,7 +170,7 @@ h1,
 
 h2,
 .h2 {
-  @include font(32, 500, $spacing: -0.04em, $margin: 0 24px);
+  @include font(32, 500, $spacing: -0.04, $margin: 0 24px);
 
   @media (min-width: $md) {
     @include font(42);
@@ -183,7 +183,7 @@ h2,
 
 h3,
 .h3 {
-  @include font(20, 500, $spacing: -0.02em, $margin: 0 12px);
+  @include font(20, 500, $spacing: -0.02, $margin: 0 12px);
 }
 
 h6,
@@ -814,7 +814,7 @@ footer {
 /* Components */
 
 .lead {
-  @include font(20, 500, $height: 1.3, $spacing: -0.02em);
+  @include font(20, 500, $height: 1.3, $spacing: -0.02);
 
   color: var(--color-secondary);
   transition: color var(--transition);
@@ -1298,7 +1298,7 @@ footer {
     }
 
     h2 {
-      @include font(28, 600, $spacing: -0.03em, $margin: 36px 12px);
+      @include font(28, 600, $spacing: -0.03, $margin: 36px 12px);
       color: var(--color);
       transition: color var(--transition);
     }
