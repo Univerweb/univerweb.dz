@@ -8,16 +8,16 @@
 ) {
   font-size: #{$size + 'px'};
 
+  @if $weight {
+    font-weight: $weight;
+  }
+
   @if ($height or $height-rtl) {
     line-height: $height;
 
     [dir='rtl'] & {
       line-height: $height-rtl;
     }
-  }
-
-  @if $weight {
-    font-weight: $weight;
   }
 
   @if $spacing {
