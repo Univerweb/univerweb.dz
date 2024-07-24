@@ -315,7 +315,7 @@ img {
 }
 
 .row {
-  @include grid(12, 1fr, $gap: 24px 0);
+  @include grid(12, 1fr, 24px 0);
 
   &-evenly {
     justify-content: space-evenly;
