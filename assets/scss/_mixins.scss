@@ -1,10 +1,10 @@
 @mixin font(
   $size,
   $weight: null,
-  $height: 1.1,
-  $height-rtl: 1.4,
+  $height: null,
   $spacing: null,
-  $margin: null
+  $mbs: null,
+  $mbe: null
 ) {
   font-size: #{$size + 'px'};
 
@@ -12,20 +12,20 @@
     font-weight: $weight;
   }
 
-  @if ($height or $height-rtl) {
+  @if $height {
     line-height: $height;
-
-    [dir='rtl'] & {
-      line-height: $height-rtl;
-    }
   }
 
   @if $spacing {
     letter-spacing: #{$spacing + 'em'};
   }
 
-  @if $margin {
-    margin-block: $margin;
+  @if $mbs {
+    margin-block-start: #{$mbs + 'px'};
+  }
+
+  @if $mbe {
+    margin-block-end: #{$mbe + 'px'};
   }
 }
 

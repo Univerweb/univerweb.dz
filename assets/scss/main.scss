@@ -91,11 +91,13 @@
 
   &[dir='ltr'] {
     --font-family: 'Outfit', 'Outfit fallback';
+    --line-height: 1.1;
     --origin: 0%;
   }
 
   &[dir='rtl'] {
     --font-family: 'Alexandria', 'Alexandria fallback';
+    --line-height: 1.4;
     --origin: 100%;
   }
 
@@ -157,20 +159,20 @@ body {
 
 h1,
 .h1 {
-  @include font(44, 700, $spacing: -0.04, $margin: 0 24px);
+  @include font(44, 700, var(--line-height), -0.04, 0, 24);
 
   @media (min-width: $md) {
-    @include font(56, $margin: 0 36px);
+    @include font(56, $mbe: 36);
   }
 
   @media (min-width: $lg) {
-    @include font(80, $margin: 0 48px);
+    @include font(80, $mbe: 48);
   }
 }
 
 h2,
 .h2 {
-  @include font(32, 500, $spacing: -0.04, $margin: 0 24px);
+  @include font(32, 500, var(--line-height), -0.04, 0, 24);
 
   @media (min-width: $md) {
     @include font(42);
@@ -183,12 +185,12 @@ h2,
 
 h3,
 .h3 {
-  @include font(20, 500, $spacing: -0.02, $margin: 0 12px);
+  @include font(20, 500, var(--line-height), -0.02, 0, 12);
 }
 
 h6,
 .h6 {
-  @include font(16, 500, $height: 1.5, $margin: 0);
+  @include font(16, 500, 1.5, $mbe: 0);
 }
 
 a {
@@ -221,7 +223,7 @@ ol {
   }
 
   .big-count::before {
-    @include font(56, 900);
+    @include font(56, 900, var(--line-height));
     color: var(--blue);
   }
 }
@@ -814,7 +816,7 @@ footer {
 /* Components */
 
 .lead {
-  @include font(20, 500, $height: 1.3, $spacing: -0.02);
+  @include font(20, 500, 1.3, -0.02);
 
   color: var(--color-secondary);
   transition: color var(--transition);
@@ -1085,7 +1087,7 @@ footer {
   width: max-content;
   text-transform: uppercase;
 
-  @include font(12.8, 500, $margin: 0 12px);
+  @include font(12.8, 500, var(--line-height), $mbe: 12);
 
   &:hover {
     color: var(--blue);
@@ -1298,13 +1300,13 @@ footer {
     }
 
     h2 {
-      @include font(28, 600, $spacing: -0.03, $margin: 36px 12px);
+      @include font(28, 600, $spacing: -0.03, $mbs: 36, $mbe: 12);
       color: var(--color);
       transition: color var(--transition);
     }
 
     h3 {
-      @include font(20, 600, $spacing: 0, $margin: 24px 12px);
+      @include font(20, 600, $spacing: 0, $mbs: 24);
     }
 
     a[rel='nofollow'] {
