@@ -22,12 +22,12 @@
     "nuxt": "^3.12.4",
     "nuxt-gtag": "^2.1.0",
     "sass": "^1.77.8",
-    "vue": "^3.4.35",
-    "vue-router": "^4.4.2",
-    "vue3-google-map": "^0.20.0"
+    "vue": "^3.4.36",
+    "vue-router": "^4.4.3",
+    "vue3-google-map": "^0.21.0"
   },
   "devDependencies": {
-    "@nuxt/eslint": "^0.4.0",
+    "@nuxt/eslint": "^0.5.0",
     "eslint": "^9.8.0"
   }
 }
