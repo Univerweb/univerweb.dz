@@ -15,19 +15,19 @@
   "dependencies": {
     "@nuxt/content": "^2.13.2",
     "@nuxt/image": "^1.8.0",
-    "@nuxtjs/i18n": "^8.5.3",
-    "@nuxtjs/sitemap": "^6.0.1",
-    "@vueuse/core": "^11.0.3",
-    "@vueuse/nuxt": "^11.0.3",
+    "@nuxtjs/i18n": "^8.5.5",
+    "@nuxtjs/sitemap": "^6.1.0",
+    "@vueuse/core": "^11.1.0",
+    "@vueuse/nuxt": "^11.1.0",
     "nuxt": "^3.13.1",
     "nuxt-gtag": "^3.0.1",
-    "sass": "^1.78.0",
-    "vue": "^3.5.5",
+    "sass": "^1.79.3",
+    "vue": "^3.5.8",
     "vue-router": "^4.4.5",
     "vue3-google-map": "^0.21.0"
   },
   "devDependencies": {
     "@nuxt/eslint": "^0.5.7",
-    "eslint": "^9.10.0"
+    "eslint": "^9.11.0"
   }
 }
