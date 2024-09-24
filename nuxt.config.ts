@@ -33,8 +33,8 @@ export default defineNuxtConfig({
   css: ['@/assets/scss/main.scss'],
 
   modules: [
-    '@nuxt/eslint',
     '@nuxt/content',
+    '@nuxt/eslint',
     '@nuxt/image',
     '@nuxtjs/i18n',
     '@nuxtjs/sitemap',
