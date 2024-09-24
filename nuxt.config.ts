@@ -1,4 +1,6 @@
 export default defineNuxtConfig({
+  compatibilityDate: '2024-09-24',
+
   devtools: { enabled: true },
 
   runtimeConfig: {
