@@ -28,6 +28,6 @@
   },
   "devDependencies": {
     "@nuxt/eslint": "^0.5.7",
-    "eslint": "^9.11.0"
+    "eslint": "^9.11.1"
   }
 }
