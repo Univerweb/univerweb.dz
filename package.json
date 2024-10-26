@@ -21,7 +21,7 @@
     "@vueuse/nuxt": "^11.1.0",
     "nuxt": "^3.13.2",
     "nuxt-gtag": "^3.0.1",
-    "sass": "^1.80.3",
+    "sass": "^1.80.4",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5",
     "vue3-google-map": "^0.21.0"
