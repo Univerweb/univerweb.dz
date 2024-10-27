@@ -54,9 +54,9 @@ useHead({
         },
         'logo': {
           '@type': 'ImageObject',
-          'url': `${baseUrl}/logo.svg`,
-          'width': '512px',
-          'height': '512px',
+          'url': `${baseUrl}/favicon.svg`,
+          'width': '256px',
+          'height': '256px',
         },
         'email': config.public.baseEmail,
         'telephone': '0551 90 46 22',
