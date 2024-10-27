@@ -22,6 +22,7 @@ useSeoMeta({
   twitterDescription: () => t('desc'),
   twitterImage: ogImage,
   colorScheme: 'light dark',
+  appleMobileWebAppTitle: () => t('name')
 })
 
 useHead({
@@ -35,6 +36,7 @@ useHead({
     { rel: 'icon', type: 'image/png', href: '/favicon-48x48.png', sizes: '48x48' },
     { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
     { rel: 'shortcut icon', href: '/favicon.ico' },
+    { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' },
     ...(i18nHead.value.link || []),
   ],
 
