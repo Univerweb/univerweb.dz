@@ -1,0 +1,52 @@
+{
+  "name": "Univerweb",
+  "short_name": "Univerweb",
+  "description": "Plus que des sites web, nous concevons et innovons pour vous des expériences numériques centrées sur l’humain et qui reflètent votre image de marque.",
+  "id": "/",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "background_color": "#50c8f0",
+  "orientation": "portrait",
+  "display_override": ["window-controls-overlay", "minimal-ui"],
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/web-app-manifest-192x192-maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/web-app-manifest-192x192-any.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/web-app-manifest-512x512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/web-app-manifest-512x512-any.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/images/screenshot-wide.png",
+      "sizes": "2560x1440",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/images/screenshot-narrow.png",
+      "sizes": "1280x2272",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ]
+}
