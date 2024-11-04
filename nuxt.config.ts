@@ -1,8 +1,28 @@
 export default defineNuxtConfig({
-  compatibilityDate: '2024-09-24',
-
-  devtools: { enabled: true },
-
+  modules: [
+    '@nuxt/content',
+    '@nuxt/eslint',
+    '@nuxt/image',
+    '@nuxtjs/i18n',
+    '@nuxtjs/sitemap',
+    '@vueuse/nuxt',
+    'nuxt-gtag',
+  ],
+  css: [
+    '@/assets/scss/main.scss',
+  ],
+  router: {
+    options: {
+      linkActiveClass: '',
+      linkExactActiveClass: '',
+      scrollBehaviorType: 'smooth',
+    },
+  },
+  content: {
+    markdown: {
+      anchorLinks: false,
+    },
+  },
   runtimeConfig: {
     public: {
       baseURL: process.env.BASE_URL,
@@ -13,15 +33,7 @@ export default defineNuxtConfig({
       gmapsId: process.env.GMAPS_ID,
     },
   },
-
-  router: {
-    options: {
-      linkActiveClass: '',
-      linkExactActiveClass: '',
-      scrollBehaviorType: 'smooth',
-    },
-  },
-
+  compatibilityDate: '2024-09-24',
   vite: {
     css: {
       preprocessorOptions: {
@@ -31,31 +43,26 @@ export default defineNuxtConfig({
       },
     },
   },
-
-  css: ['@/assets/scss/main.scss'],
-
-  modules: [
-    '@nuxt/content',
-    '@nuxt/eslint',
-    '@nuxt/image',
-    '@nuxtjs/i18n',
-    '@nuxtjs/sitemap',
-    '@vueuse/nuxt',
-    'nuxt-gtag',
-  ],
-
   eslint: {
     config: {
       stylistic: true,
     },
   },
-
-  content: {
-    markdown: {
-      anchorLinks: false,
-    },
+  gtag: {
+    id: process.env.GTAG_ID,
   },
-
+  i18n: {
+    locales: [
+      { code: 'fr', file: 'fr-FR.json', language: 'fr-FR' },
+      { code: 'en', file: 'en-US.json', language: 'en-US' },
+      { code: 'ar', file: 'ar-DZ.json', language: 'ar-DZ', dir: 'rtl' },
+    ],
+    lazy: true,
+    defaultLocale: 'fr',
+    detectBrowserLanguage: false,
+    baseUrl: process.env.BASE_URL,
+    skipSettingLocaleOnNavigate: true,
+  },
   image: {
     cloudinary: {
       baseURL: process.env.CDN_URL,
@@ -69,27 +76,9 @@ export default defineNuxtConfig({
       xxl: 1439,
     },
   },
-
-  i18n: {
-    locales: [
-      { code: 'fr', file: 'fr-FR.json', language: 'fr-FR' },
-      { code: 'en', file: 'en-US.json', language: 'en-US' },
-      { code: 'ar', file: 'ar-DZ.json', language: 'ar-DZ', dir: 'rtl' },
-    ],
-    lazy: true,
-    defaultLocale: 'fr',
-    detectBrowserLanguage: false,
-    baseUrl: process.env.BASE_URL,
-    skipSettingLocaleOnNavigate: true,
-  },
-
   sitemap: {
     autoLastmod: false,
     xsl: false,
     discoverImages: false,
-  },
-
-  gtag: {
-    id: process.env.GTAG_ID,
   },
 })
