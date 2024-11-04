@@ -22,7 +22,7 @@ useSeoMeta({
   twitterDescription: () => t('desc'),
   twitterImage: ogImage,
   colorScheme: 'light dark',
-  appleMobileWebAppTitle: () => t('name')
+  appleMobileWebAppTitle: () => t('name'),
 })
 
 useHead({
