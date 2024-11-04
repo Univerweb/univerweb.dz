@@ -8,11 +8,10 @@ defineProps<{
 
 const { t } = useI18n()
 const { baseUrl } = useUrl()
-const localePath = useLocalePath()
 </script>
 
 <template>
-  <NuxtLink :to="localePath(`${work._path}`)" class="card" vocab="https://schema.org/" typeof="Article">
+  <NuxtLink :to="work._path" class="card" vocab="https://schema.org/" typeof="Article">
     <span property="author publisher" typeof="Organization">
       <span property="name" :content="t('name')" />
       <span property="url" :content="baseUrl" />

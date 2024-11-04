@@ -2,7 +2,7 @@
 const { baseUrl, ogUrl, ogImage } = useUrl()
 const config = useRuntimeConfig()
 const { y } = useWindowScroll()
-const i18nHead = useLocaleHead({ addSeoAttributes: true, addDirAttribute: true })
+const head = useLocaleHead()
 const { t, finalizePendingLocaleChange } = useI18n()
 
 async function onBeforeEnter() {
@@ -27,8 +27,8 @@ useSeoMeta({
 
 useHead({
   htmlAttrs: {
-    lang: () => i18nHead.value.htmlAttrs!.lang,
-    dir: () => i18nHead.value.htmlAttrs!.dir,
+    lang: () => head.value.htmlAttrs!.lang,
+    dir: () => head.value.htmlAttrs!.dir,
     class: { scrolled: () => y.value > 0 },
   },
 
@@ -38,7 +38,7 @@ useHead({
     { rel: 'shortcut icon', href: '/favicon.ico' },
     { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' },
     { rel: 'manifest', href: '/site.webmanifest' },
-    ...(i18nHead.value.link || []),
+    ...(head.value.link || []),
   ],
 
   script: [

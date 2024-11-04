@@ -6,13 +6,12 @@ defineProps<{
   next?: Pick<Work, '_path' | 'title'>
 }>()
 
-const localePath = useLocalePath()
 const { t } = useI18n()
 </script>
 
 <template>
   <div class="container post-nav">
-    <NuxtLink v-if="prev" :to="localePath(`${prev._path}`)" class="link prev" :data-text="t('nav.prev')">
+    <NuxtLink v-if="prev" :to="prev._path" class="link prev" :data-text="t('nav.prev')">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="6"
@@ -26,7 +25,7 @@ const { t } = useI18n()
       </svg>
       {{ prev.title }}
     </NuxtLink>
-    <NuxtLink v-if="next" :to="localePath(`${next._path}`)" class="link next" :data-text="t('nav.next')">
+    <NuxtLink v-if="next" :to="next._path" class="link next" :data-text="t('nav.next')">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="6"

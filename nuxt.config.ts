@@ -77,7 +77,6 @@ export default defineNuxtConfig({
       { code: 'ar', file: 'ar-DZ.json', language: 'ar-DZ', dir: 'rtl' },
     ],
     lazy: true,
-    langDir: 'lang',
     defaultLocale: 'fr',
     detectBrowserLanguage: false,
     baseUrl: process.env.BASE_URL,

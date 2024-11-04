@@ -92,7 +92,7 @@ useHead({
       <span property="description" :content="work.description" />
 
       <div class="container intro">
-        <AppBack :path="localePath('realisations')" :label="t('menu[0].label')" />
+        <AppBack path="realisations" :label="t('menu[0].label')" />
         <h1 property="headline">
           {{ work.title }}
         </h1>
