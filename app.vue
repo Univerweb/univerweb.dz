@@ -27,8 +27,8 @@ useSeoMeta({
 
 useHead({
   htmlAttrs: {
-    lang: () => head.value.htmlAttrs!.lang,
-    dir: () => head.value.htmlAttrs!.dir,
+    lang: () => head.value.htmlAttrs?.lang,
+    dir: () => head.value.htmlAttrs?.dir,
     class: { scrolled: () => y.value > 0 },
   },
 
