@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Work } from '../../types'
+import type { Work } from '@/types'
 
 const localePath = useLocalePath()
 const { t } = useI18n()

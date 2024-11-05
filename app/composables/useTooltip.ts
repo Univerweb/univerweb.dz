@@ -1,7 +1,9 @@
 export default function useTooltip() {
   const { locale } = useI18n()
 
-  const langNext = computed(() =>
+  type LocaleType = 'fr' | 'en' | 'ar'
+
+  const langNext = computed<[LocaleType, string]>(() =>
     locale.value === 'fr'
       ? ['en', 'Français']
       : locale.value === 'en'

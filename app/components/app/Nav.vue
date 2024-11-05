@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Work } from '../../types'
+import type { Work } from '@/types'
 
 defineProps<{
   prev?: Pick<Work, '_path' | 'title'>

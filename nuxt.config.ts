@@ -33,6 +33,9 @@ export default defineNuxtConfig({
       gmapsId: process.env.GMAPS_ID,
     },
   },
+  future: {
+    compatibilityVersion: 4,
+  },
   compatibilityDate: '2024-09-24',
   vite: {
     css: {
@@ -63,6 +66,7 @@ export default defineNuxtConfig({
     baseUrl: process.env.BASE_URL,
     skipSettingLocaleOnNavigate: true,
   },
+
   image: {
     cloudinary: {
       baseURL: process.env.CDN_URL,

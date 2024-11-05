@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Work } from '../../types'
+import type { Work } from '@/types'
 
 defineProps<{
   work: Work
@@ -34,7 +34,7 @@ const { baseUrl } = useUrl()
         {{ work.title }}
       </Component>
       <p property="articleBody" class="lead">
-        {{ work.body?.children[0].children[0].value }}
+        {{ work.body?.children[0]?.children[0]?.value }}
       </p>
     </div>
   </NuxtLink>
