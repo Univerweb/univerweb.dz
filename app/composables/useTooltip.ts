@@ -18,7 +18,7 @@ export default function useTooltip() {
 
     setTimeout(() => {
       isLangNext.value = false
-    }, 2000)
+    }, 2240)
   }
 
   return {
