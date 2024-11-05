@@ -4,7 +4,7 @@ const props = defineProps<{
 }>()
 
 const { t } = useI18n()
-const i18nHead = useLocaleHead({ addSeoAttributes: true, addDirAttribute: true })
+const head = useLocaleHead()
 const { theme } = useTheme()
 const handleError = () => clearError({ redirect: '/' })
 
@@ -15,8 +15,8 @@ useSeoMeta({
 
 useHead({
   htmlAttrs: {
-    lang: () => i18nHead.value.htmlAttrs!.lang,
-    dir: () => i18nHead.value.htmlAttrs!.dir,
+    lang: () => head.value.htmlAttrs!.lang,
+    dir: () => head.value.htmlAttrs!.dir,
     class: theme,
   },
 })
