@@ -41,6 +41,7 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
+          api: 'modern',
           additionalData: '@use "@/assets/scss/_variable.scss" as *; @use "@/assets/scss/_mixins.scss" as *;',
         },
       },
