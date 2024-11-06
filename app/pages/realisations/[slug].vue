@@ -46,18 +46,6 @@ const { data: workRelated } = await useAsyncData(
   { watch: [localePath] },
 )
 
-useSeoMeta({
-  title: work.value.title,
-  description: work.value.description,
-  ogTitle: work.value.title,
-  ogDescription: work.value.description,
-  ogType: 'article',
-  ogImage,
-  twitterTitle: work.value.title,
-  twitterDescription: work.value.description,
-  twitterImage: ogImage,
-})
-
 useHead({
   script: [
     {
@@ -73,6 +61,18 @@ useHead({
       },
     },
   ],
+})
+
+useSeoMeta({
+  title: work.value.title,
+  description: work.value.description,
+  ogTitle: work.value.title,
+  ogDescription: work.value.description,
+  ogType: 'article',
+  ogImage,
+  twitterTitle: work.value.title,
+  twitterDescription: work.value.description,
+  twitterImage: ogImage,
 })
 </script>
 

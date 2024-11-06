@@ -3,8 +3,8 @@ const { t, tm, rt } = useI18n()
 const meta = useMeta('presta')
 const breadcrumb = useBreadcrumb('presta')
 
-useSeoMeta(meta)
 useHead({ script: [breadcrumb] })
+useSeoMeta(meta)
 </script>
 
 <template>

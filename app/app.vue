@@ -10,22 +10,6 @@ async function onBeforeEnter() {
   await finalizePendingLocaleChange()
 }
 
-useSeoMeta({
-  titleTemplate: (titleChunk) => { return titleChunk ? `${titleChunk} - ${t('name')}` : `${t('title')} - ${t('name')}` },
-  description: () => t('desc'),
-  ogTitle: () => t('title'),
-  ogDescription: () => t('desc'),
-  ogType: 'website',
-  ogUrl,
-  ogImage,
-  twitterCard: 'summary_large_image',
-  twitterTitle: () => t('title'),
-  twitterDescription: () => t('desc'),
-  twitterImage: ogImage,
-  colorScheme: 'light dark',
-  appleMobileWebAppTitle: () => t('name'),
-})
-
 useHead({
   htmlAttrs: {
     lang: () => head.value.htmlAttrs!.lang,
@@ -77,6 +61,22 @@ useHead({
       },
     },
   ],
+})
+
+useSeoMeta({
+  titleTemplate: (titleChunk) => { return titleChunk ? `${titleChunk} - ${t('name')}` : `${t('title')} - ${t('name')}` },
+  description: () => t('desc'),
+  ogTitle: () => t('title'),
+  ogDescription: () => t('desc'),
+  ogType: 'website',
+  ogUrl,
+  ogImage,
+  twitterCard: 'summary_large_image',
+  twitterTitle: () => t('title'),
+  twitterDescription: () => t('desc'),
+  twitterImage: ogImage,
+  colorScheme: 'light dark',
+  appleMobileWebAppTitle: () => t('name'),
 })
 </script>
 

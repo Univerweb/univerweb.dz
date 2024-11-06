@@ -36,18 +36,6 @@ const { data: postSurround } = await useAsyncData(
   { watch: [localePath] },
 )
 
-useSeoMeta({
-  title: post.value.title,
-  description: post.value.description,
-  ogTitle: post.value.title,
-  ogDescription: post.value.description,
-  ogType: 'article',
-  ogImage,
-  twitterTitle: post.value.title,
-  twitterDescription: post.value.description,
-  twitterImage: ogImage,
-})
-
 useHead({
   script: [
     {
@@ -63,6 +51,18 @@ useHead({
       },
     },
   ],
+})
+
+useSeoMeta({
+  title: post.value.title,
+  description: post.value.description,
+  ogTitle: post.value.title,
+  ogDescription: post.value.description,
+  ogType: 'article',
+  ogImage,
+  twitterTitle: post.value.title,
+  twitterDescription: post.value.description,
+  twitterImage: ogImage,
 })
 </script>
 

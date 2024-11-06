@@ -3,8 +3,8 @@ const { t, tm, rt } = useI18n()
 const meta = useMeta('agency')
 const breadcrumb = useBreadcrumb('agency')
 
-useSeoMeta(meta)
 useHead({ script: [breadcrumb] })
+useSeoMeta(meta)
 
 interface Agency {
   [key: number]: string

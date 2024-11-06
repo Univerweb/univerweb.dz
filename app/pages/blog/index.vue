@@ -2,8 +2,8 @@
 const meta = useMeta('blog')
 const breadcrumb = useBreadcrumb('blog')
 
-useSeoMeta(meta)
 useHead({ script: [breadcrumb] })
+useSeoMeta(meta)
 </script>
 
 <template>

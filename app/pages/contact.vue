@@ -22,8 +22,8 @@ function zoom() {
   }
 }
 
-useSeoMeta(meta)
 useHead({ script: [breadcrumb] })
+useSeoMeta(meta)
 </script>
 
 <template>

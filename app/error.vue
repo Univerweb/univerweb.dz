@@ -8,17 +8,17 @@ const head = useLocaleHead()
 const { theme } = useTheme()
 const handleError = () => clearError({ redirect: '/' })
 
-useSeoMeta({
-  title: `${props.error.statusCode} -  ${t('name')}`,
-  robots: { noindex: true, follow: true },
-})
-
 useHead({
   htmlAttrs: {
     lang: () => head.value.htmlAttrs!.lang,
     dir: () => head.value.htmlAttrs!.dir,
     class: theme,
   },
+})
+
+useSeoMeta({
+  title: `${props.error.statusCode} -  ${t('name')}`,
+  robots: { noindex: true, follow: true },
 })
 </script>
 
