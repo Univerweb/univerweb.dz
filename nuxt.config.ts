@@ -8,9 +8,11 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-gtag',
   ],
+
   css: [
     '@/assets/scss/main.scss',
   ],
+
   router: {
     options: {
       linkActiveClass: '',
@@ -18,11 +20,13 @@ export default defineNuxtConfig({
       scrollBehaviorType: 'smooth',
     },
   },
+
   content: {
     markdown: {
       anchorLinks: false,
     },
   },
+
   runtimeConfig: {
     public: {
       baseURL: process.env.BASE_URL,
@@ -33,10 +37,13 @@ export default defineNuxtConfig({
       gmapsId: process.env.GMAPS_ID,
     },
   },
+
   future: {
     compatibilityVersion: 4,
   },
-  compatibilityDate: '2024-09-24',
+
+  compatibilityDate: '2024-11-06',
+
   vite: {
     css: {
       preprocessorOptions: {
@@ -47,14 +54,17 @@ export default defineNuxtConfig({
       },
     },
   },
+
   eslint: {
     config: {
       stylistic: true,
     },
   },
+
   gtag: {
     id: process.env.GTAG_ID,
   },
+
   i18n: {
     locales: [
       { code: 'fr', file: 'fr-FR.json', language: 'fr-FR' },
@@ -81,6 +91,7 @@ export default defineNuxtConfig({
       xxl: 1439,
     },
   },
+
   sitemap: {
     autoLastmod: false,
     xsl: false,
