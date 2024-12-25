@@ -18,7 +18,7 @@ useHead({
 
 useSeoMeta({
   title: `${props.error.statusCode} -  ${t('name')}`,
-  robots: { noindex: true, follow: true },
+  robots: { noindex: true },
 })
 </script>
 
