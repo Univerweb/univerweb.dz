@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { Post } from '@/types'
 
-export interface Props {
+interface Props {
   limit?: number
   headlineTag?: string
   more?: boolean

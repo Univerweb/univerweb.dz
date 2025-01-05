@@ -1,14 +1,14 @@
 <script setup lang="ts">
-export interface Link {
-  path: string
-  label: string
-}
-
 const { t, tm, rt, locale } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 const { menuOpen, closeMenu, toggleMenu } = useMenu()
 const { theme, toggleTheme } = useTheme()
 const { langNext, isLangNext, langTooltip } = useTooltip()
+
+interface Link {
+  path: string
+  label: string
+}
 </script>
 
 <template>
