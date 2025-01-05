@@ -17,9 +17,9 @@ useHead({
 
 <template>
   <header>
-    <a href="#main" class="skip">
+    <NuxtLink to="#main" class="skip">
       {{ t('skip') }}
-    </a>
+    </NuxtLink>
 
     <NuxtLinkLocale to="/" class="logo" :aria-label="t('name')">
       <svg
