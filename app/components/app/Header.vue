@@ -9,10 +9,6 @@ const switchLocalePath = useSwitchLocalePath()
 const { menuOpen, closeMenu, toggleMenu } = useMenu()
 const { theme, toggleTheme } = useTheme()
 const { langNext, isLangNext, langTooltip } = useTooltip()
-
-useHead({
-  htmlAttrs: { class: theme },
-})
 </script>
 
 <template>
