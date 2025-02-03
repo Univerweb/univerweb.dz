@@ -1,11 +1,4 @@
 <script setup lang="ts">
-const { t, tm, rt } = useI18n()
-const meta = useMeta('agency')
-const breadcrumb = useBreadcrumb('agency')
-
-useHead({ script: [breadcrumb] })
-useSeoMeta(meta)
-
 interface Agency {
   [key: number]: string
 }
@@ -23,6 +16,13 @@ const classChoose: Agency = {
   2: 'col--1-6',
   3: 'col--7-12',
 }
+
+const { t, tm, rt } = useI18n()
+const meta = useMeta('agency')
+const breadcrumb = useBreadcrumb('agency')
+
+useHead({ script: [breadcrumb] })
+useSeoMeta(meta)
 </script>
 
 <template>
