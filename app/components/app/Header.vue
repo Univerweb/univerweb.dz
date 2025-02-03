@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const { y } = useWindowScroll()
 const { t, tm, rt, locale } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 const { menuOpen, closeMenu, toggleMenu } = useMenu()
@@ -9,6 +10,12 @@ interface Link {
   path: string
   label: string
 }
+
+useHead({
+  htmlAttrs: {
+    class: () => ({ scrolled: y.value > 0, [theme.value]: true }),
+  },
+})
 </script>
 
 <template>

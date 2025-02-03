@@ -1,8 +1,6 @@
 <script setup lang="ts">
 const { t, finalizePendingLocaleChange } = useI18n()
 const head = useLocaleHead()
-const { y } = useWindowScroll()
-const { theme } = useTheme()
 const { baseUrl, ogUrl, ogImage } = useUrl()
 const config = useRuntimeConfig()
 const { progress } = useLoadingIndicator()
@@ -15,7 +13,6 @@ useHead({
   htmlAttrs: {
     lang: () => head.value.htmlAttrs!.lang,
     dir: () => head.value.htmlAttrs!.dir,
-    class: () => ({ scrolled: y.value > 0, [theme.value]: true }),
   },
 
   link: () => [
