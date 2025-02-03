@@ -1,15 +1,15 @@
 <script setup lang="ts">
+interface Menu {
+  path: string
+  label: string
+}
+
 const { y } = useWindowScroll()
 const { t, tm, rt, locale } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 const { menuOpen, closeMenu, toggleMenu } = useMenu()
 const { theme, toggleTheme } = useTheme()
 const { langNext, isLangNext, langTooltip } = useTooltip()
-
-interface Link {
-  path: string
-  label: string
-}
 
 useHead({
   htmlAttrs: {
@@ -53,7 +53,7 @@ useHead({
 
     <nav class="nav" :style="{ '--item-total': tm('menu').length }">
       <ul class="menu">
-        <li v-for="(item, index) in (tm('menu') as Link[])" :key="index">
+        <li v-for="(item, index) in (tm('menu') as Menu[])" :key="index">
           <NuxtLinkLocale :to="rt(item.path)" active-class="active" :style="{ '--item-number': index }" @click.enter="closeMenu()">
             {{ rt(item.label) }}
           </NuxtLinkLocale>
