@@ -2,8 +2,6 @@
 import { GoogleMap, CustomMarker } from 'vue3-google-map'
 
 const { t, locale } = useI18n()
-const breadcrumb = useBreadcrumb('contact')
-const meta = useMeta('contact')
 const config = useRuntimeConfig()
 
 const position = {
@@ -22,8 +20,8 @@ function zoom() {
   }
 }
 
-useHead({ script: [breadcrumb] })
-useSeoMeta(meta)
+useHead({ script: [useBreadcrumb('contact')] })
+useSeoMeta(useMeta('contact'))
 </script>
 
 <template>

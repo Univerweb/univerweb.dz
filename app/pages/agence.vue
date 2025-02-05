@@ -19,11 +19,9 @@ const classChoose: Record<number, string> = {
 }
 
 const { t, tm, rt } = useI18n()
-const breadcrumb = useBreadcrumb('agency')
-const meta = useMeta('agency')
 
-useHead({ script: [breadcrumb] })
-useSeoMeta(meta)
+useHead({ script: [useBreadcrumb('agency')] })
+useSeoMeta(useMeta('agency'))
 </script>
 
 <template>
