@@ -13,28 +13,6 @@ const { data: prestations } = await useAsyncData(
   { watch: [localePath] },
 )
 
-type Key = {
-  [key: number]: string
-}
-
-const classTitle: Key = {
-  0: 'intro-end',
-  1: '',
-  2: 'intro-end',
-}
-
-const classDescription: Key = {
-  0: '7-12',
-  1: '1-6',
-  2: '7-12',
-}
-
-const classTags: Key = {
-  0: '3-6',
-  1: '7-10',
-  2: '3-6',
-}
-
 useSeoMeta(useMeta('presta'))
 useHead({ script: [useBreadcrumb('presta')] })
 </script>
@@ -49,23 +27,23 @@ useHead({ script: [useBreadcrumb('presta')] })
     </div>
 
     <div v-for="(prestation, index) in prestations" :key="index" class="container">
-      <div :class="`intro ${classTitle[index]}`">
+      <div :class="`intro ${['intro-end', '', 'intro-end'][index]}`">
         <h2>
           {{ prestation.title }}
         </h2>
       </div>
       <div class="row row-center">
-        <p :class="`lead col col--${classDescription[index]}`">
+        <p :class="`lead col col--${['7-12', '1-6', '7-12'][index]}`">
           {{ prestation.description }}
         </p>
-        <ul :class="`col col--${classTags[index]}`">
+        <ul :class="`col col--${['3-6', '7-10', '3-6'][index]}`">
           <li v-for="tag in prestation.tags" :key="tag" class="tag tag-bold">
             {{ tag }}
           </li>
         </ul>
       </div>
       <div class="row">
-        <AppMore :path="prestation._path" :label="prestation.title" :class="`start col--${classDescription[index]}`" />
+        <AppMore :path="prestation._path" :label="prestation.title" :class="`start col--${['7-12', '1-6', '7-12'][index]}`" />
       </div>
     </div>
 
