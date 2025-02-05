@@ -4,8 +4,6 @@ import type { Presta } from '../../types'
 const { path } = useRoute()
 const localePath = useLocalePath()
 const { t } = useI18n()
-const meta = useMeta('presta')
-const breadcrumb = useBreadcrumb('presta')
 
 const { data: prestations } = await useAsyncData(
   `prestations${path}`,
@@ -37,8 +35,8 @@ const classTags: Key = {
   2: '3-6',
 }
 
-useSeoMeta(meta)
-useHead({ script: [breadcrumb] })
+useSeoMeta(useMeta('presta'))
+useHead({ script: [useBreadcrumb('presta')] })
 </script>
 
 <template>
