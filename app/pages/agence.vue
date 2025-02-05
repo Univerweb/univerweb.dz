@@ -4,20 +4,6 @@ interface Agency {
   name: string
 }
 
-const classMethod: Record<number, string> = {
-  0: 'col--1-6 col--1-3',
-  1: 'col--7-12 col--4-6',
-  2: 'col--1-6 col--7-9',
-  3: 'col--7-12 col--10-12',
-}
-
-const classChoose: Record<number, string> = {
-  0: 'col--1-6',
-  1: 'col--7-12',
-  2: 'col--1-6',
-  3: 'col--7-12',
-}
-
 const { t, tm, rt } = useI18n()
 
 useHead({ script: [useBreadcrumb('agency')] })
@@ -40,7 +26,7 @@ useSeoMeta(useMeta('agency'))
         </h2>
       </div>
       <ol class="row">
-        <li v-for="(value, name, index) in (tm('agency.method.content') as Agency)" :key="index" :class="`big-count col ${classMethod[index]}`">
+        <li v-for="(value, name, index) in (tm('agency.method.content') as Agency)" :key="index" :class="`big-count col ${['col--1-6 col--1-3', 'col--7-12 col--4-6', 'col--1-6 col--7-9', 'col--7-12 col--10-12'][index]}`">
           <h3>{{ name }}</h3>
           <p class="lead">
             {{ rt(value) }}
@@ -56,7 +42,7 @@ useSeoMeta(useMeta('agency'))
         </h2>
       </div>
       <div class="row">
-        <div v-for="(value, name, index) in (tm('agency.choose.content') as Agency)" :key="index" :class="`col ${classChoose[index]}`">
+        <div v-for="(value, name, index) in (tm('agency.choose.content') as Agency)" :key="index" :class="`col ${['col--1-6', 'col--7-12', 'col--1-6', 'col--7-12'][index]}`">
           <h3>{{ name }}</h3>
           <p class="lead">
             {{ rt(value) }}
