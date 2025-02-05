@@ -1,16 +1,17 @@
 <script setup lang="ts">
 interface Agency {
-  [key: number]: string
+  value: string
+  name: string
 }
 
-const classMethod: Agency = {
+const classMethod: Record<number, string> = {
   0: 'col--1-6 col--1-3',
   1: 'col--7-12 col--4-6',
   2: 'col--1-6 col--7-9',
   3: 'col--7-12 col--10-12',
 }
 
-const classChoose: Agency = {
+const classChoose: Record<number, string> = {
   0: 'col--1-6',
   1: 'col--7-12',
   2: 'col--1-6',
