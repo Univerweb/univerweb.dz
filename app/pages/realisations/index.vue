@@ -1,6 +1,6 @@
 <script setup lang="ts">
-const meta = useMeta('works')
 const breadcrumb = useBreadcrumb('works')
+const meta = useMeta('works')
 
 useHead({ script: [breadcrumb] })
 useSeoMeta(meta)

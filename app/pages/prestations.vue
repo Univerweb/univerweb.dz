@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { t, tm, rt } = useI18n()
-const meta = useMeta('presta')
 const breadcrumb = useBreadcrumb('presta')
+const meta = useMeta('presta')
 
 useHead({ script: [breadcrumb] })
 useSeoMeta(meta)
