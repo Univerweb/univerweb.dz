@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Presta } from '../../types'
+import type { ParsedContent } from '../../types'
 
 const localePath = useLocalePath()
 const { t } = useI18n()
@@ -7,7 +7,7 @@ const { path } = useRoute()
 
 const { data: prestation } = await useAsyncData(
   `prestation${path}`,
-  () => queryContent<Presta>()
+  () => queryContent<Pick<ParsedContent, '_path' | 'title' | 'description' | 'tags' | 'body'>>()
     .only(['title'])
     .where({ _path: path })
     .findOne(),
