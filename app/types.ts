@@ -32,5 +32,5 @@ export interface Presta extends ParsedContent {
   faq: {
     question: string
     answer: string
-  }
+  }[]
 }
