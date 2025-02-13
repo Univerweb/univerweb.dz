@@ -3,7 +3,7 @@ interface MarkdownNode {
   children: MarkdownNode[]
 }
 
-export interface ParsedContent {
+interface ParsedContent {
   _path: string
   title: string
   description: string
@@ -25,5 +25,12 @@ export interface Post extends ParsedContent {
   }
   body?: {
     children: MarkdownNode[]
+  }
+}
+
+export interface Presta extends ParsedContent {
+  faq: {
+    question: string
+    answer: string
   }
 }
