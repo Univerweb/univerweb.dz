@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ParsedContent } from '../../types'
+import type { Presta } from '../../types'
 
 const { path } = useRoute()
 const localePath = useLocalePath()
@@ -7,7 +7,7 @@ const { t } = useI18n()
 
 const { data: prestations } = await useAsyncData(
   `prestations${path}`,
-  () => queryContent<Pick<ParsedContent, '_path' | 'title' | 'description' | 'tags' | 'body'>>(localePath('prestations'))
+  () => queryContent<Pick<Presta, '_path' | 'title' | 'description' | 'tags' | 'body'>>(localePath('prestations'))
     .only(['_path', 'title', 'description', 'tags', 'body'])
     .find(),
   { watch: [localePath] },
