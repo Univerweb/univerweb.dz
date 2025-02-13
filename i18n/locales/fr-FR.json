@@ -56,7 +56,8 @@
     "title": "@:menu[1].label",
     "desc": "Une stratégie de présence web accomplie, sur des fondements technologiques et une méthodologie rigoureuse.",
     "headline": "Ce dont nous sommes capables.",
-    "lead": "De nos jours quiconque peut faire un site web, y compris votre neveu de 13 ans ! Mais qui peut réellement concrétiser une stratégie de présence web accomplie, sur des fondements technologiques et une méthodologie rigoureuse."
+    "lead": "De nos jours quiconque peut faire un site web, y compris votre neveu de 13 ans ! Mais qui peut réellement concrétiser une stratégie de présence web accomplie, sur des fondements technologiques et une méthodologie rigoureuse.",
+    "faq": "FAQ"
   },
   "agency": {
     "title": "@:menu[2].label",
