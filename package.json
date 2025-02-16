@@ -17,18 +17,18 @@
     "@nuxt/image": "^1.9.0",
     "@nuxtjs/i18n": "^9.2.0",
     "@nuxtjs/sitemap": "^7.2.4",
-    "@vueuse/core": "^12.5.0",
-    "@vueuse/nuxt": "^12.5.0",
+    "@vueuse/core": "^12.7.0",
+    "@vueuse/nuxt": "^12.7.0",
     "nuxt": "^3.15.4",
     "nuxt-gtag": "^3.0.2",
-    "sass": "^1.84.0",
+    "sass": "^1.85.0",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0",
     "vue3-google-map": "^0.21.1"
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.0.1",
-    "eslint": "^9.20.0",
+    "eslint": "^9.20.1",
     "typescript": "^5.7.3"
   }
 }
