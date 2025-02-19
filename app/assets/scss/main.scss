@@ -1251,41 +1251,37 @@ footer {
 }
 
 .faq {
-  padding-block: 24px;
+  padding-block: 24px 12px;
   border-bottom: 1px solid var(--background-secondary);
   transition: border-color var(--transition);
 
-  h3 {
-    margin-block-end: 0;
+  button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: start;
+    column-gap: 24px;
+    width: 100%;
+    font-weight: inherit;
 
-    button {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      text-align: start;
-      column-gap: 24px;
-      width: 100%;
-      font-weight: inherit;
+    .icon {
+      position: relative;
+      width: 20px;
+      height: 20px;
 
-      .icon {
-        position: relative;
-        width: 20px;
-        height: 20px;
+      span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        background-color: currentcolor;
+        width: 16px;
+        height: 2px;
+        border-radius: 2em;
+        transform: translate(-50%, -50%);
+        transition: transform var(--transition);
 
-        span {
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          background-color: currentcolor;
-          width: 16px;
-          height: 2px;
-          border-radius: 2em;
-          transform: translate(-50%, -50%);
-          transition: transform var(--transition);
-
-          &.active {
-            transform: translate(-50%, -50%) rotate(-90deg);
-          }
+        &.expanded {
+          transform: translate(-50%, -50%) rotate(-90deg);
         }
       }
     }
@@ -1293,6 +1289,11 @@ footer {
 
   section {
     color: var(--color-secondary);
+    transition: height var(--transition);
+
+    p {
+      margin-bottom: 12px;
+    }
   }
 }
 
