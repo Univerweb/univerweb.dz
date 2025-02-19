@@ -338,6 +338,7 @@ img {
 
   @media (min-width: $md) {
     @include col(1, 6);
+    @include col(1, 9);
     @include col(3, 6, $order: -1);
     @include col(7, 10);
     @include col(7, 12);
@@ -1241,6 +1242,52 @@ footer {
 
   img {
     box-shadow: 0 0 40px 0 rgba(var(--shadow));
+  }
+}
+
+.faq {
+  padding-block: 24px;
+  border-bottom: 1px solid var(--background-secondary);
+  transition: border-color var(--transition);
+
+  h3 {
+    margin-block-end: 0;
+
+    button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: start;
+      column-gap: 24px;
+      width: 100%;
+      font-weight: inherit;
+
+      .icon {
+        position: relative;
+        width: 20px;
+        height: 20px;
+
+        span {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          background-color: currentcolor;
+          width: 16px;
+          height: 2px;
+          border-radius: 2em;
+          transform: translate(-50%, -50%);
+          transition: transform var(--transition);
+
+          &.active {
+            transform: translate(-50%, -50%) rotate(-90deg);
+          }
+        }
+      }
+    }
+  }
+
+  section {
+    color: var(--color-secondary);
   }
 }
 
