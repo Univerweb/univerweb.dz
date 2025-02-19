@@ -20,6 +20,12 @@ if (!presta.value) {
     fatal: true,
   })
 }
+
+const activeIndex = ref<number | null>(null)
+
+const toggle = (index: number) => {
+  activeIndex.value = activeIndex.value === index ? null : index
+}
 </script>
 
 <template>
@@ -32,5 +38,40 @@ if (!presta.value) {
         </h1>
       </div>
     </article>
+
+    <section v-if="presta.faq" class="container">
+      <div class="intro">
+        <h2>{{ t('presta.faq') }}</h2>
+      </div>
+
+      <div v-for="(faq, index) in presta.faq" :key="index" class="faq row">
+        <h3 class="col">
+          <button
+            :id="`faq-header-${index + 1}`"
+            :aria-expanded="activeIndex === index"
+            :aria-controls="`faq-panel-${index + 1}`"
+            @click="toggle(index)"
+          >
+            {{ faq.question }}
+            <span class="icon" aria-hidden="true">
+              <span :class="{ active: activeIndex === index }" />
+              <span />
+            </span>
+          </button>
+        </h3>
+
+        <section
+          v-show="activeIndex === index"
+          :id="`faq-panel-${index + 1}`"
+          :aria-labelledby="`faq-header-${index + 1}`"
+          :aria-hidden="activeIndex !== index"
+          class="col col--1-9"
+        >
+          <p>
+            {{ faq.answer }}
+          </p>
+        </section>
+      </div>
+    </section>
   </main>
 </template>
