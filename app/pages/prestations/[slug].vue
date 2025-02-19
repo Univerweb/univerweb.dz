@@ -26,6 +26,36 @@ const activeIndex = ref<number | null>(null)
 const toggle = (index: number) => {
   activeIndex.value = activeIndex.value === index ? null : index
 }
+
+const beforeEnter = (el: Element) => {
+  const elHTMLElement = el as HTMLElement
+  elHTMLElement.style.height = '0'
+  elHTMLElement.style.overflow = 'hidden'
+}
+
+const enter = (el: Element) => {
+  const elHTMLElement = el as HTMLElement
+  elHTMLElement.style.height = elHTMLElement.scrollHeight + 'px'
+}
+
+const afterEnter = (el: Element) => {
+  const elHTMLElement = el as HTMLElement
+  elHTMLElement.style.height = 'auto'
+  elHTMLElement.style.overflow = 'visible'
+}
+
+const beforeLeave = (el: Element) => {
+  const elHTMLElement = el as HTMLElement
+  elHTMLElement.style.height = elHTMLElement.scrollHeight + 'px'
+}
+
+const leave = (el: Element) => {
+  const elHTMLElement = el as HTMLElement
+  nextTick(() => {
+    elHTMLElement.style.height = '0'
+    elHTMLElement.style.overflow = 'hidden'
+  })
+}
 </script>
 
 <template>
@@ -44,33 +74,23 @@ const toggle = (index: number) => {
         <h2>{{ t('presta.faq') }}</h2>
       </div>
 
-      <div v-for="(faq, index) in presta.faq" :key="index" class="faq row">
+      <div v-for="(faq, index) in presta.faq" :key="index" class="faq">
         <h3 class="col">
-          <button
-            :id="`faq-header-${index + 1}`"
-            :aria-expanded="activeIndex === index"
-            :aria-controls="`faq-panel-${index + 1}`"
-            @click="toggle(index)"
-          >
+          <button :id="`faq-header-${index + 1}`" :aria-expanded="activeIndex === index" :aria-controls="`faq-panel-${index + 1}`" @click="toggle(index)">
             {{ faq.question }}
             <span class="icon" aria-hidden="true">
-              <span :class="{ active: activeIndex === index }" />
+              <span :class="{ expanded: activeIndex === index }" />
               <span />
             </span>
           </button>
         </h3>
-
-        <section
-          v-show="activeIndex === index"
-          :id="`faq-panel-${index + 1}`"
-          :aria-labelledby="`faq-header-${index + 1}`"
-          :aria-hidden="activeIndex !== index"
-          class="col col--1-9"
-        >
-          <p>
-            {{ faq.answer }}
-          </p>
-        </section>
+        <Transition @before-enter="beforeEnter" @enter="enter" @after-enter="afterEnter" @before-leave="beforeLeave" @leave="leave">
+          <section v-show="activeIndex === index" :id="`faq-panel-${index + 1}`" :aria-labelledby="`faq-header-${index + 1}`" :aria-hidden="activeIndex !== index" class="row">
+            <p class="col col--1-9">
+              {{ faq.answer }}
+            </p>
+          </section>
+        </Transition>
       </div>
     </section>
   </main>
