@@ -9,8 +9,8 @@ defineProps<{
 
 <template>
   <div class="card-presta">
-    <ul>
-      <li v-for="tag in presta.tags" :key="tag" property="keywords" class="tag">
+    <ul class="tags">
+      <li v-for="tag in presta.tags" :key="tag">
         {{ tag }}
       </li>
     </ul>
