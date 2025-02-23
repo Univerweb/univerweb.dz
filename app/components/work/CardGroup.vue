@@ -40,10 +40,6 @@ const { data: works } = await useAsyncData(
     </div>
 
     <div class="card-group">
-      <WorkCard v-for="work in works" :key="work._path" :work="work" :title-tag="titleTag" />
-    </div>
-
-    <div class="card-group">
       <NuxtLink
         v-for="work in works"
         :key="work._path"
