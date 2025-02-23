@@ -21,9 +21,6 @@ useHead({ script: [useBreadcrumb('presta')] })
   <main>
     <div class="container intro">
       <h1>{{ t('presta.headline') }}</h1>
-      <p class="lead">
-        {{ t('presta.lead') }}
-      </p>
     </div>
 
     <div v-for="(prestation, index) in prestations" :key="index" class="container">
