@@ -31,21 +31,9 @@ const { data: prestations } = await useAsyncData(
         {{ t('presta.headline') }}
       </Component>
     </div>
+
     <div class="card-group">
-      <div v-for="presta in prestations" :key="presta._path" class="card-presta">
-        <ul>
-          <li v-for="tag in presta.tags" :key="tag" property="keywords" class="tag">
-            {{ tag }}
-          </li>
-        </ul>
-        <Component :is="titleTag">
-          {{ presta.title }}
-        </Component>
-        <p class="lead">
-          {{ presta.description }}
-        </p>
-        <AppMore :path="presta._path" :label="presta.title" />
-      </div>
+      <PrestaCard v-for="presta in prestations" :key="presta._path" :presta="presta" :title-tag="titleTag" />
     </div>
   </section>
 </template>
