@@ -18,7 +18,6 @@ const props = withDefaults(defineProps<Props>(), {
 const { path } = useRoute()
 const localePath = useLocalePath()
 const { t } = useI18n()
-const { baseUrl } = useUrl()
 
 const { data: posts } = await useAsyncData(
   `posts${path}`,
@@ -40,48 +39,7 @@ const { data: posts } = await useAsyncData(
     </div>
 
     <div class="card-group">
-      <NuxtLink
-        v-for="post in posts"
-        :key="post._path"
-        :to="post._path"
-        class="card"
-        vocab="https://schema.org/"
-        typeof="Article"
-      >
-        <span property="publisher" typeof="Organization">
-          <meta property="name" :content="t('name')">
-          <meta property="url" :content="baseUrl">
-        </span>
-        <span v-if="post.author && post.author.name && post.author.url" property="author" typeof="Person">
-          <meta property="name" :content="post.author.name">
-          <meta property="url" :content="post.author.url">
-        </span>
-        <span v-else property="author" typeof="Organization">
-          <meta property="name" :content="t('name')">
-          <meta property="url" :content="baseUrl">
-        </span>
-        <time property="dateCreated datePublished" :datetime="post.createdAt.toString()" />
-        <time property="dateModified" :datetime="post.updatedAt.toString()" />
-        <meta property="articleSection" :content="t('blog.title')">
-
-        <AppPicture :picture="post" />
-
-        <div class="overlay" />
-
-        <div class="inner">
-          <ul>
-            <li v-for="tag in post.tags" :key="tag" property="keywords" class="h3 tag">
-              {{ tag }}
-            </li>
-          </ul>
-          <Component :is="titleTag" property="headline">
-            {{ post.title }}
-          </Component>
-          <p property="description" class="lead">
-            {{ post.description }}
-          </p>
-        </div>
-      </NuxtLink>
+      <PostCard v-for="post in posts" :key="post._path" :post="post" :title-tag="titleTag" />
     </div>
 
     <LazyAppMore v-if="more" path="blog" :label="t('home.moreLabel.blog')" class="intro-justify" />
