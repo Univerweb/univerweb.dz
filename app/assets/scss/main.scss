@@ -938,7 +938,6 @@ footer {
 .card-presta {
   display: grid;
   grid-auto-rows: auto auto 1fr auto;
-  row-gap: 12px;
   border-radius: var(--padding-y);
   background-color: var(--background-secondary);
   transition: background-color var(--transition);
@@ -952,11 +951,7 @@ footer {
   h2,
   h3 {
     @include font(32);
-    margin: 0;
-  }
-
-  p {
-    margin-top: var(--padding-y);
+    margin-block: 12px calc(var(--padding-y) * 2);
   }
 }
 
