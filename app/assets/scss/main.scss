@@ -829,21 +829,13 @@ footer {
   }
 }
 
-.tag {
-  display: inline-block;
-  margin-inline-end: 12px;
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-weight: 500;
 
-  &-bold {
-    color: var(--color-secondary);
-    font-weight: 500;
-    transition: color var(--transition);
-  }
-
-  &:last-child {
-    margin-inline-end: 0;
-  }
-
-  &::before {
+  li::before {
     content: '#';
     color: var(--blue);
     margin-inline-end: 3px;
@@ -895,8 +887,8 @@ footer {
     padding: var(--padding-y);
   }
 
-  .tag::before {
-    color: #fff;
+  .tags li::before {
+    color: currentcolor;
   }
 
   h2,
@@ -1260,7 +1252,7 @@ footer {
     transition: color var(--transition);
 
     @media (min-width: $md) {
-      ul {
+      .tags {
         position: relative;
         display: inline-flex;
         margin-inline-start: 12px;

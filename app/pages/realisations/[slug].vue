@@ -126,8 +126,8 @@ useSeoMeta({
           <h2 class="h6">
             {{ t('work.services') }}
           </h2>
-          <ul class="lead">
-            <li v-for="tag in work.tags" :key="tag" property="keywords" class="tag">
+          <ul class="lead tags">
+            <li v-for="tag in work.tags" :key="tag" property="keywords">
               {{ tag }}
             </li>
           </ul>

@@ -22,8 +22,8 @@ useSeoMeta(useMeta('presta'))
         <p class="col col--7-12 lead">
           {{ t('presta.webDesign.content') }}
         </p>
-        <ul class="col col--3-6">
-          <li v-for="tag in (tm('presta.webDesign.tags') as string[])" :key="rt(tag)" class="tag tag-bold">
+        <ul class="tags col col--3-6">
+          <li v-for="tag in (tm('presta.webDesign.tags') as string[])" :key="rt(tag)">
             {{ rt(tag) }}
           </li>
         </ul>
@@ -38,8 +38,8 @@ useSeoMeta(useMeta('presta'))
         <p class="col col--1-6 lead">
           {{ t('presta.dev.content') }}
         </p>
-        <ul class="col col--7-10">
-          <li v-for="tag in (tm('presta.dev.tags') as string[])" :key="rt(tag)" class="tag tag-bold">
+        <ul class="tags col col--7-10">
+          <li v-for="tag in (tm('presta.dev.tags') as string[])" :key="rt(tag)">
             {{ rt(tag) }}
           </li>
         </ul>
@@ -54,8 +54,8 @@ useSeoMeta(useMeta('presta'))
         <p class="col col--7-12 lead">
           {{ t('presta.support.content') }}
         </p>
-        <ul class="col col--3-6">
-          <li v-for="tag in (tm('presta.support.tags') as string[])" :key="rt(tag)" class="tag tag-bold">
+        <ul class="tags col col--3-6">
+          <li v-for="tag in (tm('presta.support.tags') as string[])" :key="rt(tag)">
             {{ rt(tag) }}
           </li>
         </ul>

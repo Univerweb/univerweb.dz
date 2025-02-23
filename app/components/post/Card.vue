@@ -33,8 +33,8 @@ const { baseUrl } = useUrl()
     <div class="overlay" />
 
     <div class="inner">
-      <ul>
-        <li v-for="tag in post.tags" :key="tag" property="keywords" class="h3 tag">
+      <ul class="tags">
+        <li v-for="tag in post.tags" :key="tag" property="keywords">
           {{ tag }}
         </li>
       </ul>
