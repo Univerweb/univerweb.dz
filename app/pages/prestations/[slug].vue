@@ -8,7 +8,7 @@ const { path } = useRoute()
 const { data: presta } = await useAsyncData(
   `presta${path}`,
   () => queryContent<Presta>()
-    .only(['title', 'faq'])
+    .only(['title', 'description', 'faq'])
     .where({ _path: path })
     .findOne(),
 )
@@ -66,6 +66,9 @@ const leave = (el: Element) => {
         <h1 property="headline">
           {{ presta.title }}
         </h1>
+        <p class="lead" property="description">
+          {{ presta.description }}
+        </p>
       </div>
     </article>
 
