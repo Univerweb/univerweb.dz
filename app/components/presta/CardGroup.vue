@@ -17,7 +17,7 @@ const { t } = useI18n()
 
 const { data: prestations } = await useAsyncData(
   `prestations${path}`,
-  () => queryContent<Pick<Presta, '_path' | 'title' | 'description' | 'tags'>>(localePath('prestations'))
+  () => queryContent<Presta>(localePath('prestations'))
     .only(['_path', 'title', 'description', 'tags'])
     .find(),
   { watch: [localePath] },
