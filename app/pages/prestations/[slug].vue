@@ -69,15 +69,17 @@ const leave = (el: Element) => {
       </div>
     </article>
 
-    <section v-if="presta.faq" class="container">
+    <section v-if="presta.faq" class="container" vocab="https://schema.org/" typeof="FAQPage">
       <div class="intro">
         <h2>{{ t('presta.faq') }}</h2>
       </div>
 
-      <div v-for="(faq, index) in presta.faq" :key="index" class="faq">
+      <div v-for="(faq, index) in presta.faq" :key="index" class="faq" property="mainEntity" typeof="Question">
         <h3 class="col">
           <button :id="`faq-header-${index + 1}`" :aria-expanded="activeIndex === index" :aria-controls="`faq-panel-${index + 1}`" @click="toggle(index)">
-            {{ faq.question }}
+            <span property="name">
+              {{ faq.question }}
+            </span>
             <span class="icon" aria-hidden="true">
               <span :class="{ expanded: activeIndex === index }" />
               <span />
@@ -85,8 +87,16 @@ const leave = (el: Element) => {
           </button>
         </h3>
         <Transition @before-enter="beforeEnter" @enter="enter" @after-enter="afterEnter" @before-leave="beforeLeave" @leave="leave">
-          <section v-show="activeIndex === index" :id="`faq-panel-${index + 1}`" :aria-labelledby="`faq-header-${index + 1}`" :aria-hidden="activeIndex !== index" class="row">
-            <p class="col col--1-9">
+          <section
+            v-show="activeIndex === index"
+            :id="`faq-panel-${index + 1}`"
+            :aria-labelledby="`faq-header-${index + 1}`"
+            :aria-hidden="activeIndex !== index"
+            class="row"
+            property="acceptedAnswer"
+            typeof="Answer"
+          >
+            <p class="col col--1-9" property="text">
               {{ faq.answer }}
             </p>
           </section>
