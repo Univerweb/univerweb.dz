@@ -8,18 +8,18 @@ defineProps<{
 </script>
 
 <template>
-  <div class="card-presta">
+  <div class="card-presta" vocab="https://schema.org/" typeof="Service">
     <ul class="tags">
       <li v-for="tag in presta.tags" :key="tag">
         {{ tag }}
       </li>
     </ul>
 
-    <Component :is="titleTag">
+    <Component :is="titleTag" property="name serviceType">
       {{ presta.title }}
     </Component>
 
-    <p class="lead">
+    <p class="lead" property="description">
       {{ presta.description }}
     </p>
 
