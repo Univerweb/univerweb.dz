@@ -93,5 +93,7 @@ const leave = (el: Element) => {
         </Transition>
       </div>
     </section>
+
+    <LazyAppRequest />
   </main>
 </template>
