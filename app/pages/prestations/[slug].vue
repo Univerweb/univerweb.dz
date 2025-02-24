@@ -60,17 +60,17 @@ const leave = (el: Element) => {
 
 <template>
   <main v-if="presta">
-    <article vocab="https://schema.org/" typeof="Article">
+    <section vocab="https://schema.org/" typeof="Service">
       <div class="container intro">
         <AppBack :path="localePath('prestations')" :label="t('menu[1].label')" />
-        <h1 property="headline">
+        <h1 property="name serviceType">
           {{ presta.title }}
         </h1>
         <p class="lead" property="description">
           {{ presta.description }}
         </p>
       </div>
-    </article>
+    </section>
 
     <section v-if="presta.faq" class="container" vocab="https://schema.org/" typeof="FAQPage">
       <div class="intro">
