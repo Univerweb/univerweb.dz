@@ -90,10 +90,7 @@ const leave = (el: Element) => {
     </section>
 
     <section v-if="presta.faq" class="container" vocab="https://schema.org/" typeof="FAQPage">
-      <div class="intro">
-        <h2>{{ t('presta.faq') }}</h2>
-      </div>
-
+      <h2>{{ t('presta.faq') }}</h2>
       <div v-for="(faq, index) in presta.faq" :key="index" class="faq" property="mainEntity" typeof="Question">
         <h3 class="col">
           <button :id="`faq-header-${index + 1}`" :aria-expanded="activeIndex === index" :aria-controls="`faq-panel-${index + 1}`" @click="toggle(index)">
