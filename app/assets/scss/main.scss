@@ -224,7 +224,10 @@ ol {
 
   .big-count::before {
     @include font(56, 900, var(--line-height));
+
     color: var(--blue);
+    margin-bottom: 12px;
+    display: block;
   }
 }
 
