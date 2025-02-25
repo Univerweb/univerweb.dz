@@ -8,7 +8,7 @@ const { path } = useRoute()
 const { data: presta } = await useAsyncData(
   `presta${path}`,
   () => queryContent<Presta>()
-    .only(['title', 'description', 'faq'])
+    .only(['title', 'description', 'process', 'faq'])
     .where({ _path: path })
     .findOne(),
 )
@@ -69,6 +69,16 @@ const leave = (el: Element) => {
         <p class="lead" property="description">
           {{ presta.description }}
         </p>
+      </div>
+
+      <div v-if="presta.process" class="container">
+        <h2>{{ t('presta.process') }}</h2>
+        <ol class="row">
+          <li v-for="(process, index) in presta.process" :key="process.title" :class="`big-count col ${['col--1-6 col--1-3', 'col--7-12 col--4-6', 'col--1-6 col--7-9', 'col--7-12 col--10-12'][index % 4]}`">
+            <h3>{{ process.title }}</h3>
+            <p>{{ process.text }}</p>
+          </li>
+        </ol>
       </div>
     </section>
 
