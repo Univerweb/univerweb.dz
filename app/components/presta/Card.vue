@@ -16,7 +16,9 @@ defineProps<{
     </ul>
 
     <Component :is="titleTag" property="name serviceType">
-      {{ presta.title }}
+      <NuxtLink :to="presta._path">
+        {{ presta.title }}
+      </NuxtLink>
     </Component>
 
     <p class="lead" property="description">
