@@ -339,8 +339,6 @@ img {
   @media (min-width: $md) {
     @include col(1, 6);
     @include col(1, 9);
-    @include col(3, 6, $order: -1);
-    @include col(7, 10);
     @include col(7, 12);
   }
 
