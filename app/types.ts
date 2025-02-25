@@ -7,8 +7,8 @@ interface ParsedContent {
   _path: string
   title: string
   description: string
-  createdAt?: Date
-  updatedAt?: Date
+  createdAt: Date
+  updatedAt: Date
   tags: string[]
 }
 
@@ -28,9 +28,20 @@ export interface Post extends ParsedContent {
   }
 }
 
-export interface Presta extends ParsedContent {
+export interface Presta {
+  _path: string
+  title: string
+  description: string
+  tags: string[]
+  process?: {
+    title: string
+    text: string
+  }[]
   faq?: {
     question: string
     answer: string
   }[]
+  body?: {
+    children: MarkdownNode[]
+  }
 }
