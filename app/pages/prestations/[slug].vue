@@ -3,6 +3,7 @@ import type { Presta } from '../../types'
 
 const localePath = useLocalePath()
 const { t } = useI18n()
+const { baseUrl, localeBaseUrl } = useUrl()
 const { path } = useRoute()
 
 const { data: presta } = await useAsyncData(
@@ -56,6 +57,23 @@ const leave = (el: Element) => {
     elHTMLElement.style.overflow = 'hidden'
   })
 }
+
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      children: {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': t('name'), 'item': localeBaseUrl },
+          { '@type': 'ListItem', 'position': 2, 'name': t('presta.title'), 'item': `${baseUrl}${localePath('prestations')}` },
+          { '@type': 'ListItem', 'position': 3, 'name': presta.value.title },
+        ],
+      },
+    },
+  ],
+})
 </script>
 
 <template>
