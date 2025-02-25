@@ -35,7 +35,7 @@ export interface Presta {
   tags: string[]
   process?: {
     title: string
-    text: string
+    description: string
   }[]
   faq?: {
     question: string
