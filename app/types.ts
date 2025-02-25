@@ -32,6 +32,10 @@ export interface Presta {
   title: string
   description: string
   tags: string[]
+  features?: {
+    title: string
+    description: string
+  }[]
   process?: {
     title: string
     description: string
@@ -40,7 +44,4 @@ export interface Presta {
     question: string
     answer: string
   }[]
-  body?: {
-    children: MarkdownNode[]
-  }
 }

@@ -9,7 +9,7 @@ const { path } = useRoute()
 const { data: presta } = await useAsyncData(
   `presta${path}`,
   () => queryContent<Presta>()
-    .only(['title', 'description', 'body', 'process', 'faq'])
+    .only(['title', 'description', 'features', 'process', 'faq'])
     .where({ _path: path })
     .findOne(),
 )
@@ -104,7 +104,10 @@ useSeoMeta({
       <div class="container">
         <h2>{{ t('presta.included') }}</h2>
         <div class="row">
-          <ContentRendererMarkdown :value="presta" class="col col--1-9" />
+          <div v-for="feature in presta.features" :key="feature.title" class="col col--1-9">
+            <h3>{{ feature.title }}</h3>
+            <p>{{ feature.description }}</p>
+          </div>
         </div>
       </div>
 
