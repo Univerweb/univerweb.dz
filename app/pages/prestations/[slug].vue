@@ -74,6 +74,18 @@ useHead({
     },
   ],
 })
+
+useSeoMeta({
+  title: presta.value.title,
+  description: presta.value.description,
+  ogTitle: presta.value.title,
+  ogDescription: presta.value.description,
+  ogType: 'article',
+  // ogImage,
+  twitterTitle: presta.value.title,
+  twitterDescription: presta.value.description,
+  // twitterImage: ogImage,
+})
 </script>
 
 <template>
