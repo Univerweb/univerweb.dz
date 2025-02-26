@@ -54,10 +54,7 @@
   "presta": {
     "title": "@:menu[1].label",
     "desc": "Une stratégie de présence web accomplie, sur des fondements technologiques et une méthodologie rigoureuse.",
-    "headline": "Ce dont nous sommes capables.",
-    "included": "Services inclus",
-    "process": "Processus",
-    "faq": "Questions fréquentes"
+    "headline": "Ce dont nous sommes capables."
   },
   "agency": {
     "title": "@:menu[2].label",
