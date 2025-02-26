@@ -951,6 +951,10 @@ footer {
     @include font(32);
     margin-block: 12px calc(var(--padding-y) * 2);
   }
+
+  p {
+    margin-block-end: 0;
+  }
 }
 
 .link {
