@@ -168,33 +168,35 @@ useSeoMeta({
             {{ presta.faq.title }}
           </h2>
 
-          <div v-for="(faq, index) in presta.faq.questions" :key="index" class="col question" property="mainEntity" typeof="Question">
-            <h3>
-              <button :id="`faq-header-${index + 1}`" :aria-expanded="activeIndex === index" :aria-controls="`faq-panel-${index + 1}`" @click="toggle(index)">
-                <span property="name">
-                  {{ faq.question }}
-                </span>
-                <span class="icon" aria-hidden="true">
-                  <span :class="{ expanded: activeIndex === index }" />
-                  <span />
-                </span>
-              </button>
-            </h3>
-            <Transition @before-enter="beforeEnter" @enter="enter" @after-enter="afterEnter" @before-leave="beforeLeave" @leave="leave">
-              <section
-                v-show="activeIndex === index"
-                :id="`faq-panel-${index + 1}`"
-                :aria-labelledby="`faq-header-${index + 1}`"
-                :aria-hidden="activeIndex !== index"
-                class="row"
-                property="acceptedAnswer"
-                typeof="Answer"
-              >
-                <p class="col col--1-9" property="text">
-                  {{ faq.answer }}
-                </p>
-              </section>
-            </Transition>
+          <div class="col">
+            <div v-for="(faq, index) in presta.faq.questions" :key="index" class="question" property="mainEntity" typeof="Question">
+              <h3>
+                <button :id="`faq-header-${index + 1}`" :aria-expanded="activeIndex === index" :aria-controls="`faq-panel-${index + 1}`" @click="toggle(index)">
+                  <span property="name">
+                    {{ faq.question }}
+                  </span>
+                  <span class="icon" aria-hidden="true">
+                    <span :class="{ expanded: activeIndex === index }" />
+                    <span />
+                  </span>
+                </button>
+              </h3>
+              <Transition @before-enter="beforeEnter" @enter="enter" @after-enter="afterEnter" @before-leave="beforeLeave" @leave="leave">
+                <section
+                  v-show="activeIndex === index"
+                  :id="`faq-panel-${index + 1}`"
+                  :aria-labelledby="`faq-header-${index + 1}`"
+                  :aria-hidden="activeIndex !== index"
+                  class="row"
+                  property="acceptedAnswer"
+                  typeof="Answer"
+                >
+                  <p class="col col--1-9" property="text">
+                    {{ faq.answer }}
+                  </p>
+                </section>
+              </Transition>
+            </div>
           </div>
         </div>
       </div>
