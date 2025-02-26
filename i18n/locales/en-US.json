@@ -55,10 +55,7 @@
   "presta": {
     "title": "@:menu[1].label",
     "desc": "An accomplished web presence strategy, on technological foundations and a rigorous methodology.",
-    "headline": "What we are capable of.",
-    "included": "Included services",
-    "process": "Process",
-    "faq": "Frequently Asked Questions"
+    "headline": "What we are capable of."
   },
   "agency": {
     "title": "@:menu[2].label",
