@@ -27,21 +27,33 @@ export interface Post extends ParsedContent {
   }
 }
 
-export interface Presta {
-  _path: string
-  title: string
-  description: string
-  tags: string[]
-  features?: {
+export interface Presta extends Pick<ParsedContent, '_path' | 'title' | 'description'> {
+  label: string
+  lead: string
+  intro: string
+  features: {
     title: string
-    description: string
-  }[]
-  process?: {
+    list: {
+      title: string
+      description: string
+    }[]
+  }
+  tags: {
     title: string
-    description: string
-  }[]
-  faq?: {
-    question: string
-    answer: string
-  }[]
+    list: string[]
+  }
+  process: {
+    title: string
+    steps: {
+      title: string
+      description: string
+    }[]
+  }
+  faq: {
+    title: string
+    questions: {
+      question: string
+      answer: string
+    }[]
+  }
 }
