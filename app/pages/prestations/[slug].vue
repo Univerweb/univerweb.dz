@@ -91,17 +91,19 @@ useSeoMeta({
 <template>
   <main v-if="presta" class="presta">
     <section vocab="https://schema.org/" typeof="Service">
-      <div class="container intro">
+      <div class="container">
         <AppBack :path="localePath('prestations')" :label="t('menu[1].label')" />
         <h1 property="name">
           {{ presta.title }}
         </h1>
-        <h2 property="description">
-          {{ presta.lead }}
-        </h2>
-        <p class="lead">
-          {{ presta.intro }}
-        </p>
+        <div class="row">
+          <h2 class="col" property="description">
+            {{ presta.lead }}
+          </h2>
+          <p class="col col--1-9 lead">
+            {{ presta.intro }}
+          </p>
+        </div>
       </div>
 
       <div class="container features">
