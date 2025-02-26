@@ -4,7 +4,9 @@ import type { Presta } from '../../types'
 const localePath = useLocalePath()
 const { t } = useI18n()
 const { baseUrl, localeBaseUrl } = useUrl()
-const { path } = useRoute()
+const { path, params: { slug } } = useRoute()
+const img = useImage()
+const ogImage = img(`prestations/${slug}_banner`, { format: 'webp', width: 2400, height: 1256 }, { provider: 'cloudinary' })
 
 const { data: presta } = await useAsyncData(
   `presta${path}`,
@@ -81,10 +83,10 @@ useSeoMeta({
   ogTitle: presta.value.title,
   ogDescription: presta.value.description,
   ogType: 'article',
-  // ogImage,
+  ogImage,
   twitterTitle: presta.value.title,
   twitterDescription: presta.value.description,
-  // twitterImage: ogImage,
+  twitterImage: ogImage,
 })
 </script>
 
