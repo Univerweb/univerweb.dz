@@ -18,7 +18,7 @@ const { t } = useI18n()
 const { data: prestations } = await useAsyncData(
   `prestations${path}`,
   () => queryContent<Presta>(localePath('prestations'))
-    .only(['_path', 'title', 'description', 'tags'])
+    .only(['_path', 'title', 'label', 'lead', 'features'])
     .find(),
   { watch: [localePath] },
 )
