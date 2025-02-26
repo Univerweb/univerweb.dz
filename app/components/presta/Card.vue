@@ -2,7 +2,7 @@
 import type { Presta } from '@/types'
 
 defineProps<{
-  presta: Presta
+  presta: Pick<Presta, '_path' | 'title' | 'label' | 'lead' | 'features'>
   titleTag: string
 }>()
 </script>
@@ -10,21 +10,21 @@ defineProps<{
 <template>
   <div class="card-presta" vocab="https://schema.org/" typeof="Service">
     <ul class="tags">
-      <li v-for="tag in presta.tags" :key="tag">
-        {{ tag }}
+      <li v-for="feature in presta.features.list.slice(0, 3)" :key="feature.title" property="serviceType">
+        {{ feature.title }}
       </li>
     </ul>
 
-    <Component :is="titleTag" property="name serviceType">
+    <Component :is="titleTag" property="name">
       <NuxtLink :to="presta._path">
         {{ presta.title }}
       </NuxtLink>
     </Component>
 
     <p class="lead" property="description">
-      {{ presta.description }}
+      {{ presta.lead }}
     </p>
 
-    <AppMore :path="presta._path" :label="presta.title" />
+    <AppMore :path="presta._path" :label="presta.label" />
   </div>
 </template>
