@@ -110,6 +110,7 @@ useSeoMeta({
 
       <AppPicture
         :picture="presta"
+        :alt="presta.lead"
         type="banner"
         sizes="100vw xs:100vw sm:100vw md:100vw lg:100vw xl:1400px"
         class="banner"
