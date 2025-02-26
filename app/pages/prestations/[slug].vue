@@ -11,7 +11,7 @@ const ogImage = img(`prestations/${slug}_banner`, { format: 'webp', width: 2400,
 const { data: presta } = await useAsyncData(
   `presta${path}`,
   () => queryContent<Presta>()
-    .only(['title', 'description', 'lead', 'intro', 'features', 'tags', 'process', 'faq'])
+    .only(['_path', 'title', 'description', 'lead', 'intro', 'features', 'tags', 'process', 'faq'])
     .where({ _path: path })
     .findOne(),
 )
@@ -107,6 +107,13 @@ useSeoMeta({
           </p>
         </div>
       </div>
+
+      <AppPicture
+        :picture="presta"
+        type="banner"
+        sizes="100vw xs:100vw sm:100vw md:100vw lg:100vw xl:1400px"
+        class="banner"
+      />
 
       <div class="container features">
         <div class="row">
