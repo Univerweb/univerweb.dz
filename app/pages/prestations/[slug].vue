@@ -6,7 +6,7 @@ const { t } = useI18n()
 const { baseUrl, localeBaseUrl } = useUrl()
 const { path, params: { slug } } = useRoute()
 const img = useImage()
-const ogImage = img(`prestations/${slug}_banner`, { format: 'webp', width: 2400, height: 1256 }, { provider: 'cloudinary' })
+const ogImage = img(`prestations/${slug}_banner`, { format: 'webp', width: 2800, height: 1575 }, { provider: 'cloudinary' })
 
 const { data: presta } = await useAsyncData(
   `presta${path}`,
