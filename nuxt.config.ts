@@ -1,10 +1,10 @@
 export default defineNuxtConfig({
   modules: [
+    '@nuxtjs/i18n',
+    '@nuxtjs/sitemap',
     '@nuxt/content',
     '@nuxt/eslint',
     '@nuxt/image',
-    '@nuxtjs/i18n',
-    '@nuxtjs/sitemap',
     '@vueuse/nuxt',
     'nuxt-gtag',
   ],
