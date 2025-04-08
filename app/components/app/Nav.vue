@@ -1,9 +1,12 @@
 <script setup lang="ts">
-import type { Work } from '@/types'
+interface Props {
+  _path: string
+  title: string
+}
 
 defineProps<{
-  prev?: Pick<Work, '_path' | 'title'>
-  next?: Pick<Work, '_path' | 'title'>
+  prev?: Props
+  next?: Props
 }>()
 
 const { t } = useI18n()
