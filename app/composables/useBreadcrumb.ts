@@ -4,7 +4,7 @@ export function useBreadcrumb(page: string) {
 
   return {
     type: 'application/ld+json',
-    children: {
+    innerHTML: {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       'itemListElement': [

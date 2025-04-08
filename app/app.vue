@@ -27,7 +27,7 @@ useHead({
   script: [
     {
       type: 'application/ld+json',
-      children: {
+      innerHTML: {
         '@context': 'https://schema.org',
         '@type': 'Organization',
         'name': () => t('name'),
