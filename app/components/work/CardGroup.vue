@@ -23,7 +23,7 @@ const { data: works } = await useAsyncData(
   `works${path}`,
   () => queryContent<Work>(localePath('realisations'))
     .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'category', 'body'])
-    .sort({ _id: -1, $numeric: true })
+    .sort({ _id: -1 })
     .limit(props.limit)
     .find(),
   { watch: [localePath] },

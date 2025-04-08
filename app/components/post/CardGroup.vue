@@ -23,7 +23,7 @@ const { data: posts } = await useAsyncData(
   `posts${path}`,
   () => queryContent<Post>(localePath('blog'))
     .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'author'])
-    .sort({ _id: -1, $numeric: true })
+    .sort({ _id: -1 })
     .limit(props.limit)
     .find(),
   { watch: [localePath] },
