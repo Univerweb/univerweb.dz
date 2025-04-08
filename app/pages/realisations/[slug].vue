@@ -86,8 +86,8 @@ useSeoMeta({
         <span property="name" :content="t('name')" />
         <span property="url" :content="baseUrl" />
       </span>
-      <time property="dateCreated datePublished" :datetime="work.createdAt.toString()" />
-      <time property="dateModified" :datetime="work.updatedAt.toString()" />
+      <time property="dateCreated datePublished" :datetime="new Date(work.createdAt).toISOString()" />
+      <time property="dateModified" :datetime="new Date(work.updatedAt).toISOString()" />
       <span property="articleSection" :content="t('works.title')" />
       <span property="description" :content="work.description" />
 

@@ -24,8 +24,8 @@ const { baseUrl } = useUrl()
       <meta property="name" :content="t('name')">
       <meta property="url" :content="baseUrl">
     </span>
-    <time property="dateCreated datePublished" :datetime="post.createdAt.toString()" />
-    <time property="dateModified" :datetime="post.updatedAt.toString()" />
+    <time property="dateCreated datePublished" :datetime="new Date(post.createdAt).toISOString()" />
+    <time property="dateModified" :datetime="new Date(post.updatedAt).toISOString()" />
     <meta property="articleSection" :content="t('blog.title')">
 
     <AppPicture :picture="post" />

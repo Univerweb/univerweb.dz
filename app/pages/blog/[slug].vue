@@ -85,10 +85,10 @@ useSeoMeta({
           {{ post.title }}
         </h1>
         <div class="meta">
-          <time property="dateCreated datePublished" :datetime="post.createdAt.toString()">
+          <time property="dateCreated datePublished" :datetime="new Date(post.createdAt).toISOString()">
             {{ new Intl.DateTimeFormat(locale.toString(), { dateStyle: 'long', numberingSystem: 'latn' }).format(new Date(post.createdAt)) }}
           </time>
-          <time property="dateModified" :datetime="post.updatedAt.toString()" :content="post.updatedAt.toString()" />
+          <time property="dateModified" :datetime="new Date(post.updatedAt).toISOString()" />
           {{ t('blog.by') }}
           <span v-if="post.author && post.author.name && post.author.url" property="author" typeof="Person" class="author">
             <a :href="post.author.url" rel="author" target="_blank" property="url" :content="post.author.url">
