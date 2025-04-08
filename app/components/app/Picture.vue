@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import type { Work } from '@/types'
-
 interface Props {
-  picture: Pick<Work, '_path' | 'description'>
+  picture: { _path: string, description: string }
   type?: string
 }
 
