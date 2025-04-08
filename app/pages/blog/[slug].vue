@@ -115,7 +115,7 @@ useSeoMeta({
       />
 
       <div class="container row row-no-gap">
-        <ContentRendererMarkdown :value="post" class="col col--2-12 col--3-11 content" />
+        <ContentRenderer :value="post" class="col col--2-12 col--3-11 content" />
       </div>
 
       <LazyPostShare :title="post.title" :url="`${baseUrl}${path}`" />

@@ -137,7 +137,7 @@ useSeoMeta({
       <div class="container container-no-pt row">
         <div class="col col--1-4">
           <div class="inner">
-            <ContentRendererMarkdown
+            <ContentRenderer
               :value="work"
               property="articleBody"
               class="lead"
