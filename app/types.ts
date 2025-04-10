@@ -10,13 +10,11 @@ interface ParsedContent {
   createdAt: Date
   updatedAt: Date
   tags: string[]
-  body?: {
-    children: MarkdownNode[]
-  }
 }
 
 export interface Work extends ParsedContent {
   category: string
+  lead: string
   link?: string
 }
 
@@ -24,5 +22,8 @@ export interface Post extends ParsedContent {
   author: {
     name: string
     url: string
+  }
+  body?: {
+    children: MarkdownNode[]
   }
 }

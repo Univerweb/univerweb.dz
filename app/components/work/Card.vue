@@ -34,7 +34,7 @@ const { baseUrl } = useUrl()
         {{ work.title }}
       </Component>
       <p property="articleBody" class="lead">
-        {{ work.body?.children[0]?.children[0]?.value }}
+        {{ work.lead }}
       </p>
     </div>
   </NuxtLink>

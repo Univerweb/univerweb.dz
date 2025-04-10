@@ -22,7 +22,7 @@ const { t } = useI18n()
 const { data: works } = await useAsyncData(
   `works${path}`,
   () => queryContent<Work>(localePath('realisations'))
-    .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'category', 'body'])
+    .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'category', 'lead'])
     .sort({ _id: -1 })
     .limit(props.limit)
     .find(),

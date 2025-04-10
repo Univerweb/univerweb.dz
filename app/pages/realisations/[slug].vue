@@ -11,7 +11,7 @@ const ogImage = img(`realisations/${slug}_banner`, { format: 'webp', width: 2400
 const { data: work } = await useAsyncData(
   `work${path}`,
   () => queryContent<Work>()
-    .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'category', 'link', 'body'])
+    .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'category', 'link', 'lead'])
     .where({ _path: path })
     .findOne(),
 )
@@ -39,7 +39,7 @@ const { data: workSurround } = await useAsyncData(
 const { data: workRelated } = await useAsyncData(
   `work-related${path}`,
   () => queryContent<Work>(localePath('realisations'))
-    .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'category', 'body'])
+    .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'category', 'lead'])
     .where({ category: work.value!.category, _path: { $ne: path } })
     .sort({ _id: -1 })
     .find(),
@@ -137,11 +137,9 @@ useSeoMeta({
       <div class="container container-no-pt row">
         <div class="col col--1-4">
           <div class="inner">
-            <ContentRenderer
-              :value="work"
-              property="articleBody"
-              class="lead"
-            />
+            <p property="articleBody" class="lead">
+              {{ work.lead }}
+            </p>
             <a v-if="work.link" :href="work.link" class="link">
               {{ t('work.visit') }}
             </a>
