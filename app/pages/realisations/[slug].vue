@@ -143,9 +143,6 @@ useSeoMeta({
             <a v-if="work.link" :href="work.link" class="link">
               {{ t('work.visit') }}
             </a>
-            <p v-else>
-              {{ t('work.state') }}
-            </p>
           </div>
         </div>
         <AppPicture
