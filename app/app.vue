@@ -9,13 +9,13 @@ async function onBeforeEnter() {
   await finalizePendingLocaleChange()
 }
 
-useHead({
+useHead(() => ({
   htmlAttrs: {
-    lang: () => head.value.htmlAttrs!.lang,
-    dir: () => head.value.htmlAttrs!.dir as 'ltr' | 'rtl',
+    lang: head.value.htmlAttrs!.lang,
+    dir: head.value.htmlAttrs!.dir as 'ltr' | 'rtl',
   },
 
-  link: () => [
+  link: [
     { rel: 'icon', type: 'image/png', href: '/favicon-48x48.png', sizes: '48x48' },
     { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
     { rel: 'shortcut icon', href: '/favicon.ico' },
@@ -30,7 +30,7 @@ useHead({
       innerHTML: {
         '@context': 'https://schema.org',
         '@type': 'Organization',
-        'name': () => t('name'),
+        'name': t('name'),
         'url': baseUrl,
         'image': {
           '@type': 'ImageObject',
@@ -50,16 +50,16 @@ useHead({
         'sameAs': ['https://x.com/Univerweb', 'https://www.facebook.com/Univerweb', 'https://www.linkedin.com/company/Univerweb', 'https://github.com/Univerweb'],
         'address': {
           '@type': 'PostalAddress',
-          'streetAddress': () => t('streetAddress'),
+          'streetAddress': t('streetAddress'),
           'postalCode': '16 029',
-          'addressLocality': () => t('addressLocality'),
-          'addressRegion': () => t('addressLocality'),
+          'addressLocality': t('addressLocality'),
+          'addressRegion': t('addressLocality'),
           'addressCountry': 'DZ',
         },
       },
     },
   ],
-})
+}))
 
 useSeoMeta({
   titleTemplate: (titleChunk) => { return titleChunk ? `${titleChunk} - ${t('name')}` : `${t('title')} - ${t('name')}` },
