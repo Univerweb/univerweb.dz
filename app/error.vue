@@ -5,14 +5,12 @@ const props = defineProps<{
 
 const { t } = useI18n()
 const head = useLocaleHead()
-const { theme } = useTheme()
 const handleError = () => clearError({ redirect: '/' })
 
 useHead({
   htmlAttrs: {
-    lang: () => head.value.htmlAttrs!.lang,
-    dir: () => head.value.htmlAttrs!.dir as 'ltr' | 'rtl',
-    class: theme,
+    lang: head.value.htmlAttrs!.lang,
+    dir: head.value.htmlAttrs!.dir as 'ltr' | 'rtl',
   },
 })
 
