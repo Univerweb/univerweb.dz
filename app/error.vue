@@ -11,7 +11,7 @@ const handleError = () => clearError({ redirect: '/' })
 useHead({
   htmlAttrs: {
     lang: () => head.value.htmlAttrs!.lang,
-    dir: () => head.value.htmlAttrs!.dir,
+    dir: () => head.value.htmlAttrs!.dir as 'ltr' | 'rtl',
     class: theme,
   },
 })

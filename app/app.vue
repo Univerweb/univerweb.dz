@@ -12,7 +12,7 @@ async function onBeforeEnter() {
 useHead({
   htmlAttrs: {
     lang: () => head.value.htmlAttrs!.lang,
-    dir: () => head.value.htmlAttrs!.dir,
+    dir: () => head.value.htmlAttrs!.dir as 'ltr' | 'rtl',
   },
 
   link: () => [
