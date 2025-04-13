@@ -67,6 +67,9 @@ export default defineNuxtConfig({
   },
 
   i18n: {
+    bundle: {
+      optimizeTranslationDirective: false,
+    },
     locales: [
       { code: 'fr', file: 'fr-FR.json', language: 'fr-FR' },
       { code: 'en', file: 'en-US.json', language: 'en-US' },
