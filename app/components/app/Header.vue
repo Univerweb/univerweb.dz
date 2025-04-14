@@ -4,18 +4,11 @@ interface Menu {
   label: string
 }
 
-const { y } = useWindowScroll()
 const { t, tm, rt, locale } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 const { menuOpen, closeMenu, toggleMenu } = useMenu()
 const { theme, toggleTheme } = useTheme()
 const { langNext, isLangNext, langTooltip } = useTooltip()
-
-useHead({
-  htmlAttrs: {
-    class: () => ({ scrolled: y.value > 0, [theme.value]: true }),
-  },
-})
 </script>
 
 <template>

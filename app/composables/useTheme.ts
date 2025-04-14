@@ -1,27 +1,31 @@
-export function useTheme() {
-  const theme = ref('theme-light')
-  const mql = typeof window !== 'undefined' ? window.matchMedia('(prefers-color-scheme: dark)') : false
+const theme = ref('theme-light')
+const mql = typeof window !== 'undefined' ? window.matchMedia('(prefers-color-scheme: dark)') : null
 
-  function handleMediaChange(mql: MediaQueryListEvent) {
-    theme.value = mql.matches ? 'theme-dark' : 'theme-light'
-  }
+function handleMediaChange(mql: MediaQueryListEvent) {
+  theme.value = mql.matches ? 'theme-dark' : 'theme-light'
+}
+
+function setupMediaListener() {
+  if (!mql) return
 
   onMounted(() => {
-    if (mql)
-      mql.addEventListener('change', handleMediaChange)
+    mql.addEventListener('change', handleMediaChange)
   })
 
   onBeforeUnmount(() => {
-    if (mql)
-      mql.removeEventListener('change', handleMediaChange)
+    mql.removeEventListener('change', handleMediaChange)
   })
+}
 
-  function toggleTheme() {
-    theme.value = theme.value === 'theme-light' ? 'theme-dark' : 'theme-light'
-  }
+function toggleTheme() {
+  theme.value = theme.value === 'theme-light' ? 'theme-dark' : 'theme-light'
+}
+
+export function useTheme() {
+  setupMediaListener()
 
   return {
     theme,
     toggleTheme,
   }
-};
+}

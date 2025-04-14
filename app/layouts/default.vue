@@ -1,10 +1,13 @@
 <script setup lang="ts">
 const head = useLocaleHead()
+const { y } = useWindowScroll()
+const { theme } = useTheme()
 
 useHead(() => ({
   htmlAttrs: {
     lang: head.value.htmlAttrs!.lang,
     dir: head.value.htmlAttrs!.dir as 'ltr' | 'rtl',
+    class: { scrolled: y, [theme.value]: true },
   },
 
   link: [
