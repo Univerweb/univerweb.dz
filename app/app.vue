@@ -62,7 +62,7 @@ useHead(() => ({
 }))
 
 useSeoMeta({
-  titleTemplate: (titleChunk) => { return titleChunk ? `${titleChunk} - ${t('name')}` : `${t('title')} - ${t('name')}` },
+  titleTemplate: title => title ? `${title} - ${t('name')}` : `${t('title')} - ${t('name')}`,
   description: () => t('desc'),
   ogTitle: () => t('title'),
   ogDescription: () => t('desc'),
