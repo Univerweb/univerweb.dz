@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const { t, finalizePendingLocaleChange } = useI18n()
-const head = useLocaleHead()
 const { baseUrl, ogUrl, ogImage } = useUrl()
 const config = useRuntimeConfig()
 const { progress } = useLoadingIndicator()
@@ -10,20 +9,6 @@ async function onBeforeEnter() {
 }
 
 useHead(() => ({
-  htmlAttrs: {
-    lang: head.value.htmlAttrs!.lang,
-    dir: head.value.htmlAttrs!.dir as 'ltr' | 'rtl',
-  },
-
-  link: [
-    { rel: 'icon', type: 'image/png', href: '/favicon-48x48.png', sizes: '48x48' },
-    { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
-    { rel: 'shortcut icon', href: '/favicon.ico' },
-    { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' },
-    { rel: 'manifest', href: '/site.webmanifest' },
-    ...(head.value.link || []),
-  ],
-
   script: [
     {
       type: 'application/ld+json',
@@ -83,7 +68,7 @@ useSeoMeta({
     color="repeating-linear-gradient(to right, #50c8f0 0%, #28285a 50%, #50c8f0 100%)"
     :style="{ backgroundSize: progress === 0 ? 'auto' : `${(100 / progress) * 100}% auto`, transform: `scaleX(${progress / 100})` }"
   />
-  <NuxtLayout>
+  <NuxtLayout name="default">
     <AppHeader />
     <NuxtPage id="main" :transition="{ name: 'page', mode: 'out-in', onBeforeEnter }" />
     <LazyAppFooter />
