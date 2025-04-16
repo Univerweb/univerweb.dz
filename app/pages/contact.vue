@@ -9,7 +9,7 @@ const position = {
   lng: 3.047607,
 }
 
-const mapRef = ref<InstanceType<typeof GoogleMap>>()
+const mapRef = ref<InstanceType<typeof GoogleMap> | null>(null)
 
 function zoom() {
   const gmap = mapRef.value
@@ -43,6 +43,7 @@ useSeoMeta(useMeta('contact'))
     <GoogleMap
       id="map"
       ref="mapRef"
+      dir="auto"
       :api-key="config.public.gmapsKey"
       :map-id="config.public.gmapsId"
       :center="position"
