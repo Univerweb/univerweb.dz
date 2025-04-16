@@ -42,7 +42,7 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
 
-  compatibilityDate: '2024-11-06',
+  compatibilityDate: '2025-04-16',
 
   vite: {
     css: {

@@ -44,8 +44,8 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': t('name'), 'item': localeBaseUrl },
-          { '@type': 'ListItem', 'position': 2, 'name': t('blog.title'), 'item': `${baseUrl}${localePath('blog')}` },
+          { '@type': 'ListItem', 'position': 1, 'name': () => t('name'), 'item': localeBaseUrl },
+          { '@type': 'ListItem', 'position': 2, 'name': () => t('blog.title'), 'item': () => `${baseUrl}${localePath('blog')}` },
           { '@type': 'ListItem', 'position': 3, 'name': post.value.title },
         ],
       },
