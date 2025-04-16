@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://univerweb.dz/sitemap.xml
+Sitemap: https://univerweb.dz/sitemap_index.xml
