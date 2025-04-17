@@ -10,7 +10,7 @@ withDefaults(defineProps<Props>(), {
 })
 
 const { path } = useRoute()
-const { t, locale } = useI18n()
+const { locale, t } = useI18n()
 
 const { data: prestations } = await useAsyncData(`prestations${path}`, () => {
   return queryCollection(`presta_${locale.value}`)
