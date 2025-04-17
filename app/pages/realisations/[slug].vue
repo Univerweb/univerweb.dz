@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const localePath = useLocalePath()
-const { t, locale } = useI18n()
+const { locale, t } = useI18n()
 const { baseUrl, localeBaseUrl } = useUrl()
 const { path } = useRoute()
 const img = useImage()
