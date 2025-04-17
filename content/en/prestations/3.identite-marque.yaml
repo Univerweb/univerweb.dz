@@ -3,7 +3,7 @@ description: Transform your vision into a unique brand identity with Univerweb. 
 label: Ready to strengthen your brand?
 lead: Give your business an unforgettable soul with a powerful brand identity.
 intro: Your brand is much more than just a logo or a color palette. It's the story you tell, the emotions you evoke, the deep connection you establish with your audience. At Univerweb, we transform your vision and values into a unique visual identity that sets you apart in a saturated world. Through the creation of memorable logos, the development of consistent graphic charters and the development of striking visual identities, we bring your brand to life so that it resonates lastingly with your audience.
-features:
+prestations:
   title: Our brand identity services
   list:
     - title: Logo creation
@@ -12,9 +12,9 @@ features:
       description: We develop a comprehensive graphic charter that defines the visual standards of your brand. This includes the selection of official colors, typographies, image styles and complementary graphic elements. A clear graphic charter ensures that your visual identity remains consistent across all communication media, reinforcing recognition and trust with your audience.
     - title: Visual identity
       description: We develop a global visual identity that encompasses all aspects of your visual communication. From stationery to digital media, packaging and social media, we ensure that each element faithfully reflects the spirit of your brand. A well-defined visual identity is essential for building a strong brand image and establishing an emotional connection with your customers.
-tags:
+features:
   title: The key elements of your brand identity
-  list:
+  tags:
     - Color palette
     - Typography
     - Graphic elements

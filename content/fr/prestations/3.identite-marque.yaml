@@ -3,7 +3,7 @@ description: Transformez votre vision en une identité de marque unique avec Uni
 label: Prêt à renforcer votre marque ?
 lead: Donnez une âme inoubliable à votre entreprise avec une identité de marque puissante.
 intro: Votre marque est bien plus qu’un simple logo ou une palette de couleurs. C’est l’histoire que vous racontez, les émotions que vous évoquez, la connexion profonde que vous établissez avec votre public. Chez Univerweb, nous transformons votre vision et vos valeurs en une identité visuelle unique qui vous distingue dans un monde saturé. À travers la création de logos mémorables, l’élaboration de chartes graphiques cohérentes et le développement d’identités visuelles percutantes, nous donnons vie à votre marque pour qu’elle résonne durablement avec votre audience.
-features:
+prestations:
   title: Nos services d’identité de marque
   list:
     - title: Création de logo
@@ -12,9 +12,9 @@ features:
       description: Nous élaborons une charte graphique complète qui définit les standards visuels de votre marque. Cela inclut la sélection des couleurs officielles, des typographies, des styles d’images et des éléments graphiques complémentaires. Une charte graphique claire garantit que votre identité visuelle reste cohérente sur tous les supports de communication, renforçant ainsi la reconnaissance et la confiance auprès de votre audience.
     - title: Identité visuelle
       description: Nous développons une identité visuelle globale qui englobe tous les aspects de votre communication visuelle. De la papeterie aux supports numériques, en passant par le packaging et les médias sociaux, nous veillons à ce que chaque élément reflète fidèlement l’esprit de votre marque. Une identité visuelle bien définie est essentielle pour construire une image de marque forte et établir une connexion émotionnelle avec vos clients.
-tags:
+features:
   title: Les éléments clés de votre identité de marque
-  list:
+  tags:
     - Palette de couleurs
     - Typographie
     - Éléments graphiques

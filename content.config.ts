@@ -15,16 +15,16 @@ const work = commonSchema.extend({
 const presta = commonSchema.extend({
   label: z.string(),
   intro: z.string(),
-  features: z.object({
+  prestations: z.object({
     title: z.string(),
     list: z.array(z.object({
       title: z.string(),
       description: z.string(),
     })),
   }),
-  tags: z.object({
+  features: z.object({
     title: z.string(),
-    list: z.array(z.string()),
+    tags: z.array(z.string()),
   }),
   process: z.object({
     title: z.string(),

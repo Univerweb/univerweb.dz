@@ -8,7 +8,7 @@ const ogImage = img(localePath(`${path}_banner`, 'fr'), { format: 'webp', width:
 
 const { data: presta } = await useAsyncData(`post${path}`, () => {
   return queryCollection(`presta_${locale.value}`)
-    .select('path', 'title', 'description', 'lead', 'intro', 'features', 'tags', 'process', 'faq')
+    .select('path', 'title', 'description', 'lead', 'intro', 'prestations', 'features', 'process', 'faq')
     .path(computed(() => localePath(path)).value)
     .first()
 }, { watch: [locale] })
@@ -116,15 +116,15 @@ useSeoMeta({
       <div class="container features">
         <div class="row">
           <h2 class="col col--1-4">
-            {{ presta.features.title }}
+            {{ presta.prestations.title }}
           </h2>
 
           <div class="col col--5-13">
-            <template v-for="feature in presta.features.list" :key="feature.title">
+            <template v-for="prestation in presta.prestations.list" :key="prestation.title">
               <h3 property="serviceType">
-                {{ feature.title }}
+                {{ prestation.title }}
               </h3>
-              <p>{{ feature.description }}</p>
+              <p>{{ prestation.description }}</p>
             </template>
           </div>
         </div>
@@ -133,11 +133,11 @@ useSeoMeta({
       <div class="container tags-group">
         <div class="row">
           <h2 class="col col--1-6">
-            {{ presta.tags.title }}
+            {{ presta.features.title }}
           </h2>
 
           <ul class="col col--7-12 tags">
-            <li v-for="tag in presta.tags.list" :key="tag">
+            <li v-for="tag in presta.features.tags" :key="tag">
               {{ tag }}
             </li>
           </ul>
