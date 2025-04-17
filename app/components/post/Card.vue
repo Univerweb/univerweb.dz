@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { Post } from '@/types'
+import type { Collections } from '@nuxt/content'
 
 defineProps<{
-  post: Post
+  post: Pick<Collections['post_fr' | 'post_en' | 'post_ar'], 'path' | 'title' | 'description' | 'createdAt' | 'updatedAt' | 'tags' | 'author'>
   titleTag: string
 }>()
 
@@ -11,7 +11,7 @@ const { baseUrl } = useUrl()
 </script>
 
 <template>
-  <NuxtLink :to="post._path" class="card" vocab="https://schema.org/" typeof="Article">
+  <NuxtLink :to="post.path" class="card" vocab="https://schema.org/" typeof="Article">
     <span property="publisher" typeof="Organization">
       <meta property="name" :content="t('name')">
       <meta property="url" :content="baseUrl">

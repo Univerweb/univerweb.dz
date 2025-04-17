@@ -1,7 +1,7 @@
 {
   "name": "univerweb.dz",
   "type": "module",
-  "version": "5.1.12",
+  "version": "5.1.13",
   "private": true,
   "scripts": {
     "build": "nuxt build",
@@ -13,7 +13,7 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@nuxt/content": "^2.13.4",
+    "@nuxt/content": "^3.4.0",
     "@nuxt/image": "^1.10.0",
     "@nuxtjs/i18n": "^9.5.3",
     "@nuxtjs/sitemap": "^7.2.10",

@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { Post } from '@/types'
-
 interface Props {
   limit?: number
   headlineTag?: string
@@ -16,18 +14,15 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const { path } = useRoute()
-const localePath = useLocalePath()
-const { t } = useI18n()
+const { t, locale } = useI18n()
 
-const { data: posts } = await useAsyncData(
-  `posts${path}`,
-  () => queryContent<Post>(localePath('blog'))
-    .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'author'])
-    .sort({ _id: -1 })
+const { data: posts } = await useAsyncData(`posts${path}`, () => {
+  return queryCollection(`post_${locale.value}`)
+    .select('path', 'stem', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'author')
+    .order('stem', 'DESC')
     .limit(props.limit)
-    .find(),
-  { watch: [localePath] },
-)
+    .all()
+}, { watch: [locale] })
 </script>
 
 <template>
@@ -39,7 +34,7 @@ const { data: posts } = await useAsyncData(
     </div>
 
     <div class="card-group">
-      <PostCard v-for="post in posts" :key="post._path" :post="post" :title-tag="titleTag" />
+      <PostCard v-for="post in posts" :key="post.path" :post="post" :title-tag="titleTag" />
     </div>
 
     <LazyAppMore v-if="more" path="blog" :label="t('home.moreLabel.blog')" class="intro-justify" />

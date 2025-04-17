@@ -1,6 +1,6 @@
 <script setup lang="ts">
 interface Props {
-  _path: string
+  path: string
   title: string
 }
 
@@ -14,7 +14,7 @@ const { t } = useI18n()
 
 <template>
   <div class="container post-nav">
-    <NuxtLink v-if="prev" :to="prev._path" class="link prev" :data-text="t('nav.prev')">
+    <NuxtLink v-if="prev" :to="prev.path" class="link prev" :data-text="t('nav.prev')">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="6"
@@ -28,7 +28,7 @@ const { t } = useI18n()
       </svg>
       {{ prev.title }}
     </NuxtLink>
-    <NuxtLink v-if="next" :to="next._path" class="link next" :data-text="t('nav.next')">
+    <NuxtLink v-if="next" :to="next.path" class="link next" :data-text="t('nav.next')">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="6"

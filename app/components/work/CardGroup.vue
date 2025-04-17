@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { Work } from '@/types'
-
 interface Props {
   limit?: number
   headlineTag?: string
@@ -16,18 +14,15 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const { path } = useRoute()
-const localePath = useLocalePath()
-const { t } = useI18n()
+const { t, locale } = useI18n()
 
-const { data: works } = await useAsyncData(
-  `works${path}`,
-  () => queryContent<Work>(localePath('realisations'))
-    .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'category', 'lead'])
-    .sort({ _id: -1 })
+const { data: works } = await useAsyncData(`works${path}`, () => {
+  return queryCollection(`work_${locale.value}`)
+    .select('path', 'stem', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'category', 'lead')
+    .order('stem', 'DESC')
     .limit(props.limit)
-    .find(),
-  { watch: [localePath] },
-)
+    .all()
+}, { watch: [locale] })
 </script>
 
 <template>
@@ -39,7 +34,7 @@ const { data: works } = await useAsyncData(
     </div>
 
     <div class="card-group">
-      <WorkCard v-for="work in works" :key="work._path" :work="work" :title-tag="titleTag" />
+      <WorkCard v-for="work in works" :key="work.path" :work="work" :title-tag="titleTag" />
     </div>
 
     <LazyAppMore v-if="more" path="realisations" :label="t('home.moreLabel.works')" class="intro-justify" />

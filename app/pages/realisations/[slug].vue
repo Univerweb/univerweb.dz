@@ -1,20 +1,17 @@
 <script setup lang="ts">
-import type { Work } from '@/types'
-
 const localePath = useLocalePath()
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const { baseUrl, localeBaseUrl } = useUrl()
-const { path, params: { slug } } = useRoute()
+const { path } = useRoute()
 const img = useImage()
-const ogImage = img(`realisations/${slug}_banner`, { format: 'webp', width: 2400, height: 1256 }, { provider: 'cloudinary' })
+const ogImage = img(localePath(`${path}_banner`, 'fr'), { format: 'webp', width: 2400, height: 1256 }, { provider: 'cloudinary' })
 
-const { data: work } = await useAsyncData(
-  `work${path}`,
-  () => queryContent<Work>()
-    .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'category', 'link', 'lead'])
-    .where({ _path: path })
-    .findOne(),
-)
+const { data: work } = await useAsyncData(`work${path}`, () => {
+  return queryCollection(`work_${locale.value}`)
+    .select('path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'category', 'lead', 'link')
+    .path(computed(() => localePath(path)).value)
+    .first()
+}, { watch: [locale] })
 
 if (!work.value) {
   throw createError({
@@ -24,27 +21,19 @@ if (!work.value) {
   })
 }
 
-const { data: workSurround } = await useAsyncData(
-  `work-surround${path}`,
-  async () => {
-    const [prev, next] = await queryContent<Pick<Work, '_path' | 'title'>>(localePath('realisations'))
-      .only(['_path', 'title'])
-      .findSurround(path)
+const { data: workRelated } = await useAsyncData(`work-related${path}`, () => {
+  return queryCollection(`work_${locale.value}`)
+    .select('path', 'stem', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'category', 'lead')
+    .andWhere(query => query
+      .where('path', '<>', path)
+      .where('category', '=', work.value!.category))
+    .order('stem', 'DESC')
+    .all()
+}, { watch: [locale, work] })
 
-    return { prev, next }
-  },
-  { watch: [localePath] },
-)
-
-const { data: workRelated } = await useAsyncData(
-  `work-related${path}`,
-  () => queryContent<Work>(localePath('realisations'))
-    .only(['_path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'category', 'lead'])
-    .where({ category: work.value!.category, _path: { $ne: path } })
-    .sort({ _id: -1 })
-    .find(),
-  { watch: [localePath] },
-)
+const { data: workSurround } = await useAsyncData(`work-surround${path}`, () => {
+  return queryCollectionItemSurroundings(`work_${locale.value}`, path)
+}, { watch: [locale] })
 
 useHead({
   script: [
@@ -56,7 +45,7 @@ useHead({
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': () => t('name'), 'item': localeBaseUrl },
           { '@type': 'ListItem', 'position': 2, 'name': () => t('works.title'), 'item': () => `${baseUrl}${localePath('realisations')}` },
-          { '@type': 'ListItem', 'position': 3, 'name': work.value.title },
+          { '@type': 'ListItem', 'position': 3, 'name': () => work.value!.title },
         ],
       },
     },
@@ -64,14 +53,14 @@ useHead({
 })
 
 useSeoMeta({
-  title: work.value.title,
-  description: work.value.description,
-  ogTitle: work.value.title,
-  ogDescription: work.value.description,
+  title: () => work.value!.title,
+  description: () => work.value!.description,
+  ogTitle: () => work.value!.title,
+  ogDescription: () => work.value!.description,
   ogType: 'article',
   ogImage,
-  twitterTitle: work.value.title,
-  twitterDescription: work.value.description,
+  twitterTitle: () => work.value!.title,
+  twitterDescription: () => work.value!.description,
   twitterImage: ogImage,
 })
 </script>
@@ -163,10 +152,10 @@ useSeoMeta({
         </h2>
       </div>
       <div class="card-group">
-        <WorkCard v-for="related in workRelated" :key="related._path" :work="related" title-tag="h3" />
+        <WorkCard v-for="related in workRelated" :key="related.path" :work="related" title-tag="h3" />
       </div>
     </div>
 
-    <LazyAppNav :prev="workSurround!.prev" :next="workSurround!.next" />
+    <LazyAppNav :prev="workSurround?.[0]" :next="workSurround?.[1]" />
   </main>
 </template>

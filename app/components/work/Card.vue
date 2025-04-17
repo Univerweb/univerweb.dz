@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { Work } from '@/types'
+import type { Collections } from '@nuxt/content'
 
 defineProps<{
-  work: Work
+  work: Pick<Collections['work_fr' | 'work_en' | 'work_ar'], 'path' | 'title' | 'description' | 'createdAt' | 'updatedAt' | 'tags' | 'category' | 'lead' | 'link'>
   titleTag: string
 }>()
 
@@ -11,7 +11,7 @@ const { baseUrl } = useUrl()
 </script>
 
 <template>
-  <NuxtLink :to="work._path" class="card" vocab="https://schema.org/" typeof="Article">
+  <NuxtLink :to="work.path" class="card" vocab="https://schema.org/" typeof="Article">
     <span property="author publisher" typeof="Organization">
       <span property="name" :content="t('name')" />
       <span property="url" :content="baseUrl" />

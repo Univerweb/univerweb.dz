@@ -22,7 +22,7 @@ export default defineNuxtConfig({
   },
 
   content: {
-    markdown: {
+    renderer: {
       anchorLinks: false,
     },
   },
