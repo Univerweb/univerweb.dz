@@ -14,7 +14,7 @@ const work = commonSchema.extend({
 
 const presta = commonSchema.extend({
   label: z.string(),
-  intro: z.string().optional(),
+  intro: z.string(),
   features: z.object({
     title: z.string(),
     list: z.array(z.object({
