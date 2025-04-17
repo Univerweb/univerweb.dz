@@ -1,20 +1,17 @@
 <script setup lang="ts">
-import type { Presta } from '../../types'
-
 const localePath = useLocalePath()
-const { t } = useI18n()
+const { locale, t } = useI18n()
 const { baseUrl, localeBaseUrl } = useUrl()
-const { path, params: { slug } } = useRoute()
+const { path } = useRoute()
 const img = useImage()
-const ogImage = img(`prestations/${slug}_banner`, { format: 'webp', width: 2800, height: 1575 }, { provider: 'cloudinary' })
+const ogImage = img(localePath(`${path}_banner`, 'fr'), { format: 'webp', width: 2800, height: 1575 }, { provider: 'cloudinary' })
 
-const { data: presta } = await useAsyncData(
-  `presta${path}`,
-  () => queryContent<Presta>()
-    .only(['_path', 'title', 'description', 'lead', 'intro', 'features', 'tags', 'process', 'faq'])
-    .where({ _path: path })
-    .findOne(),
-)
+const { data: presta } = await useAsyncData(`post${path}`, () => {
+  return queryCollection(`presta_${locale.value}`)
+    .select('path', 'title', 'description', 'lead', 'intro', 'features', 'tags', 'process', 'faq')
+    .path(computed(() => localePath(path)).value)
+    .first()
+}, { watch: [locale] })
 
 if (!presta.value) {
   throw createError({
@@ -70,7 +67,7 @@ useHead({
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': () => t('name'), 'item': localeBaseUrl },
           { '@type': 'ListItem', 'position': 2, 'name': () => t('presta.title'), 'item': () => `${baseUrl}${localePath('prestations')}` },
-          { '@type': 'ListItem', 'position': 3, 'name': presta.value.title },
+          { '@type': 'ListItem', 'position': 3, 'name': () => presta.value!.title },
         ],
       },
     },
@@ -78,14 +75,14 @@ useHead({
 })
 
 useSeoMeta({
-  title: presta.value.title,
-  description: presta.value.description,
-  ogTitle: presta.value.title,
-  ogDescription: presta.value.description,
+  title: () => presta.value!.title,
+  description: () => presta.value!.description,
+  ogTitle: () => presta.value!.title,
+  ogDescription: () => presta.value!.description,
   ogType: 'article',
   ogImage,
-  twitterTitle: presta.value.title,
-  twitterDescription: presta.value.description,
+  twitterTitle: () => presta.value!.title,
+  twitterDescription: () => presta.value!.description,
   twitterImage: ogImage,
 })
 </script>

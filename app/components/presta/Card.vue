@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { Presta } from '@/types'
+import type { Collections } from '@nuxt/content'
 
 defineProps<{
-  presta: Pick<Presta, '_path' | 'title' | 'label' | 'lead' | 'features'>
+  presta: Pick<Collections['presta_fr' | 'presta_en' | 'presta_ar'], 'path' | 'title' | 'label' | 'lead' | 'features'>
   titleTag: string
 }>()
 </script>
@@ -16,7 +16,7 @@ defineProps<{
     </ul>
 
     <Component :is="titleTag" property="name">
-      <NuxtLink :to="presta._path">
+      <NuxtLink :to="presta.path">
         {{ presta.title }}
       </NuxtLink>
     </Component>
@@ -25,6 +25,6 @@ defineProps<{
       {{ presta.lead }}
     </p>
 
-    <AppMore :path="presta._path" :label="presta.label" />
+    <AppMore :path="presta.path" :label="presta.label" />
   </div>
 </template>

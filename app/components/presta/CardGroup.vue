@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { Presta } from '@/types'
-
 interface Props {
   headlineTag?: string
   titleTag?: string
@@ -12,16 +10,13 @@ withDefaults(defineProps<Props>(), {
 })
 
 const { path } = useRoute()
-const localePath = useLocalePath()
-const { t } = useI18n()
+const { t, locale } = useI18n()
 
-const { data: prestations } = await useAsyncData(
-  `prestations${path}`,
-  () => queryContent<Presta>(localePath('prestations'))
-    .only(['_path', 'title', 'label', 'lead', 'features'])
-    .find(),
-  { watch: [localePath] },
-)
+const { data: prestations } = await useAsyncData(`prestations${path}`, () => {
+  return queryCollection(`presta_${locale.value}`)
+    .select('path', 'title', 'label', 'lead', 'features')
+    .all()
+}, { watch: [locale] })
 </script>
 
 <template>
@@ -33,7 +28,7 @@ const { data: prestations } = await useAsyncData(
     </div>
 
     <div class="card-group">
-      <PrestaCard v-for="presta in prestations" :key="presta._path" :presta="presta" :title-tag="titleTag" />
+      <PrestaCard v-for="presta in prestations" :key="presta.path" :presta="presta" :title-tag="titleTag" />
     </div>
   </section>
 </template>
