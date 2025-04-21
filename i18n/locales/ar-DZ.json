@@ -8,7 +8,7 @@
     { "path": "prestations", "label": "الخدمات" },
     { "path": "agence", "label": "الوكالة" },
     { "path": "contact", "label": "التواصل معنا" },
-    { "path": "blog", "label": "مدونة" }
+    { "path": "blog", "label": "مدوّنة" }
   ],
   "ariaLabel": {
     "lang-switch": "Choisir le français",
@@ -111,7 +111,7 @@
   "blog": {
     "title": "@:menu[4].label",
     "desc": "استكشف مدونتنا للحصول على نصائح وحيل لبناء مواقع الويب وأفكار حول الاتجاهات الحالية والمزيد.",
-    "headline": "المدونة الرقمية.",
+    "headline": "المدوّنة الرقمية.",
     "by": "بقلم",
     "share": "مشاركة المقال",
     "copy": "نسخ!"
