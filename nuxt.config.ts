@@ -79,6 +79,9 @@ export default defineNuxtConfig({
     detectBrowserLanguage: false,
     baseUrl: process.env.BASE_URL,
     skipSettingLocaleOnNavigate: true,
+    experimental: {
+      generatedLocaleFilePathFormat: 'off',
+    },
   },
 
   image: {
