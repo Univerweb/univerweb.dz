@@ -66,19 +66,19 @@ export default defineNuxtConfig({
   },
 
   i18n: {
+    defaultLocale: 'fr',
+    locales: [
+      { code: 'fr', language: 'fr-FR', file: 'fr-FR.json' },
+      { code: 'en', language: 'en-US', file: 'en-US.json' },
+      { code: 'ar', language: 'ar-DZ', file: 'ar-DZ.json', dir: 'rtl' },
+    ],
+    lazy: true,
+    detectBrowserLanguage: false,
+    skipSettingLocaleOnNavigate: true,
+    baseUrl: process.env.BASE_URL,
     bundle: {
       optimizeTranslationDirective: false,
     },
-    locales: [
-      { code: 'fr', file: 'fr-FR.json', language: 'fr-FR' },
-      { code: 'en', file: 'en-US.json', language: 'en-US' },
-      { code: 'ar', file: 'ar-DZ.json', language: 'ar-DZ', dir: 'rtl' },
-    ],
-    lazy: true,
-    defaultLocale: 'fr',
-    detectBrowserLanguage: false,
-    baseUrl: process.env.BASE_URL,
-    skipSettingLocaleOnNavigate: true,
     experimental: {
       generatedLocaleFilePathFormat: 'off',
     },
