@@ -116,10 +116,15 @@
     "prev": "Previous",
     "next": "Next"
   },
-  "error": {
-    "headline": "Oops…",
-    "error404": "This page cannot be found.",
-    "error500": "An error has occurred.",
-    "back": "Go to Home"
+  "error404": {
+    "title": "Page Not Found",
+    "headline": "You got lost in a galaxy far, far away… 404 😞",
+    "lead": "It seems the Force was not with this URL-404. The page you were looking for has disappeared, perhaps hidden by the Ewoks. Do not succumb to the Dark Side of frustration! Return to the Rebel Base to find your way.",
+    "cta": "Return to the Rebel Base"
+  },
+  "error500": {
+    "title": "Server Error",
+    "headline": "Problem in the heart of the main reactor… 500 😞",
+    "lead": "Oops! It seems an interdimensional short-circuit-500 or a mischievous Ewok has wreaked havoc on our server. Don’t panic, our technical team is already on it to restore the situation. We apologize for this setback."
   }
 }

@@ -4,25 +4,26 @@ const props = defineProps<{
 }>()
 
 const { t } = useI18n()
-const handleError = () => clearError({ redirect: '/' })
+const localePath = useLocalePath()
+const handleError = () => clearError({ redirect: localePath('/') })
 
 useSeoMeta({
-  title: `${props.error.statusCode} -  ${t('name')}`,
+  title: `${t(`error${props.error.statusCode}.title`)} -  ${t('name')}`,
   robots: { noindex: true },
 })
 </script>
 
 <template>
   <NuxtLayout name="default">
-    <main class="container error">
+    <main class="container error intro intro-justify">
       <h1>
-        {{ t('error.headline') }}
+        {{ t(`error${error.statusCode}.headline`) }}
       </h1>
       <p class="lead">
-        {{ t(`error.error${error.statusCode}`) }}
+        {{ t(`error${error.statusCode}.lead`) }}
       </p>
       <button class="btn" @click="handleError">
-        {{ t('error.back') }}
+        {{ t(`error404.cta`) }}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="8"
