@@ -36,9 +36,8 @@
   justify-content: $justify;
 }
 
-@mixin col($start: null, $end: null, $order: null) {
+@mixin col($start: null, $end: null) {
   &--#{$start}-#{$end} {
     grid-column: #{$start} / #{$end};
-    order: $order;
   }
 }
