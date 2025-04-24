@@ -18,11 +18,8 @@ useSeoMeta({
       <h1>
         {{ t('error.headline') }}
       </h1>
-      <p v-if="error.statusCode === 404" class="lead">
-        {{ t('error.error404') }}
-      </p>
-      <p v-else class="lead">
-        {{ t('error.error500') }}
+      <p class="lead">
+        {{ t(`error.error${error.statusCode}`) }}
       </p>
       <button class="btn" @click="handleError">
         {{ t('error.back') }}
