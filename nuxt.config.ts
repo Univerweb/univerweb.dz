@@ -9,6 +9,10 @@ export default defineNuxtConfig({
     'nuxt-gtag',
   ],
 
+  app: {
+    rootId: 'app',
+  },
+
   css: ['@/assets/scss/main.scss'],
 
   router: {
