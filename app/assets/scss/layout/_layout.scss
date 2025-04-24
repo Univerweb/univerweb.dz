@@ -2,7 +2,8 @@
 @use '../abstracts/mixins' as *;
 
 .container {
-  padding: calc(var(--padding-y) * 3) var(--padding-x);
+  padding-block: calc(var(--padding-y) * 3);
+  padding-inline: var(--padding-x);
 
   &-no-pt {
     padding-top: 0;
@@ -10,9 +11,9 @@
 }
 
 .hero {
+  --padding-y: 0;
   display: grid;
   grid-auto-rows: 1fr auto;
-  padding-block: 0;
   transition: min-height var(--transition);
   min-height: calc(100vh - var(--h-header));
 
