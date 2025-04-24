@@ -44,6 +44,16 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2025-04-16',
 
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@use "@/assets/scss/_variables.scss" as *; @use "@/assets/scss/_mixins.scss" as *;',
+        },
+      },
+    },
+  },
+
   eslint: {
     config: {
       stylistic: true,

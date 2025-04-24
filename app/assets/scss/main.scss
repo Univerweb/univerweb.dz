@@ -1,7 +1,3 @@
-// Abstracts
-@use 'abstracts/variables' as *;
-@use 'abstracts/mixins' as *;
-
 /* Fonts */
 
 @font-face {
@@ -342,7 +338,8 @@ img {
 
   @media (min-width: $md) {
     @include col(1, 6);
-    @include col(1, 9);
+    @include col(3, 6, $order: -1);
+    @include col(7, 10);
     @include col(7, 12);
   }
 
@@ -937,30 +934,6 @@ footer {
   }
 }
 
-.card-presta {
-  display: grid;
-  grid-auto-rows: auto auto 1fr auto;
-  border-radius: var(--padding-y);
-  background-color: var(--background-secondary);
-  transition: background-color var(--transition);
-  padding: var(--padding-y);
-
-  .tags {
-    color: var(--color-secondary);
-    transition: color var(--transition);
-  }
-
-  h2,
-  h3 {
-    @include font(32);
-    margin-block: 12px calc(var(--padding-y) * 2);
-  }
-
-  p {
-    margin-block-end: 0;
-  }
-}
-
 .link {
   display: inline-block;
 
@@ -1004,6 +977,10 @@ footer {
 
   .more & {
     justify-self: end;
+  }
+
+  .start & {
+    justify-self: start;
   }
 
   .error & {
@@ -1264,67 +1241,6 @@ footer {
 
   img {
     box-shadow: 0 0 40px 0 rgba(var(--shadow));
-  }
-}
-
-.presta {
-  :is(.features h2, .tags-group h2) {
-    margin-block-end: 0;
-  }
-
-  .features p {
-    margin-block-end: 32px;
-  }
-
-  .tags-group .tags {
-    align-content: end;
-  }
-
-  .faq .question {
-    padding-block: 24px 12px;
-    border-bottom: 1px solid var(--background-secondary);
-    transition: border-color var(--transition);
-
-    button {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      text-align: start;
-      column-gap: 24px;
-      width: 100%;
-      font-weight: inherit;
-
-      .icon {
-        position: relative;
-        width: 20px;
-        height: 20px;
-
-        span {
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          background-color: currentcolor;
-          width: 16px;
-          height: 2px;
-          border-radius: 2em;
-          transform: translate(-50%, -50%);
-          transition: transform var(--transition);
-
-          &.expanded {
-            transform: translate(-50%, -50%) rotate(-90deg);
-          }
-        }
-      }
-    }
-
-    section {
-      color: var(--color-secondary);
-      transition: height var(--transition);
-
-      p {
-        margin-bottom: 12px;
-      }
-    }
   }
 }
 
