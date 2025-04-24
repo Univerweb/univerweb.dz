@@ -6,8 +6,7 @@
   $mbs: null,
   $mbe: null
 ) {
-  font-size: #{$size + 'px'};
-
+  font-size: $size + px;
   @if $weight {
     font-weight: $weight;
   }
@@ -17,15 +16,15 @@
   }
 
   @if $spacing {
-    letter-spacing: #{$spacing + 'em'};
+    letter-spacing: $spacing + em;
   }
 
   @if $mbs {
-    margin-block-start: #{$mbs + 'px'};
+    margin-block-start: $mbs + px;
   }
 
   @if $mbe {
-    margin-block-end: #{$mbe + 'px'};
+    margin-block-end: $mbe + px;
   }
 }
 

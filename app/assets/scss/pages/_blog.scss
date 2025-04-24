@@ -1,0 +1,142 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.blog {
+  h1 {
+    margin-block-end: 24px;
+  }
+
+  .meta {
+    font-weight: 500;
+    color: var(--color-secondary);
+    transition: color var(--transition);
+
+    @media (min-width: $md) {
+      .tags {
+        position: relative;
+        display: inline-flex;
+        margin-inline-start: 12px;
+        padding-inline-start: 12px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          inset-inline-start: 0;
+          top: 50%;
+          width: 1px;
+          height: 10px;
+          margin-top: -5px;
+          background-color: var(--color-secondary);
+          opacity: 0.2;
+        }
+      }
+    }
+  }
+
+  .banner {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    img {
+      aspect-ratio: 16 / 9;
+    }
+  }
+
+  .content {
+    color: var(--color-secondary);
+    transition: color var(--transition);
+
+    .lead {
+      line-height: 1.6;
+      letter-spacing: normal;
+    }
+
+    h2 {
+      @include font(28, 600, $spacing: -0.03, $mbs: 36, $mbe: 12);
+      color: var(--color);
+      transition: color var(--transition);
+    }
+
+    h3 {
+      @include font(20, 600, $spacing: 0, $mbs: 24);
+    }
+
+    a[rel='nofollow'] {
+      text-decoration: underline;
+
+      &:hover {
+        color: var(--blue);
+      }
+    }
+
+    ul,
+    ol {
+      margin-block: 0 12px;
+    }
+
+    li {
+      padding-inline-start: 1.1rem;
+      margin-bottom: 6px;
+
+      &::before {
+        margin-inline-start: -0.975rem;
+        float: inline-start;
+      }
+    }
+
+    ul li::before {
+      content: '\002022';
+    }
+  }
+
+  .share {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 24px;
+    border-block: 1px solid var(--background-secondary);
+    transition: border-color var(--transition);
+
+    h2 {
+      margin: 0;
+    }
+
+    ul {
+      display: flex;
+      column-gap: 24px;
+      height: 24px;
+    }
+
+    .tooltip-clipboard {
+      position: relative;
+      color: currentcolor;
+
+      &-text {
+        width: max-content;
+        color: #00d282;
+        border: 1px solid;
+        padding: 0 6px;
+        border-radius: 2em;
+        position: absolute;
+        inset-inline-end: 34px;
+
+        @include font(12.5, $height: 1.76);
+
+        &-enter-active,
+        &-leave-active {
+          transition: opacity var(--transition);
+        }
+
+        &-enter-from,
+        &-leave-to {
+          opacity: 0;
+        }
+      }
+    }
+
+    a:hover,
+    .tooltip-clipboard:hover {
+      transition: color var(--transition);
+      color: var(--blue);
+    }
+  }
+}

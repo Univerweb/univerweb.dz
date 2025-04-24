@@ -1,0 +1,44 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+footer {
+  --padding-y: 48px;
+
+  font-weight: 300;
+  padding: var(--padding-y) var(--padding-x);
+  display: grid;
+  justify-content: center;
+  gap: var(--padding-y);
+  transform: translateY(var(--h-header));
+  transition: transform var(--transition);
+
+  @media (min-width: $lg) {
+    --padding-y: 144px;
+
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-between;
+  }
+
+  a:hover {
+    color: var(--blue);
+  }
+}
+
+.socials {
+  margin-top: 12px;
+  max-width: 200px;
+
+  @include grid(4, auto, $justify: space-between);
+
+  @media (min-width: $md) {
+    max-width: 280px;
+  }
+
+  a {
+    display: grid;
+  }
+}
+
+.copy {
+  font-size: 12.5px;
+}

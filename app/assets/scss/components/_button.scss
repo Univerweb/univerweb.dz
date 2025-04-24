@@ -1,0 +1,160 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.link {
+  display: inline-block;
+
+  @include font(20, 500);
+
+  @media (min-width: $md) {
+    font-size: 28px;
+  }
+
+  &.outfit {
+    font-family: 'Outfit', 'Outfit fallback';
+  }
+
+  &:hover {
+    color: var(--blue);
+  }
+
+  &.move:hover {
+    color: currentcolor;
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  column-gap: 12px;
+  background-color: var(--background-secondary);
+  font-weight: 500;
+  line-height: 2.875;
+  padding-inline: 20px 10px;
+  border-radius: 2em;
+  transition: background-color var(--transition), color var(--transition),
+    font-weight var(--transition);
+
+  .more & {
+    justify-self: end;
+  }
+
+  .start & {
+    justify-self: start;
+  }
+
+  .error & {
+    margin-top: 96px;
+  }
+
+  &:hover {
+    background-color: var(--blue);
+    color: var(--night);
+    font-weight: 600;
+  }
+
+  &:focus {
+    outline: 2px solid var(--blue);
+    outline-offset: 3px;
+  }
+
+  svg {
+    background-color: var(--blue);
+    color: var(--background-secondary);
+    border-radius: 2rem;
+    padding: 10px;
+    width: 32px;
+    height: 32px;
+    transition: color var(--transition), transform var(--transition);
+
+    [dir='rtl'] & {
+      transform: rotate(180deg);
+    }
+  }
+
+  &:hover svg {
+    color: var(--night);
+    transform: translateX(5px);
+
+    [dir='rtl'] & {
+      transform: translateX(-5px) rotate(180deg);
+    }
+  }
+}
+
+.back {
+  width: max-content;
+  text-transform: uppercase;
+
+  @include font(12.8, 500, var(--line-height), $mbe: 12);
+
+  &:hover {
+    color: var(--blue);
+  }
+
+  svg {
+    margin-inline-end: 6px;
+
+    [dir='rtl'] & {
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+.move {
+  position: relative;
+  display: inline-block;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 3px;
+    background-color: var(--blue);
+    transform: scaleX(0.05);
+    transform-origin: var(--origin);
+    transition: transform var(--transition);
+  }
+
+  @keyframes move {
+    0% {
+      transform: scaleX(0.05);
+    }
+
+    25% {
+      transform: scaleX(1);
+      transform-origin: var(--origin);
+    }
+
+    26% {
+      transform: scaleX(1);
+      transform-origin: calc(100% - var(--origin));
+    }
+
+    60% {
+      transform: scaleX(0.05);
+    }
+
+    80% {
+      transform: scaleX(0);
+      transform-origin: calc(100% - var(--origin));
+    }
+
+    81% {
+      transform: scaleX(0);
+      transform-origin: var(--origin);
+    }
+
+    100% {
+      transform: scaleX(0.05);
+    }
+  }
+
+  &:hover::before {
+    animation: move var(--animation);
+  }
+}

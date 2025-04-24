@@ -1,0 +1,65 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.work {
+  h1 {
+    margin-block-end: 0;
+  }
+
+  .banner {
+    overflow: hidden;
+    justify-items: center;
+    padding: var(--padding-y) var(--padding-y) 0;
+
+    @media (min-width: $lg) {
+      --padding-y: 48px;
+    }
+
+    img {
+      aspect-ratio: 2 / 1;
+      max-width: $xl;
+      border-radius: 0.5rem 0.5rem 0 0;
+    }
+  }
+
+  .row-evenly {
+    grid-template-columns: repeat(3, auto);
+  }
+
+  @media (min-width: $md) {
+    .col .inner {
+      position: sticky;
+      top: var(--padding-y);
+    }
+  }
+
+  .inner .lead {
+    margin-bottom: 16px;
+  }
+
+  .preview {
+    aspect-ratio: 1 / 1;
+    padding: var(--padding-y);
+    overflow-y: scroll;
+
+    img {
+      border-radius: 0.25rem;
+    }
+
+    &::-webkit-scrollbar {
+      width: 6px;
+
+      &-thumb {
+        background-color: var(--blue);
+      }
+
+      &-track {
+        background-color: var(--color-secondary);
+      }
+    }
+  }
+
+  img {
+    box-shadow: 0 0 40px 0 rgba(var(--shadow));
+  }
+}

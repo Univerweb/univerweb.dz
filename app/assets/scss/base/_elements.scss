@@ -1,0 +1,22 @@
+button {
+  background-color: transparent;
+  color: currentcolor;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+picture {
+  display: grid;
+  background-color: var(--background-secondary);
+  transition: background-color var(--transition);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}

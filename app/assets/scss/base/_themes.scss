@@ -1,0 +1,62 @@
+@use '../abstracts/variables' as *;
+
+:root {
+  --blue: #50c8f0;
+  --night: #28285a;
+  --duration: 0.24s;
+  --transition: var(--duration) linear;
+  --animation: calc(var(--duration) * 2) forwards;
+  --padding-x: 16px;
+  --padding-y: 16px;
+  --h-header: 72px;
+
+  &.theme-light {
+    --background: #fff;
+    --background-secondary: #f9fafb;
+    --color: #111827;
+    --color-secondary: rgba(17 24 39 / 73%);
+    --shadow: 0 0 0 / 10%;
+
+    color-scheme: light;
+  }
+
+  &.theme-dark {
+    --background: #111827;
+    --background-secondary: #1f2937;
+    --color: #fff;
+    --color-secondary: rgba(255 255 255 / 67%);
+    --shadow: 255 255 255 / 10%;
+
+    color-scheme: dark;
+  }
+
+  &[dir='ltr'] {
+    --font-family: 'Outfit', 'Outfit fallback';
+    --line-height: 1.1;
+    --origin: 0%;
+  }
+
+  &[dir='rtl'] {
+    --font-family: 'Alexandria', 'Alexandria fallback';
+    --line-height: 1.4;
+    --origin: 100%;
+  }
+
+  @media (min-width: $md) {
+    --padding-x: 24px;
+    --padding-y: 24px;
+
+    &:not(.scrolled) {
+      --h-header: 88px;
+    }
+  }
+
+  @media (min-width: $lg) {
+    --padding-x: calc(50% - 952px / 2);
+    --padding-y: 32px;
+  }
+
+  @media (min-width: $xl) {
+    --padding-x: calc(50% - 1200px / 2);
+  }
+}

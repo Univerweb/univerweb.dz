@@ -1,0 +1,21 @@
+main {
+  transform: translateY(var(--h-header));
+  transition: transform var(--transition);
+
+  &:is(.page-enter-active, .page-leave-active) {
+    transition-property: opacity;
+  }
+
+  &:is(.page-enter-from, .page-leave-to) {
+    opacity: 0;
+  }
+
+  &.error {
+    --h-header: 0;
+
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    min-height: calc(100vh);
+  }
+}

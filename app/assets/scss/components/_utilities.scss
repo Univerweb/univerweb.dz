@@ -1,0 +1,28 @@
+@use '../abstracts/mixins' as *;
+
+.lead {
+  @include font(20, 500, 1.3, -0.02);
+
+  color: var(--color-secondary);
+  transition: color var(--transition);
+
+  footer & {
+    font-weight: 300;
+    color: var(--color);
+    margin: 0;
+    max-width: 400px;
+  }
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-weight: 500;
+
+  li::before {
+    content: '#';
+    color: var(--blue);
+    margin-inline-end: 3px;
+  }
+}
