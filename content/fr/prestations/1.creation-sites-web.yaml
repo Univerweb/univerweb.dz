@@ -27,16 +27,16 @@ solutions:
 features:
   title: Les éléments clés de votre site web
   tags:
-    - Design responsive
-    - Optimisation SEO
-    - Design cohérent avec votre identité de marque
-    - UX fluide et intuitive
-    - UI attrayante et moderne
-    - Intégration d’outils analytiques
     - Sécurité et performance
-    - Accessibilité web
     - HTML valide
+    - Design cohérent avec votre identité de marque
+    - UI attrayante et moderne
+    - UX fluide et intuitive
+    - Design responsive
+    - Accessibilité web
+    - Optimisation SEO
     - Données structurées
+    - Intégration d’outils analytiques
 process:
   title: Notre processus de création
   steps:
