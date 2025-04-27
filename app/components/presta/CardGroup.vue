@@ -14,7 +14,7 @@ const { locale, t } = useI18n()
 
 const { data: prestations } = await useAsyncData(`prestations${path}`, () => {
   return queryCollection(`presta_${locale.value}`)
-    .select('path', 'title', 'cta', 'lead', 'solutions')
+    .select('path', 'title', 'cta', 'lead')
     .all()
 }, { watch: [locale] })
 </script>

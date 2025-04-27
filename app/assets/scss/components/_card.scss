@@ -92,7 +92,7 @@
 
 .card-presta {
   display: grid;
-  grid-auto-rows: auto auto 1fr auto;
+  grid-auto-rows: auto 1fr auto;
   border-radius: var(--padding-y);
   background-color: var(--background-secondary);
   transition: background-color var(--transition);
