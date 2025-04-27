@@ -55,6 +55,8 @@ faq:
   questions:
     - question: Do you need my content to create my website?
       answer: Yes, content (texts, images, videos) is a crucial element for creating your website. Ideally, we need the final content as early as possible to design and develop the pages efficiently and optimally. We can assist you in structuring your content.
+    - question: Do you offer help with writing content for my website?
+      answer: Yes, in addition to creating your site, we can offer you help with writing your texts or guide you towards specialized partners to create impactful content optimized for the web.
     - question: How long does it take to create a website?
       answer: The duration depends on the project's complexity. Generally, a simple showcase website can be completed in 2 to 4 weeks, while a custom project can take 4 to 8 weeks.
     - question: Will my site be adapted for mobile phones and tablets?
@@ -63,5 +65,7 @@ faq:
       answer: Yes, all our websites are optimized for SEO. We ensure your site has a suitable structure, fast loading times, and optimized content to improve your online visibility.
     - question: Can I manage my site myself after its creation?
       answer: Yes, if your site is developed on a CMS like Drupal, you will have full access to the administration interface to easily manage and update your content (texts, images, blog posts, products, etc.) without any technical knowledge. We offer training if needed.
+    - question: Do you offer website maintenance services after its launch?
+      answer: Yes, we offer maintenance packages to ensure the security, regular updates (CMS, plugins), and continuous performance of your site after its launch, allowing you to focus on your main activity.
     - question: What is the cost of a website?
       answer: The cost of a website varies depending on its complexity, the number of pages, specific functionalities, the desired design, and necessary integrations. Each project is unique, which is why we offer personalized quotes after fully understanding your needs.
