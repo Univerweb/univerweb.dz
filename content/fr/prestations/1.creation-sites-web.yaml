@@ -53,15 +53,15 @@ process:
 faq:
   title: Questions fréquentes sur la création de sites web
   questions:
-    - question: Quel est le coût d’un site web ?
-      answer: Le coût d’un site web varie en fonction de sa complexité, du nombre de pages, des fonctionnalités spécifiques, du design souhaité et des intégrations nécessaires. Chaque projet est unique, c’est pourquoi nous proposons des devis personnalisés après avoir bien compris vos besoins.
-    - question: Combien de temps faut-il pour créer un site web ?
-      answer: La durée dépend de la complexité du projet. En général, un site vitrine simple peut être réalisé en 2 à 4 semaines, tandis qu’un projet sur mesure peut prendre 4 à 8 semaines.
-    - question: Mon site sera-t-il optimisé pour le référencement (SEO) ?
-      answer: Oui, tous nos sites sont optimisés pour le SEO. Nous veillons à ce que votre site ait une structure adaptée, des temps de chargement rapides et un contenu optimisé pour améliorer votre visibilité en ligne.
     - question: Avez-vous besoin de mon contenu pour créer mon site ?
       answer: Oui, le contenu (textes, images, vidéos) est un élément crucial pour la création de votre site web. Idéalement, nous devons avoir le contenu définitif au plus tôt pour pouvoir concevoir et développer les pages de manière efficace et optimisée. Nous pouvons vous accompagner dans la structuration de votre contenu.
+    - question: Combien de temps faut-il pour créer un site web ?
+      answer: La durée dépend de la complexité du projet. En général, un site vitrine simple peut être réalisé en 2 à 4 semaines, tandis qu’un projet sur mesure peut prendre 4 à 8 semaines.
     - question: Est-ce que mon site sera adapté aux mobiles et tablettes ?
       answer: Absolument ! La conception responsive (adaptation à tous les types d’écrans) est aujourd’hui indispensable. Tous les sites que nous créons sont nativement conçus pour offrir une expérience utilisateur optimale sur les smartphones, tablettes et ordinateurs de bureau.
+    - question: Mon site sera-t-il optimisé pour le référencement (SEO) ?
+      answer: Oui, tous nos sites sont optimisés pour le SEO. Nous veillons à ce que votre site ait une structure adaptée, des temps de chargement rapides et un contenu optimisé pour améliorer votre visibilité en ligne.
     - question: Pourrai-je gérer mon site moi-même après sa création ?
       answer: Oui, si votre site est développé sur un CMS comme Drupal, vous aurez un accès complet à l’interface d’administration pour gérer et mettre à jour facilement votre contenu (textes, images, articles de blog, produits, etc.) sans aucune connaissance technique. Nous proposons des formations si nécessaire.
+    - question: Quel est le coût d’un site web ?
+      answer: Le coût d’un site web varie en fonction de sa complexité, du nombre de pages, des fonctionnalités spécifiques, du design souhaité et des intégrations nécessaires. Chaque projet est unique, c’est pourquoi nous proposons des devis personnalisés après avoir bien compris vos besoins.
