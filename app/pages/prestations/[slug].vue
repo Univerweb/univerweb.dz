@@ -92,7 +92,7 @@ useSeoMeta({
     <section vocab="https://schema.org/" typeof="Service">
       <div class="container intro">
         <AppBack :path="localePath('prestations')" :label="t('menu[1].label')" />
-        <h1 property="name">
+        <h1 property="name serviceType">
           {{ presta.title }}
         </h1>
       </div>
@@ -126,9 +126,7 @@ useSeoMeta({
 
           <div class="col col--6-13">
             <template v-for="solution in presta.solutions.list" :key="solution.title">
-              <h3 property="serviceType">
-                {{ solution.title }}
-              </h3>
+              <h3>{{ presta.title }}</h3>
               <p>{{ solution.description }}</p>
             </template>
           </div>

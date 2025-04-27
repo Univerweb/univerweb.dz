@@ -10,12 +10,12 @@ defineProps<{
 <template>
   <div class="card-presta" vocab="https://schema.org/" typeof="Service">
     <ul class="tags">
-      <li v-for="solution in presta.solutions.list.slice(0, 3)" :key="solution.title" property="serviceType">
+      <li v-for="solution in presta.solutions.list.slice(0, 3)" :key="solution.title">
         {{ solution.title }}
       </li>
     </ul>
 
-    <Component :is="titleTag" property="name">
+    <Component :is="titleTag" property="name serviceType">
       <NuxtLink :to="presta.path">
         {{ presta.title }}
       </NuxtLink>
