@@ -126,7 +126,7 @@ useSeoMeta({
 
           <div class="col col--6-13">
             <template v-for="solution in presta.solutions.list" :key="solution.title">
-              <h3>{{ presta.title }}</h3>
+              <h3>{{ solution.title }}</h3>
               <p>{{ solution.description }}</p>
             </template>
           </div>
