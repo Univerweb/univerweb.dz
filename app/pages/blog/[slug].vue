@@ -3,6 +3,7 @@ const localePath = useLocalePath()
 const { locale, t } = useI18n()
 const { baseUrl, localeBaseUrl } = useUrl()
 const { path } = useRoute()
+const head = useLocaleHead()
 const img = useImage()
 const ogImage = img(localePath(`${path}_banner`, 'fr'), { format: 'webp', width: 2400, height: 1256 }, { provider: 'cloudinary' })
 
@@ -74,9 +75,7 @@ useSeoMeta({
           {{ post.title }}
         </h1>
         <div class="meta">
-          <time property="dateCreated datePublished" :datetime="new Date(post.createdAt).toISOString()">
-            {{ new Intl.DateTimeFormat(locale.toString(), { dateStyle: 'long', numberingSystem: 'latn' }).format(new Date(post.createdAt)) }}
-          </time>
+          <NuxtTime property="dateCreated datePublished" :datetime="post.createdAt" :locale="head.htmlAttrs.lang" date-style="long" />
           <time property="dateModified" :datetime="new Date(post.updatedAt).toISOString()" />
           {{ t('blog.by') }}
           <span v-if="post.author && post.author.name && post.author.url" property="author" typeof="Person" class="author">
