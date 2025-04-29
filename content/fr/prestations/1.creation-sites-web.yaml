@@ -1,0 +1,71 @@
+title: Création de sites web
+description: Créez votre site web sur mesure avec Univerweb et captez l’attention de vos visiteurs grâce à un design moderne, une expérience fluide, un développement robuste et une optimisation SEO pour une présence digitale efficace.
+cta: Créer votre site web
+lead: Votre site web est un employé qui travaille 24h/24. Nous le concevons pour qu’il convertisse vos visiteurs en clients… même quand vous dormez !
+intro:
+  - Votre site web est la première impression que vous donnez en ligne et un levier essentiel pour votre développement. Chez Univerweb, nous concevons et développons des sites internet qui ne sont pas seulement beaux, mais surtout performants, intuitifs et parfaitement adaptés à vos objectifs.
+  - Notre approche stratégique allie un UX/UI design soigné pour créer des expériences utilisateurs fluides et engageantes, à un développement web robuste garantissant fiabilité, rapidité et évolutivité. Nous donnons ainsi vie à votre vision digitale avec un savoir-faire technique complet, capable de répondre à tous vos besoins spécifiques.
+solutions:
+  title: Nos solutions de création de sites web
+  list:
+    - title: Site fonctionnel & sur mesure
+      description: Développez une solution web unique pour répondre à des besoins métier spécifiques (gestion interne, outils interactifs, plateformes complexes…). Nous concevons des applications web sur mesure pour optimiser vos processus ou offrir des services innovants.
+    - title: Site d’annonces
+      description: Mettez en relation l’offre et la demande en créant une plateforme où les utilisateurs peuvent publier et consulter des petites annonces classées par catégories (immobilier, emploi, véhicules, etc.).
+    - title: Site institutionnel
+      description: Développez une plateforme complète et professionnelle pour les organisations, administrations ou grandes entreprises. Véhiculez vos valeurs, partagez vos informations clés et renforcez votre image officielle avec une présence en ligne d’envergure.
+    - title: Site d’actualité
+      description: Créez un portail dynamique pour publier et organiser des informations, des articles de presse ou des actualités sur un ou plusieurs sujets. Idéal pour les médias, les associations ou les organisations souhaitant diffuser du contenu frais régulièrement.
+    - title: E-catalogue
+      description: Présentez l’intégralité de votre gamme de produits ou services en ligne de manière structurée et esthétique. Un outil digital interactif pour informer vos clients en détail, sans l’aspect transactionnel direct d’une boutique en ligne.
+    - title: Blog
+      description: Partagez votre expertise, publiez des articles, actualités ou guides sur votre domaine. Engagez votre audience, démontrez votre savoir-faire et améliorez votre référencement naturel en devenant une source d’information reconnue.
+    - title: Site vitrine
+      description: Créez une présence en ligne essentielle pour présenter votre activité, vos services et vos informations de contact. Idéal pour asseoir votre crédibilité et être trouvé facilement par vos clients potentiels sur internet.
+    - title: Site One-page
+      description: Concentrez votre message essentiel sur une seule page percutante. Idéal pour un événement, un produit spécifique, un portfolio ou une présentation concise qui capte l’attention et incite à l’action rapidement.
+features:
+  title: Les éléments clés de votre site web
+  tags:
+    - Sécurité et performance
+    - HTML valide
+    - Design cohérent avec votre identité de marque
+    - UI attrayante et moderne
+    - UX fluide et intuitive
+    - Design responsive
+    - Accessibilité web
+    - Optimisation SEO
+    - Données structurées
+    - Intégration d’outils analytiques
+process:
+  title: Notre processus de création
+  steps:
+    - title: Définition du projet & briefing
+      description: Comprendre vos besoins, vos objectifs et votre vision.
+    - title: Conception & design UX/UI
+      description: Structurer l’information et créer une expérience utilisateur optimale.
+    - title: Développement technique
+      description: Donner vie à votre design avec un code propre et performant.
+    - title: Tests & recette
+      description: S’assurer que tout fonctionne parfaitement avant la mise en ligne.
+    - title: Déploiement & lancement
+      description: Mettre votre nouveau site web en ligne en toute sécurité.
+faq:
+  title: Questions fréquentes sur la création de sites web
+  questions:
+    - question: Avez-vous besoin de mon contenu pour créer mon site ?
+      answer: Oui, le contenu (textes, images, vidéos) est un élément crucial pour la création de votre site web. Idéalement, nous devons avoir le contenu définitif au plus tôt pour pouvoir concevoir et développer les pages de manière efficace et optimisée. Nous pouvons vous accompagner dans la structuration de votre contenu.
+    - question: Offrez-vous de l’aide pour la rédaction du contenu de mon site ?
+      answer: Oui, en complément de la création de votre site, nous pouvons vous offrir une aide à la rédaction de vos textes ou vous orienter vers des partenaires spécialisés pour créer des contenus percutants et optimisés pour le web.
+    - question: Combien de temps faut-il pour créer un site web ?
+      answer: La durée dépend de la complexité du projet. En général, un site vitrine simple peut être réalisé en 2 à 4 semaines, tandis qu’un projet sur mesure peut prendre 4 à 8 semaines.
+    - question: Est-ce que mon site sera adapté aux mobiles et tablettes ?
+      answer: Absolument ! La conception responsive (adaptation à tous les types d’écrans) est aujourd’hui indispensable. Tous les sites que nous créons sont nativement conçus pour offrir une expérience utilisateur optimale sur les smartphones, tablettes et ordinateurs de bureau.
+    - question: Mon site sera-t-il optimisé pour le référencement (SEO) ?
+      answer: Oui, tous nos sites sont optimisés pour le SEO. Nous veillons à ce que votre site ait une structure adaptée, des temps de chargement rapides et un contenu optimisé pour améliorer votre visibilité en ligne.
+    - question: Pourrai-je gérer mon site moi-même après sa création ?
+      answer: Oui, si votre site est développé sur un CMS comme Drupal, vous aurez un accès complet à l’interface d’administration pour gérer et mettre à jour facilement votre contenu (textes, images, articles de blog, produits, etc.) sans aucune connaissance technique. Nous proposons des formations si nécessaire.
+    - question: Proposez-vous des services de maintenance pour le site après son lancement ?
+      answer: Oui, nous proposons des forfaits de maintenance pour assurer la sécurité, les mises à jour régulières (CMS, plugins) et la performance continue de votre site après son lancement, vous permettant ainsi de vous concentrer sur votre activité principale.
+    - question: Quel est le coût d’un site web ?
+      answer: Le coût d’un site web varie en fonction de sa complexité, du nombre de pages, des fonctionnalités spécifiques, du design souhaité et des intégrations nécessaires. Chaque projet est unique, c’est pourquoi nous proposons des devis personnalisés après avoir bien compris vos besoins.

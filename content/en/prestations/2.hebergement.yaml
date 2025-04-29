@@ -1,0 +1,58 @@
+title: Web Hosting
+description: Opt for high-performance web hosting with Univerweb and ensure a reliable and secure online presence with a personalized domain name, professional email service, and an integrated SSL certificate.
+cta: Ensure your online presence
+lead: Your hosting is the heart that makes your website beat. We make it fast as lightning… and always ready to welcome visitors without a hitch!
+intro:
+  - Un site web a besoin de fondations solides. Celles-ci incluent un hébergement fiable qui le rend accessible, un nom de domaine clair pour être trouvé facilement, un certificat SSL pour sécuriser les échanges et inspirer confiance, et des adresses e-mail professionnelles pour une communication crédible. Avoir ces éléments bien gérés est indispensable au succès de votre présence digitale.
+  - 'At Univerweb, website creation is our core business. To offer you a simplified experience and a perfectly coherent solution, we provide an integrated offer that couples your website creation with all necessary services: high-performance hosting, domain registration/transfer, SSL certificate, and professional messaging. This approach guarantees technical synergy, optimized setup, and a single point of contact for your entire web project.'
+solutions:
+  title: Our Web Hosting Solutions
+  list:
+    - title: Domain Name
+      description: Your unique address on the internet (yourwebsite.dz, .com, .net…). We help you find, register, transfer, and manage the ideal domain name for your brand.
+    - title: Website Hosting
+      description: The foundation of your website. We offer high-performance, stable, and secure hosting, adapted to your projects (static sites, CMS, web applications, Etc.), with varied plans to meet your resource needs.
+    - title: Professional Messaging
+      description: Create personalized email addresses with your domain name (contact@yourdomain.dz). Communicate professionally and strengthen your credibility.
+    - title: SSL Certificate
+      description: Secure data exchanged with your website as well as connections to your professional messaging associated with your domain name. Essential for user confidence and the security of your communications.
+features:
+  title: Key Elements of Our Offer
+  tags:
+    - Optimal loading speed
+    - HTTP/3 Support
+    - Adapted bandwidth
+    - Enhanced security
+    - Automatic backups
+    - Scalability (Resource evolution via plan change)
+    - Intuitive control panel
+    - Responsive technical support
+    - Scalable storage
+process:
+  title: Our Integrated Approach
+  steps:
+    - title: Understand your needs
+      description: We analyze your needs to best adapt our hosting offer to your digital project.
+    - title: Service Activation
+      description: We proceed with the technical setup of your entire offer (domain name, hosting, messaging, and SSL certificate).
+    - title: Getting Started Assistance
+      description: We help you get started with the intuitive control panel to easily manage your services daily.
+    - title: Continuous Support
+      description: We provide responsive and dedicated technical support to answer all your questions and quickly resolve any potential issues.
+faq:
+  title: Frequently Asked Questions about Web Hosting
+  questions:
+    - question: Why choose our integrated offer for your website?
+      answer: By choosing our integrated offer in addition to your website creation, you benefit from perfect synergy between development and infrastructure, a single point of contact, and services optimized for the websites we design.
+    - question: Do you only host websites that you create?
+      answer: No, we offer hosting for the websites that we create, but also if you already have an existing website (created by another agency).
+    - question: Will my website and emails be secure with your offer?
+      answer: Yes. Our offer includes comprehensive security measures. The SSL certificate secures your website connection as well as that of your professional messaging associated with your domain name.
+    - question: Is the SSL certificate included in the offer?
+      answer: Yes, a free SSL certificate is included in our integrated offer to secure your website.
+    - question: Can I easily manage my hosting?
+      answer: Absolutely! We provide you with an intuitive control panel to manage your files, databases, and hosting settings with ease.
+    - question: What does technical support cover?
+      answer: Our support covers issues related to your hosting account, domain name management, SSL certificate activation, and the functioning of your professional email accounts.
+    - question: What are the costs associated with web hosting?
+      answer: The price of hosting depends on the type of solution chosen and the resources needed. We offer solutions adapted to all budgets.
