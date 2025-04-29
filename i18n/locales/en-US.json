@@ -31,11 +31,11 @@
   "socialsName": ["X", "Facebook", "LinkedIn", "GitHub"],
   "copy": "Copyright © {year} @:name{'.'} All rights reserved.",
   "home": {
-    "headline": "Your Digital Success, Our Mission.",
-    "lead": "Your digital success relies on a high-performing online presence. Univerweb is your ideal partner, integrating custom website creation, strong brand identity, reliable hosting, and results-driven digital marketing. Let’s build your growth together.",
+    "headline": "Revolutionize your online presence with a unique and bold website.",
+    "lead": "Even more than websites, we design and innovate human-centered digital experiences for you that reflect your brand image, our primary mission is to satisfy you!",
     "cta": {
-      "works": "Propel Your Ideas",
-      "blog": "Boost Your Digital Knowledge"
+      "works": "More creativity",
+      "blog": "More curiosity"
     }
   },
   "works": {
