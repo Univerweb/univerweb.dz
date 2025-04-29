@@ -33,8 +33,8 @@ importers:
         specifier: ^4.5.1
         version: 4.5.1(vue@3.5.13(typescript@5.8.3))
       vue3-google-map:
-        specifier: ^0.21.1
-        version: 0.21.1(vue@3.5.13(typescript@5.8.3))
+        specifier: ^0.22.0
+        version: 0.22.0(vue@3.5.13(typescript@5.8.3))
     devDependencies:
       '@nuxt/eslint':
         specifier: ^1.3.0
@@ -5223,8 +5223,8 @@ packages:
     peerDependencies:
       vue: ^3.2.0
 
-  vue3-google-map@0.21.1:
-    resolution: {integrity: sha512-5CA/1GLei4thQgXhNVBSBcJvylOhcrk2a/ISdaticdn0/Ipsw0/zHyGL7tp98eAajPwiwFOnl9epKkhdMfv8sA==}
+  vue3-google-map@0.22.0:
+    resolution: {integrity: sha512-g75Y7eKIZNOiN6gDRf+dqqr/odWsIfVo52hc/2kyNd9xcv22fRbQRoUnEEyK5XMaPtH6aTgJvbpYU/H8eDBk8A==}
     engines: {node: '>=16.11.0'}
     peerDependencies:
       vue: ^3
@@ -11677,7 +11677,7 @@ snapshots:
       '@vue/devtools-api': 6.6.4
       vue: 3.5.13(typescript@5.8.3)
 
-  vue3-google-map@0.21.1(vue@3.5.13(typescript@5.8.3)):
+  vue3-google-map@0.22.0(vue@3.5.13(typescript@5.8.3)):
     dependencies:
       '@googlemaps/js-api-loader': 1.16.8
       '@googlemaps/markerclusterer': 2.5.3
