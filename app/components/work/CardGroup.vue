@@ -37,6 +37,6 @@ const { data: works } = await useAsyncData(`works${path}`, () => {
       <WorkCard v-for="work in works" :key="work.path" :work="work" :title-tag="titleTag" />
     </div>
 
-    <LazyAppMore v-if="more" path="realisations" :label="t('home.moreLabel.works')" class="intro-justify" />
+    <LazyAppMore v-if="more" path="realisations" :label="t('home.cta.works')" class="intro-justify" />
   </section>
 </template>
