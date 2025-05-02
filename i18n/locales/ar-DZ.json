@@ -47,10 +47,7 @@
   "realisations": {
     "title": "@:menu[0].label",
     "description": "اكتشف أحدث إبداعاتنا. سنكون سعداء للعمل معك.",
-    "headline": "لقد آمنوا بنا وهم سعداء."
-  },
-
-  "work": {
+    "headline": "لقد آمنوا بنا وهم سعداء.",
     "client": "الزبون",
     "category": "الفئة",
     "services": "الخدمات",

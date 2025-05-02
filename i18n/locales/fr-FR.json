@@ -47,10 +47,7 @@
   "realisations": {
     "title": "@:menu[0].label",
     "description": "Découvrez nos toutes dernières créations. Nous serions ravis de collaborer avec vous.",
-    "headline": "Ils ont cru en nous et ils sont comblés."
-  },
-
-  "work": {
+    "headline": "Ils ont cru en nous et ils sont comblés.",
     "client": "Client",
     "category": "Catégorie",
     "services": "Prestations",

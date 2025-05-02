@@ -44,7 +44,7 @@ useHead({
         '@type': 'BreadcrumbList',
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': () => t('name'), 'item': localeBaseUrl },
-          { '@type': 'ListItem', 'position': 2, 'name': () => t('works.title'), 'item': () => `${baseUrl}${localePath('realisations')}` },
+          { '@type': 'ListItem', 'position': 2, 'name': () => t('realisations.title'), 'item': () => `${baseUrl}${localePath('realisations')}` },
           { '@type': 'ListItem', 'position': 3, 'name': () => work.value!.title },
         ],
       },
@@ -77,7 +77,7 @@ useSeoMeta({
       </span>
       <time property="dateCreated datePublished" :datetime="new Date(work.createdAt).toISOString()" />
       <time property="dateModified" :datetime="new Date(work.updatedAt).toISOString()" />
-      <span property="articleSection" :content="t('works.title')" />
+      <span property="articleSection" :content="t('realisations.title')" />
       <span property="description" :content="work.description" />
 
       <div class="container intro">
@@ -97,7 +97,7 @@ useSeoMeta({
       <div class="container row row-evenly">
         <div class="col col--auto-auto">
           <h2 class="h6">
-            {{ t('work.client') }}
+            {{ t('realisations.client') }}
           </h2>
           <p class="lead">
             {{ work.title }}
@@ -105,7 +105,7 @@ useSeoMeta({
         </div>
         <div class="col col--auto-auto">
           <h2 class="h6">
-            {{ t('work.category') }}
+            {{ t('realisations.category') }}
           </h2>
           <p class="lead">
             {{ work.category }}
@@ -113,7 +113,7 @@ useSeoMeta({
         </div>
         <div class="col col--auto-auto">
           <h2 class="h6">
-            {{ t('work.services') }}
+            {{ t('realisations.services') }}
           </h2>
           <ul class="lead tags">
             <li v-for="tag in work.tags" :key="tag" property="keywords">
@@ -130,14 +130,14 @@ useSeoMeta({
               {{ work.lead }}
             </p>
             <a v-if="work.link" :href="work.link" class="link">
-              {{ t('work.visit') }}
+              {{ t('realisations.visit') }}
             </a>
           </div>
         </div>
         <AppPicture
           :picture="work"
           type="preview"
-          :alt="`${t('work.alt')} ${work.title}`"
+          :alt="`${t('realisations.alt')} ${work.title}`"
           sizes="304px xs:354px sm:697px md:921px lg:565px xl:730px"
           class="col col--5-13 preview"
           :img-attrs="null"
@@ -148,7 +148,7 @@ useSeoMeta({
     <div v-if="workRelated && workRelated.length" class="container">
       <div class="intro intro-justify">
         <h2>
-          {{ t('work.related') }}
+          {{ t('realisations.related') }}
         </h2>
       </div>
       <div class="card-group">

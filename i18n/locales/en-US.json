@@ -47,10 +47,7 @@
   "realisations": {
     "title": "@:menu[0].label",
     "description": "Discover our latest creations. We would be delighted to work with you.",
-    "headline": "They believed in us and they are fulfilled."
-  },
-
-  "work": {
+    "headline": "They believed in us and they are fulfilled.",
     "client": "Client",
     "category": "Category",
     "services": "Services",
