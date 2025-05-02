@@ -28,6 +28,11 @@
   "join": "Rejoignez-nous sur",
   "socialsName": ["X", "Facebook", "LinkedIn", "GitHub"],
   "copy": "Copyright © {year} @:name{'.'} Tous droits réservés.",
+  "nav": {
+    "prev": "Précédent",
+    "next": "Suivant"
+  },
+
   "home": {
     "title": "Création de sites web en Algérie",
     "desc": "Plus que des sites web, nous concevons et innovons pour vous des expériences numériques centrées sur l’humain et qui reflètent votre image de marque.",
@@ -38,11 +43,13 @@
       "blog": "Plus de curiosité"
     }
   },
+
   "works": {
     "title": "@:menu[0].label",
     "desc": "Découvrez nos toutes dernières créations. Nous serions ravis de collaborer avec vous.",
     "headline": "Ils ont cru en nous et ils sont comblés."
   },
+
   "work": {
     "client": "Client",
     "services": "Prestations",
@@ -51,11 +58,13 @@
     "alt": "Un aperçu du site web de",
     "related": "Projets liés"
   },
+
   "presta": {
     "title": "@:menu[1].label",
     "desc": "Une stratégie de présence web accomplie, sur des fondements technologiques et une méthodologie rigoureuse.",
     "headline": "Ce dont nous sommes capables."
   },
+
   "agency": {
     "title": "@:menu[2].label",
     "desc": "Nous sommes une jeunes équipe de créativo-perfectionnistes et passionnée par notre travail, nous aimons coder de magnifiques sites web.",
@@ -80,6 +89,7 @@
       }
     }
   },
+
   "contact": {
     "title": "@:menu[3].label",
     "desc": "Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
@@ -88,6 +98,7 @@
     "manager": "Gérant",
     "support": "Soutien technique"
   },
+
   "blog": {
     "title": "@:menu[4].label",
     "desc": "Explorez notre Blog pour des conseils et astuces en matière de création de sites web, des réflexions sur les tendances actuelles et plus encore.",
@@ -96,16 +107,14 @@
     "share": "Partager l’article",
     "copy": "Copié !"
   },
-  "nav": {
-    "prev": "Précédent",
-    "next": "Suivant"
-  },
+
   "error404": {
     "title": "Page non trouvée",
     "headline": "Vous vous êtes égaré dans une galaxie lointaine, très lointaine… 404 😞",
     "lead": "Il semblerait que la Force n’était pas avec cette URL-404. La page que vous cherchiez a disparu, peut-être cachée par les Ewoks. Ne succombez pas au côté obscur de la frustration ! Revenez à la base rebelle pour retrouver votre chemin.",
     "cta": "Rejoindre la base rebelle"
   },
+
   "error500": {
     "title": "Erreur serveur",
     "headline": "Problème dans le cœur du réacteur principal… 500 😞",

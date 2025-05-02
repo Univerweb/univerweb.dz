@@ -28,6 +28,11 @@
   "join": "Join us on",
   "socialsName": ["X", "Facebook", "LinkedIn", "GitHub"],
   "copy": "Copyright © {year} @:name{'.'} All rights reserved.",
+  "nav": {
+    "prev": "Previous",
+    "next": "Next"
+  },
+
   "home": {
     "title": "Website Design in Algeria",
     "desc": "Even more than websites, we design and innovate human-centered digital experiences for you that reflect your brand image.",
@@ -38,11 +43,13 @@
       "blog": "More curiosity"
     }
   },
+
   "works": {
     "title": "@:menu[0].label",
     "desc": "Discover our latest creations. We would be delighted to work with you.",
     "headline": "They believed in us and they are fulfilled."
   },
+
   "work": {
     "client": "Client",
     "services": "Services",
@@ -51,11 +58,13 @@
     "alt": "A website overview of",
     "related": "Related projects"
   },
+
   "presta": {
     "title": "@:menu[1].label",
     "desc": "An accomplished web presence strategy, on technological foundations and a rigorous methodology.",
     "headline": "What we are capable of."
   },
+
   "agency": {
     "title": "@:menu[2].label",
     "desc": "We are a young team of creative-perfectionists and passionate about our work, we like to code beautiful websites while drinking coffee in the morning.",
@@ -80,6 +89,7 @@
       }
     }
   },
+
   "contact": {
     "title": "@:menu[3].label",
     "desc": "Tell us about your needs, we’d love to collaborate with you.",
@@ -88,6 +98,7 @@
     "manager": "Manager",
     "support": "Technical support"
   },
+
   "blog": {
     "title": "@:menu[4].label",
     "desc": "Explore our Blog for website building tips and tricks, thoughts on current trends and more.",
@@ -96,16 +107,14 @@
     "share": "Share the article",
     "copy": "Copied!"
   },
-  "nav": {
-    "prev": "Previous",
-    "next": "Next"
-  },
+
   "error404": {
     "title": "Page Not Found",
     "headline": "You got lost in a galaxy far, far away… 404 😞",
     "lead": "It seems the Force was not with this URL-404. The page you were looking for has disappeared, perhaps hidden by the Ewoks. Do not succumb to the Dark Side of frustration! Return to the Rebel Base to find your way.",
     "cta": "Return to the Rebel Base"
   },
+
   "error500": {
     "title": "Server Error",
     "headline": "Problem in the heart of the main reactor… 500 😞",
