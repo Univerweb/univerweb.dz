@@ -47,16 +47,16 @@ useHead(() => ({
 }))
 
 useSeoMeta({
-  titleTemplate: title => title ? `${title} | ${t('name')}` : `${t('title')} | ${t('name')}`,
-  description: () => t('desc'),
-  ogTitle: () => t('title'),
-  ogDescription: () => t('desc'),
+  titleTemplate: title => title ? `${title} | ${t('name')}` : `${t('home.title')} | ${t('name')}`,
+  description: () => t('home.desc'),
+  ogTitle: () => t('home.title'),
+  ogDescription: () => t('home.desc'),
   ogType: 'website',
   ogUrl,
   ogImage,
   twitterCard: 'summary_large_image',
-  twitterTitle: () => t('title'),
-  twitterDescription: () => t('desc'),
+  twitterTitle: () => t('home.title'),
+  twitterDescription: () => t('home.desc'),
   twitterImage: ogImage,
   colorScheme: 'light dark',
   appleMobileWebAppTitle: () => t('name'),

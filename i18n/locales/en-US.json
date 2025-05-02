@@ -1,7 +1,5 @@
 {
   "name": "Univerweb",
-  "title": "Website Design in Algeria",
-  "desc": "Even more than websites, we design and innovate human-centered digital experiences for you that reflect your brand image.",
   "skip": "Skip to main content",
   "menu": [
     { "path": "realisations", "label": "Latest work" },
@@ -31,6 +29,8 @@
   "socialsName": ["X", "Facebook", "LinkedIn", "GitHub"],
   "copy": "Copyright © {year} @:name{'.'} All rights reserved.",
   "home": {
+    "title": "Website Design in Algeria",
+    "desc": "Even more than websites, we design and innovate human-centered digital experiences for you that reflect your brand image.",
     "headline": "Revolutionize your online presence with a unique and bold website.",
     "lead": "Even more than websites, we design and innovate human-centered digital experiences for you that reflect your brand image, our primary mission is to satisfy you!",
     "cta": {

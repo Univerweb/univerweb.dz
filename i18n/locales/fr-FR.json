@@ -1,7 +1,5 @@
 {
   "name": "Univerweb",
-  "title": "Création de sites web en Algérie",
-  "desc": "Plus que des sites web, nous concevons et innovons pour vous des expériences numériques centrées sur l’humain et qui reflètent votre image de marque.",
   "skip": "Aller au contenu principal",
   "menu": [
     { "path": "realisations", "label": "Réalisations" },
@@ -31,6 +29,8 @@
   "socialsName": ["X", "Facebook", "LinkedIn", "GitHub"],
   "copy": "Copyright © {year} @:name{'.'} Tous droits réservés.",
   "home": {
+    "title": "Création de sites web en Algérie",
+    "desc": "Plus que des sites web, nous concevons et innovons pour vous des expériences numériques centrées sur l’humain et qui reflètent votre image de marque.",
     "headline": "Révolutionnez votre présence en ligne avec un site web unique et audacieux.",
     "lead": "Encore plus que des sites web, nous concevons et innovons pour vous des expériences numériques centrées sur l’humain et qui reflètent votre image de marque, notre mission première est de vous satisfaire !",
     "cta": {
