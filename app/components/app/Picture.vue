@@ -1,7 +1,7 @@
 <script setup lang="ts">
 interface Props {
   picture: { path: string, description: string }
-  type?: string
+  type?: 'thumbnail' | 'banner' | 'preview'
 }
 
 withDefaults(defineProps<Props>(), {
