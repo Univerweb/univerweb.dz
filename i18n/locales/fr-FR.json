@@ -34,20 +34,20 @@
   },
 
   "home": {
-    "title": "Création de sites web en Algérie",
-    "description": "Plus que des sites web, nous concevons et innovons pour vous des expériences numériques centrées sur l’humain et qui reflètent votre image de marque.",
-    "headline": "Révolutionnez votre présence en ligne avec un site web unique et audacieux.",
-    "lead": "Encore plus que des sites web, nous concevons et innovons pour vous des expériences numériques centrées sur l’humain et qui reflètent votre image de marque, notre mission première est de vous satisfaire !",
+    "title": "Création de sites web, hébergement et marketing en Algérie",
+    "description": "@:name vous accompagne dans votre succès digital avec des sites web sur mesure, un hébergement fiable, une identité visuelle forte et un marketing efficace. Boostez votre présence en ligne dès aujourd’hui.",
+    "headline": "Votre succès digital, notre mission.",
+    "lead": "Votre succès digital repose sur une présence en ligne performante. @:name est votre partenaire idéal, intégrant création de sites sur mesure, identité de marque forte, hébergement fiable et marketing digital axé résultats. Bâtissons ensemble votre croissance.",
     "cta": {
-      "realisations": "Plus de créativité",
-      "blog": "Plus de curiosité"
+      "realisations": "Propulsez vos idées",
+      "blog": "Boostez votre savoir digital"
     }
   },
 
   "realisations": {
-    "title": "@:menu[0].label",
-    "description": "Découvrez nos toutes dernières créations. Nous serions ravis de collaborer avec vous.",
-    "headline": "Ils ont cru en nous et ils sont comblés.",
+    "title": "Découvrez nos réalisations de sites web",
+    "description": "Découvrez nos réalisations web et explorez des projets conçus avec expertise. @:name transforme vos idées en succès digitaux grâce à des solutions sur mesure et performantes.",
+    "headline": "Des projets qui transforment des idées en succès digitaux.",
     "client": "Client",
     "category": "Catégorie",
     "services": "Prestations",
@@ -57,49 +57,50 @@
   },
 
   "prestations": {
-    "title": "@:menu[1].label",
-    "description": "Une stratégie de présence web accomplie, sur des fondements technologiques et une méthodologie rigoureuse.",
-    "headline": "Ce dont nous sommes capables."
+    "title": "Explorez nos prestations en solutions digitales",
+    "description": "Découvrez nos solutions digitales clés en main et sur mesure. @:name vous accompagne avec expertise en création web, hébergement, identité de marque, marketing digital et bien plus encore.",
+    "headline": "Des solutions clés en main & sur mesure."
   },
 
   "agence": {
-    "title": "@:menu[2].label",
-    "description": "Nous sommes une jeunes équipe de créativo-perfectionnistes et passionnée par notre travail, nous aimons coder de magnifiques sites web.",
-    "headline": "Nous sommes une agence web.",
-    "lead": "Créée en 2011 à Alger, nous sommes une jeunes équipe de créativo-perfectionnistes et passionnée par notre travail, nous aimons coder de magnifiques sites web en buvant du café le matin.",
+    "title": "Votre agence digitale en Algérie",
+    "description": "Depuis 2011 à Alger, @:name transforme les ambitions digitales en succès concrets. Stratégie, design, développement et hébergement réunis sous un même toit pour une présence web puissante et sur mesure.",
+    "headline": "Bâtisseurs de succès digital depuis 2011.",
+    "lead": "Depuis notre création à Alger en 2011, @:name est animée par une passion unique : transformer vos ambitions digitales en succès concrets. Nous croyons en une approche personnalisée et intégrée, où chaque projet est l’opportunité de bâtir une relation durable et de démontrer notre savoir-faire au service de votre croissance.",
     "method": {
-      "title": "Notre méthode de travail",
+      "title": "Atteindre votre succès, ensemble",
       "content": {
-        "Écoute": "Nous essaierons de comprendre des éléments essentiels tels que votre activité, vos objectifs et vos contraintes.",
-        "Recherche": "Nous trouverons des solutions adaptées à vos besoins tout en respectant votre image de marque.",
-        "Création": "En vous consultant et informant étape par étape, nous donnons vie à votre projet.",
-        "Suivi": "Après la publication du projet, nous vous accompagnerons dans sa maintenance et mise à jour."
+        "Écoute active": "Nous plongeons dans votre univers pour comprendre en profondeur votre activité, vos défis et vos ambitions. C’est ici que naît la fondation solide de votre projet.",
+        "Stratégie et conception": "Forts de notre analyse, nous élaborons la stratégie digitale et concevons la solution (design, architecture) qui non seulement répond à vos besoins, mais vous donne un avantage distinctif.",
+        "Développement et intégration": "Notre équipe technique donne vie à la conception avec un code propre, performant et évolutif. Nous intégrons les différentes briques (site, hébergement, outils marketing) de manière fluide.",
+        "Tests et déploiement": "Nous testons rigoureusement chaque aspect pour garantir une qualité irréprochable et une expérience utilisateur optimale avant le lancement sécurisé de votre solution.",
+        "Suivi et optimisation": "Après la mise en ligne, nous restons à vos côtés. Nous assurons la maintenance, les mises à jour et vous conseillons pour faire évoluer votre présence digitale et maximiser vos résultats."
       }
     },
     "choose": {
-      "title": "Pourquoi nous choisir",
+      "title": "Ce qui fait notre différence",
       "content": {
-        "Une prestation complète": "Création du site web, nom du domaine et hébergement, nous vous offrirons un service complet.",
-        "À la pointe de la technique": "Nous utilisons les dernières techniques et langages du web afin de vous offrir le meilleur service possible.",
-        "Un projet qui vous ressemble": "Nous concevons des sites web qui reflètent votre image de marque et qui sont adaptés à votre budget.",
-        "Un design innovant": "Nous concevons un design sur mesure afin de refléter au mieux l’identité de votre entreprise."
+        "Votre succès est notre priorité": "Depuis 2011, notre passion est de transformer vos ambitions en croissance mesurable. Nous ne nous contentons pas de livrables ; nous nous concentrons sur les résultats concrets et le retour sur investissement de vos actions digitales.",
+        "Expertise intégrée, simplicité pour vous": "Nous réunissons sous un même toit toutes les compétences essentielles : création de sites performants, identité de marque percutante, hébergement fiable, et marketing digital axé performance. Cette synergie unique vous assure une présence en ligne cohérente et optimisée, sans multiplier les interlocuteurs.",
+        "Une approche véritablement sur mesure": "Oubliez les solutions génériques. Chaque projet est unique. Nous nous immergeons dans votre univers pour concevoir des stratégies et des outils parfaitement adaptés à vos spécificités, vos objectifs et votre budget.",
+        "L’expérience et la proximité à votre service": "Forts de plus d’une décennie d’expérience forgée à Alger, nous connaissons les réalités du marché. Notre ancrage local nous permet d’être réactifs et de vous offrir un accompagnement de proximité, basé sur une relation de confiance durable."
       }
     }
   },
 
   "contact": {
-    "title": "@:menu[3].label",
-    "description": "Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
-    "about": "Créer des sites web professionnels, c’est ce que nous faisons. Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
+    "title": "Contactez notre agence",
+    "description": "Parlons de votre projet ! @:name vous accompagne dans la création de votre site web et bien plus encore. Échangeons sur votre vision digitale et concrétisons-la ensemble.",
+    "about": "La création de sites web est au cœur de notre expertise. Et bien plus encore ! Parlez-nous de votre vision, nous serions ravis de vous accompagner pour la concrétiser.",
     "other": "Autres moyens de nous contacter",
     "manager": "Gérant",
     "support": "Soutien technique"
   },
 
   "blog": {
-    "title": "@:menu[4].label",
-    "description": "Explorez notre Blog pour des conseils et astuces en matière de création de sites web, des réflexions sur les tendances actuelles et plus encore.",
-    "headline": "Le Blog du numérique.",
+    "title": "Explorez nos articles en conseils et innovations web",
+    "description": "Explorez nos articles et boostez votre savoir digital. @:name partage conseils, tendances et innovations pour optimiser votre présence en ligne et réussir sur le web.",
+    "headline": "Le savoir digital à portée de clic.",
     "by": "par",
     "share": "Partager l’article",
     "copy": "Copié !"

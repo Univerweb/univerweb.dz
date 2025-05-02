@@ -34,20 +34,20 @@
   },
 
   "home": {
-    "title": "Website Design in Algeria",
-    "description": "Even more than websites, we design and innovate human-centered digital experiences for you that reflect your brand image.",
-    "headline": "Revolutionize your online presence with a unique and bold website.",
-    "lead": "Even more than websites, we design and innovate human-centered digital experiences for you that reflect your brand image, our primary mission is to satisfy you!",
+    "title": "Website Creation, Hosting & Digital Marketing In Algeria",
+    "description": "@:name supports your digital success with custom websites, reliable hosting, a strong visual identity, and effective marketing. Boost your online presence today.",
+    "headline": "Your Digital Success, Our Mission.",
+    "lead": "Your digital success relies on a high-performing online presence. @:name is your ideal partner, integrating custom website creation, strong brand identity, reliable hosting, and results-driven digital marketing. Let’s build your growth together.",
     "cta": {
-      "realisations": "More Creativity",
-      "blog": "More Curiosity"
+      "realisations": "Propel Your Ideas",
+      "blog": "Boost Your Digital Knowledge"
     }
   },
 
   "realisations": {
-    "title": "@:menu[0].label",
-    "description": "Discover our latest creations. We would be delighted to work with you.",
-    "headline": "They believed in us and they are fulfilled.",
+    "title": "Discover Our Website Creations",
+    "description": "Discover our web projects and explore expertly crafted solutions. @:name turns your ideas into digital success with tailored and high-performance solutions.",
+    "headline": "Projects That Transform Ideas Into Digital Success.",
     "client": "Client",
     "category": "Category",
     "services": "Services",
@@ -57,49 +57,50 @@
   },
 
   "prestations": {
-    "title": "@:menu[1].label",
-    "description": "An accomplished web presence strategy, on technological foundations and a rigorous methodology.",
-    "headline": "What we are capable of."
+    "title": "Explore Our Digital Solutions",
+    "description": "Discover our turnkey and customized digital solutions. @:name supports you with expertise in web creation, hosting, brand identity, digital marketing, and much more.",
+    "headline": "Turnkey & Custom Solutions."
   },
 
   "agence": {
-    "title": "@:menu[2].label",
-    "description": "We are a young team of creative-perfectionists and passionate about our work, we like to code beautiful websites while drinking coffee in the morning.",
-    "headline": "We are a web agency.",
-    "lead": "Founded in 2011 in Algiers, we are a young team of creative-perfectionists and passionate about our work, we like to code beautiful websites while drinking coffee in the morning.",
+    "title": "Your Digital Agency In Algeria",
+    "description": "Since 2011 in Algiers, @:name has been turning digital ambitions into real success. Strategy, design, development, and hosting—all under one roof for a powerful and tailored web presence.",
+    "headline": "Builders Of Digital Success Since 2011.",
+    "lead": "Since our creation in Algiers in 2011, @:name has been driven by a unique passion: transforming your digital ambitions into concrete success. We believe in a personalized and integrated approach, where every project is an opportunity to build a lasting relationship and demonstrate our expertise in service of your growth.",
     "method": {
-      "title": "Our working method",
+      "title": "Achieving Your Success, Together",
       "content": {
-        "Listen": "We will try to understand essential elements such as your activity, your objectives and your constraints.",
-        "Research": "We will find solutions adapted to your needs while respecting your brand image.",
-        "Creation": "By consulting and informing you step by step, we bring your project to life.",
-        "Monitoring": "After the publication of the project, we will support you in its maintenance and updating."
+        "Active Listening": "We immerse ourselves in your world to deeply understand your activity, your challenges, and your ambitions. This is where the solid foundation of your project is born.",
+        "Strategy and Design": "Building on our analysis, we develop the digital strategy and design the solution (design, architecture) that not only meets your needs but gives you a distinctive advantage.",
+        "Development and Integration": "Our technical team brings the design to life with clean, high-performing, and scalable code. We integrate the different building blocks (website, hosting, marketing tools) seamlessly.",
+        "Testing and Deployment": "We rigorously test every aspect to guarantee impeccable quality and optimal user experience before the secure launch of your solution.",
+        "Monitoring and Optimization": "After going online, we remain by your side. We provide maintenance, updates, and advise you on evolving your digital presence and maximizing your results."
       }
     },
     "choose": {
-      "title": "Why choose us",
+      "title": "What Sets Us Apart",
       "content": {
-        "A complete service": "Creation of the website, domain name and hosting, we will offer you a complete service.",
-        "At the cutting edge of technology": "We use the latest techniques and languages on the web to provide you with the best possible service.",
-        "A project that looks like you": "We design websites that reflect your brand image and are tailored to your budget.",
-        "Innovative design": "We design a custom design to best reflect the identity of your business."
+        "Your Success Is Our Priority": "Since 2011, our passion is to transform your ambitions into measurable growth. We don’t just provide deliverables; we focus on concrete results and the return on investment of your digital actions.",
+        "Integrated Expertise, Simplicity for You": "We bring all essential competencies together under one roof: high-performing website creation, impactful brand identity, reliable hosting, and results-driven digital marketing. This unique synergy ensures a consistent and optimized online presence, without multiplying your points of contact.",
+        "A Truly Custom Approach": "Forget generic solutions. Every project is unique. We immerse ourselves in your world to design strategies and tools perfectly adapted to your specificities, your objectives, and your budget.",
+        "Experience and Proximity at Your Service": "Strong with over a decade of experience forged in Algiers, we know the realities of the market. Our local presence allows us to be reactive and offer you close support, based on a lasting relationship of trust."
       }
     }
   },
 
   "contact": {
-    "title": "@:menu[3].label",
-    "description": "Tell us about your needs, we’d love to collaborate with you.",
+    "title": "Contact Our Agency",
+    "description": "Let’s talk about your project! @:name supports you in creating your website and beyond. Let’s discuss your digital vision and bring it to life together.",
     "other": "Other Ways To Contact Us",
-    "about": "Creating professional websites is what we do. Tell us about your needs, we’d love to collaborate with you.",
+    "about": "Website creation is at the heart of our expertise. And much more! Tell us about your vision, we would be delighted to assist you in making it concrete.",
     "manager": "Manager",
     "support": "Technical Support"
   },
 
   "blog": {
-    "title": "@:menu[4].label",
-    "description": "Explore our Blog for website building tips and tricks, thoughts on current trends and more.",
-    "headline": "The Digital Blog.",
+    "title": "Explore Our Articles on Advice and Web Innovations",
+    "description": "Explore our articles and enhance your digital knowledge. @:name shares insights, trends, and innovations to optimize your online presence and succeed on the web.",
+    "headline": "Digital Knowledge Is Just A Click Away.",
     "by": "by",
     "share": "Share The Article",
     "copy": "Copied!"
