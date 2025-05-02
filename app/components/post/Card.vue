@@ -28,7 +28,7 @@ const { baseUrl } = useUrl()
     <time property="dateModified" :datetime="new Date(post.updatedAt).toISOString()" />
     <meta property="articleSection" :content="t('blog.title')">
 
-    <AppPicture :picture="post" />
+    <AppPicture :path="post.path" />
 
     <div class="overlay" />
 

@@ -88,8 +88,9 @@ useSeoMeta({
       </div>
 
       <AppPicture
-        :picture="work"
+        :path
         type="banner"
+        :alt="`${t('realisations.alt')} ${work.title}`"
         sizes="342px xs:392px sm:735px md:975px lg:1183px xl:1280px"
         class="banner"
       />
@@ -135,7 +136,7 @@ useSeoMeta({
           </div>
         </div>
         <AppPicture
-          :picture="work"
+          :path
           type="preview"
           :alt="`${t('realisations.alt')} ${work.title}`"
           sizes="304px xs:354px sm:697px md:921px lg:565px xl:730px"

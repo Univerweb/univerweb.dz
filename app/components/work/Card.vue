@@ -22,7 +22,7 @@ const { baseUrl } = useUrl()
     <span property="articleSection" :content="t('realisations.title')" />
     <span property="description" :content="work.description" />
 
-    <AppPicture :picture="work" />
+    <AppPicture :path="work.path" />
 
     <div class="overlay" />
 
