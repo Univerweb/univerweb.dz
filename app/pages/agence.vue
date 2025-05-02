@@ -6,8 +6,7 @@ interface Agence {
 
 const { t, tm, rt } = useI18n()
 
-useHead({ script: [useBreadcrumb('agence')] })
-useSeoMeta(useMeta('agence'))
+useSeoPage('agence')
 </script>
 
 <template>

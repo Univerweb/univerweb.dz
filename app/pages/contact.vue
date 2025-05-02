@@ -20,8 +20,7 @@ function zoom() {
   }
 }
 
-useHead({ script: [useBreadcrumb('contact')] })
-useSeoMeta(useMeta('contact'))
+useSeoPage('contact')
 </script>
 
 <template>

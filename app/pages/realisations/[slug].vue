@@ -1,10 +1,8 @@
 <script setup lang="ts">
 const localePath = useLocalePath()
 const { locale, t } = useI18n()
-const { baseUrl, localeBaseUrl } = useUrl()
+const { baseUrl } = useUrl()
 const { path } = useRoute()
-const img = useImage()
-const ogImage = img(localePath(`${path}_banner`, 'fr'), { format: 'webp', width: 2400, height: 1256 }, { provider: 'cloudinary' })
 
 const { data: work } = await useAsyncData(`work${path}`, () => {
   return queryCollection(`work_${locale.value}`)
@@ -35,33 +33,11 @@ const { data: workSurround } = await useAsyncData(`work-surround${path}`, () => 
   return queryCollectionItemSurroundings(`work_${locale.value}`, path)
 }, { watch: [locale] })
 
-useHead({
-  script: [
-    {
-      type: 'application/ld+json',
-      innerHTML: {
-        '@context': 'https://schema.org',
-        '@type': 'BreadcrumbList',
-        'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': () => t('name'), 'item': localeBaseUrl },
-          { '@type': 'ListItem', 'position': 2, 'name': () => t('realisations.title'), 'item': () => `${baseUrl}${localePath('realisations')}` },
-          { '@type': 'ListItem', 'position': 3, 'name': () => work.value!.title },
-        ],
-      },
-    },
-  ],
-})
-
-useSeoMeta({
+useSeoSlug({
   title: () => work.value!.title,
   description: () => work.value!.description,
-  ogTitle: () => work.value!.title,
-  ogDescription: () => work.value!.description,
-  ogType: 'article',
-  ogImage,
-  twitterTitle: () => work.value!.title,
-  twitterDescription: () => work.value!.description,
-  twitterImage: ogImage,
+  category: 'realisations',
+  currentPageTitle: () => work.value!.title,
 })
 </script>
 

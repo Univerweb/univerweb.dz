@@ -1,10 +1,7 @@
 <script setup lang="ts">
 const localePath = useLocalePath()
 const { locale, t } = useI18n()
-const { baseUrl, localeBaseUrl } = useUrl()
 const { path } = useRoute()
-const img = useImage()
-const ogImage = img(localePath(`${path}_banner`, 'fr'), { format: 'webp', width: 2800, height: 1575 }, { provider: 'cloudinary' })
 
 const { data: presta } = await useAsyncData(`post${path}`, () => {
   return queryCollection(`presta_${locale.value}`)
@@ -57,33 +54,13 @@ const leave = (el: Element) => {
   })
 }
 
-useHead({
-  script: [
-    {
-      type: 'application/ld+json',
-      innerHTML: {
-        '@context': 'https://schema.org',
-        '@type': 'BreadcrumbList',
-        'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': () => t('name'), 'item': localeBaseUrl },
-          { '@type': 'ListItem', 'position': 2, 'name': () => t('presta.title'), 'item': () => `${baseUrl}${localePath('prestations')}` },
-          { '@type': 'ListItem', 'position': 3, 'name': () => presta.value!.title },
-        ],
-      },
-    },
-  ],
-})
-
-useSeoMeta({
-  title: () => presta.value!.seo.title,
-  description: () => presta.value!.seo.description,
-  ogTitle: () => presta.value!.seo.title,
-  ogDescription: () => presta.value!.seo.description,
-  ogType: 'article',
-  ogImage,
-  twitterTitle: () => presta.value!.seo.title,
-  twitterDescription: () => presta.value!.seo.description,
-  twitterImage: ogImage,
+useSeoSlug({
+  title: () => `${presta.value!.seo.title}`,
+  description: () => `${presta.value!.seo.description}`,
+  width: 2800,
+  height: 1575,
+  category: 'prestations',
+  currentPageTitle: () => presta.value!.title,
 })
 </script>
 

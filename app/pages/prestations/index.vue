@@ -1,6 +1,5 @@
 <script setup lang="ts">
-useHead({ script: [useBreadcrumb('prestations')] })
-useSeoMeta(useMeta('prestations'))
+useSeoPage('prestations')
 </script>
 
 <template>
