@@ -15,7 +15,7 @@ const { t } = useI18n()
     <h2 class="h3">
       {{ t('request.headline') }}
     </h2>
-    <NuxtLinkLocale to="contact" :class="className" class="move">
+    <NuxtLinkLocale to="contact" :class="`${className} move`">
       {{ t('request.link') }}
     </NuxtLinkLocale>
   </div>
