@@ -15,7 +15,7 @@
   "dependencies": {
     "@nuxt/content": "^3.5.1",
     "@nuxt/image": "^1.10.0",
-    "@nuxtjs/i18n": "^9.5.3",
+    "@nuxtjs/i18n": "^9.5.4",
     "@vueuse/core": "^13.1.0",
     "@vueuse/nuxt": "^13.1.0",
     "nuxt-gtag": "^3.0.2",
