@@ -52,8 +52,8 @@
 
   "work": {
     "client": "Client",
-    "services": "Services",
     "category": "Category",
+    "services": "Services",
     "visit": "Visit Website",
     "alt": "A website overview of",
     "related": "Related projects"
