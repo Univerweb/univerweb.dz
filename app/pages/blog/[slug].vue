@@ -25,7 +25,7 @@ const { data: postSurround } = await useAsyncData(`post-surround${path}`, () => 
 }, { watch: [locale] })
 
 useSeoSlug({
-  title: () => post.value!.title,
+  title: () => `${post.value!.title} | ${t('menu[4].label')}`,
   description: () => post.value!.description,
   category: 'blog',
   currentPageTitle: () => post.value!.title,

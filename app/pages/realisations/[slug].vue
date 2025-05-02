@@ -34,7 +34,7 @@ const { data: workSurround } = await useAsyncData(`work-surround${path}`, () => 
 }, { watch: [locale] })
 
 useSeoSlug({
-  title: () => work.value!.title,
+  title: () => `${work.value!.title}${locale.value === 'fr' ? ' :' : ':'} ${work.value!.category} | ${t('menu[0].label')}`,
   description: () => work.value!.description,
   category: 'realisations',
   currentPageTitle: () => work.value!.title,
