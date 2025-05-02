@@ -29,7 +29,7 @@ const { data: works } = await useAsyncData(`works${path}`, () => {
   <section id="realisations" class="container">
     <div class="intro intro-justify">
       <Component :is="headlineTag" class="h1">
-        {{ t('works.headline') }}
+        {{ t('realisations.headline') }}
       </Component>
     </div>
 
@@ -37,6 +37,6 @@ const { data: works } = await useAsyncData(`works${path}`, () => {
       <WorkCard v-for="work in works" :key="work.path" :work="work" :title-tag="titleTag" />
     </div>
 
-    <LazyAppMore v-if="more" path="realisations" :label="t('home.cta.works')" class="intro-justify" />
+    <LazyAppMore v-if="more" path="realisations" :label="t('home.cta.realisations')" class="intro-justify" />
   </section>
 </template>

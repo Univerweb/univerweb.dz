@@ -23,7 +23,7 @@ const { data: prestations } = await useAsyncData(`prestations${path}`, () => {
   <section id="prestations" class="container">
     <div class="intro intro-justify">
       <Component :is="headlineTag" class="h1">
-        {{ t('presta.headline') }}
+        {{ t('prestations.headline') }}
       </Component>
     </div>
 

@@ -19,7 +19,7 @@ const { baseUrl } = useUrl()
     <time property="dateCreated datePublished" :datetime="new Date(work.createdAt).toISOString()" />
     <time property="dateModified" :datetime="new Date(work.updatedAt).toISOString()" />
     <span v-for="tag in work.tags" :key="tag" property="keywords" :content="tag" />
-    <span property="articleSection" :content="t('works.title')" />
+    <span property="articleSection" :content="t('realisations.title')" />
     <span property="description" :content="work.description" />
 
     <AppPicture :picture="work" />

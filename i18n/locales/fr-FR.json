@@ -39,12 +39,12 @@
     "headline": "Révolutionnez votre présence en ligne avec un site web unique et audacieux.",
     "lead": "Encore plus que des sites web, nous concevons et innovons pour vous des expériences numériques centrées sur l’humain et qui reflètent votre image de marque, notre mission première est de vous satisfaire !",
     "cta": {
-      "works": "Plus de créativité",
+      "realisations": "Plus de créativité",
       "blog": "Plus de curiosité"
     }
   },
 
-  "works": {
+  "realisations": {
     "title": "@:menu[0].label",
     "description": "Découvrez nos toutes dernières créations. Nous serions ravis de collaborer avec vous.",
     "headline": "Ils ont cru en nous et ils sont comblés."
@@ -59,13 +59,13 @@
     "related": "Projets liés"
   },
 
-  "presta": {
+  "prestations": {
     "title": "@:menu[1].label",
     "description": "Une stratégie de présence web accomplie, sur des fondements technologiques et une méthodologie rigoureuse.",
     "headline": "Ce dont nous sommes capables."
   },
 
-  "agency": {
+  "agence": {
     "title": "@:menu[2].label",
     "description": "Nous sommes une jeunes équipe de créativo-perfectionnistes et passionnée par notre travail, nous aimons coder de magnifiques sites web.",
     "headline": "Nous sommes une agence web.",

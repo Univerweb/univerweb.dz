@@ -39,12 +39,12 @@
     "headline": "Revolutionize your online presence with a unique and bold website.",
     "lead": "Even more than websites, we design and innovate human-centered digital experiences for you that reflect your brand image, our primary mission is to satisfy you!",
     "cta": {
-      "works": "More creativity",
+      "realisations": "More creativity",
       "blog": "More curiosity"
     }
   },
 
-  "works": {
+  "realisations": {
     "title": "@:menu[0].label",
     "description": "Discover our latest creations. We would be delighted to work with you.",
     "headline": "They believed in us and they are fulfilled."
@@ -59,13 +59,13 @@
     "related": "Related projects"
   },
 
-  "presta": {
+  "prestations": {
     "title": "@:menu[1].label",
     "description": "An accomplished web presence strategy, on technological foundations and a rigorous methodology.",
     "headline": "What we are capable of."
   },
 
-  "agency": {
+  "agence": {
     "title": "@:menu[2].label",
     "description": "We are a young team of creative-perfectionists and passionate about our work, we like to code beautiful websites while drinking coffee in the morning.",
     "headline": "We are a web agency.",
