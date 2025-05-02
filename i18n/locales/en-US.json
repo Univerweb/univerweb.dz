@@ -2,9 +2,9 @@
   "name": "Univerweb",
   "skip": "Skip to main content",
   "menu": [
-    { "path": "realisations", "label": "Latest work" },
+    { "path": "realisations", "label": "Latest Work" },
     { "path": "prestations", "label": "Services" },
-    { "path": "agence", "label": "The agency" },
+    { "path": "agence", "label": "The Agency" },
     { "path": "contact", "label": "Contact" },
     { "path": "blog", "label": "Blog" }
   ],
@@ -16,7 +16,7 @@
     "menu-close": "Close menu"
   },
   "request": {
-    "headline": "Convinced? Let’s have a coffee together.",
+    "headline": "Convinced? Let’s Have A Coffee Together.",
     "link": "Get in Touch"
   },
   "streetAddress": "62 Coop. El Mebnia, Birkhadem",
@@ -39,8 +39,8 @@
     "headline": "Revolutionize your online presence with a unique and bold website.",
     "lead": "Even more than websites, we design and innovate human-centered digital experiences for you that reflect your brand image, our primary mission is to satisfy you!",
     "cta": {
-      "realisations": "More creativity",
-      "blog": "More curiosity"
+      "realisations": "More Creativity",
+      "blog": "More Curiosity"
     }
   },
 
@@ -53,7 +53,7 @@
     "services": "Services",
     "visit": "Visit Website",
     "alt": "A website overview of",
-    "related": "Related projects"
+    "related": "Related Projects"
   },
 
   "prestations": {
@@ -90,10 +90,10 @@
   "contact": {
     "title": "@:menu[3].label",
     "description": "Tell us about your needs, we’d love to collaborate with you.",
-    "other": "Other ways to contact us",
+    "other": "Other Ways To Contact Us",
     "about": "Creating professional websites is what we do. Tell us about your needs, we’d love to collaborate with you.",
     "manager": "Manager",
-    "support": "Technical support"
+    "support": "Technical Support"
   },
 
   "blog": {
@@ -101,20 +101,20 @@
     "description": "Explore our Blog for website building tips and tricks, thoughts on current trends and more.",
     "headline": "The Digital Blog.",
     "by": "by",
-    "share": "Share the article",
+    "share": "Share The Article",
     "copy": "Copied!"
   },
 
   "error404": {
     "title": "Page Not Found",
-    "headline": "You got lost in a galaxy far, far away… 404 😞",
+    "headline": "You Got Lost In A Galaxy Far, Far Away… 404 😞",
     "lead": "It seems the Force was not with this URL-404. The page you were looking for has disappeared, perhaps hidden by the Ewoks. Do not succumb to the Dark Side of frustration! Return to the Rebel Base to find your way.",
-    "cta": "Return to the Rebel Base"
+    "cta": "Return To The Rebel Base"
   },
 
   "error500": {
     "title": "Server Error",
-    "headline": "Problem in the heart of the main reactor… 500 😞",
+    "headline": "Problem In The Heart Of The Main Reactor… 500 😞",
     "lead": "Oops! It seems an interdimensional short-circuit-500 or a mischievous Ewok has wreaked havoc on our server. Don’t panic, our technical team is already on it to restore the situation. We apologize for this setback."
   }
 }
