@@ -8,7 +8,7 @@ const ogImage = img(localePath(`${path}_banner`, 'fr'), { format: 'webp', width:
 
 const { data: presta } = await useAsyncData(`post${path}`, () => {
   return queryCollection(`presta_${locale.value}`)
-    .select('path', 'title', 'description', 'lead', 'intro', 'solutions', 'features', 'process', 'faq')
+    .select('path', 'title', 'seo', 'lead', 'intro', 'solutions', 'features', 'process', 'faq')
     .path(computed(() => localePath(path)).value)
     .first()
 }, { watch: [locale] })
@@ -75,14 +75,14 @@ useHead({
 })
 
 useSeoMeta({
-  title: () => presta.value!.title,
-  description: () => presta.value!.description,
-  ogTitle: () => presta.value!.title,
-  ogDescription: () => presta.value!.description,
+  title: () => presta.value!.seo.title,
+  description: () => presta.value!.seo.description,
+  ogTitle: () => presta.value!.seo.title,
+  ogDescription: () => presta.value!.seo.description,
   ogType: 'article',
   ogImage,
-  twitterTitle: () => presta.value!.title,
-  twitterDescription: () => presta.value!.description,
+  twitterTitle: () => presta.value!.seo.title,
+  twitterDescription: () => presta.value!.seo.description,
   twitterImage: ogImage,
 })
 </script>
