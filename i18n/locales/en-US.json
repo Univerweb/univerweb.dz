@@ -35,7 +35,7 @@
 
   "home": {
     "title": "Website Design in Algeria",
-    "desc": "Even more than websites, we design and innovate human-centered digital experiences for you that reflect your brand image.",
+    "description": "Even more than websites, we design and innovate human-centered digital experiences for you that reflect your brand image.",
     "headline": "Revolutionize your online presence with a unique and bold website.",
     "lead": "Even more than websites, we design and innovate human-centered digital experiences for you that reflect your brand image, our primary mission is to satisfy you!",
     "cta": {
@@ -46,7 +46,7 @@
 
   "works": {
     "title": "@:menu[0].label",
-    "desc": "Discover our latest creations. We would be delighted to work with you.",
+    "description": "Discover our latest creations. We would be delighted to work with you.",
     "headline": "They believed in us and they are fulfilled."
   },
 
@@ -61,13 +61,13 @@
 
   "presta": {
     "title": "@:menu[1].label",
-    "desc": "An accomplished web presence strategy, on technological foundations and a rigorous methodology.",
+    "description": "An accomplished web presence strategy, on technological foundations and a rigorous methodology.",
     "headline": "What we are capable of."
   },
 
   "agency": {
     "title": "@:menu[2].label",
-    "desc": "We are a young team of creative-perfectionists and passionate about our work, we like to code beautiful websites while drinking coffee in the morning.",
+    "description": "We are a young team of creative-perfectionists and passionate about our work, we like to code beautiful websites while drinking coffee in the morning.",
     "headline": "We are a web agency.",
     "lead": "Founded in 2011 in Algiers, we are a young team of creative-perfectionists and passionate about our work, we like to code beautiful websites while drinking coffee in the morning.",
     "method": {
@@ -92,7 +92,7 @@
 
   "contact": {
     "title": "@:menu[3].label",
-    "desc": "Tell us about your needs, we’d love to collaborate with you.",
+    "description": "Tell us about your needs, we’d love to collaborate with you.",
     "other": "Other ways to contact us",
     "about": "Creating professional websites is what we do. Tell us about your needs, we’d love to collaborate with you.",
     "manager": "Manager",
@@ -101,7 +101,7 @@
 
   "blog": {
     "title": "@:menu[4].label",
-    "desc": "Explore our Blog for website building tips and tricks, thoughts on current trends and more.",
+    "description": "Explore our Blog for website building tips and tricks, thoughts on current trends and more.",
     "headline": "The Digital Blog.",
     "by": "by",
     "share": "Share the article",

@@ -48,15 +48,15 @@ useHead(() => ({
 
 useSeoMeta({
   titleTemplate: title => title ? `${title} | ${t('name')}` : `${t('home.title')} | ${t('name')}`,
-  description: () => t('home.desc'),
+  description: () => t('home.description'),
   ogTitle: () => t('home.title'),
-  ogDescription: () => t('home.desc'),
+  ogDescription: () => t('home.description'),
   ogType: 'website',
   ogUrl,
   ogImage,
   twitterCard: 'summary_large_image',
   twitterTitle: () => t('home.title'),
-  twitterDescription: () => t('home.desc'),
+  twitterDescription: () => t('home.description'),
   twitterImage: ogImage,
   colorScheme: 'light dark',
   appleMobileWebAppTitle: () => t('name'),

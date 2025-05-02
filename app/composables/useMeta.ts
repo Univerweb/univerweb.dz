@@ -2,7 +2,7 @@ export function useMeta(page: string) {
   const { t } = useI18n()
 
   const title = () => t(`${page}.title`)
-  const description = () => t(`${page}.desc`)
+  const description = () => t(`${page}.description`)
 
   return {
     title,

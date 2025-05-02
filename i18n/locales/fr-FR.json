@@ -35,7 +35,7 @@
 
   "home": {
     "title": "Création de sites web en Algérie",
-    "desc": "Plus que des sites web, nous concevons et innovons pour vous des expériences numériques centrées sur l’humain et qui reflètent votre image de marque.",
+    "description": "Plus que des sites web, nous concevons et innovons pour vous des expériences numériques centrées sur l’humain et qui reflètent votre image de marque.",
     "headline": "Révolutionnez votre présence en ligne avec un site web unique et audacieux.",
     "lead": "Encore plus que des sites web, nous concevons et innovons pour vous des expériences numériques centrées sur l’humain et qui reflètent votre image de marque, notre mission première est de vous satisfaire !",
     "cta": {
@@ -46,7 +46,7 @@
 
   "works": {
     "title": "@:menu[0].label",
-    "desc": "Découvrez nos toutes dernières créations. Nous serions ravis de collaborer avec vous.",
+    "description": "Découvrez nos toutes dernières créations. Nous serions ravis de collaborer avec vous.",
     "headline": "Ils ont cru en nous et ils sont comblés."
   },
 
@@ -61,13 +61,13 @@
 
   "presta": {
     "title": "@:menu[1].label",
-    "desc": "Une stratégie de présence web accomplie, sur des fondements technologiques et une méthodologie rigoureuse.",
+    "description": "Une stratégie de présence web accomplie, sur des fondements technologiques et une méthodologie rigoureuse.",
     "headline": "Ce dont nous sommes capables."
   },
 
   "agency": {
     "title": "@:menu[2].label",
-    "desc": "Nous sommes une jeunes équipe de créativo-perfectionnistes et passionnée par notre travail, nous aimons coder de magnifiques sites web.",
+    "description": "Nous sommes une jeunes équipe de créativo-perfectionnistes et passionnée par notre travail, nous aimons coder de magnifiques sites web.",
     "headline": "Nous sommes une agence web.",
     "lead": "Créée en 2011 à Alger, nous sommes une jeunes équipe de créativo-perfectionnistes et passionnée par notre travail, nous aimons coder de magnifiques sites web en buvant du café le matin.",
     "method": {
@@ -92,7 +92,7 @@
 
   "contact": {
     "title": "@:menu[3].label",
-    "desc": "Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
+    "description": "Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
     "about": "Créer des sites web professionnels, c’est ce que nous faisons. Parlez-nous de vos besoins, nous serions ravis de collaborer avec vous.",
     "other": "Autres moyens de nous contacter",
     "manager": "Gérant",
@@ -101,7 +101,7 @@
 
   "blog": {
     "title": "@:menu[4].label",
-    "desc": "Explorez notre Blog pour des conseils et astuces en matière de création de sites web, des réflexions sur les tendances actuelles et plus encore.",
+    "description": "Explorez notre Blog pour des conseils et astuces en matière de création de sites web, des réflexions sur les tendances actuelles et plus encore.",
     "headline": "Le Blog du numérique.",
     "by": "par",
     "share": "Partager l’article",
