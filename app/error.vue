@@ -8,7 +8,7 @@ const localePath = useLocalePath()
 const handleError = () => clearError({ redirect: localePath('/') })
 
 useSeoMeta({
-  title: `${t(`error${props.error.statusCode}.title`)} -  ${t('name')}`,
+  title: `${t(`error${props.error.statusCode}.title`)} | ${t('name')}`,
   robots: { noindex: true },
 })
 </script>
