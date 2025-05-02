@@ -119,8 +119,8 @@ useSeoSlug({
         <h2 col class="col col--1-5">
           {{ presta.process.title }}
         </h2>
-        <ol class="col row">
-          <li v-for="(process, index) in presta.process.steps" :key="process.title" :class="`big-count col ${['col--1-6 col--1-3', 'col--7-12 col--4-6', 'col--1-6 col--7-9', 'col--7-12 col--10-12'][index % 4]}`">
+        <ol :class="`col row items-${presta.process.steps.length}`">
+          <li v-for="(process, index) in presta.process.steps" :key="process.title" :class="`big-count item item-${index + 1}`">
             <h3>{{ process.title }}</h3>
             <p>{{ process.description }}</p>
           </li>

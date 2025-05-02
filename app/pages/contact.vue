@@ -66,8 +66,8 @@ useSeoPage('contact')
       <div class="intro">
         <h2>{{ t('contact.other') }}</h2>
       </div>
-      <div class="row">
-        <div class="col col--1-6">
+      <div class="row items-2">
+        <div class="item">
           <h3 class="h6">
             {{ t('contact.manager') }}
           </h3>
@@ -75,7 +75,7 @@ useSeoPage('contact')
             {{ config.public.managerEmail }}
           </a>
         </div>
-        <div class="col col--7-12">
+        <div class="item item-2">
           <h3 class="h6">
             {{ t('contact.support') }}
           </h3>
