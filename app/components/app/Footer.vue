@@ -14,23 +14,23 @@ const socials = [
   <footer>
     <div>
       <address class="address" title="Adresse postale">
-        <strong>{{ t('name') }}</strong><br>
-        {{ t('streetAddress') }}<br>
-        <span dir="ltr">16 029</span> {{ t('addressLocality') }}
+        <strong>{{ t('site.name') }}</strong><br>
+        {{ t('site.address.street') }}<br>
+        <span dir="ltr">16 029</span> {{ t('site.address.locality') }}
       </address>
 
       <p>
         <a href="https://goo.gl/maps/MmadgQgZRBv" target="_blank" rel="noopener">
-          {{ t('maps') }}
+          {{ t('actions.getDirections') }}
         </a>
       </p>
 
       <p>
-        <a href="tel:+21321440811" :aria-label="t('phoneLabel')">
+        <a href="tel:+21321440811" :aria-label="t('ariaLabels.phone')">
           <span dir="ltr">021 44 08 11</span>
         </a>
         —
-        <a href="tel:+213551904622" :aria-label="t('mobileLabel')">
+        <a href="tel:+213551904622" :aria-label="t('ariaLabels.mobile')">
           <span dir="ltr">0551 90 46 22</span>
         </a>
       </p>
@@ -41,13 +41,13 @@ const socials = [
     </p>
 
     <div>
-      <a :href="`mailto:${config.public.baseEmail}`" :aria-label="t('emailLabel')" class="link outfit">
+      <a :href="`mailto:${config.public.baseEmail}`" :aria-label="t('ariaLabels.email')" class="link outfit">
         {{ config.public.baseEmail }}
       </a>
 
       <ul class="socials">
         <li v-for="(social, value) in socials" :key="social.url">
-          <a :href="social.url" :aria-label="`${t('join')} ${t(`socialsName.${value}`)}`">
+          <a :href="social.url" :aria-label="`${t('ariaLabels.socials.joinUs')} ${t(`ariaLabels.socials.platforms.${value}`)}`">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -65,7 +65,7 @@ const socials = [
     </div>
 
     <p class="copy">
-      {{ t('copy', { year: new Date().getFullYear() }) }}
+      {{ t('site.copy', { year: new Date().getFullYear() }) }}
     </p>
   </footer>
 </template>

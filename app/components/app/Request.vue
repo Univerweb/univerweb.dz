@@ -13,10 +13,10 @@ const { t } = useI18n()
 <template>
   <div class="container request">
     <h2 class="h3">
-      {{ t('request.headline') }}
+      {{ t('actions.requestMeeting.headline') }}
     </h2>
     <NuxtLinkLocale to="contact" :class="`${className} move`">
-      {{ t('request.link') }}
+      {{ t('actions.requestMeeting.text') }}
     </NuxtLinkLocale>
   </div>
 </template>

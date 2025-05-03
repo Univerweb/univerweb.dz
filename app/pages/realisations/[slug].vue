@@ -34,7 +34,7 @@ const { data: workSurround } = await useAsyncData(`work-surround${path}`, () => 
 }, { watch: [locale] })
 
 useSeoSlug({
-  title: () => `${work.value!.title}${locale.value === 'fr' ? ' :' : ':'} ${work.value!.category} | ${t('menu[0].label')}`,
+  title: () => `${work.value!.title}${locale.value === 'fr' ? ' :' : ':'} ${work.value!.category} | ${t('navigation.menu[0].label')}`,
   description: () => work.value!.description,
   category: 'realisations',
   currentPageTitle: () => work.value!.title,
@@ -48,7 +48,7 @@ useSeoSlug({
         <span property="id" :content="`${baseUrl}${path}`" />
       </span>
       <span property="author publisher" typeof="Organization">
-        <span property="name" :content="t('name')" />
+        <span property="name" :content="t('site.name')" />
         <span property="url" :content="baseUrl" />
       </span>
       <time property="dateCreated datePublished" :datetime="new Date(work.createdAt).toISOString()" />
@@ -57,7 +57,7 @@ useSeoSlug({
       <span property="description" :content="work.description" />
 
       <div class="container intro">
-        <AppBack path="realisations" :label="t('menu[0].label')" />
+        <AppBack path="realisations" :label="t('navigation.menu[0].label')" />
         <h1 property="headline">
           {{ work.title }}
         </h1>

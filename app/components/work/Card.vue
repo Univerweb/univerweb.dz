@@ -13,7 +13,7 @@ const { baseUrl } = useUrl()
 <template>
   <NuxtLink :to="work.path" class="card" vocab="https://schema.org/" typeof="Article">
     <span property="author publisher" typeof="Organization">
-      <span property="name" :content="t('name')" />
+      <span property="name" :content="t('site.name')" />
       <span property="url" :content="baseUrl" />
     </span>
     <time property="dateCreated datePublished" :datetime="new Date(work.createdAt).toISOString()" />

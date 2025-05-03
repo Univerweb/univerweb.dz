@@ -25,7 +25,7 @@ const { data: postSurround } = await useAsyncData(`post-surround${path}`, () => 
 }, { watch: [locale] })
 
 useSeoSlug({
-  title: () => `${post.value!.title} | ${t('menu[4].label')}`,
+  title: () => `${post.value!.title} | ${t('navigation.menu[4].label')}`,
   description: () => post.value!.description,
   category: 'blog',
   currentPageTitle: () => post.value!.title,
@@ -39,14 +39,14 @@ useSeoSlug({
         <span property="id" :content="`${baseUrl}${path}`" />
       </span>
       <span property="publisher" typeof="Organization">
-        <span property="name" :content="t('name')" />
+        <span property="name" :content="t('site.name')" />
         <span property="url" :content="baseUrl" />
       </span>
       <span property="articleSection" :content="t('blog.title')" />
       <span property="description" :content="post.description" />
 
       <div class="container intro">
-        <AppBack path="blog" :label="t('menu[4].label')" />
+        <AppBack path="blog" :label="t('navigation.menu[4].label')" />
         <h1 property="headline">
           {{ post.title }}
         </h1>
@@ -60,7 +60,7 @@ useSeoSlug({
             </a>
           </span>
           <span v-else property="author" typeof="Organization" class="author">
-            <span property="name">@{{ t('name') }}</span>
+            <span property="name">@{{ t('site.name') }}</span>
             <span property="url" :content="baseUrl" />
           </span>
           <ul class="tags">

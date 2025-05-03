@@ -1,8 +1,8 @@
-const theme = ref('theme-light')
+const theme = ref('light')
 const mql = typeof window !== 'undefined' ? window.matchMedia('(prefers-color-scheme: dark)') : null
 
 function handleMediaChange(mql: MediaQueryListEvent) {
-  theme.value = mql.matches ? 'theme-dark' : 'theme-light'
+  theme.value = mql.matches ? 'dark' : 'light'
 }
 
 function setupMediaListener() {
@@ -18,7 +18,7 @@ function setupMediaListener() {
 }
 
 function toggleTheme() {
-  theme.value = theme.value === 'theme-light' ? 'theme-dark' : 'theme-light'
+  theme.value = theme.value === 'light' ? 'dark' : 'light'
 }
 
 export function useTheme() {

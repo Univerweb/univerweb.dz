@@ -34,7 +34,7 @@ export function useSeoSlug({ title, description, width = 2400, height = 1256, ca
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': () => t('name'), 'item': localeBaseUrl },
+          { '@type': 'ListItem', 'position': 1, 'name': () => t('site.name'), 'item': localeBaseUrl },
           { '@type': 'ListItem', 'position': 2, 'name': () => t(`${category}.title`), 'item': () => `${baseUrl}${localePath(category)}` },
           { '@type': 'ListItem', 'position': 3, 'name': () => currentPageTitle() },
         ],

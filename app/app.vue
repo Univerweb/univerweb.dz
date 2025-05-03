@@ -15,7 +15,7 @@ useHead(() => ({
       innerHTML: {
         '@context': 'https://schema.org',
         '@type': 'Organization',
-        'name': t('name'),
+        'name': t('site.name'),
         'url': baseUrl,
         'image': {
           '@type': 'ImageObject',
@@ -35,10 +35,10 @@ useHead(() => ({
         'sameAs': ['https://x.com/Univerweb', 'https://www.facebook.com/Univerweb', 'https://www.linkedin.com/company/Univerweb', 'https://github.com/Univerweb'],
         'address': {
           '@type': 'PostalAddress',
-          'streetAddress': t('streetAddress'),
+          'streetAddress': t('site.address.street'),
           'postalCode': '16 029',
-          'addressLocality': t('addressLocality'),
-          'addressRegion': t('addressLocality'),
+          'addressLocality': t('site.address.locality'),
+          'addressRegion': t('site.address.locality'),
           'addressCountry': 'DZ',
         },
       },
@@ -47,7 +47,7 @@ useHead(() => ({
 }))
 
 useSeoMeta({
-  titleTemplate: title => title ? `${title} | ${t('name')}` : `${t('home.title')} | ${t('name')}`,
+  titleTemplate: title => title ? `${title} | ${t('site.name')}` : `${t('home.title')} | ${t('site.name')}`,
   description: () => t('home.description'),
   ogTitle: () => t('home.title'),
   ogDescription: () => t('home.description'),
@@ -59,7 +59,7 @@ useSeoMeta({
   twitterDescription: () => t('home.description'),
   twitterImage: ogImage,
   colorScheme: 'light dark',
-  appleMobileWebAppTitle: () => t('name'),
+  appleMobileWebAppTitle: () => t('site.name'),
 })
 </script>
 

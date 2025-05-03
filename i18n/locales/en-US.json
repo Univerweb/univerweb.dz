@@ -1,52 +1,67 @@
 {
-  "name": "Univerweb",
-  "skip": "Skip to main content",
-  "menu": [
-    { "path": "realisations", "label": "Latest Work" },
-    { "path": "prestations", "label": "Services" },
-    { "path": "agence", "label": "The Agency" },
-    { "path": "contact", "label": "Contact" },
-    { "path": "blog", "label": "Blog" }
-  ],
-  "ariaLabel": {
-    "lang-switch": "اختر اللغة العربية",
-    "theme-light": "Switch to dark mode",
-    "theme-dark": "Switch to light mode",
-    "menu-open": "Open menu",
-    "menu-close": "Close menu"
+  "site": {
+    "name": "Univerweb",
+    "address": {
+      "street": "62 Coop. El Mebnia, Birkhadem",
+      "locality": "Algiers"
+    },
+    "copy": "Copyright © {year} @:site.name{'.'} All rights reserved."
   },
-  "request": {
-    "headline": "Convinced? Let’s Have A Coffee Together.",
-    "link": "Get in Touch"
-  },
-  "streetAddress": "62 Coop. El Mebnia, Birkhadem",
-  "addressLocality": "Algiers",
-  "maps": "Get directions",
-  "phoneLabel": "Telephone / fax",
-  "mobileLabel": "Mobile",
-  "emailLabel": "E-mail",
-  "join": "Join us on",
-  "socialsName": ["X", "Facebook", "LinkedIn", "GitHub"],
-  "copy": "Copyright © {year} @:name{'.'} All rights reserved.",
-  "nav": {
-    "prev": "Previous",
+
+  "navigation": {
+    "menu": [
+      { "path": "realisations", "label": "Latest Work" },
+      { "path": "prestations", "label": "Services" },
+      { "path": "agence", "label": "The Agency" },
+      { "path": "contact", "label": "Contact" },
+      { "path": "blog", "label": "Blog" }
+    ],
+    "previous": "Previous",
     "next": "Next"
+  },
+
+  "ariaLabels": {
+    "langSwitch": "اختر اللغة العربية",
+    "theme": {
+      "light": "Switch to dark mode",
+      "dark": "Switch to light mode"
+    },
+    "menu": {
+      "open": "Open menu",
+      "close": "Close menu"
+    },
+    "phone": "Telephone / fax",
+    "mobile": "Mobile",
+    "email": "E-mail",
+    "socials": {
+      "joinUs": "Join us on",
+      "platforms": ["X", "Facebook", "LinkedIn", "GitHub"]
+    }
+  },
+
+  "actions": {
+    "skipToContent": "Skip to main content",
+    "requestMeeting": {
+      "headline": "Convinced? Let’s Have A Coffee Together.",
+      "text": "Get in Touch"
+    },
+    "getDirections": "Get directions"
   },
 
   "home": {
     "title": "Website Creation, Hosting & Digital Marketing In Algeria",
-    "description": "@:name supports your digital success with custom websites, reliable hosting, a strong visual identity, and effective marketing. Boost your online presence today.",
+    "description": "@:site.name supports your digital success with custom websites, reliable hosting, a strong visual identity, and effective marketing. Boost your online presence today.",
     "headline": "Your Digital Success, Our Mission.",
-    "lead": "Your digital success relies on a high-performing online presence. @:name is your ideal partner, integrating custom website creation, strong brand identity, reliable hosting, and results-driven digital marketing. Let’s build your growth together.",
-    "cta": {
-      "realisations": "Propel Your Ideas",
-      "blog": "Boost Your Digital Knowledge"
+    "lead": "Your digital success relies on a high-performing online presence. @:site.name is your ideal partner, integrating custom website creation, strong brand identity, reliable hosting, and results-driven digital marketing. Let’s build your growth together.",
+    "actions": {
+      "exploreProjects": "Propel Your Ideas",
+      "learnMore": "Boost Your Digital Knowledge"
     }
   },
 
   "realisations": {
     "title": "Discover Our Website Creations",
-    "description": "Discover our web projects and explore expertly crafted solutions. @:name turns your ideas into digital success with tailored and high-performance solutions.",
+    "description": "Discover our web projects and explore expertly crafted solutions. @:site.name turns your ideas into digital success with tailored and high-performance solutions.",
     "headline": "Projects That Transform Ideas Into Digital Success.",
     "client": "Client",
     "category": "Category",
@@ -58,15 +73,15 @@
 
   "prestations": {
     "title": "Explore Our Digital Solutions",
-    "description": "Discover our turnkey and customized digital solutions. @:name supports you with expertise in web creation, hosting, brand identity, digital marketing, and much more.",
+    "description": "Discover our turnkey and customized digital solutions. @:site.name supports you with expertise in web creation, hosting, brand identity, digital marketing, and much more.",
     "headline": "Turnkey & Custom Solutions."
   },
 
   "agence": {
     "title": "Your Digital Agency In Algeria",
-    "description": "Since 2011 in Algiers, @:name has been turning digital ambitions into real success. Strategy, design, development, and hosting—all under one roof for a powerful and tailored web presence.",
+    "description": "Since 2011 in Algiers, @:site.name has been turning digital ambitions into real success. Strategy, design, development, and hosting—all under one roof for a powerful and tailored web presence.",
     "headline": "Builders Of Digital Success Since 2011.",
-    "lead": "Since our creation in Algiers in 2011, @:name has been driven by a unique passion: transforming your digital ambitions into concrete success. We believe in a personalized and integrated approach, where every project is an opportunity to build a lasting relationship and demonstrate our expertise in service of your growth.",
+    "lead": "Since our creation in Algiers in 2011, @:site.name has been driven by a unique passion: transforming your digital ambitions into concrete success. We believe in a personalized and integrated approach, where every project is an opportunity to build a lasting relationship and demonstrate our expertise in service of your growth.",
     "method": {
       "title": "Achieving Your Success, Together",
       "content": {
@@ -90,7 +105,7 @@
 
   "contact": {
     "title": "Contact Our Agency",
-    "description": "Let’s talk about your project! @:name supports you in creating your website and beyond. Let’s discuss your digital vision and bring it to life together.",
+    "description": "Let’s talk about your project! @:site.name supports you in creating your website and beyond. Let’s discuss your digital vision and bring it to life together.",
     "other": "Other Ways To Contact Us",
     "about": "Website creation is at the heart of our expertise. And much more! Tell us about your vision, we would be delighted to assist you in making it concrete.",
     "manager": "Manager",
@@ -99,23 +114,26 @@
 
   "blog": {
     "title": "Explore Our Articles on Advice and Web Innovations",
-    "description": "Explore our articles and enhance your digital knowledge. @:name shares insights, trends, and innovations to optimize your online presence and succeed on the web.",
+    "description": "Explore our articles and enhance your digital knowledge. @:site.name shares insights, trends, and innovations to optimize your online presence and succeed on the web.",
     "headline": "Digital Knowledge Is Just A Click Away.",
     "by": "by",
     "share": "Share The Article",
     "copy": "Copied!"
   },
 
-  "error404": {
-    "title": "Page Not Found",
-    "headline": "You Got Lost In A Galaxy Far, Far Away… 404 😞",
-    "lead": "It seems the Force was not with this URL-404. The page you were looking for has disappeared, perhaps hidden by the Ewoks. Do not succumb to the Dark Side of frustration! Return to the Rebel Base to find your way.",
-    "cta": "Return To The Rebel Base"
-  },
-
-  "error500": {
-    "title": "Server Error",
-    "headline": "Problem In The Heart Of The Main Reactor… 500 😞",
-    "lead": "Oops! It seems an interdimensional short-circuit-500 or a mischievous Ewok has wreaked havoc on our server. Don’t panic, our technical team is already on it to restore the situation. We apologize for this setback."
+  "errors": {
+    "404": {
+      "title": "Page Not Found",
+      "headline": "You Got Lost In A Galaxy Far, Far Away… 404 😞",
+      "lead": "It seems the Force was not with this URL-404. The page you were looking for has disappeared, perhaps hidden by the Ewoks. Do not succumb to the Dark Side of frustration! Return to the Rebel Base to find your way.",
+      "actions": {
+        "returnToHome": "Return To The Rebel Base"
+      }
+    },
+    "500": {
+      "title": "Server Error",
+      "headline": "Problem In The Heart Of The Main Reactor… 500 😞",
+      "lead": "Oops! It seems an interdimensional short-circuit-500 or a mischievous Ewok has wreaked havoc on our server. Don’t panic, our technical team is already on it to restore the situation. We apologize for this setback."
+    }
   }
 }

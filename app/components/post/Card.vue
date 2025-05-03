@@ -13,7 +13,7 @@ const { baseUrl } = useUrl()
 <template>
   <NuxtLink :to="post.path" class="card" vocab="https://schema.org/" typeof="Article">
     <span property="publisher" typeof="Organization">
-      <meta property="name" :content="t('name')">
+      <meta property="name" :content="t('site.name')">
       <meta property="url" :content="baseUrl">
     </span>
     <span v-if="post.author && post.author.name && post.author.url" property="author" typeof="Person">
@@ -21,7 +21,7 @@ const { baseUrl } = useUrl()
       <meta property="url" :content="post.author.url">
     </span>
     <span v-else property="author" typeof="Organization">
-      <meta property="name" :content="t('name')">
+      <meta property="name" :content="t('site.name')">
       <meta property="url" :content="baseUrl">
     </span>
     <time property="dateCreated datePublished" :datetime="new Date(post.createdAt).toISOString()" />

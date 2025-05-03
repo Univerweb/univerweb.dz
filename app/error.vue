@@ -8,7 +8,7 @@ const localePath = useLocalePath()
 const handleError = () => clearError({ redirect: localePath('/') })
 
 useSeoMeta({
-  title: `${t(`error${props.error.statusCode}.title`)} | ${t('name')}`,
+  title: `${t(`errors.${props.error.statusCode}.title`)} | ${t('site.name')}`,
   robots: { noindex: true },
 })
 </script>
@@ -17,13 +17,13 @@ useSeoMeta({
   <NuxtLayout name="default">
     <main class="container error intro intro-justify">
       <h1>
-        {{ t(`error${error.statusCode}.headline`) }}
+        {{ t(`errors.${error.statusCode}.headline`) }}
       </h1>
       <p class="lead">
-        {{ t(`error${error.statusCode}.lead`) }}
+        {{ t(`errors.${error.statusCode}.lead`) }}
       </p>
       <button class="btn" @click="handleError">
-        {{ t(`error404.cta`) }}
+        {{ t(`errors.404.actions.returnToHome`) }}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="8"

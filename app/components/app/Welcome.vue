@@ -10,7 +10,7 @@ const { t } = useI18n()
         {{ t('home.lead') }}
       </p>
     </div>
-    <NuxtLink to="#realisations" :aria-label="t('menu[0].label')">
+    <NuxtLink to="#realisations" :aria-label="t('navigation.menu[0].label')">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="20"

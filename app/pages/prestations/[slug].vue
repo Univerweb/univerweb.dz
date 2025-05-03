@@ -68,7 +68,7 @@ useSeoSlug({
   <main v-if="presta" class="presta">
     <section vocab="https://schema.org/" typeof="Service">
       <div class="container intro">
-        <AppBack :path="localePath('prestations')" :label="t('menu[1].label')" />
+        <AppBack :path="localePath('prestations')" :label="t('navigation.menu[1].label')" />
         <h1 property="name serviceType">
           {{ presta.title }}
         </h1>

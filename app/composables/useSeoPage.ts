@@ -20,7 +20,7 @@ export function useSeoPage(page: string) {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': () => t('name'), 'item': localeBaseUrl },
+          { '@type': 'ListItem', 'position': 1, 'name': () => t('site.name'), 'item': localeBaseUrl },
           { '@type': 'ListItem', 'position': 2, 'name': () => t(`${page}.title`) },
         ],
       },
