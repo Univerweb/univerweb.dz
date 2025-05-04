@@ -14,7 +14,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <NuxtLayout name="default">
+  <NuxtLayout>
     <main class="container error intro intro-justify">
       <h1>
         {{ t(`errors.${error.statusCode}.headline`) }}
