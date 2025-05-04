@@ -3,7 +3,7 @@ const localePath = useLocalePath()
 const { locale, t } = useI18n()
 const { path } = useRoute()
 
-const { data: presta } = await useAsyncData(`post${path}`, () => {
+const { data: presta } = await useAsyncData(`presta${path}`, () => {
   return queryCollection(`presta_${locale.value}`)
     .select('path', 'title', 'seo', 'lead', 'intro', 'solutions', 'features', 'process', 'faq')
     .path(computed(() => localePath(path)).value)
