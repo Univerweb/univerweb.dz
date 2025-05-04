@@ -4,7 +4,7 @@ useSeoPage('prestations')
 
 <template>
   <main>
-    <PrestaCardGroup lead tags />
+    <PrestaCardGroup />
     <LazyAppRequest />
   </main>
 </template>
