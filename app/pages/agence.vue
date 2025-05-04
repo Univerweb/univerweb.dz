@@ -1,8 +1,8 @@
 <script setup lang="ts">
 const { t, tm, rt } = useI18n()
 
-const method: { title: string } = tm('agence.method.content')
-const choose: { title: string } = tm('agence.choose.content')
+const method: Record<string, string> = tm('agence.method.content')
+const choose: Record<string, string> = tm('agence.choose.content')
 
 useSeoPage('agence')
 </script>
