@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{
-  title?: string
+  title: string
   url: string
 }>()
 
@@ -37,7 +37,7 @@ const { copy, copied } = useClipboard()
           </button>
         </li>
         <li>
-          <a :href="`https://x.com/intent/tweet?text=${title}%20${url}`" rel="noopener noreferrer" target="_blank">
+          <a :href="`https://x.com/intent/tweet?text=${encodeURIComponent(title)}%20${url}`" rel="noopener noreferrer" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
