@@ -116,7 +116,7 @@ useSeoSlug({
       </div>
 
       <div class="container row">
-        <h2 col class="col col--1-5">
+        <h2 class="col col--1-5">
           {{ presta.process.title }}
         </h2>
         <ol :class="`col row items-${presta.process.steps.length}`">
@@ -128,7 +128,7 @@ useSeoSlug({
       </div>
 
       <div class="container row faq" vocab="https://schema.org/" typeof="FAQPage">
-        <h2 col class="col col--1-5">
+        <h2 class="col col--1-5">
           {{ presta.faq.title }}
         </h2>
         <div class="col">
@@ -145,7 +145,7 @@ useSeoSlug({
               </button>
             </h3>
             <Transition @before-enter="beforeEnter" @enter="enter" @after-enter="afterEnter" @before-leave="beforeLeave" @leave="leave">
-              <section
+              <div
                 v-show="activeIndex === index"
                 :id="`faq-panel-${index + 1}`"
                 :aria-labelledby="`faq-header-${index + 1}`"
@@ -157,7 +157,7 @@ useSeoSlug({
                 <p class="col col--1-9" property="text">
                   {{ faq.answer }}
                 </p>
-              </section>
+              </div>
             </Transition>
           </div>
         </div>
