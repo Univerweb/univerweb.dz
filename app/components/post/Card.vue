@@ -7,14 +7,14 @@ defineProps<{
 }>()
 
 const { t } = useI18n()
-const { baseUrl } = useUrl()
+const { localeBaseUrl } = useUrl()
 </script>
 
 <template>
   <NuxtLink :to="post.path" class="card" vocab="https://schema.org/" typeof="Article">
     <span property="publisher" typeof="Organization">
       <meta property="name" :content="t('site.name')">
-      <meta property="url" :content="baseUrl">
+      <meta property="url" :content="localeBaseUrl">
     </span>
     <span v-if="post.author && post.author.name && post.author.url" property="author" typeof="Person">
       <meta property="name" :content="post.author.name">
@@ -22,7 +22,7 @@ const { baseUrl } = useUrl()
     </span>
     <span v-else property="author" typeof="Organization">
       <meta property="name" :content="t('site.name')">
-      <meta property="url" :content="baseUrl">
+      <meta property="url" :content="localeBaseUrl">
     </span>
     <time property="dateCreated datePublished" :datetime="new Date(post.createdAt).toISOString()" />
     <time property="dateModified" :datetime="new Date(post.updatedAt).toISOString()" />

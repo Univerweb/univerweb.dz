@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const localePath = useLocalePath()
 const { locale, t } = useI18n()
-const { baseUrl } = useUrl()
+const { baseUrl, localeBaseUrl } = useUrl()
 const { path } = useRoute()
 const head = useLocaleHead()
 
@@ -36,11 +36,11 @@ useSeoSlug({
   <main v-if="post" class="blog">
     <article vocab="https://schema.org/" typeof="Article">
       <span property="mainEntityOfPage" typeof="WebPage">
-        <span property="id" :content="`${baseUrl}${path}`" />
+        <span property="id" :content="baseUrl(path)" />
       </span>
       <span property="publisher" typeof="Organization">
         <span property="name" :content="t('site.name')" />
-        <span property="url" :content="baseUrl" />
+        <span property="url" :content="localeBaseUrl" />
       </span>
       <span property="articleSection" :content="t('blog.title')" />
       <span property="description" :content="post.description" />
@@ -61,7 +61,7 @@ useSeoSlug({
           </span>
           <span v-else property="author" typeof="Organization" class="author">
             <span property="name">@{{ t('site.name') }}</span>
-            <span property="url" :content="baseUrl" />
+            <span property="url" :content="localeBaseUrl" />
           </span>
           <ul class="tags">
             <li v-for="tag in post.tags" :key="tag" property="keywords">
@@ -82,7 +82,7 @@ useSeoSlug({
         <ContentRenderer :value="post" class="col col--2-12 col--3-11 content" />
       </div>
 
-      <LazyPostShare :title="post.title" :url="`${baseUrl}${path}`" />
+      <LazyPostShare :title="post.title" :url="baseUrl(path)" />
     </article>
 
     <LazyAppNav :prev="postSurround?.[0]" :next="postSurround?.[1]" />

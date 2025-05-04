@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const localePath = useLocalePath()
 const { locale, t, defaultLocale } = useI18n()
-const { baseUrl } = useUrl()
+const { baseUrl, localeBaseUrl } = useUrl()
 const { path } = useRoute()
 
 const { data: work } = await useAsyncData(`work${path}`, () => {
@@ -45,11 +45,11 @@ useSeoSlug({
   <main v-if="work" class="work">
     <article vocab="https://schema.org/" typeof="Article">
       <span property="mainEntityOfPage" typeof="WebPage">
-        <span property="id" :content="`${baseUrl}${path}`" />
+        <span property="id" :content="baseUrl(path)" />
       </span>
       <span property="author publisher" typeof="Organization">
         <span property="name" :content="t('site.name')" />
-        <span property="url" :content="baseUrl" />
+        <span property="url" :content="localeBaseUrl" />
       </span>
       <time property="dateCreated datePublished" :datetime="new Date(work.createdAt).toISOString()" />
       <time property="dateModified" :datetime="new Date(work.updatedAt).toISOString()" />

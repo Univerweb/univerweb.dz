@@ -1,3 +1,7 @@
+<script setup lang="ts">
+useSeoPage('home')
+</script>
+
 <template>
   <main>
     <AppWelcome />
