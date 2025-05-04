@@ -1,10 +1,8 @@
 <script setup lang="ts">
-interface Agence {
-  value: string
-  name: string
-}
-
 const { t, tm, rt } = useI18n()
+
+const method: { title: string } = tm('agence.method.content')
+const choose: { title: string } = tm('agence.choose.content')
 
 useSeoPage('agence')
 </script>
@@ -23,10 +21,10 @@ useSeoPage('agence')
         {{ t('agence.method.title') }}
       </h2>
       <ol class="col row items-5">
-        <li v-for="(value, name, index) in (tm('agence.method.content') as Agence)" :key="index" :class="`big-count item item-${index + 1}`">
-          <h3>{{ name }}</h3>
+        <li v-for="(description, title, index) in method" :key="index" :class="`big-count item item-${index + 1}`">
+          <h3>{{ title }}</h3>
           <p class="lead">
-            {{ rt(value) }}
+            {{ rt(description) }}
           </p>
         </li>
       </ol>
@@ -37,10 +35,10 @@ useSeoPage('agence')
         {{ t('agence.choose.title') }}
       </h2>
       <div class="col row items-2">
-        <div v-for="(value, name, index) in (tm('agence.choose.content') as Agence)" :key="index" :class="`item item-${index + 1}`">
-          <h3>{{ name }}</h3>
+        <div v-for="(description, title, index) in choose" :key="index" :class="`item item-${index + 1}`">
+          <h3>{{ title }}</h3>
           <p class="lead">
-            {{ rt(value) }}
+            {{ rt(description) }}
           </p>
         </div>
       </div>
