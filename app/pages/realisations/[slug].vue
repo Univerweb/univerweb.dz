@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const localePath = useLocalePath()
-const { locale, t } = useI18n()
+const { locale, t, defaultLocale } = useI18n()
 const { baseUrl } = useUrl()
 const { path } = useRoute()
 
@@ -34,7 +34,7 @@ const { data: workSurround } = await useAsyncData(`work-surround${path}`, () => 
 }, { watch: [locale] })
 
 useSeoSlug({
-  title: () => `${work.value!.title}${locale.value === 'fr' ? ' :' : ':'} ${work.value!.category} | ${t('navigation.menu[0].label')}`,
+  title: () => `${work.value!.title}${defaultLocale ? ' :' : ':'} ${work.value!.category} | ${t('navigation.menu[0].label')}`,
   description: () => work.value!.description,
   category: 'realisations',
   currentPageTitle: () => work.value!.title,
