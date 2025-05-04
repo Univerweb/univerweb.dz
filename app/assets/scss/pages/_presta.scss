@@ -1,3 +1,5 @@
+@use '../abstracts/variables' as *;
+
 .presta {
   :is(h1, .features h2, .tags-group h2) {
     margin-block-end: 0;
@@ -64,6 +66,12 @@
       p {
         margin-bottom: 12px;
       }
+    }
+  }
+
+  .card-group {
+    @media (min-width: $xl) {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }

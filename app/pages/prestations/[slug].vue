@@ -18,6 +18,13 @@ if (!presta.value) {
   })
 }
 
+const { data: prestaOther } = await useAsyncData(`presta-other${path}`, () => {
+  return queryCollection(`presta_${locale.value}`)
+    .select('path', 'title', 'cta', 'lead')
+    .where('path', '<>', path)
+    .all()
+}, { watch: [locale] })
+
 const activeIndex = ref<number | null>(null)
 
 const toggle = (index: number) => {
@@ -163,6 +170,15 @@ useSeoSlug({
         </div>
       </div>
     </section>
+
+    <div class="container row">
+      <h2 class="col col--1-5">
+        {{ t('prestations.other') }}
+      </h2>
+      <div class="col card-group">
+        <PrestaCard v-for="other in prestaOther" :key="other.path" :presta="other" title-tag="h3" />
+      </div>
+    </div>
 
     <LazyAppRequest />
   </main>
