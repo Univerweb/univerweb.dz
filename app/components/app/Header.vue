@@ -1,14 +1,11 @@
 <script setup lang="ts">
-interface Menu {
-  path: string
-  label: string
-}
-
 const { t, tm, rt, locale } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 const { menuOpen, closeMenu, toggleMenu } = useMenu()
 const { theme, toggleTheme } = useTheme()
 const { langNext, isLangNext, langTooltip } = useTooltip()
+
+const menu = tm('navigation.menu') as { path: string, label: string }[]
 </script>
 
 <template>
@@ -44,11 +41,11 @@ const { langNext, isLangNext, langTooltip } = useTooltip()
       </svg>
     </NuxtLinkLocale>
 
-    <nav class="nav" :style="{ '--item-total': tm('navigation.menu').length }">
+    <nav class="nav" :style="{ '--item-total': menu.length }">
       <ul class="menu">
-        <li v-for="(item, index) in (tm('navigation.menu') as Menu[])" :key="index">
-          <NuxtLinkLocale :to="rt(item.path)" active-class="active" :style="{ '--item-number': index }" @click.enter="closeMenu()">
-            {{ rt(item.label) }}
+        <li v-for="(link, index) in menu" :key="index">
+          <NuxtLinkLocale :to="rt(link.path)" active-class="active" :style="{ '--item-number': index }" @click.enter="closeMenu()">
+            {{ rt(link.label) }}
           </NuxtLinkLocale>
         </li>
       </ul>
