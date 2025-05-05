@@ -82,7 +82,7 @@ useSeoSlug({
         <ContentRenderer :value="post" class="col col--2-12 col--3-11 content" />
       </div>
 
-      <LazyPostShare :title="post.title" :url="baseUrl(path)" />
+      <LazyPostShare :title="post.title" :path="baseUrl(path)" />
     </article>
 
     <LazyAppNav :prev="postSurround?.[0]" :next="postSurround?.[1]" />

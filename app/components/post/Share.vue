@@ -1,7 +1,7 @@
 <script setup lang="ts">
 defineProps<{
+  path: string
   title: string
-  url: string
 }>()
 
 const { t } = useI18n()
@@ -17,7 +17,7 @@ const { copy, copied } = useClipboard()
 
       <ul>
         <li>
-          <button class="tooltip-clipboard" @click="copy(url)">
+          <button class="tooltip-clipboard" @click="copy(path)">
             <Transition name="tooltip-clipboard-text">
               <span v-if="copied" class="tooltip-clipboard-text">
                 {{ t('blog.copy') }}
@@ -37,7 +37,7 @@ const { copy, copied } = useClipboard()
           </button>
         </li>
         <li>
-          <a :href="`https://x.com/intent/tweet?text=${encodeURIComponent(title)}%20${url}`" rel="noopener noreferrer" target="_blank">
+          <a :href="`https://x.com/intent/tweet?text=${encodeURIComponent(title)}%20${path}`" rel="noopener noreferrer" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -52,7 +52,7 @@ const { copy, copied } = useClipboard()
           </a>
         </li>
         <li>
-          <a :href="`https://www.linkedin.com/sharing/share-offsite/?url=${url}`" rel="noopener noreferrer" target="_blank">
+          <a :href="`https://www.linkedin.com/sharing/share-offsite/?url=${path}`" rel="noopener noreferrer" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
