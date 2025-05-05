@@ -5,7 +5,7 @@ const { menuOpen, closeMenu, toggleMenu } = useMenu()
 const { theme, toggleTheme } = useTheme()
 const { langNext, isLangNext, langTooltip } = useTooltip()
 
-const menu = tm('navigation.menu') as { path: string, label: string }[]
+const menu = computed(() => tm('navigation.menu') as { label: string, path: string }[])
 </script>
 
 <template>
