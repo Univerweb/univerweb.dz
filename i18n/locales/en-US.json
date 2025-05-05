@@ -16,8 +16,8 @@
       { "path": "contact", "label": "Contact" },
       { "path": "blog", "label": "Blog" }
     ],
-    "previous": "Previous",
-    "next": "Next"
+    "previous": "⇠ Previous",
+    "next": "Next ⇢"
   },
 
   "ariaLabels": {

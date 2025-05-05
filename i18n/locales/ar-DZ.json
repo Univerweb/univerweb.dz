@@ -16,8 +16,8 @@
       { "path": "contact", "label": "التواصل معنا" },
       { "path": "blog", "label": "مدوّنة" }
     ],
-    "previous": "السابق",
-    "next": "التالي"
+    "previous": "⇢ السابق",
+    "next": "التالي ⇠"
   },
 
   "ariaLabels": {

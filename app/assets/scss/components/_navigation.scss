@@ -1,17 +1,30 @@
-.post-nav {
+@use '../abstracts/variables' as *;
+
+.slug-nav {
   display: grid;
+  align-items: start;
+  gap: 48px;
   padding-block: 72px 48px;
-  justify-content: space-between;
   background-color: var(--background-secondary);
   transition: background-color var(--transition);
 
-  .next,
-  .prev {
-    position: relative;
-    padding-inline: 18px 12px;
+  @media (min-width: $md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    &:hover {
-      color: var(--blue);
+  .link {
+    position: relative;
+    line-height: 1.2;
+    width: fit-content;
+
+    &:is(.prev) {
+      padding-inline-start: 18px;
+    }
+
+    &:is(.next) {
+      padding-inline-end: 18px;
+      text-align: end;
+      justify-self: end;
     }
 
     &::before {
@@ -19,38 +32,14 @@
       position: absolute;
       color: var(--color-secondary);
       transition-property: color var(--transition);
-      inset-block-start: -12px;
-      inset-inline-start: 20px;
+      inset-block-start: -24px;
       font-size: 0.8rem;
       line-height: 0.9375;
-      pointer-events: none;
+      width: max-content;
     }
 
-    &:not(.prev) {
-      grid-column: 2;
-      text-align: end;
-      padding-inline: 12px 18px;
-
-      &::before {
-        inset-inline: 0 18px;
-      }
+    &.next::before {
+      inset-inline-end: 18px;
     }
-  }
-
-  svg {
-    position: absolute;
-    top: 45%;
-
-    [dir='rtl'] & {
-      transform: rotate(180deg);
-    }
-  }
-
-  .prev svg {
-    inset-inline-start: -3px;
-  }
-
-  .next svg {
-    inset-inline-end: -3px;
   }
 }
