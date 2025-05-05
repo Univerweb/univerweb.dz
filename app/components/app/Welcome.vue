@@ -10,7 +10,7 @@ const { t } = useI18n()
         {{ t('home.lead') }}
       </p>
     </div>
-    <NuxtLink to="#realisations" :aria-label="t('navigation.menu[0].label')">
+    <NuxtLinkLocale to="/#realisations" :aria-label="t('navigation.menu[0].label')">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="20"
@@ -22,6 +22,6 @@ const { t } = useI18n()
       >
         <path d="M17.6 0 10 7.6 2.4 0 .2 2.2l7.6 7.6L10 12l2.2-2.2 7.6-7.6z" />
       </svg>
-    </NuxtLink>
+    </NuxtLinkLocale>
   </section>
 </template>
