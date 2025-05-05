@@ -7,7 +7,7 @@ const { theme } = useTheme()
 const config = useRuntimeConfig()
 
 useSeoMeta({
-  titleTemplate: `%s | ${t('site.name')}`,
+  titleTemplate: () => `%s | ${t('site.name')}`,
   ogType: 'website',
   ogUrl,
   ogLocale,
