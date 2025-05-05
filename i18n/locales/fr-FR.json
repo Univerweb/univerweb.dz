@@ -119,6 +119,11 @@
     "headline": "Le savoir digital à portée de clic.",
     "by": "par",
     "share": "Partager l’article",
+    "ariaLabels": {
+      "copy": "Copier le lien de l’article",
+      "x": "Partager cet article sur X",
+      "linkedIn": "Partager cet article sur LinkedIn"
+    },
     "copy": "Copié !"
   },
 

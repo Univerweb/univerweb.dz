@@ -17,7 +17,7 @@ const { copy, copied } = useClipboard()
 
       <ul>
         <li>
-          <button class="tooltip-clipboard" @click="copy(path)">
+          <button class="tooltip-clipboard" :aria-label="t('blog.ariaLabels.copy')" @click="copy(path)">
             <Transition name="tooltip-clipboard-text">
               <span v-if="copied" class="tooltip-clipboard-text">
                 {{ t('blog.copy') }}
@@ -37,7 +37,7 @@ const { copy, copied } = useClipboard()
           </button>
         </li>
         <li>
-          <a :href="`https://x.com/intent/tweet?text=${encodeURIComponent(title)}%20${path}`" rel="noopener noreferrer" target="_blank">
+          <a :href="`https://x.com/intent/tweet?text=${encodeURIComponent(title)}%20${path}`" rel="noopener noreferrer" target="_blank" :aria-label="t('blog.ariaLabels.x')">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -52,7 +52,7 @@ const { copy, copied } = useClipboard()
           </a>
         </li>
         <li>
-          <a :href="`https://www.linkedin.com/sharing/share-offsite/?url=${path}`" rel="noopener noreferrer" target="_blank">
+          <a :href="`https://www.linkedin.com/sharing/share-offsite/?url=${path}`" rel="noopener noreferrer" target="_blank" :aria-label="t('blog.ariaLabels.linkedIn')">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"

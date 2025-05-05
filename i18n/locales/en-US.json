@@ -119,6 +119,11 @@
     "headline": "Digital Knowledge Is Just A Click Away.",
     "by": "by",
     "share": "Share The Article",
+    "ariaLabels": {
+      "copy": "Copy Article Link",
+      "x": "Share This Article on X",
+      "linkedIn": "Share This Article on LinkedIn"
+    },
     "copy": "Copied!"
   },
 
