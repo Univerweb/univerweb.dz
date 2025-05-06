@@ -43,8 +43,6 @@ header {
 
 .logo {
   display: grid;
-  overflow: hidden;
-  width: 24px;
   visibility: visible;
   opacity: 1;
   transition-property: visibility, opacity;
@@ -56,10 +54,6 @@ header {
 
   .menu-closing & {
     transition-delay: var(--duration);
-  }
-
-  @media (min-width: $xs) {
-    width: auto;
   }
 
   path {
