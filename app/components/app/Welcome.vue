@@ -11,17 +11,7 @@ const { t } = useI18n()
       </p>
     </div>
     <NuxtLinkLocale to="/#realisations" :aria-label="t('navigation.menu[0].label')">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="12"
-        viewBox="0 0 20 12"
-        fill="currentColor"
-        role="img"
-        aria-hidden="true"
-      >
-        <path d="M17.6 0 10 7.6 2.4 0 .2 2.2l7.6 7.6L10 12l2.2-2.2 7.6-7.6z" />
-      </svg>
+      <IconArrow />
     </NuxtLinkLocale>
   </section>
 </template>
