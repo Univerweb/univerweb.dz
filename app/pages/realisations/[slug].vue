@@ -6,7 +6,7 @@ const { path } = useRoute()
 
 const { data: work } = await useAsyncData(`work${path}`, () => {
   return queryCollection(`work_${locale.value}`)
-    .select('path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'category', 'lead', 'link')
+    .select('path', 'title', 'description', 'createdAt', 'updatedAt', 'category', 'tags', 'lead', 'link')
     .path(computed(() => localePath(path)).value)
     .first()
 }, { watch: [locale] })
@@ -21,7 +21,7 @@ if (!work.value) {
 
 const { data: workRelated } = await useAsyncData(`work-related${path}`, () => {
   return queryCollection(`work_${locale.value}`)
-    .select('path', 'stem', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'category', 'lead')
+    .select('path', 'stem', 'title', 'description', 'createdAt', 'updatedAt', 'category', 'tags', 'lead')
     .andWhere(query => query
       .where('path', '<>', path)
       .where('category', '=', work.value!.category))
