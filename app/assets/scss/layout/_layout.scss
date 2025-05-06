@@ -15,7 +15,7 @@
   display: grid;
   grid-auto-rows: 1fr auto;
   transition: min-height var(--transition);
-  min-height: calc(100vh - var(--h-header));
+  min-height: calc(100svh - var(--h-header));
 
   a {
     display: grid;
@@ -27,7 +27,7 @@
 .error {
   --h-header: 0;
   --padding-y: 0;
-  min-height: calc(100vh);
+  min-height: 100svh;
 }
 
 .intro {
