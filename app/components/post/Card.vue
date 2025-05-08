@@ -26,7 +26,7 @@ const { localeBaseUrl } = useUrl()
     </span>
     <time property="dateCreated datePublished" :datetime="new Date(post.createdAt).toISOString()" />
     <time property="dateModified" :datetime="new Date(post.updatedAt).toISOString()" />
-    <meta property="articleSection" :content="t('blog.title')">
+    <meta property="articleSection" :content="t('navigation.menu[4].label')">
 
     <AppPicture :path="post.path" />
 

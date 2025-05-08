@@ -42,7 +42,7 @@ useSeoSlug({
         <span property="name" :content="t('site.name')" />
         <span property="url" :content="localeBaseUrl" />
       </span>
-      <span property="articleSection" :content="t('blog.title')" />
+      <span property="articleSection" :content="t('navigation.menu[4].label')" />
       <span property="description" :content="post.description" />
 
       <div class="container intro">

@@ -53,7 +53,7 @@ useSeoSlug({
       </span>
       <time property="dateCreated datePublished" :datetime="new Date(work.createdAt).toISOString()" />
       <time property="dateModified" :datetime="new Date(work.updatedAt).toISOString()" />
-      <span property="articleSection" :content="t('realisations.title')" />
+      <span property="articleSection" :content="t('navigation.menu[0].label')" />
       <span property="description" :content="work.description" />
 
       <div class="container intro">

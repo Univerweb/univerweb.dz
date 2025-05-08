@@ -19,7 +19,7 @@ const { localeBaseUrl } = useUrl()
     <time property="dateCreated datePublished" :datetime="new Date(work.createdAt).toISOString()" />
     <time property="dateModified" :datetime="new Date(work.updatedAt).toISOString()" />
     <span v-for="tag in work.tags" :key="tag" property="keywords" :content="tag" />
-    <span property="articleSection" :content="t('realisations.title')" />
+    <span property="articleSection" :content="t('navigation.menu[0].label')" />
     <span property="description" :content="work.description" />
 
     <AppPicture :path="work.path" />
