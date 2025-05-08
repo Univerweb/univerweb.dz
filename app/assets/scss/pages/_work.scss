@@ -22,8 +22,19 @@
     }
   }
 
-  .row-evenly {
-    grid-template-columns: repeat(3, auto);
+  .tags {
+    margin-top: 12px;
+  }
+
+  .technos {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 12px;
+
+    li {
+      display: flex;
+    }
   }
 
   @media (min-width: $md) {

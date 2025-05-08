@@ -1,0 +1,5 @@
+uid: cms
+name: Développement CMS
+icon:
+  - IconDrupal
+  - IconBootstrap

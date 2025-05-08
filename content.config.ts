@@ -49,6 +49,12 @@ const post = commonSchema.extend({
   }).optional(),
 })
 
+const tags = z.object({
+  uid: z.string(),
+  name: z.string(),
+  icon: z.array(z.string()),
+})
+
 export default defineContentConfig({
   collections: {
     work_fr: defineCollection({
@@ -104,6 +110,21 @@ export default defineContentConfig({
       source: 'ar/blog/*.md',
       type: 'page',
       schema: post,
+    }),
+    tags_fr: defineCollection({
+      source: 'fr/tags/*.yaml',
+      type: 'data',
+      schema: tags,
+    }),
+    tags_en: defineCollection({
+      source: 'en/tags/*.yaml',
+      type: 'data',
+      schema: tags,
+    }),
+    tags_ar: defineCollection({
+      source: 'ar/tags/*.yaml',
+      type: 'data',
+      schema: tags,
     }),
   },
 })

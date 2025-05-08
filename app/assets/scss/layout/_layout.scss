@@ -64,10 +64,6 @@
 .row {
   @include grid(12, 1fr, 24px 0);
 
-  &-evenly {
-    justify-content: space-evenly;
-  }
-
   &-center {
     align-items: center;
   }
@@ -92,7 +88,6 @@
     @include col(2, 12);
     @include col(5, 13);
     @include col(6, 13);
-    @include col(auto, auto);
   }
 
   @media (min-width: $xl) {

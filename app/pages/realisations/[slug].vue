@@ -19,6 +19,13 @@ if (!work.value) {
   })
 }
 
+const { data: tags } = await useAsyncData(`tags${path}`, () => {
+  return queryCollection(`tags_${locale.value}`)
+    .select('name', 'icon')
+    .where('uid', 'IN', work.value!.tags)
+    .all()
+}, { watch: [locale] })
+
 const { data: workRelated } = await useAsyncData(`work-related${path}`, () => {
   return queryCollection(`work_${locale.value}`)
     .select('path', 'stem', 'title', 'description', 'createdAt', 'updatedAt', 'category', 'tags', 'lead')
@@ -71,8 +78,8 @@ useSeoSlug({
         class="banner"
       />
 
-      <div class="container row row-evenly">
-        <div class="col col--auto-auto">
+      <div class="container row items-2">
+        <div class="item item-1">
           <h2 class="h6">
             {{ t('realisations.client') }}
           </h2>
@@ -80,7 +87,7 @@ useSeoSlug({
             {{ work.title }}
           </p>
         </div>
-        <div class="col col--auto-auto">
+        <div class="item item-2">
           <h2 class="h6">
             {{ t('realisations.category') }}
           </h2>
@@ -88,14 +95,26 @@ useSeoSlug({
             {{ work.category }}
           </p>
         </div>
-        <div class="col col--auto-auto">
+        <div class="item item-3">
           <h2 class="h6">
             {{ t('realisations.services') }}
           </h2>
           <ul class="lead tags">
-            <li v-for="tag in work.tags" :key="tag" property="keywords">
-              {{ tag }}
+            <li v-for="tag in tags" :key="tag.name" property="keywords">
+              {{ tag.name }}
             </li>
+          </ul>
+        </div>
+        <div class="item item-4">
+          <h2 class="h6">
+            {{ t('realisations.technologies') }}
+          </h2>
+          <ul class="technos">
+            <template v-for="tag in tags" :key="tag.name">
+              <li v-for="icon in tag.icon" :key="icon">
+                <Component :is="icon" />
+              </li>
+            </template>
           </ul>
         </div>
       </div>
