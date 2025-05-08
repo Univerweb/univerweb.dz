@@ -17,7 +17,7 @@ const localePath = useLocalePath()
   <NuxtPicture
     provider="cloudinary"
     :src="`${localePath(path, 'fr')}_${type}`"
-    :alt="alt"
+    :alt
     sizes="342px xs:348px md:460px xl:584px"
     format="avif,webp"
     loading="lazy"
