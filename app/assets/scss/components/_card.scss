@@ -17,37 +17,39 @@
   display: grid;
   position: relative;
   overflow: hidden;
-  z-index: 1;
   border-radius: var(--padding-y);
 
   img {
     aspect-ratio: 49 / 52;
+    transition: scale var(--transition);
+  }
+
+  &:hover img {
+    scale: 1.1;
   }
 
   .overlay {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-      0deg,
-      rgba(0 0 0 / 0%) 0%,
-      rgba(0 0 0 / 0%) 60%,
-      rgba(0 0 0 / 60%) 100%
-    );
-    transition: opacity var(--transition);
+    background-color: rgba(0 0 0 / 67%);
   }
 
   .inner {
     display: grid;
-    grid-auto-rows: auto 1fr;
+    grid-auto-rows: auto 1fr auto;
     position: absolute;
     height: 100%;
     color: #fff;
     padding: var(--padding-y);
   }
 
-  .tags li::before {
-    color: currentcolor;
+  .tags {
+    margin-block-end: 12px;
+
+    li::before {
+      color: currentcolor;
+    }
   }
 
   h2,
@@ -63,29 +65,11 @@
 
   .lead {
     color: #fff;
-    align-self: end;
-    transform: translateY(calc(100% + 48px));
-    transition: transform var(--transition);
+    opacity: 0.8;
     visibility: hidden;
 
     @media (min-width: $md) {
       visibility: visible;
-    }
-  }
-
-  &:hover {
-    .overlay {
-      background: linear-gradient(
-        0deg,
-        rgba(0 0 0 / 100%) 0%,
-        rgba(0 0 0 / 60%) 50%,
-        rgba(0 0 0 / 100%) 100%
-      );
-      opacity: 0.8;
-    }
-
-    .lead {
-      transform: translateY(0);
     }
   }
 }
