@@ -85,6 +85,6 @@ useSeoSlug({
       <LazyPostShare :title="post.title" :path="baseUrl(path)" />
     </article>
 
-    <LazyAppNav :prev="postSurround?.[0]" :next="postSurround?.[1]" />
+    <LazyAppNav :prev="postSurround?.[0]" :next="postSurround?.[1]" :aria-label="t('blog.ariaLabels.nav')" />
   </main>
 </template>

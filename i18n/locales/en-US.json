@@ -69,7 +69,10 @@
     "technologies": "Technologies Used",
     "visit": "Visit Website",
     "alt": "A website overview of",
-    "related": "Related Projects"
+    "related": "Related Projects",
+    "ariaLabels": {
+      "nav": "Project Navigation"
+    }
   },
 
   "prestations": {
@@ -123,7 +126,8 @@
     "ariaLabels": {
       "copy": "Copy Article Link",
       "x": "Share This Article on X",
-      "linkedIn": "Share This Article on LinkedIn"
+      "linkedIn": "Share This Article on LinkedIn",
+      "nav": "Article Navigation"
     },
     "copy": "Copied!"
   },

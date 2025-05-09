@@ -151,6 +151,6 @@ useSeoSlug({
       </div>
     </div>
 
-    <LazyAppNav :prev="workSurround?.[0]" :next="workSurround?.[1]" />
+    <LazyAppNav :prev="workSurround?.[0]" :next="workSurround?.[1]" :aria-label="t('realisations.ariaLabels.nav')" />
   </main>
 </template>
