@@ -18,7 +18,7 @@ const { locale, t } = useI18n()
 
 const { data: works } = await useAsyncData(`works${path}`, () => {
   return queryCollection(`work_${locale.value}`)
-    .select('path', 'stem', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'category', 'lead')
+    .select('path', 'stem', 'title', 'description', 'createdAt', 'updatedAt', 'category', 'lead')
     .order('stem', 'DESC')
     .limit(props.limit)
     .all()

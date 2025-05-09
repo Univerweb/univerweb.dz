@@ -50,9 +50,9 @@ useSeoSlug({
 
 <template>
   <main v-if="work" class="work">
-    <article vocab="https://schema.org/" typeof="Article">
-      <span property="mainEntityOfPage" typeof="WebPage">
-        <span property="id" :content="baseUrl(path)" />
+    <div vocab="https://schema.org/" typeof="CreativeWork">
+      <span :id="baseUrl(localePath('realisations'))" property="isPartOf" typeof="WebPage">
+        <span property="name" :content="t('navigation.menu[0].label')" />
       </span>
       <span property="author publisher" typeof="Organization">
         <span property="name" :content="t('site.name')" />
@@ -60,12 +60,11 @@ useSeoSlug({
       </span>
       <time property="dateCreated datePublished" :datetime="new Date(work.createdAt).toISOString()" />
       <time property="dateModified" :datetime="new Date(work.updatedAt).toISOString()" />
-      <span property="articleSection" :content="t('navigation.menu[0].label')" />
       <span property="description" :content="work.description" />
 
       <div class="container intro">
         <AppBack path="realisations" :label="t('navigation.menu[0].label')" />
-        <h1 property="headline">
+        <h1 property="name">
           {{ work.title }}
         </h1>
       </div>
@@ -100,7 +99,7 @@ useSeoSlug({
             {{ t('realisations.services') }}
           </h2>
           <ul class="lead tags">
-            <li v-for="tag in tags" :key="tag.name" property="keywords">
+            <li v-for="tag in tags" :key="tag.name">
               {{ tag.name }}
             </li>
           </ul>
@@ -122,7 +121,7 @@ useSeoSlug({
       <div class="container container-no-pt row">
         <div class="col col--1-4">
           <div class="inner">
-            <p property="articleBody" class="lead">
+            <p property="about" class="lead">
               {{ work.lead }}
             </p>
             <a v-if="work.link" :href="work.link" class="link">
@@ -139,7 +138,7 @@ useSeoSlug({
           :img-attrs="null"
         />
       </div>
-    </article>
+    </div>
 
     <div v-if="workRelated && workRelated.length" class="container">
       <div class="intro intro-justify">
