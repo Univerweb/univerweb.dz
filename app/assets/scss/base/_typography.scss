@@ -56,7 +56,7 @@ h3,
 
 h6,
 .h6 {
-  @include font(16, 500, 1.5, $mbe: 0);
+  @include font(16, 500, 1.5, $mbe: 6);
 }
 
 a {

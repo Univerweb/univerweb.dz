@@ -9,7 +9,7 @@ const menu = computed(() => tm('navigation.menu') as { label: string, path: stri
 </script>
 
 <template>
-  <header>
+  <header class="header">
     <NuxtLink to="#main" class="skip">
       {{ t('actions.skipToContent') }}
     </NuxtLink>

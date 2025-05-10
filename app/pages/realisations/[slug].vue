@@ -50,24 +50,26 @@ useSeoSlug({
 
 <template>
   <main v-if="work" class="work">
-    <div vocab="https://schema.org/" typeof="CreativeWork">
-      <span :id="baseUrl(localePath('realisations'))" property="isPartOf" typeof="WebPage">
-        <span property="name" :content="t('navigation.menu[0].label')" />
-      </span>
-      <span property="author publisher" typeof="Organization">
-        <span property="name" :content="t('site.name')" />
-        <span property="url" :content="localeBaseUrl" />
-      </span>
-      <time property="dateCreated datePublished" :datetime="new Date(work.createdAt).toISOString()" />
-      <time property="dateModified" :datetime="new Date(work.updatedAt).toISOString()" />
-      <span property="description" :content="work.description" />
+    <article vocab="https://schema.org/" typeof="CreativeWork" aria-labelledby="name">
+      <header>
+        <div class="container intro">
+          <AppBack path="realisations" :label="t('navigation.menu[0].label')" />
+          <h1 id="name" property="name">
+            {{ work.title }}
+          </h1>
+        </div>
 
-      <div class="container intro">
-        <AppBack path="realisations" :label="t('navigation.menu[0].label')" />
-        <h1 property="name">
-          {{ work.title }}
-        </h1>
-      </div>
+        <span property="description" :content="work.description" />
+        <span :id="baseUrl(localePath('realisations'))" property="isPartOf" typeof="WebPage">
+          <span property="name" :content="t('navigation.menu[0].label')" />
+        </span>
+        <span property="author publisher" typeof="Organization">
+          <span property="name" :content="t('site.name')" />
+          <span property="url" :content="localeBaseUrl" />
+        </span>
+        <time property="dateCreated datePublished" :datetime="new Date(work.createdAt).toISOString()" />
+        <time property="dateModified" :datetime="new Date(work.updatedAt).toISOString()" />
+      </header>
 
       <AppPicture
         :path
@@ -78,24 +80,26 @@ useSeoSlug({
       />
 
       <div class="container row items-2">
-        <div class="item item-1">
-          <h2 class="h6">
+        <section class="item item-1" aria-labelledby="client">
+          <h2 id="client" class="h6">
             {{ t('realisations.client') }}
           </h2>
           <p class="lead">
             {{ work.title }}
           </p>
-        </div>
-        <div class="item item-2">
-          <h2 class="h6">
+        </section>
+
+        <section class="item item-2" aria-labelledby="category">
+          <h2 id="category" class="h6">
             {{ t('realisations.category') }}
           </h2>
           <p class="lead">
             {{ work.category }}
           </p>
-        </div>
-        <div class="item item-3">
-          <h2 class="h6">
+        </section>
+
+        <section class="item item-3" aria-labelledby="services">
+          <h2 id="services" class="h6">
             {{ t('realisations.services') }}
           </h2>
           <ul class="lead tags">
@@ -103,9 +107,10 @@ useSeoSlug({
               {{ tag.name }}
             </li>
           </ul>
-        </div>
-        <div class="item item-4">
-          <h2 class="h6">
+        </section>
+
+        <section class="item item-4" aria-labelledby="technologies">
+          <h2 id="technologies" class="h6">
             {{ t('realisations.technologies') }}
           </h2>
           <ul class="technos">
@@ -115,19 +120,22 @@ useSeoSlug({
               </li>
             </template>
           </ul>
-        </div>
+        </section>
       </div>
 
       <div class="container container-no-pt row">
         <div class="col col--1-4">
-          <div class="inner">
+          <section class="inner" aria-labelledby="about-company">
+            <h2 id="about-company" class="h6">
+              {{ t('realisations.about') }} {{ work.title }}
+            </h2>
             <p property="about" class="lead">
               {{ work.lead }}
             </p>
             <a v-if="work.link" :href="work.link" class="link">
               {{ t('realisations.visit') }}
             </a>
-          </div>
+          </section>
         </div>
         <AppPicture
           :path
@@ -138,18 +146,16 @@ useSeoSlug({
           :img-attrs="null"
         />
       </div>
-    </div>
+    </article>
 
-    <div v-if="workRelated && workRelated.length" class="container">
-      <div class="intro intro-justify">
-        <h2>
-          {{ t('realisations.related') }}
-        </h2>
-      </div>
-      <div class="card-group">
+    <aside v-if="workRelated && workRelated.length" class="container row" aria-labelledby="related">
+      <h2 id="related" class="col col--1-5">
+        {{ t('realisations.related') }}
+      </h2>
+      <div class="col card-group">
         <WorkCard v-for="related in workRelated" :key="related.path" :work="related" title-tag="h3" />
       </div>
-    </div>
+    </aside>
 
     <LazyAppNav :prev="workSurround?.[0]" :next="workSurround?.[1]" :aria-label="t('realisations.ariaLabels.nav')" />
   </main>

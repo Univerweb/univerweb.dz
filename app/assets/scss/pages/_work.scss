@@ -22,10 +22,6 @@
     }
   }
 
-  .tags {
-    margin-top: 12px;
-  }
-
   .technos {
     display: flex;
     align-items: center;
@@ -38,7 +34,7 @@
   }
 
   @media (min-width: $md) {
-    .col .inner {
+    article .inner {
       position: sticky;
       top: var(--padding-y);
     }
