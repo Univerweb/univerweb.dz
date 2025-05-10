@@ -73,13 +73,13 @@ useSeoSlug({
 
 <template>
   <main v-if="presta" class="presta">
-    <section vocab="https://schema.org/" typeof="Service">
-      <div class="container intro">
+    <article vocab="https://schema.org/" typeof="Service" aria-labelledby="title">
+      <header class="container intro">
         <AppBack :path="localePath('prestations')" :label="t('navigation.menu[1].label')" />
-        <h1 property="name serviceType">
+        <h1 id="title" property="name serviceType">
           {{ presta.title }}
         </h1>
-      </div>
+      </header>
 
       <AppPicture
         :path
@@ -88,8 +88,8 @@ useSeoSlug({
         class="banner"
       />
 
-      <div class="container row">
-        <h2 class="col" property="description">
+      <section class="container row" aria-labelledby="lead">
+        <h2 id="lead" class="col" property="description">
           {{ presta.lead }}
         </h2>
         <div class="col col--1-9 lead">
@@ -97,10 +97,10 @@ useSeoSlug({
             {{ paragraph }}
           </p>
         </div>
-      </div>
+      </section>
 
-      <div class="container row features">
-        <h2 class="col col--1-5">
+      <section class="container row features" aria-labelledby="solutions">
+        <h2 id="solutions" class="col col--1-5">
           {{ presta.solutions.title }}
         </h2>
         <div class="col col--6-13">
@@ -109,10 +109,10 @@ useSeoSlug({
             <p>{{ solution.description }}</p>
           </template>
         </div>
-      </div>
+      </section>
 
-      <div class="container row tags-group">
-        <h2 class="col col--1-6">
+      <section class="container row tags-group" aria-labelledby="features">
+        <h2 id="features" class="col col--1-6">
           {{ presta.features.title }}
         </h2>
         <ul class="col col--7-12 tags">
@@ -120,10 +120,10 @@ useSeoSlug({
             {{ tag }}
           </li>
         </ul>
-      </div>
+      </section>
 
-      <div class="container row">
-        <h2 class="col col--1-5">
+      <section class="container row" aria-labelledby="process">
+        <h2 id="process" class="col col--1-5">
           {{ presta.process.title }}
         </h2>
         <ol :class="`col row items-${presta.process.steps.length}`">
@@ -132,10 +132,10 @@ useSeoSlug({
             <p>{{ process.description }}</p>
           </li>
         </ol>
-      </div>
+      </section>
 
-      <div class="container row faq" vocab="https://schema.org/" typeof="FAQPage">
-        <h2 class="col col--1-5">
+      <section class="container row faq" vocab="https://schema.org/" typeof="FAQPage" aria-labelledby="faq">
+        <h2 id="faq" class="col col--1-5">
           {{ presta.faq.title }}
         </h2>
         <div class="col">
@@ -168,17 +168,17 @@ useSeoSlug({
             </Transition>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </article>
 
-    <div class="container row">
-      <h2 class="col col--1-5">
+    <aside class="container row" aria-labelledby="other">
+      <h2 id="other" class="col col--1-5">
         {{ t('prestations.other') }}
       </h2>
       <div class="col card-group">
         <PrestaCard v-for="other in prestaOther" :key="other.path" :presta="other" title-tag="h3" />
       </div>
-    </div>
+    </aside>
 
     <LazyAppRequest />
   </main>
