@@ -51,14 +51,11 @@ useSeoSlug({
 <template>
   <main v-if="work" class="work">
     <article vocab="https://schema.org/" typeof="CreativeWork" aria-labelledby="name">
-      <header>
-        <div class="container intro">
-          <AppBack path="realisations" :label="t('navigation.menu[0].label')" />
-          <h1 id="name" property="name">
-            {{ work.title }}
-          </h1>
-        </div>
-
+      <header class="container intro">
+        <AppBack path="realisations" :label="t('navigation.menu[0].label')" />
+        <h1 id="name" property="name">
+          {{ work.title }}
+        </h1>
         <span property="description" :content="work.description" />
         <span :id="baseUrl(localePath('realisations'))" property="isPartOf" typeof="WebPage">
           <span property="name" :content="t('navigation.menu[0].label')" />
