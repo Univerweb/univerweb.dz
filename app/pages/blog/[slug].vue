@@ -34,22 +34,21 @@ useSeoSlug({
 
 <template>
   <main v-if="post" class="blog">
-    <article vocab="https://schema.org/" typeof="Article">
-      <span property="mainEntityOfPage" typeof="WebPage">
-        <span property="id" :content="baseUrl(path)" />
-      </span>
-      <span property="publisher" typeof="Organization">
-        <span property="name" :content="t('site.name')" />
-        <span property="url" :content="localeBaseUrl" />
-      </span>
-      <span property="articleSection" :content="t('navigation.menu[4].label')" />
-      <span property="description" :content="post.description" />
-
-      <div class="container intro">
+    <article vocab="https://schema.org/" typeof="Article" aria-labelledby="title">
+      <header class="container intro">
         <AppBack path="blog" :label="t('navigation.menu[4].label')" />
-        <h1 property="headline">
+        <h1 id="title" property="headline">
           {{ post.title }}
         </h1>
+        <span property="description" :content="post.description" />
+        <span property="articleSection" :content="t('navigation.menu[4].label')" />
+        <span property="mainEntityOfPage" typeof="WebPage">
+          <span property="id" :content="baseUrl(path)" />
+        </span>
+        <span property="publisher" typeof="Organization">
+          <span property="name" :content="t('site.name')" />
+          <span property="url" :content="localeBaseUrl" />
+        </span>
         <div class="meta">
           <NuxtTime property="dateCreated datePublished" :datetime="post.createdAt" :locale="head.htmlAttrs.lang" date-style="long" />
           <time property="dateModified" :datetime="new Date(post.updatedAt).toISOString()" />
@@ -69,7 +68,7 @@ useSeoSlug({
             </li>
           </ul>
         </div>
-      </div>
+      </header>
 
       <AppPicture
         :path
@@ -78,9 +77,9 @@ useSeoSlug({
         class="banner"
       />
 
-      <div class="container row row-no-gap">
+      <section class="container row row-no-gap">
         <ContentRenderer :value="post" class="col col--2-12 col--3-11 content" />
-      </div>
+      </section>
 
       <LazyPostShare :title="post.title" :path="baseUrl(path)" />
     </article>
