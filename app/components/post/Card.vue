@@ -12,21 +12,21 @@ const { localeBaseUrl } = useUrl()
 
 <template>
   <NuxtLink :to="post.path" class="card" vocab="https://schema.org/" typeof="Article">
+    <meta property="articleSection" :content="t('navigation.menu[4].label')">
+    <meta property="dateCreated datePublished" :content="new Date(post.createdAt).toISOString()">
+    <meta property="dateModified" :content="new Date(post.updatedAt).toISOString()">
     <span property="publisher" typeof="Organization">
       <meta property="name" :content="t('site.name')">
-      <meta property="url" :content="localeBaseUrl">
+      <link property="url" :href="localeBaseUrl">
     </span>
     <span v-if="post.author && post.author.name && post.author.url" property="author" typeof="Person">
       <meta property="name" :content="post.author.name">
-      <meta property="url" :content="post.author.url">
+      <link property="url" :href="post.author.url">
     </span>
     <span v-else property="author" typeof="Organization">
       <meta property="name" :content="t('site.name')">
-      <meta property="url" :content="localeBaseUrl">
+      <link property="url" :href="localeBaseUrl">
     </span>
-    <time property="dateCreated datePublished" :datetime="new Date(post.createdAt).toISOString()" />
-    <time property="dateModified" :datetime="new Date(post.updatedAt).toISOString()" />
-    <meta property="articleSection" :content="t('navigation.menu[4].label')">
 
     <AppPicture :path="post.path" />
 
