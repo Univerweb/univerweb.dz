@@ -2,4 +2,5 @@ uid: cms
 name: CMS Development
 icon:
   - IconDrupal
-  - IconBootstrap
+  - IconPhp
+  - IconMariadb
