@@ -15,6 +15,8 @@ const props = withDefaults(defineProps<Props>(), {
 
 const { path } = useRoute()
 const { locale, t } = useI18n()
+const { baseUrl } = useUrl()
+const localePath = useLocalePath()
 
 const { data: works } = await useAsyncData(`works${path}`, () => {
   return queryCollection(`work_${locale.value}`)
@@ -27,8 +29,11 @@ const { data: works } = await useAsyncData(`works${path}`, () => {
 
 <template>
   <section id="realisations" class="container" vocab="https://schema.org/" typeof="CollectionPage">
+    <meta property="name" :content="t('navigation.menu[0].label')">
+    <link property="url" :href="baseUrl(localePath('realisations'))">
+
     <div class="intro intro-justify">
-      <Component :is="headlineTag" class="h1" property="headline">
+      <Component :is="headlineTag" class="h1">
         {{ t('realisations.headline') }}
       </Component>
     </div>
