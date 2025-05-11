@@ -31,7 +31,7 @@
         y2="58.4785"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#9013FE" />
+        <stop offset="0" stop-color="#9013FE" />
         <stop offset="1" stop-color="#6610F2" />
       </linearGradient>
       <linearGradient
@@ -42,7 +42,7 @@
         y2="46.1923"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="white" />
+        <stop offset="0" stop-color="white" />
         <stop offset="1" stop-color="#F1E5FC" />
       </linearGradient>
     </defs>
