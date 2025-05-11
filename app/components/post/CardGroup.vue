@@ -15,6 +15,8 @@ const props = withDefaults(defineProps<Props>(), {
 
 const { path } = useRoute()
 const { locale, t } = useI18n()
+const { baseUrl } = useUrl()
+const localePath = useLocalePath()
 
 const { data: posts } = await useAsyncData(`posts${path}`, () => {
   return queryCollection(`post_${locale.value}`)
@@ -26,7 +28,10 @@ const { data: posts } = await useAsyncData(`posts${path}`, () => {
 </script>
 
 <template>
-  <section id="blog" class="container">
+  <section id="blog" class="container" vocab="https://schema.org/" typeof="CollectionPage">
+    <meta property="name" :content="t('navigation.menu[4].label')">
+    <link property="url" :href="baseUrl(localePath('blog'))">
+
     <div class="intro intro-justify">
       <Component :is="headlineTag" class="h1">
         {{ t('blog.headline') }}

@@ -46,6 +46,10 @@ useSeoSlug({
           <meta property="name" :content="t('site.name')">
           <link property="url" :href="localeBaseUrl">
         </span>
+        <span property="isPartOf" typeof="CollectionPage">
+          <meta property="name" :content="t('navigation.menu[4].label')">
+          <link property="url" :href="baseUrl(localePath('blog'))">
+        </span>
 
         <AppBack path="blog" :label="t('navigation.menu[4].label')" />
         <h1 id="title" property="headline">

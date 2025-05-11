@@ -7,11 +7,12 @@ defineProps<{
 }>()
 
 const { t } = useI18n()
-const { localeBaseUrl } = useUrl()
+const { localeBaseUrl, baseUrl } = useUrl()
+const localePath = useLocalePath()
 </script>
 
 <template>
-  <NuxtLink :to="post.path" class="card" vocab="https://schema.org/" typeof="Article">
+  <NuxtLink :to="post.path" class="card" vocab="https://schema.org/" typeof="Article" property="hasPart">
     <meta property="articleSection" :content="t('navigation.menu[4].label')">
     <meta property="dateCreated datePublished" :content="new Date(post.createdAt).toISOString()">
     <meta property="dateModified" :content="new Date(post.updatedAt).toISOString()">
@@ -26,6 +27,10 @@ const { localeBaseUrl } = useUrl()
     <span v-else property="author" typeof="Organization">
       <meta property="name" :content="t('site.name')">
       <link property="url" :href="localeBaseUrl">
+    </span>
+    <span property="isPartOf" typeof="CollectionPage">
+      <meta property="name" :content="t('navigation.menu[4].label')">
+      <link property="url" :href="baseUrl(localePath('blog'))">
     </span>
 
     <AppPicture :path="post.path" />
