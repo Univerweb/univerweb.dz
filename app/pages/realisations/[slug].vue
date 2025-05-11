@@ -1,8 +1,8 @@
 <script setup lang="ts">
-const localePath = useLocalePath()
-const { locale, t, defaultLocale } = useI18n()
-const { baseUrl, localeBaseUrl } = useUrl()
 const { path } = useRoute()
+const { locale, defaultLocale, t } = useI18n()
+const localePath = useLocalePath()
+const { localeBaseUrl, baseUrl } = useUrl()
 
 const { data: work } = await useAsyncData(`work${path}`, () => {
   return queryCollection(`work_${locale.value}`)
@@ -62,6 +62,9 @@ useSeoSlug({
         <span property="isPartOf" typeof="CollectionPage">
           <meta property="name" :content="t('navigation.menu[0].label')">
           <link property="url" :href="baseUrl(localePath('realisations'))">
+        </span>
+        <span property="mainEntityOfPage" typeof="WebPage">
+          <link property="url" :href="baseUrl(path)">
         </span>
 
         <AppBack path="realisations" :label="t('navigation.menu[0].label')" />

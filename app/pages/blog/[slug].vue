@@ -1,8 +1,8 @@
 <script setup lang="ts">
-const localePath = useLocalePath()
-const { locale, t } = useI18n()
-const { baseUrl, localeBaseUrl } = useUrl()
 const { path } = useRoute()
+const { locale, t } = useI18n()
+const localePath = useLocalePath()
+const { localeBaseUrl, baseUrl } = useUrl()
 const head = useLocaleHead()
 
 const { data: post } = await useAsyncData(`post${path}`, () => {
@@ -39,9 +39,6 @@ useSeoSlug({
         <meta property="description" :content="post.description">
         <meta property="articleSection" :content="t('navigation.menu[4].label')">
         <meta property="dateModified" :content="new Date(post.updatedAt).toISOString()">
-        <span property="mainEntityOfPage" typeof="WebPage">
-          <link property="url" :href="baseUrl(path)">
-        </span>
         <span property="publisher" typeof="Organization">
           <meta property="name" :content="t('site.name')">
           <link property="url" :href="localeBaseUrl">
@@ -49,6 +46,9 @@ useSeoSlug({
         <span property="isPartOf" typeof="CollectionPage">
           <meta property="name" :content="t('navigation.menu[4].label')">
           <link property="url" :href="baseUrl(localePath('blog'))">
+        </span>
+        <span property="mainEntityOfPage" typeof="WebPage">
+          <link property="url" :href="baseUrl(path)">
         </span>
 
         <AppBack path="blog" :label="t('navigation.menu[4].label')" />

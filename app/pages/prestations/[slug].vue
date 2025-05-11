@@ -1,7 +1,8 @@
 <script setup lang="ts">
-const localePath = useLocalePath()
-const { locale, t } = useI18n()
 const { path } = useRoute()
+const { locale, t } = useI18n()
+const localePath = useLocalePath()
+const { baseUrl } = useUrl()
 
 const { data: presta } = await useAsyncData(`presta${path}`, () => {
   return queryCollection(`presta_${locale.value}`)
@@ -75,6 +76,10 @@ useSeoSlug({
   <main v-if="presta" class="presta">
     <article vocab="https://schema.org/" typeof="Service" aria-labelledby="title">
       <header class="container intro">
+        <span property="mainEntityOfPage" typeof="WebPage">
+          <link property="url" :href="baseUrl(path)">
+        </span>
+
         <AppBack :path="localePath('prestations')" :label="t('navigation.menu[1].label')" />
         <h1 id="title" property="name serviceType">
           {{ presta.title }}
