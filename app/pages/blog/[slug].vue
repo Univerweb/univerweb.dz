@@ -43,7 +43,7 @@ useSeoSlug({
           <link property="url" :href="baseUrl(path)">
         </span>
         <span property="publisher" typeof="Organization">
-          <span property="name" :content="t('site.name')" />
+          <meta property="name" :content="t('site.name')">
           <link property="url" :href="localeBaseUrl">
         </span>
 
