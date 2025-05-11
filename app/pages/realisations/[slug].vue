@@ -52,20 +52,22 @@ useSeoSlug({
   <main v-if="work" class="work">
     <article vocab="https://schema.org/" typeof="CreativeWork" aria-labelledby="name">
       <header class="container intro">
+        <meta property="description" :content="work.description">
+        <meta property="dateCreated datePublished" :content="new Date(work.createdAt).toISOString()">
+        <meta property="dateModified" :content="new Date(work.updatedAt).toISOString()">
+        <span property="author publisher" typeof="Organization">
+          <meta property="name" :content="t('site.name')">
+          <link property="url" :href="localeBaseUrl">
+        </span>
+        <span property="isPartOf" typeof="CollectionPage">
+          <meta property="name" :content="t('navigation.menu[0].label')">
+          <link property="url" :href="baseUrl(localePath('realisations'))">
+        </span>
+
         <AppBack path="realisations" :label="t('navigation.menu[0].label')" />
         <h1 id="name" property="name">
           {{ work.title }}
         </h1>
-        <span property="description" :content="work.description" />
-        <span :id="baseUrl(localePath('realisations'))" property="isPartOf" typeof="WebPage">
-          <span property="name" :content="t('navigation.menu[0].label')" />
-        </span>
-        <span property="author publisher" typeof="Organization">
-          <span property="name" :content="t('site.name')" />
-          <span property="url" :content="localeBaseUrl" />
-        </span>
-        <time property="dateCreated datePublished" :datetime="new Date(work.createdAt).toISOString()" />
-        <time property="dateModified" :datetime="new Date(work.updatedAt).toISOString()" />
       </header>
 
       <AppPicture

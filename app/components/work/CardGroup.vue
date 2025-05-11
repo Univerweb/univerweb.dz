@@ -26,9 +26,9 @@ const { data: works } = await useAsyncData(`works${path}`, () => {
 </script>
 
 <template>
-  <section id="realisations" class="container">
+  <section id="realisations" class="container" vocab="https://schema.org/" typeof="CollectionPage">
     <div class="intro intro-justify">
-      <Component :is="headlineTag" class="h1">
+      <Component :is="headlineTag" class="h1" property="headline">
         {{ t('realisations.headline') }}
       </Component>
     </div>
