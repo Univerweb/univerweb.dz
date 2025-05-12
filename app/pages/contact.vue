@@ -25,9 +25,9 @@ useSeoPage('contact')
 
 <template>
   <main class="contact">
-    <div class="container row">
+    <section class="container row" aria-labelledby="title">
       <div class="col col--1-6">
-        <h1 class="h2">
+        <h1 id="title" class="h2">
           {{ t('contact.title') }}
         </h1>
         <p class="lead">
@@ -37,7 +37,7 @@ useSeoPage('contact')
           {{ config.public.baseEmail }}
         </a>
       </div>
-    </div>
+    </section>
 
     <GoogleMap
       id="map"
@@ -55,8 +55,8 @@ useSeoPage('contact')
       </CustomMarker>
     </GoogleMap>
 
-    <div class="container request">
-      <div class="intro">
+    <section class="container request" aria-labelledby="other">
+      <div id="other" class="intro">
         <h2>{{ t('contact.other') }}</h2>
       </div>
       <div class="row items-2">
@@ -77,6 +77,6 @@ useSeoPage('contact')
           </a>
         </div>
       </div>
-    </div>
+    </section>
   </main>
 </template>
