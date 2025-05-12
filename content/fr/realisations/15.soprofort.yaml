@@ -1,10 +1,11 @@
+seo:
+  description: Découvrez soprofort.dz, un site e-catalogue conçu et développé par Univerweb.
 title: Soprofort
-description: Découvrez soprofort.dz, un site e-catalogue conçu et développé par Univerweb.
+description: Soprofort est une société de promotion immobilière créée en 2004. Conjuguant depuis compétence et savoir-faire, Elle réalise en collaboration avec l’entreprise de réalisation Eridj des projets immobiliers de grande qualité.
 createdAt: 2020-12-20
 updatedAt: 2025-05-08
+category: E-catalogue
 tags:
   - identity
   - webdesign
   - cms
-category: E-catalogue
-lead: Soprofort est une société de promotion immobilière créée en 2004. Conjuguant depuis compétence et savoir-faire, Elle réalise en collaboration avec l’entreprise de réalisation Eridj des projets immobiliers de grande qualité.

@@ -1,11 +1,12 @@
+seo:
+  description: Discover cinquelec.com, an e-catalog website designed, developed, and hosted by Univerweb.
 title: Cinquelec
-description: Discover cinquelec.com, an e-catalog website designed, developed, and hosted by Univerweb.
+description: Founded in 1994, Cinquelec is a company specializing in the import and distribution of electrical equipment for the building and industry, industrial, tertiary and public lighting, VDI networks, technical alarms, assembly of cabinets and boxes.
 createdAt: 2020-12-20
 updatedAt: 2025-05-08
+category: E-catalogue
 tags:
   - webdesign
   - cms
   - hosting
-category: E-catalogue
-lead: Founded in 1994, Cinquelec is a company specializing in the import and distribution of electrical equipment for the building and industry, industrial, tertiary and public lighting, VDI networks, technical alarms, assembly of cabinets and boxes.
 link: https://www.cinquelec.com

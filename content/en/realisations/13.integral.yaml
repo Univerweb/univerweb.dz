@@ -1,10 +1,11 @@
+seo:
+  description: Discover integral.sarl, an e-catalog website designed & developed by Univerweb.
 title: Integral
-description: Discover integral.sarl, an e-catalog website designed & developed by Univerweb.
+description: Integral distributes equipment for public works, it supplies its customers with machines and spare parts manufactured by the main European and American manufacturers.
 createdAt: 2020-12-20
 updatedAt: 2025-05-08
+category: E-catalogue
 tags:
   - webdesign
   - cms
-category: E-catalogue
-lead: Integral distributes equipment for public works, it supplies its customers with machines and spare parts manufactured by the main European and American manufacturers.
 link: https://www.integral.sarl

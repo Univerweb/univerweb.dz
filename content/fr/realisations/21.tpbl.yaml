@@ -1,12 +1,13 @@
+seo:
+  description: Découvrez tpbl.dz, un site e-catalogue conçu, développé et hébergé par Univerweb.
 title: TPBL
-description: Découvrez tpbl.dz, un site e-catalogue conçu, développé et hébergé par Univerweb.
+description: Fondée en 2016 et basée à Skikda, TPBL est une entreprise spécialisée dans la promotion immobilière. Elle se distingue par son expertise et son engagement à offrir des projets immobiliers de qualité, répondant aux besoins variés de ses clients.
 createdAt: 2020-12-20
 updatedAt: 2025-05-08
+category: E-catalogue
 tags:
   - logo
   - webdesign
   - cms
   - hosting
-category: E-catalogue
-lead: Fondée en 2016 et basée à Skikda, TPBL est une entreprise spécialisée dans la promotion immobilière. Elle se distingue par son expertise et son engagement à offrir des projets immobiliers de qualité, répondant aux besoins variés de ses clients.
 link: https://www.tpbl.dz

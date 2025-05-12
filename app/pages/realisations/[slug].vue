@@ -6,7 +6,7 @@ const { localeBaseUrl, baseUrl } = useUrl()
 
 const { data: work } = await useAsyncData(`work${path}`, () => {
   return queryCollection(`work_${locale.value}`)
-    .select('path', 'title', 'description', 'createdAt', 'updatedAt', 'category', 'tags', 'lead', 'link')
+    .select('path', 'seo', 'title', 'description', 'createdAt', 'updatedAt', 'category', 'tags', 'link')
     .path(computed(() => localePath(path)).value)
     .first()
 }, { watch: [locale] })
@@ -28,7 +28,7 @@ const { data: tags } = await useAsyncData(`tags${path}`, () => {
 
 const { data: workRelated } = await useAsyncData(`work-related${path}`, () => {
   return queryCollection(`work_${locale.value}`)
-    .select('path', 'stem', 'title', 'description', 'createdAt', 'updatedAt', 'category', 'tags', 'lead')
+    .select('path', 'stem', 'seo', 'title', 'description', 'createdAt', 'updatedAt', 'category', 'tags')
     .andWhere(query => query
       .where('path', '<>', path)
       .where('category', '=', work.value!.category))
@@ -42,7 +42,7 @@ const { data: workSurround } = await useAsyncData(`work-surround${path}`, () => 
 
 useSeoSlug({
   title: () => `${work.value!.title}${defaultLocale ? ' :' : ':'} ${work.value!.category} | ${t('navigation.menu[0].label')}`,
-  description: () => work.value!.description,
+  description: () => `${work.value!.seo.description}`,
   category: 'realisations',
   currentPageTitle: () => work.value!.title,
 })
@@ -52,7 +52,7 @@ useSeoSlug({
   <main v-if="work" class="work">
     <article vocab="https://schema.org/" typeof="CreativeWork" aria-labelledby="name">
       <header class="container intro">
-        <meta property="description" :content="work.description">
+        <meta property="description" :content="work.seo.description">
         <meta property="dateCreated datePublished" :content="new Date(work.createdAt).toISOString()">
         <meta property="dateModified" :content="new Date(work.updatedAt).toISOString()">
         <span property="author publisher" typeof="Organization">
@@ -132,7 +132,7 @@ useSeoSlug({
               {{ t('realisations.about') }} {{ work.title }}
             </h2>
             <p property="about" class="lead">
-              {{ work.lead }}
+              {{ work.description }}
             </p>
             <a v-if="work.link" :href="work.link" class="link">
               {{ t('realisations.visit') }}

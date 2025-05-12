@@ -1,9 +1,10 @@
+seo:
+  description: Découvrez pibo.dz, un site e-catalogue conçu et développé par Univerweb.
 title: Pibo
-description: Découvrez pibo.dz, un site e-catalogue conçu et développé par Univerweb.
+description: Pibo est une entreprise de promotion immobilière créée en 2014 par le cofondateur et gérant de la Soprofort, qui a acquis depuis une décennie une expérience un savoir-faire important dans le domaine de la promotion immobilière.
 createdAt: 2020-12-20
 updatedAt: 2025-05-08
+category: E-catalogue
 tags:
   - webdesign
   - cms
-category: E-catalogue
-lead: Pibo est une entreprise de promotion immobilière créée en 2014 par le cofondateur et gérant de la Soprofort, qui a acquis depuis une décennie une expérience un savoir-faire important dans le domaine de la promotion immobilière.

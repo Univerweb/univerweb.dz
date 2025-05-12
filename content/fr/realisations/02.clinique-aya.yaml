@@ -1,9 +1,10 @@
+seo:
+  description: Découvrez cliniqueaya.dz, un site web vitrine conçu et développé par Univerweb.
 title: Clinique Aya
-description: Découvrez cliniqueaya.dz, un site web vitrine conçu et développé par Univerweb.
+description: Ouverte en 2010, La Clinique Aya est un établissement hospitalier privé ayant pour objectif principal de fournir aux patients des soins de qualité. Elle regroupe plus de 35 médecins spécialistes et une équipe de 60 personnes.
 createdAt: 2020-12-20
 updatedAt: 2025-05-08
+category: Site vitrine
 tags:
   - webdesign
   - integration
-category: Site vitrine
-lead: Ouverte en 2010, La Clinique Aya est un établissement hospitalier privé ayant pour objectif principal de fournir aux patients des soins de qualité. Elle regroupe plus de 35 médecins spécialistes et une équipe de 60 personnes.

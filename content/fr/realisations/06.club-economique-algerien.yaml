@@ -1,10 +1,11 @@
+seo:
+  description: Découvrez cea.dz, un site web institutionnel conçu et développé par Univerweb.
 title: Club Économique Algérien
-description: Découvrez cea.dz, un site web institutionnel conçu et développé par Univerweb.
+description: Le Club Économique Algérien est une organisation à but non lucratif agréée depuis 2004. Il vise à créer un espace de consultation, à favoriser l’échange d’expériences et à présenter des propositions, des visions et des alternatives économiques.
 createdAt: 2023-11-27
 updatedAt: 2025-05-08
+category: Site institutionnel
 tags:
   - logo
   - webdesign
   - cms
-category: Site institutionnel
-lead: Le Club Économique Algérien est une organisation à but non lucratif agréée depuis 2004. Il vise à créer un espace de consultation, à favoriser l’échange d’expériences et à présenter des propositions, des visions et des alternatives économiques.

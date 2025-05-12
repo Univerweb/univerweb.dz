@@ -4,7 +4,6 @@ const commonSchema = z.object({
   createdAt: z.date(),
   updatedAt: z.date(),
   tags: z.array(z.string()),
-  lead: z.string(),
 })
 
 const work = commonSchema.extend({

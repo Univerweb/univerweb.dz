@@ -1,11 +1,12 @@
+seo:
+  description: Discover infoelec.dz, a news website designed, developed, and hosted by Univerweb.
 title: infoElec
-description: Discover infoelec.dz, a news website designed, developed, and hosted by Univerweb.
+description: infoElec is the first Algerian magazine dedicated to the electrical and energy sector. Designed to meet the needs of architects, design offices, electricians, and construction companies. The magazine informs about products, standards, new technologies, and news related to electricity and energy.
 createdAt: 2020-12-20
 updatedAt: 2025-05-08
+category: News Website
 tags:
   - webdesign
   - cms
   - hosting
-category: News Website
-lead: infoElec is the first Algerian magazine dedicated to the electrical and energy sector. Designed to meet the needs of architects, design offices, electricians, and construction companies. The magazine informs about products, standards, new technologies, and news related to electricity and energy.
 link: https://www.infoelec.dz

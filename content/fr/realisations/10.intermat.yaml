@@ -1,11 +1,12 @@
+seo:
+  description: Découvrez intermatalgeria.com, un site e-catalogue conçu et développé par Univerweb.
 title: Intermat
-description: Découvrez intermatalgeria.com, un site e-catalogue conçu et développé par Univerweb.
+description: Intermat est un acteur majeur dans le domaine des engins et matériels pour le bâtiment et les travaux publics. Avec une expertise reconnue et une large gamme de produits de qualité.
 createdAt: 2020-12-20
 updatedAt: 2025-05-08
+category: E-catalogue
 tags:
   - logo
   - webdesign
   - cms
-category: E-catalogue
-lead: Intermat est un acteur majeur dans le domaine des engins et matériels pour le bâtiment et les travaux publics. Avec une expertise reconnue et une large gamme de produits de qualité.
 link: https://www.intermatalgeria.com

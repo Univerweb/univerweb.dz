@@ -1,10 +1,11 @@
+seo:
+  description: Découvrez corim.dz, un site web d’annonces conçu et développé par Univerweb.
 title: Corim
-description: Découvrez corim.dz, un site web d’annonces conçu et développé par Univerweb.
+description: Corim est une agence immobilière installée à Alger et spécialisée dans la location et la vente d’appartements, de villa, d’immeubles, de terrains, de locaux et de hangars.
 createdAt: 2020-12-20
 updatedAt: 2025-05-08
+category: Site d’annonces
 tags:
   - logo
   - webdesign
   - cms
-category: Site d’annonces
-lead: Corim est une agence immobilière installée à Alger et spécialisée dans la location et la vente d’appartements, de villa, d’immeubles, de terrains, de locaux et de hangars.
