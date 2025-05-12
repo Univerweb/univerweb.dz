@@ -2,7 +2,7 @@
 import type { Collections } from '@nuxt/content'
 
 defineProps<{
-  presta: Pick<Collections['presta_fr' | 'presta_en' | 'presta_ar'], 'path' | 'title' | 'cta' | 'lead'>
+  presta: Pick<Collections['presta_fr' | 'presta_en' | 'presta_ar'], 'path' | 'title' | 'description' | 'cta'>
   titleTag: string
 }>()
 </script>
@@ -16,7 +16,7 @@ defineProps<{
     </Component>
 
     <p class="lead" property="description">
-      {{ presta.lead }}
+      {{ presta.description }}
     </p>
 
     <AppMore :path="presta.path" :label="presta.cta" />

@@ -6,7 +6,7 @@ const { baseUrl } = useUrl()
 
 const { data: presta } = await useAsyncData(`presta${path}`, () => {
   return queryCollection(`presta_${locale.value}`)
-    .select('path', 'title', 'seo', 'lead', 'intro', 'solutions', 'features', 'process', 'faq')
+    .select('path', 'seo', 'title', 'description', 'intro', 'solutions', 'features', 'process', 'faq')
     .path(computed(() => localePath(path)).value)
     .first()
 }, { watch: [locale] })
@@ -21,7 +21,7 @@ if (!presta.value) {
 
 const { data: prestaOther } = await useAsyncData(`presta-other${path}`, () => {
   return queryCollection(`presta_${locale.value}`)
-    .select('path', 'title', 'cta', 'lead')
+    .select('path', 'title', 'description', 'cta')
     .where('path', '<>', path)
     .all()
 }, { watch: [locale] })
@@ -93,9 +93,9 @@ useSeoSlug({
         class="banner"
       />
 
-      <section class="container row" aria-labelledby="lead">
-        <h2 id="lead" class="col" property="description">
-          {{ presta.lead }}
+      <section class="container row" aria-labelledby="description">
+        <h2 id="description" class="col" property="description">
+          {{ presta.description }}
         </h2>
         <div class="col col--1-9 lead">
           <p v-for="(paragraph, index) in presta.intro" :key="index">
