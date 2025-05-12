@@ -9,15 +9,17 @@ useSeoPage('agence')
 
 <template>
   <main>
-    <div class="container intro">
-      <h1>{{ t('agence.headline') }}</h1>
+    <section class="container intro" aria-labelledby="headline">
+      <h1 id="headline">
+        {{ t('agence.headline') }}
+      </h1>
       <p class="lead">
         {{ t('agence.lead') }}
       </p>
-    </div>
+    </section>
 
-    <div class="container row">
-      <h2 class="col col--1-5">
+    <section class="container row" aria-labelledby="method">
+      <h2 id="method" class="col col--1-5">
         {{ t('agence.method.title') }}
       </h2>
       <ol class="col row items-5">
@@ -28,10 +30,10 @@ useSeoPage('agence')
           </p>
         </li>
       </ol>
-    </div>
+    </section>
 
-    <div class="container row">
-      <h2 class="col col--1-5">
+    <section class="container row" aria-labelledby="choose">
+      <h2 id="choose" class="col col--1-5">
         {{ t('agence.choose.title') }}
       </h2>
       <div class="col row items-2">
@@ -42,7 +44,7 @@ useSeoPage('agence')
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
     <LazyAppRequest />
   </main>
