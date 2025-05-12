@@ -53,12 +53,6 @@
       grid-column: 1 / 8;
     }
   }
-
-  &-end * {
-    @media (min-width: $md) {
-      grid-column: 7 / 12;
-    }
-  }
 }
 
 .row {
