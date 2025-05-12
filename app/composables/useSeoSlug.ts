@@ -17,7 +17,7 @@ export function useSeoSlug({ title, description, width = 2400, height = 1256, ca
 
   useSeoMeta({
     title,
-    description: description,
+    description,
     ogTitle: title,
     ogDescription: description,
     ogType: 'article',
