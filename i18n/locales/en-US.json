@@ -22,14 +22,8 @@
 
   "ariaLabels": {
     "langSwitch": "اختر اللغة العربية",
-    "theme": {
-      "light": "Switch to dark mode",
-      "dark": "Switch to light mode"
-    },
-    "menu": {
-      "open": "Open menu",
-      "close": "Close menu"
-    },
+    "theme": "Change theme",
+    "menu": "Open menu",
     "phone": "Telephone / fax",
     "mobile": "Mobile",
     "email": "E-mail",

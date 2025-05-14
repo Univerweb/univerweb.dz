@@ -33,8 +33,6 @@ const menu = computed(() => tm('navigation.menu') as { label: string, path: stri
         :to="switchLocalePath(langNext[0])"
         class="toggle-lang"
         :aria-label="t('ariaLabels.langSwitch')"
-        role="switch"
-        aria-checked="true"
         @click="langTooltip"
       >
         <IconLangSwitch />
@@ -47,8 +45,8 @@ const menu = computed(() => tm('navigation.menu') as { label: string, path: stri
         class="toggle-theme"
         type="button"
         role="switch"
-        :aria-label="t(`ariaLabels.theme.${theme}`)"
-        aria-checked="true"
+        :aria-label="t('ariaLabels.theme')"
+        :aria-checked="theme !== 'light'"
         @click="toggleTheme"
       >
         <Transition name="toggle-theme" mode="out-in">
@@ -60,9 +58,8 @@ const menu = computed(() => tm('navigation.menu') as { label: string, path: stri
       <button
         class="toggle-menu"
         type="button"
-        role="switch"
-        :aria-label="t(`ariaLabels.menu.${menuOpen ? 'close' : 'open'}`)"
-        aria-checked="true"
+        :aria-label="t('ariaLabels.menu')"
+        :aria-expanded="menuOpen"
         @click="toggleMenu"
       >
         <span class="top" />
