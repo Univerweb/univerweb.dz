@@ -17,16 +17,25 @@ export default function useMenu() {
   }
 
   function closeMenuOnResize() {
-    if (window.innerWidth > 767)
+    if (window.innerWidth > 767) {
       closeMenu()
+    }
+  }
+
+  function handleEscapeKey(event: KeyboardEvent) {
+    if (menuOpen.value && event.key === 'Escape') {
+      closeMenu()
+    }
   }
 
   onMounted(() => {
     window.addEventListener('resize', closeMenuOnResize)
+    window.addEventListener('keydown', handleEscapeKey)
   })
 
   onUnmounted(() => {
     window.removeEventListener('resize', closeMenuOnResize)
+    window.removeEventListener('keydown', handleEscapeKey)
   })
 
   return {
