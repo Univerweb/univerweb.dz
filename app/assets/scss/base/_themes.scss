@@ -1,39 +1,33 @@
 @use '../abstracts/variables' as *;
 
 :root {
+  color-scheme: light;
+
   --blue: #50c8f0;
   --night: #28285a;
-  --duration: 0.24s;
-  --transition: var(--duration) linear;
-  --animation: calc(var(--duration) * 2) forwards;
+  --background: #fff;
+  --background-secondary: #f9fafb;
+  --color: #111827;
+  --color-secondary: rgba(17 24 39 / 73%);
+  --font-family: 'Outfit', 'Outfit fallback';
+  --line-height: 1.1;
   --padding-x: 16px;
   --padding-y: 16px;
   --h-header: 72px;
+  --duration: 0.24s;
+  --transition: var(--duration) linear;
+  --animation: calc(var(--duration) * 2) forwards;
+  --origin: 0%;
+  --shadow: 0 0 0 / 10%;
 
-  &.theme-light {
-    --background: #fff;
-    --background-secondary: #f9fafb;
-    --color: #111827;
-    --color-secondary: rgba(17 24 39 / 73%);
-    --shadow: 0 0 0 / 10%;
+  &.dark {
+    color-scheme: dark;
 
-    color-scheme: light;
-  }
-
-  &.theme-dark {
     --background: #111827;
     --background-secondary: #1f2937;
     --color: #fff;
     --color-secondary: rgba(255 255 255 / 67%);
     --shadow: 255 255 255 / 10%;
-
-    color-scheme: dark;
-  }
-
-  &[dir='ltr'] {
-    --font-family: 'Outfit', 'Outfit fallback';
-    --line-height: 1.1;
-    --origin: 0%;
   }
 
   &[dir='rtl'] {
