@@ -22,8 +22,14 @@
 
   "ariaLabels": {
     "langSwitch": "Switch to English",
-    "theme": "Changer de thème",
-    "menu": "Ouvrir le menu",
+    "theme": {
+      "light": "Passer au mode sombre",
+      "dark": "Passer au mode clair"
+    },
+    "menu": {
+      "open": "Ouvrir le menu",
+      "close": "Fermer le menu"
+    },
     "phone": "Téléphone / fax",
     "mobile": "Mobile",
     "email": "E-mail",

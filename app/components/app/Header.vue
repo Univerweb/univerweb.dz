@@ -18,7 +18,7 @@ const menu = computed(() => tm('navigation.menu') as { label: string, path: stri
       <AppLogo />
     </NuxtLinkLocale>
 
-    <nav class="nav" :style="{ '--item-total': menu.length }">
+    <nav id="main-navigation" class="nav" :style="{ '--item-total': menu.length }">
       <ul class="menu">
         <li v-for="(link, index) in menu" :key="index">
           <NuxtLinkLocale :to="rt(link.path)" active-class="active" :style="{ '--item-number': index }" @click.enter="closeMenu()">
@@ -45,8 +45,9 @@ const menu = computed(() => tm('navigation.menu') as { label: string, path: stri
         class="toggle-theme"
         type="button"
         role="switch"
-        :aria-label="t('ariaLabels.theme')"
         :aria-checked="theme !== 'light'"
+        :aria-label="t(`ariaLabels.theme.${theme}`)"
+        aria-live="polite"
         @click="toggleTheme"
       >
         <Transition name="toggle-theme" mode="out-in">
@@ -58,8 +59,10 @@ const menu = computed(() => tm('navigation.menu') as { label: string, path: stri
       <button
         class="toggle-menu"
         type="button"
-        :aria-label="t('ariaLabels.menu')"
         :aria-expanded="menuOpen"
+        :aria-label="t(`ariaLabels.menu.${menuOpen ? 'close' : 'open'}`)"
+        aria-controls="main-navigation"
+        aria-live="polite"
         @click="toggleMenu"
       >
         <span class="top" />
