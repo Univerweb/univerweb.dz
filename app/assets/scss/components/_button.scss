@@ -37,6 +37,16 @@
   transition: background-color var(--transition), color var(--transition),
     font-weight var(--transition);
 
+  &.skip-link {
+    position: absolute;
+    inset-block-start: 13px;
+    inset-inline-start: 16px;
+    padding-inline: 20px;
+    transform: translateY(calc(-100% - 13px));
+    transition: background-color var(--transition), color var(--transition),
+      font-weight var(--transition), transform var(--transition);
+  }
+
   .more & {
     justify-self: end;
   }
@@ -55,6 +65,10 @@
   &:focus-visible {
     outline: 3px solid var(--blue);
     outline-offset: 5px;
+
+    &.skip-link {
+      transform: translateY(0);
+    }
   }
 
   svg {

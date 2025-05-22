@@ -26,21 +26,6 @@ header:has(nav) {
   }
 }
 
-.skip-link {
-  position: absolute;
-  inset-block-start: 4px;
-  inset-inline-start: 4px;
-  background-color: var(--blue);
-  color: var(--night);
-  padding: 4px 8px;
-  transform: translateY(calc(-100% - 8px));
-  transition: transform var(--transition);
-
-  &:focus {
-    transform: translateY(0);
-  }
-}
-
 .logo {
   display: grid;
   visibility: visible;
