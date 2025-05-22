@@ -15,7 +15,7 @@ const menu = computed(() => tm('navigation.menu') as Link[])
 </script>
 
 <template>
-  <header id="header" class="header">
+  <header id="header">
     <NuxtLinkLocale v-for="link in skipLink" :key="link.path" :to="rt(link.path)" class="skip-link">
       {{ rt(link.label) }}
     </NuxtLinkLocale>
