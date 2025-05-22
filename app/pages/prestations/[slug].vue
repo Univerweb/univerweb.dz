@@ -80,7 +80,7 @@ useSeoSlug({
           <link property="url" :href="baseUrl(path)">
         </span>
 
-        <AppBack :path="localePath('prestations')" :label="t('navigation.menu[1].label')" />
+        <AppBack path="prestations" :label="t('navigation.menu[1].label')" />
         <h1 id="title" property="name serviceType">
           {{ presta.title }}
         </h1>
