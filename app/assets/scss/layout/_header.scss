@@ -55,9 +55,20 @@
   .menu-closing & {
     transition-delay: var(--duration);
   }
+}
 
-  path {
+.univerweb-logo path {
+  &:first-child {
+    fill: var(--blue);
+  }
+
+  &:last-child {
+    fill: var(--night);
     transition: fill var(--transition);
+
+    .dark .header & {
+      fill: #fff;
+    }
   }
 }
 
