@@ -40,7 +40,11 @@
   },
 
   "actions": {
-    "skipToContent": "Aller au contenu principal",
+    "skipLink": [
+      { "path": "/#header", "label": "Aller à l’en-tête" },
+      { "path": "/#main", "label": "Aller au contenu principal" },
+      { "path": "/#footer", "label": "Aller au pied de page" }
+    ],
     "requestMeeting": {
       "headline": "Convaincu ? Prenons un café ensemble.",
       "text": "Contactez-nous"

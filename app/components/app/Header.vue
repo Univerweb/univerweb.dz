@@ -5,14 +5,20 @@ const { menuOpen, closeMenu, toggleMenu } = useMenu()
 const { theme, toggleTheme } = useTheme()
 const { langNext, isLangNext, langTooltip } = useTooltip()
 
-const menu = computed(() => tm('navigation.menu') as { label: string, path: string }[])
+interface Link {
+  path: string
+  label: string
+}
+
+const skipLink = computed(() => tm('actions.skipLink') as Link[])
+const menu = computed(() => tm('navigation.menu') as Link[])
 </script>
 
 <template>
-  <header class="header">
-    <NuxtLink to="#main" class="skip">
-      {{ t('actions.skipToContent') }}
-    </NuxtLink>
+  <header id="header" class="header">
+    <NuxtLinkLocale v-for="link in skipLink" :key="link.path" :to="rt(link.path)" class="skip-link">
+      {{ rt(link.label) }}
+    </NuxtLinkLocale>
 
     <NuxtLinkLocale to="/" class="logo" :aria-label="t('site.name')">
       <AppLogo />

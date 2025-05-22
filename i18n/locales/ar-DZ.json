@@ -40,7 +40,11 @@
   },
 
   "actions": {
-    "skipToContent": "انتقل إلى المحتوى الرئيسي",
+    "skipLink": [
+      { "path": "/#header", "label": "الانتقال إلى الرأس" },
+      { "path": "/#main", "label": "الانتقال إلى المحتوى الرئيسي" },
+      { "path": "/#footer", "label": "الانتقال إلى التذييل" }
+    ],
     "requestMeeting": {
       "headline": "مقتنع؟ لنشرب القهوة معًا.",
       "text": "اتصل بنا"

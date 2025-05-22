@@ -13,7 +13,7 @@ const socials = [
 </script>
 
 <template>
-  <footer>
+  <footer id="footer">
     <div>
       <address class="address" title="Adresse postale">
         <strong>{{ t('site.name') }}</strong><br>
