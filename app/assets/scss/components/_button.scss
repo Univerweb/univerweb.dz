@@ -45,14 +45,14 @@
     margin-top: 48px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     background-color: var(--blue);
     color: var(--night);
     font-weight: 600;
   }
 
   &:focus-visible {
-    background-color: var(--blue);
     outline: 3px solid var(--blue);
     outline-offset: 5px;
   }
