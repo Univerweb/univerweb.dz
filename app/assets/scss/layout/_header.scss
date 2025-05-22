@@ -176,6 +176,12 @@ header:has(nav) {
     transition: color var(--transition);
     width: 20px;
     height: 20px;
+    border-radius: 2rem;
+
+    &:focus-visible {
+      outline: 3px solid var(--blue);
+      outline-offset: 5px;
+    }
   }
 
   .toggle-lang,
