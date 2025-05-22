@@ -19,6 +19,11 @@
   overflow: hidden;
   border-radius: var(--padding-y);
 
+  &:focus-visible {
+    outline: 3px solid var(--blue);
+    outline-offset: 5px;
+  }
+
   img {
     aspect-ratio: 49 / 52;
     transition: scale var(--transition);
@@ -33,6 +38,10 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0 0 0 / 67%);
+  }
+
+  &:focus-visible .overlay {
+    background-color: var(--blue);
   }
 
   .inner {
