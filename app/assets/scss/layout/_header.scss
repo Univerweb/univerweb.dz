@@ -148,7 +148,7 @@ header:has(nav) {
       position: absolute;
       bottom: -2px;
       background-color: var(--blue);
-      width: 30%;
+      width: 100%;
       height: 4px;
       border-radius: 2rem;
       transform: scaleX(0);
@@ -158,6 +158,10 @@ header:has(nav) {
       @media (min-width: $md) {
         height: 3px;
       }
+    }
+
+    &:hover::after {
+      transform: scaleX(0.5);
     }
 
     &.active::after {
