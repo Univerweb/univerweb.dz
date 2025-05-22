@@ -66,7 +66,7 @@ header:has(nav) {
     fill: var(--night);
     transition: fill var(--transition);
 
-    .dark .header & {
+    .dark .logo & {
       fill: #fff;
     }
   }
