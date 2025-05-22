@@ -27,7 +27,7 @@ const menu = computed(() => tm('navigation.menu') as Link[])
     <nav id="main-navigation" class="nav" :style="{ '--item-total': menu.length }">
       <ul class="menu">
         <li v-for="(link, index) in menu" :key="index">
-          <NuxtLinkLocale :to="rt(link.path)" active-class="active" :style="{ '--item-number': index }" @click.enter="closeMenu()">
+          <NuxtLinkLocale :to="rt(link.path)" active-class="active" :class="{ active: $route.path.startsWith(`/${rt(link.path)}`) }" :style="{ '--item-number': index }" @click.enter="closeMenu()">
             {{ rt(link.label) }}
           </NuxtLinkLocale>
         </li>
