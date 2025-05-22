@@ -51,9 +51,10 @@
     font-weight: 600;
   }
 
-  &:focus {
-    outline: 2px solid var(--blue);
-    outline-offset: 3px;
+  &:focus-visible {
+    background-color: var(--blue);
+    outline: 3px solid var(--blue);
+    outline-offset: 5px;
   }
 
   svg {
@@ -70,7 +71,8 @@
     }
   }
 
-  &:hover svg {
+  &:hover svg,
+  &:focus-visible svg {
     color: var(--night);
     transform: translateX(5px);
 
