@@ -24,7 +24,7 @@ useSeoPage('contact')
 </script>
 
 <template>
-  <main class="contact">
+  <main>
     <section class="container row" aria-labelledby="title">
       <div class="col col--1-6">
         <h1 id="title" class="h2">
