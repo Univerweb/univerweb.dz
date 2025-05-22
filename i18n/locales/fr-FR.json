@@ -41,9 +41,9 @@
 
   "actions": {
     "skipLink": [
-      { "path": "/#header", "label": "Aller à l’en-tête" },
-      { "path": "/#main", "label": "Aller au contenu principal" },
-      { "path": "/#footer", "label": "Aller au pied de page" }
+      { "path": "header", "label": "Aller à l’en-tête" },
+      { "path": "main", "label": "Aller au contenu principal" },
+      { "path": "footer", "label": "Aller au pied de page" }
     ],
     "requestMeeting": {
       "headline": "Convaincu ? Prenons un café ensemble.",

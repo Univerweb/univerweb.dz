@@ -41,9 +41,9 @@
 
   "actions": {
     "skipLink": [
-      { "path": "/#header", "label": "Skip to header" },
-      { "path": "/#main", "label": "Skip to main content" },
-      { "path": "/#footer", "label": "Skip to footer" }
+      { "path": "header", "label": "Skip to header" },
+      { "path": "main", "label": "Skip to main content" },
+      { "path": "footer", "label": "Skip to footer" }
     ],
     "requestMeeting": {
       "headline": "Convinced? Let’s Have A Coffee Together.",
