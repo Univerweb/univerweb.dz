@@ -23,7 +23,7 @@ useHead(() => ({
   htmlAttrs: {
     lang: head.value.htmlAttrs!.lang,
     dir: head.value.htmlAttrs!.dir as 'ltr' | 'rtl',
-    class: { [`theme-${theme.value}`]: true, scrolled: y },
+    class: { [theme.value]: true, scrolled: y },
   },
 
   link: [
