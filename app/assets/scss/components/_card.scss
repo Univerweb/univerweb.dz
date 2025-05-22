@@ -73,12 +73,23 @@
   }
 
   .lead {
-    color: #fff;
-    opacity: 0.8;
     visibility: hidden;
 
     @media (min-width: $md) {
       visibility: visible;
+      color: #fff;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity var(--transition), transform var(--transition),
+        visibility var(--transition);
+    }
+  }
+
+  @media (min-width: $md) {
+    &:hover .lead,
+    &:focus-visible .lead {
+      opacity: 0.8;
+      transform: translateY(0);
     }
   }
 }
@@ -104,5 +115,23 @@
 
   p {
     margin-block-end: 0;
+  }
+}
+
+.card .lead {
+  visibility: hidden;
+}
+
+@media (min-width: $md) {
+  .card .lead {
+    visibility: visible;
+  }
+}
+
+@media (min-width: $md) {
+  .card:hover .lead,
+  .card:focus-visible .lead {
+    opacity: 0.8;
+    transform: translateY(0);
   }
 }
