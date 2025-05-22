@@ -16,12 +16,6 @@
   grid-auto-rows: 1fr auto;
   transition: min-height var(--transition);
   min-height: calc(100svh - var(--h-header));
-
-  a {
-    display: grid;
-    justify-self: center;
-    margin-bottom: 24px;
-  }
 }
 
 .error {

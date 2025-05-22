@@ -10,7 +10,7 @@ const { t } = useI18n()
         {{ t('home.lead') }}
       </p>
     </div>
-    <NuxtLinkLocale to="/#realisations" :aria-label="t('navigation.menu[0].label')">
+    <NuxtLinkLocale to="/#realisations" :aria-label="t('navigation.menu[0].label')" class="btn">
       <IconArrow />
     </NuxtLinkLocale>
   </section>

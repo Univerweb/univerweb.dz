@@ -47,6 +47,12 @@
       font-weight var(--transition), transform var(--transition);
   }
 
+  .hero & {
+    justify-self: center;
+    margin-bottom: 24px;
+    padding: 0 0 24px;
+  }
+
   .more & {
     justify-self: end;
   }
@@ -80,7 +86,7 @@
     height: 32px;
     transition: color var(--transition), transform var(--transition);
 
-    [dir='rtl'] & {
+    [dir='rtl'] section:has(.more) & {
       transform: rotate(180deg);
     }
   }
@@ -90,8 +96,16 @@
     color: var(--night);
     transform: translateX(5px);
 
+    .hero & {
+      transform: translateY(24px);
+    }
+
     [dir='rtl'] & {
       transform: translateX(-5px) rotate(180deg);
+    }
+
+    [dir='rtl'] .hero & {
+      transform: translateY(24px) rotate(0);
     }
   }
 }
