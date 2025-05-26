@@ -2,7 +2,7 @@
 const { t, tm, rt } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 const { menuOpen, closeMenu, toggleMenu } = useMenu()
-const { theme, toggleTheme } = useTheme()
+const mode = useColorMode({ disableTransition: false })
 const { langNext, isLangNext, langTooltip } = useTooltip()
 
 interface Link {
@@ -47,20 +47,22 @@ const menu = computed(() => tm('navigation.menu') as Link[])
         </span>
       </NuxtLink>
 
-      <button
-        class="toggle-theme"
-        type="button"
-        role="switch"
-        :aria-checked="theme !== 'light'"
-        :aria-label="t(`ariaLabels.theme.${theme}`)"
-        aria-live="polite"
-        @click="toggleTheme"
-      >
-        <Transition name="toggle-theme" mode="out-in">
-          <IconLightMode v-if="theme === 'light'" />
-          <IconDarkMode v-else />
-        </Transition>
-      </button>
+      <ClientOnly>
+        <button
+          class="toggle-theme"
+          type="button"
+          role="switch"
+          :aria-checked="mode === 'dark'"
+          :aria-label="t(`ariaLabels.theme.${mode}`)"
+          aria-live="polite"
+          @click="mode = mode === 'light' ? 'dark' : 'light'"
+        >
+          <Transition name="toggle-theme" mode="out-in">
+            <IconDarkMode v-if="mode === 'dark'" />
+            <IconLightMode v-else />
+          </Transition>
+        </button>
+      </ClientOnly>
 
       <button
         class="toggle-menu"

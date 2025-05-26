@@ -3,7 +3,6 @@ const { t } = useI18n()
 const { ogUrl, ogLocale, ogLocaleAlternate, ogImage, linkAltFr, linkAltEn, linkAltAr, localeBaseUrl, baseUrl } = useUrl()
 const head = useLocaleHead()
 const { y } = useWindowScroll()
-const { theme } = useTheme()
 const config = useRuntimeConfig()
 
 useSeoMeta({
@@ -23,7 +22,7 @@ useHead(() => ({
   htmlAttrs: {
     lang: head.value.htmlAttrs!.lang,
     dir: head.value.htmlAttrs!.dir as 'ltr' | 'rtl',
-    class: { [theme.value]: true, scrolled: y },
+    class: { scrolled: y },
   },
 
   link: [
