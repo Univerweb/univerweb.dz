@@ -3,7 +3,7 @@ interface SeoSlug {
   description: () => string
   width?: number
   height?: number
-  category: string
+  category: 'realisations' | 'prestations' | 'blog'
   currentPageTitle: () => string
 }
 
@@ -20,7 +20,6 @@ export function useSeoSlug({ title, description, width = 2400, height = 1256, ca
     description,
     ogTitle: title,
     ogDescription: description,
-    ogType: 'article',
     ogImage,
     twitterTitle: title,
     twitterDescription: description,
