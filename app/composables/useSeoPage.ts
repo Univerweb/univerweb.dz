@@ -1,5 +1,6 @@
 export function useSeoPage(page: string) {
   const { t } = useI18n()
+
   const title = () => t(`${page}.title`)
   const description = () => t(`${page}.description`)
   const { localeBaseUrl } = useUrl()
