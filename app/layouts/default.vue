@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { t } = useI18n()
+const mode = useColorMode({ disableTransition: false })
 const { ogUrl, ogLocale, ogLocaleAlternate, ogImage, linkAltFr, linkAltEn, linkAltAr, localeBaseUrl, baseUrl } = useUrl()
 const head = useLocaleHead()
 const { y } = useWindowScroll()
@@ -15,6 +16,7 @@ useSeoMeta({
   twitterCard: 'summary_large_image',
   twitterImage: ogImage,
   colorScheme: 'light dark',
+  themeColor: computed(() => mode.value === 'dark' ? '#111827' : '#fff'),
   appleMobileWebAppTitle: () => t('site.name'),
 })
 
