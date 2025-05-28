@@ -32,7 +32,7 @@
       content: attr(data-text);
       position: absolute;
       color: var(--color-secondary);
-      transition-property: color var(--transition);
+      transition: color var(--transition);
       inset-block-start: -24px;
       font-size: 0.8rem;
       line-height: 0.9375;
