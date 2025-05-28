@@ -8,11 +8,13 @@ const config = useRuntimeConfig()
 
 useSeoMeta({
   titleTemplate: () => `%s | ${t('site.name')}`,
+  ogSiteName: () => t('site.name'),
   ogType: 'website',
   ogUrl,
   ogLocale,
   ogLocaleAlternate,
   ogImage,
+  twitterSite: '@Univerweb',
   twitterCard: 'summary_large_image',
   twitterImage: ogImage,
   colorScheme: 'light dark',
