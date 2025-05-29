@@ -55,7 +55,7 @@ useSeoPage('contact')
       </CustomMarker>
     </GoogleMap>
 
-    <section class="container request" aria-labelledby="other">
+    <section class="container request other" aria-labelledby="other">
       <div id="other" class="intro">
         <h2>{{ t('contact.other') }}</h2>
       </div>

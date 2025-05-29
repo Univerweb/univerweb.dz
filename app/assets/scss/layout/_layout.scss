@@ -156,7 +156,7 @@
   background-color: var(--background-secondary);
   transition: background-color var(--transition);
 
-  main:not(.contact) & {
+  &:not(.other) {
     text-align: center;
   }
 
