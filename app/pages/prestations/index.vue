@@ -1,5 +1,5 @@
 <script setup lang="ts">
-useSeoPage('prestations')
+useSeo({ page: 'prestations' })
 </script>
 
 <template>

@@ -20,16 +20,16 @@ if (!post.value) {
   })
 }
 
+useSeo({
+  pageSlug: 'blog',
+  title: () => `${post.value!.title} | ${t('navigation.menu[4].label')}`,
+  ogTitle: () => post.value!.title,
+  description: () => post.value!.description,
+})
+
 const { data: postSurround } = await useAsyncData(`post-surround${path}`, () => {
   return queryCollectionItemSurroundings(`post_${locale.value}`, path)
 }, { watch: [locale] })
-
-useSeoSlug({
-  title: () => `${post.value!.title} | ${t('navigation.menu[4].label')}`,
-  description: () => post.value!.description,
-  category: 'blog',
-  currentPageTitle: () => post.value!.title,
-})
 </script>
 
 <template>

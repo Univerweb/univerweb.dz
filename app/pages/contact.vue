@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { GoogleMap, CustomMarker } from 'vue3-google-map'
 
+useSeo({ page: 'contact' })
+
 const { t } = useI18n()
 const config = useRuntimeConfig()
 
@@ -19,8 +21,6 @@ function zoom() {
     gmap.map?.setCenter(position)
   }
 }
-
-useSeoPage('contact')
 </script>
 
 <template>

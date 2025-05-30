@@ -10,10 +10,6 @@ const handleError = () => clearError({ redirect: localePath('/') })
 useSeoMeta({
   title: t(`errors.${props.error.statusCode}.title`),
   description: t(`errors.${props.error.statusCode}.headline`),
-  ogTitle: t(`errors.${props.error.statusCode}.title`),
-  ogDescription: t(`errors.${props.error.statusCode}.headline`),
-  twitterTitle: t(`errors.${props.error.statusCode}.title`),
-  twitterDescription: t(`errors.${props.error.statusCode}.headline`),
   robots: { noindex: true },
 })
 </script>

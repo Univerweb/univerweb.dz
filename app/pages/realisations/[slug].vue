@@ -19,6 +19,13 @@ if (!work.value) {
   })
 }
 
+useSeo({
+  pageSlug: 'realisations',
+  title: () => `${work.value!.title}${defaultLocale ? ' :' : ':'} ${work.value!.category} | ${t('navigation.menu[0].label')}`,
+  ogTitle: () => `${work.value!.title}${defaultLocale ? ' :' : ':'} ${work.value!.category}`,
+  description: () => `${work.value!.seo.description}`,
+})
+
 const { data: tags } = await useAsyncData(`tags${path}`, () => {
   return queryCollection(`tags_${locale.value}`)
     .select('name', 'icon')
@@ -39,13 +46,6 @@ const { data: workRelated } = await useAsyncData(`work-related${path}`, () => {
 const { data: workSurround } = await useAsyncData(`work-surround${path}`, () => {
   return queryCollectionItemSurroundings(`work_${locale.value}`, path)
 }, { watch: [locale] })
-
-useSeoSlug({
-  title: () => `${work.value!.title}${defaultLocale ? ' :' : ':'} ${work.value!.category} | ${t('navigation.menu[0].label')}`,
-  description: () => `${work.value!.seo.description}`,
-  category: 'realisations',
-  currentPageTitle: () => work.value!.title,
-})
 </script>
 
 <template>

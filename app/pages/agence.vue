@@ -1,10 +1,10 @@
 <script setup lang="ts">
+useSeo({ page: 'agence' })
+
 const { t, tm, rt } = useI18n()
 
 const method: Record<string, string> = tm('agence.method.content')
 const choose: Record<string, string> = tm('agence.choose.content')
-
-useSeoPage('agence')
 </script>
 
 <template>

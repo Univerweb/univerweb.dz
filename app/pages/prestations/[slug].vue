@@ -19,6 +19,15 @@ if (!presta.value) {
   })
 }
 
+useSeo({
+  pageSlug: 'prestations',
+  title: () => `${presta.value!.seo.title}`,
+  ogTitle: () => `${presta.value!.seo.title}`,
+  description: () => `${presta.value!.seo.description}`,
+  width: 2800,
+  height: 1575,
+})
+
 const { data: prestaOther } = await useAsyncData(`presta-other${path}`, () => {
   return queryCollection(`presta_${locale.value}`)
     .select('path', 'title', 'description', 'cta')
@@ -61,15 +70,6 @@ const leave = (el: Element) => {
     elHTMLElement.style.overflow = 'hidden'
   })
 }
-
-useSeoSlug({
-  title: () => `${presta.value!.seo.title}`,
-  description: () => `${presta.value!.seo.description}`,
-  width: 2800,
-  height: 1575,
-  category: 'prestations',
-  currentPageTitle: () => presta.value!.title,
-})
 </script>
 
 <template>
