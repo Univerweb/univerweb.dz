@@ -23,7 +23,12 @@ body {
   }
 }
 
-:where(h1, .h1) {
+h1,
+.h1,
+section h1,
+section .h1,
+article h1,
+article .h1 {
   @include font(44, 700, var(--line-height), -0.04, 0, 24);
 
   @media (min-width: $md) {
@@ -35,7 +40,8 @@ body {
   }
 }
 
-:where(h2, .h2) {
+h2,
+.h2 {
   @include font(32, 500, var(--line-height), -0.04, 0, 24);
 
   @media (min-width: $md) {
@@ -47,11 +53,13 @@ body {
   }
 }
 
-:where(h3, .h3) {
+h3,
+.h3 {
   @include font(20, 500, var(--line-height), -0.02, 0, 12);
 }
 
-:where(h6, .h6) {
+h6,
+.h6 {
   @include font(16, 500, 1.5, $mbe: 6);
 }
 
