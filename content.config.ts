@@ -10,6 +10,7 @@ const work = z.object({
 
 const presta = z.object({
   cta: z.string(),
+  alt: z.string(),
   intro: z.array(z.string()),
   solutions: z.object({
     title: z.string(),

@@ -6,7 +6,7 @@ const { baseUrl } = useUrl()
 
 const { data: presta } = await useAsyncData(`presta${path}`, () => {
   return queryCollection(`presta_${locale.value}`)
-    .select('path', 'seo', 'title', 'description', 'intro', 'solutions', 'features', 'process', 'faq')
+    .select('path', 'seo', 'title', 'description', 'alt', 'intro', 'solutions', 'features', 'process', 'faq')
     .path(computed(() => localePath(path)).value)
     .first()
 }, { watch: [locale] })
@@ -89,6 +89,7 @@ const leave = (el: Element) => {
       <AppPicture
         :path
         type="banner"
+        :alt="presta.alt"
         sizes="100vw xs:100vw sm:100vw md:100vw lg:100vw xl:1400px"
         class="banner"
       />
