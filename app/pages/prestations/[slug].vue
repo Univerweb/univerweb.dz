@@ -24,6 +24,7 @@ useSeo({
   title: () => `${presta.value!.seo.title}`,
   ogTitle: () => `${presta.value!.seo.title}`,
   description: () => `${presta.value!.seo.description}`,
+  ogImageAlt: () => presta.value!.alt,
   width: 2800,
   height: 1575,
 })

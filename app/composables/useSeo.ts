@@ -4,6 +4,7 @@ interface SeoOptions {
   title?: () => string
   ogTitle?: () => string
   description?: () => string
+  ogImageAlt?: () => string
   width?: number
   height?: number
 }
@@ -21,13 +22,7 @@ export function useSeo(options: SeoOptions) {
     return isRef(val) ? val.value : val
   }
 
-  const defaultOgImage = computed(() => baseUrl(`/images/univerweb${unrefString(locale) === 'ar' ? '-ar' : ''}.jpg`))
   const locales = { fr: 'fr_FR', en: 'en_US', ar: 'ar_DZ' }
-
-  let finalTitle: () => string = () => t('home.title')
-  let finalOgTitle: () => string = () => t('home.title')
-  let finalDescription: () => string = () => t('home.description')
-  let ogImage: ComputedRef<string | undefined> = defaultOgImage
 
   const ogSiteName = computed(() => t('site.name'))
   const ogUrl = computed(() => baseUrl(path))
@@ -38,6 +33,13 @@ export function useSeo(options: SeoOptions) {
   const linkAltFr = computed(() => baseUrl(localePath(path, 'fr')))
   const linkAltEn = computed(() => baseUrl(localePath(path, 'en')))
   const linkAltAr = computed(() => baseUrl(localePath(path, 'ar')))
+  const defaultOgImage = computed(() => baseUrl(`/images/univerweb${unrefString(locale) === 'ar' ? '-ar' : ''}.jpg`))
+
+  let finalTitle: () => string = () => t('home.title')
+  let finalOgTitle: () => string = () => t('home.title')
+  let finalDescription: () => string = () => t('home.description')
+  let ogImage: ComputedRef<string | undefined> = defaultOgImage
+  let finalOgImageAlt: (() => string) | undefined
 
   if (options.pageSlug) {
     if (!options.title || !options.ogTitle || !options.description) {
@@ -51,13 +53,18 @@ export function useSeo(options: SeoOptions) {
       finalTitle = options.title
       finalOgTitle = options.ogTitle
       finalDescription = options.description
+      finalOgImageAlt = options.ogImageAlt
     }
 
-    ogImage = computed(() => unrefString(img(
-      unrefString(localePath(`${path}_banner`, 'fr')),
-      { format: 'webp', width: options.width || ogImageWidth, height: options.height || ogImageHeight },
-      { provider: 'cloudinary' },
-    )))
+    ogImage = computed(() =>
+      unrefString(
+        img(
+          unrefString(localePath(`${path}_banner`, 'fr')),
+          { format: 'webp', width: options.width || ogImageWidth, height: options.height || ogImageHeight },
+          { provider: 'cloudinary' },
+        ),
+      ),
+    )
   }
 
   else if (options.page) {
@@ -65,6 +72,7 @@ export function useSeo(options: SeoOptions) {
     finalOgTitle = options.ogTitle || finalTitle
     finalDescription = options.description || (() => t(`${options.page}.description`))
     ogImage = defaultOgImage
+    finalOgImageAlt = () => t('site.logo')
   }
 
   else {
@@ -89,6 +97,7 @@ export function useSeo(options: SeoOptions) {
     ogLocaleAlternate,
     ogImage,
     ogImageSecureUrl: ogImage,
+    ogImageAlt: finalOgImageAlt,
     ogImageWidth: options.width || ogImageWidth,
     ogImageHeight: options.height || ogImageHeight,
     ogImageType: 'image/jpeg',
@@ -98,6 +107,7 @@ export function useSeo(options: SeoOptions) {
     twitterDescription: finalDescription,
     twitterCard: 'summary_large_image',
     twitterImage: ogImage,
+    twitterImageAlt: finalOgImageAlt,
     twitterImageWidth: options.width || ogImageWidth,
     twitterImageHeight: options.height || ogImageHeight,
     twitterImageType: 'image/jpeg',

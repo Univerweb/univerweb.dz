@@ -25,6 +25,7 @@ useSeo({
   title: () => `${post.value!.title} | ${t('navigation.menu[4].label')}`,
   ogTitle: () => post.value!.title,
   description: () => post.value!.description,
+  ogImageAlt: () => post.value!.alt,
 })
 
 const { data: postSurround } = await useAsyncData(`post-surround${path}`, () => {
