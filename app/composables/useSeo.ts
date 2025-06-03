@@ -88,7 +88,6 @@ export function useSeo(options: SeoOptions) {
     ogLocale,
     ogLocaleAlternate,
     ogImage,
-    ogImageUrl: ogImage,
     ogImageSecureUrl: ogImage,
     ogImageWidth: options.width || ogImageWidth,
     ogImageHeight: options.height || ogImageHeight,
