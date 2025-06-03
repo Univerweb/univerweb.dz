@@ -23,7 +23,7 @@ useSeo({
   pageSlug: 'realisations',
   title: () => `${work.value!.title}${defaultLocale ? ' :' : ':'} ${work.value!.category} | ${t('navigation.menu[0].label')}`,
   ogTitle: () => `${work.value!.title}${defaultLocale ? ' :' : ':'} ${work.value!.category}`,
-  description: () => `${work.value!.seo.description}`,
+  description: () => work.value!.seo.description!,
   ogImageAlt: () => t('realisations.alt.banner', { client: work.value!.title }),
 })
 
