@@ -7,7 +7,7 @@ const head = useLocaleHead()
 
 const { data: post } = await useAsyncData(`post${path}`, () => {
   return queryCollection(`post_${locale.value}`)
-    .select('path', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'author', 'body')
+    .select('path', 'title', 'description', 'alt', 'createdAt', 'updatedAt', 'tags', 'author', 'body')
     .path(computed(() => localePath(path)).value)
     .first()
 }, { watch: [locale] })
@@ -93,6 +93,7 @@ const { data: postSurround } = await useAsyncData(`post-surround${path}`, () => 
       <AppPicture
         :path
         type="banner"
+        :alt="post.alt"
         sizes="100vw xs:100vw sm:100vw md:100vw lg:100vw xl:1200px"
         class="banner"
       />

@@ -2,7 +2,7 @@
 import type { Collections } from '@nuxt/content'
 
 defineProps<{
-  post: Pick<Collections['post_fr' | 'post_en' | 'post_ar'], 'path' | 'title' | 'description' | 'createdAt' | 'updatedAt' | 'tags' | 'author'>
+  post: Pick<Collections['post_fr' | 'post_en' | 'post_ar'], 'path' | 'title' | 'description' | 'createdAt' | 'updatedAt' | 'alt' | 'tags' | 'author'>
   titleTag: string
 }>()
 
@@ -33,7 +33,7 @@ const localePath = useLocalePath()
       <link property="url" :href="baseUrl(localePath('blog'))">
     </span>
 
-    <AppPicture :path="post.path" />
+    <AppPicture :path="post.path" :alt="post.alt" />
 
     <div class="overlay" />
 

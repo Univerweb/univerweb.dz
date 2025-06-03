@@ -20,7 +20,7 @@ const localePath = useLocalePath()
 
 const { data: posts } = await useAsyncData(`posts${path}`, () => {
   return queryCollection(`post_${locale.value}`)
-    .select('path', 'stem', 'title', 'description', 'createdAt', 'updatedAt', 'tags', 'author')
+    .select('path', 'stem', 'title', 'description', 'createdAt', 'updatedAt', 'alt', 'tags', 'author')
     .order('stem', 'DESC')
     .limit(props.limit)
     .all()

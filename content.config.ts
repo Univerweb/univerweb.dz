@@ -42,6 +42,7 @@ const presta = z.object({
 const post = z.object({
   createdAt: z.date(),
   updatedAt: z.date(),
+  alt: z.string(),
   tags: z.array(z.string()),
   author: z.object({
     name: z.string(),
