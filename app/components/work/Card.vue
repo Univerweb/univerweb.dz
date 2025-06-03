@@ -25,7 +25,7 @@ const localePath = useLocalePath()
       <link property="url" :href="baseUrl(localePath('realisations'))">
     </span>
 
-    <AppPicture :picture="work" />
+    <AppPicture :picture="work" alt="" />
 
     <div class="overlay" />
 

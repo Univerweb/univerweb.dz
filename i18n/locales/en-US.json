@@ -73,7 +73,10 @@
     "technologies": "Technologies Used",
     "about": "About",
     "visit": "Visit Website",
-    "alt": "A website overview of",
+    "alt": {
+      "banner": "Website banner for {client}, notably showing its logo and navigation menu.",
+      "preview": "Full page screenshot of a page from {client}’s website, showing its structure and content."
+    },
     "related": "Other Similar & Tailor-Made Projects",
     "ariaLabels": {
       "nav": "Project Navigation"
