@@ -74,7 +74,7 @@ const { data: workSurround } = await useAsyncData(`work-surround${path}`, () => 
       </header>
 
       <AppPicture
-        :path
+        :picture="work"
         type="banner"
         :alt="`${t('realisations.alt')} ${work.title}`"
         sizes="342px xs:392px sm:735px md:975px lg:1183px xl:1280px"
@@ -140,7 +140,7 @@ const { data: workSurround } = await useAsyncData(`work-surround${path}`, () => 
           </section>
         </div>
         <AppPicture
-          :path
+          :picture="work"
           type="preview"
           :alt="`${t('realisations.alt')} ${work.title}`"
           sizes="304px xs:354px sm:697px md:921px lg:565px xl:730px"

@@ -33,7 +33,7 @@ const localePath = useLocalePath()
       <link property="url" :href="baseUrl(localePath('blog'))">
     </span>
 
-    <AppPicture :path="post.path" :alt="post.alt" />
+    <AppPicture :picture="post" />
 
     <div class="overlay" />
 

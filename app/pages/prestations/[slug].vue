@@ -87,9 +87,8 @@ const leave = (el: Element) => {
       </header>
 
       <AppPicture
-        :path
+        :picture="presta"
         type="banner"
-        :alt="presta.alt"
         sizes="100vw xs:100vw sm:100vw md:100vw lg:100vw xl:1400px"
         class="banner"
       />
