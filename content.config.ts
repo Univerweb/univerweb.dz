@@ -1,17 +1,14 @@
 import { defineCollection, defineContentConfig, z } from '@nuxt/content'
 
-const commonSchema = z.object({
+const work = z.object({
   createdAt: z.date(),
   updatedAt: z.date(),
-  tags: z.array(z.string()),
-})
-
-const work = commonSchema.extend({
   category: z.string(),
+  tags: z.array(z.string()),
   link: z.string().optional(),
 })
 
-const presta = commonSchema.extend({
+const presta = z.object({
   cta: z.string(),
   intro: z.array(z.string()),
   solutions: z.object({
@@ -41,7 +38,10 @@ const presta = commonSchema.extend({
   }),
 })
 
-const post = commonSchema.extend({
+const post = z.object({
+  createdAt: z.date(),
+  updatedAt: z.date(),
+  tags: z.array(z.string()),
   author: z.object({
     name: z.string(),
     url: z.string(),
