@@ -28,39 +28,41 @@ export function useSeo(options: SeoOptions) {
   const ogUrl = computed(() => baseUrl(path))
   const ogLocale = computed(() => locales[locale.value as keyof typeof locales] || 'fr_FR')
   const ogLocaleAlternate = computed(() => Object.values(locales).filter(localeCode => localeCode !== ogLocale.value))
-  const ogImageWidth = 2400
-  const ogImageHeight = 1256
+
   const linkAltFr = computed(() => baseUrl(localePath(path, 'fr')))
   const linkAltEn = computed(() => baseUrl(localePath(path, 'en')))
   const linkAltAr = computed(() => baseUrl(localePath(path, 'ar')))
-  const defaultOgImage = computed(() => baseUrl(`/images/univerweb${unrefString(locale) === 'ar' ? '-ar' : ''}.jpg`))
 
-  let finalTitle: () => string = () => t('home.title')
-  let finalDescription: () => string = () => t('home.description')
-  let finalOgTitle: () => string = () => t('home.title')
+  const defaultOgImage = computed(() => baseUrl(`/images/univerweb${unrefString(locale) === 'ar' ? '-ar' : ''}.jpg`))
+  const defaultOgImageWidth = 2400
+  const defaultOgImageHeight = 1256
+
+  let title: () => string = () => t('home.title')
+  let description: () => string = () => t('home.description')
+  let ogTitle: () => string = () => t('home.title')
   let ogImage: ComputedRef<string | undefined> = defaultOgImage
-  let finalOgImageAlt: (() => string) | undefined
+  let ogImageAlt: (() => string) | undefined
 
   if (options.pageSlug) {
     if (!options.title || !options.description || !options.ogTitle) {
       console.error(`useSeo: Pour la page slug '${options.pageSlug}', 'title', 'description' et 'ogTitle' doivent être fournis dans les options. Retour aux valeurs par défaut de la page d'accueil.`)
-      finalTitle = () => t('home.title')
-      finalDescription = () => t('home.description')
-      finalOgTitle = () => t('home.title')
+      title = () => t('home.title')
+      description = () => t('home.description')
+      ogTitle = () => t('home.title')
     }
 
     else {
-      finalTitle = options.title
-      finalDescription = options.description
-      finalOgTitle = options.ogTitle
-      finalOgImageAlt = options.ogImageAlt
+      title = options.title
+      description = options.description
+      ogTitle = options.ogTitle
+      ogImageAlt = options.ogImageAlt
     }
 
     ogImage = computed(() =>
       unrefString(
         img(
           unrefString(localePath(`${path}_banner`, 'fr')),
-          { format: 'webp', width: options.ogImageWidth || ogImageWidth, height: options.ogImageHeight || ogImageHeight },
+          { format: 'webp', width: options.ogImageWidth || defaultOgImageWidth, height: options.ogImageHeight || defaultOgImageHeight },
           { provider: 'cloudinary' },
         ),
       ),
@@ -68,48 +70,48 @@ export function useSeo(options: SeoOptions) {
   }
 
   else if (options.page) {
-    finalTitle = options.title || (() => t(`${options.page}.title`))
-    finalDescription = options.description || (() => t(`${options.page}.description`))
-    finalOgTitle = options.ogTitle || finalTitle
+    title = options.title || (() => t(`${options.page}.title`))
+    description = options.description || (() => t(`${options.page}.description`))
+    ogTitle = options.ogTitle || title
     ogImage = defaultOgImage
-    finalOgImageAlt = () => t('site.logo')
+    ogImageAlt = () => t('site.logo')
   }
 
   else {
     console.warn(`useSeo: Aucune option 'page' ou 'pageSlug' fournie. Utilisation des méta par défaut de la page d'accueil.`)
-    finalTitle = options.title || (() => t('home.title'))
-    finalDescription = options.description || (() => t('home.description'))
-    finalOgTitle = options.ogTitle || finalTitle
+    title = options.title || (() => t('home.title'))
+    description = options.description || (() => t('home.description'))
+    ogTitle = options.ogTitle || title
     ogImage = defaultOgImage
   }
 
   useSeoMeta({
     titleTemplate: computed(() => `%s | ${ogSiteName.value}`),
-    title: finalTitle,
-    description: finalDescription,
+    title,
+    description,
 
     ogSiteName,
     ogType: 'website',
-    ogTitle: finalOgTitle,
-    ogDescription: finalDescription,
+    ogTitle,
+    ogDescription: description,
     ogUrl,
     ogLocale,
     ogLocaleAlternate,
     ogImage,
     ogImageSecureUrl: ogImage,
-    ogImageAlt: finalOgImageAlt,
-    ogImageWidth: options.ogImageWidth || ogImageWidth,
-    ogImageHeight: options.ogImageHeight || ogImageHeight,
+    ogImageAlt,
+    ogImageWidth: options.ogImageWidth || defaultOgImageWidth,
+    ogImageHeight: options.ogImageHeight || defaultOgImageHeight,
     ogImageType: 'image/jpeg',
 
     twitterSite: '@Univerweb',
-    twitterTitle: finalOgTitle,
-    twitterDescription: finalDescription,
+    twitterTitle: ogTitle,
+    twitterDescription: description,
     twitterCard: 'summary_large_image',
     twitterImage: ogImage,
-    twitterImageAlt: finalOgImageAlt,
-    twitterImageWidth: options.ogImageWidth || ogImageWidth,
-    twitterImageHeight: options.ogImageHeight || ogImageHeight,
+    twitterImageAlt: ogImageAlt,
+    twitterImageWidth: options.ogImageWidth || defaultOgImageWidth,
+    twitterImageHeight: options.ogImageHeight || defaultOgImageHeight,
     twitterImageType: 'image/jpeg',
 
     colorScheme: 'light dark',
@@ -158,7 +160,7 @@ export function useSeo(options: SeoOptions) {
               {
                 '@type': 'ListItem',
                 'position': 3,
-                'name': finalOgTitle(),
+                'name': ogTitle(),
               },
             )
           }
@@ -168,7 +170,7 @@ export function useSeo(options: SeoOptions) {
               {
                 '@type': 'ListItem',
                 'position': 2,
-                'name': finalOgTitle(),
+                'name': ogTitle(),
               },
             )
           }
@@ -192,8 +194,8 @@ export function useSeo(options: SeoOptions) {
             'image': {
               '@type': 'ImageObject',
               'url': defaultOgImage.value,
-              'width': `${ogImageWidth}px`,
-              'height': `${ogImageHeight}px`,
+              'width': `${defaultOgImageWidth}px`,
+              'height': `${defaultOgImageHeight}px`,
             },
             'logo': {
               '@type': 'ImageObject',
