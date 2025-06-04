@@ -23,8 +23,8 @@ if (!post.value) {
 useSeo({
   pageSlug: 'blog',
   title: () => `${post.value!.title} | ${t('navigation.menu[4].label')}`,
-  ogTitle: () => post.value!.title,
   description: () => post.value!.description,
+  ogTitle: () => post.value!.title,
   ogImageAlt: () => post.value!.alt,
 })
 

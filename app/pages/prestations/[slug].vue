@@ -22,8 +22,8 @@ if (!presta.value) {
 useSeo({
   pageSlug: 'prestations',
   title: () => presta.value!.seo.title!,
-  ogTitle: () => presta.value!.seo.title!,
   description: () => presta.value!.seo.description!,
+  ogTitle: () => presta.value!.seo.title!,
   ogImageAlt: () => presta.value!.alt,
   width: 2800,
   height: 1575,
