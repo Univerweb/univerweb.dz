@@ -25,8 +25,8 @@ useSeo({
   description: () => presta.value!.seo.description!,
   ogTitle: () => presta.value!.seo.title!,
   ogImageAlt: () => presta.value!.alt,
-  width: 2800,
-  height: 1575,
+  ogImageWidth: 2800,
+  ogImageHeight: 1575,
 })
 
 const { data: prestaOther } = await useAsyncData(`presta-other${path}`, () => {

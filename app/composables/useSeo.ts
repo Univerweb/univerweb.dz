@@ -5,8 +5,8 @@ interface SeoOptions {
   ogTitle?: () => string
   description?: () => string
   ogImageAlt?: () => string
-  width?: number
-  height?: number
+  ogImageWidth?: number
+  ogImageHeight?: number
 }
 
 export function useSeo(options: SeoOptions) {
@@ -60,7 +60,7 @@ export function useSeo(options: SeoOptions) {
       unrefString(
         img(
           unrefString(localePath(`${path}_banner`, 'fr')),
-          { format: 'webp', width: options.width || ogImageWidth, height: options.height || ogImageHeight },
+          { format: 'webp', width: options.ogImageWidth || ogImageWidth, height: options.ogImageHeight || ogImageHeight },
           { provider: 'cloudinary' },
         ),
       ),
@@ -98,8 +98,8 @@ export function useSeo(options: SeoOptions) {
     ogImage,
     ogImageSecureUrl: ogImage,
     ogImageAlt: finalOgImageAlt,
-    ogImageWidth: options.width || ogImageWidth,
-    ogImageHeight: options.height || ogImageHeight,
+    ogImageWidth: options.ogImageWidth || ogImageWidth,
+    ogImageHeight: options.ogImageHeight || ogImageHeight,
     ogImageType: 'image/jpeg',
 
     twitterSite: '@Univerweb',
@@ -108,8 +108,8 @@ export function useSeo(options: SeoOptions) {
     twitterCard: 'summary_large_image',
     twitterImage: ogImage,
     twitterImageAlt: finalOgImageAlt,
-    twitterImageWidth: options.width || ogImageWidth,
-    twitterImageHeight: options.height || ogImageHeight,
+    twitterImageWidth: options.ogImageWidth || ogImageWidth,
+    twitterImageHeight: options.ogImageHeight || ogImageHeight,
     twitterImageType: 'image/jpeg',
 
     colorScheme: 'light dark',
