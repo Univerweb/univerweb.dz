@@ -2,8 +2,8 @@ interface SeoOptions {
   page?: 'home' | 'realisations' | 'prestations' | 'agence' | 'contact' | 'blog'
   pageSlug?: 'realisations' | 'prestations' | 'blog'
   title?: () => string
-  ogTitle?: () => string
   description?: () => string
+  ogTitle?: () => string
   ogImageAlt?: () => string
   ogImageWidth?: number
   ogImageHeight?: number
@@ -36,23 +36,23 @@ export function useSeo(options: SeoOptions) {
   const defaultOgImage = computed(() => baseUrl(`/images/univerweb${unrefString(locale) === 'ar' ? '-ar' : ''}.jpg`))
 
   let finalTitle: () => string = () => t('home.title')
-  let finalOgTitle: () => string = () => t('home.title')
   let finalDescription: () => string = () => t('home.description')
+  let finalOgTitle: () => string = () => t('home.title')
   let ogImage: ComputedRef<string | undefined> = defaultOgImage
   let finalOgImageAlt: (() => string) | undefined
 
   if (options.pageSlug) {
-    if (!options.title || !options.ogTitle || !options.description) {
-      console.error(`useSeo: Pour la page slug '${options.pageSlug}', 'title', 'ogTitle' et 'description' doivent être fournis dans les options. Retour aux valeurs par défaut de la page d'accueil.`)
+    if (!options.title || !options.description || !options.ogTitle) {
+      console.error(`useSeo: Pour la page slug '${options.pageSlug}', 'title', 'description' et 'ogTitle' doivent être fournis dans les options. Retour aux valeurs par défaut de la page d'accueil.`)
       finalTitle = () => t('home.title')
-      finalOgTitle = () => t('home.title')
       finalDescription = () => t('home.description')
+      finalOgTitle = () => t('home.title')
     }
 
     else {
       finalTitle = options.title
-      finalOgTitle = options.ogTitle
       finalDescription = options.description
+      finalOgTitle = options.ogTitle
       finalOgImageAlt = options.ogImageAlt
     }
 
@@ -69,8 +69,8 @@ export function useSeo(options: SeoOptions) {
 
   else if (options.page) {
     finalTitle = options.title || (() => t(`${options.page}.title`))
-    finalOgTitle = options.ogTitle || finalTitle
     finalDescription = options.description || (() => t(`${options.page}.description`))
+    finalOgTitle = options.ogTitle || finalTitle
     ogImage = defaultOgImage
     finalOgImageAlt = () => t('site.logo')
   }
@@ -78,8 +78,8 @@ export function useSeo(options: SeoOptions) {
   else {
     console.warn(`useSeo: Aucune option 'page' ou 'pageSlug' fournie. Utilisation des méta par défaut de la page d'accueil.`)
     finalTitle = options.title || (() => t('home.title'))
-    finalOgTitle = options.ogTitle || finalTitle
     finalDescription = options.description || (() => t('home.description'))
+    finalOgTitle = options.ogTitle || finalTitle
     ogImage = defaultOgImage
   }
 
