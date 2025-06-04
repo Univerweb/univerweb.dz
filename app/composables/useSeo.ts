@@ -1,5 +1,5 @@
 interface SeoOptions {
-  page?: 'home' | 'realisations' | 'prestations' | 'agence' | 'contact' | 'blog' | 'error'
+  page?: 'home' | 'realisations' | 'prestations' | 'agence' | 'contact' | 'blog'
   pageSlug?: 'realisations' | 'prestations' | 'blog'
   title?: () => string
   ogTitle?: () => string
