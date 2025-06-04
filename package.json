@@ -1,6 +1,6 @@
 {
   "name": "univerweb.dz",
-  "version": "5.2.7",
+  "version": "5.2.8",
   "type": "module",
   "private": true,
   "scripts": {
@@ -18,7 +18,7 @@
     "@nuxtjs/i18n": "^9.5.5",
     "@vueuse/core": "^13.3.0",
     "@vueuse/nuxt": "^13.3.0",
-    "nuxt-gtag": "^3.0.2",
+    "nuxt-gtag": "^3.0.3",
     "vue": "^3.5.16",
     "vue-router": "^4.5.1",
     "vue3-google-map": "^0.22.0"
