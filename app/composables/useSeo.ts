@@ -25,65 +25,87 @@ export function useSeo(options: SeoOptions) {
   const locales = { fr: 'fr_FR', en: 'en_US', ar: 'ar_DZ' }
 
   const ogSiteName = computed(() => t('site.name'))
-  const ogUrl = computed(() => baseUrl(path))
+  const ogUrl = baseUrl(path)
   const ogLocale = computed(() => locales[locale.value as keyof typeof locales] || 'fr_FR')
   const ogLocaleAlternate = computed(() => Object.values(locales).filter(localeCode => localeCode !== ogLocale.value))
-
-  const linkAltFr = computed(() => baseUrl(localePath(path, 'fr')))
-  const linkAltEn = computed(() => baseUrl(localePath(path, 'en')))
-  const linkAltAr = computed(() => baseUrl(localePath(path, 'ar')))
 
   const defaultOgImage = computed(() => baseUrl(`/images/univerweb${unrefString(locale) === 'ar' ? '-ar' : ''}.jpg`))
   const defaultOgImageWidth = 2400
   const defaultOgImageHeight = 1256
 
-  let title: () => string = () => t('home.title')
-  let description: () => string = () => t('home.description')
-  let ogTitle: () => string = () => t('home.title')
-  let ogImage: ComputedRef<string | undefined> = defaultOgImage
-  let ogImageAlt: (() => string) | undefined
+  const linkAltFr = computed(() => baseUrl(localePath(path, 'fr')))
+  const linkAltEn = computed(() => baseUrl(localePath(path, 'en')))
+  const linkAltAr = computed(() => baseUrl(localePath(path, 'ar')))
 
-  if (options.pageSlug) {
-    if (!options.title || !options.description || !options.ogTitle) {
-      console.error(`useSeo: Pour la page slug '${options.pageSlug}', 'title', 'description' et 'ogTitle' doivent être fournis dans les options. Retour aux valeurs par défaut de la page d'accueil.`)
-      title = () => t('home.title')
-      description = () => t('home.description')
-      ogTitle = () => t('home.title')
+  const title: () => string = (() => {
+    if (options.pageSlug && options.title && options.description) {
+      return options.title
+    }
+
+    else if (options.page) {
+      return () => t(`${options.page}.title`)
     }
 
     else {
-      title = options.title
-      description = options.description
-      ogTitle = options.ogTitle
-      ogImageAlt = options.ogImageAlt
+      return () => t('home.title')
+    }
+  })()
+
+  const description: () => string = (() => {
+    if (options.pageSlug && options.title && options.description) {
+      return options.description
     }
 
-    ogImage = computed(() =>
-      unrefString(
-        img(
-          unrefString(localePath(`${path}_banner`, 'fr')),
-          { format: 'webp', width: options.ogImageWidth || defaultOgImageWidth, height: options.ogImageHeight || defaultOgImageHeight },
-          { provider: 'cloudinary' },
+    else if (options.page) {
+      return () => t(`${options.page}.description`)
+    }
+
+    else {
+      return () => t('home.description')
+    }
+  })()
+
+  const ogTitle: () => string = (() => {
+    if (options.pageSlug && options.title && options.description) {
+      return options.ogTitle || options.title
+    }
+
+    else if (options.page) {
+      return title
+    }
+
+    else {
+      return () => t('home.title')
+    }
+  })()
+
+  const ogImage: ComputedRef<string | undefined> = (() => {
+    if (options.pageSlug && options.ogImageAlt) {
+      return computed(() =>
+        unrefString(
+          img(
+            unrefString(localePath(`${path}_banner`, 'fr')),
+            { format: 'webp', width: options.ogImageWidth || defaultOgImageWidth, height: options.ogImageHeight || defaultOgImageHeight },
+            { provider: 'cloudinary' },
+          ),
         ),
-      ),
-    )
-  }
+      )
+    }
 
-  else if (options.page) {
-    title = options.title || (() => t(`${options.page}.title`))
-    description = options.description || (() => t(`${options.page}.description`))
-    ogTitle = options.ogTitle || title
-    ogImage = defaultOgImage
-    ogImageAlt = () => t('site.logo')
-  }
+    else {
+      return defaultOgImage
+    }
+  })()
 
-  else {
-    console.warn(`useSeo: Aucune option 'page' ou 'pageSlug' fournie. Utilisation des méta par défaut de la page d'accueil.`)
-    title = options.title || (() => t('home.title'))
-    description = options.description || (() => t('home.description'))
-    ogTitle = options.ogTitle || title
-    ogImage = defaultOgImage
-  }
+  const ogImageAlt: () => string = (() => {
+    if (options.pageSlug && options.ogImageAlt) {
+      return options.ogImageAlt
+    }
+
+    else {
+      return () => t('site.logo')
+    }
+  })()
 
   useSeoMeta({
     titleTemplate: computed(() => `%s | ${ogSiteName.value}`),
