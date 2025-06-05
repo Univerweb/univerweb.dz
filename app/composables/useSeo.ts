@@ -111,9 +111,7 @@ export function useSeo(options: SeoOptions) {
     titleTemplate: computed(() => `%s | ${ogSiteName.value}`),
     title,
     description,
-
     ogSiteName,
-    ogType: 'website',
     ogTitle,
     ogDescription: description,
     ogUrl,
@@ -124,19 +122,12 @@ export function useSeo(options: SeoOptions) {
     ogImageAlt,
     ogImageWidth: options.ogImageWidth || defaultOgImageWidth,
     ogImageHeight: options.ogImageHeight || defaultOgImageHeight,
-    ogImageType: 'image/jpeg',
-
-    twitterSite: '@Univerweb',
     twitterTitle: ogTitle,
     twitterDescription: description,
-    twitterCard: 'summary_large_image',
     twitterImage: ogImage,
     twitterImageAlt: ogImageAlt,
     twitterImageWidth: options.ogImageWidth || defaultOgImageWidth,
     twitterImageHeight: options.ogImageHeight || defaultOgImageHeight,
-    twitterImageType: 'image/jpeg',
-
-    colorScheme: 'light dark',
     themeColor: computed(() => (mode.value === 'dark' ? '#111827' : '#fff')),
     appleMobileWebAppTitle: ogSiteName,
   })
@@ -151,11 +142,6 @@ export function useSeo(options: SeoOptions) {
       { rel: 'alternate', href: linkAltAr, hreflang: 'ar' },
       { rel: 'alternate', href: linkAltAr, hreflang: 'ar-DZ' },
       { rel: 'canonical', href: ogUrl },
-      { rel: 'icon', type: 'image/png', href: '/favicon-48x48.png', sizes: '48x48' },
-      { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
-      { rel: 'shortcut icon', href: '/favicon.ico' },
-      { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' },
-      { rel: 'manifest', href: '/site.webmanifest' },
     ],
 
     script: [
@@ -247,4 +233,25 @@ export function useSeo(options: SeoOptions) {
       },
     ],
   })
+
+  if (import.meta.server) {
+    useSeoMeta({
+      ogType: 'website',
+      ogImageType: 'image/jpeg',
+      twitterSite: '@Univerweb',
+      twitterCard: 'summary_large_image',
+      twitterImageType: 'image/jpeg',
+      colorScheme: 'light dark',
+    })
+
+    useHead({
+      link: [
+        { rel: 'icon', type: 'image/png', href: '/favicon-48x48.png', sizes: '48x48' },
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        { rel: 'shortcut icon', href: '/favicon.ico' },
+        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png', sizes: '180x180' },
+        { rel: 'manifest', href: '/site.webmanifest' },
+      ],
+    })
+  }
 }
