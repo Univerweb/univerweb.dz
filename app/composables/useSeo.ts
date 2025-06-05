@@ -33,9 +33,9 @@ export function useSeo(options: SeoOptions) {
   const defaultOgImageWidth = 2400
   const defaultOgImageHeight = 1256
 
-  const linkAltFr = computed(() => baseUrl(localePath(path, 'fr')))
-  const linkAltEn = computed(() => baseUrl(localePath(path, 'en')))
-  const linkAltAr = computed(() => baseUrl(localePath(path, 'ar')))
+  const linkAltFr = baseUrl(localePath(path, 'fr'))
+  const linkAltEn = baseUrl(localePath(path, 'en'))
+  const linkAltAr = baseUrl(localePath(path, 'ar'))
 
   const title: () => string = (() => {
     if (options.pageSlug && options.title && options.description) {
