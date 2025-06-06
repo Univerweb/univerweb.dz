@@ -24,11 +24,7 @@ body {
 }
 
 h1,
-.h1,
-section h1,
-section .h1,
-article h1,
-article .h1 {
+.h1 {
   @include font(44, 700, var(--line-height), -0.04, 0, 24);
 
   @media (min-width: $md) {
