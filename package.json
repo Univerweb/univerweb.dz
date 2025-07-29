@@ -1,6 +1,6 @@
 {
   "name": "univerweb.dz",
-  "version": "5.3",
+  "version": "5.4",
   "type": "module",
   "private": true,
   "scripts": {
@@ -15,7 +15,7 @@
   "dependencies": {
     "@nuxt/content": "^3.6.3",
     "@nuxt/image": "^1.10.0",
-    "@nuxtjs/i18n": "^9.5.6",
+    "@nuxtjs/i18n": "^10.0.3",
     "@vueuse/core": "^13.6.0",
     "@vueuse/nuxt": "^13.6.0",
     "better-sqlite3": "^12.2.0",

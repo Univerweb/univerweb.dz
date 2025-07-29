@@ -60,16 +60,9 @@ export default defineNuxtConfig({
       { code: 'en', language: 'en-US', file: 'en-US.json' },
       { code: 'ar', language: 'ar-DZ', file: 'ar-DZ.json', dir: 'rtl' },
     ],
-    lazy: true,
     detectBrowserLanguage: false,
     skipSettingLocaleOnNavigate: true,
     baseUrl: process.env.BASE_URL,
-    bundle: {
-      optimizeTranslationDirective: false,
-    },
-    experimental: {
-      generatedLocaleFilePathFormat: 'off',
-    },
   },
 
   image: {
