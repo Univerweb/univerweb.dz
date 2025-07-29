@@ -9,9 +9,7 @@ export default defineNuxtConfig({
     'nuxt-gtag',
   ],
 
-  app: {
-    rootId: 'app',
-  },
+  app: { rootId: 'app' },
 
   css: ['@/assets/scss/main.scss'],
 
@@ -23,11 +21,7 @@ export default defineNuxtConfig({
     },
   },
 
-  content: {
-    renderer: {
-      anchorLinks: false,
-    },
-  },
+  content: { renderer: { anchorLinks: false } },
 
   runtimeConfig: {
     public: {
@@ -42,11 +36,7 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2025-07-29',
 
-  eslint: {
-    config: {
-      stylistic: true,
-    },
-  },
+  eslint: { config: { stylistic: true } },
 
   gtag: {
     enabled: process.env.NODE_ENV === 'production',
