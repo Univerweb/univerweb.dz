@@ -1,6 +1,6 @@
 {
   "name": "univerweb.dz",
-  "version": "5.2.8",
+  "version": "5.3",
   "type": "module",
   "private": true,
   "scripts": {
@@ -29,7 +29,7 @@
     "@nuxtjs/sitemap": "^7.4.3",
     "@types/node": "^24.1.0",
     "eslint": "^9.32.0",
-    "nuxt": "^3.17.6",
+    "nuxt": "^4.0.2",
     "sass": "^1.89.2",
     "typescript": "^5.8.3"
   }
