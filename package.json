@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@nuxt/content": "^3.6.3",
-    "@nuxt/image": "^1.10.0",
+    "@nuxt/image": "^1.11.0",
     "@nuxtjs/i18n": "^10.0.3",
     "@vueuse/core": "^13.6.0",
     "@vueuse/nuxt": "^13.6.0",
@@ -31,6 +31,6 @@
     "eslint": "^9.32.0",
     "nuxt": "^4.0.2",
     "sass": "^1.89.2",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.2"
   }
 }
