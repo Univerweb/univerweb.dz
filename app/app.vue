@@ -1,8 +1,8 @@
 <script setup lang="ts">
-const { finalizePendingLocaleChange } = useI18n()
 const { progress } = useLoadingIndicator()
+const { finalizePendingLocaleChange } = useI18n()
 
-async function onBeforeEnter() {
+const onBeforeEnter = async () => {
   await finalizePendingLocaleChange()
 }
 </script>
