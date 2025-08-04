@@ -3,12 +3,20 @@ const props = defineProps<{
   error: { statusCode: number }
 }>()
 
+const head = useLocaleHead()
 const { t } = useI18n()
 const localePath = useLocalePath()
 const handleError = () => clearError({ redirect: localePath('/') })
 
+useHead({
+  htmlAttrs: {
+    lang: head.value.htmlAttrs!.lang,
+    dir: head.value.htmlAttrs!.dir as 'ltr' | 'rtl',
+  },
+})
+
 useSeoMeta({
-  title: t(`errors.${props.error.statusCode}.title`),
+  title: `${t(`errors.${props.error.statusCode}.title`)} | ${t('site.name')}`,
   description: t(`errors.${props.error.statusCode}.headline`),
   robots: { noindex: true },
 })

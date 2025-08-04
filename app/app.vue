@@ -1,6 +1,16 @@
 <script setup lang="ts">
+const head = useLocaleHead()
+const { y } = useWindowScroll()
 const { progress } = useLoadingIndicator()
 const { finalizePendingLocaleChange } = useI18n()
+
+useHead({
+  htmlAttrs: {
+    lang: () => head.value.htmlAttrs!.lang,
+    dir: () => head.value.htmlAttrs!.dir as 'ltr' | 'rtl',
+    class: { scrolled: y },
+  },
+})
 
 const onBeforeEnter = async () => {
   await finalizePendingLocaleChange()
