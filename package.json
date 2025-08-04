@@ -27,7 +27,7 @@
   "devDependencies": {
     "@nuxt/eslint": "^1.7.1",
     "@nuxtjs/sitemap": "^7.4.3",
-    "@types/node": "^24.1.0",
+    "@types/node": "^24.2.0",
     "eslint": "^9.32.0",
     "nuxt": "^4.0.2",
     "sass": "^1.89.2",
