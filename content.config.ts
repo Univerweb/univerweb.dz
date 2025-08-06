@@ -46,7 +46,7 @@ const post = z.object({
   tags: z.array(z.string()),
   author: z.object({
     name: z.string(),
-    url: z.string(),
+    url: z.string().url(),
   }).optional(),
 })
 
