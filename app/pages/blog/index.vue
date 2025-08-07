@@ -4,7 +4,7 @@ useSeo({ page: 'blog' })
 
 <template>
   <main>
-    <PostCardGroup />
+    <ArticleCardGroup />
     <LazyAppRequest />
   </main>
 </template>

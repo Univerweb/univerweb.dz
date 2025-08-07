@@ -4,7 +4,7 @@ useSeo({ page: 'realisations' })
 
 <template>
   <main>
-    <WorkCardGroup />
+    <RealisationCardGroup />
     <LazyAppRequest />
   </main>
 </template>

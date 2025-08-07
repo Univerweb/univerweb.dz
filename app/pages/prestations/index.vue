@@ -4,7 +4,7 @@ useSeo({ page: 'prestations' })
 
 <template>
   <main>
-    <PrestaCardGroup />
+    <PrestationCardGroup />
     <LazyAppRequest />
   </main>
 </template>

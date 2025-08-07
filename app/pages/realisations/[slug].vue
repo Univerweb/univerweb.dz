@@ -156,7 +156,7 @@ const { data: surround } = await useAsyncData(`realisation-surround-${path}`, ()
         {{ t('realisations.related') }}
       </h2>
       <div class="col card-group">
-        <WorkCard v-for="card in related" :key="card.path" :card title-tag="h3" />
+        <RealisationCard v-for="card in related" :key="card.path" :card title-tag="h3" />
       </div>
     </aside>
 

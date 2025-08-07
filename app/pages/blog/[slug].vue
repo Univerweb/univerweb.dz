@@ -103,7 +103,7 @@ const { data: postSurround } = await useAsyncData(`article-surround-${path}`, ()
       </section>
     </article>
 
-    <LazyPostShare :title="article.title" :path="baseUrl(path)" />
+    <LazyArticleShare :title="article.title" :path="baseUrl(path)" />
 
     <LazyAppNav :prev="postSurround?.[0]" :next="postSurround?.[1]" :aria-label="t('blog.ariaLabels.nav')" />
   </main>

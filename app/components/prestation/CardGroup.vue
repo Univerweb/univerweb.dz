@@ -28,7 +28,7 @@ const { data: prestations } = await useAsyncData(`prestations-${path}`, () => {
     </div>
 
     <div class="card-group">
-      <PrestaCard v-for="card in prestations" :key="card.path" :card :title-tag="titleTag" />
+      <PrestationCard v-for="card in prestations" :key="card.path" :card :title-tag="titleTag" />
     </div>
   </section>
 </template>

@@ -182,7 +182,7 @@ const leave = (el: Element) => {
         {{ t('prestations.other') }}
       </h2>
       <div class="col card-group">
-        <PrestaCard v-for="card in related" :key="card.path" :card title-tag="h3" />
+        <PrestationCard v-for="card in related" :key="card.path" :card title-tag="h3" />
       </div>
     </aside>
 
