@@ -18,7 +18,7 @@ const { locale, t } = useI18n()
 const { baseUrl } = useUrl()
 const localePath = useLocalePath()
 
-const { data: works } = await useAsyncData(`realisations-${path}`, () => {
+const { data: realisations } = await useAsyncData(`realisations-${path}`, () => {
   return queryCollection(`realisation_${locale.value}`)
     .select('path', 'stem', 'seo', 'title', 'description', 'createdAt', 'updatedAt', 'category')
     .order('stem', 'DESC')
@@ -39,7 +39,7 @@ const { data: works } = await useAsyncData(`realisations-${path}`, () => {
     </div>
 
     <div class="card-group">
-      <WorkCard v-for="card in works" :key="card.path" :card :title-tag="titleTag" />
+      <WorkCard v-for="card in realisations" :key="card.path" :card :title-tag="titleTag" />
     </div>
 
     <LazyAppMore v-if="more" path="realisations" :label="t('home.actions.exploreProjects')" class="intro-justify" />

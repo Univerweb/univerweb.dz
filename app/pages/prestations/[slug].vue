@@ -4,14 +4,14 @@ const { locale, t } = useI18n()
 const localePath = useLocalePath()
 const { baseUrl } = useUrl()
 
-const { data: presta } = await useAsyncData(`prestation-${path}`, () => {
+const { data: prestation } = await useAsyncData(`prestation-${path}`, () => {
   return queryCollection(`prestation_${locale.value}`)
     .select('path', 'seo', 'title', 'description', 'alt', 'intro', 'solutions', 'features', 'process', 'faq')
     .path(computed(() => localePath(path)).value)
     .first()
 }, { watch: [locale] })
 
-if (!presta.value) {
+if (!prestation.value) {
   throw createError({
     statusCode: 404,
     statusMessage: 'Page Not Found',
@@ -21,15 +21,15 @@ if (!presta.value) {
 
 useSeo({
   pageSlug: 'prestations',
-  title: () => presta.value!.seo.title!,
-  description: () => presta.value!.seo.description!,
-  ogTitle: () => presta.value!.seo.title!,
-  ogImageAlt: () => presta.value!.alt,
+  title: () => prestation.value!.seo.title!,
+  description: () => prestation.value!.seo.description!,
+  ogTitle: () => prestation.value!.seo.title!,
+  ogImageAlt: () => prestation.value!.alt,
   ogImageWidth: 2800,
   ogImageHeight: 1575,
 })
 
-const { data: prestaOther } = await useAsyncData(`prestation-related-${path}`, () => {
+const { data: related } = await useAsyncData(`prestation-related-${path}`, () => {
   return queryCollection(`prestation_${locale.value}`)
     .select('path', 'title', 'description', 'cta')
     .where('path', '<>', path)
@@ -74,7 +74,7 @@ const leave = (el: Element) => {
 </script>
 
 <template>
-  <main v-if="presta" class="presta">
+  <main v-if="prestation" class="presta">
     <article vocab="https://schema.org/" typeof="Service" aria-labelledby="title">
       <header class="container intro">
         <span property="mainEntityOfPage" typeof="WebPage">
@@ -83,12 +83,12 @@ const leave = (el: Element) => {
 
         <AppBack path="prestations" :label="t('navigation.menu[1].label')" />
         <h1 id="title" property="name serviceType">
-          {{ presta.title }}
+          {{ prestation.title }}
         </h1>
       </header>
 
       <AppPicture
-        :picture="presta"
+        :picture="prestation"
         type="banner"
         sizes="100vw xs:100vw sm:100vw md:100vw lg:100vw xl:1400px"
         class="banner"
@@ -96,10 +96,10 @@ const leave = (el: Element) => {
 
       <section class="container row" aria-labelledby="description">
         <h2 id="description" class="col" property="description">
-          {{ presta.description }}
+          {{ prestation.description }}
         </h2>
         <div class="col col--1-9 lead">
-          <p v-for="(paragraph, index) in presta.intro" :key="index">
+          <p v-for="(paragraph, index) in prestation.intro" :key="index">
             {{ paragraph }}
           </p>
         </div>
@@ -107,10 +107,10 @@ const leave = (el: Element) => {
 
       <section class="container row features" aria-labelledby="solutions">
         <h2 id="solutions" class="col col--1-5">
-          {{ presta.solutions.title }}
+          {{ prestation.solutions.title }}
         </h2>
         <div class="col col--6-13">
-          <template v-for="solution in presta.solutions.list" :key="solution.title">
+          <template v-for="solution in prestation.solutions.list" :key="solution.title">
             <h3>{{ solution.title }}</h3>
             <p>{{ solution.description }}</p>
           </template>
@@ -119,10 +119,10 @@ const leave = (el: Element) => {
 
       <section class="container row tags-group" aria-labelledby="features">
         <h2 id="features" class="col col--1-6">
-          {{ presta.features.title }}
+          {{ prestation.features.title }}
         </h2>
         <ul class="col col--7-12 tags">
-          <li v-for="tag in presta.features.tags" :key="tag">
+          <li v-for="tag in prestation.features.tags" :key="tag">
             {{ tag }}
           </li>
         </ul>
@@ -130,10 +130,10 @@ const leave = (el: Element) => {
 
       <section class="container row" aria-labelledby="process">
         <h2 id="process" class="col col--1-5">
-          {{ presta.process.title }}
+          {{ prestation.process.title }}
         </h2>
-        <ol :class="`col row items-${presta.process.steps.length}`">
-          <li v-for="(process, index) in presta.process.steps" :key="process.title" :class="`big-count item item-${index + 1}`">
+        <ol :class="`col row items-${prestation.process.steps.length}`">
+          <li v-for="(process, index) in prestation.process.steps" :key="process.title" :class="`big-count item item-${index + 1}`">
             <h3>{{ process.title }}</h3>
             <p>{{ process.description }}</p>
           </li>
@@ -142,10 +142,10 @@ const leave = (el: Element) => {
 
       <section class="container row faq" vocab="https://schema.org/" typeof="FAQPage" aria-labelledby="faq">
         <h2 id="faq" class="col col--1-5">
-          {{ presta.faq.title }}
+          {{ prestation.faq.title }}
         </h2>
         <div class="col">
-          <div v-for="(faq, index) in presta.faq.questions" :key="index" class="question" property="mainEntity" typeof="Question">
+          <div v-for="(faq, index) in prestation.faq.questions" :key="index" class="question" property="mainEntity" typeof="Question">
             <h3>
               <button :id="`faq-header-${index + 1}`" :aria-expanded="activeIndex === index" :aria-controls="`faq-panel-${index + 1}`" @click="toggle(index)">
                 <span property="name">
@@ -182,7 +182,7 @@ const leave = (el: Element) => {
         {{ t('prestations.other') }}
       </h2>
       <div class="col card-group">
-        <PrestaCard v-for="card in prestaOther" :key="card.path" :card title-tag="h3" />
+        <PrestaCard v-for="card in related" :key="card.path" :card title-tag="h3" />
       </div>
     </aside>
 

@@ -5,14 +5,14 @@ const localePath = useLocalePath()
 const { localeBaseUrl, baseUrl } = useUrl()
 const head = useLocaleHead()
 
-const { data: post } = await useAsyncData(`article-${path}`, () => {
+const { data: article } = await useAsyncData(`article-${path}`, () => {
   return queryCollection(`article_${locale.value}`)
     .select('path', 'title', 'description', 'alt', 'createdAt', 'updatedAt', 'tags', 'author', 'body')
     .path(computed(() => localePath(path)).value)
     .first()
 }, { watch: [locale] })
 
-if (!post.value) {
+if (!article.value) {
   throw createError({
     statusCode: 404,
     statusMessage: 'Page Not Found',
@@ -22,10 +22,10 @@ if (!post.value) {
 
 useSeo({
   pageSlug: 'blog',
-  title: () => `${post.value!.title} | ${t('navigation.menu[4].label')}`,
-  description: () => post.value!.description,
-  ogTitle: () => post.value!.title,
-  ogImageAlt: () => post.value!.alt,
+  title: () => `${article.value!.title} | ${t('navigation.menu[4].label')}`,
+  description: () => article.value!.description,
+  ogTitle: () => article.value!.title,
+  ogImageAlt: () => article.value!.alt,
 })
 
 const { data: postSurround } = await useAsyncData(`article-surround-${path}`, () => {
@@ -34,12 +34,12 @@ const { data: postSurround } = await useAsyncData(`article-surround-${path}`, ()
 </script>
 
 <template>
-  <main v-if="post" class="blog">
+  <main v-if="article" class="blog">
     <article vocab="https://schema.org/" typeof="Article" aria-labelledby="title">
       <header class="container intro">
-        <meta property="description" :content="post.description">
+        <meta property="description" :content="article.description">
         <meta property="articleSection" :content="t('navigation.menu[4].label')">
-        <meta property="dateModified" :content="new Date(post.updatedAt).toISOString()">
+        <meta property="dateModified" :content="new Date(article.updatedAt).toISOString()">
         <span property="publisher" typeof="Organization">
           <meta property="name" :content="t('site.name')">
           <link property="url" :href="localeBaseUrl">
@@ -54,7 +54,7 @@ const { data: postSurround } = await useAsyncData(`article-surround-${path}`, ()
 
         <AppBack path="blog" :label="t('navigation.menu[4].label')" />
         <h1 id="title" property="headline">
-          {{ post.title }}
+          {{ article.title }}
         </h1>
 
         <dl class="meta">
@@ -62,16 +62,16 @@ const { data: postSurround } = await useAsyncData(`article-surround-${path}`, ()
             {{ t('blog.ariaLabelledby.published') }}
           </dt>
           <dd aria-labelledby="published">
-            <NuxtTime property="dateCreated datePublished" :datetime="post.createdAt" :locale="head.htmlAttrs.lang" date-style="long" />
+            <NuxtTime property="dateCreated datePublished" :datetime="article.createdAt" :locale="head.htmlAttrs.lang" date-style="long" />
           </dd>
           <dt id="author" class="visually-hidden">
             {{ t('blog.ariaLabelledby.author') }}
           </dt>
           <dd aria-labelledby="author">
             {{ t('blog.by') }}
-            <a v-if="post.author && post.author.name && post.author.url" :href="post.author.url" target="_blank" property="author" typeof="Person">
-              <span property="name">@{{ post.author.name }}</span>
-              <link property="url" :href="post.author.url">
+            <a v-if="article.author && article.author.name && article.author.url" :href="article.author.url" target="_blank" property="author" typeof="Person">
+              <span property="name">@{{ article.author.name }}</span>
+              <link property="url" :href="article.author.url">
             </a>
             <span v-else property="author" typeof="Organization">
               <span property="name">@{{ t('site.name') }}</span>
@@ -83,7 +83,7 @@ const { data: postSurround } = await useAsyncData(`article-surround-${path}`, ()
           </dt>
           <dd aria-labelledby="keywords">
             <ul class="tags">
-              <li v-for="tag in post.tags" :key="tag" property="keywords">
+              <li v-for="tag in article.tags" :key="tag" property="keywords">
                 {{ tag }}
               </li>
             </ul>
@@ -92,18 +92,18 @@ const { data: postSurround } = await useAsyncData(`article-surround-${path}`, ()
       </header>
 
       <AppPicture
-        :picture="post"
+        :picture="article"
         type="banner"
         sizes="100vw xs:100vw sm:100vw md:100vw lg:100vw xl:1200px"
         class="banner"
       />
 
       <section class="container row row-no-gap">
-        <ContentRenderer :value="post" property="articleBody" class="col col--2-12 col--3-11 content" />
+        <ContentRenderer :value="article" property="articleBody" class="col col--2-12 col--3-11 content" />
       </section>
     </article>
 
-    <LazyPostShare :title="post.title" :path="baseUrl(path)" />
+    <LazyPostShare :title="article.title" :path="baseUrl(path)" />
 
     <LazyAppNav :prev="postSurround?.[0]" :next="postSurround?.[1]" :aria-label="t('blog.ariaLabels.nav')" />
   </main>
