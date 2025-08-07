@@ -4,12 +4,20 @@ const { locale, defaultLocale, t } = useI18n()
 const localePath = useLocalePath()
 const { localeBaseUrl, baseUrl } = useUrl()
 
-const { data: realisation } = await useAsyncData(`realisation-${path}`, () => {
-  return queryCollection(`realisation_${locale.value}`)
-    .select('path', 'seo', 'title', 'description', 'createdAt', 'updatedAt', 'category', 'tags', 'link')
-    .path(computed(() => localePath(path)).value)
-    .first()
-}, { watch: [locale] })
+const [{ data: realisation }, { data: surround }] = await Promise.all([
+  useAsyncData(`realisation-${path}`, () =>
+    queryCollection(`realisation_${locale.value}`)
+      .select('path', 'seo', 'title', 'description', 'createdAt', 'updatedAt', 'category', 'tags', 'link')
+      .path(computed(() => localePath(path)).value)
+      .first(), {
+    watch: [locale],
+  }),
+
+  useAsyncData(`realisation-surround-${path}`, () =>
+    queryCollectionItemSurroundings(`realisation_${locale.value}`, path), {
+    watch: [locale],
+  }),
+])
 
 if (!realisation.value) {
   throw createError({
@@ -19,6 +27,26 @@ if (!realisation.value) {
   })
 }
 
+const [{ data: tags }, { data: related }] = await Promise.all([
+  useAsyncData(`tags-${path}`, () =>
+    queryCollection(`tag_${locale.value}`)
+      .select('name', 'icon')
+      .where('uid', 'IN', realisation.value!.tags)
+      .all(), {
+    watch: [locale],
+  }),
+  useAsyncData(`realisation-related-${path}`, () =>
+    queryCollection(`realisation_${locale.value}`)
+      .select('path', 'stem', 'seo', 'title', 'description', 'createdAt', 'updatedAt', 'category', 'tags')
+      .andWhere(query => query
+        .where('path', '<>', path)
+        .where('category', '=', realisation.value!.category))
+      .order('stem', 'DESC')
+      .all(), {
+    watch: [locale, realisation],
+  }),
+])
+
 useSeo({
   pageSlug: 'realisations',
   title: () => `${realisation.value!.title}${defaultLocale ? ' :' : ':'} ${realisation.value!.category} | ${t('navigation.menu[0].label')}`,
@@ -26,27 +54,6 @@ useSeo({
   ogTitle: () => `${realisation.value!.title}${defaultLocale ? ' :' : ':'} ${realisation.value!.category}`,
   ogImageAlt: () => t('realisations.alt.banner', { client: realisation.value!.title }),
 })
-
-const { data: tags } = await useAsyncData(`tags-${path}`, () => {
-  return queryCollection(`tag_${locale.value}`)
-    .select('name', 'icon')
-    .where('uid', 'IN', realisation.value!.tags)
-    .all()
-}, { watch: [locale] })
-
-const { data: related } = await useAsyncData(`realisation-related-${path}`, () => {
-  return queryCollection(`realisation_${locale.value}`)
-    .select('path', 'stem', 'seo', 'title', 'description', 'createdAt', 'updatedAt', 'category', 'tags')
-    .andWhere(query => query
-      .where('path', '<>', path)
-      .where('category', '=', realisation.value!.category))
-    .order('stem', 'DESC')
-    .all()
-}, { watch: [locale, realisation] })
-
-const { data: surround } = await useAsyncData(`realisation-surround-${path}`, () => {
-  return queryCollectionItemSurroundings(`realisation_${locale.value}`, path)
-}, { watch: [locale] })
 </script>
 
 <template>

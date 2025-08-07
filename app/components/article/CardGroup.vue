@@ -18,13 +18,14 @@ const { locale, t } = useI18n()
 const { baseUrl } = useUrl()
 const localePath = useLocalePath()
 
-const { data: articles } = await useAsyncData(`articles-${path}`, () => {
-  return queryCollection(`article_${locale.value}`)
+const { data: articles } = await useAsyncData(`articles-${path}`, () =>
+  queryCollection(`article_${locale.value}`)
     .select('path', 'stem', 'title', 'description', 'createdAt', 'updatedAt', 'alt', 'tags', 'author')
     .order('stem', 'DESC')
     .limit(props.limit)
-    .all()
-}, { watch: [locale] })
+    .all(), {
+  watch: [locale],
+})
 </script>
 
 <template>

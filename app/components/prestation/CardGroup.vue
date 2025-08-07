@@ -12,11 +12,12 @@ withDefaults(defineProps<Props>(), {
 const { path } = useRoute()
 const { locale, t } = useI18n()
 
-const { data: prestations } = await useAsyncData(`prestations-${path}`, () => {
-  return queryCollection(`prestation_${locale.value}`)
+const { data: prestations } = await useAsyncData(`prestations-${path}`, () =>
+  queryCollection(`prestation_${locale.value}`)
     .select('path', 'title', 'description', 'cta')
-    .all()
-}, { watch: [locale] })
+    .all(), {
+  watch: [locale],
+})
 </script>
 
 <template>

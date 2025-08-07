@@ -5,12 +5,19 @@ const localePath = useLocalePath()
 const { localeBaseUrl, baseUrl } = useUrl()
 const head = useLocaleHead()
 
-const { data: article } = await useAsyncData(`article-${path}`, () => {
-  return queryCollection(`article_${locale.value}`)
-    .select('path', 'title', 'description', 'alt', 'createdAt', 'updatedAt', 'tags', 'author', 'body')
-    .path(computed(() => localePath(path)).value)
-    .first()
-}, { watch: [locale] })
+const [{ data: article }, { data: surround }] = await Promise.all([
+  useAsyncData(`article-${path}`, () =>
+    queryCollection(`article_${locale.value}`)
+      .select('path', 'title', 'description', 'alt', 'createdAt', 'updatedAt', 'tags', 'author', 'body')
+      .path(computed(() => localePath(path)).value)
+      .first(), {
+    watch: [locale],
+  }),
+  useAsyncData(`article-surround-${path}`, () =>
+    queryCollectionItemSurroundings(`article_${locale.value}`, path), {
+    watch: [locale],
+  }),
+])
 
 if (!article.value) {
   throw createError({
@@ -27,10 +34,6 @@ useSeo({
   ogTitle: () => article.value!.title,
   ogImageAlt: () => article.value!.alt,
 })
-
-const { data: surround } = await useAsyncData(`article-surround-${path}`, () => {
-  return queryCollectionItemSurroundings(`article_${locale.value}`, path)
-}, { watch: [locale] })
 </script>
 
 <template>

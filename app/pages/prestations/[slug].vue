@@ -4,12 +4,22 @@ const { locale, t } = useI18n()
 const localePath = useLocalePath()
 const { baseUrl } = useUrl()
 
-const { data: prestation } = await useAsyncData(`prestation-${path}`, () => {
-  return queryCollection(`prestation_${locale.value}`)
-    .select('path', 'seo', 'title', 'description', 'alt', 'intro', 'solutions', 'features', 'process', 'faq')
-    .path(computed(() => localePath(path)).value)
-    .first()
-}, { watch: [locale] })
+const [{ data: prestation }, { data: related }] = await Promise.all([
+  useAsyncData(`prestation-${path}`, () =>
+    queryCollection(`prestation_${locale.value}`)
+      .select('path', 'seo', 'title', 'description', 'alt', 'intro', 'solutions', 'features', 'process', 'faq')
+      .path(localePath(path))
+      .first(), {
+    watch: [locale],
+  }),
+  useAsyncData(`prestation-related-${path}`, () =>
+    queryCollection(`prestation_${locale.value}`)
+      .select('path', 'title', 'description', 'cta')
+      .where('path', '<>', path)
+      .all(), {
+    watch: [locale],
+  }),
+])
 
 if (!prestation.value) {
   throw createError({
@@ -28,13 +38,6 @@ useSeo({
   ogImageWidth: 2800,
   ogImageHeight: 1575,
 })
-
-const { data: related } = await useAsyncData(`prestation-related-${path}`, () => {
-  return queryCollection(`prestation_${locale.value}`)
-    .select('path', 'title', 'description', 'cta')
-    .where('path', '<>', path)
-    .all()
-}, { watch: [locale] })
 
 const activeIndex = ref<number | null>(null)
 
