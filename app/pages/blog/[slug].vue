@@ -28,7 +28,7 @@ useSeo({
   ogImageAlt: () => article.value!.alt,
 })
 
-const { data: postSurround } = await useAsyncData(`article-surround-${path}`, () => {
+const { data: surround } = await useAsyncData(`article-surround-${path}`, () => {
   return queryCollectionItemSurroundings(`article_${locale.value}`, path)
 }, { watch: [locale] })
 </script>
@@ -105,6 +105,6 @@ const { data: postSurround } = await useAsyncData(`article-surround-${path}`, ()
 
     <LazyArticleShare :title="article.title" :path="baseUrl(path)" />
 
-    <LazyAppNav :prev="postSurround?.[0]" :next="postSurround?.[1]" :aria-label="t('blog.ariaLabels.nav')" />
+    <LazyAppNav :prev="surround?.[0]" :next="surround?.[1]" :aria-label="t('blog.ariaLabels.nav')" />
   </main>
 </template>
