@@ -2,7 +2,7 @@
 import type { Collections } from '@nuxt/content'
 
 defineProps<{
-  presta: Pick<Collections['presta_fr' | 'presta_en' | 'presta_ar'], 'path' | 'title' | 'description' | 'cta'>
+  card: Pick<Collections['presta_fr' | 'presta_en' | 'presta_ar'], 'path' | 'title' | 'description' | 'cta'>
   titleTag: string
 }>()
 </script>
@@ -10,15 +10,15 @@ defineProps<{
 <template>
   <div class="card-presta" vocab="https://schema.org/" typeof="Service">
     <Component :is="titleTag" property="name serviceType">
-      <NuxtLink :to="presta.path">
-        {{ presta.title }}
+      <NuxtLink :to="card.path">
+        {{ card.title }}
       </NuxtLink>
     </Component>
 
     <p class="lead" property="description">
-      {{ presta.description }}
+      {{ card.description }}
     </p>
 
-    <AppMore :path="presta.path" :label="presta.cta" />
+    <AppMore :path="card.path" :label="card.cta" />
   </div>
 </template>
