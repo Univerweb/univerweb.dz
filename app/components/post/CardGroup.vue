@@ -18,7 +18,7 @@ const { locale, t } = useI18n()
 const { baseUrl } = useUrl()
 const localePath = useLocalePath()
 
-const { data: posts } = await useAsyncData(`posts-${path}`, () => {
+const { data: posts } = await useAsyncData(`blog-${path}`, () => {
   return queryCollection(`post_${locale.value}`)
     .select('path', 'stem', 'title', 'description', 'createdAt', 'updatedAt', 'alt', 'tags', 'author')
     .order('stem', 'DESC')
