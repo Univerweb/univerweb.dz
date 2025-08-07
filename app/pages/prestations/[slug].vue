@@ -4,7 +4,7 @@ const { locale, t } = useI18n()
 const localePath = useLocalePath()
 const { baseUrl } = useUrl()
 
-const { data: presta } = await useAsyncData(`presta${path}`, () => {
+const { data: presta } = await useAsyncData(`presta-${path}`, () => {
   return queryCollection(`presta_${locale.value}`)
     .select('path', 'seo', 'title', 'description', 'alt', 'intro', 'solutions', 'features', 'process', 'faq')
     .path(computed(() => localePath(path)).value)
@@ -29,7 +29,7 @@ useSeo({
   ogImageHeight: 1575,
 })
 
-const { data: prestaOther } = await useAsyncData(`presta-other${path}`, () => {
+const { data: prestaOther } = await useAsyncData(`presta-other-${path}`, () => {
   return queryCollection(`presta_${locale.value}`)
     .select('path', 'title', 'description', 'cta')
     .where('path', '<>', path)

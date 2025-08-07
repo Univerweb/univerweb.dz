@@ -5,7 +5,7 @@ const localePath = useLocalePath()
 const { localeBaseUrl, baseUrl } = useUrl()
 const head = useLocaleHead()
 
-const { data: post } = await useAsyncData(`post${path}`, () => {
+const { data: post } = await useAsyncData(`post-${path}`, () => {
   return queryCollection(`post_${locale.value}`)
     .select('path', 'title', 'description', 'alt', 'createdAt', 'updatedAt', 'tags', 'author', 'body')
     .path(computed(() => localePath(path)).value)
@@ -28,7 +28,7 @@ useSeo({
   ogImageAlt: () => post.value!.alt,
 })
 
-const { data: postSurround } = await useAsyncData(`post-surround${path}`, () => {
+const { data: postSurround } = await useAsyncData(`post-surround-${path}`, () => {
   return queryCollectionItemSurroundings(`post_${locale.value}`, path)
 }, { watch: [locale] })
 </script>

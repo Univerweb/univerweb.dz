@@ -4,7 +4,7 @@ const { locale, defaultLocale, t } = useI18n()
 const localePath = useLocalePath()
 const { localeBaseUrl, baseUrl } = useUrl()
 
-const { data: work } = await useAsyncData(`work${path}`, () => {
+const { data: work } = await useAsyncData(`work-${path}`, () => {
   return queryCollection(`work_${locale.value}`)
     .select('path', 'seo', 'title', 'description', 'createdAt', 'updatedAt', 'category', 'tags', 'link')
     .path(computed(() => localePath(path)).value)
@@ -27,14 +27,14 @@ useSeo({
   ogImageAlt: () => t('realisations.alt.banner', { client: work.value!.title }),
 })
 
-const { data: tags } = await useAsyncData(`tags${path}`, () => {
+const { data: tags } = await useAsyncData(`tags-${path}`, () => {
   return queryCollection(`tags_${locale.value}`)
     .select('name', 'icon')
     .where('uid', 'IN', work.value!.tags)
     .all()
 }, { watch: [locale] })
 
-const { data: workRelated } = await useAsyncData(`work-related${path}`, () => {
+const { data: workRelated } = await useAsyncData(`work-related-${path}`, () => {
   return queryCollection(`work_${locale.value}`)
     .select('path', 'stem', 'seo', 'title', 'description', 'createdAt', 'updatedAt', 'category', 'tags')
     .andWhere(query => query
@@ -44,7 +44,7 @@ const { data: workRelated } = await useAsyncData(`work-related${path}`, () => {
     .all()
 }, { watch: [locale, work] })
 
-const { data: workSurround } = await useAsyncData(`work-surround${path}`, () => {
+const { data: workSurround } = await useAsyncData(`work-surround-${path}`, () => {
   return queryCollectionItemSurroundings(`work_${locale.value}`, path)
 }, { watch: [locale] })
 </script>
