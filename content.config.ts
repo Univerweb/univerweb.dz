@@ -1,6 +1,6 @@
-import { defineCollection, defineContentConfig, z } from '@nuxt/content'
+import { defineContentConfig, defineCollection, z } from '@nuxt/content'
 
-const work = z.object({
+const Realisation = z.object({
   createdAt: z.date(),
   updatedAt: z.date(),
   category: z.string(),
@@ -8,7 +8,7 @@ const work = z.object({
   link: z.string().optional(),
 })
 
-const presta = z.object({
+const Prestation = z.object({
   cta: z.string(),
   alt: z.string(),
   intro: z.array(z.string()),
@@ -39,7 +39,7 @@ const presta = z.object({
   }),
 })
 
-const post = z.object({
+const Article = z.object({
   createdAt: z.date(),
   updatedAt: z.date(),
   alt: z.string(),
@@ -50,7 +50,7 @@ const post = z.object({
   }).optional(),
 })
 
-const tags = z.object({
+const Tag = z.object({
   uid: z.string(),
   name: z.string(),
   icon: z.array(z.string()),
@@ -59,73 +59,67 @@ const tags = z.object({
 export default defineContentConfig({
   collections: {
     work_fr: defineCollection({
-      source: {
-        include: 'fr/realisations/*.yaml',
-        prefix: 'realisations',
-      },
       type: 'page',
-      schema: work,
+      source: { include: 'fr/realisations/*.yaml', prefix: 'realisations' },
+      schema: Realisation,
     }),
     work_en: defineCollection({
-      source: 'en/realisations/*.yaml',
       type: 'page',
-      schema: work,
+      source: 'en/realisations/*.yaml',
+      schema: Realisation,
     }),
     work_ar: defineCollection({
+      type: 'page',
       source: 'ar/realisations/*.yaml',
-      type: 'page',
-      schema: work,
+      schema: Realisation,
     }),
+
     presta_fr: defineCollection({
-      source: {
-        include: 'fr/prestations/*.yaml',
-        prefix: 'prestations',
-      },
       type: 'page',
-      schema: presta,
+      source: { include: 'fr/prestations/*.yaml', prefix: 'prestations' },
+      schema: Prestation,
     }),
     presta_en: defineCollection({
-      source: 'en/prestations/*.yaml',
       type: 'page',
-      schema: presta,
+      source: 'en/prestations/*.yaml',
+      schema: Prestation,
     }),
     presta_ar: defineCollection({
+      type: 'page',
       source: 'ar/prestations/*.yaml',
-      type: 'page',
-      schema: presta,
+      schema: Prestation,
     }),
+
     post_fr: defineCollection({
-      source: {
-        include: 'fr/blog/*.md',
-        prefix: 'blog',
-      },
       type: 'page',
-      schema: post,
+      source: { include: 'fr/blog/*.md', prefix: 'blog' },
+      schema: Article,
     }),
     post_en: defineCollection({
-      source: 'en/blog/*.md',
       type: 'page',
-      schema: post,
+      source: 'en/blog/*.md',
+      schema: Article,
     }),
     post_ar: defineCollection({
-      source: 'ar/blog/*.md',
       type: 'page',
-      schema: post,
+      source: 'ar/blog/*.md',
+      schema: Article,
     }),
+
     tags_fr: defineCollection({
-      source: 'fr/tags/*.yaml',
       type: 'data',
-      schema: tags,
+      source: 'fr/tags/*.yaml',
+      schema: Tag,
     }),
     tags_en: defineCollection({
-      source: 'en/tags/*.yaml',
       type: 'data',
-      schema: tags,
+      source: 'en/tags/*.yaml',
+      schema: Tag,
     }),
     tags_ar: defineCollection({
-      source: 'ar/tags/*.yaml',
       type: 'data',
-      schema: tags,
+      source: 'ar/tags/*.yaml',
+      schema: Tag,
     }),
   },
 })
