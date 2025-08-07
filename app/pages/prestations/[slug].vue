@@ -5,7 +5,7 @@ const localePath = useLocalePath()
 const { baseUrl } = useUrl()
 
 const { data: presta } = await useAsyncData(`prestation-${path}`, () => {
-  return queryCollection(`presta_${locale.value}`)
+  return queryCollection(`prestation_${locale.value}`)
     .select('path', 'seo', 'title', 'description', 'alt', 'intro', 'solutions', 'features', 'process', 'faq')
     .path(computed(() => localePath(path)).value)
     .first()
@@ -30,7 +30,7 @@ useSeo({
 })
 
 const { data: prestaOther } = await useAsyncData(`prestation-related-${path}`, () => {
-  return queryCollection(`presta_${locale.value}`)
+  return queryCollection(`prestation_${locale.value}`)
     .select('path', 'title', 'description', 'cta')
     .where('path', '<>', path)
     .all()

@@ -58,65 +58,65 @@ const Tag = z.object({
 
 export default defineContentConfig({
   collections: {
-    work_fr: defineCollection({
+    realisation_fr: defineCollection({
       type: 'page',
       source: { include: 'fr/realisations/*.yaml', prefix: 'realisations' },
       schema: Realisation,
     }),
-    work_en: defineCollection({
+    realisation_en: defineCollection({
       type: 'page',
       source: 'en/realisations/*.yaml',
       schema: Realisation,
     }),
-    work_ar: defineCollection({
+    realisation_ar: defineCollection({
       type: 'page',
       source: 'ar/realisations/*.yaml',
       schema: Realisation,
     }),
 
-    presta_fr: defineCollection({
+    prestation_fr: defineCollection({
       type: 'page',
       source: { include: 'fr/prestations/*.yaml', prefix: 'prestations' },
       schema: Prestation,
     }),
-    presta_en: defineCollection({
+    prestation_en: defineCollection({
       type: 'page',
       source: 'en/prestations/*.yaml',
       schema: Prestation,
     }),
-    presta_ar: defineCollection({
+    prestation_ar: defineCollection({
       type: 'page',
       source: 'ar/prestations/*.yaml',
       schema: Prestation,
     }),
 
-    post_fr: defineCollection({
+    article_fr: defineCollection({
       type: 'page',
       source: { include: 'fr/blog/*.md', prefix: 'blog' },
       schema: Article,
     }),
-    post_en: defineCollection({
+    article_en: defineCollection({
       type: 'page',
       source: 'en/blog/*.md',
       schema: Article,
     }),
-    post_ar: defineCollection({
+    article_ar: defineCollection({
       type: 'page',
       source: 'ar/blog/*.md',
       schema: Article,
     }),
 
-    tags_fr: defineCollection({
+    tag_fr: defineCollection({
       type: 'data',
       source: 'fr/tags/*.yaml',
       schema: Tag,
     }),
-    tags_en: defineCollection({
+    tag_en: defineCollection({
       type: 'data',
       source: 'en/tags/*.yaml',
       schema: Tag,
     }),
-    tags_ar: defineCollection({
+    tag_ar: defineCollection({
       type: 'data',
       source: 'ar/tags/*.yaml',
       schema: Tag,

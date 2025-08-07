@@ -2,7 +2,7 @@
 import type { Collections } from '@nuxt/content'
 
 defineProps<{
-  card: Pick<Collections['presta_fr' | 'presta_en' | 'presta_ar'], 'path' | 'title' | 'description' | 'cta'>
+  card: Pick<Collections['prestation_fr' | 'prestation_en' | 'prestation_ar'], 'path' | 'title' | 'description' | 'cta'>
   titleTag: string
 }>()
 </script>

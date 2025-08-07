@@ -6,7 +6,7 @@ const { localeBaseUrl, baseUrl } = useUrl()
 const head = useLocaleHead()
 
 const { data: post } = await useAsyncData(`article-${path}`, () => {
-  return queryCollection(`post_${locale.value}`)
+  return queryCollection(`article_${locale.value}`)
     .select('path', 'title', 'description', 'alt', 'createdAt', 'updatedAt', 'tags', 'author', 'body')
     .path(computed(() => localePath(path)).value)
     .first()
@@ -29,7 +29,7 @@ useSeo({
 })
 
 const { data: postSurround } = await useAsyncData(`article-surround-${path}`, () => {
-  return queryCollectionItemSurroundings(`post_${locale.value}`, path)
+  return queryCollectionItemSurroundings(`article_${locale.value}`, path)
 }, { watch: [locale] })
 </script>
 

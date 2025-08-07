@@ -5,7 +5,7 @@ const localePath = useLocalePath()
 const { localeBaseUrl, baseUrl } = useUrl()
 
 const { data: work } = await useAsyncData(`realisation-${path}`, () => {
-  return queryCollection(`work_${locale.value}`)
+  return queryCollection(`realisation_${locale.value}`)
     .select('path', 'seo', 'title', 'description', 'createdAt', 'updatedAt', 'category', 'tags', 'link')
     .path(computed(() => localePath(path)).value)
     .first()
@@ -28,14 +28,14 @@ useSeo({
 })
 
 const { data: tags } = await useAsyncData(`tags-${path}`, () => {
-  return queryCollection(`tags_${locale.value}`)
+  return queryCollection(`tag_${locale.value}`)
     .select('name', 'icon')
     .where('uid', 'IN', work.value!.tags)
     .all()
 }, { watch: [locale] })
 
 const { data: workRelated } = await useAsyncData(`realisation-related-${path}`, () => {
-  return queryCollection(`work_${locale.value}`)
+  return queryCollection(`realisation_${locale.value}`)
     .select('path', 'stem', 'seo', 'title', 'description', 'createdAt', 'updatedAt', 'category', 'tags')
     .andWhere(query => query
       .where('path', '<>', path)
@@ -45,7 +45,7 @@ const { data: workRelated } = await useAsyncData(`realisation-related-${path}`, 
 }, { watch: [locale, work] })
 
 const { data: workSurround } = await useAsyncData(`realisation-surround-${path}`, () => {
-  return queryCollectionItemSurroundings(`work_${locale.value}`, path)
+  return queryCollectionItemSurroundings(`realisation_${locale.value}`, path)
 }, { watch: [locale] })
 </script>
 

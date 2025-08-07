@@ -19,7 +19,7 @@ const { baseUrl } = useUrl()
 const localePath = useLocalePath()
 
 const { data: works } = await useAsyncData(`realisations-${path}`, () => {
-  return queryCollection(`work_${locale.value}`)
+  return queryCollection(`realisation_${locale.value}`)
     .select('path', 'stem', 'seo', 'title', 'description', 'createdAt', 'updatedAt', 'category')
     .order('stem', 'DESC')
     .limit(props.limit)

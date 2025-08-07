@@ -13,7 +13,7 @@ const { path } = useRoute()
 const { locale, t } = useI18n()
 
 const { data: prestations } = await useAsyncData(`prestations-${path}`, () => {
-  return queryCollection(`presta_${locale.value}`)
+  return queryCollection(`prestation_${locale.value}`)
     .select('path', 'title', 'description', 'cta')
     .all()
 }, { watch: [locale] })
