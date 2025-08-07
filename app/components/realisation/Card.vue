@@ -33,7 +33,7 @@ const localePath = useLocalePath()
       <span class="h3">
         {{ card.category }}
       </span>
-      <Component :is="titleTag" property="name" class="work">
+      <Component :is="titleTag" property="name" class="realisation">
         {{ card.title }}
       </Component>
       <p property="about" class="lead">

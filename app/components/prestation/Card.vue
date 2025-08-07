@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="card-presta" vocab="https://schema.org/" typeof="Service">
+  <div class="card-prestation" vocab="https://schema.org/" typeof="Service">
     <Component :is="titleTag" property="name serviceType">
       <NuxtLink :to="card.path">
         {{ card.title }}

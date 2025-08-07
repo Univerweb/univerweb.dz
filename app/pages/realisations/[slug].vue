@@ -50,7 +50,7 @@ const { data: surround } = await useAsyncData(`realisation-surround-${path}`, ()
 </script>
 
 <template>
-  <main v-if="realisation" class="work">
+  <main v-if="realisation" class="realisations">
     <article vocab="https://schema.org/" typeof="CreativeWork" aria-labelledby="name">
       <header class="container intro">
         <meta property="description" :content="realisation.seo.description">

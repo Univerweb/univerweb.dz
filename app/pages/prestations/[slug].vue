@@ -74,7 +74,7 @@ const leave = (el: Element) => {
 </script>
 
 <template>
-  <main v-if="prestation" class="presta">
+  <main v-if="prestation" class="prestations">
     <article vocab="https://schema.org/" typeof="Service" aria-labelledby="title">
       <header class="container intro">
         <span property="mainEntityOfPage" typeof="WebPage">

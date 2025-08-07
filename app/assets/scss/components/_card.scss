@@ -65,7 +65,7 @@
   h3 {
     @include font(32);
 
-    &.work {
+    &.realisation {
       @media (min-width: $xl) {
         @include font(56);
       }
@@ -94,7 +94,7 @@
   }
 }
 
-.card-presta {
+.card-prestation {
   display: grid;
   grid-auto-rows: auto 1fr auto;
   border-radius: var(--padding-y);
