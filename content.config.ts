@@ -1,12 +1,14 @@
 import { defineContentConfig, defineCollection, z } from '@nuxt/content'
 
-const Realisation = z.object({
+const Date = z.object({
   createdAt: z.date(),
   updatedAt: z.date(),
-  category: z.string(),
-  tags: z.array(z.string()),
-  link: z.string().optional(),
 })
+
+const List = z.array(z.object({
+  title: z.string(),
+  description: z.string(),
+}))
 
 const Prestation = z.object({
   cta: z.string(),
@@ -14,10 +16,7 @@ const Prestation = z.object({
   intro: z.array(z.string()),
   solutions: z.object({
     title: z.string(),
-    list: z.array(z.object({
-      title: z.string(),
-      description: z.string(),
-    })),
+    list: List,
   }),
   features: z.object({
     title: z.string(),
@@ -25,10 +24,7 @@ const Prestation = z.object({
   }),
   process: z.object({
     title: z.string(),
-    steps: z.array(z.object({
-      title: z.string(),
-      description: z.string(),
-    })),
+    steps: List,
   }),
   faq: z.object({
     title: z.string(),
@@ -39,9 +35,7 @@ const Prestation = z.object({
   }),
 })
 
-const Article = z.object({
-  createdAt: z.date(),
-  updatedAt: z.date(),
+const Article = Date.extend({
   alt: z.string(),
   tags: z.array(z.string()),
   author: z.object({
@@ -50,28 +44,31 @@ const Article = z.object({
   }).optional(),
 })
 
-const Tag = z.object({
-  uid: z.string(),
-  name: z.string(),
-  icon: z.array(z.string()),
-})
-
 export default defineContentConfig({
   collections: {
+    realisation: defineCollection({
+      type: 'page',
+      source: 'realisations/*.yaml',
+      schema: z.object({
+        category: z.string(),
+        tags: z.array(z.string()),
+        website: z.string().url().optional(),
+      }),
+    }),
     realisation_fr: defineCollection({
       type: 'page',
       source: { include: 'fr/realisations/*.yaml', prefix: 'realisations' },
-      schema: Realisation,
+      schema: Date,
     }),
     realisation_en: defineCollection({
       type: 'page',
       source: 'en/realisations/*.yaml',
-      schema: Realisation,
+      schema: Date,
     }),
     realisation_ar: defineCollection({
       type: 'page',
       source: 'ar/realisations/*.yaml',
-      schema: Realisation,
+      schema: Date,
     }),
 
     prestation_fr: defineCollection({
@@ -104,22 +101,6 @@ export default defineContentConfig({
       type: 'page',
       source: 'ar/blog/*.md',
       schema: Article,
-    }),
-
-    tag_fr: defineCollection({
-      type: 'data',
-      source: 'fr/tags/*.yaml',
-      schema: Tag,
-    }),
-    tag_en: defineCollection({
-      type: 'data',
-      source: 'en/tags/*.yaml',
-      schema: Tag,
-    }),
-    tag_ar: defineCollection({
-      type: 'data',
-      source: 'ar/tags/*.yaml',
-      schema: Tag,
     }),
   },
 })

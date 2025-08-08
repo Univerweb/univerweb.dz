@@ -69,8 +69,54 @@
     "description": "Discover our web projects and explore expertly crafted solutions. @:site.name turns your ideas into digital success with tailored and high-performance solutions.",
     "headline": "Projects That Transform Ideas Into Digital Success.",
     "client": "Client",
-    "category": "Category",
-    "services": "Completed Services",
+    "category": {
+      "label": "Category",
+      "value": {
+        "showcaseWebsite": "Showcase Website",
+        "institutionalWebsite": "Institutional Website",
+        "functionalWebsite": "Functional Website",
+        "listingsWebsite": "Listings Website",
+        "newsWebsite": "News Website",
+        "eCatalogue": "E-catalogue",
+        "eCatalogueBlog": "E-catalogue + Blog",
+        "onePageWebsite": "One-Page Website"
+      }
+    },
+    "services": {
+      "label": "Completed Services",
+      "value": {
+        "logo": {
+          "name": "Logo",
+          "icon": ["IconIllustrator"]
+        },
+        "charter": {
+          "name": "Graphic Charter",
+          "icon": ["IconIllustrator", "IconInDesign"]
+        },
+        "identity": {
+          "name": "Visual Identity",
+          "icon": ["IconIllustrator", "IconInDesign"]
+        },
+        "webdesign": {
+          "name": "Web Design"
+        },
+        "uxui": {
+          "name": "UX/UI Design",
+          "icon": ["IconFigma"]
+        },
+        "integration": {
+          "name": "HTML/CSS Integration",
+          "icon": ["IconHtml", "IconCss"]
+        },
+        "cms": {
+          "name": "CMS Development",
+          "icon": ["IconDrupal", "IconPhp", "IconMariadb"]
+        },
+        "hosting": {
+          "name": "Web Hosting"
+        }
+      }
+    },
     "technologies": "Technologies Used",
     "about": "About",
     "visit": "Visit Website",

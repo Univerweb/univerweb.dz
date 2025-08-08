@@ -69,8 +69,54 @@
     "description": "Découvrez nos réalisations web et explorez des projets conçus avec expertise. @:site.name transforme vos idées en succès digitaux grâce à des solutions sur mesure et performantes.",
     "headline": "Des projets qui transforment des idées en succès digitaux.",
     "client": "Client",
-    "category": "Catégorie",
-    "services": "Prestations effectuées",
+    "category": {
+      "label": "Catégorie",
+      "value": {
+        "showcaseWebsite": "Site vitrine",
+        "institutionalWebsite": "Site institutionnel",
+        "functionalWebsite": "Site fonctionnel",
+        "listingsWebsite": "Site d’annonces",
+        "newsWebsite": "Site d’actualité",
+        "eCatalogue": "E-catalogue",
+        "eCatalogueBlog": "E-catalogue + Blog",
+        "onePageWebsite": "Site One-page"
+      }
+    },
+    "services": {
+      "label": "Prestations effectuées",
+      "value": {
+        "logo": {
+          "name": "Logo",
+          "icon": ["IconIllustrator"]
+        },
+        "charter": {
+          "name": "Charte graphique",
+          "icon": ["IconIllustrator", "IconInDesign"]
+        },
+        "identity": {
+          "name": "Identité visuelle",
+          "icon": ["IconIllustrator", "IconInDesign"]
+        },
+        "webdesign": {
+          "name": "WebDesign"
+        },
+        "uxui": {
+          "name": "UX/UI Design",
+          "icon": ["IconFigma"]
+        },
+        "integration": {
+          "name": "Intégration HTML/CSS",
+          "icon": ["IconHtml", "IconCss"]
+        },
+        "cms": {
+          "name": "Développement CMS",
+          "icon": ["IconDrupal", "IconPhp", "IconMariadb"]
+        },
+        "hosting": {
+          "name": "Hébergement web"
+        }
+      }
+    },
     "technologies": "Technologies utilisées",
     "about": "À propos de",
     "visit": "Visiter le site web",

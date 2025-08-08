@@ -2,7 +2,10 @@
 import type { Collections } from '@nuxt/content'
 
 defineProps<{
-  card: Pick<Collections['realisation_fr' | 'realisation_en' | 'realisation_ar'], 'path' | 'seo' | 'title' | 'description' | 'createdAt' | 'updatedAt' | 'category'>
+  card: {
+    translated: Pick<Collections['realisation_fr' | 'realisation_en' | 'realisation_ar'], 'path' | 'seo' | 'title' | 'description' | 'createdAt' | 'updatedAt'>
+    common: Pick<Collections['realisation'], 'category'>
+  }
   titleTag: string
 }>()
 
@@ -12,10 +15,10 @@ const localePath = useLocalePath()
 </script>
 
 <template>
-  <NuxtLink :to="card.path" class="card" vocab="https://schema.org/" typeof="CreativeWork" property="hasPart">
-    <meta property="description" :content="card.seo.description">
-    <meta property="dateCreated datePublished" :content="new Date(card.createdAt).toISOString()">
-    <meta property="dateModified" :content="new Date(card.updatedAt).toISOString()">
+  <NuxtLink :to="card.translated.path" class="card" vocab="https://schema.org/" typeof="CreativeWork" property="hasPart">
+    <meta property="description" :content="card.translated.seo.description">
+    <meta property="dateCreated datePublished" :content="new Date(card.translated.createdAt).toISOString()">
+    <meta property="dateModified" :content="new Date(card.translated.updatedAt).toISOString()">
     <span property="author publisher" typeof="Organization">
       <meta property="name" :content="t('site.name')">
       <link property="url" :href="localeBaseUrl">
@@ -25,19 +28,19 @@ const localePath = useLocalePath()
       <link property="url" :href="baseUrl(localePath('realisations'))">
     </span>
 
-    <AppPicture :picture="card" alt="" />
+    <AppPicture :picture="card.translated" alt="" />
 
     <div class="overlay" />
 
     <div class="inner">
       <span class="h3">
-        {{ card.category }}
+        {{ t(`realisations.category.value.${card.common.category}`) }}
       </span>
-      <Component :is="titleTag" property="name" class="realisation">
-        {{ card.title }}
+      <Component :is="titleTag" property="name" class="work">
+        {{ card.translated.title }}
       </Component>
       <p property="about" class="lead">
-        {{ card.description }}
+        {{ card.translated.description }}
       </p>
     </div>
   </NuxtLink>

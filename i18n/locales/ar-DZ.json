@@ -69,8 +69,54 @@
     "description": "اكتشف مشاريعنا الرقمية واستكشف حلولًا مصممة باحترافية. تقوم @:site.name بتحويل أفكارك إلى نجاح رقمي من خلال حلول مخصصة وعالية الأداء.",
     "headline": "مشاريع تحول الأفكار إلى نجاح رقمي.",
     "client": "الزبون",
-    "category": "الفئة",
-    "services": "الخدمات المُنجزة",
+    "category": {
+      "label": "الفئة",
+      "value": {
+        "showcaseWebsite": "موقع تعريفي",
+        "institutionalWebsite": "موقع مؤسساتي",
+        "functionalWebsite": "موقع وظيفي",
+        "listingsWebsite": "موقع إعلانات مبوبة",
+        "newsWebsite": "موقع إخباري",
+        "eCatalogue": "كتالوج إلكتروني",
+        "eCatalogueBlog": "كتالوج إلكتروني + مدوّنة",
+        "onePageWebsite": "موقع من صفحة واحدة"
+      }
+    },
+    "services": {
+      "label": "الخدمات المُنجزة",
+      "value": {
+        "logo": {
+          "name": "إنشاء الشعار",
+          "icon": ["IconIllustrator"]
+        },
+        "charter": {
+          "name": "تصميم مخطط رسومي",
+          "icon": ["IconIllustrator", "IconInDesign"]
+        },
+        "identity": {
+          "name": "تصميم الهوية البصرية",
+          "icon": ["IconIllustrator", "IconInDesign"]
+        },
+        "webdesign": {
+          "name": "تصميم الموقع"
+        },
+        "uxui": {
+          "name": "تصميم تجربة وواجهة المستخدم",
+          "icon": ["IconFigma"]
+        },
+        "integration": {
+          "name": "تكامل HTML/CSS",
+          "icon": ["IconHtml", "IconCss"]
+        },
+        "cms": {
+          "name": "تطوير CMS",
+          "icon": ["IconDrupal", "IconPhp", "IconMariadb"]
+        },
+        "hosting": {
+          "name": "إستضافة الموقع"
+        }
+      }
+    },
     "technologies": "التقنيات المستخدمة",
     "about": "نبذة عن",
     "visit": "زيارة الموقع",

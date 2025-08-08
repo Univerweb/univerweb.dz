@@ -1,23 +1,27 @@
 <script setup lang="ts">
 const { path } = useRoute()
-const { locale, defaultLocale, t } = useI18n()
+const { locale, defaultLocale, t, tm, rt } = useI18n()
 const localePath = useLocalePath()
 const { localeBaseUrl, baseUrl } = useUrl()
 
-const [{ data: realisation }, { data: surround }] = await Promise.all([
-  useAsyncData(`realisation-${path}`, () =>
+const { data: realisation } = await useAsyncData(`realisation-${path}`, async () => {
+  const [translated, common] = await Promise.all([
     queryCollection(`realisation_${locale.value}`)
-      .select('path', 'seo', 'title', 'description', 'createdAt', 'updatedAt', 'category', 'tags', 'link')
-      .path(computed(() => localePath(path)).value)
-      .first(), {
-    watch: [locale],
-  }),
+      .select('path', 'seo', 'title', 'description', 'createdAt', 'updatedAt')
+      .path(localePath(path))
+      .first(),
+    queryCollection('realisation')
+      .select('path', 'category', 'tags', 'website')
+      .path(localePath(path, 'fr'))
+      .first(),
+  ])
 
-  useAsyncData(`realisation-surround-${path}`, () =>
-    queryCollectionItemSurroundings(`realisation_${locale.value}`, path), {
-    watch: [locale],
-  }),
-])
+  if (!translated) {
+    return null
+  }
+
+  return { ...common ?? {}, ...translated }
+}, { watch: [locale] })
 
 if (!realisation.value) {
   throw createError({
@@ -27,25 +31,36 @@ if (!realisation.value) {
   })
 }
 
-const [{ data: tags }, { data: related }] = await Promise.all([
-  useAsyncData(`tags-${path}`, () =>
-    queryCollection(`tag_${locale.value}`)
-      .select('name', 'icon')
-      .where('uid', 'IN', realisation.value!.tags)
-      .all(), {
-    watch: [locale],
-  }),
-  useAsyncData(`realisation-related-${path}`, () =>
+const { data: related } = await useAsyncData(`realisation-related-${path}`, async () => {
+  const [translated, common] = await Promise.all([
     queryCollection(`realisation_${locale.value}`)
-      .select('path', 'stem', 'seo', 'title', 'description', 'createdAt', 'updatedAt', 'category', 'tags')
-      .andWhere(query => query
-        .where('path', '<>', path)
-        .where('category', '=', realisation.value!.category))
-      .order('stem', 'DESC')
-      .all(), {
-    watch: [locale, realisation],
-  }),
-])
+      .select('path', 'seo', 'title', 'description', 'createdAt', 'updatedAt')
+      .where('path', '<>', path)
+      .all(),
+    queryCollection('realisation')
+      .select('path', 'category')
+      .where('category', '=', realisation.value!.category)
+      .all(),
+  ])
+
+  const commonMap = new Map(common.map(item => [item.path.split('/').pop(), item]))
+
+  const filteredTranslated = translated.filter((translatedData) => {
+    const slug = translatedData.path.split('/').pop()
+    return commonMap.has(slug)
+  })
+
+  return filteredTranslated.map((translatedData) => {
+    const slug = translatedData.path.split('/').pop()
+    const commonData = commonMap.get(slug)!
+    return { translated: translatedData, common: commonData }
+  })
+}, { watch: [locale] })
+
+const { data: surround } = await useAsyncData(`realisation-surround-${path}`, () =>
+  queryCollectionItemSurroundings(`realisation_${locale.value}`, path), {
+  watch: [locale],
+})
 
 useSeo({
   pageSlug: 'realisations',
@@ -101,20 +116,20 @@ useSeo({
 
         <section class="item item-2" aria-labelledby="category">
           <h2 id="category" class="h6">
-            {{ t('realisations.category') }}
+            {{ t('realisations.category.label') }}
           </h2>
           <p class="lead">
-            {{ realisation.category }}
+            {{ t(`realisations.category.value.${realisation.category}`) }}
           </p>
         </section>
 
         <section class="item item-3" aria-labelledby="services">
           <h2 id="services" class="h6">
-            {{ t('realisations.services') }}
+            {{ t('realisations.services.label') }}
           </h2>
           <ul class="lead tags">
-            <li v-for="tag in tags" :key="tag.name">
-              {{ tag.name }}
+            <li v-for="tag in realisation.tags" :key="tag">
+              {{ t(`realisations.services.value.${tag}.name`) }}
             </li>
           </ul>
         </section>
@@ -124,9 +139,9 @@ useSeo({
             {{ t('realisations.technologies') }}
           </h2>
           <ul class="technos">
-            <template v-for="tag in tags" :key="tag.name">
-              <li v-for="icon in tag.icon" :key="icon">
-                <Component :is="icon" />
+            <template v-for="tag in realisation.tags" :key="tag">
+              <li v-for="icon in (tm(`realisations.services.value.${tag}.icon`) as string[])" :key="rt(icon)">
+                <Component :is="rt(icon)" />
               </li>
             </template>
           </ul>
@@ -142,7 +157,7 @@ useSeo({
             <p property="about" class="lead">
               {{ realisation.description }}
             </p>
-            <a v-if="realisation.link" :href="realisation.link" class="link">
+            <a v-if="realisation.website" :href="realisation.website" class="link">
               {{ t('realisations.visit') }}
             </a>
           </section>
@@ -163,7 +178,7 @@ useSeo({
         {{ t('realisations.related') }}
       </h2>
       <div class="col card-group">
-        <RealisationCard v-for="card in related" :key="card.path" :card title-tag="h3" />
+        <RealisationCard v-for="card in related" :key="card.translated.path" :card title-tag="h3" />
       </div>
     </aside>
 
