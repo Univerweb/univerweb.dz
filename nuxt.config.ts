@@ -34,7 +34,7 @@ export default defineNuxtConfig({
     },
   },
 
-  compatibilityDate: '2025-08-03',
+  compatibilityDate: '2025-08-08',
 
   eslint: { config: { stylistic: true } },
 
