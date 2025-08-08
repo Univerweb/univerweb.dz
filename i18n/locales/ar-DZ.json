@@ -112,6 +112,10 @@
           "name": "تطوير CMS",
           "icon": ["IconDrupal", "IconPhp", "IconMariadb"]
         },
+        "nuxt": {
+          "name": "تطوير Nuxt",
+          "icon": ["IconNuxt"]
+        },
         "hosting": {
           "name": "إستضافة الموقع"
         }
