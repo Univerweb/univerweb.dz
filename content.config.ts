@@ -10,6 +10,10 @@ const List = z.array(z.object({
   description: z.string(),
 }))
 
+const Realisation = Date.extend({
+  about: z.string(),
+})
+
 const Prestation = z.object({
   cta: z.string(),
   alt: z.string(),
@@ -58,17 +62,17 @@ export default defineContentConfig({
     realisation_fr: defineCollection({
       type: 'page',
       source: { include: 'fr/realisations/*.yaml', prefix: 'realisations' },
-      schema: Date,
+      schema: Realisation,
     }),
     realisation_en: defineCollection({
       type: 'page',
       source: 'en/realisations/*.yaml',
-      schema: Date,
+      schema: Realisation,
     }),
     realisation_ar: defineCollection({
       type: 'page',
       source: 'ar/realisations/*.yaml',
-      schema: Date,
+      schema: Realisation,
     }),
 
     prestation_fr: defineCollection({

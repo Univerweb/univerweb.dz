@@ -3,7 +3,7 @@ import type { Collections } from '@nuxt/content'
 
 defineProps<{
   card: {
-    translated: Pick<Collections['realisation_fr' | 'realisation_en' | 'realisation_ar'], 'path' | 'seo' | 'title' | 'description' | 'createdAt' | 'updatedAt'>
+    translated: Pick<Collections['realisation_fr' | 'realisation_en' | 'realisation_ar'], 'path' | 'title' | 'description' | 'createdAt' | 'updatedAt' | 'about'>
     common: Pick<Collections['realisation'], 'category'>
   }
   titleTag: string
@@ -16,7 +16,7 @@ const localePath = useLocalePath()
 
 <template>
   <NuxtLink :to="card.translated.path" class="card" vocab="https://schema.org/" typeof="CreativeWork" property="hasPart">
-    <meta property="description" :content="card.translated.seo.description">
+    <meta property="description" :content="card.translated.description">
     <meta property="dateCreated datePublished" :content="new Date(card.translated.createdAt).toISOString()">
     <meta property="dateModified" :content="new Date(card.translated.updatedAt).toISOString()">
     <span property="author publisher" typeof="Organization">
@@ -40,7 +40,7 @@ const localePath = useLocalePath()
         {{ card.translated.title }}
       </Component>
       <p property="about" class="lead">
-        {{ card.translated.description }}
+        {{ card.translated.about }}
       </p>
     </div>
   </NuxtLink>

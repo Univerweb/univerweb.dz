@@ -7,7 +7,7 @@ const { localeBaseUrl, baseUrl } = useUrl()
 const { data: realisation } = await useAsyncData(`realisation-${path}`, async () => {
   const [translated, common] = await Promise.all([
     queryCollection(`realisation_${locale.value}`)
-      .select('path', 'seo', 'title', 'description', 'createdAt', 'updatedAt')
+      .select('path', 'title', 'description', 'createdAt', 'updatedAt', 'about')
       .path(localePath(path))
       .first(),
     queryCollection('realisation')
@@ -34,7 +34,7 @@ if (!realisation.value) {
 const { data: related } = await useAsyncData(`realisation-related-${path}`, async () => {
   const [translated, common] = await Promise.all([
     queryCollection(`realisation_${locale.value}`)
-      .select('path', 'seo', 'title', 'description', 'createdAt', 'updatedAt')
+      .select('path', 'title', 'description', 'createdAt', 'updatedAt', 'about')
       .where('path', '<>', path)
       .all(),
     queryCollection('realisation')
@@ -65,7 +65,7 @@ const { data: surround } = await useAsyncData(`realisation-surround-${path}`, ()
 useSeo({
   pageSlug: 'realisations',
   title: () => `${realisation.value!.title}${defaultLocale ? ' :' : ':'} ${realisation.value!.category} | ${t('navigation.menu[0].label')}`,
-  description: () => realisation.value!.seo.description!,
+  description: () => realisation.value!.description,
   ogTitle: () => `${realisation.value!.title}${defaultLocale ? ' :' : ':'} ${realisation.value!.category}`,
   ogImageAlt: () => t('realisations.alt.banner', { client: realisation.value!.title }),
 })
@@ -75,7 +75,7 @@ useSeo({
   <main v-if="realisation" class="realisations">
     <article vocab="https://schema.org/" typeof="CreativeWork" aria-labelledby="name">
       <header class="container intro">
-        <meta property="description" :content="realisation.seo.description">
+        <meta property="description" :content="realisation.description">
         <meta property="dateCreated datePublished" :content="new Date(realisation.createdAt).toISOString()">
         <meta property="dateModified" :content="new Date(realisation.updatedAt).toISOString()">
         <span property="author publisher" typeof="Organization">
@@ -155,7 +155,7 @@ useSeo({
               {{ t('realisations.about') }} {{ realisation.title }}
             </h2>
             <p property="about" class="lead">
-              {{ realisation.description }}
+              {{ realisation.about }}
             </p>
             <a v-if="realisation.website" :href="realisation.website" class="link">
               {{ t('realisations.visit') }}

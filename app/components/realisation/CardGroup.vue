@@ -21,7 +21,7 @@ const localePath = useLocalePath()
 const { data: realisations } = await useAsyncData(`realisations-${path}`, async () => {
   const [translated, common] = await Promise.all([
     queryCollection(`realisation_${locale.value}`)
-      .select('path', 'stem', 'seo', 'title', 'description', 'createdAt', 'updatedAt')
+      .select('path', 'stem', 'title', 'description', 'createdAt', 'updatedAt', 'about')
       .order('stem', 'DESC')
       .limit(props.limit)
       .all(),
