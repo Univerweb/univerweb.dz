@@ -28,7 +28,7 @@
     "@nuxt/eslint": "^1.8.0",
     "@nuxtjs/sitemap": "^7.4.3",
     "@types/node": "^24.2.1",
-    "eslint": "^9.32.0",
+    "eslint": "^9.33.0",
     "nuxt": "^4.0.3",
     "sass": "^1.90.0",
     "typescript": "^5.9.2"
