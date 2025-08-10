@@ -2,9 +2,6 @@
 useSeo({ page: 'agence' })
 
 const { t, tm, rt } = useI18n()
-
-const method: Record<string, string> = tm('agence.method.content')
-const choose: Record<string, string> = tm('agence.choose.content')
 </script>
 
 <template>
@@ -23,7 +20,7 @@ const choose: Record<string, string> = tm('agence.choose.content')
         {{ t('agence.method.title') }}
       </h2>
       <ol class="col row items-5">
-        <li v-for="(description, title, index) in method" :key="index" :class="`big-count item item-${index + 1}`">
+        <li v-for="(description, title, index) in (tm('agence.method.content') as { title: string })" :key="index" :class="`big-count item item-${index + 1}`">
           <h3>{{ title }}</h3>
           <p class="lead">
             {{ rt(description) }}
@@ -37,7 +34,7 @@ const choose: Record<string, string> = tm('agence.choose.content')
         {{ t('agence.choose.title') }}
       </h2>
       <div class="col row items-2">
-        <div v-for="(description, title, index) in choose" :key="index" :class="`item item-${index + 1}`">
+        <div v-for="(description, title, index) in (tm('agence.choose.content') as { title: string })" :key="index" :class="`item item-${index + 1}`">
           <h3>{{ title }}</h3>
           <p class="lead">
             {{ rt(description) }}
