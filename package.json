@@ -15,7 +15,7 @@
   "dependencies": {
     "@nuxt/content": "^3.6.3",
     "@nuxt/image": "^1.11.0",
-    "@nuxtjs/i18n": "^10.0.4",
+    "@nuxtjs/i18n": "^10.0.5",
     "@vueuse/core": "^13.6.0",
     "@vueuse/nuxt": "^13.6.0",
     "better-sqlite3": "^12.2.0",
