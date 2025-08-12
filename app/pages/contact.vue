@@ -3,8 +3,15 @@ import { GoogleMap, CustomMarker } from 'vue3-google-map'
 
 useSeo({ page: 'contact' })
 
-const { t } = useI18n()
+const { locale, t } = useI18n()
 const config = useRuntimeConfig()
+
+const { data: contact } = await useAsyncData(`contact-${locale.value}`, () =>
+  queryCollection(`contact_${locale.value}`)
+    .select('title', 'description', 'lead', 'other')
+    .first(), {
+  watch: [locale],
+})
 
 const position = {
   lat: 36.720937,
@@ -24,14 +31,14 @@ function zoom() {
 </script>
 
 <template>
-  <main>
+  <main v-if="contact">
     <section class="container row" aria-labelledby="title">
       <div class="col col--1-6">
         <h1 id="title" class="h2">
-          {{ t('contact.title') }}
+          {{ contact.title }}
         </h1>
         <p class="lead">
-          {{ t('contact.about') }}
+          {{ contact.lead }}
         </p>
         <a :href="`mailto:${config.public.baseEmail}`" class="link outfit move">
           {{ config.public.baseEmail }}
@@ -57,7 +64,7 @@ function zoom() {
 
     <section class="container request other" aria-labelledby="other">
       <div id="other" class="intro">
-        <h2>{{ t('contact.other') }}</h2>
+        <h2>{{ contact.other }}</h2>
       </div>
       <div class="row items-2">
         <div class="item">
