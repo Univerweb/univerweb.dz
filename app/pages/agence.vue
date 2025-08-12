@@ -1,29 +1,36 @@
 <script setup lang="ts">
 useSeo({ page: 'agence' })
 
-const { t, tm, rt } = useI18n()
+const { locale } = useI18n()
+
+const { data: agence } = await useAsyncData(`agence-${locale.value}`, () =>
+  queryCollection(`agence_${locale.value}`)
+    .select('title', 'description', 'headline', 'lead', 'method', 'choose')
+    .first(), {
+  watch: [locale],
+})
 </script>
 
 <template>
-  <main>
+  <main v-if="agence">
     <section class="container intro" aria-labelledby="headline">
       <h1 id="headline">
-        {{ t('agence.headline') }}
+        {{ agence.headline }}
       </h1>
       <p class="lead">
-        {{ t('agence.lead') }}
+        {{ agence.lead }}
       </p>
     </section>
 
     <section class="container row" aria-labelledby="method">
       <h2 id="method" class="col col--1-5">
-        {{ t('agence.method.title') }}
+        {{ agence.method.title }}
       </h2>
       <ol class="col row items-5">
-        <li v-for="(description, title, index) in (tm('agence.method.content') as { title: string })" :key="index" :class="`big-count item item-${index + 1}`">
-          <h3>{{ title }}</h3>
+        <li v-for="(method, index) in agence.method.list" :key="index" :class="`big-count item item-${index + 1}`">
+          <h3>{{ method.title }}</h3>
           <p class="lead">
-            {{ rt(description) }}
+            {{ method.description }}
           </p>
         </li>
       </ol>
@@ -31,13 +38,13 @@ const { t, tm, rt } = useI18n()
 
     <section class="container row" aria-labelledby="choose">
       <h2 id="choose" class="col col--1-5">
-        {{ t('agence.choose.title') }}
+        {{ agence.choose.title }}
       </h2>
       <div class="col row items-2">
-        <div v-for="(description, title, index) in (tm('agence.choose.content') as { title: string })" :key="index" :class="`item item-${index + 1}`">
-          <h3>{{ title }}</h3>
+        <div v-for="(choose, index) in agence.choose.list" :key="index" :class="`item item-${index + 1}`">
+          <h3>{{ choose.title }}</h3>
           <p class="lead">
-            {{ rt(description) }}
+            {{ choose.description }}
           </p>
         </div>
       </div>

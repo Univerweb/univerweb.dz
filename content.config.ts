@@ -39,6 +39,19 @@ const Prestation = z.object({
   }),
 })
 
+const Agence = z.object({
+  headline: z.string(),
+  lead: z.string(),
+  method: z.object({
+    title: z.string(),
+    list: List,
+  }),
+  choose: z.object({
+    title: z.string(),
+    list: List,
+  }),
+})
+
 const Article = Date.extend({
   alt: z.string(),
   tags: z.array(z.string()),
@@ -89,6 +102,22 @@ export default defineContentConfig({
       type: 'page',
       source: 'ar/prestations/*.yaml',
       schema: Prestation,
+    }),
+
+    agence_fr: defineCollection({
+      type: 'page',
+      source: 'fr/agence.yaml',
+      schema: Agence,
+    }),
+    agence_en: defineCollection({
+      type: 'page',
+      source: 'en/agence.yaml',
+      schema: Agence,
+    }),
+    agence_ar: defineCollection({
+      type: 'page',
+      source: 'ar/agence.yaml',
+      schema: Agence,
     }),
 
     article_fr: defineCollection({
