@@ -52,6 +52,11 @@ const Agence = z.object({
   }),
 })
 
+const Contact = z.object({
+  lead: z.string(),
+  other: z.string(),
+})
+
 const Article = Date.extend({
   alt: z.string(),
   tags: z.array(z.string()),
@@ -118,6 +123,22 @@ export default defineContentConfig({
       type: 'page',
       source: 'ar/agence.yaml',
       schema: Agence,
+    }),
+
+    contact_fr: defineCollection({
+      type: 'page',
+      source: 'fr/contact.yaml',
+      schema: Contact,
+    }),
+    contact_en: defineCollection({
+      type: 'page',
+      source: 'en/contact.yaml',
+      schema: Contact,
+    }),
+    contact_ar: defineCollection({
+      type: 'page',
+      source: 'ar/contact.yaml',
+      schema: Contact,
     }),
 
     article_fr: defineCollection({
