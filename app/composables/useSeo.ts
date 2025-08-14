@@ -212,7 +212,7 @@ export function useSeo(options: SeoOptions) {
               'height': '256px',
             },
             'email': unrefString(config.public.baseEmail),
-            'telephone': '0551 90 46 22',
+            'telephone': unrefString(config.public.baseMobile),
             'sameAs': [
               'https://x.com/Univerweb',
               'https://www.facebook.com/Univerweb',
