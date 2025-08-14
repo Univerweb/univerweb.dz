@@ -17,15 +17,11 @@ const socials = [
     <div>
       <address class="address" title="Adresse postale">
         <strong>{{ t('site.name') }}</strong><br>
-        {{ t('site.address.street') }}<br>
-        <span dir="ltr">16 029</span> {{ t('site.address.locality') }}
-      </address>
-
-      <p>
         <a href="https://goo.gl/maps/MmadgQgZRBv" target="_blank" rel="noopener">
-          {{ t('actions.getDirections') }}
+          {{ t('site.address.street') }}<br>
+          <span dir="ltr">16 029</span> {{ t('site.address.locality') }}
         </a>
-      </p>
+      </address>
 
       <p>
         <a href="tel:+213551904622" :aria-label="t('ariaLabels.mobile')">
