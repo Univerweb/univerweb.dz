@@ -28,10 +28,6 @@ const socials = [
       </p>
 
       <p>
-        <a href="tel:+21321440811" :aria-label="t('ariaLabels.phone')">
-          <span dir="ltr">021 44 08 11</span>
-        </a>
-        —
         <a href="tel:+213551904622" :aria-label="t('ariaLabels.mobile')">
           <span dir="ltr">0551 90 46 22</span>
         </a>
