@@ -222,7 +222,7 @@ export function useSeo(options: SeoOptions) {
             'address': {
               '@type': 'PostalAddress',
               'streetAddress': t('site.address.street'),
-              'postalCode': '16 029',
+              'postalCode': t('site.address.postalCode'),
               'addressLocality': t('site.address.locality'),
               'addressRegion': t('site.address.locality'),
               'addressCountry': 'DZ',

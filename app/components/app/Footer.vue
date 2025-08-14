@@ -19,7 +19,7 @@ const socials = [
         <strong>{{ t('site.name') }}</strong><br>
         <a href="https://goo.gl/maps/MmadgQgZRBv" target="_blank" rel="noopener">
           {{ t('site.address.street') }}<br>
-          <span dir="ltr">16 029</span> {{ t('site.address.locality') }}
+          <span dir="ltr">{{ t('site.address.postalCode') }}</span> {{ t('site.address.locality') }}
         </a>
       </address>
 

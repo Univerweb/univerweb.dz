@@ -4,6 +4,7 @@
     "logo": "Logo d’Univerweb",
     "address": {
       "street": "62 Coop. El Mebnia, Birkhadem",
+      "postalCode": "16 029",
       "locality": "Alger"
     },
     "copy": "Copyright © {year} @:site.name{'.'} Tous droits réservés."
