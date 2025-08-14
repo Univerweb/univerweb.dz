@@ -24,6 +24,12 @@ footer {
   }
 }
 
+.mobile {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+}
+
 .socials {
   margin-top: 12px;
   max-width: 200px;

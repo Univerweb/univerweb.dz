@@ -24,7 +24,8 @@ const socials = [
       </address>
 
       <p>
-        <a href="tel:+213551904622" :aria-label="t('ariaLabels.mobile')">
+        <a href="tel:+213551904622" :aria-label="t('ariaLabels.mobile')" class="mobile">
+          <IconMobile />
           <span dir="ltr">0551 90 46 22</span>
         </a>
       </p>
