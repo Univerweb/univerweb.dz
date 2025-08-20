@@ -32,5 +32,16 @@
     "nuxt": "^4.0.3",
     "sass": "^1.90.0",
     "typescript": "^5.9.2"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "better-sqlite3",
+      "esbuild",
+      "unrs-resolver"
+    ],
+    "ignoredBuiltDependencies": [
+      "sharp"
+    ]
   }
 }
