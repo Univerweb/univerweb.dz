@@ -15,9 +15,9 @@
   "dependencies": {
     "@nuxt/content": "^3.6.3",
     "@nuxt/image": "^1.11.0",
-    "@nuxtjs/i18n": "^10.0.5",
-    "@vueuse/core": "^13.6.0",
-    "@vueuse/nuxt": "^13.6.0",
+    "@nuxtjs/i18n": "^10.0.6",
+    "@vueuse/core": "^13.7.0",
+    "@vueuse/nuxt": "^13.7.0",
     "better-sqlite3": "^12.2.0",
     "nuxt-gtag": "^3.0.3",
     "vue": "^3.5.18",
@@ -25,7 +25,7 @@
     "vue3-google-map": "^0.23.1"
   },
   "devDependencies": {
-    "@nuxt/eslint": "^1.8.0",
+    "@nuxt/eslint": "^1.9.0",
     "@nuxtjs/sitemap": "^7.4.3",
     "@types/node": "^24.3.0",
     "eslint": "^9.33.0",
