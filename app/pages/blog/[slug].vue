@@ -1,22 +1,25 @@
 <script setup lang="ts">
-const { path } = useRoute()
+const { path, params: { slug } } = useRoute()
 const { locale, t } = useI18n()
 const localePath = useLocalePath()
 const { localeBaseUrl, baseUrl } = useUrl()
 const head = useLocaleHead()
 
 const [{ data: article }, { data: surround }] = await Promise.all([
-  useAsyncData(`article-${path}`, () =>
-    queryCollection(`article_${locale.value}`)
+  useAsyncData(
+    () => `article-${locale.value}-${slug}`,
+    () => queryCollection(`article_${locale.value}`)
       .select('path', 'title', 'description', 'alt', 'createdAt', 'updatedAt', 'tags', 'author', 'body')
       .path(computed(() => localePath(path)).value)
-      .first(), {
-    watch: [locale],
-  }),
-  useAsyncData(`article-surround-${path}`, () =>
-    queryCollectionItemSurroundings(`article_${locale.value}`, path), {
-    watch: [locale],
-  }),
+      .first(),
+    { watch: [locale] },
+  ),
+
+  useAsyncData(
+    `article-surround-${locale.value}-${slug}`,
+    () => queryCollectionItemSurroundings(`article_${locale.value}`, path),
+    { watch: [locale] },
+  ),
 ])
 
 if (!article.value) {

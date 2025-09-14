@@ -3,12 +3,13 @@ useSeo({ page: 'agence' })
 
 const { locale } = useI18n()
 
-const { data: agence } = await useAsyncData(`agence-${locale.value}`, () =>
-  queryCollection(`agence_${locale.value}`)
+const { data: agence } = await useAsyncData(
+  () => `agence-${locale.value}`,
+  () => queryCollection(`agence_${locale.value}`)
     .select('title', 'description', 'headline', 'lead', 'method', 'choose')
-    .first(), {
-  watch: [locale],
-})
+    .first(),
+  { watch: [locale] },
+)
 </script>
 
 <template>

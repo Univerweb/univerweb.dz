@@ -6,12 +6,13 @@ useSeo({ page: 'contact' })
 const { locale, t } = useI18n()
 const config = useRuntimeConfig()
 
-const { data: contact } = await useAsyncData(`contact-${locale.value}`, () =>
-  queryCollection(`contact_${locale.value}`)
+const { data: contact } = await useAsyncData(
+  () => `contact-${locale.value}`,
+  () => queryCollection(`contact_${locale.value}`)
     .select('title', 'description', 'lead', 'other')
-    .first(), {
-  watch: [locale],
-})
+    .first(),
+  { watch: [locale] },
+)
 
 const position = {
   lat: 36.720937,

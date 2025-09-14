@@ -1,24 +1,27 @@
 <script setup lang="ts">
-const { path } = useRoute()
+const { path, params: { slug } } = useRoute()
 const { locale, t } = useI18n()
 const localePath = useLocalePath()
 const { baseUrl } = useUrl()
 
 const [{ data: prestation }, { data: related }] = await Promise.all([
-  useAsyncData(`prestation-${path}`, () =>
-    queryCollection(`prestation_${locale.value}`)
+  useAsyncData(
+    () => `prestation-${locale.value}-${slug}`,
+    () => queryCollection(`prestation_${locale.value}`)
       .select('path', 'seo', 'title', 'description', 'alt', 'intro', 'solutions', 'features', 'process', 'faq')
       .path(localePath(path))
-      .first(), {
-    watch: [locale],
-  }),
-  useAsyncData(`prestation-related-${path}`, () =>
-    queryCollection(`prestation_${locale.value}`)
+      .first(),
+    { watch: [locale] },
+  ),
+
+  useAsyncData(
+    () => `prestation-related-${locale.value}-${slug}`,
+    () => queryCollection(`prestation_${locale.value}`)
       .select('path', 'title', 'description', 'cta')
       .where('path', '<>', path)
-      .all(), {
-    watch: [locale],
-  }),
+      .all(),
+    { watch: [locale] },
+  ),
 ])
 
 if (!prestation.value) {

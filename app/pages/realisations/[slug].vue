@@ -1,27 +1,31 @@
 <script setup lang="ts">
-const { path } = useRoute()
+const { path, params: { slug } } = useRoute()
 const { locale, defaultLocale, t, tm, rt } = useI18n()
 const localePath = useLocalePath()
 const { localeBaseUrl, baseUrl } = useUrl()
 
-const { data: realisation } = await useAsyncData(`realisation-${path}`, async () => {
-  const [translated, common] = await Promise.all([
-    queryCollection(`realisation_${locale.value}`)
-      .select('path', 'title', 'description', 'createdAt', 'updatedAt', 'about')
-      .path(localePath(path))
-      .first(),
-    queryCollection('realisation')
-      .select('path', 'category', 'tags', 'website')
-      .path(localePath(path, 'fr'))
-      .first(),
-  ])
+const { data: realisation } = await useAsyncData(
+  () => `realisation-${locale.value}-${slug}`,
+  async () => {
+    const [translated, common] = await Promise.all([
+      queryCollection(`realisation_${locale.value}`)
+        .select('path', 'title', 'description', 'createdAt', 'updatedAt', 'about')
+        .path(localePath(path))
+        .first(),
+      queryCollection('realisation')
+        .select('path', 'category', 'tags', 'website')
+        .path(localePath(path, 'fr'))
+        .first(),
+    ])
 
-  if (!translated) {
-    return null
-  }
+    if (!translated) {
+      return null
+    }
 
-  return { ...common ?? {}, ...translated }
-}, { watch: [locale] })
+    return { ...common ?? {}, ...translated }
+  },
+  { watch: [locale] },
+)
 
 if (!realisation.value) {
   throw createError({
@@ -31,36 +35,41 @@ if (!realisation.value) {
   })
 }
 
-const { data: related } = await useAsyncData(`realisation-related-${path}`, async () => {
-  const [translated, common] = await Promise.all([
-    queryCollection(`realisation_${locale.value}`)
-      .select('path', 'title', 'description', 'createdAt', 'updatedAt', 'about')
-      .where('path', '<>', path)
-      .all(),
-    queryCollection('realisation')
-      .select('path', 'category')
-      .where('category', '=', realisation.value!.category)
-      .all(),
-  ])
+const { data: related } = await useAsyncData(
+  () => `realisation-related-${locale.value}-${slug}`,
+  async () => {
+    const [translated, common] = await Promise.all([
+      queryCollection(`realisation_${locale.value}`)
+        .select('path', 'title', 'description', 'createdAt', 'updatedAt', 'about')
+        .where('path', '<>', path)
+        .all(),
+      queryCollection('realisation')
+        .select('path', 'category')
+        .where('category', '=', realisation.value!.category)
+        .all(),
+    ])
 
-  const commonMap = new Map(common.map(item => [item.path.split('/').pop(), item]))
+    const commonMap = new Map(common.map(item => [item.path.split('/').pop(), item]))
 
-  const filteredTranslated = translated.filter((translatedData) => {
-    const slug = translatedData.path.split('/').pop()
-    return commonMap.has(slug)
-  })
+    const filteredTranslated = translated.filter((translatedData) => {
+      const slug = translatedData.path.split('/').pop()
+      return commonMap.has(slug)
+    })
 
-  return filteredTranslated.map((translatedData) => {
-    const slug = translatedData.path.split('/').pop()
-    const commonData = commonMap.get(slug)!
-    return { translated: translatedData, common: commonData }
-  })
-}, { watch: [locale] })
+    return filteredTranslated.map((translatedData) => {
+      const slug = translatedData.path.split('/').pop()
+      const commonData = commonMap.get(slug)!
+      return { translated: translatedData, common: commonData }
+    })
+  },
+  { watch: [locale] },
+)
 
-const { data: surround } = await useAsyncData(`realisation-surround-${path}`, () =>
-  queryCollectionItemSurroundings(`realisation_${locale.value}`, path), {
-  watch: [locale],
-})
+const { data: surround } = await useAsyncData(
+  () => `realisation-surround-${locale.value}-${slug}`,
+  () => queryCollectionItemSurroundings(`realisation_${locale.value}`, path),
+  { watch: [locale] },
+)
 
 useSeo({
   pageSlug: 'realisations',
