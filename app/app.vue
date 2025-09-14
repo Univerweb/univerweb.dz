@@ -17,7 +17,7 @@ const onBeforeEnter = async () => {
 </script>
 
 <template>
-  <NuxtLoadingIndicator color="repeating-linear-gradient(to right, #50c8f0 0%, #28285a 50%, #50c8f0 100%)" />
+  <NuxtLoadingIndicator color="repeating-linear-gradient(to right, var(--blue) 0%, var(--night) 50%, var(--blue)  100%)" />
   <NuxtLayout>
     <AppHeader />
     <NuxtPage id="main" :transition="{ name: 'page', mode: 'out-in', onBeforeEnter }" />
