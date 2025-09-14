@@ -47,9 +47,9 @@ export default defineNuxtConfig({
   i18n: {
     defaultLocale: 'fr',
     locales: [
-      { code: 'fr', language: 'fr-FR', file: 'fr-FR.json' },
-      { code: 'en', language: 'en-US', file: 'en-US.json' },
-      { code: 'ar', language: 'ar-DZ', file: 'ar-DZ.json', dir: 'rtl' },
+      { code: 'fr', language: 'fr-FR', file: 'fr-FR.yaml' },
+      { code: 'en', language: 'en-US', file: 'en-US.yaml' },
+      { code: 'ar', language: 'ar-DZ', file: 'ar-DZ.yaml', dir: 'rtl' },
     ],
     detectBrowserLanguage: false,
     skipSettingLocaleOnNavigate: true,

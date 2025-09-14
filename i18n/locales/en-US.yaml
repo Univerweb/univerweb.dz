@@ -1,0 +1,176 @@
+site:
+  name: Univerweb
+  logo: Univerweb’s logo
+  address:
+    street: 62 Coop. El Mebnia, Birkhadem
+    postalCode: 16 029
+    locality: Algiers
+  copy: Copyright © {year} @:site.name{'.'} All rights reserved.
+
+navigation:
+  menu:
+    - path: realisations
+      label: Latest Work
+    - path: prestations
+      label: Services
+    - path: agence
+      label: The Agency
+    - path: contact
+      label: Contact
+    - path: blog
+      label: Blog
+  previous: ⇠ Previous
+  next: Next ⇢
+
+ariaLabels:
+  langSwitch: اختر اللغة العربية
+  theme:
+    light: Switch to dark mode
+    dark: Switch to light mode
+  menu:
+    open: Open menu
+    close: Close menu
+  mobile: Mobile
+  email: E-mail
+  socials:
+    joinUs: Join us on
+    platforms: [X, Facebook, LinkedIn, GitHub]
+
+actions:
+  skipLink:
+    - path: header
+      label: Skip to header
+    - path: main
+      label: Skip to main content
+    - path: footer
+      label: Skip to footer
+  requestMeeting:
+    headline: Convinced? Let’s Have A Coffee Together.
+    text: Get in Touch
+
+home:
+  title: Website Creation, Hosting & Digital Marketing In Algeria
+  description:
+    '@:site.name supports your digital success with custom websites, reliable
+    hosting, a strong visual identity, and effective marketing. Boost your
+    online presence today.'
+  headline: Your Digital Success, Our Mission.
+  lead:
+    Your digital success relies on a high-performing online presence.
+    @:site.name is your ideal partner, integrating custom website creation,
+    strong brand identity, reliable hosting, and results-driven digital
+    marketing. Let’s build your growth together.
+  actions:
+    exploreProjects: Propel Your Ideas
+    learnMore: Boost Your Digital Knowledge
+
+realisations:
+  title: Discover Our Website Creations
+  description:
+    Discover our web projects and explore expertly crafted solutions.
+    @:site.name turns your ideas into digital success with tailored and
+    high-performance solutions.
+  headline: Projects That Transform Ideas Into Digital Success.
+  client: Client
+  category:
+    label: Category
+    value:
+      showcaseWebsite: Showcase Website
+      institutionalWebsite: Institutional Website
+      functionalWebsite: Functional Website
+      listingsWebsite: Listings Website
+      newsWebsite: News Website
+      eCatalogue: E-catalogue
+      eCatalogueBlog: E-catalogue + Blog
+      onePageWebsite: One-Page Website
+  services:
+    label: Completed Services
+    value:
+      logo:
+        name: Logo
+        icon: [IconIllustrator]
+      charter:
+        name: Graphic Charter
+        icon: [IconIllustrator, IconInDesign]
+      identity:
+        name: Visual Identity
+        icon: [IconIllustrator, IconInDesign]
+      webdesign:
+        name: Web Design
+      uxui:
+        name: UX/UI Design
+        icon: [IconFigma]
+      integration:
+        name: HTML/CSS Integration
+        icon: [IconHtml, IconCss]
+      cms:
+        name: CMS Development
+        icon: [IconDrupal, IconPhp, IconMariadb]
+      nuxt:
+        name: Nuxt Development
+        icon: [IconNuxt]
+      hosting:
+        name: Web Hosting
+  technologies: Technologies Used
+  about: About
+  visit: Visit Website
+  alt:
+    banner:
+      Website banner for {client}, notably showing its logo and navigation menu.
+    preview:
+      Full page screenshot of a page from {client}’s website, showing its
+      structure and content.
+  related: Other Similar & Tailor-Made Projects
+  ariaLabels:
+    nav: Project Navigation
+
+prestations:
+  title: Explore Our Digital Solutions
+  description:
+    Discover our turnkey and customized digital solutions. @:site.name supports
+    you with expertise in web creation, hosting, brand identity, digital
+    marketing, and much more.
+  headline: Turnkey & Custom Solutions.
+  other: Other Turnkey & Custom Solutions
+
+contact:
+  manager: Manager
+  support: Technical Support
+
+blog:
+  title: Explore Our Articles on Advice and Web Innovations
+  description:
+    Explore our articles and enhance your digital knowledge. @:site.name shares
+    insights, trends, and innovations to optimize your online presence and
+    succeed on the web.
+  headline: Digital Knowledge Is Just A Click Away.
+  by: by
+  share: Share The Article
+  ariaLabelledby:
+    published: Creation Date
+    author: Author
+    keywords: Keywords
+  ariaLabels:
+    copy: Copy Article Link
+    x: Share This Article on X
+    linkedIn: Share This Article on LinkedIn
+    nav: Article Navigation
+  copy: Copied!
+
+errors:
+  404:
+    title: Page Not Found
+    headline: You Got Lost In A Galaxy Far, Far Away… 404 😞
+    lead:
+      It seems the Force was not with this URL-404. The page you were looking
+      for has disappeared, perhaps hidden by the Ewoks. Do not succumb to the
+      Dark Side of frustration! Return to the Rebel Base to find your way.
+    actions:
+      returnToHome: Return To The Rebel Base
+  500:
+    title: Server Error
+    headline: Problem In The Heart Of The Main Reactor… 500 😞
+    lead:
+      Oops! It seems an interdimensional short-circuit-500 or a mischievous Ewok
+      has wreaked havoc on our server. Don’t panic, our technical team is
+      already on it to restore the situation. We apologize for this setback.
