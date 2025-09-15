@@ -1,12 +1,8 @@
 <script setup lang="ts">
-interface Props {
+defineProps<{
   picture: { path: string, alt?: string }
   type?: 'thumbnail' | 'banner' | 'preview'
-}
-
-withDefaults(defineProps<Props>(), {
-  type: 'thumbnail',
-})
+}>()
 
 const localePath = useLocalePath()
 </script>
@@ -14,7 +10,7 @@ const localePath = useLocalePath()
 <template>
   <NuxtPicture
     provider="cloudinary"
-    :src="`${localePath(picture.path, 'fr')}_${type}`"
+    :src="`${localePath(picture.path, 'fr')}_${type || 'thumbnail'}.webp`"
     :alt="picture.alt"
     sizes="342px xs:348px md:460px xl:584px"
     format="avif,webp"
