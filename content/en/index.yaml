@@ -14,3 +14,9 @@ hero:
   cta:
     label: Go to the projects section
     path: /#realisations
+
+sectionRealisation:
+  headline: Projects That Transform Ideas Into Digital Success.
+  cta:
+    label: Propel Your Ideas
+    path: realisations

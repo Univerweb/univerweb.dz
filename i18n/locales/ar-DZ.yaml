@@ -54,7 +54,6 @@ actions:
 
 home:
   actions:
-    exploreProjects: فعّلوا أفكاركم
     learnMore: عززوا معرفتكم الرقمية
 
 realisations:
@@ -62,7 +61,7 @@ realisations:
   description:
     اكتشف مشاريعنا الرقمية واستكشف حلولًا مصممة باحترافية. تقوم @:site.name
     بتحويل أفكارك إلى نجاح رقمي من خلال حلول مخصصة وعالية الأداء.
-  headline: مشاريع تحول الأفكار إلى نجاح رقمي.
+  headline: مشاريعنا تحول أفكاركم إلى نجاح رقمي.
   client: الزبون
   category:
     label: الفئة

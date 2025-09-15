@@ -4,12 +4,10 @@ const { locale } = useI18n()
 const { data: home } = await useAsyncData(
   () => `home-${locale.value}`,
   () => queryCollection(`home_${locale.value}`)
-    .select('title', 'description', 'hero')
+    .select('title', 'description', 'hero', 'sectionRealisation')
     .first(),
   { watch: [locale] },
 )
-
-useSeo({ page: 'home' })
 </script>
 
 <template>
@@ -26,7 +24,14 @@ useSeo({ page: 'home' })
       </NuxtLinkLocale>
     </section>
 
-    <LazyRealisationCardGroup headline-tag="h2" title-tag="h3" :limit="6" more />
+    <LazyRealisationCardGroup
+      headline-tag="h2"
+      :headline="home.sectionRealisation.headline"
+      title-tag="h3"
+      :limit="6"
+      :cta="home.sectionRealisation.cta"
+    />
+
     <LazyPrestationCardGroup headline-tag="h2" title-tag="h3" />
     <LazyArticleCardGroup headline-tag="h2" title-tag="h3" :limit="2" more />
     <LazyAppRequest is="section" link-class="h1" />

@@ -12,3 +12,9 @@ hero:
   cta:
     label: الانتقال إلى قسم المشاريع
     path: /#realisations
+
+sectionRealisation:
+  headline: مشاريع تحول الأفكار إلى نجاح رقمي
+  cta:
+    label: فعّلوا أفكاركم
+    path: realisations

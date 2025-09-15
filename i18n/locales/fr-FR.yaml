@@ -54,7 +54,6 @@ actions:
 
 home:
   actions:
-    exploreProjects: Propulsez vos idées
     learnMore: Boostez votre savoir digital
 
 realisations:
@@ -63,7 +62,7 @@ realisations:
     Découvrez nos réalisations web et explorez des projets conçus avec
     expertise. @:site.name transforme vos idées en succès digitaux grâce à des
     solutions sur mesure et performantes.
-  headline: Des projets qui transforment des idées en succès digitaux.
+  headline: Nos projets transforment vos idées en succès digitaux.
   client: Client
   category:
     label: Catégorie

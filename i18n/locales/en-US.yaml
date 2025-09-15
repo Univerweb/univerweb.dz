@@ -54,7 +54,6 @@ actions:
 
 home:
   actions:
-    exploreProjects: Propel Your Ideas
     learnMore: Boost Your Digital Knowledge
 
 realisations:
@@ -63,7 +62,7 @@ realisations:
     Discover our web projects and explore expertly crafted solutions.
     @:site.name turns your ideas into digital success with tailored and
     high-performance solutions.
-  headline: Projects That Transform Ideas Into Digital Success.
+  headline: Our Projects Transform Your Ideas Into Digital Success.
   client: Client
   category:
     label: Category
