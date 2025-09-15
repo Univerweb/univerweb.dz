@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { IconX, IconFacebook, IconLinkedIn, IconGitHub } from '#components'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const config = useRuntimeConfig()
 
 const socials = [
@@ -10,6 +10,14 @@ const socials = [
   { url: 'https://www.linkedin.com/company/Univerweb', icon: IconLinkedIn },
   { url: 'https://github.com/Univerweb', icon: IconGitHub },
 ]
+
+const { data: footer } = await useAsyncData(
+  () => `footer-${locale.value}`,
+  () => queryCollection(`contact_${locale.value}`)
+    .select('lead')
+    .first(),
+  { watch: [locale] },
+)
 </script>
 
 <template>
@@ -32,7 +40,7 @@ const socials = [
     </div>
 
     <p class="lead">
-      {{ t('contact.about') }}
+      {{ footer!.lead }}
     </p>
 
     <div>
