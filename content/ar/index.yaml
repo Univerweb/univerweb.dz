@@ -18,3 +18,9 @@ sectionRealisation:
   cta:
     label: فعّلوا أفكاركم
     path: realisations
+
+sectionBlog:
+  headline: المعرفة الرقمية بمتناول نقرة.
+  cta:
+    label: عززوا معرفتكم الرقمية
+    path: blog

@@ -2,7 +2,11 @@
 interface Props {
   limit?: number
   headlineTag?: string
-  more?: boolean
+  headline: string
+  cta?: {
+    label: string
+    path: string
+  }
   titleTag?: string
 }
 
@@ -10,7 +14,6 @@ const props = withDefaults(defineProps<Props>(), {
   limit: 0,
   headlineTag: 'h1',
   titleTag: 'h2',
-  more: false,
 })
 
 const { locale, t } = useI18n()
@@ -35,7 +38,7 @@ const { data: articles } = await useAsyncData(
 
     <div class="intro intro-justify">
       <Component :is="headlineTag" class="h1">
-        {{ t('blog.headline') }}
+        {{ headline }}
       </Component>
     </div>
 
@@ -43,6 +46,6 @@ const { data: articles } = await useAsyncData(
       <ArticleCard v-for="card in articles" :key="card.path" :card :title-tag="titleTag" />
     </div>
 
-    <LazyAppMore v-if="more" path="blog" :label="t('home.actions.learnMore')" class="intro-justify" />
+    <LazyAppMore v-if="cta" :path="cta.path" :label="cta.label" class="intro-justify" />
   </section>
 </template>

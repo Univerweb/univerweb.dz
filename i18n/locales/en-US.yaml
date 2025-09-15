@@ -52,10 +52,6 @@ actions:
     headline: Convinced? Let’s Have A Coffee Together.
     text: Get in Touch
 
-home:
-  actions:
-    learnMore: Boost Your Digital Knowledge
-
 realisations:
   title: Discover Our Website Creations
   description:
@@ -147,7 +143,7 @@ blog:
     Explore our articles and enhance your digital knowledge. @:site.name shares
     insights, trends, and innovations to optimize your online presence and
     succeed on the web.
-  headline: Digital Knowledge Is Just A Click Away.
+  headline: Our Digital Knowledge Is Just a Click Away.
   by: by
   share: Share The Article
   ariaLabelledby:

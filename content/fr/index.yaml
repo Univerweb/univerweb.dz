@@ -20,3 +20,9 @@ sectionRealisation:
   cta:
     label: Propulsez vos idées
     path: realisations
+
+sectionBlog:
+  headline: Le savoir digital à portée de clic.
+  cta:
+    label: Boostez votre savoir digital
+    path: blog

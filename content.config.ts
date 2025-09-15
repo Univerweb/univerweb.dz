@@ -25,6 +25,10 @@ const Home = z.object({
     headline: z.string(),
     cta: Link,
   }),
+  sectionBlog: z.object({
+    headline: z.string(),
+    cta: Link,
+  }),
 })
 
 const Realisation = Date.extend({

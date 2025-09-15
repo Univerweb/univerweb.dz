@@ -20,3 +20,9 @@ sectionRealisation:
   cta:
     label: Propel Your Ideas
     path: realisations
+
+sectionBlog:
+  headline: Digital Knowledge Is Just a Click Away.
+  cta:
+    label: Boost Your Digital Knowledge
+    path: blog

@@ -52,10 +52,6 @@ actions:
     headline: Convaincu ? Prenons un café ensemble.
     text: Contactez-nous
 
-home:
-  actions:
-    learnMore: Boostez votre savoir digital
-
 realisations:
   title: Découvrez nos réalisations de sites web
   description:
@@ -148,7 +144,7 @@ blog:
     Explorez nos articles et boostez votre savoir digital. @:site.name partage
     conseils, tendances et innovations pour optimiser votre présence en ligne et
     réussir sur le web.
-  headline: Le savoir digital à portée de clic.
+  headline: Notre savoir digital à portée de votre clic.
   by: par
   share: Partager l’article
   ariaLabelledby:
