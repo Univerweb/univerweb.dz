@@ -8,11 +8,11 @@ const { data: realisation } = await useAsyncData(
   () => `realisation-${locale.value}-${slug}`,
   async () => {
     const [translated, common] = await Promise.all([
-      queryCollection(`realisation_${locale.value}`)
+      queryCollection(`realisations_item_${locale.value}`)
         .select('path', 'title', 'description', 'createdAt', 'updatedAt', 'about')
         .path(localePath(path))
         .first(),
-      queryCollection('realisation')
+      queryCollection('realisations_item')
         .select('path', 'category', 'tags', 'website')
         .path(localePath(path, 'fr'))
         .first(),
@@ -39,11 +39,11 @@ const { data: related } = await useAsyncData(
   () => `realisation-related-${locale.value}-${slug}`,
   async () => {
     const [translated, common] = await Promise.all([
-      queryCollection(`realisation_${locale.value}`)
+      queryCollection(`realisations_item_${locale.value}`)
         .select('path', 'title', 'description', 'createdAt', 'updatedAt', 'about')
         .where('path', '<>', path)
         .all(),
-      queryCollection('realisation')
+      queryCollection('realisations_item')
         .select('path', 'category')
         .where('category', '=', realisation.value!.category)
         .all(),
@@ -67,7 +67,7 @@ const { data: related } = await useAsyncData(
 
 const { data: surround } = await useAsyncData(
   () => `realisation-surround-${locale.value}-${slug}`,
-  () => queryCollectionItemSurroundings(`realisation_${locale.value}`, path),
+  () => queryCollectionItemSurroundings(`realisations_item_${locale.value}`, path),
   { watch: [locale] },
 )
 

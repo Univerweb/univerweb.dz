@@ -53,12 +53,6 @@ actions:
     text: Contactez-nous
 
 realisations:
-  title: Découvrez nos réalisations de sites web
-  description:
-    Découvrez nos réalisations web et explorez des projets conçus avec
-    expertise. @:site.name transforme vos idées en succès digitaux grâce à des
-    solutions sur mesure et performantes.
-  headline: Nos projets transforment vos idées en succès digitaux.
   client: Client
   category:
     label: Catégorie

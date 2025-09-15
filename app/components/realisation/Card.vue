@@ -3,8 +3,8 @@ import type { Collections } from '@nuxt/content'
 
 defineProps<{
   card: {
-    translated: Pick<Collections['realisation_fr' | 'realisation_en' | 'realisation_ar'], 'path' | 'title' | 'description' | 'createdAt' | 'updatedAt' | 'about'>
-    common: Pick<Collections['realisation'], 'category'>
+    translated: Pick<Collections['realisations_item_fr' | 'realisations_item_en' | 'realisations_item_ar'], 'path' | 'title' | 'description' | 'createdAt' | 'updatedAt' | 'about'>
+    common: Pick<Collections['realisations_item'], 'category'>
   }
   titleTag: string
 }>()

@@ -34,7 +34,11 @@ const Home = z.object({
   }),
 })
 
-const Realisation = Date.extend({
+const RealisationsPage = z.object({
+  headline: z.string(),
+})
+
+const RealisationsItem = Date.extend({
   about: z.string(),
 })
 
@@ -112,7 +116,23 @@ export default defineContentConfig({
       schema: Home,
     }),
 
-    realisation: defineCollection({
+    realisations_page_fr: defineCollection({
+      type: 'page',
+      source: 'fr/realisations/index.yaml',
+      schema: RealisationsPage,
+    }),
+    realisations_page_en: defineCollection({
+      type: 'page',
+      source: 'en/realisations/index.yaml',
+      schema: RealisationsPage,
+    }),
+    realisations_page_ar: defineCollection({
+      type: 'page',
+      source: 'ar/realisations/index.yaml',
+      schema: RealisationsPage,
+    }),
+
+    realisations_item: defineCollection({
       type: 'page',
       source: 'realisations/*.yaml',
       schema: z.object({
@@ -121,20 +141,20 @@ export default defineContentConfig({
         website: z.string().url().optional(),
       }),
     }),
-    realisation_fr: defineCollection({
+    realisations_item_fr: defineCollection({
       type: 'page',
-      source: { include: 'fr/realisations/*.yaml', prefix: 'realisations' },
-      schema: Realisation,
+      source: { include: 'fr/realisations/*.yaml', exclude: ['fr/realisations/index.yaml'], prefix: 'realisations' },
+      schema: RealisationsItem,
     }),
-    realisation_en: defineCollection({
+    realisations_item_en: defineCollection({
       type: 'page',
-      source: 'en/realisations/*.yaml',
-      schema: Realisation,
+      source: { include: 'en/realisations/*.yaml', exclude: ['en/realisations/index.yaml'] },
+      schema: RealisationsItem,
     }),
-    realisation_ar: defineCollection({
+    realisations_item_ar: defineCollection({
       type: 'page',
-      source: 'ar/realisations/*.yaml',
-      schema: Realisation,
+      source: { include: 'ar/realisations/*.yaml', exclude: ['ar/realisations/index.yaml'] },
+      schema: RealisationsItem,
     }),
 
     prestations_page_fr: defineCollection({

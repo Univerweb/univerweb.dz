@@ -14,16 +14,16 @@ const { locale, t } = useI18n()
 const { baseUrl } = useUrl()
 const localePath = useLocalePath()
 
-const { data: realisations } = await useAsyncData(
-  () => `realisations-${locale.value}`,
+const { data: realisationsItem } = await useAsyncData(
+  () => `realisations-item-${locale.value}`,
   async () => {
     const [translated, common] = await Promise.all([
-      queryCollection(`realisation_${locale.value}`)
+      queryCollection(`realisations_item_${locale.value}`)
         .select('path', 'stem', 'title', 'description', 'createdAt', 'updatedAt', 'about')
         .order('stem', 'DESC')
         .limit(props.limit || 0)
         .all(),
-      queryCollection('realisation')
+      queryCollection('realisations_item')
         .select('path', 'category')
         .all(),
     ])
@@ -58,7 +58,7 @@ const { data: realisations } = await useAsyncData(
     </div>
 
     <div class="card-group">
-      <RealisationCard v-for="card in realisations" :key="card.translated.path" :card :title-tag="titleTag || 'h2'" />
+      <RealisationCard v-for="card in realisationsItem" :key="card.translated.path" :card :title-tag="titleTag || 'h2'" />
     </div>
 
     <LazyAppMore v-if="cta" :path="cta.path" :label="cta.label" class="intro-justify" />
