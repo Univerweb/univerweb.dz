@@ -89,7 +89,11 @@ const Contact = z.object({
   other: z.string(),
 })
 
-const Article = Date.extend({
+const BlogPage = z.object({
+  headline: z.string(),
+})
+
+const BlogItem = Date.extend({
   alt: z.string(),
   tags: z.array(z.string()),
   author: z.object({
@@ -221,20 +225,36 @@ export default defineContentConfig({
       schema: Contact,
     }),
 
-    article_fr: defineCollection({
+    blog_page_fr: defineCollection({
       type: 'page',
-      source: { include: 'fr/blog/*.md', prefix: 'blog' },
-      schema: Article,
+      source: 'fr/blog/index.yaml',
+      schema: BlogPage,
     }),
-    article_en: defineCollection({
+    blog_page_en: defineCollection({
       type: 'page',
-      source: 'en/blog/*.md',
-      schema: Article,
+      source: 'en/blog/index.yaml',
+      schema: BlogPage,
     }),
-    article_ar: defineCollection({
+    blog_page_ar: defineCollection({
       type: 'page',
-      source: 'ar/blog/*.md',
-      schema: Article,
+      source: 'ar/blog/index.yaml',
+      schema: BlogPage,
+    }),
+
+    blog_item_fr: defineCollection({
+      type: 'page',
+      source: { include: 'fr/blog/*.md', exclude: ['fr/blog/index.yaml'], prefix: 'blog' },
+      schema: BlogItem,
+    }),
+    blog_item_en: defineCollection({
+      type: 'page',
+      source: { include: 'en/blog/*.md', exclude: ['en/blog/index.yaml'] },
+      schema: BlogItem,
+    }),
+    blog_item_ar: defineCollection({
+      type: 'page',
+      source: { include: 'ar/blog/*.md', exclude: ['ar/blog/index.yaml'] },
+      schema: BlogItem,
     }),
   },
 })

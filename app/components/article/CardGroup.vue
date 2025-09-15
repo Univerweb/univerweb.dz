@@ -14,9 +14,9 @@ const { locale, t } = useI18n()
 const { baseUrl } = useUrl()
 const localePath = useLocalePath()
 
-const { data: articles } = await useAsyncData(
-  () => `articles-${locale.value}`,
-  () => queryCollection(`article_${locale.value}`)
+const { data: blogItem } = await useAsyncData(
+  () => `blog-item-${locale.value}`,
+  () => queryCollection(`blog_item_${locale.value}`)
     .select('path', 'stem', 'title', 'description', 'createdAt', 'updatedAt', 'alt', 'tags', 'author')
     .order('stem', 'DESC')
     .limit(props.limit || 0)
@@ -37,7 +37,7 @@ const { data: articles } = await useAsyncData(
     </div>
 
     <div class="card-group">
-      <ArticleCard v-for="card in articles" :key="card.path" :card :title-tag="titleTag || 'h2'" />
+      <ArticleCard v-for="card in blogItem" :key="card.path" :card :title-tag="titleTag || 'h2'" />
     </div>
 
     <LazyAppMore v-if="cta" :path="cta.path" :label="cta.label" class="intro-justify" />
