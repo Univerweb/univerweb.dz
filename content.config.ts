@@ -10,10 +10,12 @@ const Date = z.object({
   updatedAt: z.date(),
 })
 
-const List = z.array(z.object({
-  title: z.string(),
-  description: z.string(),
-}))
+const List = z.array(
+  z.object({
+    title: z.string(),
+    description: z.string(),
+  }),
+)
 
 const Home = z.object({
   hero: z.object({
@@ -60,10 +62,12 @@ const Prestation = z.object({
   }),
   faq: z.object({
     title: z.string(),
-    questions: z.array(z.object({
-      question: z.string(),
-      answer: z.string(),
-    })),
+    questions: z.array(
+      z.object({
+        question: z.string(),
+        answer: z.string(),
+      }),
+    ),
   }),
 })
 
@@ -83,6 +87,17 @@ const Agence = z.object({
 const Contact = z.object({
   lead: z.string(),
   other: z.string(),
+  address: z.object({
+    streetAddress: z.string(),
+    postalCode: z.string(),
+    addressLocality: z.string(),
+  }),
+  platforms: z.array(
+    z.object({
+      name: z.string(),
+      url: z.string().url(),
+    }),
+  ),
 })
 
 const Article = Date.extend({

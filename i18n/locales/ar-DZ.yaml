@@ -1,10 +1,6 @@
 site:
   name: يونيفارواب
   logo: شعار يونيفارواب
-  address:
-    street: 62 تعاونية المبنية، بئر خادم
-    postalCode: 16 029
-    locality: الجزائر العاصمة
   copy: حقوق النشر © {year} @:site.name{'.'} جميع الحقوق محفوظة.
 
 navigation:
@@ -33,12 +29,7 @@ ariaLabels:
   mobile: جوال
   email: البريد الإلكتروني
   socials:
-    joinUs: انضم إلينا على
-    platforms:
-      - X
-      - فيس بوك
-      - لينكد إن
-      - جيت هاب
+  joinUs: انضم إلينا على
 
 actions:
   skipLink:

@@ -3,8 +3,28 @@ description:
   Parlons de votre projet ! Univerweb vous accompagne dans la création de votre
   site web et bien plus encore. Échangeons sur votre vision digitale et
   concrétisons-la ensemble.
+
 lead:
   La création de sites web est au cœur de notre expertise. Et bien plus encore !
   Parlez-nous de votre vision, nous serions ravis de vous accompagner pour la
   concrétiser.
+
+address:
+  streetAddress: 62 Coop. El Mebnia, Birkhadem
+  postalCode: 16 029
+  addressLocality: Alger
+
+platforms:
+  - name: X
+    url: https://x.com/Univerweb
+
+  - name: Facebook
+    url: https://www.facebook.com/Univerweb
+
+  - name: LinkedIn
+    url: https://www.linkedin.com/company/univerweb
+
+  - name: GitHub
+    url: https://github.com/univerweb
+
 other: Autres moyens de nous contacter

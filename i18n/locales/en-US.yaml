@@ -1,10 +1,6 @@
 site:
   name: Univerweb
   logo: Univerweb’s logo
-  address:
-    street: 62 Coop. El Mebnia, Birkhadem
-    postalCode: 16 029
-    locality: Algiers
   copy: Copyright © {year} @:site.name{'.'} All rights reserved.
 
 navigation:
@@ -33,12 +29,7 @@ ariaLabels:
   mobile: Mobile
   email: E-mail
   socials:
-    joinUs: Join us on
-    platforms:
-      - X
-      - Facebook
-      - LinkedIn
-      - GitHub
+  joinUs: Join us on
 
 actions:
   skipLink:

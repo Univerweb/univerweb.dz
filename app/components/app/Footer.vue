@@ -4,30 +4,30 @@ import { IconX, IconFacebook, IconLinkedIn, IconGitHub } from '#components'
 const { t, locale } = useI18n()
 const config = useRuntimeConfig()
 
-const socials = [
-  { url: 'https://x.com/Univerweb', icon: IconX },
-  { url: 'https://www.facebook.com/Univerweb', icon: IconFacebook },
-  { url: 'https://www.linkedin.com/company/Univerweb', icon: IconLinkedIn },
-  { url: 'https://github.com/Univerweb', icon: IconGitHub },
+const icons = [
+  IconX,
+  IconFacebook,
+  IconLinkedIn,
+  IconGitHub,
 ]
 
 const { data: footer } = await useAsyncData(
   () => `footer-${locale.value}`,
   () => queryCollection(`contact_${locale.value}`)
-    .select('lead')
+    .select('lead', 'address', 'platforms')
     .first(),
   { watch: [locale] },
 )
 </script>
 
 <template>
-  <footer id="footer">
+  <footer v-if="footer" id="footer">
     <div>
       <address class="address" title="Adresse postale">
         <strong>{{ t('site.name') }}</strong><br>
         <a href="https://goo.gl/maps/MmadgQgZRBv" target="_blank" rel="noopener">
-          {{ t('site.address.street') }}<br>
-          <span dir="ltr">{{ t('site.address.postalCode') }}</span> {{ t('site.address.locality') }}
+          {{ footer.address.streetAddress }}<br>
+          <span dir="ltr">{{ footer.address.postalCode }}</span> {{ footer.address.addressLocality }}
         </a>
       </address>
 
@@ -40,7 +40,7 @@ const { data: footer } = await useAsyncData(
     </div>
 
     <p class="lead">
-      {{ footer!.lead }}
+      {{ footer.lead }}
     </p>
 
     <div>
@@ -49,9 +49,9 @@ const { data: footer } = await useAsyncData(
       </a>
 
       <ul class="socials">
-        <li v-for="(social, index) in socials" :key="social.url">
-          <a :href="social.url" :aria-label="`${t('ariaLabels.socials.joinUs')} ${t(`ariaLabels.socials.platforms.${index}`)}`">
-            <Component :is="social.icon" />
+        <li v-for="(platform, index) in footer.platforms" :key="index">
+          <a :href="platform.url" :aria-label="`${t('ariaLabels.joinUs')} ${platform.name}`">
+            <Component :is="icons[index]" />
           </a>
         </li>
       </ul>
