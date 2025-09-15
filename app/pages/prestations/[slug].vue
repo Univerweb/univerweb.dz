@@ -7,7 +7,7 @@ const { baseUrl } = useUrl()
 const [{ data: prestation }, { data: related }] = await Promise.all([
   useAsyncData(
     () => `prestation-${locale.value}-${slug}`,
-    () => queryCollection(`prestation_${locale.value}`)
+    () => queryCollection(`prestations_item_${locale.value}`)
       .select('path', 'seo', 'title', 'description', 'alt', 'intro', 'solutions', 'features', 'process', 'faq')
       .path(localePath(path))
       .first(),
@@ -16,7 +16,7 @@ const [{ data: prestation }, { data: related }] = await Promise.all([
 
   useAsyncData(
     () => `prestation-related-${locale.value}-${slug}`,
-    () => queryCollection(`prestation_${locale.value}`)
+    () => queryCollection(`prestations_item_${locale.value}`)
       .select('path', 'title', 'description', 'cta')
       .where('path', '<>', path)
       .all(),

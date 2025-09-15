@@ -7,9 +7,9 @@ defineProps<{
 
 const { locale } = useI18n()
 
-const { data: prestations } = await useAsyncData(
-  () => `prestations-${locale.value}`,
-  () => queryCollection(`prestation_${locale.value}`)
+const { data: prestationsItem } = await useAsyncData(
+  () => `prestations-item-${locale.value}`,
+  () => queryCollection(`prestations_item_${locale.value}`)
     .select('path', 'title', 'description', 'cta')
     .all(),
   { watch: [locale] },
@@ -25,7 +25,7 @@ const { data: prestations } = await useAsyncData(
     </div>
 
     <div class="card-group">
-      <PrestationCard v-for="card in prestations" :key="card.path" :card :title-tag="titleTag || 'h2'" />
+      <PrestationCard v-for="card in prestationsItem" :key="card.path" :card :title-tag="titleTag || 'h2'" />
     </div>
   </section>
 </template>

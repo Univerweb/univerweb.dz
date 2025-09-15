@@ -1,12 +1,18 @@
 <script setup lang="ts">
-const { t } = useI18n()
+const { locale } = useI18n()
 
-useSeo({ page: 'prestations' })
+const { data: prestationsPage } = await useAsyncData(
+  () => `prestations-page-${locale.value}`,
+  () => queryCollection(`prestations_page_${locale.value}`)
+    .select('headline')
+    .first(),
+  { watch: [locale] },
+)
 </script>
 
 <template>
-  <main>
-    <PrestationCardGroup :headline="t('prestations.headline')" />
+  <main v-if="prestationsPage">
+    <PrestationCardGroup :headline="prestationsPage.headline" />
     <LazyAppRequest />
   </main>
 </template>

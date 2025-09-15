@@ -38,7 +38,11 @@ const Realisation = Date.extend({
   about: z.string(),
 })
 
-const Prestation = z.object({
+const PrestationsPage = z.object({
+  headline: z.string(),
+})
+
+const PrestationsItem = z.object({
   cta: z.string(),
   alt: z.string(),
   intro: z.array(z.string()),
@@ -133,20 +137,36 @@ export default defineContentConfig({
       schema: Realisation,
     }),
 
-    prestation_fr: defineCollection({
+    prestations_page_fr: defineCollection({
       type: 'page',
-      source: { include: 'fr/prestations/*.yaml', prefix: 'prestations' },
-      schema: Prestation,
+      source: 'fr/prestations/index.yaml',
+      schema: PrestationsPage,
     }),
-    prestation_en: defineCollection({
+    prestations_page_en: defineCollection({
       type: 'page',
-      source: 'en/prestations/*.yaml',
-      schema: Prestation,
+      source: 'en/prestations/index.yaml',
+      schema: PrestationsPage,
     }),
-    prestation_ar: defineCollection({
+    prestations_page_ar: defineCollection({
       type: 'page',
-      source: 'ar/prestations/*.yaml',
-      schema: Prestation,
+      source: 'ar/prestations/index.yaml',
+      schema: PrestationsPage,
+    }),
+
+    prestations_item_fr: defineCollection({
+      type: 'page',
+      source: { include: 'fr/prestations/*.yaml', exclude: ['fr/prestations/index.yaml'], prefix: 'prestations' },
+      schema: PrestationsItem,
+    }),
+    prestations_item_en: defineCollection({
+      type: 'page',
+      source: { include: 'en/prestations/*.yaml', exclude: ['en/prestations/index.yaml'] },
+      schema: PrestationsItem,
+    }),
+    prestations_item_ar: defineCollection({
+      type: 'page',
+      source: { include: 'ar/prestations/*.yaml', exclude: ['ar/prestations/index.yaml'] },
+      schema: PrestationsItem,
     }),
 
     agence_fr: defineCollection({
