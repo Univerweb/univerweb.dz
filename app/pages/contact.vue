@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { GoogleMap, CustomMarker } from 'vue3-google-map'
 
-useSeo({ page: 'contact' })
-
 const { locale, t } = useI18n()
 const config = useRuntimeConfig()
 

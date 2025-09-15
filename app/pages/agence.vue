@@ -1,6 +1,4 @@
 <script setup lang="ts">
-useSeo({ page: 'agence' })
-
 const { locale } = useI18n()
 
 const { data: agence } = await useAsyncData(
