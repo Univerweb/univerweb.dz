@@ -1,20 +1,14 @@
 <script setup lang="ts">
-interface Props {
+const props = defineProps<{
   limit?: number
   headlineTag?: string
   headline: string
+  titleTag?: string
   cta?: {
     label: string
     path: string
   }
-  titleTag?: string
-}
-
-const props = withDefaults(defineProps<Props>(), {
-  limit: 0,
-  headlineTag: 'h1',
-  titleTag: 'h2',
-})
+}>()
 
 const { locale, t } = useI18n()
 const { baseUrl } = useUrl()
@@ -27,7 +21,7 @@ const { data: realisations } = await useAsyncData(
       queryCollection(`realisation_${locale.value}`)
         .select('path', 'stem', 'title', 'description', 'createdAt', 'updatedAt', 'about')
         .order('stem', 'DESC')
-        .limit(props.limit)
+        .limit(props.limit || 0)
         .all(),
       queryCollection('realisation')
         .select('path', 'category')
@@ -58,13 +52,13 @@ const { data: realisations } = await useAsyncData(
     <link property="url" :href="baseUrl(localePath('realisations'))">
 
     <div class="intro intro-justify">
-      <Component :is="headlineTag" class="h1">
+      <Component :is="headlineTag || 'h1'" class="h1">
         {{ headline }}
       </Component>
     </div>
 
     <div class="card-group">
-      <RealisationCard v-for="card in realisations" :key="card.translated.path" :card :title-tag="titleTag" />
+      <RealisationCard v-for="card in realisations" :key="card.translated.path" :card :title-tag="titleTag || 'h2'" />
     </div>
 
     <LazyAppMore v-if="cta" :path="cta.path" :label="cta.label" class="intro-justify" />

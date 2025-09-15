@@ -1,20 +1,14 @@
 <script setup lang="ts">
-interface Props {
+const props = defineProps<{
   limit?: number
   headlineTag?: string
   headline: string
+  titleTag?: string
   cta?: {
     label: string
     path: string
   }
-  titleTag?: string
-}
-
-const props = withDefaults(defineProps<Props>(), {
-  limit: 0,
-  headlineTag: 'h1',
-  titleTag: 'h2',
-})
+}>()
 
 const { locale, t } = useI18n()
 const { baseUrl } = useUrl()
@@ -25,7 +19,7 @@ const { data: articles } = await useAsyncData(
   () => queryCollection(`article_${locale.value}`)
     .select('path', 'stem', 'title', 'description', 'createdAt', 'updatedAt', 'alt', 'tags', 'author')
     .order('stem', 'DESC')
-    .limit(props.limit)
+    .limit(props.limit || 0)
     .all(),
   { watch: [locale] },
 )
@@ -37,13 +31,13 @@ const { data: articles } = await useAsyncData(
     <link property="url" :href="baseUrl(localePath('blog'))">
 
     <div class="intro intro-justify">
-      <Component :is="headlineTag" class="h1">
+      <Component :is="headlineTag || 'h1'" class="h1">
         {{ headline }}
       </Component>
     </div>
 
     <div class="card-group">
-      <ArticleCard v-for="card in articles" :key="card.path" :card :title-tag="titleTag" />
+      <ArticleCard v-for="card in articles" :key="card.path" :card :title-tag="titleTag || 'h2'" />
     </div>
 
     <LazyAppMore v-if="cta" :path="cta.path" :label="cta.label" class="intro-justify" />

@@ -1,18 +1,9 @@
 <script setup lang="ts">
-interface Props {
+defineProps<{
   headlineTag?: string
   headline: string
-  cta?: {
-    label: string
-    path: string
-  }
   titleTag?: string
-}
-
-withDefaults(defineProps<Props>(), {
-  headlineTag: 'h1',
-  titleTag: 'h2',
-})
+}>()
 
 const { locale } = useI18n()
 
@@ -28,13 +19,13 @@ const { data: prestations } = await useAsyncData(
 <template>
   <section id="prestations" class="container">
     <div class="intro intro-justify">
-      <Component :is="headlineTag" class="h1">
+      <Component :is="headlineTag || 'h1'" class="h1">
         {{ headline }}
       </Component>
     </div>
 
     <div class="card-group">
-      <PrestationCard v-for="card in prestations" :key="card.path" :card :title-tag="titleTag" />
+      <PrestationCard v-for="card in prestations" :key="card.path" :card :title-tag="titleTag || 'h2'" />
     </div>
   </section>
 </template>
