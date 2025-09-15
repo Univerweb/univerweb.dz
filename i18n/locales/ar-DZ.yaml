@@ -34,7 +34,11 @@ ariaLabels:
   email: البريد الإلكتروني
   socials:
     joinUs: انضم إلينا على
-    platforms: [X, فيس بوك, لينكد إن, جيت هاب]
+    platforms:
+      - X
+      - فيس بوك
+      - لينكد إن
+      - جيت هاب
 
 actions:
   skipLink:
@@ -51,8 +55,8 @@ actions:
 home:
   title: إنشاء مواقع الويب، الاستضافة والتسويق الرقمي في الجزائر
   description:
-    'ترافقك @:site.name في نجاحك الرقمي من خلال مواقع إلكترونية مخصصة، استضافة
-    موثوقة، هوية بصرية قوية وتسويق فعال. عزّز وجودك على الإنترنت اليوم.'
+    ترافقك @:site.name في نجاحك الرقمي من خلال مواقع إلكترونية مخصصة، استضافة
+    موثوقة، هوية بصرية قوية وتسويق فعال. عزّز وجودك على الإنترنت اليوم.
   headline: نجاحكم الرقمي، مهمتنا.
   lead:
     يعتمد نجاحكم الرقمي على تواجد فعال عبر الإنترنت. @:site.name هو شريككم
@@ -85,27 +89,39 @@ realisations:
     value:
       logo:
         name: إنشاء الشعار
-        icon: [IconIllustrator]
+        icon:
+          - IconIllustrator
       charter:
         name: تصميم مخطط رسومي
-        icon: [IconIllustrator, IconInDesign]
+        icon:
+          - IconIllustrator
+          - IconInDesign
       identity:
         name: تصميم الهوية البصرية
-        icon: [IconIllustrator, IconInDesign]
+        icon:
+          - IconIllustrator
+          - IconInDesign
       webdesign:
         name: تصميم الموقع
       uxui:
         name: تصميم تجربة وواجهة المستخدم
-        icon: [IconFigma]
+        icon:
+          - IconFigma
       integration:
         name: تكامل HTML/CSS
-        icon: [IconHtml, IconCss]
+        icon:
+          - IconHtml
+          - IconCss
       cms:
         name: تطوير CMS
-        icon: [IconDrupal, IconPhp, IconMariadb]
+        icon:
+          - IconDrupal
+          - IconPhp
+          - IconMariadb
       nuxt:
         name: تطوير Nuxt
-        icon: [IconNuxt]
+        icon:
+          - IconNuxt
       hosting:
         name: إستضافة الموقع
   technologies: التقنيات المستخدمة

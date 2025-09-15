@@ -34,7 +34,11 @@ ariaLabels:
   email: E-mail
   socials:
     joinUs: Rejoignez-nous sur
-    platforms: [X, Facebook, LinkedIn, GitHub]
+    platforms:
+      - X
+      - Facebook
+      - LinkedIn
+      - GitHub
 
 actions:
   skipLink:
@@ -88,27 +92,39 @@ realisations:
     value:
       logo:
         name: Logo
-        icon: [IconIllustrator]
+        icon:
+          - IconIllustrator
       charter:
         name: Charte graphique
-        icon: [IconIllustrator, IconInDesign]
+        icon:
+          - IconIllustrator
+          - IconInDesign
       identity:
         name: Identité visuelle
-        icon: [IconIllustrator, IconInDesign]
+        icon:
+          - IconIllustrator
+          - IconInDesign
       webdesign:
         name: WebDesign
       uxui:
         name: UX/UI Design
-        icon: [IconFigma]
+        icon:
+          - IconFigma
       integration:
         name: Intégration HTML/CSS
-        icon: [IconHtml, IconCss]
+        icon:
+          - IconHtml
+          - IconCss
       cms:
         name: Développement CMS
-        icon: [IconDrupal, IconPhp, IconMariadb]
+        icon:
+          - IconDrupal
+          - IconPhp
+          - IconMariadb
       nuxt:
         name: Développement Nuxt
-        icon: [IconNuxt]
+        icon:
+          - IconNuxt
       hosting:
         name: Hébergement web
   technologies: Technologies utilisées
