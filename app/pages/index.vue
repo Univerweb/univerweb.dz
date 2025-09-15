@@ -4,7 +4,7 @@ const { locale } = useI18n()
 const { data: home } = await useAsyncData(
   () => `home-${locale.value}`,
   () => queryCollection(`home_${locale.value}`)
-    .select('title', 'description', 'hero', 'sectionRealisation', 'sectionBlog')
+    .select('title', 'description', 'hero', 'sectionRealisation', 'sectionPrestations', 'sectionBlog')
     .first(),
   { watch: [locale] },
 )
@@ -32,7 +32,11 @@ const { data: home } = await useAsyncData(
       :cta="home.sectionRealisation.cta"
     />
 
-    <LazyPrestationCardGroup headline-tag="h2" title-tag="h3" />
+    <LazyPrestationCardGroup
+      headline-tag="h2"
+      :headline="home.sectionPrestations.headline"
+      title-tag="h3"
+    />
 
     <LazyArticleCardGroup
       headline-tag="h2"

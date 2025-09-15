@@ -19,6 +19,9 @@ sectionRealisation:
     label: فعّلوا أفكاركم
     path: realisations
 
+sectionPrestations:
+  headline: حلول متكاملة ومخصصة حسب الطلب.
+
 sectionBlog:
   headline: المعرفة الرقمية بمتناول نقرة.
   cta:

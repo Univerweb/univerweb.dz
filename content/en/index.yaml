@@ -21,6 +21,9 @@ sectionRealisation:
     label: Propel Your Ideas
     path: realisations
 
+sectionPrestations:
+  headline: Turnkey & Custom Solutions.
+
 sectionBlog:
   headline: Digital Knowledge Is Just a Click Away.
   cta:

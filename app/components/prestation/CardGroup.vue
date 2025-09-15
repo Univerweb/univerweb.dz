@@ -1,6 +1,11 @@
 <script setup lang="ts">
 interface Props {
   headlineTag?: string
+  headline: string
+  cta?: {
+    label: string
+    path: string
+  }
   titleTag?: string
 }
 
@@ -9,7 +14,7 @@ withDefaults(defineProps<Props>(), {
   titleTag: 'h2',
 })
 
-const { locale, t } = useI18n()
+const { locale } = useI18n()
 
 const { data: prestations } = await useAsyncData(
   () => `prestations-${locale.value}`,
@@ -24,7 +29,7 @@ const { data: prestations } = await useAsyncData(
   <section id="prestations" class="container">
     <div class="intro intro-justify">
       <Component :is="headlineTag" class="h1">
-        {{ t('prestations.headline') }}
+        {{ headline }}
       </Component>
     </div>
 

@@ -21,6 +21,9 @@ sectionRealisation:
     label: Propulsez vos idées
     path: realisations
 
+sectionPrestations:
+  headline: Des solutions clés en main et sur mesure.
+
 sectionBlog:
   headline: Le savoir digital à portée de clic.
   cta:

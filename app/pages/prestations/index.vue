@@ -1,10 +1,12 @@
 <script setup lang="ts">
+const { t } = useI18n()
+
 useSeo({ page: 'prestations' })
 </script>
 
 <template>
   <main>
-    <PrestationCardGroup />
+    <PrestationCardGroup :headline="t('prestations.headline')" />
     <LazyAppRequest />
   </main>
 </template>

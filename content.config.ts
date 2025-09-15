@@ -25,6 +25,9 @@ const Home = z.object({
     headline: z.string(),
     cta: Link,
   }),
+  sectionPrestations: z.object({
+    headline: z.string(),
+  }),
   sectionBlog: z.object({
     headline: z.string(),
     cta: Link,
