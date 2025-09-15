@@ -1,5 +1,10 @@
 import { defineContentConfig, defineCollection, z } from '@nuxt/content'
 
+const Link = z.object({
+  label: z.string(),
+  path: z.string().url(),
+})
+
 const Date = z.object({
   createdAt: z.date(),
   updatedAt: z.date(),
@@ -9,6 +14,14 @@ const List = z.array(z.object({
   title: z.string(),
   description: z.string(),
 }))
+
+const Home = z.object({
+  hero: z.object({
+    headline: z.string(),
+    lead: z.string(),
+    cta: Link,
+  }),
+})
 
 const Realisation = Date.extend({
   about: z.string(),
@@ -68,6 +81,22 @@ const Article = Date.extend({
 
 export default defineContentConfig({
   collections: {
+    home_fr: defineCollection({
+      type: 'page',
+      source: 'fr/index.yaml',
+      schema: Home,
+    }),
+    home_en: defineCollection({
+      type: 'page',
+      source: 'en/index.yaml',
+      schema: Home,
+    }),
+    home_ar: defineCollection({
+      type: 'page',
+      source: 'ar/index.yaml',
+      schema: Home,
+    }),
+
     realisation: defineCollection({
       type: 'page',
       source: 'realisations/*.yaml',

@@ -53,17 +53,6 @@ actions:
     text: Get in Touch
 
 home:
-  title: Website Creation, Hosting & Digital Marketing In Algeria
-  description:
-    '@:site.name supports your digital success with custom websites, reliable
-    hosting, a strong visual identity, and effective marketing. Boost your
-    online presence today.'
-  headline: Your Digital Success, Our Mission.
-  lead:
-    Your digital success relies on a high-performing online presence.
-    @:site.name is your ideal partner, integrating custom website creation,
-    strong brand identity, reliable hosting, and results-driven digital
-    marketing. Let’s build your growth together.
   actions:
     exploreProjects: Propel Your Ideas
     learnMore: Boost Your Digital Knowledge
