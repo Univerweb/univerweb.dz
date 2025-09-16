@@ -5,16 +5,11 @@ site:
 
 navigation:
   menu:
-    - path: realisations
-      label: Latest Work
-    - path: prestations
-      label: Services
-    - path: agence
-      label: The Agency
-    - path: contact
-      label: Contact
-    - path: blog
-      label: Blog
+    realisations: Latest Work
+    prestations: Services
+    agence: The Agency
+    contact: Contact
+    blog: Blog
   previous: ⇠ Previous
   next: Next ⇢
 
@@ -32,12 +27,9 @@ ariaLabels:
 
 actions:
   skipLink:
-    - path: header
-      label: Skip to header
-    - path: main
-      label: Skip to main content
-    - path: footer
-      label: Skip to footer
+    header: Skip to header
+    main: Skip to main content
+    footer: Skip to footer
   requestMeeting:
     headline: Convinced? Let’s Have A Coffee Together.
     text: Get in Touch

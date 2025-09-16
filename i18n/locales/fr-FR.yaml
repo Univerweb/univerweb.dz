@@ -5,16 +5,11 @@ site:
 
 navigation:
   menu:
-    - path: realisations
-      label: Réalisations
-    - path: prestations
-      label: Prestations
-    - path: agence
-      label: L’agence
-    - path: contact
-      label: Contact
-    - path: blog
-      label: Blog
+    realisations: Réalisations
+    prestations: Prestations
+    agence: L’agence
+    contact: Contact
+    blog: Blog
   previous: ⇠ Précédent
   next: Suivant ⇢
 
@@ -32,12 +27,9 @@ ariaLabels:
 
 actions:
   skipLink:
-    - path: header
-      label: Aller à l’en-tête
-    - path: main
-      label: Aller au contenu principal
-    - path: footer
-      label: Aller au pied de page
+    header: Aller à l’en-tête
+    main: Aller au contenu principal
+    footer: Aller au pied de page
   requestMeeting:
     headline: Convaincu ? Prenons un café ensemble.
     text: Contactez-nous

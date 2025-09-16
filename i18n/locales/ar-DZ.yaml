@@ -5,16 +5,11 @@ site:
 
 navigation:
   menu:
-    - path: realisations
-      label: آخر الأعمال
-    - path: prestations
-      label: الخدمات
-    - path: agence
-      label: الوكالة
-    - path: contact
-      label: التواصل معنا
-    - path: blog
-      label: مدوّنة
+    realisations: آخر الأعمال
+    prestations: الخدمات
+    agence: الوكالة
+    contact: التواصل معنا
+    blog: مدوّنة
   previous: ⇢ السابق
   next: التالي ⇠
 
@@ -32,12 +27,9 @@ ariaLabels:
 
 actions:
   skipLink:
-    - path: header
-      label: الانتقال إلى الرأس
-    - path: main
-      label: الانتقال إلى المحتوى الرئيسي
-    - path: footer
-      label: الانتقال إلى التذييل
+    header: الانتقال إلى الرأس
+    main: الانتقال إلى المحتوى الرئيسي
+    footer: الانتقال إلى التذييل
   requestMeeting:
     headline: مقتنع؟ لنشرب القهوة معًا.
     text: اتصل بنا

@@ -73,7 +73,7 @@ const { data: surround } = await useAsyncData(
 
 useSeo({
   pageSlug: 'realisations',
-  title: () => `${realisation.value!.title}${defaultLocale ? ' :' : ':'} ${realisation.value!.category} | ${t('navigation.menu[0].label')}`,
+  title: () => `${realisation.value!.title}${defaultLocale ? ' :' : ':'} ${realisation.value!.category} | ${t('navigation.menu.realisations')}`,
   description: () => realisation.value!.description,
   ogTitle: () => `${realisation.value!.title}${defaultLocale ? ' :' : ':'} ${realisation.value!.category}`,
   ogImageAlt: () => t('realisations.alt.banner', { client: realisation.value!.title }),
@@ -92,14 +92,14 @@ useSeo({
           <link property="url" :href="localeBaseUrl">
         </span>
         <span property="isPartOf" typeof="CollectionPage">
-          <meta property="name" :content="t('navigation.menu[0].label')">
+          <meta property="name" :content="t('navigation.menu.realisations')">
           <link property="url" :href="baseUrl(localePath('realisations'))">
         </span>
         <span property="mainEntityOfPage" typeof="WebPage">
           <link property="url" :href="baseUrl(path)">
         </span>
 
-        <AppBack path="realisations" :label="t('navigation.menu[0].label')" />
+        <AppBack path="realisations" :label="t('navigation.menu.realisations')" />
         <h1 id="name" property="name">
           {{ realisation.title }}
         </h1>

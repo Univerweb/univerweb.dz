@@ -13,7 +13,7 @@ const localePath = useLocalePath()
 
 <template>
   <NuxtLink :to="card.path" class="card" vocab="https://schema.org/" typeof="Article" property="hasPart">
-    <meta property="articleSection" :content="t('navigation.menu[4].label')">
+    <meta property="articleSection" :content="t('navigation.menu.blog')">
     <meta property="dateCreated datePublished" :content="new Date(card.createdAt).toISOString()">
     <meta property="dateModified" :content="new Date(card.updatedAt).toISOString()">
     <span property="publisher" typeof="Organization">
@@ -29,7 +29,7 @@ const localePath = useLocalePath()
       <link property="url" :href="localeBaseUrl">
     </span>
     <span property="isPartOf" typeof="CollectionPage">
-      <meta property="name" :content="t('navigation.menu[4].label')">
+      <meta property="name" :content="t('navigation.menu.blog')">
       <link property="url" :href="baseUrl(localePath('blog'))">
     </span>
 

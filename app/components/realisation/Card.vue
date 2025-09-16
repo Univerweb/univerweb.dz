@@ -24,7 +24,7 @@ const localePath = useLocalePath()
       <link property="url" :href="localeBaseUrl">
     </span>
     <span property="isPartOf" typeof="CollectionPage">
-      <meta property="name" :content="t('navigation.menu[0].label')">
+      <meta property="name" :content="t('navigation.menu.realisations')">
       <link property="url" :href="baseUrl(localePath('realisations'))">
     </span>
 

@@ -32,7 +32,7 @@ if (!article.value) {
 
 useSeo({
   pageSlug: 'blog',
-  title: () => `${article.value!.title} | ${t('navigation.menu[4].label')}`,
+  title: () => `${article.value!.title} | ${t('navigation.menu.blog')}`,
   description: () => article.value!.description,
   ogTitle: () => article.value!.title,
   ogImageAlt: () => article.value!.alt,
@@ -44,21 +44,21 @@ useSeo({
     <article vocab="https://schema.org/" typeof="Article" aria-labelledby="title">
       <header class="container intro">
         <meta property="description" :content="article.description">
-        <meta property="articleSection" :content="t('navigation.menu[4].label')">
+        <meta property="articleSection" :content="t('navigation.menu.blog')">
         <meta property="dateModified" :content="new Date(article.updatedAt).toISOString()">
         <span property="publisher" typeof="Organization">
           <meta property="name" :content="t('site.name')">
           <link property="url" :href="localeBaseUrl">
         </span>
         <span property="isPartOf" typeof="CollectionPage">
-          <meta property="name" :content="t('navigation.menu[4].label')">
+          <meta property="name" :content="t('navigation.menu.blog')">
           <link property="url" :href="baseUrl(localePath('blog'))">
         </span>
         <span property="mainEntityOfPage" typeof="WebPage">
           <link property="url" :href="baseUrl(path)">
         </span>
 
-        <AppBack path="blog" :label="t('navigation.menu[4].label')" />
+        <AppBack path="blog" :label="t('navigation.menu.blog')" />
         <h1 id="title" property="headline">
           {{ article.title }}
         </h1>

@@ -48,7 +48,7 @@ const { data: realisationsItem } = await useAsyncData(
 
 <template>
   <section id="realisations" class="container" vocab="https://schema.org/" typeof="CollectionPage">
-    <meta property="name" :content="t('navigation.menu[0].label')">
+    <meta property="name" :content="t('navigation.menu.realisations')">
     <link property="url" :href="baseUrl(localePath('realisations'))">
 
     <div class="intro intro-justify">

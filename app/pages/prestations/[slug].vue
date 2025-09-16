@@ -87,7 +87,7 @@ const leave = (el: Element) => {
           <link property="url" :href="baseUrl(path)">
         </span>
 
-        <AppBack path="prestations" :label="t('navigation.menu[1].label')" />
+        <AppBack path="prestations" :label="t('navigation.menu.prestations')" />
         <h1 id="title" property="name serviceType">
           {{ prestation.title }}
         </h1>

@@ -27,7 +27,7 @@ const { data: blogItem } = await useAsyncData(
 
 <template>
   <section id="blog" class="container" vocab="https://schema.org/" typeof="CollectionPage">
-    <meta property="name" :content="t('navigation.menu[4].label')">
+    <meta property="name" :content="t('navigation.menu.blog')">
     <link property="url" :href="baseUrl(localePath('blog'))">
 
     <div class="intro intro-justify">
