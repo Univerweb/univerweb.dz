@@ -118,16 +118,16 @@ alt:
 errors:
   404:
     title: Page Not Found
-    headline: You Got Lost In A Galaxy Far, Far Away… 404 😞
+    headline: You Got Lost in a Galaxy Far, Far Away… 404 😞
     lead:
       It seems the Force was not with this URL-404. The page you were looking
       for has disappeared, perhaps hidden by the Ewoks. Do not succumb to the
       Dark Side of frustration! Return to the Rebel Base to find your way.
     actions:
-      returnToHome: Return To The Rebel Base
+      returnToHome: Return to the Rebel Base
   500:
     title: Server Error
-    headline: Problem In The Heart Of The Main Reactor… 500 😞
+    headline: Problem in the Heart of the Main Reactor… 500 😞
     lead:
       Oops! It seems an interdimensional short-circuit-500 or a mischievous Ewok
       has wreaked havoc on our server. Don’t panic, our technical team is
