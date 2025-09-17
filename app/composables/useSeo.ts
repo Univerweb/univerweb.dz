@@ -135,7 +135,7 @@ export function useSeo(options: Options) {
 
       {
         type: 'application/ld+json',
-        innerHTML: {
+        innerHTML: computed(() => JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'Organization',
           'name': ogSiteName.value,
@@ -154,16 +154,12 @@ export function useSeo(options: Options) {
           },
           'email': config.public.baseEmail,
           'telephone': config.public.baseMobile,
-          'sameAs': () => organization.value!.platforms?.map(p => p.url) || [],
-          'address': {
-            '@type': 'PostalAddress',
-            'streetAddress': () => organization.value!.address.streetAddress,
-            'postalCode': () => organization.value!.address.postalCode,
-            'addressLocality': () => organization.value!.address.addressLocality,
-            'addressRegion': () => organization.value!.address.addressLocality,
-            'addressCountry': 'DZ',
-          },
-        },
+          'sameAs': organization.value?.platforms?.map(p => p.url) ?? [],
+          'address':
+            organization.value?.address
+              ? { '@type': 'PostalAddress', 'streetAddress': organization.value.address.streetAddress, 'postalCode': organization.value.address.postalCode, 'addressLocality': organization.value.address.addressLocality, 'addressRegion': organization.value.address.addressLocality, 'addressCountry': 'DZ' }
+              : undefined,
+        })),
       },
     ],
   })
