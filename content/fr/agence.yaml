@@ -12,7 +12,7 @@ lead:
   de bâtir une relation durable et de démontrer notre savoir-faire au service de
   votre croissance.'
 
-sectionMethod:
+method:
   headline: Atteindre votre succès, ensemble
   list:
     - title: Écoute active
@@ -45,7 +45,7 @@ sectionMethod:
         maintenance, les mises à jour et vous conseillons pour faire évoluer
         votre présence digitale et maximiser vos résultats.
 
-sectionChoose:
+choose:
   headline: Ce qui fait notre différence
   list:
     - title: Votre succès est notre priorité
