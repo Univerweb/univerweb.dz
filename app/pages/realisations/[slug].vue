@@ -35,6 +35,14 @@ if (!realisation.value) {
   })
 }
 
+useSeo({
+  page: { name: 'realisations', slug: true },
+  title: () => `${realisation.value!.title}${defaultLocale ? ' :' : ':'} ${realisation.value!.category} | ${t('navigation.menu.realisations')}`,
+  description: () => realisation.value!.description,
+  ogTitle: () => `${realisation.value!.title}${defaultLocale ? ' :' : ':'} ${realisation.value!.category}`,
+  ogImageAlt: () => t('realisations.alt.banner', { client: realisation.value!.title }),
+})
+
 const { data: related } = await useAsyncData(
   () => `realisation-related-${locale.value}-${slug}`,
   async () => {
@@ -70,15 +78,6 @@ const { data: surround } = await useAsyncData(
   () => queryCollectionItemSurroundings(`realisations_item_${locale.value}`, path),
   { watch: [locale] },
 )
-
-useSeo({
-  pageSlug: true,
-  page: 'realisations',
-  title: () => `${realisation.value!.title}${defaultLocale ? ' :' : ':'} ${realisation.value!.category} | ${t('navigation.menu.realisations')}`,
-  description: () => realisation.value!.description,
-  ogTitle: () => `${realisation.value!.title}${defaultLocale ? ' :' : ':'} ${realisation.value!.category}`,
-  ogImageAlt: () => t('realisations.alt.banner', { client: realisation.value!.title }),
-})
 </script>
 
 <template>

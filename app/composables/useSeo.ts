@@ -1,8 +1,9 @@
+type PageKey = | 'home' | 'realisations' | 'prestations' | 'agence' | 'contact' | 'blog'
+
 interface Options {
-  page: 'home' | 'realisations' | 'prestations' | 'agence' | 'contact' | 'blog'
-  pageSlug?: boolean
-  title: () => string
-  description: () => string
+  page: PageKey | { name: PageKey, slug?: boolean }
+  title?: () => string
+  description?: () => string
   ogTitle?: () => string
   ogImageAlt?: () => string
   ogImageWidth?: number
@@ -26,6 +27,9 @@ export function useSeo(options: Options) {
     { watch: [locale] },
   )
 
+  const pageName = typeof options.page === 'string' ? options.page : options.page.name
+  const pageSlug = typeof options.page === 'object' && options.page.slug === true
+
   const locales = { fr: 'fr_FR', en: 'en_US', ar: 'ar_DZ' }
 
   const ogSiteName = computed(() => t('site.name'))
@@ -41,8 +45,8 @@ export function useSeo(options: Options) {
   const linkAltEn = baseUrl(localePath(path, 'en'))
   const linkAltAr = baseUrl(localePath(path, 'ar'))
 
-  const title: () => string = options.title
-  const description: () => string = options.description
+  const title: () => string = options.title || (() => t(`navigation.menu.${pageName}`))
+  const description: () => string = options.description || (() => '')
   const ogTitle: () => string = options.ogTitle || title
 
   const ogImage: ComputedRef<string | undefined> = (() => {
@@ -50,8 +54,7 @@ export function useSeo(options: Options) {
       return computed(() => img(localePath(`${path}_banner`, 'fr'),
         { format: 'webp', width: options.ogImageWidth || defaultOgImageWidth, height: options.ogImageHeight || defaultOgImageHeight },
         { provider: 'cloudinary' },
-      ),
-      )
+      ))
     }
 
     else {
@@ -88,7 +91,7 @@ export function useSeo(options: Options) {
     twitterImageHeight: options.ogImageHeight || defaultOgImageHeight,
     twitterImageType: 'image/jpeg',
     colorScheme: 'light dark',
-    themeColor: computed(() => (mode.value === 'dark' ? '#111827' : '#fff')),
+    themeColor: computed(() => mode.value === 'dark' ? '#111827' : '#fff'),
     appleMobileWebAppTitle: ogSiteName,
   })
 
@@ -121,8 +124,8 @@ export function useSeo(options: Options) {
 
           const items = [
             listItem(1, ogSiteName.value, localeBaseUrl.value),
-            listItem(2, t(`navigation.menu.${options.page}`), baseUrl(localePath(options.page))),
-            ...(options.pageSlug ? [listItem(3, ogTitle(), ogUrl)] : []),
+            listItem(2, t(`navigation.menu.${pageName}`), baseUrl(localePath(pageName))),
+            ...(pageSlug ? [listItem(3, ogTitle(), ogUrl)] : []),
           ]
 
           return JSON.stringify({
