@@ -65,16 +65,15 @@ useSeo({
 
         <dl class="meta">
           <dt id="published" class="visually-hidden">
-            {{ t('blog.ariaLabelledby.published') }}
+            {{ t('ariaLabelledby.published') }}
           </dt>
           <dd aria-labelledby="published">
             <NuxtTime property="dateCreated datePublished" :datetime="article.createdAt" :locale="head.htmlAttrs.lang" date-style="long" />
           </dd>
           <dt id="author" class="visually-hidden">
-            {{ t('blog.ariaLabelledby.author') }}
+            {{ t('ariaLabelledby.author') }}
           </dt>
           <dd aria-labelledby="author">
-            {{ t('blog.by') }}
             <a v-if="article.author && article.author.name && article.author.url" :href="article.author.url" target="_blank" property="author" typeof="Person">
               <span property="name">@{{ article.author.name }}</span>
               <link property="url" :href="article.author.url">
@@ -85,7 +84,7 @@ useSeo({
             </span>
           </dd>
           <dt id="keywords" class="visually-hidden">
-            {{ t('blog.ariaLabelledby.keywords') }}
+            {{ t('ariaLabelledby.keywords') }}
           </dt>
           <dd aria-labelledby="keywords">
             <ul class="tags">
@@ -111,6 +110,6 @@ useSeo({
 
     <LazyArticleShare :title="article.title" :path="baseUrl(path)" />
 
-    <LazyAppNav :prev="surround?.[0]" :next="surround?.[1]" :aria-label="t('blog.ariaLabels.nav')" />
+    <LazyAppNav :prev="surround?.[0]" :next="surround?.[1]" :aria-label="t('ariaLabels.articleNavigation')" />
   </main>
 </template>

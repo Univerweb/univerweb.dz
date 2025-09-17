@@ -185,7 +185,7 @@ const leave = (el: Element) => {
 
     <aside class="container row" aria-labelledby="other">
       <h2 id="other" class="col col--1-5">
-        {{ t('prestations.other') }}
+        {{ t('headings.otherTurnkey') }}
       </h2>
       <div class="col card-group">
         <PrestationCard v-for="card in related" :key="card.path" :card title-tag="h3" />

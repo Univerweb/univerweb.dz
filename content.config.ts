@@ -86,7 +86,6 @@ const Agence = z.object({
 
 const Contact = z.object({
   lead: z.string(),
-  other: z.string(),
   address: z.object({
     streetAddress: z.string(),
     postalCode: z.string(),

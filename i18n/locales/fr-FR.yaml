@@ -24,6 +24,16 @@ ariaLabels:
   mobile: Mobile
   email: E-mail
   joinUs: Rejoignez-nous sur
+  projectNavigation: Navigation entre les projets
+  articleNavigation: Navigation entre les articles
+  copy: Copier le lien de l’article
+  x: Partager cet article sur X
+  linkedIn: Partager cet article sur LinkedIn
+
+ariaLabelledby:
+  published: Date de création
+  author: Auteur
+  keywords: Mots-clés
 
 actions:
   skipLink:
@@ -33,94 +43,78 @@ actions:
   requestMeeting:
     headline: Convaincu ? Prenons un café ensemble.
     text: Contactez-nous
-
-realisations:
-  client: Client
-  category:
-    label: Catégorie
-    value:
-      showcaseWebsite: Site vitrine
-      institutionalWebsite: Site institutionnel
-      functionalWebsite: Site fonctionnel
-      listingsWebsite: Site d’annonces
-      newsWebsite: Site d’actualité
-      eCatalogue: E-catalogue
-      eCatalogueBlog: E-catalogue + Blog
-      onePageWebsite: Site One-page
-  services:
-    label: Prestations effectuées
-    value:
-      logo:
-        name: Logo
-        icon:
-          - IconIllustrator
-      charter:
-        name: Charte graphique
-        icon:
-          - IconIllustrator
-          - IconInDesign
-      identity:
-        name: Identité visuelle
-        icon:
-          - IconIllustrator
-          - IconInDesign
-      webdesign:
-        name: WebDesign
-      uxui:
-        name: UX/UI Design
-        icon:
-          - IconFigma
-      integration:
-        name: Intégration HTML/CSS
-        icon:
-          - IconHtml
-          - IconCss
-      cms:
-        name: Développement CMS
-        icon:
-          - IconDrupal
-          - IconPhp
-          - IconMariadb
-      nuxt:
-        name: Développement Nuxt
-        icon:
-          - IconNuxt
-      hosting:
-        name: Hébergement web
-  technologies: Technologies utilisées
-  about: À propos de
   visit: Visiter le site web
-  alt:
-    banner:
-      Bannière du site web de {client}, montrant notamment son logo et son menu
-      de navigation.
-    preview:
-      Capture d’écran complète d’une page du site web de {client}, montrant sa
-      structure et son contenu.
-  related: Autre projets similaires & sur mesure
-  ariaLabels:
-    nav: Navigation entre les projets
+  copy: Copié !
 
-prestations:
-  other: Autres solutions clés en main & sur mesure
-
-contact:
+headings:
+  client: Client
+  category: Catégorie
+  completedServices: Prestations effectuées
+  technologiesUsed: Technologies utilisées
+  about: À propos de {client}
+  otherSimilar: Autre projets similaires & sur mesure
+  otherTurnkey: Autres solutions clés en main & sur mesure
+  otherContact: Autres moyens de nous contacter
   manager: Gérant
   support: Soutien technique
+  shareArticle: Partager l’article
 
-blog:
-  by: par
-  share: Partager l’article
-  ariaLabelledby:
-    published: Date de création
-    author: Auteur
-    keywords: Mots-clés
-  ariaLabels:
-    copy: Copier le lien de l’article
-    x: Partager cet article sur X
-    linkedIn: Partager cet article sur LinkedIn
-    nav: Navigation entre les articles
-  copy: Copié !
+category:
+  showcaseWebsite: Site vitrine
+  institutionalWebsite: Site institutionnel
+  functionalWebsite: Site fonctionnel
+  listingsWebsite: Site d’annonces
+  newsWebsite: Site d’actualité
+  eCatalogue: E-catalogue
+  eCatalogueBlog: E-catalogue + Blog
+  onePageWebsite: Site One-page
+
+services:
+  logo:
+    name: Logo
+    icon:
+      - IconIllustrator
+  charter:
+    name: Charte graphique
+    icon:
+      - IconIllustrator
+      - IconInDesign
+  identity:
+    name: Identité visuelle
+    icon:
+      - IconIllustrator
+      - IconInDesign
+  webdesign:
+    name: WebDesign
+  uxui:
+    name: UX/UI Design
+    icon:
+      - IconFigma
+  integration:
+    name: Intégration HTML/CSS
+    icon:
+      - IconHtml
+      - IconCss
+  cms:
+    name: Développement CMS
+    icon:
+      - IconDrupal
+      - IconPhp
+      - IconMariadb
+  nuxt:
+    name: Développement Nuxt
+    icon:
+      - IconNuxt
+  hosting:
+    name: Hébergement web
+
+alt:
+  banner:
+    Bannière du site web de {client}, montrant notamment son logo et son menu de
+    navigation.
+  preview:
+    Capture d’écran complète d’une page du site web de {client}, montrant sa
+    structure et son contenu.
 
 errors:
   404:

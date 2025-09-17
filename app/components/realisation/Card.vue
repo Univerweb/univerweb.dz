@@ -34,7 +34,7 @@ const localePath = useLocalePath()
 
     <div class="inner">
       <span class="h3">
-        {{ t(`realisations.category.value.${card.common.category}`) }}
+        {{ t(`category.${card.common.category}`) }}
       </span>
       <Component :is="titleTag" property="name" class="work">
         {{ card.translated.title }}

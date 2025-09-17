@@ -7,7 +7,7 @@ const config = useRuntimeConfig()
 const { data: contact } = await useAsyncData(
   () => `contact-${locale.value}`,
   () => queryCollection(`contact_${locale.value}`)
-    .select('title', 'description', 'lead', 'other')
+    .select('title', 'description', 'lead')
     .first(),
   { watch: [locale] },
 )
@@ -65,12 +65,12 @@ function zoom() {
 
     <section class="container request other" aria-labelledby="other">
       <div id="other" class="intro">
-        <h2>{{ contact.other }}</h2>
+        <h2>{{ t('headings.otherContact') }}</h2>
       </div>
       <div class="row items-2">
         <div class="item">
           <h3 class="h6">
-            {{ t('contact.manager') }}
+            {{ t('headings.manager') }}
           </h3>
           <a :href="`mailto:${config.public.managerEmail}`" class="link outfit move">
             {{ config.public.managerEmail }}
@@ -78,7 +78,7 @@ function zoom() {
         </div>
         <div class="item item-2">
           <h3 class="h6">
-            {{ t('contact.support') }}
+            {{ t('headings.support') }}
           </h3>
           <a :href="`mailto:${config.public.supportEmail}`" class="link outfit move">
             {{ config.public.supportEmail }}

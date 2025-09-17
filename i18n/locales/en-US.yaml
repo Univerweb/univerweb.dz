@@ -24,6 +24,16 @@ ariaLabels:
   mobile: Mobile
   email: E-mail
   joinUs: Join us on
+  projectNavigation: Project Navigation
+  articleNavigation: Article Navigation
+  copy: Copy Article Link
+  x: Share This Article on X
+  linkedIn: Share This Article on LinkedIn
+
+ariaLabelledby:
+  published: Creation Date
+  author: Author
+  keywords: Keywords
 
 actions:
   skipLink:
@@ -33,93 +43,77 @@ actions:
   requestMeeting:
     headline: Convinced? Let’s Have A Coffee Together.
     text: Get in Touch
-
-realisations:
-  client: Client
-  category:
-    label: Category
-    value:
-      showcaseWebsite: Showcase Website
-      institutionalWebsite: Institutional Website
-      functionalWebsite: Functional Website
-      listingsWebsite: Listings Website
-      newsWebsite: News Website
-      eCatalogue: E-catalogue
-      eCatalogueBlog: E-catalogue + Blog
-      onePageWebsite: One-Page Website
-  services:
-    label: Completed Services
-    value:
-      logo:
-        name: Logo
-        icon:
-          - IconIllustrator
-      charter:
-        name: Graphic Charter
-        icon:
-          - IconIllustrator
-          - IconInDesign
-      identity:
-        name: Visual Identity
-        icon:
-          - IconIllustrator
-          - IconInDesign
-      webdesign:
-        name: Web Design
-      uxui:
-        name: UX/UI Design
-        icon:
-          - IconFigma
-      integration:
-        name: HTML/CSS Integration
-        icon:
-          - IconHtml
-          - IconCss
-      cms:
-        name: CMS Development
-        icon:
-          - IconDrupal
-          - IconPhp
-          - IconMariadb
-      nuxt:
-        name: Nuxt Development
-        icon:
-          - IconNuxt
-      hosting:
-        name: Web Hosting
-  technologies: Technologies Used
-  about: About
   visit: Visit Website
-  alt:
-    banner:
-      Website banner for {client}, notably showing its logo and navigation menu.
-    preview:
-      Full page screenshot of a page from {client}’s website, showing its
-      structure and content.
-  related: Other Similar & Tailor-Made Projects
-  ariaLabels:
-    nav: Project Navigation
+  copy: Copied!
 
-prestations:
-  other: Other Turnkey & Custom Solutions
-
-contact:
+headings:
+  client: Client
+  category: Category
+  completedServices: Completed Services
+  technologiesUsed: Technologies Used
+  about: About {client}
+  otherSimilar: Other Similar & Tailor-Made Projects
+  otherTurnkey: Other Turnkey & Custom Solutions
+  otherContact: Other Ways To Contact Us
   manager: Manager
   support: Technical Support
+  shareArticle: Share The Article
 
-blog:
-  by: by
-  share: Share The Article
-  ariaLabelledby:
-    published: Creation Date
-    author: Author
-    keywords: Keywords
-  ariaLabels:
-    copy: Copy Article Link
-    x: Share This Article on X
-    linkedIn: Share This Article on LinkedIn
-    nav: Article Navigation
-  copy: Copied!
+category:
+  showcaseWebsite: Showcase Website
+  institutionalWebsite: Institutional Website
+  functionalWebsite: Functional Website
+  listingsWebsite: Listings Website
+  newsWebsite: News Website
+  eCatalogue: E-catalogue
+  eCatalogueBlog: E-catalogue + Blog
+  onePageWebsite: One-Page Website
+
+services:
+  logo:
+    name: Logo
+    icon:
+      - IconIllustrator
+  charter:
+    name: Graphic Charter
+    icon:
+      - IconIllustrator
+      - IconInDesign
+  identity:
+    name: Visual Identity
+    icon:
+      - IconIllustrator
+      - IconInDesign
+  webdesign:
+    name: Web Design
+  uxui:
+    name: UX/UI Design
+    icon:
+      - IconFigma
+  integration:
+    name: HTML/CSS Integration
+    icon:
+      - IconHtml
+      - IconCss
+  cms:
+    name: CMS Development
+    icon:
+      - IconDrupal
+      - IconPhp
+      - IconMariadb
+  nuxt:
+    name: Nuxt Development
+    icon:
+      - IconNuxt
+  hosting:
+    name: Web Hosting
+
+alt:
+  banner:
+    Website banner for {client}, notably showing its logo and navigation menu.
+  preview:
+    Full page screenshot of a page from {client}’s website, showing its
+    structure and content.
 
 errors:
   404:
