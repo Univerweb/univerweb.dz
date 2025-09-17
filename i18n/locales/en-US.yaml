@@ -114,21 +114,3 @@ alt:
   preview:
     Full-page screenshot of a page from {client}’s website, showing its
     structure and content.
-
-errors:
-  404:
-    title: Page Not Found
-    headline: You Got Lost in a Galaxy Far, Far Away… 404 😞
-    lead:
-      It seems the Force was not with this URL-404. The page you were looking
-      for has disappeared, perhaps hidden by the Ewoks. Do not succumb to the
-      Dark Side of frustration! Return to the Rebel Base to find your way.
-    actions:
-      returnToHome: Return to the Rebel Base
-  500:
-    title: Server Error
-    headline: Problem in the Heart of the Main Reactor… 500 😞
-    lead:
-      Oops! It seems an interdimensional short-circuit-500 or a mischievous Ewok
-      has wreaked havoc on our server. Don’t panic, our technical team is
-      already on it to restore the situation. We apologize for this setback.

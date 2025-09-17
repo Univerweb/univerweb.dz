@@ -108,6 +108,12 @@ const Article = Date.extend({
   }).optional(),
 })
 
+const Error = z.object({
+  headline: z.string(),
+  lead: z.string(),
+  cta: z.string(),
+})
+
 export default defineContentConfig({
   collections: {
     home_fr: defineCollection({
@@ -261,6 +267,38 @@ export default defineContentConfig({
       type: 'page',
       source: { include: 'ar/blog/*.md', exclude: ['ar/blog/index.yaml'] },
       schema: Article,
+    }),
+
+    error_404_fr: defineCollection({
+      type: 'page',
+      source: 'fr/errors/404.yaml',
+      schema: Error,
+    }),
+    error_404_en: defineCollection({
+      type: 'page',
+      source: 'en/errors/404.yaml',
+      schema: Error,
+    }),
+    error_404_ar: defineCollection({
+      type: 'page',
+      source: 'ar/errors/404.yaml',
+      schema: Error,
+    }),
+
+    error_500_fr: defineCollection({
+      type: 'page',
+      source: 'fr/errors/500.yaml',
+      schema: Error,
+    }),
+    error_500_en: defineCollection({
+      type: 'page',
+      source: 'en/errors/500.yaml',
+      schema: Error,
+    }),
+    error_500_ar: defineCollection({
+      type: 'page',
+      source: 'ar/errors/500.yaml',
+      schema: Error,
     }),
   },
 })
