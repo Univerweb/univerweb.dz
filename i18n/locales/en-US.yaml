@@ -22,7 +22,7 @@ ariaLabels:
     open: Open menu
     close: Close menu
   mobile: Mobile
-  email: E-mail
+  email: Email
   joinUs: Join us on
   projectNavigation: Project Navigation
   articleNavigation: Article Navigation
@@ -41,7 +41,7 @@ actions:
     main: Skip to main content
     footer: Skip to footer
   requestMeeting:
-    headline: Convinced? Let’s Have A Coffee Together.
+    headline: Convinced? Let’s Have a Coffee Together.
     text: Get in Touch
   visit: Visit Website
   copy: Copied!
@@ -54,10 +54,10 @@ headings:
   about: About {client}
   otherSimilar: Other Similar & Tailor-Made Projects
   otherTurnkey: Other Turnkey & Custom Solutions
-  otherContact: Other Ways To Contact Us
+  otherContact: Other Ways to Contact Us
   manager: Manager
   support: Technical Support
-  shareArticle: Share The Article
+  shareArticle: Share the Article
 
 category:
   showcaseWebsite: Showcase Website
@@ -112,7 +112,7 @@ alt:
   banner:
     Website banner for {client}, notably showing its logo and navigation menu.
   preview:
-    Full page screenshot of a page from {client}’s website, showing its
+    Full-page screenshot of a page from {client}’s website, showing its
     structure and content.
 
 errors:

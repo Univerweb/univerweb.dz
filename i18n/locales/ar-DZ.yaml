@@ -54,7 +54,7 @@ headings:
   about: نبذة عن {client}
   otherSimilar: مشاريع أخرى مماثلة ومخصصة حسب الطلب
   otherTurnkey: حلول أخرى متكاملة ومخصصة حسب الطلب
-  otherContact: طرق أخرى التواصل معنا
+  otherContact: طرق أخرى للتواصل معنا
   manager: مسيّر
   support: دعم تقني
   shareArticle: مشاركة المقال
@@ -75,7 +75,7 @@ services:
     icon:
       - IconIllustrator
   charter:
-    name: تصميم مخطط رسومي
+    name: تصميم الهوية البصرية
     icon:
       - IconIllustrator
       - IconInDesign
@@ -106,10 +106,10 @@ services:
     icon:
       - IconNuxt
   hosting:
-    name: إستضافة الموقع
+    name: استضافة الموقع
 
 alt:
-  banner: راية موقع الويب ل{client}، تعرض بشكل خاص شعاره وقائمة التنقل.
+  banner: لافتة موقع الويب ل{client}، تعرض بشكل خاص شعاره وقائمة التنقل.
   preview: لقطة شاشة كاملة لصفحة من موقع الويب ل{client}، تعرض هيكلها ومحتواها.
 
 errors:
