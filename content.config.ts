@@ -74,12 +74,12 @@ const Prestation = z.object({
 const Agence = z.object({
   headline: z.string(),
   lead: z.string(),
-  method: z.object({
-    title: z.string(),
+  sectionMethod: z.object({
+    headline: z.string(),
     list: List,
   }),
-  choose: z.object({
-    title: z.string(),
+  sectionChoose: z.object({
+    headline: z.string(),
     list: List,
   }),
 })
