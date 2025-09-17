@@ -43,7 +43,7 @@ export function useSeo(options: Options) {
 
   const title: () => string = options.title
   const description: () => string = options.description
-  const ogTitle: () => string = options.ogTitle || options.title || title
+  const ogTitle: () => string = options.ogTitle || title
 
   const ogImage: ComputedRef<string | undefined> = (() => {
     if (options.ogImageAlt) {
@@ -120,7 +120,7 @@ export function useSeo(options: Options) {
           })
 
           const items = [
-            listItem(1, ogSiteName.value, `${localeBaseUrl}`),
+            listItem(1, ogSiteName.value, localeBaseUrl.value),
             listItem(2, t(`navigation.menu.${options.page}`), baseUrl(localePath(options.page))),
             ...(options.pageSlug ? [listItem(3, ogTitle(), ogUrl)] : []),
           ]
@@ -139,7 +139,7 @@ export function useSeo(options: Options) {
           '@context': 'https://schema.org',
           '@type': 'Organization',
           'name': ogSiteName.value,
-          'url': localeBaseUrl,
+          'url': localeBaseUrl.value,
           'image': {
             '@type': 'ImageObject',
             'url': defaultOgImage.value,
