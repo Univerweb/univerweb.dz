@@ -33,7 +33,8 @@ if (!prestation.value) {
 }
 
 useSeo({
-  pageSlug: 'prestations',
+  pageSlug: true,
+  page: 'prestations',
   title: () => prestation.value!.seo.title!,
   description: () => prestation.value!.seo.description!,
   ogTitle: () => prestation.value!.seo.title!,

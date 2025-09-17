@@ -72,7 +72,8 @@ const { data: surround } = await useAsyncData(
 )
 
 useSeo({
-  pageSlug: 'realisations',
+  pageSlug: true,
+  page: 'realisations',
   title: () => `${realisation.value!.title}${defaultLocale ? ' :' : ':'} ${realisation.value!.category} | ${t('navigation.menu.realisations')}`,
   description: () => realisation.value!.description,
   ogTitle: () => `${realisation.value!.title}${defaultLocale ? ' :' : ':'} ${realisation.value!.category}`,

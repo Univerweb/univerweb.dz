@@ -31,7 +31,8 @@ if (!article.value) {
 }
 
 useSeo({
-  pageSlug: 'blog',
+  pageSlug: true,
+  page: 'blog',
   title: () => `${article.value!.title} | ${t('navigation.menu.blog')}`,
   description: () => article.value!.description,
   ogTitle: () => article.value!.title,

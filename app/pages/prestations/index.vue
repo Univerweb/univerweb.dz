@@ -4,10 +4,16 @@ const { locale } = useI18n()
 const { data: prestationsPage } = await useAsyncData(
   () => `prestations-page-${locale.value}`,
   () => queryCollection(`prestations_page_${locale.value}`)
-    .select('headline')
+    .select('title', 'description', 'headline')
     .first(),
   { watch: [locale] },
 )
+
+useSeo({
+  page: 'prestations',
+  title: () => prestationsPage.value!.title,
+  description: () => prestationsPage.value!.description,
+})
 </script>
 
 <template>
