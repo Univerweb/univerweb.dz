@@ -19,6 +19,40 @@ export function useSeo(options: Options) {
   const mode = useColorMode({ disableTransition: false })
   const config = useRuntimeConfig()
 
+  const pageName = typeof options.page === 'string' ? options.page : options.page.name
+  const pageSlug = typeof options.page === 'object' && options.page.slug === true
+
+  const locales = { fr: 'fr_FR', en: 'en_US', ar: 'ar_DZ' }
+
+  const defaultOgImage = computed(() => baseUrl(`/images/univerweb${locale.value === 'ar' ? '-ar' : ''}.jpg`))
+  const defaultOgImageWidth = 2400
+  const defaultOgImageHeight = 1256
+
+  const ogSiteName = computed(() => t('site.name'))
+
+  const title: () => string = options.title || (() => t(`navigation.menu.${pageName}`))
+  const description: () => string = options.description || (() => '')
+  const ogTitle: () => string = options.ogTitle || title
+
+  const ogUrl = baseUrl(path)
+  const ogLocale = computed(() => locales[locale.value as keyof typeof locales] || 'fr_FR')
+
+  const ogLocaleAlternate = computed(() => Object
+    .values(locales)
+    .filter(localeCode => localeCode !== ogLocale.value),
+  )
+
+  const ogImage: ComputedRef<string | undefined> = computed(() => options.ogImageAlt
+    ? img(localePath(`${path}_banner`, 'fr'), { format: 'webp', width: options.ogImageWidth || defaultOgImageWidth, height: options.ogImageHeight || defaultOgImageHeight }, { provider: 'cloudinary' })
+    : defaultOgImage.value,
+  )
+
+  const ogImageAlt: () => string = options.ogImageAlt || (() => t('site.logo'))
+
+  const linkAltFr = baseUrl(localePath(path, 'fr'))
+  const linkAltEn = baseUrl(localePath(path, 'en'))
+  const linkAltAr = baseUrl(localePath(path, 'ar'))
+
   const { data: organization } = useAsyncData(
     () => `seo-${locale.value}`,
     () => queryCollection(`contact_${locale.value}`)
@@ -26,43 +60,6 @@ export function useSeo(options: Options) {
       .first(),
     { watch: [locale] },
   )
-
-  const pageName = typeof options.page === 'string' ? options.page : options.page.name
-  const pageSlug = typeof options.page === 'object' && options.page.slug === true
-
-  const locales = { fr: 'fr_FR', en: 'en_US', ar: 'ar_DZ' }
-
-  const ogSiteName = computed(() => t('site.name'))
-  const ogUrl = baseUrl(path)
-  const ogLocale = computed(() => locales[locale.value as keyof typeof locales] || 'fr_FR')
-  const ogLocaleAlternate = computed(() => Object.values(locales).filter(localeCode => localeCode !== ogLocale.value))
-
-  const defaultOgImage = computed(() => baseUrl(`/images/univerweb${locale.value === 'ar' ? '-ar' : ''}.jpg`))
-  const defaultOgImageWidth = 2400
-  const defaultOgImageHeight = 1256
-
-  const linkAltFr = baseUrl(localePath(path, 'fr'))
-  const linkAltEn = baseUrl(localePath(path, 'en'))
-  const linkAltAr = baseUrl(localePath(path, 'ar'))
-
-  const title: () => string = options.title || (() => t(`navigation.menu.${pageName}`))
-  const description: () => string = options.description || (() => '')
-  const ogTitle: () => string = options.ogTitle || title
-
-  const ogImage: ComputedRef<string | undefined> = (() => {
-    if (options.ogImageAlt) {
-      return computed(() => img(localePath(`${path}_banner`, 'fr'),
-        { format: 'webp', width: options.ogImageWidth || defaultOgImageWidth, height: options.ogImageHeight || defaultOgImageHeight },
-        { provider: 'cloudinary' },
-      ))
-    }
-
-    else {
-      return defaultOgImage
-    }
-  })()
-
-  const ogImageAlt: () => string = options.ogImageAlt || (() => t('site.logo'))
 
   useSeoMeta({
     titleTemplate: computed(() => `%s | ${ogSiteName.value}`),
