@@ -1,35 +1,31 @@
 <script setup lang="ts">
-interface Props {
+defineProps<{
   headlineTag?: string
+  headline: string
   titleTag?: string
-}
+}>()
 
-withDefaults(defineProps<Props>(), {
-  headlineTag: 'h1',
-  titleTag: 'h2',
-})
+const { locale } = useI18n()
 
-const { path } = useRoute()
-const { locale, t } = useI18n()
-
-const { data: prestations } = await useAsyncData(`prestations-${path}`, () =>
-  queryCollection(`prestation_${locale.value}`)
+const { data: prestationsItem } = await useAsyncData(
+  () => `prestations-item-${locale.value}`,
+  () => queryCollection(`prestations_item_${locale.value}`)
     .select('path', 'title', 'description', 'cta')
-    .all(), {
-  watch: [locale],
-})
+    .all(),
+  { watch: [locale] },
+)
 </script>
 
 <template>
   <section id="prestations" class="container">
     <div class="intro intro-justify">
-      <Component :is="headlineTag" class="h1">
-        {{ t('prestations.headline') }}
+      <Component :is="headlineTag || 'h1'" class="h1">
+        {{ headline }}
       </Component>
     </div>
 
     <div class="card-group">
-      <PrestationCard v-for="card in prestations" :key="card.path" :card :title-tag="titleTag" />
+      <PrestationCard v-for="card in prestationsItem" :key="card.path" :card :title-tag="titleTag || 'h2'" />
     </div>
   </section>
 </template>

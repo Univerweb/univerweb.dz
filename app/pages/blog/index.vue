@@ -1,10 +1,24 @@
 <script setup lang="ts">
-useSeo({ page: 'blog' })
+const { locale } = useI18n()
+
+const { data: blogPage } = await useAsyncData(
+  () => `blog-page-${locale.value}`,
+  () => queryCollection(`blog_page_${locale.value}`)
+    .select('title', 'description', 'headline')
+    .first(),
+  { watch: [locale] },
+)
+
+useSeo({
+  page: 'blog',
+  title: () => blogPage.value!.title,
+  description: () => blogPage.value!.title,
+})
 </script>
 
 <template>
-  <main>
-    <ArticleCardGroup />
+  <main v-if="blogPage">
+    <ArticleCardGroup :headline="blogPage.headline" />
     <LazyAppRequest />
   </main>
 </template>

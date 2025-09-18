@@ -1,0 +1,117 @@
+site:
+  name: Univerweb
+  logo: Logo d’Univerweb
+  copy: Copyright © {year} @:site.name{'.'} Tous droits réservés.
+
+navigation:
+  menu:
+    realisations: Réalisations
+    prestations: Prestations
+    agence: L’agence
+    contact: Contact
+    blog: Blog
+  previous: ⇠ Précédent
+  next: Suivant ⇢
+
+ariaLabels:
+  langSwitch: Switch to English
+  theme:
+    light: Passer au mode sombre
+    dark: Passer au mode clair
+  menu:
+    open: Ouvrir le menu
+    close: Fermer le menu
+  mobile: Mobile
+  email: E-mail
+  joinUs: Rejoignez-nous sur
+  projectNavigation: Navigation entre les projets
+  articleNavigation: Navigation entre les articles
+  copy: Copier le lien de l’article
+  x: Partager cet article sur X
+  linkedIn: Partager cet article sur LinkedIn
+
+ariaLabelledby:
+  published: Date de création
+  author: Auteur
+  keywords: Mots-clés
+
+actions:
+  skipLink:
+    header: Aller à l’en-tête
+    main: Aller au contenu principal
+    footer: Aller au pied de page
+  requestMeeting:
+    headline: Convaincu ? Prenons un café ensemble.
+    text: Contactez-nous
+  visit: Visiter le site web
+  copy: Copié !
+
+headings:
+  client: Client
+  category: Catégorie
+  completedServices: Prestations effectuées
+  technologiesUsed: Technologies utilisées
+  about: À propos de {client}
+  otherSimilar: Autres projets similaires & sur mesure
+  otherTurnkey: Autres solutions clés en main & sur mesure
+  otherContact: Autres moyens pour nous contacter
+  manager: Gérant
+  support: Soutien technique
+  shareArticle: Partager l’article
+
+category:
+  showcaseWebsite: Site vitrine
+  institutionalWebsite: Site institutionnel
+  functionalWebsite: Site fonctionnel
+  listingsWebsite: Site d’annonces
+  newsWebsite: Site d’actualité
+  eCatalogue: E-catalogue
+  eCatalogueBlog: E-catalogue + Blog
+  onePageWebsite: Site One-page
+
+services:
+  logo:
+    name: Logo
+    icon:
+      - IconIllustrator
+  charter:
+    name: Charte graphique
+    icon:
+      - IconIllustrator
+      - IconInDesign
+  identity:
+    name: Identité visuelle
+    icon:
+      - IconIllustrator
+      - IconInDesign
+  webdesign:
+    name: WebDesign
+  uxui:
+    name: UX/UI Design
+    icon:
+      - IconFigma
+  integration:
+    name: Intégration HTML/CSS
+    icon:
+      - IconHtml
+      - IconCss
+  cms:
+    name: Développement CMS
+    icon:
+      - IconDrupal
+      - IconPhp
+      - IconMariadb
+  nuxt:
+    name: Développement Nuxt
+    icon:
+      - IconNuxt
+  hosting:
+    name: Hébergement web
+
+alt:
+  banner:
+    Bannière du site web de {client}, montrant notamment son logo et son menu de
+    navigation.
+  preview:
+    Capture d’écran complète d’une page du site web de {client}, montrant sa
+    structure et son contenu.

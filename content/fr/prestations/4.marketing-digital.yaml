@@ -1,22 +1,55 @@
 seo:
   title: 'Marketing digital : SEO, SEA et réseaux sociaux'
-  description: Boostez votre visibilité avec Univerweb et transformez votre trafic en opportunités grâce à un référencement naturel (SEO) efficace, une publicité en ligne ciblée et un marketing des réseaux sociaux engageant pour maximiser vos conversions.
+  description:
+    Boostez votre visibilité avec Univerweb et transformez votre trafic en
+    opportunités grâce à un référencement naturel (SEO) efficace, une publicité
+    en ligne ciblée et un marketing des réseaux sociaux engageant pour maximiser
+    vos conversions.
 title: Marketing digital
-description: Vos campagnes publicitaires sont un moteur. Nous les huilons, les boostons au premium… et les faisons rugir sur autoroute plutôt que ronronner en ville !
+description:
+  Vos campagnes publicitaires sont un moteur. Nous les huilons, les boostons au
+  premium… et les faisons rugir sur autoroute plutôt que ronronner en ville !
+
 cta: Booster votre croissance en ligne
-alt: 'Illustration par icônes des solutions de marketing digital : référencement naturel (SEO) et publicité en ligne (SEA/SEM).'
+alt:
+  'Illustration par icônes des solutions de marketing digital : référencement
+  naturel (SEO) et publicité en ligne (SEA/SEM).'
+
 intro:
-  - À l’ère du numérique, une présence en ligne ne suffit plus ; il faut la rendre visible, pertinente et capable d’engager votre audience pour la convertir en clients. Le marketing digital est l’ensemble des leviers et techniques qui vous permettent d’atteindre efficacement vos objectifs commerciaux dans l’environnement digital.
-  - Chez Univerweb, nous créons des stratégies de marketing digital sur mesure, parfaitement alignées avec votre activité et vos objectifs. Axés sur l’analyse des données et le retour sur investissement (ROI), nous mettons en œuvre les campagnes les plus adaptées pour augmenter votre visibilité, générer du trafic qualifié et développer concrètement votre chiffre d’affaires en ligne.
+  - À l’ère du numérique, une présence en ligne ne suffit plus ; il faut la
+    rendre visible, pertinente et capable d’engager votre audience pour la
+    convertir en clients. Le marketing digital est l’ensemble des leviers et
+    techniques qui vous permettent d’atteindre efficacement vos objectifs
+    commerciaux dans l’environnement digital.
+
+  - Chez Univerweb, nous créons des stratégies de marketing digital sur mesure,
+    parfaitement alignées avec votre activité et vos objectifs. Axés sur
+    l’analyse des données et le retour sur investissement (ROI), nous mettons en
+    œuvre les campagnes les plus adaptées pour augmenter votre visibilité,
+    générer du trafic qualifié et développer concrètement votre chiffre
+    d’affaires en ligne.
+
 solutions:
   title: Nos solutions de marketing digital
   list:
     - title: Référencement naturel (SEO)
-      description: Améliorez votre positionnement dans les résultats des moteurs de recherche (Google, etc.) pour attirer un trafic organique qualifié vers votre site web.
+      description:
+        Améliorez votre positionnement dans les résultats des moteurs de
+        recherche (Google, etc.) pour attirer un trafic organique qualifié vers
+        votre site web.
+
     - title: Publicité en ligne (SEA/SEM)
-      description: Créez et gérez des campagnes publicitaires ciblées sur les moteurs de recherche (Google Ads) et les réseaux sociaux pour une visibilité immédiate et des résultats rapides.
+      description:
+        Créez et gérez des campagnes publicitaires ciblées sur les moteurs de
+        recherche (Google Ads) et les réseaux sociaux pour une visibilité
+        immédiate et des résultats rapides.
+
     - title: Marketing des réseaux sociaux
-      description: Développez votre communauté, engagez votre audience et promouvez votre marque ou vos produits sur les plateformes sociales pertinentes (Facebook, Instagram, LinkedIn, etc.).
+      description:
+        Développez votre communauté, engagez votre audience et promouvez votre
+        marque ou vos produits sur les plateformes sociales pertinentes
+        (Facebook, Instagram, LinkedIn, etc.).
+
 features:
   title: Les éléments clés de nos stratégies
   tags:
@@ -28,35 +61,85 @@ features:
     - Reporting transparent
     - Expertise de l’équipe
     - Veille stratégique et concurrentielle
+
 process:
   title: Notre processus en marketing digital
   steps:
     - title: Audit et analyse
-      description: Analyse de votre présence actuelle, de votre marché et de vos concurrents pour identifier les opportunités.
+      description:
+        Analyse de votre présence actuelle, de votre marché et de vos
+        concurrents pour identifier les opportunités.
+
     - title: Stratégie personnalisée
-      description: Définition des objectifs, des cibles, des canaux et du plan d’action le plus adapté.
+      description:
+        Définition des objectifs, des cibles, des canaux et du plan d’action le
+        plus adapté.
+
     - title: Mise en œuvre
-      description: Déploiement et gestion active des campagnes et actions définies dans la stratégie.
+      description:
+        Déploiement et gestion active des campagnes et actions définies dans la
+        stratégie.
+
     - title: Suivi et analyse
-      description: Collecte et interprétation des données de performance pour évaluer les résultats.
+      description:
+        Collecte et interprétation des données de performance pour évaluer les
+        résultats.
+
     - title: Optimisation continue
-      description: Ajustements basés sur l’analyse pour améliorer constamment l’efficacité des campagnes.
+      description:
+        Ajustements basés sur l’analyse pour améliorer constamment l’efficacité
+        des campagnes.
+
 faq:
   title: Questions fréquentes sur le marketing digital
   questions:
     - question: Qu’est-ce que le marketing digital ?
-      answer: Le marketing digital regroupe toutes les actions marketing menées via les canaux et supports numériques (sites web, réseaux sociaux, moteurs de recherche, e-mails, applications mobiles, etc.) pour atteindre des objectifs commerciaux.
+      answer:
+        Le marketing digital regroupe toutes les actions marketing menées via
+        les canaux et supports numériques (sites web, réseaux sociaux, moteurs
+        de recherche, e-mails, applications mobiles, etc.) pour atteindre des
+        objectifs commerciaux.
+
     - question: Pourquoi mon entreprise a-t-elle besoin de marketing digital ?
-      answer: Pour toucher efficacement une audience majoritairement présente en ligne, accroître votre visibilité face à la concurrence, générer du trafic qualifié, interagir avec vos clients et mesurer précisément le retour sur investissement de vos actions marketing.
-    - question: Est-ce que le marketing digital est adapté à mon secteur d’activité ?
-      answer: Dans l’immense majorité des cas, oui. Quels que soient votre secteur B2B ou B2C, vos clients sont en ligne. Il s’agit d’adapter la stratégie, les canaux et les messages à votre cible spécifique.
+      answer:
+        Pour toucher efficacement une audience majoritairement présente en
+        ligne, accroître votre visibilité face à la concurrence, générer du
+        trafic qualifié, interagir avec vos clients et mesurer précisément le
+        retour sur investissement de vos actions marketing.
+
+    - question:
+        Est-ce que le marketing digital est adapté à mon secteur d’activité ?
+      answer:
+        Dans l’immense majorité des cas, oui. Quels que soient votre secteur B2B
+        ou B2C, vos clients sont en ligne. Il s’agit d’adapter la stratégie, les
+        canaux et les messages à votre cible spécifique.
+
     - question: Quels services de marketing digital proposez-vous ?
-      answer: Nous proposons des solutions incluant le référencement naturel (SEO), la publicité en ligne (SEA/SEM) et le marketing des réseaux sociaux.
+      answer:
+        Nous proposons des solutions incluant le référencement naturel (SEO), la
+        publicité en ligne (SEA/SEM) et le marketing des réseaux sociaux.
+
     - question: Travaillez-vous avec des budgets limités ?
-      answer: Nous nous adaptons à vos contraintes budgétaires pour proposer les actions les plus efficaces et prioritaires qui généreront le meilleur retour sur investissement possible pour votre entreprise.
+      answer:
+        Nous nous adaptons à vos contraintes budgétaires pour proposer les
+        actions les plus efficaces et prioritaires qui généreront le meilleur
+        retour sur investissement possible pour votre entreprise.
+
     - question: Combien de temps faut-il pour voir des résultats ?
-      answer: Cela dépend des leviers activés. Le SEA peut générer des résultats rapides, tandis que le SEO demande plus de temps (plusieurs mois) pour produire des effets significatifs et durables.
+      answer:
+        Cela dépend des leviers activés. Le SEA peut générer des résultats
+        rapides, tandis que le SEO demande plus de temps (plusieurs mois) pour
+        produire des effets significatifs et durables.
+
     - question: Comment mesurez-vous le succès des campagnes ?
-      answer: Nous définissons en amont des indicateurs clés de performance (KPIs) alignés sur vos objectifs (trafic, conversions, engagement, ROI, etc.) et utilisons des outils d’analyse (Google Analytics, etc.) pour suivre et évaluer précisément les résultats dans des rapports transparents.
+      answer:
+        Nous définissons en amont des indicateurs clés de performance (KPIs)
+        alignés sur vos objectifs (trafic, conversions, engagement, ROI, etc.)
+        et utilisons des outils d’analyse (Google Analytics, etc.) pour suivre
+        et évaluer précisément les résultats dans des rapports transparents.
     - question: Combien coûte une campagne de marketing digital ?
-      answer: Le coût varie considérablement en fonction des objectifs, des canaux utilisés, de la concurrence, de la durée et de la complexité de la stratégie. Nous élaborons des propositions sur mesure après étude de vos besoins.
+      answer:
+        Le coût varie considérablement en fonction des objectifs, des canaux
+        utilisés, de la concurrence, de la durée et de la complexité de la
+        stratégie. Nous élaborons des propositions sur mesure après étude de vos
+        besoins.

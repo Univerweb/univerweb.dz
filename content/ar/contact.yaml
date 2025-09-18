@@ -1,0 +1,26 @@
+title: اتصلوا بوكالتنا
+description:
+  لنتحدث عن مشروعك! يونيفارواب ترافقك في إنشاء موقعك الإلكتروني وأكثر من ذلك.
+  دعونا نناقش رؤيتك الرقمية ونحولها إلى واقع معًا.
+
+lead:
+  إنشاء مواقع الويب هو جوهر خبرتنا. وأكثر من ذلك! حدثونا عن رؤيتكم، سنكون
+  مسرورين بمرافقتكم لتجسيدها.
+
+address:
+  streetAddress: 62 تعاونية المبنية، بئر خادم
+  postalCode: 16 029
+  addressLocality: الجزائر العاصمة
+
+platforms:
+  - name: X
+    url: https://x.com/Univerweb
+
+  - name: فيس بوك
+    url: https://www.facebook.com/Univerweb
+
+  - name: لينكد إن
+    url: https://www.linkedin.com/company/univerweb
+
+  - name: جيت هاب
+    url: https://github.com/univerweb

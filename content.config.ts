@@ -1,14 +1,44 @@
 import { defineContentConfig, defineCollection, z } from '@nuxt/content'
 
+const Link = z.object({
+  label: z.string(),
+  path: z.string().url(),
+})
+
 const Date = z.object({
   createdAt: z.date(),
   updatedAt: z.date(),
 })
 
-const List = z.array(z.object({
-  title: z.string(),
-  description: z.string(),
-}))
+const List = z.array(
+  z.object({
+    title: z.string(),
+    description: z.string(),
+  }),
+)
+
+const Home = z.object({
+  hero: z.object({
+    headline: z.string(),
+    lead: z.string(),
+    cta: Link,
+  }),
+  sectionRealisation: z.object({
+    headline: z.string(),
+    cta: Link,
+  }),
+  sectionPrestations: z.object({
+    headline: z.string(),
+  }),
+  sectionBlog: z.object({
+    headline: z.string(),
+    cta: Link,
+  }),
+})
+
+const Page = z.object({
+  headline: z.string(),
+})
 
 const Realisation = Date.extend({
   about: z.string(),
@@ -32,11 +62,41 @@ const Prestation = z.object({
   }),
   faq: z.object({
     title: z.string(),
-    questions: z.array(z.object({
-      question: z.string(),
-      answer: z.string(),
-    })),
+    questions: z.array(
+      z.object({
+        question: z.string(),
+        answer: z.string(),
+      }),
+    ),
   }),
+})
+
+const Agence = z.object({
+  headline: z.string(),
+  lead: z.string(),
+  method: z.object({
+    headline: z.string(),
+    list: List,
+  }),
+  choose: z.object({
+    headline: z.string(),
+    list: List,
+  }),
+})
+
+const Contact = z.object({
+  lead: z.string(),
+  address: z.object({
+    streetAddress: z.string(),
+    postalCode: z.string(),
+    addressLocality: z.string(),
+  }),
+  platforms: z.array(
+    z.object({
+      name: z.string(),
+      url: z.string().url(),
+    }),
+  ),
 })
 
 const Article = Date.extend({
@@ -48,9 +108,47 @@ const Article = Date.extend({
   }).optional(),
 })
 
+const Error = z.object({
+  headline: z.string(),
+  lead: z.string(),
+  cta: z.string(),
+})
+
 export default defineContentConfig({
   collections: {
-    realisation: defineCollection({
+    home_fr: defineCollection({
+      type: 'page',
+      source: 'fr/index.yaml',
+      schema: Home,
+    }),
+    home_en: defineCollection({
+      type: 'page',
+      source: 'en/index.yaml',
+      schema: Home,
+    }),
+    home_ar: defineCollection({
+      type: 'page',
+      source: 'ar/index.yaml',
+      schema: Home,
+    }),
+
+    realisations_page_fr: defineCollection({
+      type: 'page',
+      source: 'fr/realisations/index.yaml',
+      schema: Page,
+    }),
+    realisations_page_en: defineCollection({
+      type: 'page',
+      source: 'en/realisations/index.yaml',
+      schema: Page,
+    }),
+    realisations_page_ar: defineCollection({
+      type: 'page',
+      source: 'ar/realisations/index.yaml',
+      schema: Page,
+    }),
+
+    realisations_item: defineCollection({
       type: 'page',
       source: 'realisations/*.yaml',
       schema: z.object({
@@ -59,52 +157,148 @@ export default defineContentConfig({
         website: z.string().url().optional(),
       }),
     }),
-    realisation_fr: defineCollection({
+    realisations_item_fr: defineCollection({
       type: 'page',
-      source: { include: 'fr/realisations/*.yaml', prefix: 'realisations' },
+      source: { include: 'fr/realisations/*.yaml', exclude: ['fr/realisations/index.yaml'], prefix: 'realisations' },
       schema: Realisation,
     }),
-    realisation_en: defineCollection({
+    realisations_item_en: defineCollection({
       type: 'page',
-      source: 'en/realisations/*.yaml',
+      source: { include: 'en/realisations/*.yaml', exclude: ['en/realisations/index.yaml'] },
       schema: Realisation,
     }),
-    realisation_ar: defineCollection({
+    realisations_item_ar: defineCollection({
       type: 'page',
-      source: 'ar/realisations/*.yaml',
+      source: { include: 'ar/realisations/*.yaml', exclude: ['ar/realisations/index.yaml'] },
       schema: Realisation,
     }),
 
-    prestation_fr: defineCollection({
+    prestations_page_fr: defineCollection({
       type: 'page',
-      source: { include: 'fr/prestations/*.yaml', prefix: 'prestations' },
+      source: 'fr/prestations/index.yaml',
+      schema: Page,
+    }),
+    prestations_page_en: defineCollection({
+      type: 'page',
+      source: 'en/prestations/index.yaml',
+      schema: Page,
+    }),
+    prestations_page_ar: defineCollection({
+      type: 'page',
+      source: 'ar/prestations/index.yaml',
+      schema: Page,
+    }),
+
+    prestations_item_fr: defineCollection({
+      type: 'page',
+      source: { include: 'fr/prestations/*.yaml', exclude: ['fr/prestations/index.yaml'], prefix: 'prestations' },
       schema: Prestation,
     }),
-    prestation_en: defineCollection({
+    prestations_item_en: defineCollection({
       type: 'page',
-      source: 'en/prestations/*.yaml',
+      source: { include: 'en/prestations/*.yaml', exclude: ['en/prestations/index.yaml'] },
       schema: Prestation,
     }),
-    prestation_ar: defineCollection({
+    prestations_item_ar: defineCollection({
       type: 'page',
-      source: 'ar/prestations/*.yaml',
+      source: { include: 'ar/prestations/*.yaml', exclude: ['ar/prestations/index.yaml'] },
       schema: Prestation,
     }),
 
-    article_fr: defineCollection({
+    agence_fr: defineCollection({
       type: 'page',
-      source: { include: 'fr/blog/*.md', prefix: 'blog' },
+      source: 'fr/agence.yaml',
+      schema: Agence,
+    }),
+    agence_en: defineCollection({
+      type: 'page',
+      source: 'en/agence.yaml',
+      schema: Agence,
+    }),
+    agence_ar: defineCollection({
+      type: 'page',
+      source: 'ar/agence.yaml',
+      schema: Agence,
+    }),
+
+    contact_fr: defineCollection({
+      type: 'page',
+      source: 'fr/contact.yaml',
+      schema: Contact,
+    }),
+    contact_en: defineCollection({
+      type: 'page',
+      source: 'en/contact.yaml',
+      schema: Contact,
+    }),
+    contact_ar: defineCollection({
+      type: 'page',
+      source: 'ar/contact.yaml',
+      schema: Contact,
+    }),
+
+    blog_page_fr: defineCollection({
+      type: 'page',
+      source: 'fr/blog/index.yaml',
+      schema: Page,
+    }),
+    blog_page_en: defineCollection({
+      type: 'page',
+      source: 'en/blog/index.yaml',
+      schema: Page,
+    }),
+    blog_page_ar: defineCollection({
+      type: 'page',
+      source: 'ar/blog/index.yaml',
+      schema: Page,
+    }),
+
+    blog_item_fr: defineCollection({
+      type: 'page',
+      source: { include: 'fr/blog/*.md', exclude: ['fr/blog/index.yaml'], prefix: 'blog' },
       schema: Article,
     }),
-    article_en: defineCollection({
+    blog_item_en: defineCollection({
       type: 'page',
-      source: 'en/blog/*.md',
+      source: { include: 'en/blog/*.md', exclude: ['en/blog/index.yaml'] },
       schema: Article,
     }),
-    article_ar: defineCollection({
+    blog_item_ar: defineCollection({
       type: 'page',
-      source: 'ar/blog/*.md',
+      source: { include: 'ar/blog/*.md', exclude: ['ar/blog/index.yaml'] },
       schema: Article,
+    }),
+
+    error_404_fr: defineCollection({
+      type: 'page',
+      source: 'fr/errors/404.yaml',
+      schema: Error,
+    }),
+    error_404_en: defineCollection({
+      type: 'page',
+      source: 'en/errors/404.yaml',
+      schema: Error,
+    }),
+    error_404_ar: defineCollection({
+      type: 'page',
+      source: 'ar/errors/404.yaml',
+      schema: Error,
+    }),
+
+    error_500_fr: defineCollection({
+      type: 'page',
+      source: 'fr/errors/500.yaml',
+      schema: Error,
+    }),
+    error_500_en: defineCollection({
+      type: 'page',
+      source: 'en/errors/500.yaml',
+      schema: Error,
+    }),
+    error_500_ar: defineCollection({
+      type: 'page',
+      source: 'ar/errors/500.yaml',
+      schema: Error,
     }),
   },
 })

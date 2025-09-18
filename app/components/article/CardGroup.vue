@@ -1,48 +1,45 @@
 <script setup lang="ts">
-interface Props {
+const props = defineProps<{
   limit?: number
   headlineTag?: string
-  more?: boolean
+  headline: string
   titleTag?: string
-}
+  cta?: {
+    label: string
+    path: string
+  }
+}>()
 
-const props = withDefaults(defineProps<Props>(), {
-  limit: 0,
-  headlineTag: 'h1',
-  titleTag: 'h2',
-  more: false,
-})
-
-const { path } = useRoute()
 const { locale, t } = useI18n()
 const { baseUrl } = useUrl()
 const localePath = useLocalePath()
 
-const { data: articles } = await useAsyncData(`articles-${path}`, () =>
-  queryCollection(`article_${locale.value}`)
+const { data: blogItem } = await useAsyncData(
+  () => `blog-item-${locale.value}`,
+  () => queryCollection(`blog_item_${locale.value}`)
     .select('path', 'stem', 'title', 'description', 'createdAt', 'updatedAt', 'alt', 'tags', 'author')
     .order('stem', 'DESC')
-    .limit(props.limit)
-    .all(), {
-  watch: [locale],
-})
+    .limit(props.limit || 0)
+    .all(),
+  { watch: [locale] },
+)
 </script>
 
 <template>
   <section id="blog" class="container" vocab="https://schema.org/" typeof="CollectionPage">
-    <meta property="name" :content="t('navigation.menu[4].label')">
+    <meta property="name" :content="t('navigation.menu.blog')">
     <link property="url" :href="baseUrl(localePath('blog'))">
 
     <div class="intro intro-justify">
-      <Component :is="headlineTag" class="h1">
-        {{ t('blog.headline') }}
+      <Component :is="headlineTag || 'h1'" class="h1">
+        {{ headline }}
       </Component>
     </div>
 
     <div class="card-group">
-      <ArticleCard v-for="card in articles" :key="card.path" :card :title-tag="titleTag" />
+      <ArticleCard v-for="card in blogItem" :key="card.path" :card :title-tag="titleTag || 'h2'" />
     </div>
 
-    <LazyAppMore v-if="more" path="blog" :label="t('home.actions.learnMore')" class="intro-justify" />
+    <LazyAppMore v-if="cta" :path="cta.path" :label="cta.label" class="intro-justify" />
   </section>
 </template>

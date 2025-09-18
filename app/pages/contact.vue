@@ -1,10 +1,22 @@
 <script setup lang="ts">
 import { GoogleMap, CustomMarker } from 'vue3-google-map'
 
-useSeo({ page: 'contact' })
-
-const { t } = useI18n()
+const { locale, t } = useI18n()
 const config = useRuntimeConfig()
+
+const { data: contact } = await useAsyncData(
+  () => `contact-${locale.value}`,
+  () => queryCollection(`contact_${locale.value}`)
+    .select('title', 'description', 'lead')
+    .first(),
+  { watch: [locale] },
+)
+
+useSeo({
+  page: 'contact',
+  title: () => contact.value!.title,
+  description: () => contact.value!.title,
+})
 
 const position = {
   lat: 36.720937,
@@ -24,14 +36,14 @@ function zoom() {
 </script>
 
 <template>
-  <main>
+  <main v-if="contact">
     <section class="container row" aria-labelledby="title">
       <div class="col col--1-6">
         <h1 id="title" class="h2">
-          {{ t('contact.title') }}
+          {{ contact.title }}
         </h1>
         <p class="lead">
-          {{ t('contact.about') }}
+          {{ contact.lead }}
         </p>
         <a :href="`mailto:${config.public.baseEmail}`" class="link outfit move">
           {{ config.public.baseEmail }}
@@ -57,12 +69,12 @@ function zoom() {
 
     <section class="container request other" aria-labelledby="other">
       <div id="other" class="intro">
-        <h2>{{ t('contact.other') }}</h2>
+        <h2>{{ t('headings.otherContact') }}</h2>
       </div>
       <div class="row items-2">
         <div class="item">
           <h3 class="h6">
-            {{ t('contact.manager') }}
+            {{ t('headings.manager') }}
           </h3>
           <a :href="`mailto:${config.public.managerEmail}`" class="link outfit move">
             {{ config.public.managerEmail }}
@@ -70,7 +82,7 @@ function zoom() {
         </div>
         <div class="item item-2">
           <h3 class="h6">
-            {{ t('contact.support') }}
+            {{ t('headings.support') }}
           </h3>
           <a :href="`mailto:${config.public.supportEmail}`" class="link outfit move">
             {{ config.public.supportEmail }}

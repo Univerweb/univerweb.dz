@@ -1,0 +1,26 @@
+title: Contact Our Agency
+description:
+  Let’s talk about your project! Univerweb supports you in creating your website
+  and beyond. Let’s discuss your digital vision and bring it to life together.
+
+lead:
+  Website creation is at the heart of our expertise. And much more! Tell us
+  about your vision, we would be delighted to assist you in making it concrete.
+
+address:
+  streetAddress: 62 Coop. El Mebnia, Birkhadem
+  postalCode: 16 029
+  addressLocality: Algiers
+
+platforms:
+  - name: X
+    url: https://x.com/Univerweb
+
+  - name: Facebook
+    url: https://www.facebook.com/Univerweb
+
+  - name: LinkedIn
+    url: https://www.linkedin.com/company/univerweb
+
+  - name: GitHub
+    url: https://github.com/univerweb

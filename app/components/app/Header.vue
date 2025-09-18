@@ -1,35 +1,27 @@
 <script setup lang="ts">
-const { t, tm, rt } = useI18n()
+const { t, tm } = useI18n()
 const localePath = useLocalePath()
 const switchLocalePath = useSwitchLocalePath()
 const { menuOpen, closeMenu, toggleMenu } = useMenu()
 const mode = useColorMode({ disableTransition: false })
 const { langNext, isLangNext, langTooltip } = useTooltip()
-
-interface Link {
-  path: string
-  label: string
-}
-
-const skipLink = computed(() => tm('actions.skipLink') as Link[])
-const menu = computed(() => tm('navigation.menu') as Link[])
 </script>
 
 <template>
   <header id="header">
-    <NuxtLinkLocale v-for="link in skipLink" :key="link.path" :to="`${$route.path}#${rt(link.path)}`" class="btn skip-link">
-      {{ rt(link.label) }}
+    <NuxtLinkLocale v-for="path in Object.keys(tm('actions.skipLink'))" :key="path" :to="`${$route.path}#${path}`" class="btn skip-link">
+      {{ t(`actions.skipLink.${path}`) }}
     </NuxtLinkLocale>
 
     <NuxtLinkLocale to="/" class="logo" :aria-label="t('site.name')">
       <AppLogo />
     </NuxtLinkLocale>
 
-    <nav id="main-navigation" class="nav" :style="{ '--item-total': menu.length }">
+    <nav id="main-navigation" class="nav" :style="{ '--item-total': Object.keys(tm('navigation.menu')).length }">
       <ul class="menu">
-        <li v-for="(link, index) in menu" :key="index">
-          <NuxtLinkLocale :to="rt(link.path)" active-class="active" :class="{ active: $route.path.startsWith(localePath(rt(link.path))) }" :style="{ '--item-number': index }" @click.enter="closeMenu()">
-            {{ rt(link.label) }}
+        <li v-for="(path, index) in Object.keys(tm('navigation.menu'))" :key="path">
+          <NuxtLinkLocale :to="path" active-class="active" :class="{ active: $route.path.startsWith(localePath(path)) }" :style="{ '--item-number': index }" @click.enter="closeMenu()">
+            {{ t(`navigation.menu.${path}`) }}
           </NuxtLinkLocale>
         </li>
       </ul>

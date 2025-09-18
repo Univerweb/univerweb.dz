@@ -1,24 +1,27 @@
 <script setup lang="ts">
-const { path } = useRoute()
+const { path, params: { slug } } = useRoute()
 const { locale, t } = useI18n()
 const localePath = useLocalePath()
 const { baseUrl } = useUrl()
 
 const [{ data: prestation }, { data: related }] = await Promise.all([
-  useAsyncData(`prestation-${path}`, () =>
-    queryCollection(`prestation_${locale.value}`)
+  useAsyncData(
+    () => `prestation-${locale.value}-${slug}`,
+    () => queryCollection(`prestations_item_${locale.value}`)
       .select('path', 'seo', 'title', 'description', 'alt', 'intro', 'solutions', 'features', 'process', 'faq')
       .path(localePath(path))
-      .first(), {
-    watch: [locale],
-  }),
-  useAsyncData(`prestation-related-${path}`, () =>
-    queryCollection(`prestation_${locale.value}`)
+      .first(),
+    { watch: [locale] },
+  ),
+
+  useAsyncData(
+    () => `prestation-related-${locale.value}-${slug}`,
+    () => queryCollection(`prestations_item_${locale.value}`)
       .select('path', 'title', 'description', 'cta')
       .where('path', '<>', path)
-      .all(), {
-    watch: [locale],
-  }),
+      .all(),
+    { watch: [locale] },
+  ),
 ])
 
 if (!prestation.value) {
@@ -30,10 +33,11 @@ if (!prestation.value) {
 }
 
 useSeo({
-  pageSlug: 'prestations',
+  page: { name: 'prestations', slug: true },
   title: () => prestation.value!.seo.title!,
   description: () => prestation.value!.seo.description!,
   ogTitle: () => prestation.value!.seo.title!,
+  breadcrumbTitle: () => prestation.value!.title,
   ogImageAlt: () => prestation.value!.alt,
   ogImageWidth: 2800,
   ogImageHeight: 1575,
@@ -84,7 +88,7 @@ const leave = (el: Element) => {
           <link property="url" :href="baseUrl(path)">
         </span>
 
-        <AppBack path="prestations" :label="t('navigation.menu[1].label')" />
+        <AppBack path="prestations" :label="t('navigation.menu.prestations')" />
         <h1 id="title" property="name serviceType">
           {{ prestation.title }}
         </h1>
@@ -182,7 +186,7 @@ const leave = (el: Element) => {
 
     <aside class="container row" aria-labelledby="other">
       <h2 id="other" class="col col--1-5">
-        {{ t('prestations.other') }}
+        {{ t('headings.otherTurnkey') }}
       </h2>
       <div class="col card-group">
         <PrestationCard v-for="card in related" :key="card.path" :card title-tag="h3" />

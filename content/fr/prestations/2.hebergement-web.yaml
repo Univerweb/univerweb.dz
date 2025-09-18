@@ -1,24 +1,66 @@
 seo:
   title: 'Hébergement : Nom de domaine, messagerie et certificat SSL'
-  description: Optez pour un hébergement web performant avec Univerweb et assurez une présence en ligne fiable et sécurisée grâce à un nom de domaine personnalisé, une messagerie professionnelle et un certificat SSL intégré.
+  description:
+    Optez pour un hébergement web performant avec Univerweb et assurez une
+    présence en ligne fiable et sécurisée grâce à un nom de domaine
+    personnalisé, une messagerie professionnelle et un certificat SSL intégré.
 title: Hébergement web
-description: Votre hébergement est le cœur qui fait battre votre site web. Nous le rendons rapide comme l’éclair… et toujours prêt à accueillir des visiteurs sans trembler !
+description:
+  Votre hébergement est le cœur qui fait battre votre site web. Nous le rendons
+  rapide comme l’éclair… et toujours prêt à accueillir des visiteurs sans
+  trembler !
+
 cta: Assurer votre présence en ligne
-alt: 'Illustration par icônes des solutions d’hébergement web : nom de domaine .dz, plateforme d’hébergement, messagerie professionnelle et sécurité SSL.'
+alt:
+  'Illustration par icônes des solutions d’hébergement web : nom de domaine .dz,
+  plateforme d’hébergement, messagerie professionnelle et sécurité SSL.'
+
 intro:
-  - Un site web a besoin de fondations solides. Celles-ci incluent un hébergement fiable qui le rend accessible, un nom de domaine clair pour être trouvé facilement, un certificat SSL pour sécuriser les échanges et inspirer confiance, et des adresses e-mail professionnelles pour une communication crédible. Avoir ces éléments bien gérés est indispensable au succès de votre présence digitale.
-  - 'Chez Univerweb, la création de sites web est notre métier principal. Pour vous offrir une expérience simplifiée et une solution parfaitement cohérente, nous proposons une offre intégrée qui couple la création de votre site avec tous les services nécessaires : hébergement performant, enregistrement/transfert de domaine, certificat SSL et messagerie professionnelle. Cette approche garantit une synergie technique, une mise en place optimisée et un point de contact unique pour l’ensemble de votre projet web.'
+  - Un site web a besoin de fondations solides. Celles-ci incluent un
+    hébergement fiable qui le rend accessible, un nom de domaine clair pour être
+    trouvé facilement, un certificat SSL pour sécuriser les échanges et inspirer
+    confiance, et des adresses e-mail professionnelles pour une communication
+    crédible. Avoir ces éléments bien gérés est indispensable au succès de votre
+    présence digitale.
+
+  - 'Chez Univerweb, la création de sites web est notre métier principal. Pour
+    vous offrir une expérience simplifiée et une solution parfaitement
+    cohérente, nous proposons une offre intégrée qui couple la création de votre
+    site avec tous les services nécessaires : hébergement performant,
+    enregistrement/transfert de domaine, certificat SSL et messagerie
+    professionnelle. Cette approche garantit une synergie technique, une mise en
+    place optimisée et un point de contact unique pour l’ensemble de votre
+    projet web.'
+
 solutions:
   title: Nos solutions d’hébergement web
   list:
     - title: Nom de domaine
-      description: Votre adresse unique sur internet (votresite.dz, .com, .net…). Nous vous aidons à trouver, enregistrer, transférer et gérer le nom de domaine idéal pour votre marque.
+      description:
+        Votre adresse unique sur internet (votresite.dz, .com, .net…). Nous vous
+        aidons à trouver, enregistrer, transférer et gérer le nom de domaine
+        idéal pour votre marque.
+
     - title: Hébergement de sites web
-      description: La fondation de votre site web. Nous proposons un hébergement performant, stable et sécurisé, adapté à vos projets (sites statiques, CMS, applications web, Etc.), avec des plans variés pour répondre à vos besoins en ressources.
+      description:
+        La fondation de votre site web. Nous proposons un hébergement
+        performant, stable et sécurisé, adapté à vos projets (sites statiques,
+        CMS, applications web, Etc.), avec des plans variés pour répondre à vos
+        besoins en ressources.
+
     - title: Messagerie professionnelle
-      description: Créez des adresses e-mail personnalisées avec votre nom de domaine (contact@votredomaine.dz). Communiquez de manière professionnelle et renforcez votre crédibilité.
+      description:
+        Créez des adresses e-mail personnalisées avec votre nom de domaine
+        (contact@votredomaine.dz). Communiquez de manière professionnelle et
+        renforcez votre crédibilité.
+
     - title: Certificat SSL
-      description: Sécurisez les données échangées avec votre site web ainsi que les connexions à votre messagerie professionnelle associée à votre nom de domaine. Indispensable pour la confiance des utilisateurs et la sécurité de vos communications.
+      description:
+        Sécurisez les données échangées avec votre site web ainsi que les
+        connexions à votre messagerie professionnelle associée à votre nom de
+        domaine. Indispensable pour la confiance des utilisateurs et la sécurité
+        de vos communications.
+
 features:
   title: Les éléments clés de notre offre
   tags:
@@ -31,31 +73,70 @@ features:
     - Panneau de contrôle intuitif
     - Support technique réactif
     - Stockage évolutif
+
 process:
   title: Notre approche intégrée
   steps:
     - title: Comprendre vos besoins
-      description: Nous analysons vos besoins pour adapter au mieux notre offre d’hébergement à votre projet digital.
+      description:
+        Nous analysons vos besoins pour adapter au mieux notre offre
+        d’hébergement à votre projet digital.
+
     - title: Activation des services
-      description: Nous procédons à la mise en place technique de l’ensemble de votre offre (nom de domaine, hébergement, messagerie et certificat SSL).
+      description:
+        Nous procédons à la mise en place technique de l’ensemble de votre offre
+        (nom de domaine, hébergement, messagerie et certificat SSL).
+
     - title: Accompagnement à la prise en main
-      description: Nous vous aidons à prendre en main le panneau de contrôle pour gérer facilement vos services au quotidien.
+      description:
+        Nous vous aidons à prendre en main le panneau de contrôle pour gérer
+        facilement vos services au quotidien.
+
     - title: Support continu
-      description: Nous assurons un support technique réactif et dédié pour répondre à toutes vos questions et résoudre rapidement les éventuels problèmes.
+      description:
+        Nous assurons un support technique réactif et dédié pour répondre à
+        toutes vos questions et résoudre rapidement les éventuels problèmes.
+
 faq:
   title: Questions fréquentes sur l’hébergement web
   questions:
     - question: Pourquoi choisir notre offre intégrée pour votre site web ?
-      answer: En choisissant notre offre intégrée en complément de la création de votre site, vous bénéficiez d’une synergie parfaite entre le développement et l’infrastructure, d’un point de contact unique, et de services optimisés pour les sites que nous concevons.
+      answer:
+        En choisissant notre offre intégrée en complément de la création de
+        votre site, vous bénéficiez d’une synergie parfaite entre le
+        développement et l’infrastructure, d’un point de contact unique, et de
+        services optimisés pour les sites que nous concevons.
+
     - question: Hébergez-vous uniquement les sites que vous créez ?
-      answer: Non, nous proposons l’hébergement pour les sites que nous créons, mais aussi si vous avez déjà un site existant (créé par une autre agence).
+      answer:
+        Non, nous proposons l’hébergement pour les sites que nous créons, mais
+        aussi si vous avez déjà un site existant (créé par une autre agence).
+
     - question: Mon site et mes e-mails seront-ils sécurisés avec votre offre ?
-      answer: Oui. Notre offre intègre des mesures de sécurité complètes. Le certificat SSL sécurise la connexion de votre site web ainsi que celle de votre messagerie professionnelle associée à votre nom de domaine.
+      answer:
+        Oui. Notre offre intègre des mesures de sécurité complètes. Le
+        certificat SSL sécurise la connexion de votre site web ainsi que celle
+        de votre messagerie professionnelle associée à votre nom de domaine.
+
     - question: Est-ce que le certificat SSL est inclus dans l’offre ?
-      answer: Oui, un certificat SSL gratuit est inclus dans notre offre intégrée pour sécuriser votre site web.
+      answer:
+        Oui, un certificat SSL gratuit est inclus dans notre offre intégrée pour
+        sécuriser votre site web.
+
     - question: Puis-je facilement gérer mon hébergement ?
-      answer: Absolument ! Nous vous fournissons un panneau de contrôle intuitif pour gérer vos fichiers, vos bases de données et vos paramètres d’hébergement en toute simplicité.
+      answer:
+        Absolument ! Nous vous fournissons un panneau de contrôle intuitif pour
+        gérer vos fichiers, vos bases de données et vos paramètres d’hébergement
+        en toute simplicité.
+
     - question: Que couvre le support technique ?
-      answer: Notre support couvre les problèmes liés à votre compte d’hébergement, à la gestion de votre nom de domaine, à l’activation de votre certificat SSL et au fonctionnement de vos comptes e-mail professionnels.
+      answer:
+        Notre support couvre les problèmes liés à votre compte d’hébergement, à
+        la gestion de votre nom de domaine, à l’activation de votre certificat
+        SSL et au fonctionnement de vos comptes e-mail professionnels.
+
     - question: Quels sont les coûts associés à l’hébergement web ?
-      answer: Le prix de l’hébergement dépend du type de solution choisie et des ressources nécessaires. Nous proposons des offres adaptées à tous les budgets.
+      answer:
+        Le prix de l’hébergement dépend du type de solution choisie et des
+        ressources nécessaires. Nous proposons des offres adaptées à tous les
+        budgets.
