@@ -6,7 +6,6 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/image',
     '@vueuse/nuxt',
-    'nuxt-gtag',
   ],
 
   app: { rootId: 'app' },
@@ -38,11 +37,6 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-08-08',
 
   eslint: { config: { stylistic: true } },
-
-  gtag: {
-    enabled: process.env.NODE_ENV === 'production',
-    id: process.env.GTAG_ID,
-  },
 
   i18n: {
     defaultLocale: 'fr',
