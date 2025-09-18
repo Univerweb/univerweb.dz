@@ -12,7 +12,11 @@ const { data: contact } = await useAsyncData(
   { watch: [locale] },
 )
 
-useSeo({ page: 'contact' })
+useSeo({
+  page: 'contact',
+  title: () => contact.value!.title,
+  description: () => contact.value!.title,
+})
 
 const position = {
   lat: 36.720937,

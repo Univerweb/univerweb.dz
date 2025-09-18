@@ -40,6 +40,7 @@ useSeo({
   title: () => `${realisation.value!.title}${defaultLocale ? ' :' : ':'} ${realisation.value!.category} | ${t('navigation.menu.realisations')}`,
   description: () => realisation.value!.description,
   ogTitle: () => `${realisation.value!.title}${defaultLocale ? ' :' : ':'} ${realisation.value!.category}`,
+  breadcrumbTitle: () => realisation.value!.title,
   ogImageAlt: () => t('alt.banner', { client: realisation.value!.title }),
 })
 

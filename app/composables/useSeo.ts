@@ -2,9 +2,10 @@ type PageKey = | 'home' | 'realisations' | 'prestations' | 'agence' | 'contact' 
 
 interface Options {
   page: PageKey | { name: PageKey, slug?: boolean }
-  title?: () => string
-  description?: () => string
+  title: () => string
+  description: () => string
   ogTitle?: () => string
+  breadcrumbTitle?: () => string
   ogImageAlt?: () => string
   ogImageWidth?: number
   ogImageHeight?: number
@@ -30,9 +31,10 @@ export function useSeo(options: Options) {
 
   const ogSiteName = computed(() => t('site.name'))
 
-  const title: () => string = options.title || (() => t(`navigation.menu.${pageName}`))
-  const description: () => string = options.description || (() => '')
+  const title: () => string = options.title
+  const description: () => string = options.description
   const ogTitle: () => string = options.ogTitle || title
+  const breadcrumbTitle: () => string = options.breadcrumbTitle || ogTitle
 
   const ogUrl = baseUrl(path)
   const ogLocale = computed(() => locales[locale.value as keyof typeof locales] || 'fr_FR')
@@ -121,8 +123,12 @@ export function useSeo(options: Options) {
 
           const items = [
             listItem(1, ogSiteName.value, localeBaseUrl.value),
-            listItem(2, t(`navigation.menu.${pageName}`), baseUrl(localePath(pageName))),
-            ...(pageSlug ? [listItem(3, ogTitle(), ogUrl)] : []),
+            ...(pageName !== 'home'
+              ? [listItem(2, t(`navigation.menu.${pageName}`), baseUrl(localePath(pageName)))]
+              : []),
+            ...(pageSlug
+              ? [listItem(pageName !== 'home' ? 3 : 2, breadcrumbTitle(), ogUrl)]
+              : []),
           ]
 
           return JSON.stringify({

@@ -9,7 +9,11 @@ const { data: prestationsPage } = await useAsyncData(
   { watch: [locale] },
 )
 
-useSeo({ page: 'prestations' })
+useSeo({
+  page: 'prestations',
+  title: () => prestationsPage.value!.title,
+  description: () => prestationsPage.value!.title,
+})
 </script>
 
 <template>

@@ -37,6 +37,7 @@ useSeo({
   title: () => prestation.value!.seo.title!,
   description: () => prestation.value!.seo.description!,
   ogTitle: () => prestation.value!.seo.title!,
+  breadcrumbTitle: () => prestation.value!.title,
   ogImageAlt: () => prestation.value!.alt,
   ogImageWidth: 2800,
   ogImageHeight: 1575,
