@@ -1,0 +1,75 @@
+name: 🚀 Déploiement vers Production
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  generate-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📦 Récupération du dépôt
+        uses: actions/checkout@v3
+
+      - name: 🛠️ Configuration de Node.js v24
+        uses: actions/setup-node@v3
+        with:
+          node-version: 24
+
+      - name: 📦 Installation de pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 10
+
+      - name: 📥 Installation des dépendances
+        run: pnpm install
+
+      - name: 🧱 Génération du site statique
+        run: pnpm run generate
+        env:
+          BASE_URL: ${{ secrets.PROD_BASE_URL }}
+          CDN_URL: ${{ secrets.PROD_CDN_URL }}
+          BASE_EMAIL: ${{ secrets.PROD_BASE_EMAIL }}
+          MANAGER_EMAIL: ${{ secrets.PROD_MANAGER_EMAIL }}
+          SUPPORT_EMAIL: ${{ secrets.PROD_SUPPORT_EMAIL }}
+          BASE_MOBILE: ${{ secrets.PROD_BASE_MOBILE }}
+          GMAPS_KEY: ${{ secrets.PROD_GMAPS_KEY }}
+          GMAPS_ID: ${{ secrets.PROD_GMAPS_ID }}
+
+      - name: 🔍 Vérification des fichiers générés
+        run: ls -la .output/public
+
+      - name: ❌ Échec si .output/public est vide
+        run: |
+          if [ -z "$(ls -A .output/public)" ]; then
+            echo "❌ Le dossier .output/public est vide. La génération a échoué."
+            exit 1
+          fi
+
+      - name: 🧹 Nettoyage du dossier distant
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.PROD_HOST }}
+          username: ${{ secrets.PROD_USER }}
+          key: ${{ secrets.PROD_SSH_KEY }}
+          port: 22
+          script: |
+            echo "🧹 Suppression du contenu distant..."
+            rm -rf /var/www/vhosts/univerweb.dz/httpdocs/*
+
+      - name: 📤 Déploiement des fichiers sur le serveur
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ secrets.PROD_HOST }}
+          username: ${{ secrets.PROD_USER }}
+          key: ${{ secrets.PROD_SSH_KEY }}
+          port: 22
+          source: .output/public/
+          target: /var/www/vhosts/univerweb.dz/httpdocs
+          strip_components: 2
+
+      - name: ✅ Déploiement terminé avec succès
+        run: echo "🚀 Le site a été déployé avec succès sur univerweb.dz"
