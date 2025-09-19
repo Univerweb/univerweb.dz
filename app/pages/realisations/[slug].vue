@@ -4,15 +4,15 @@ const { locale, defaultLocale, t, tm, rt } = useI18n()
 const localePath = useLocalePath()
 const { localeBaseUrl, baseUrl } = useUrl()
 
-const { data: realisation } = await useAsyncData(
-  () => `realisation-${locale.value}-${slug}`,
+const { data: project } = await useAsyncData(
+  () => `project-${locale.value}-${slug}`,
   async () => {
     const [translated, common] = await Promise.all([
-      queryCollection(`realisations_item_${locale.value}`)
+      queryCollection(`project_${locale.value}`)
         .select('path', 'title', 'description', 'createdAt', 'updatedAt', 'about')
         .path(localePath(path))
         .first(),
-      queryCollection('realisations_item')
+      queryCollection('project')
         .select('path', 'category', 'tags', 'website')
         .path(localePath(path, 'fr'))
         .first(),
@@ -27,7 +27,7 @@ const { data: realisation } = await useAsyncData(
   { watch: [locale] },
 )
 
-if (!realisation.value) {
+if (!project.value) {
   throw createError({
     statusCode: 404,
     statusMessage: 'Page Not Found',
@@ -37,24 +37,24 @@ if (!realisation.value) {
 
 useSeo({
   page: { name: 'realisations', slug: true },
-  title: () => `${realisation.value!.title}${defaultLocale ? ' :' : ':'} ${realisation.value!.category} | ${t('navigation.menu.realisations')}`,
-  description: () => realisation.value!.description,
-  ogTitle: () => `${realisation.value!.title}${defaultLocale ? ' :' : ':'} ${realisation.value!.category}`,
-  breadcrumbTitle: () => realisation.value!.title,
-  ogImageAlt: () => t('alt.banner', { client: realisation.value!.title }),
+  title: () => `${project.value!.title}${defaultLocale ? ' :' : ':'} ${project.value!.category} | ${t('navigation.menu.realisations')}`,
+  description: () => project.value!.description,
+  ogTitle: () => `${project.value!.title}${defaultLocale ? ' :' : ':'} ${project.value!.category}`,
+  breadcrumbTitle: () => project.value!.title,
+  ogImageAlt: () => t('alt.banner', { client: project.value!.title }),
 })
 
 const { data: related } = await useAsyncData(
-  () => `realisation-related-${locale.value}-${slug}`,
+  () => `project-related-${locale.value}-${slug}`,
   async () => {
     const [translated, common] = await Promise.all([
-      queryCollection(`realisations_item_${locale.value}`)
+      queryCollection(`project_${locale.value}`)
         .select('path', 'title', 'description', 'createdAt', 'updatedAt', 'about')
         .where('path', '<>', path)
         .all(),
-      queryCollection('realisations_item')
+      queryCollection('project')
         .select('path', 'category')
-        .where('category', '=', realisation.value!.category)
+        .where('category', '=', project.value!.category)
         .all(),
     ])
 
@@ -75,19 +75,19 @@ const { data: related } = await useAsyncData(
 )
 
 const { data: surround } = await useAsyncData(
-  () => `realisation-surround-${locale.value}-${slug}`,
-  () => queryCollectionItemSurroundings(`realisations_item_${locale.value}`, path),
+  () => `project-surround-${locale.value}-${slug}`,
+  () => queryCollectionItemSurroundings(`project_${locale.value}`, path),
   { watch: [locale] },
 )
 </script>
 
 <template>
-  <main v-if="realisation" class="realisations">
+  <main v-if="project" class="realisations">
     <article vocab="https://schema.org/" typeof="CreativeWork" aria-labelledby="name">
       <header class="container intro">
-        <meta property="description" :content="realisation.description">
-        <meta property="dateCreated datePublished" :content="new Date(realisation.createdAt).toISOString()">
-        <meta property="dateModified" :content="new Date(realisation.updatedAt).toISOString()">
+        <meta property="description" :content="project.description">
+        <meta property="dateCreated datePublished" :content="new Date(project.createdAt).toISOString()">
+        <meta property="dateModified" :content="new Date(project.updatedAt).toISOString()">
         <span property="author publisher" typeof="Organization">
           <meta property="name" :content="t('site.name')">
           <link property="url" :href="localeBaseUrl">
@@ -102,14 +102,14 @@ const { data: surround } = await useAsyncData(
 
         <AppBack path="realisations" :label="t('navigation.menu.realisations')" />
         <h1 id="name" property="name">
-          {{ realisation.title }}
+          {{ project.title }}
         </h1>
       </header>
 
       <AppPicture
-        :picture="realisation"
+        :picture="project"
         type="banner"
-        :alt="t('alt.banner', { client: realisation.title })"
+        :alt="t('alt.banner', { client: project.title })"
         sizes="342px xs:392px sm:735px md:975px lg:1183px xl:1280px"
         class="banner"
       />
@@ -120,7 +120,7 @@ const { data: surround } = await useAsyncData(
             {{ t('headings.client') }}
           </h2>
           <p class="lead">
-            {{ realisation.title }}
+            {{ project.title }}
           </p>
         </section>
 
@@ -129,7 +129,7 @@ const { data: surround } = await useAsyncData(
             {{ t('headings.category') }}
           </h2>
           <p class="lead">
-            {{ t(`category.${realisation.category}`) }}
+            {{ t(`category.${project.category}`) }}
           </p>
         </section>
 
@@ -138,7 +138,7 @@ const { data: surround } = await useAsyncData(
             {{ t('headings.completedServices') }}
           </h2>
           <ul class="lead tags">
-            <li v-for="tag in realisation.tags" :key="tag">
+            <li v-for="tag in project.tags" :key="tag">
               {{ t(`services.${tag}.name`) }}
             </li>
           </ul>
@@ -149,7 +149,7 @@ const { data: surround } = await useAsyncData(
             {{ t('headings.technologiesUsed') }}
           </h2>
           <ul class="technos">
-            <template v-for="tag in realisation.tags" :key="tag">
+            <template v-for="tag in project.tags" :key="tag">
               <li v-for="icon in (tm(`services.${tag}.icon`) as string[])" :key="rt(icon)">
                 <Component :is="rt(icon)" />
               </li>
@@ -162,20 +162,20 @@ const { data: surround } = await useAsyncData(
         <div class="col col--1-4">
           <section class="inner" aria-labelledby="about-company">
             <h2 id="about-company" class="h6">
-              {{ t('headings.about', { client: realisation.title }) }}
+              {{ t('headings.about', { client: project.title }) }}
             </h2>
             <p property="about" class="lead">
-              {{ realisation.about }}
+              {{ project.about }}
             </p>
-            <a v-if="realisation.website" :href="realisation.website" class="link">
+            <a v-if="project.website" :href="project.website" class="link">
               {{ t('actions.visit') }}
             </a>
           </section>
         </div>
         <AppPicture
-          :picture="realisation"
+          :picture="project"
           type="preview"
-          :alt="t('alt.preview', { client: realisation.title })"
+          :alt="t('alt.preview', { client: project.title })"
           sizes="304px xs:354px sm:697px md:921px lg:565px xl:730px"
           class="col col--5-13 preview"
           :img-attrs="null"

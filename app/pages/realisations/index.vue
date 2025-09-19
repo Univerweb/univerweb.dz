@@ -1,9 +1,9 @@
 <script setup lang="ts">
 const { locale } = useI18n()
 
-const { data: realisationsPage } = await useAsyncData(
-  () => `realisations-page-${locale.value}`,
-  () => queryCollection(`realisations_page_${locale.value}`)
+const { data: realisations } = await useAsyncData(
+  () => `realisations-${locale.value}`,
+  () => queryCollection(`realisations_${locale.value}`)
     .select('title', 'description', 'headline')
     .first(),
   { watch: [locale] },
@@ -11,14 +11,14 @@ const { data: realisationsPage } = await useAsyncData(
 
 useSeo({
   page: 'realisations',
-  title: () => realisationsPage.value!.title,
-  description: () => realisationsPage.value!.title,
+  title: () => realisations.value!.title,
+  description: () => realisations.value!.title,
 })
 </script>
 
 <template>
-  <main v-if="realisationsPage">
-    <RealisationCardGroup :headline="realisationsPage.headline" />
+  <main v-if="realisations">
+    <RealisationCardGroup :headline="realisations.headline" />
     <LazyAppRequest />
   </main>
 </template>

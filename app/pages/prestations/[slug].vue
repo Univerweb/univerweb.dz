@@ -4,10 +4,10 @@ const { locale, t } = useI18n()
 const localePath = useLocalePath()
 const { baseUrl } = useUrl()
 
-const [{ data: prestation }, { data: related }] = await Promise.all([
+const [{ data: service }, { data: related }] = await Promise.all([
   useAsyncData(
-    () => `prestation-${locale.value}-${slug}`,
-    () => queryCollection(`prestations_item_${locale.value}`)
+    () => `service-${locale.value}-${slug}`,
+    () => queryCollection(`service_${locale.value}`)
       .select('path', 'seo', 'title', 'description', 'alt', 'intro', 'solutions', 'features', 'process', 'faq')
       .path(localePath(path))
       .first(),
@@ -15,8 +15,8 @@ const [{ data: prestation }, { data: related }] = await Promise.all([
   ),
 
   useAsyncData(
-    () => `prestation-related-${locale.value}-${slug}`,
-    () => queryCollection(`prestations_item_${locale.value}`)
+    () => `service-related-${locale.value}-${slug}`,
+    () => queryCollection(`service_${locale.value}`)
       .select('path', 'title', 'description', 'cta')
       .where('path', '<>', path)
       .all(),
@@ -24,7 +24,7 @@ const [{ data: prestation }, { data: related }] = await Promise.all([
   ),
 ])
 
-if (!prestation.value) {
+if (!service.value) {
   throw createError({
     statusCode: 404,
     statusMessage: 'Page Not Found',
@@ -34,11 +34,11 @@ if (!prestation.value) {
 
 useSeo({
   page: { name: 'prestations', slug: true },
-  title: () => prestation.value!.seo.title!,
-  description: () => prestation.value!.seo.description!,
-  ogTitle: () => prestation.value!.seo.title!,
-  breadcrumbTitle: () => prestation.value!.title,
-  ogImageAlt: () => prestation.value!.alt,
+  title: () => service.value!.seo.title!,
+  description: () => service.value!.seo.description!,
+  ogTitle: () => service.value!.seo.title!,
+  breadcrumbTitle: () => service.value!.title,
+  ogImageAlt: () => service.value!.alt,
   ogImageWidth: 2800,
   ogImageHeight: 1575,
 })
@@ -81,7 +81,7 @@ const leave = (el: Element) => {
 </script>
 
 <template>
-  <main v-if="prestation" class="prestations">
+  <main v-if="service" class="prestations">
     <article vocab="https://schema.org/" typeof="Service" aria-labelledby="title">
       <header class="container intro">
         <span property="mainEntityOfPage" typeof="WebPage">
@@ -90,12 +90,12 @@ const leave = (el: Element) => {
 
         <AppBack path="prestations" :label="t('navigation.menu.prestations')" />
         <h1 id="title" property="name serviceType">
-          {{ prestation.title }}
+          {{ service.title }}
         </h1>
       </header>
 
       <AppPicture
-        :picture="prestation"
+        :picture="service"
         type="banner"
         sizes="100vw xs:100vw sm:100vw md:100vw lg:100vw xl:1400px"
         class="banner"
@@ -103,10 +103,10 @@ const leave = (el: Element) => {
 
       <section class="container row" aria-labelledby="description">
         <h2 id="description" class="col" property="description">
-          {{ prestation.description }}
+          {{ service.description }}
         </h2>
         <div class="col col--1-9 lead">
-          <p v-for="(paragraph, index) in prestation.intro" :key="index">
+          <p v-for="(paragraph, index) in service.intro" :key="index">
             {{ paragraph }}
           </p>
         </div>
@@ -114,10 +114,10 @@ const leave = (el: Element) => {
 
       <section class="container row features" aria-labelledby="solutions">
         <h2 id="solutions" class="col col--1-5">
-          {{ prestation.solutions.title }}
+          {{ service.solutions.title }}
         </h2>
         <div class="col col--6-13">
-          <template v-for="solution in prestation.solutions.list" :key="solution.title">
+          <template v-for="solution in service.solutions.list" :key="solution.title">
             <h3>{{ solution.title }}</h3>
             <p>{{ solution.description }}</p>
           </template>
@@ -126,10 +126,10 @@ const leave = (el: Element) => {
 
       <section class="container row tags-group" aria-labelledby="features">
         <h2 id="features" class="col col--1-6">
-          {{ prestation.features.title }}
+          {{ service.features.title }}
         </h2>
         <ul class="col col--7-12 tags">
-          <li v-for="tag in prestation.features.tags" :key="tag">
+          <li v-for="tag in service.features.tags" :key="tag">
             {{ tag }}
           </li>
         </ul>
@@ -137,10 +137,10 @@ const leave = (el: Element) => {
 
       <section class="container row" aria-labelledby="process">
         <h2 id="process" class="col col--1-5">
-          {{ prestation.process.title }}
+          {{ service.process.title }}
         </h2>
-        <ol :class="`col row items-${prestation.process.steps.length}`">
-          <li v-for="(process, index) in prestation.process.steps" :key="process.title" :class="`big-count item item-${index + 1}`">
+        <ol :class="`col row items-${service.process.steps.length}`">
+          <li v-for="(process, index) in service.process.steps" :key="process.title" :class="`big-count item item-${index + 1}`">
             <h3>{{ process.title }}</h3>
             <p>{{ process.description }}</p>
           </li>
@@ -149,10 +149,10 @@ const leave = (el: Element) => {
 
       <section class="container row faq" vocab="https://schema.org/" typeof="FAQPage" aria-labelledby="faq">
         <h2 id="faq" class="col col--1-5">
-          {{ prestation.faq.title }}
+          {{ service.faq.title }}
         </h2>
         <div class="col">
-          <div v-for="(faq, index) in prestation.faq.questions" :key="index" class="question" property="mainEntity" typeof="Question">
+          <div v-for="(faq, index) in service.faq.questions" :key="index" class="question" property="mainEntity" typeof="Question">
             <h3>
               <button :id="`faq-header-${index + 1}`" :aria-expanded="activeIndex === index" :aria-controls="`faq-panel-${index + 1}`" @click="toggle(index)">
                 <span property="name">

@@ -5,11 +5,12 @@ defineProps<{
   titleTag?: string
 }>()
 
+const { path } = useRoute()
 const { locale } = useI18n()
 
-const { data: prestationsItem } = await useAsyncData(
-  () => `prestations-item-${locale.value}`,
-  () => queryCollection(`prestations_item_${locale.value}`)
+const { data: services } = await useAsyncData(
+  `services-${path}`,
+  () => queryCollection(`service_${locale.value}`)
     .select('path', 'title', 'description', 'cta')
     .all(),
   { watch: [locale] },
@@ -25,7 +26,7 @@ const { data: prestationsItem } = await useAsyncData(
     </div>
 
     <div class="card-group">
-      <PrestationCard v-for="card in prestationsItem" :key="card.path" :card :title-tag="titleTag || 'h2'" />
+      <PrestationCard v-for="card in services" :key="card.path" :card :title-tag="titleTag || 'h2'" />
     </div>
   </section>
 </template>

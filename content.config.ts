@@ -40,11 +40,11 @@ const Page = z.object({
   headline: z.string(),
 })
 
-const Realisation = Date.extend({
+const Project = Date.extend({
   about: z.string(),
 })
 
-const Prestation = z.object({
+const Service = z.object({
   cta: z.string(),
   alt: z.string(),
   intro: z.array(z.string()),
@@ -132,23 +132,23 @@ export default defineContentConfig({
       schema: Home,
     }),
 
-    realisations_page_fr: defineCollection({
+    realisations_fr: defineCollection({
       type: 'page',
       source: 'fr/realisations/index.yaml',
       schema: Page,
     }),
-    realisations_page_en: defineCollection({
+    realisations_en: defineCollection({
       type: 'page',
       source: 'en/realisations/index.yaml',
       schema: Page,
     }),
-    realisations_page_ar: defineCollection({
+    realisations_ar: defineCollection({
       type: 'page',
       source: 'ar/realisations/index.yaml',
       schema: Page,
     }),
 
-    realisations_item: defineCollection({
+    project: defineCollection({
       type: 'page',
       source: 'realisations/*.yaml',
       schema: z.object({
@@ -157,52 +157,52 @@ export default defineContentConfig({
         website: z.string().url().optional(),
       }),
     }),
-    realisations_item_fr: defineCollection({
+    project_fr: defineCollection({
       type: 'page',
       source: { include: 'fr/realisations/*.yaml', exclude: ['fr/realisations/index.yaml'], prefix: 'realisations' },
-      schema: Realisation,
+      schema: Project,
     }),
-    realisations_item_en: defineCollection({
+    project_en: defineCollection({
       type: 'page',
       source: { include: 'en/realisations/*.yaml', exclude: ['en/realisations/index.yaml'] },
-      schema: Realisation,
+      schema: Project,
     }),
-    realisations_item_ar: defineCollection({
+    project_ar: defineCollection({
       type: 'page',
       source: { include: 'ar/realisations/*.yaml', exclude: ['ar/realisations/index.yaml'] },
-      schema: Realisation,
+      schema: Project,
     }),
 
-    prestations_page_fr: defineCollection({
+    prestations_fr: defineCollection({
       type: 'page',
       source: 'fr/prestations/index.yaml',
       schema: Page,
     }),
-    prestations_page_en: defineCollection({
+    prestations_en: defineCollection({
       type: 'page',
       source: 'en/prestations/index.yaml',
       schema: Page,
     }),
-    prestations_page_ar: defineCollection({
+    prestations_ar: defineCollection({
       type: 'page',
       source: 'ar/prestations/index.yaml',
       schema: Page,
     }),
 
-    prestations_item_fr: defineCollection({
+    service_fr: defineCollection({
       type: 'page',
       source: { include: 'fr/prestations/*.yaml', exclude: ['fr/prestations/index.yaml'], prefix: 'prestations' },
-      schema: Prestation,
+      schema: Service,
     }),
-    prestations_item_en: defineCollection({
+    service_en: defineCollection({
       type: 'page',
       source: { include: 'en/prestations/*.yaml', exclude: ['en/prestations/index.yaml'] },
-      schema: Prestation,
+      schema: Service,
     }),
-    prestations_item_ar: defineCollection({
+    service_ar: defineCollection({
       type: 'page',
       source: { include: 'ar/prestations/*.yaml', exclude: ['ar/prestations/index.yaml'] },
-      schema: Prestation,
+      schema: Service,
     }),
 
     agence_fr: defineCollection({
@@ -237,33 +237,33 @@ export default defineContentConfig({
       schema: Contact,
     }),
 
-    blog_page_fr: defineCollection({
+    blog_fr: defineCollection({
       type: 'page',
       source: 'fr/blog/index.yaml',
       schema: Page,
     }),
-    blog_page_en: defineCollection({
+    blog_en: defineCollection({
       type: 'page',
       source: 'en/blog/index.yaml',
       schema: Page,
     }),
-    blog_page_ar: defineCollection({
+    blog_ar: defineCollection({
       type: 'page',
       source: 'ar/blog/index.yaml',
       schema: Page,
     }),
 
-    blog_item_fr: defineCollection({
+    article_fr: defineCollection({
       type: 'page',
       source: { include: 'fr/blog/*.md', exclude: ['fr/blog/index.yaml'], prefix: 'blog' },
       schema: Article,
     }),
-    blog_item_en: defineCollection({
+    article_en: defineCollection({
       type: 'page',
       source: { include: 'en/blog/*.md', exclude: ['en/blog/index.yaml'] },
       schema: Article,
     }),
-    blog_item_ar: defineCollection({
+    article_ar: defineCollection({
       type: 'page',
       source: { include: 'ar/blog/*.md', exclude: ['ar/blog/index.yaml'] },
       schema: Article,

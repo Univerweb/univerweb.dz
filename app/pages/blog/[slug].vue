@@ -8,7 +8,7 @@ const head = useLocaleHead()
 const [{ data: article }, { data: surround }] = await Promise.all([
   useAsyncData(
     () => `article-${locale.value}-${slug}`,
-    () => queryCollection(`blog_item_${locale.value}`)
+    () => queryCollection(`article_${locale.value}`)
       .select('path', 'title', 'description', 'alt', 'createdAt', 'updatedAt', 'tags', 'author', 'body')
       .path(computed(() => localePath(path)).value)
       .first(),
@@ -16,8 +16,8 @@ const [{ data: article }, { data: surround }] = await Promise.all([
   ),
 
   useAsyncData(
-    `article-surround-${locale.value}-${slug}`,
-    () => queryCollectionItemSurroundings(`blog_item_${locale.value}`, path),
+    () => `article-surround-${locale.value}-${slug}`,
+    () => queryCollectionItemSurroundings(`article_${locale.value}`, path),
     { watch: [locale] },
   ),
 ])
