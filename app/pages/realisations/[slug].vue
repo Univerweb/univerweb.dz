@@ -37,9 +37,9 @@ if (!project.value) {
 
 useSeo({
   page: { name: 'realisations', slug: true },
-  title: () => `${project.value!.title}${defaultLocale ? ' :' : ':'} ${project.value!.category} | ${t('navigation.menu.realisations')}`,
+  title: () => `${project.value!.title}${defaultLocale ? ' :' : ':'} ${t(`category.${project.value!.category}`)} | ${t('navigation.menu.realisations')}`,
   description: () => project.value!.description,
-  ogTitle: () => `${project.value!.title}${defaultLocale ? ' :' : ':'} ${project.value!.category}`,
+  ogTitle: () => `${project.value!.title}${defaultLocale ? ' :' : ':'} ${t(`category.${project.value!.category}`)}`,
   breadcrumbTitle: () => project.value!.title,
   ogImageAlt: () => t('alt.banner', { client: project.value!.title }),
 })
