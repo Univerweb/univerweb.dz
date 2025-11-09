@@ -45,7 +45,11 @@ export function useSeo(options: Options) {
   )
 
   const ogImage: ComputedRef<string | undefined> = computed(() => options.ogImageAlt
-    ? img(localePath(`${path}_banner`, 'fr'), { format: 'webp', width: options.ogImageWidth || defaultOgImageWidth, height: options.ogImageHeight || defaultOgImageHeight }, { provider: 'cloudinary' })
+    ? img(localePath(`${path}_banner`, 'fr'), {
+      format: 'webp',
+      width: options.ogImageWidth || defaultOgImageWidth,
+      height: options.ogImageHeight || defaultOgImageHeight
+    })
     : defaultOgImage.value,
   )
 

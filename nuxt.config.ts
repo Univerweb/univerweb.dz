@@ -51,6 +51,7 @@ export default defineNuxtConfig({
   },
 
   image: {
+    provider: 'cloudinary',
     cloudinary: {
       baseURL: process.env.CDN_URL,
     },
