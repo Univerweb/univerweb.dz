@@ -16,8 +16,8 @@ navigation:
 ariaLabels:
   langSwitch: اختر اللغة العربية
   theme:
-    light: Switch to dark mode
-    dark: Switch to light mode
+    light: Switch to light mode
+    dark: Switch to dark mode
   menu:
     open: Open menu
     close: Close menu

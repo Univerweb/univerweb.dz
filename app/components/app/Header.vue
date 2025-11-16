@@ -46,9 +46,9 @@ const { langNext, isLangNext, langTooltip } = useTooltip()
           type="button"
           role="switch"
           :aria-checked="mode === 'dark'"
-          :aria-label="t(`ariaLabels.theme.${mode}`)"
+          :aria-label="mode === 'dark' ? t('ariaLabels.theme.light') : t('ariaLabels.theme.dark')"
           aria-live="polite"
-          @click="mode = mode === 'light' ? 'dark' : 'light'"
+          @click="mode = mode === 'dark' ? 'light' : 'dark'"
         >
           <Transition name="toggle-theme" mode="out-in">
             <IconDarkMode v-if="mode === 'dark'" />

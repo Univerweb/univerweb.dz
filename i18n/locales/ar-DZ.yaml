@@ -16,8 +16,8 @@ navigation:
 ariaLabels:
   langSwitch: Choisir le français
   theme:
-    light: تفعيل الوضع الداكن
-    dark: تفعيل الوضع الفاتح
+    light: تفعيل الوضع الفاتح
+    dark: تفعيل الوضع الداكن
   menu:
     open: فتح القائمة
     close: إغلاق القائمة

@@ -16,8 +16,8 @@ navigation:
 ariaLabels:
   langSwitch: Switch to English
   theme:
-    light: Passer au mode sombre
-    dark: Passer au mode clair
+    light: Passer au mode clair
+    dark: Passer au mode sombre
   menu:
     open: Ouvrir le menu
     close: Fermer le menu
