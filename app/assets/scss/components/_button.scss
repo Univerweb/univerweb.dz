@@ -86,7 +86,7 @@
     height: 32px;
     transition: color var(--transition), transform var(--transition);
 
-    [dir='rtl'] section:has(.more) & {
+    [dir='rtl'] &.next {
       transform: rotate(180deg);
     }
   }
@@ -100,12 +100,8 @@
       transform: translateY(24px);
     }
 
-    [dir='rtl'] & {
+    [dir='rtl'] &.next {
       transform: translateX(-5px) rotate(180deg);
-    }
-
-    [dir='rtl'] .hero & {
-      transform: translateY(24px) rotate(0);
     }
   }
 }
