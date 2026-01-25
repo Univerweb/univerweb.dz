@@ -26,8 +26,8 @@ const [{ data: service }, { data: related }] = await Promise.all([
 
 if (!service.value) {
   throw createError({
-    statusCode: 404,
-    statusMessage: 'Page Not Found',
+    status: 404,
+    statusText: 'Page Not Found',
     fatal: true,
   })
 }

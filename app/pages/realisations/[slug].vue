@@ -29,8 +29,8 @@ const { data: project } = await useAsyncData(
 
 if (!project.value) {
   throw createError({
-    statusCode: 404,
-    statusMessage: 'Page Not Found',
+    status: 404,
+    statusText: 'Page Not Found',
     fatal: true,
   })
 }
