@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const props = defineProps<{
-  error: { statusCode: number }
+  error: { status: number }
 }>()
 
 const collectionKeys = {
@@ -12,10 +12,10 @@ const head = useLocaleHead()
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
 
-const key = collectionKeys[props.error.statusCode as 404 | 500][locale.value as 'fr' | 'en' | 'ar']
+const key = collectionKeys[props.error.status as 404 | 500][locale.value as 'fr' | 'en' | 'ar']
 
 const { data: errorPage } = await useAsyncData(
-  () => `error-${props.error.statusCode}-${locale.value}`,
+  () => `error-${props.error.status}-${locale.value}`,
   () => queryCollection(key)
     .select('title', 'description', 'headline', 'lead', 'cta')
     .first(),
