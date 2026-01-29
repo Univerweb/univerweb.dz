@@ -19,7 +19,7 @@
     "@nuxtjs/i18n": "^10.2.1",
     "@nuxtjs/mdc": "^0.20.0",
     "@nuxtjs/sitemap": "^7.6.0",
-    "@types/node": "^25.0.10",
+    "@types/node": "^25.1.0",
     "@vueuse/nuxt": "^14.1.0",
     "better-sqlite3": "^12.6.2",
     "eslint": "^9.39.2",
