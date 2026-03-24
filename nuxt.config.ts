@@ -36,6 +36,14 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2025-08-08',
 
+  vite: {
+    optimizeDeps: {
+      include: [
+        'vue3-google-map',
+      ],
+    },
+  },
+
   eslint: { config: { stylistic: true } },
 
   i18n: {
