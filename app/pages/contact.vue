@@ -51,21 +51,23 @@ function zoom() {
       </div>
     </section>
 
-    <GoogleMap
-      id="map"
-      ref="mapRef"
-      dir="auto"
-      :api-key="config.public.gmapsKey"
-      :map-id="config.public.gmapsId"
-      :center="position"
-      :zoom="14"
-      :street-view-control="false"
-      background-color="var(--background-secondary)"
-    >
-      <CustomMarker :options="{ position }" @click="zoom">
-        <AppLogo />
-      </CustomMarker>
-    </GoogleMap>
+    <ClientOnly>
+      <GoogleMap
+        id="map"
+        ref="mapRef"
+        dir="auto"
+        :api-key="config.public.gmapsKey"
+        :map-id="config.public.gmapsId"
+        :center="position"
+        :zoom="14"
+        :street-view-control="false"
+        background-color="var(--background-secondary)"
+      >
+        <CustomMarker :options="{ position }" @click="zoom">
+          <AppLogo />
+        </CustomMarker>
+      </GoogleMap>
+    </ClientOnly>
 
     <section class="container request other" aria-labelledby="other">
       <div id="other" class="intro">
