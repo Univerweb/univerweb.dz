@@ -9,17 +9,17 @@ jobs:
 
     steps:
       - name: 📦 Récupération du dépôt
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
 
       - name: 🛠️ Configuration de Node.js v24
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v6
         with:
           node-version: 24
 
-      - name: 📦 Installation de pnpm
-        uses: pnpm/action-setup@v2
+      - name: 📦 Configuration de pnpm
+        uses: pnpm/action-setup@v6
         with:
-          version: 10
+          version: 11
 
       - name: 📥 Installation des dépendances
         run: pnpm install
@@ -47,7 +47,7 @@ jobs:
           fi
 
       - name: 🧹 Nettoyage du dossier distant
-        uses: appleboy/ssh-action@v0.1.10
+        uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.PROD_HOST }}
           username: ${{ secrets.PROD_USER }}
@@ -58,7 +58,7 @@ jobs:
             rm -rf /var/www/vhosts/univerweb.dz/httpdocs/*
 
       - name: 📤 Déploiement des fichiers sur le serveur
-        uses: appleboy/scp-action@v0.1.4
+        uses: appleboy/scp-action@v1
         with:
           host: ${{ secrets.PROD_HOST }}
           username: ${{ secrets.PROD_USER }}
