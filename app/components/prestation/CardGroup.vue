@@ -11,7 +11,7 @@ const { locale } = useI18n()
 const { data: services } = await useAsyncData(
   `services-${path}`,
   () => queryCollection(`service_${locale.value}`)
-    .select('path', 'title', 'description', 'cta')
+    .select('icon', 'title', 'description', 'cta', 'path')
     .all(),
   { watch: [locale] },
 )
@@ -26,7 +26,7 @@ const { data: services } = await useAsyncData(
     </div>
 
     <div class="card-group">
-      <PrestationCard v-for="(card, index) in services" :key="card.path" :index :title-tag="titleTag || 'h2'" :card />
+      <PrestationCard v-for="card in services" :key="card.path" :title-tag="titleTag || 'h2'" :card />
     </div>
   </section>
 </template>

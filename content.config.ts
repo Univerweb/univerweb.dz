@@ -12,6 +12,7 @@ const Date = z.object({
 
 const List = z.array(
   z.object({
+    icon: z.string().optional(),
     title: z.string(),
     description: z.string(),
   }),
@@ -45,6 +46,7 @@ const Project = Date.extend({
 })
 
 const Service = z.object({
+  icon: z.string(),
   cta: z.string(),
   alt: z.string(),
   intro: z.array(z.string()),
@@ -93,6 +95,7 @@ const Contact = z.object({
   }),
   platforms: z.array(
     z.object({
+      icon: z.string(),
       name: z.string(),
       url: z.string().url(),
     }),

@@ -48,14 +48,16 @@ method:
 choose:
   headline: Ce qui fait notre différence
   list:
-    - title: Votre succès est notre priorité
+    - icon: IconSuccess
+      title: Votre succès est notre priorité
       description:
         Depuis 2011, notre passion est de transformer vos ambitions en
         croissance mesurable. Nous ne nous contentons pas de livrables ; nous
         nous concentrons sur les résultats concrets et le retour sur
         investissement de vos actions digitales.
 
-    - title: Expertise intégrée, simplicité pour vous
+    - icon: IconExpertise
+      title: Expertise intégrée, simplicité pour vous
       description:
         'Nous réunissons sous un même toit toutes les compétences essentielles :
         création de sites performants, identité de marque percutante,
@@ -63,14 +65,16 @@ choose:
         unique vous assure une présence en ligne cohérente et optimisée, sans
         multiplier les interlocuteurs.'
 
-    - title: Une approche véritablement sur mesure
+    - icon: IconApproach
+      title: Une approche véritablement sur mesure
       description:
         Oubliez les solutions génériques. Chaque projet est unique. Nous nous
         immergeons dans votre univers pour concevoir des stratégies et des
         outils parfaitement adaptés à vos spécificités, vos objectifs et votre
         budget.
 
-    - title: L’expérience et la proximité à votre service
+    - icon: IconExperience
+      title: L’expérience et la proximité à votre service
       description:
         Forts de plus d’une décennie d’expérience forgée à Alger, nous
         connaissons les réalités du marché. Notre ancrage local nous permet

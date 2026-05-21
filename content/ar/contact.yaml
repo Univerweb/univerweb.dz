@@ -13,14 +13,18 @@ address:
   addressLocality: الجزائر العاصمة
 
 platforms:
-  - name: X
+  - icon: IconX
+    name: X
     url: https://x.com/Univerweb
 
-  - name: فيس بوك
+  - icon: IconFacebook
+    name: فيس بوك
     url: https://www.facebook.com/Univerweb
 
-  - name: لينكد إن
+  - icon: IconLinkedIn
+    name: لينكد إن
     url: https://www.linkedin.com/company/univerweb
 
-  - name: جيت هاب
+  - icon: IconGitHub
+    name: جيت هاب
     url: https://github.com/univerweb

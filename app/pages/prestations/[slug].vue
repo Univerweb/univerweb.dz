@@ -17,7 +17,7 @@ const [{ data: service }, { data: related }] = await Promise.all([
   useAsyncData(
     () => `service-related-${locale.value}-${slug}`,
     () => queryCollection(`service_${locale.value}`)
-      .select('path', 'title', 'description', 'cta')
+      .select('icon', 'title', 'description', 'cta', 'path')
       .where('path', '<>', path)
       .all(),
     { watch: [locale] },
@@ -189,7 +189,7 @@ const leave = (el: Element) => {
         {{ t('headings.otherTurnkey') }}
       </h2>
       <div class="col card-group">
-        <PrestationCard v-for="(card, index) in related" :key="card.path" :index title-tag="h3" :card />
+        <PrestationCard v-for="card in related" :key="card.path" title-tag="h3" :card />
       </div>
     </aside>
 

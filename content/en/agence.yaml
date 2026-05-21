@@ -47,13 +47,15 @@ method:
 choose:
   headline: What Sets Us Apart
   list:
-    - title: Your Success Is Our Priority
+    - icon: IconSuccess
+      title: Your Success Is Our Priority
       description:
         Since 2011, our passion is to transform your ambitions into measurable
         growth. We don’t just provide deliverables; we focus on concrete results
         and the return on investment of your digital actions.
 
-    - title: Integrated Expertise, Simplicity for You
+    - icon: IconExpertise
+      title: Integrated Expertise, Simplicity for You
       description:
         'We bring all essential competencies together under one roof:
         high-performing website creation, impactful brand identity, reliable
@@ -61,13 +63,15 @@ choose:
         ensures a consistent and optimized online presence, without multiplying
         your points of contact.'
 
-    - title: A Truly Custom Approach
+    - icon: IconApproach
+      title: A Truly Custom Approach
       description:
         Forget generic solutions. Every project is unique. We immerse ourselves
         in your world to design strategies and tools perfectly adapted to your
         specificities, your objectives, and your budget.
 
-    - title: Experience and Proximity at Your Service
+    - icon: IconExperience
+      title: Experience and Proximity at Your Service
       description:
         Strong with over a decade of experience forged in Algiers, we know the
         realities of the market. Our local presence allows us to be reactive and
