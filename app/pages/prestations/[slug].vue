@@ -189,7 +189,7 @@ const leave = (el: Element) => {
         {{ t('headings.otherTurnkey') }}
       </h2>
       <div class="col card-group">
-        <PrestationCard v-for="card in related" :key="card.path" :card title-tag="h3" />
+        <PrestationCard v-for="(card, index) in related" :key="card.path" :index title-tag="h3" :card />
       </div>
     </aside>
 

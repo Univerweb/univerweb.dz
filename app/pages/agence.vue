@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { IconSuccess, IconExpertise, IconApproach, IconExperience } from '#components'
+
 const { locale } = useI18n()
 
 const { data: agence } = await useAsyncData(
@@ -14,6 +16,13 @@ useSeo({
   title: () => agence.value!.title,
   description: () => agence.value!.title,
 })
+
+const icons = [
+  IconSuccess,
+  IconExpertise,
+  IconApproach,
+  IconExperience,
+]
 </script>
 
 <template>
@@ -47,6 +56,7 @@ useSeo({
       </h2>
       <div class="col row items-2">
         <div v-for="(choose, index) in agence.choose.list" :key="index" :class="`item item-${index + 1}`">
+          <component :is="icons[index]" fill="var(--blue)" />
           <h3>{{ choose.title }}</h3>
           <p class="lead">
             {{ choose.description }}

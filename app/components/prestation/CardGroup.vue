@@ -26,7 +26,7 @@ const { data: services } = await useAsyncData(
     </div>
 
     <div class="card-group">
-      <PrestationCard v-for="card in services" :key="card.path" :card :title-tag="titleTag || 'h2'" />
+      <PrestationCard v-for="(card, index) in services" :key="card.path" :index :title-tag="titleTag || 'h2'" :card />
     </div>
   </section>
 </template>
