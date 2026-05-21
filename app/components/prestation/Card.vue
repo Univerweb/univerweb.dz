@@ -9,11 +9,11 @@ defineProps<{
 
 <template>
   <div class="card-prestation" vocab="https://schema.org/" typeof="Service">
-    <Component :is="titleTag" property="name serviceType">
+    <component :is="titleTag" property="name serviceType">
       <NuxtLink :to="card.path">
         {{ card.title }}
       </NuxtLink>
-    </Component>
+    </component>
 
     <p class="lead" property="description">
       {{ card.description }}

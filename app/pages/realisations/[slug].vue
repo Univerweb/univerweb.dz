@@ -151,7 +151,7 @@ const { data: surround } = await useAsyncData(
           <ul class="technos">
             <template v-for="tag in project.tags" :key="tag">
               <li v-for="icon in (tm(`services.${tag}.icon`) as string[])" :key="rt(icon)">
-                <Component :is="rt(icon)" />
+                <component :is="rt(icon)" />
               </li>
             </template>
           </ul>

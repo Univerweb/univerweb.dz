@@ -43,9 +43,9 @@ const localePath = useLocalePath()
           {{ tag }}
         </li>
       </ul>
-      <Component :is="titleTag" property="headline">
+      <component :is="titleTag" property="headline">
         {{ card.title }}
-      </Component>
+      </component>
       <p property="description" class="lead">
         {{ card.description }}
       </p>

@@ -32,9 +32,9 @@ const { data: articles } = await useAsyncData(
     <link property="url" :href="baseUrl(localePath('blog'))">
 
     <div class="intro intro-justify">
-      <Component :is="headlineTag || 'h1'" class="h1">
+      <component :is="headlineTag || 'h1'" class="h1">
         {{ headline }}
-      </Component>
+      </component>
     </div>
 
     <div class="card-group">

@@ -51,7 +51,7 @@ const { data: footer } = await useAsyncData(
       <ul class="socials">
         <li v-for="(platform, index) in footer.platforms" :key="index">
           <a :href="platform.url" :aria-label="`${t('ariaLabels.joinUs')} ${platform.name}`">
-            <Component :is="icons[index]" />
+            <component :is="icons[index]" />
           </a>
         </li>
       </ul>
