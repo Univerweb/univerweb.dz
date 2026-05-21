@@ -80,7 +80,9 @@
       color: #fff;
       opacity: 0;
       transform: translateY(20px);
-      transition: opacity var(--transition), transform var(--transition),
+      transition:
+        opacity var(--transition),
+        transform var(--transition),
         visibility var(--transition);
     }
   }
@@ -95,43 +97,43 @@
 }
 
 .card-prestation {
+  position: relative;
   display: grid;
-  grid-auto-rows: auto 1fr auto;
-  border-radius: var(--padding-y);
+  grid-auto-rows: auto auto 1fr;
   background-color: var(--background-secondary);
-  transition: background-color var(--transition);
   padding: var(--padding-y);
+  border-radius: var(--padding-y);
+  transition: background-color var(--transition);
 
-  .tags {
-    color: var(--color-secondary);
-    transition: color var(--transition);
+  &:focus-within {
+    outline: 3px solid var(--blue);
+    outline-offset: 5px;
+  }
+
+  > svg {
+    transition:
+      fill var(--transition),
+      transform var(--transition);
+  }
+
+  &:is(:hover, :focus-within) > svg {
+    fill: var(--blue) !important;
+    transform: scale(1.05);
   }
 
   h2,
   h3 {
     @include font(32);
-    margin-block: 12px calc(var(--padding-y) * 2);
+    margin-block: calc(var(--padding-y) * 2) 24px;
   }
 
   p {
     margin-block-end: 0;
   }
-}
 
-.card .lead {
-  visibility: hidden;
-}
-
-@media (min-width: $md) {
-  .card .lead {
-    visibility: visible;
-  }
-}
-
-@media (min-width: $md) {
-  .card:hover .lead,
-  .card:focus-visible .lead {
-    opacity: 0.8;
-    transform: translateY(0);
+  a::before {
+    position: absolute;
+    inset: 0;
+    content: '';
   }
 }
