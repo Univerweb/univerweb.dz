@@ -18,7 +18,7 @@
     "@nuxt/image": "^2.0.0",
     "@nuxtjs/i18n": "^10.4.0",
     "@nuxtjs/mdc": "^0.22.0",
-    "@nuxtjs/sitemap": "^8.0.15",
+    "@nuxtjs/sitemap": "^8.1.0",
     "@types/node": "^25.9.2",
     "@vueuse/nuxt": "^14.3.0",
     "better-sqlite3": "^12.10.0",
