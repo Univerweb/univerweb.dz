@@ -56,6 +56,9 @@ const { data: projects } = await useAsyncData(
       <component :is="headlineTag || 'h1'" class="h1">
         {{ headline }}
       </component>
+      <p class="lead">
+        Text lead
+      </p>
     </div>
 
     <div class="card-group">
