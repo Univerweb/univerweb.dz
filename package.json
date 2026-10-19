@@ -13,20 +13,20 @@
     "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
-    "@nuxt/content": "^3.15.2",
+    "@nuxt/content": "^3.16.2",
     "@nuxt/eslint": "^1.17.0",
     "@nuxt/image": "^2.1.0",
     "@nuxtjs/i18n": "^10.6.0",
-    "@nuxtjs/mdc": "^0.23.1",
-    "@nuxtjs/sitemap": "^8.5.0",
-    "@types/node": "^26.2.0",
-    "@vueuse/nuxt": "^14.4.0",
-    "better-sqlite3": "^12.11.1",
-    "eslint": "^10.9.0",
+    "@nuxtjs/mdc": "^0.23.2",
+    "@nuxtjs/sitemap": "^9.1.0",
+    "@types/node": "^26.6.5",
+    "@vueuse/nuxt": "^15.0.0",
+    "better-sqlite3": "^13.0.3",
+    "eslint": "^10.13.0",
     "nuxt": "^4.5.2",
-    "sass": "^1.103.1",
+    "sass": "^1.105.2",
     "typescript": "^6.0.3",
-    "vue": "^3.5.41",
+    "vue": "^3.5.44",
     "vue3-google-map": "^0.27.2"
   }
 }
