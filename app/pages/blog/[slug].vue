@@ -41,7 +41,7 @@ useSeo({
 
 <template>
   <main v-if="article" class="blog">
-    <article vocab="https://schema.org/" typeof="Article" aria-labelledby="title">
+    <article vocab="https://schema.org/" typeof="Article" aria-labelledby="article-title">
       <header class="container intro">
         <meta property="description" :content="article.description">
         <meta property="articleSection" :content="t('navigation.menu.blog')">
@@ -59,7 +59,7 @@ useSeo({
         </span>
 
         <AppBack path="blog" :label="t('navigation.menu.blog')" />
-        <h1 id="title" property="headline">
+        <h1 id="article-title" property="headline">
           {{ article.title }}
         </h1>
 

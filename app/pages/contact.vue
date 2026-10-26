@@ -37,9 +37,9 @@ function zoom() {
 
 <template>
   <main v-if="contact">
-    <section class="container row" aria-labelledby="title">
+    <section class="container row" aria-labelledby="intro-title">
       <div class="col col--1-6">
-        <h1 id="title" class="h2">
+        <h1 id="intro-title" class="h2">
           {{ contact.title }}
         </h1>
         <p class="lead">
@@ -52,26 +52,33 @@ function zoom() {
     </section>
 
     <ClientOnly>
-      <GoogleMap
-        id="map"
-        ref="mapRef"
-        dir="auto"
-        :api-key="config.public.gmapsKey"
-        :map-id="config.public.gmapsId"
-        :center="position"
-        :zoom="14"
-        :street-view-control="false"
-        background-color="var(--background-secondary)"
-      >
-        <CustomMarker :options="{ position }" @click="zoom">
-          <AppLogo />
-        </CustomMarker>
-      </GoogleMap>
+      <section aria-labelledby="map-title">
+        <h2 id="map-title" class="visually-hidden">
+          {{ t('headings.mapLocation') }}
+        </h2>
+        <GoogleMap
+          id="map"
+          ref="mapRef"
+          dir="auto"
+          :api-key="config.public.gmapsKey"
+          :map-id="config.public.gmapsId"
+          :center="position"
+          :zoom="14"
+          :street-view-control="false"
+          background-color="var(--background-secondary)"
+        >
+          <CustomMarker :options="{ position }" @click="zoom">
+            <AppLogo />
+          </CustomMarker>
+        </GoogleMap>
+      </section>
     </ClientOnly>
 
-    <section class="container request other" aria-labelledby="other">
-      <div id="other" class="intro">
-        <h2>{{ t('headings.otherContact') }}</h2>
+    <section class="container request other" aria-labelledby="other-title">
+      <div class="intro">
+        <h2 id="other-title">
+          {{ t('headings.otherContact') }}
+        </h2>
       </div>
       <div class="row items-2">
         <div class="item">

@@ -82,14 +82,14 @@ const leave = (el: Element) => {
 
 <template>
   <main v-if="service" class="prestations">
-    <article vocab="https://schema.org/" typeof="Service" aria-labelledby="title">
+    <article vocab="https://schema.org/" typeof="Service" aria-labelledby="service-title">
       <header class="container intro">
         <span property="mainEntityOfPage" typeof="WebPage">
           <link property="url" :href="baseUrl(path)">
         </span>
 
         <AppBack path="prestations" :label="t('navigation.menu.prestations')" />
-        <h1 id="title" property="name serviceType">
+        <h1 id="service-title" property="name serviceType">
           {{ service.title }}
         </h1>
       </header>

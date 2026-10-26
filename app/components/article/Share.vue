@@ -9,9 +9,9 @@ const { copy, copied } = useClipboard()
 </script>
 
 <template>
-  <div class="container container-no-pt row">
+  <aside class="container container-no-pt row" aria-labelledby="share-title">
     <div class="col col--2-12 col--3-11 share">
-      <h2 class="h3">
+      <h2 id="share-title" class="h3">
         {{ t('headings.shareArticle') }}
       </h2>
 
@@ -38,5 +38,5 @@ const { copy, copied } = useClipboard()
         </li>
       </ul>
     </div>
-  </div>
+  </aside>
 </template>

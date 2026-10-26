@@ -48,12 +48,12 @@ const { data: projects } = await useAsyncData(
 </script>
 
 <template>
-  <section id="realisations" class="container" vocab="https://schema.org/" typeof="CollectionPage">
+  <section id="realisations" class="container" vocab="https://schema.org/" typeof="CollectionPage" aria-labelledby="realisations-title">
     <meta property="name" :content="t('navigation.menu.realisations')">
     <link property="url" :href="baseUrl(localePath('realisations'))">
 
     <div class="intro intro-justify">
-      <component :is="headlineTag || 'h1'" class="h1">
+      <component :is="headlineTag || 'h1'" id="realisations-title" class="h1">
         {{ headline }}
       </component>
     </div>

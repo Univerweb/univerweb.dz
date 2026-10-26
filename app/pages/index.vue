@@ -18,9 +18,11 @@ useSeo({
 
 <template>
   <main v-if="home">
-    <section class="container hero">
+    <section class="container hero" aria-labelledby="intro-title">
       <div class="intro intro-justify">
-        <h1>{{ home.hero.headline }}</h1>
+        <h1 id="intro-title">
+          {{ home.hero.headline }}
+        </h1>
         <p class="lead">
           {{ home.hero.lead }}
         </p>

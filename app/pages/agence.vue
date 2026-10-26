@@ -18,8 +18,8 @@ useSeo({
 
 <template>
   <main v-if="agence">
-    <section class="container intro" aria-labelledby="headline">
-      <h1 id="headline">
+    <section class="container intro" aria-labelledby="intro-title">
+      <h1 id="intro-title">
         {{ agence.headline }}
       </h1>
       <p class="lead">
@@ -27,8 +27,8 @@ useSeo({
       </p>
     </section>
 
-    <section class="container row" aria-labelledby="method">
-      <h2 id="method" class="col col--1-5">
+    <section class="container row" aria-labelledby="method-title">
+      <h2 id="method-title" class="col col--1-5">
         {{ agence.method.headline }}
       </h2>
       <ol class="col row items-5">
@@ -41,8 +41,8 @@ useSeo({
       </ol>
     </section>
 
-    <section class="container row" aria-labelledby="choose">
-      <h2 id="choose" class="col col--1-5">
+    <section class="container row" aria-labelledby="choose-title">
+      <h2 id="choose-title" class="col col--1-5">
         {{ agence.choose.headline }}
       </h2>
       <div class="col row items-2">

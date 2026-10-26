@@ -83,7 +83,7 @@ const { data: surround } = await useAsyncData(
 
 <template>
   <main v-if="project" class="realisations">
-    <article vocab="https://schema.org/" typeof="CreativeWork" aria-labelledby="name">
+    <article vocab="https://schema.org/" typeof="CreativeWork" aria-labelledby="project-title">
       <header class="container intro">
         <meta property="description" :content="project.description">
         <meta property="dateCreated datePublished" :content="new Date(project.createdAt).toISOString()">
@@ -101,7 +101,7 @@ const { data: surround } = await useAsyncData(
         </span>
 
         <AppBack path="realisations" :label="t('navigation.menu.realisations')" />
-        <h1 id="name" property="name">
+        <h1 id="project-title" property="name">
           {{ project.title }}
         </h1>
       </header>

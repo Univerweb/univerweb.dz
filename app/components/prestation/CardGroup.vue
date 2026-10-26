@@ -18,9 +18,9 @@ const { data: services } = await useAsyncData(
 </script>
 
 <template>
-  <section id="prestations" class="container">
+  <section id="prestations" class="container" aria-labelledby="prestations-title">
     <div class="intro intro-justify">
-      <component :is="headlineTag || 'h1'" class="h1">
+      <component :is="headlineTag || 'h1'" id="prestations-title" class="h1">
         {{ headline }}
       </component>
     </div>
