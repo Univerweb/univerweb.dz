@@ -15,7 +15,7 @@ const { data: contact } = await useAsyncData(
 useSeo({
   page: 'contact',
   title: () => contact.value!.title,
-  description: () => contact.value!.title,
+  description: () => contact.value!.description,
 })
 
 const position = {
