@@ -17,15 +17,25 @@ hero:
 
 sectionRealisation:
   headline: Projects That Transform Ideas Into Digital Success.
+  lead:
+    Explore our custom-built projects, crafted with precision. Each realization
+    highlights our commitment to combining technical performance, refined UX
+    design, and tangible impact for our clients.
   cta:
     label: Propel Your Ideas
     path: realisations
 
 sectionPrestations:
   headline: Turnkey & Custom Solutions.
+  lead:
+    We build custom websites, provide high-performance hosting, craft your
+    visual identity, and optimize your SEO to sustainably power your business.
 
 sectionBlog:
   headline: Digital Knowledge Is Just a Click Away.
+  lead:
+    Dive into our expert articles to master web best practices, optimize your
+    organic search ranking, and stay ahead in your market.
   cta:
     label: Boost Your Digital Knowledge
     path: blog

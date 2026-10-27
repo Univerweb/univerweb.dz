@@ -17,15 +17,27 @@ hero:
 
 sectionRealisation:
   headline: Des projets qui transforment des idées en succès digitaux.
+  lead:
+    Découvrez nos réalisations sur mesure, conçues avec exigence. Chaque projet
+    témoigne de notre volonté d’allier performance technique, design UX soigné
+    et impact concret pour nos clients.
   cta:
     label: Propulsez vos idées
     path: realisations
 
 sectionPrestations:
   headline: Des solutions clés en main et sur mesure.
+  lead:
+    Nous concevons des sites sur mesure, assurons un hébergement haute
+    performance, forgeons votre identité visuelle et optimisons votre
+    référencement pour pérenniser votre activité.
 
 sectionBlog:
   headline: Le savoir digital à portée de clic.
+  lead:
+    Plongez dans nos articles d’experts pour maîtriser les meilleures pratiques
+    du web, optimiser votre référencement naturel et garder une longueur
+    d’avance sur votre marché.
   cta:
     label: Boostez votre savoir digital
     path: blog
