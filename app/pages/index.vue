@@ -34,24 +34,22 @@ useSeo({
 
     <LazyRealisationCardGroup
       headline-tag="h2"
-      :headline="home.sectionRealisation.headline"
       title-tag="h3"
       :limit="6"
-      :cta="home.sectionRealisation.cta"
+      :realisations="home.sectionRealisation"
     />
 
     <LazyPrestationCardGroup
       headline-tag="h2"
-      :headline="home.sectionPrestations.headline"
       title-tag="h3"
+      :prestations="home.sectionPrestations"
     />
 
     <LazyArticleCardGroup
       headline-tag="h2"
-      :headline="home.sectionBlog.headline"
       title-tag="h3"
       :limit="2"
-      :cta="home.sectionBlog.cta"
+      :blog="home.sectionBlog"
     />
 
     <LazyAppRequest is="section" link-class="h1" />

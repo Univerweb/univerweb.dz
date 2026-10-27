@@ -2,11 +2,14 @@
 const props = defineProps<{
   limit?: number
   headlineTag?: string
-  headline: string
   titleTag?: string
-  cta?: {
-    label: string
-    path: string
+  realisations: {
+    headline: string
+    lead: string
+    cta?: {
+      label: string
+      path: string
+    }
   }
 }>()
 
@@ -54,14 +57,17 @@ const { data: projects } = await useAsyncData(
 
     <div class="intro intro-justify">
       <component :is="headlineTag || 'h1'" id="realisations-title" class="h1">
-        {{ headline }}
+        {{ realisations.headline }}
       </component>
+      <p class="lead">
+        {{ realisations.lead }}
+      </p>
     </div>
 
     <div class="card-group">
       <RealisationCard v-for="card in projects" :key="card.translated.path" :card :title-tag="titleTag || 'h2'" />
     </div>
 
-    <LazyAppMore v-if="cta" :path="cta.path" :label="cta.label" class="intro-justify" />
+    <LazyAppMore v-if="realisations.cta" :path="realisations.cta.path" :label="realisations.cta.label" class="intro-justify" />
   </section>
 </template>

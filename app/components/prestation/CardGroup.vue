@@ -1,8 +1,11 @@
 <script setup lang="ts">
 defineProps<{
   headlineTag?: string
-  headline: string
   titleTag?: string
+  prestations: {
+    headline: string
+    lead: string
+  }
 }>()
 
 const { path } = useRoute()
@@ -21,8 +24,11 @@ const { data: services } = await useAsyncData(
   <section id="prestations" class="container" aria-labelledby="prestations-title">
     <div class="intro intro-justify">
       <component :is="headlineTag || 'h1'" id="prestations-title" class="h1">
-        {{ headline }}
+        {{ prestations.headline }}
       </component>
+      <p class="lead">
+        {{ prestations.lead }}
+      </p>
     </div>
 
     <div class="card-group">
