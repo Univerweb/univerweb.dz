@@ -18,27 +18,22 @@ const List = z.array(
   }),
 )
 
+const Teaser = z.object({
+  headline: z.string(),
+  lead: z.string(),
+  cta: Link,
+})
+
 const Home = z.object({
-  hero: z.object({
-    headline: z.string(),
-    lead: z.string(),
-    cta: Link,
-  }),
-  sectionRealisation: z.object({
-    headline: z.string(),
-    cta: Link,
-  }),
-  sectionPrestations: z.object({
-    headline: z.string(),
-  }),
-  sectionBlog: z.object({
-    headline: z.string(),
-    cta: Link,
-  }),
+  hero: Teaser,
+  sectionRealisation: Teaser,
+  sectionPrestations: Teaser,
+  sectionBlog: Teaser,
 })
 
 const Page = z.object({
   headline: z.string(),
+  lead: z.string(),
 })
 
 const Project = Date.extend({

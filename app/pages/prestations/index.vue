@@ -4,7 +4,7 @@ const { locale } = useI18n()
 const { data: prestations } = await useAsyncData(
   () => `prestations-${locale.value}`,
   () => queryCollection(`prestations_${locale.value}`)
-    .select('title', 'description', 'headline')
+    .select('title', 'description', 'headline', 'lead')
     .first(),
   { watch: [locale] },
 )
@@ -18,7 +18,7 @@ useSeo({
 
 <template>
   <main v-if="prestations">
-    <PrestationCardGroup :headline="prestations.headline" />
+    <PrestationCardGroup :prestations />
     <LazyAppRequest />
   </main>
 </template>
