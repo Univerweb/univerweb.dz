@@ -12,7 +12,7 @@ const { data: blog } = await useAsyncData(
 useSeo({
   page: 'blog',
   title: () => blog.value!.title,
-  description: () => blog.value!.title,
+  description: () => blog.value!.description,
 })
 </script>
 
