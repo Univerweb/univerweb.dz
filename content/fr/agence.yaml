@@ -76,7 +76,7 @@ choose:
     - icon: IconExperience
       title: L’expérience et la proximité à votre service
       description:
-        Forts de plus d’une décennie d’expérience forgée à Alger, nous
+        Forts de plus de {years} ans d’expérience forgée à Alger, nous
         connaissons les réalités du marché. Notre ancrage local nous permet
         d’être réactifs et de vous offrir un accompagnement de proximité, basé
         sur une relation de confiance durable.
