@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { locale } = useI18n()
+const { withYears } = useYears()
 
 const { data: agence } = await useAsyncData(
   () => `agence-${locale.value}`,
@@ -50,7 +51,7 @@ useSeo({
           <component :is="choose.icon" fill="var(--blue)" />
           <h3>{{ choose.title }}</h3>
           <p class="lead">
-            {{ choose.description }}
+            {{ withYears(choose.description) }}
           </p>
         </div>
       </div>
