@@ -9,17 +9,17 @@ jobs:
 
     steps:
       - name: 📦 Récupération du dépôt
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
-      - name: 🛠️ Configuration de Node.js v24
-        uses: actions/setup-node@v6
+      - name: 🛠️ Configuration de Node.js v26
+        uses: actions/setup-node@v7
         with:
-          node-version: 24
+          node-version: 26
 
       - name: 📦 Configuration de pnpm
         uses: pnpm/action-setup@v6
         with:
-          version: 11
+          version: 12
 
       - name: 📥 Installation des dépendances
         run: pnpm install
