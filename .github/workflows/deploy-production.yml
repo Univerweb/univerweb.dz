@@ -2,6 +2,8 @@ name: 🚀 Déploiement vers Production
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '0 6 2 1 *'
 
 jobs:
   generate-and-deploy:
