@@ -45,7 +45,6 @@ useSeo({
       <header class="container intro">
         <meta property="description" :content="article.description">
         <meta property="articleSection" :content="t('navigation.menu.blog')">
-        <meta property="dateModified" :content="new Date(article.updatedAt).toISOString()">
         <span property="publisher" typeof="Organization">
           <meta property="name" :content="t('site.name')">
           <link property="url" :href="localeBaseUrl">
@@ -59,22 +58,48 @@ useSeo({
         </span>
 
         <AppBack path="blog" :label="t('navigation.menu.blog')" />
+        <ul class="tags">
+          <li v-for="tag in article.tags" :key="tag" property="keywords">
+            {{ tag }}
+          </li>
+        </ul>
+
         <h1 id="article-title" property="headline">
           {{ article.title }}
         </h1>
 
         <dl class="meta">
-          <dt id="published" class="visually-hidden">
-            {{ t('ariaLabelledby.published') }}
-          </dt>
-          <dd aria-labelledby="published">
-            <NuxtTime property="dateCreated datePublished" :datetime="article.createdAt" :locale="head.htmlAttrs.lang" date-style="long" />
+          <dt>{{ t('blog.createdAt') }}&nbsp;</dt>
+          <dd>
+            <NuxtTime
+              property="dateCreated datePublished"
+              :datetime="article.createdAt"
+              :locale="head.htmlAttrs.lang"
+              :date-style="locale === 'ar' ? 'long' : 'medium'"
+            />
           </dd>
-          <dt id="author" class="visually-hidden">
-            {{ t('ariaLabelledby.author') }}
-          </dt>
-          <dd aria-labelledby="author">
-            <a v-if="article.author && article.author.name && article.author.url" :href="article.author.url" target="_blank" property="author" typeof="Person">
+
+          <template v-if="article.createdAt !== article.updatedAt">
+            <dt>{{ t('blog.updatedAt') }}&nbsp;</dt>
+            <dd>
+              <NuxtTime
+                property="dateModified"
+                :datetime="article.updatedAt"
+                :locale="head.htmlAttrs.lang"
+                :date-style="locale === 'ar' ? 'long' : 'medium'"
+              />
+            </dd>
+          </template>
+
+          <dt>{{ t('blog.author') }}&nbsp;</dt>
+          <dd>
+            <a
+              v-if="article.author && article.author.name && article.author.url"
+              :href="article.author.url"
+              target="_blank"
+              property="author"
+              typeof="Person"
+            >
               <span property="name">@{{ article.author.name }}</span>
               <link property="url" :href="article.author.url">
             </a>
@@ -82,16 +107,6 @@ useSeo({
               <span property="name">@{{ t('site.name') }}</span>
               <link property="url" :href="localeBaseUrl">
             </span>
-          </dd>
-          <dt id="keywords" class="visually-hidden">
-            {{ t('ariaLabelledby.keywords') }}
-          </dt>
-          <dd aria-labelledby="keywords">
-            <ul class="tags">
-              <li v-for="tag in article.tags" :key="tag" property="keywords">
-                {{ tag }}
-              </li>
-            </ul>
           </dd>
         </dl>
       </header>

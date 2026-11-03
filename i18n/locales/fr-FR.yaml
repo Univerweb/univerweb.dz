@@ -30,11 +30,6 @@ ariaLabels:
   x: Partager cet article sur X
   linkedIn: Partager cet article sur LinkedIn
 
-ariaLabelledby:
-  published: Date de création
-  author: Auteur
-  keywords: Mots-clés
-
 actions:
   skipLink:
     header: Aller à l’en-tête
@@ -116,3 +111,8 @@ alt:
   preview:
     Capture d’écran complète d’une page du site web de {client}, montrant sa
     structure et son contenu.
+
+blog:
+  createdAt: Publié le
+  updatedAt: Modifié le
+  author: Par

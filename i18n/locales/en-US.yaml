@@ -30,11 +30,6 @@ ariaLabels:
   x: Share This Article on X
   linkedIn: Share This Article on LinkedIn
 
-ariaLabelledby:
-  published: Creation Date
-  author: Author
-  keywords: Keywords
-
 actions:
   skipLink:
     header: Skip to header
@@ -115,3 +110,8 @@ alt:
   preview:
     Full-page screenshot of a page from {client}’s website, showing its
     structure and content.
+
+blog:
+  createdAt: Published on
+  updatedAt: Updated on
+  author: By
