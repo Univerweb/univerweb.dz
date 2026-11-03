@@ -30,11 +30,6 @@ ariaLabels:
   x: مشاركة هذا المقال على X
   linkedIn: مشاركة هذا المقال على لينكد إن
 
-ariaLabelledby:
-  published: تاريخ الإنشاء
-  author: المؤلف
-  keywords: الكلمات المفتاحية
-
 actions:
   skipLink:
     header: الانتقال إلى الرأس
@@ -112,3 +107,8 @@ services:
 alt:
   banner: لافتة موقع الويب ل{client}، تعرض بشكل خاص شعاره وقائمة التنقل.
   preview: لقطة شاشة كاملة لصفحة من موقع الويب ل{client}، تعرض هيكلها ومحتواها.
+
+blog:
+  createdAt: نُشر في
+  updatedAt: آخر تحديث في
+  author: بقلم
