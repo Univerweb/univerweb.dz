@@ -94,6 +94,14 @@
     ul li::before {
       content: '\002022';
     }
+
+    code {
+      font-family: inherit;
+      background-color: var(--background-secondary);
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+      transition: background-color var(--transition);
+    }
   }
 
   .share {
