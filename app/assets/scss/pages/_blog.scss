@@ -102,6 +102,55 @@
       border-radius: 4px;
       transition: background-color var(--transition);
     }
+
+    .table-wrapper {
+      margin-block: 32px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+
+      &:focus-visible {
+        outline: 3px solid var(--blue);
+        outline-offset: 5px;
+      }
+    }
+
+    table {
+      width: 100%;
+      min-width: 560px;
+      border-collapse: collapse;
+
+      @include font(14);
+
+      @media (min-width: $md) {
+        @include font(16);
+      }
+
+      thead tr {
+        background-color: var(--blue);
+        color: var(--background);
+        transition: color var(--transition);
+      }
+
+      th,
+      td {
+        padding: 12px;
+        text-align: start;
+        vertical-align: top;
+
+        @media (min-width: $md) {
+          padding: 24px 16px;
+        }
+      }
+
+      tbody tr {
+        border-bottom: 1px solid #f2f2f2;
+      }
+
+      tbody tr:nth-of-type(even) {
+        background-color: var(--background-secondary);
+        transition: background-color var(--transition);
+      }
+    }
   }
 
   .share {
