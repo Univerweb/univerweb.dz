@@ -73,6 +73,7 @@ choose:
     - icon: IconExperience
       title: Experience and Proximity at Your Service
       description:
-        Strong with over a decade of experience forged in Algiers, we know the
-        realities of the market. Our local presence allows us to be reactive and
-        offer you close support, based on a lasting relationship of trust.
+        Strong with over {years} years of experience forged in Algiers, we know
+        the realities of the market. Our local presence allows us to be
+        responsive and offer you close support, based on a lasting relationship
+        of trust.
