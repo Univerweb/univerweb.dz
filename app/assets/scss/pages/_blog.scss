@@ -50,8 +50,7 @@
   }
 
   .content {
-    color: var(--color-secondary);
-    transition: color var(--transition);
+    @include font(18, $height: 26px);
 
     .lead {
       line-height: 1.6;
@@ -59,13 +58,11 @@
     }
 
     h2 {
-      @include font(28, 600, $spacing: -0.03, $mbs: 36, $mbe: 12);
-      color: var(--color);
-      transition: color var(--transition);
+      margin-block: 72px 32px;
     }
 
     h3 {
-      @include font(20, 600, $spacing: 0, $mbs: 24);
+      @include font(24, $spacing: 0, $mbs: 44);
     }
 
     a[rel='nofollow'] {
