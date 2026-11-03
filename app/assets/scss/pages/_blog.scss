@@ -13,9 +13,9 @@
   .meta {
     display: flex;
     flex-wrap: wrap;
-    @include font(15, 500, $mbs: 0, $mbe: 0);
     color: var(--color-secondary);
     transition: color var(--transition);
+    @include font(15, 500, $mbs: 0, $mbe: 0);
 
     dd {
       margin: 0;
