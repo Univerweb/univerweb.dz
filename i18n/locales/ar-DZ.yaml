@@ -1,7 +1,6 @@
 site:
   name: يونيفارواب
   logo: شعار يونيفارواب
-  copy: حقوق النشر © {year} @:site.name{'.'} جميع الحقوق محفوظة.
 
 navigation:
   menu:
@@ -112,3 +111,8 @@ blog:
   createdAt: نُشر في
   updatedAt: آخر تحديث في
   author: بقلم
+
+footer:
+  copy: حقوق النشر © {year} @:site.name{'.'} جميع الحقوق محفوظة.
+  legal: الشروط والأحكام القانونية
+  privacy: سياسة الخصوصية

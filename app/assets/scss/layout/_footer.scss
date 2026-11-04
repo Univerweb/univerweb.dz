@@ -16,6 +16,7 @@ footer {
     --padding-y: 144px;
 
     grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
     justify-content: space-between;
   }
 
@@ -47,5 +48,34 @@ footer {
 }
 
 .copy {
+  grid-column: span 3 / span 3;
+  display: grid;
+  gap: 8px;
   font-size: 12.5px;
+  line-height: 16px;
+
+  p {
+    margin: 0;
+    color: var(--color-secondary);
+    transition: color var(--transition);
+  }
+
+  ul {
+    display: flex;
+    gap: 17px;
+
+    li:not(:first-child) {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        inset-inline-start: -8px;
+        height: 10px;
+        width: 1px;
+        background-color: var(--color-secondary);
+        margin: 3px 0;
+      }
+    }
+  }
 }
