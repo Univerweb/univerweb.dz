@@ -1,0 +1,15 @@
+@use '../abstracts/mixins' as *;
+
+.legal {
+  h1 {
+    margin-block-end: 12px;
+  }
+
+  .meta {
+    margin-bottom: calc(var(--padding-y) * 2);
+  }
+
+  .content h2 {
+    @include font(24, $spacing: 0, $mbs: 44, $mbe: 12);
+  }
+}
