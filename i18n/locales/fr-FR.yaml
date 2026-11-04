@@ -1,7 +1,6 @@
 site:
   name: Univerweb
   logo: Logo d’Univerweb
-  copy: Copyright © {year} @:site.name{'.'} Tous droits réservés.
 
 navigation:
   menu:
@@ -116,3 +115,8 @@ blog:
   createdAt: Publié le
   updatedAt: Modifié le
   author: Par
+
+footer:
+  copy: Copyright © {year} @:site.name{'.'} Tous droits réservés.
+  legal: Mentions légales
+  privacy: Politique de confidentialité
