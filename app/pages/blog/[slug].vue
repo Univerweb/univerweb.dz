@@ -126,5 +126,7 @@ useSeo({
     <LazyArticleShare :title="article.title" :path="baseUrl(path)" />
 
     <LazyAppNav :prev="surround?.[0]" :next="surround?.[1]" :aria-label="t('ariaLabels.articleNavigation')" />
+
+    <LazyAppRequest />
   </main>
 </template>

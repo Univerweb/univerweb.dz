@@ -193,5 +193,7 @@ const { data: surround } = await useAsyncData(
     </aside>
 
     <LazyAppNav :prev="surround?.[0]" :next="surround?.[1]" :aria-label="t('ariaLabels.projectNavigation')" />
+
+    <LazyAppRequest />
   </main>
 </template>
