@@ -79,20 +79,29 @@
     ul,
     ol {
       margin-block: 0 12px;
-    }
+      padding-inline-start: 1rem;
 
-    li {
-      padding-inline-start: 1.1rem;
-      margin-bottom: 6px;
+      li {
+        position: relative;
+        padding-inline-start: 0.5rem;
 
-      &::before {
-        margin-inline-start: -0.975rem;
-        float: inline-start;
+        &::before {
+          position: absolute;
+          inset-inline-start: -1rem;
+        }
       }
-    }
 
-    ul li::before {
-      content: '\002022';
+      &:is(ul) li::before {
+        content: '';
+        top: 13px;
+        background-color: var(--blue);
+        height: 2px;
+        width: 0.75rem;
+      }
+
+      &:is(ol) li::before {
+        color: var(--blue);
+      }
     }
 
     code {
