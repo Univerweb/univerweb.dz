@@ -68,7 +68,7 @@
       @include font(24, $spacing: 0, $mbs: 44);
     }
 
-    a[rel='nofollow'] {
+    a {
       text-decoration: underline;
 
       &:hover {
