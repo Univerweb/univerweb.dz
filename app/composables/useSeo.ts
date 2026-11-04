@@ -1,4 +1,4 @@
-type PageKey = | 'home' | 'realisations' | 'prestations' | 'agence' | 'contact' | 'blog'
+type PageKey = | 'home' | 'realisations' | 'prestations' | 'agence' | 'contact' | 'blog' | 'legal'
 
 interface Options {
   page: PageKey | { name: PageKey, slug?: boolean }
@@ -121,13 +121,30 @@ export function useSeo(options: Options) {
             ...(item ? { item } : {}),
           })
 
+          if (pageName === 'home') {
+            return JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'BreadcrumbList',
+              'itemListElement': [listItem(1, ogSiteName.value, localeBaseUrl.value)],
+            })
+          }
+
+          if (pageName === 'legal') {
+            return JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'BreadcrumbList',
+              'itemListElement': [
+                listItem(1, ogSiteName.value, localeBaseUrl.value),
+                listItem(2, title(), ogUrl),
+              ],
+            })
+          }
+
           const items = [
             listItem(1, ogSiteName.value, localeBaseUrl.value),
-            ...(pageName !== 'home'
-              ? [listItem(2, t(`navigation.menu.${pageName}`), baseUrl(localePath(pageName)))]
-              : []),
+            listItem(2, t(`navigation.menu.${pageName}`), baseUrl(localePath(pageName))),
             ...(pageSlug
-              ? [listItem(pageName !== 'home' ? 3 : 2, breadcrumbTitle(), ogUrl)]
+              ? [listItem(3, breadcrumbTitle(), ogUrl)]
               : []),
           ]
 
