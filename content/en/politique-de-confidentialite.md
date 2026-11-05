@@ -37,7 +37,7 @@ This information is never cross-referenced with personal data and serves solely 
 
 ## User Rights
 
-In accordance with applicable data protection regulations, every individual has the right to access, rectify, and delete their personal information.
+In accordance with applicable data protection regulations, every individual has the right to access, rectify, and object to the processing of their data, and may lodge a complaint with the **National Authority for the Protection of Personal Data (ANPDP)**.
 
 Since no personal data is stored by the website itself, these requests apply exclusively to direct communication carried out via email or phone with the agency.
 
