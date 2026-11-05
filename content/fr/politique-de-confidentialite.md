@@ -37,7 +37,7 @@ Ces informations ne sont en aucun cas recoupées avec des données nominatives e
 
 ## Droits des utilisateurs
 
-Conformément aux réglementations applicables en matière de protection des données, toute personne dispose d’un droit d’accès, de rectification et de suppression concernant ses informations.
+Conformément aux réglementations applicables en matière de protection des données (notamment la loi n° 18-07), toute personne dispose d’un droit d’accès, de rectification et d’opposition au traitement de ses données, et peut introduire une réclamation auprès de l’**Autorité nationale de protection des données à caractère personnel (ANPDP)**.
 
 Étant donné qu’aucune donnée personnelle n’est enregistrée par le site web, ces demandes s’appliquent exclusivement aux échanges directs effectués par e-mail ou téléphone avec l’agence.
 
