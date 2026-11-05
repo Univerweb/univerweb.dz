@@ -30,7 +30,7 @@ The **univerweb.dz** website uses **no advertising, targeting, or audience analy
 Technical third-party services may be queried solely for the proper display and operation of the website:
 
 - Cloudinary: Media optimization and delivery.
-- Google Maps: Map display (loaded upon explicit user consent/click to prevent unsolicited tracking).
+- Google Maps: Map display.
 
 ## User Rights
 
