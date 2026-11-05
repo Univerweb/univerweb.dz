@@ -19,8 +19,8 @@ The **[univerweb.dz](https://univerweb.dz)** website is published by:
 - **Manager and Publication Director:** Hocem Nedjar
 - **Head office:** 62 Coop. El Mebnia, Birkhadem, Algiers, Algeria
 - **Commercial Register (RC):** 11 B 0987186 - 16/00
-- **Tax Identification Number (NIF):** 0 011 16 0987186 77
-- **Tax Article (AI):** 1612 1632406
+- **Tax Identification Number (NIF):** 0011 16 0987186 77
+- **Tax Article (AI):** 16 12 1632406
 - **Activity:** Digital agency, custom website design, hosting, and maintenance.
 
 ## Hosting
