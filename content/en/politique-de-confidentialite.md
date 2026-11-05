@@ -15,7 +15,7 @@ In accordance with **Law No. 18-07 of June 10, 2018, relating to the protection 
 
 ## Data Collected: The Bare Minimum
 
-The **univerweb.dz** website is a showcase site. No forms are present on this site.
+The univerweb.dz website is a showcase site. No forms are present on this site.
 
 The only data processed consists of:
 
@@ -25,7 +25,7 @@ The only data processed consists of:
 
 ## Cookies and Third-Party Providers
 
-The **univerweb.dz** website uses **no advertising, targeting, or audience analytics cookies**.
+The univerweb.dz website uses **no advertising, targeting, or audience analytics cookies**.
 
 Technical third-party services may be queried solely for the proper display and operation of the website:
 

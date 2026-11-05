@@ -15,7 +15,7 @@ Conformément à la **loi n° 18-07 du 10 juin 2018 relative à la protection de
 
 ## Données collectées : Le strict minimum
 
-Le site **univerweb.dz** est un site vitrine. Aucun formulaire de collecte de données nominatives n’est présent sur ce site.
+Le site univerweb.dz est un site vitrine. Aucun formulaire de collecte de données nominatives n’est présent sur ce site.
 
 Les seules données traitées sont :
 
@@ -25,7 +25,7 @@ Les seules données traitées sont :
 
 ## Cookies et prestataires tiers
 
-Le site **univerweb.dz** n’utilise **aucun cookie publicitaire, de ciblage ou d’analyse d’audience**.
+Le site univerweb.dz n’utilise **aucun cookie publicitaire, de ciblage ou d’analyse d’audience**.
 
 Certains services tiers techniques peuvent être sollicités pour le bon fonctionnement et le rendu des contenus :
 
