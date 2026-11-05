@@ -54,7 +54,7 @@
 
   .content {
     @media (min-width: $md) {
-      @include font(18, $height: 26px);
+      @include font(18);
     }
 
     .lead {
