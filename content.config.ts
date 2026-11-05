@@ -267,6 +267,23 @@ export default defineContentConfig({
       schema: Article,
     }),
 
+    legal_fr: defineCollection({
+      type: 'page',
+      source: 'fr/*.md',
+      source: { include: 'fr/*.md', prefix: '/' },
+      schema: Article,
+    }),
+    legal_en: defineCollection({
+      type: 'page',
+      source: 'en/*.md',
+      schema: Article,
+    }),
+    legal_ar: defineCollection({
+      type: 'page',
+      source: 'ar/*.md',
+      schema: Article,
+    }),
+
     error_404_fr: defineCollection({
       type: 'page',
       source: 'fr/errors/404.yaml',

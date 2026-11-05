@@ -48,8 +48,23 @@ const { data: footer } = await useAsyncData(
       </ul>
     </div>
 
-    <p class="copy">
-      {{ t('site.copy', { year: new Date().getFullYear() }) }}
-    </p>
+    <div class="copy">
+      <p>
+        {{ t('footer.copy', { year: new Date().getFullYear() }) }}
+      </p>
+
+      <ul>
+        <li>
+          <NuxtLinkLocale to="/mentions-legales">
+            {{ t('footer.legal') }}
+          </NuxtLinkLocale>
+        </li>
+        <li>
+          <NuxtLinkLocale to="/politique-de-confidentialite">
+            {{ t('footer.privacy') }}
+          </NuxtLinkLocale>
+        </li>
+      </ul>
+    </div>
   </footer>
 </template>
