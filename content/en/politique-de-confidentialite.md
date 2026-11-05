@@ -1,37 +1,46 @@
 ---
 title: Privacy Policy
-description: Personal data protection and privacy policy on the Univerweb website.
-createdAt: 2026-05-01
-updatedAt: 2026-11-04
+description: Privacy policy and personal data protection on the Univerweb website, web agency and custom development based in Algiers, Algeria.
+createdAt: 2026-11-05
+updatedAt: 2026-11-05
 ---
 
 ::lead
-At Univerweb, protecting your personal data is a priority. This privacy policy explains what data we collect, how we use it, and what your rights are.
+In accordance with applicable legislation regarding personal data protection, this privacy policy outlines Univerweb’s practices concerning information from visitors navigating the **univerweb.dz** website.
 ::
 
-## 1. Collection of Personal Data
+## No Personal Data Collection
 
-We collect only the information you voluntarily provide to us, notably when you:
+The **univerweb.dz** website is a showcase site.
 
-- Fill out our contact or quote request form.
-- Communicate directly with us by email or via our official channels.
+- **No forms** (contact, registration, or newsletter) are present on this site.
+- **No personal data** (name, email address, phone number) is directly collected from visitors during browsing.
 
-This data may include: your name, company name, email address, phone number, and project details.
+For any inquiry or quote request, users are invited to use the official contact details provided on the **[contact](/en/contact)** page, in the **[footer](#footer)**, and in the **[legal notice](/en/legal-notice)**.
 
-## 2. Use of Data
+## Cookies and Third-Party Services
 
-The information collected is exclusively intended to:
+The **univerweb.dz** website uses **no advertising, targeting, or audience analytics cookies** (such as Google Analytics or equivalent).
 
-- Respond to your inquiries or quote requests.
-- Ensure customer relationship monitoring and management of projects entrusted to the agency.
-- Improve our services and communication.
+- No behavioral or advertising tracking cookies are stored on your device.
+- Technical third-party services may be queried solely for the proper display of the website: media optimization and delivery (Cloudinary CDN) and map display (Google Maps). These third-party services process only the technical requests necessary to render the content.
 
-Your data is under no circumstances sold, exchanged, or transferred to third parties for commercial purposes.
+## Technical and Security Data
 
-## 3. Data Security
+When connecting to our secure hosting infrastructure, standard technical data is temporarily logged by the web server exclusively for security and maintenance purposes:
 
-We implement rigorous technical and organizational measures to protect your personal data against unauthorized access, loss, alteration, or disclosure. Our servers benefit from a secure architecture and regular encrypted backups (Amazon S3).
+- Technical IP address of the visitor.
+- Timestamp of the connection.
+- Page requested and user agent (browser / operating system).
 
-## 4. Your Rights
+This information is never cross-referenced with personal data and serves solely to ensure server stability and security.
 
-In accordance with applicable regulations, you have the right to access, rectify, and delete data concerning you. To exercise this right, you can contact us directly via our online form or by email.
+## User Rights
+
+In accordance with applicable data protection regulations, every individual has the right to access, rectify, and delete their personal information.
+
+Since no personal data is stored by the website itself, these requests apply exclusively to direct communication carried out via email or phone with the agency.
+
+## Contact
+
+For any questions regarding this privacy policy or Univerweb’s digital practices, you can contact us at: **contact@univerweb.dz**.
