@@ -1,37 +1,46 @@
 ---
 title: Politique de confidentialité
-description: Politique de protection des données personnelles et de respect de la vie privée sur le site d'Univerweb.
-createdAt: 2026-05-01
-updatedAt: 2026-11-04
+description: Politique de confidentialité et respect de la vie privée sur le site d’Univerweb, agence web et développement sur mesure à Alger, Algérie.
+createdAt: 2026-11-05
+updatedAt: 2026-11-05
 ---
 
 ::lead
-Chez Univerweb, la protection de vos données personnelles est une priorite. Cette politique de confidentialité explique quelles données nous collectons, comment nous les utilisons et quels sont vos droits.
+Conformément à la législation en vigueur relative à la protection des données à caractère personnel, cette politique de confidentialité décrit les pratiques d’Univerweb concernant les informations des visiteurs naviguant sur le site **univerweb.dz**.
 ::
 
-## 1. Collecte des données personnelles
+## Absence de collecte de données personnelles
 
-Nous collectons uniquement les informations que vous nous transmettez volontairement, notamment lorsque vous :
+Le site **univerweb.dz** est un site vitrine.
 
-- Remplissez notre formulaire de contact ou de demande de devis.
-- Communiquez directement avec nous par e-mail ou via nos canaux officiels.
+- **Aucun formulaire** (contact, inscription ou newsletter) n’est présent sur ce site.
+- **Aucune donnée personnelle** (nom, prénom, adresse e-mail, numéro de téléphone) n’est collectée directement auprès des visiteurs lors de la navigation.
 
-Ces données peuvent inclure : votre nom, le nom de votre entreprise, votre adresse e-mail, votre numéro de téléphone et le détail de votre projet.
+Pour toute prise de contact ou demande de devis, les utilisateurs sont invités à utiliser directement les coordonnées officielles communiquées sur la page **[contact](/contact)**, dans le **[pied de page](#footer)** ainsi que dans les **[mentions légales](/mentions-legales)** du site.
 
-## 2. Utilisation des données
+## Cookies et services tiers
 
-Les informations recueillies sont exclusivement destinées à :
+Le site **univerweb.dz** n’utilise **aucun cookie publicitaire, de ciblage ou d’analyse d’audience** (tel que Google Analytics ou équivalent).
 
-- Répondre à vos demandes de renseignements ou de devis.
-- Assurer le suivi de la relation client et la gestion des projets confiés à l'agence.
-- Améliorer nos services et notre communication.
+- Aucun traceur de suivi comportemental ou publicitaire n’est déposé sur votre terminal.
+- Des services tiers techniques peuvent être sollicités uniquement pour le bon affichage du site : l’optimisation et la livraison des médias (CDN Cloudinary) ainsi que l’affichage de la carte de localisation (Google Maps). Ces services tiers traitent uniquement les requêtes techniques nécessaires au rendu des contenus.
 
-Vos données ne sont en aucun cas vendues, échangées ou cédées à des tiers à des fins commerciales.
+## Données techniques et de sécurité
 
-## 3. Sécurité des données
+Lors de vos connexions à notre infrastructure d’hébergement sécurisée, des données techniques standard sont enregistrées de manière temporaire par le serveur web à des fins exclusives de sécurité et de maintenance :
 
-Nous mettons en œuvre des mesures techniques et organisationnelles rigoureuses pour protéger vos données personnelles contre tout accès non autorisé, perte, altération ou divulgation. Nos serveurs bénéficient d'une architecture sécurisée et de sauvegardes régulières chiffrées (Amazon S3).
+- Adresse IP technique du visiteur.
+- Horodatage de la connexion.
+- Page consultée et agent utilisateur (navigateur / système d’exploitation).
 
-## 4. Vos droits
+Ces informations ne sont en aucun cas recoupées avec des données nominatives et servent uniquement à garantir la stabilité et la sécurité du serveur.
 
-Conformément à la réglementation applicable, vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant. Pour exercer ce droit, vous pouvez nous contacter directement via notre formulaire en ligne ou par e-mail.
+## Droits des utilisateurs
+
+Conformément aux réglementations applicables en matière de protection des données, toute personne dispose d’un droit d’accès, de rectification et de suppression concernant ses informations.
+
+Étant donné qu’aucune donnée personnelle n’est enregistrée par le site web, ces demandes s’appliquent exclusivement aux échanges directs effectués par e-mail ou téléphone avec l’agence.
+
+## Contact
+
+Pour toute question relative à cette politique de confidentialité ou aux pratiques numériques d’Univerweb, vous pouvez nous joindre à l’adresse e-mail : **contact@univerweb.dz**.
