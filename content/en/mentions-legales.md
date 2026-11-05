@@ -13,15 +13,19 @@ In accordance with the provisions of applicable legislation, here is the legal i
 
 The **[univerweb.dz](https://univerweb.dz)** website is published by:
 
-- **Company name:** Univerweb EURL
-- **Status:** EURL (Single-Member Limited Liability Company)
+- **Company name:** Univerweb
+- **Legal status:** Single-Member Limited Liability Company (EURL)
+- **Share capital:** 400,000 DA
 - **Manager and Publication Director:** Hocem Nedjar
 - **Head office:** 62 Coop. El Mebnia, Birkhadem, Algiers, Algeria
+- **Commercial Register (RC):** 11 B 0987186 - 16/00
+- **Tax Identification Number (NIF):** 0 011 16 0987186 77
+- **Tax Article (AI):** 1612 1632406
 - **Activity:** Digital agency, custom website design, hosting, and maintenance.
 
 ## Hosting
 
-The website and infrastructures of Univerweb are hosted on our secure dedicated servers:
+The website and infrastructures of Univerweb are hosted on our secure servers:
 
 - **Name Server (DNS) Management:** `ns1.univerweb.net` / `ns2.univerweb.net`
 - **Administration:** Plesk control panel (`tea.univerweb.net`)
