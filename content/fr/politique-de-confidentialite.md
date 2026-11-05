@@ -9,38 +9,37 @@ updatedAt: 2026-11-05
 Conformément à la législation en vigueur relative à la protection des données à caractère personnel, cette politique de confidentialité décrit les pratiques d’Univerweb concernant les informations des visiteurs naviguant sur le site **univerweb.dz**.
 ::
 
-## Absence de collecte de données personnelles
+## Cadre légal
 
-Le site **univerweb.dz** est un site vitrine.
+Conformément à la **loi n° 18-07 du 10 juin 2018 relative à la protection des personnes physiques dans le traitement des données à caractère personnel, modifiée et complétée par la loi n° 25-11 du 24 juillet 2025**, Univerweb, dont le siège social est situé au 62 Coop. El Mebnia, Birkhadem, Alger, Algérie (contact@univerweb.dz), s’engage en qualité de responsable du traitement à assurer la protection, la confidentialité et la sécurité de vos données.
 
-- **Aucun formulaire** (contact, inscription ou newsletter) n’est présent sur ce site.
-- **Aucune donnée personnelle** (nom, prénom, adresse e-mail, numéro de téléphone) n’est collectée directement auprès des visiteurs lors de la navigation.
+## Données collectées : Le strict minimum
 
-Pour toute prise de contact ou demande de devis, les utilisateurs sont invités à utiliser directement les coordonnées officielles communiquées sur la page **[contact](/contact)**, dans le **[pied de page](#footer)** ainsi que dans les **[mentions légales](/mentions-legales)** du site.
+Le site **univerweb.dz** est un site vitrine. Aucun formulaire de collecte de données nominatives n’est présent sur ce site.
 
-## Cookies et services tiers
+Les seules données traitées sont :
 
-Le site **univerweb.dz** n’utilise **aucun cookie publicitaire, de ciblage ou d’analyse d’audience** (tel que Google Analytics ou équivalent).
+- Journaux serveurs techniques (Logs) : Adresse IP, horodatage et type de navigateur enregistrés de manière temporaire par le serveur web à des fins exclusives de sécurité et de maintenance (conservés pour une durée maximale de 6 mois).
+- Préférence d’affichage : Votre choix de thème (clair/sombre) via `useColorMode` est mémorisé localement dans votre navigateur (`localStorage`) sans aucun suivi.
+- Échanges directs : Les informations transmises volontairement par vos soins lors de prises de contact directes par e-mail ou téléphone.
 
-- Aucun traceur de suivi comportemental ou publicitaire n’est déposé sur votre terminal.
-- Des services tiers techniques peuvent être sollicités uniquement pour le bon affichage du site : l’optimisation et la livraison des médias (CDN Cloudinary) ainsi que l’affichage de la carte de localisation (Google Maps). Ces services tiers traitent uniquement les requêtes techniques nécessaires au rendu des contenus.
+## Cookies et prestataires tiers
 
-## Données techniques et de sécurité
+Le site **univerweb.dz** n’utilise **aucun cookie publicitaire, de ciblage ou d’analyse d’audience**.
 
-Lors de vos connexions à notre infrastructure d’hébergement sécurisée, des données techniques standard sont enregistrées de manière temporaire par le serveur web à des fins exclusives de sécurité et de maintenance :
+Certains services tiers techniques peuvent être sollicités pour le bon fonctionnement et le rendu des contenus :
 
-- Adresse IP technique du visiteur.
-- Horodatage de la connexion.
-- Page consultée et agent utilisateur (navigateur / système d’exploitation).
+- Cloudinary : Optimisation et livraison des médias.
+- Google Maps : Affichage de la carte de localisation (chargée de préférence à la demande / après consentement pour éviter tout dépôt de traceur non sollicité).
 
-Ces informations ne sont en aucun cas recoupées avec des données nominatives et servent uniquement à garantir la stabilité et la sécurité du serveur.
+_Note sur les transferts :_ Les requêtes techniques vers ces services tiers étrangers sont strictement limitées aux besoins de fonctionnement et de sécurité du site.
 
 ## Droits des utilisateurs
 
-Conformément aux réglementations applicables en matière de protection des données (notamment la loi n° 18-07), toute personne dispose d’un droit d’accès, de rectification et d’opposition au traitement de ses données, et peut introduire une réclamation auprès de l’**Autorité nationale de protection des données à caractère personnel (ANPDP)**.
+Conformément au cadre légal algérien (loi n° 18-07 et loi n° 25-11), toute personne dispose d’un droit d’accès, de rectification et d’opposition au traitement de ses données, et peut introduire une réclamation auprès de l’**Autorité nationale de protection des données à caractère personnel (ANPDP)**.
 
-Étant donné qu’aucune donnée personnelle n’est enregistrée par le site web, ces demandes s’appliquent exclusivement aux échanges directs effectués par e-mail ou téléphone avec l’agence.
+Ces droits s’exercent directement auprès de l’agence par e-mail à contact@univerweb.dz avec un retour dans les meilleurs délais.
 
 ## Contact
 
-Pour toute question relative à cette politique de confidentialité ou aux pratiques numériques d’Univerweb, vous pouvez nous joindre à l’adresse e-mail : **contact@univerweb.dz**.
+Pour toute question relative à cette politique de confidentialité, vous pouvez nous joindre à l’adresse e-mail : contact@univerweb.dz.
