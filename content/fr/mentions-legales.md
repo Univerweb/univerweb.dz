@@ -13,15 +13,19 @@ Conformément aux dispositions de la législation en vigueur, voici les informat
 
 Le site **[univerweb.dz](https://univerweb.dz)** est édité par :
 
-- **Raison sociale :** Univerweb EURL
-- **Statut :** EURL (Entreprise unipersonnelle à responsabilité limitée)
+- **Raison sociale :** Univerweb
+- **Statut juridique :** Entreprise unipersonnelle à responsabilité limitée (EURL)
+- **Capital social :** 400 000 DA
 - **Gérant et directeur de la publication :** Hocem Nedjar
 - **Siège social :** 62 Coop. El Mebnia, Birkhadem, Alger, Algérie
+- **Registre du commerce (RC) :** 11 B 0987186 - 16/00
+- **Numéro d’identification fiscale (NIF) :** 0 011 16 0987186 77
+- **Article d’imposition (AI) :** 1612 1632406
 - **Activité :** Agence digitale, conception de sites web sur mesure, hébergement et maintenance.
 
 ## Hébergement
 
-Le site et les infrastructures d’Univerweb sont hébergés sur nos serveurs dédiés sécurisés :
+Le site et les infrastructures d’Univerweb sont hébergés sur nos serveurs sécurisés :
 
 - **Gestion des serveurs de noms (DNS) :** `ns1.univerweb.net` / `ns2.univerweb.net`
 - **Administration :** Panneau de contrôle Plesk (`tea.univerweb.net`)
