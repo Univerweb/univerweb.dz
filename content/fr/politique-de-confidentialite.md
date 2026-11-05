@@ -30,7 +30,7 @@ Le site **univerweb.dz** n’utilise **aucun cookie publicitaire, de ciblage ou 
 Certains services tiers techniques peuvent être sollicités pour le bon fonctionnement et le rendu des contenus :
 
 - Cloudinary : Optimisation et livraison des médias.
-- Google Maps : Affichage de la carte de localisation (chargée de préférence à la demande / après consentement pour éviter tout dépôt de traceur non sollicité).
+- Google Maps : Affichage de la carte de localisation.
 
 _Note sur les transferts :_ Les requêtes techniques vers ces services tiers étrangers sont strictement limitées aux besoins de fonctionnement et de sécurité du site.
 
