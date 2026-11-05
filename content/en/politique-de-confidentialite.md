@@ -9,38 +9,35 @@ updatedAt: 2026-11-05
 In accordance with applicable legislation regarding personal data protection, this privacy policy outlines Univerweb’s practices concerning information from visitors navigating the **univerweb.dz** website.
 ::
 
-## No Personal Data Collection
+## Legal Framework
 
-The **univerweb.dz** website is a showcase site.
+In accordance with **Law No. 18-07 of June 10, 2018, relating to the protection of natural persons in the processing of personal data, as amended and supplemented by Law No. 25-11 of July 24, 2025**, Univerweb, headquartered at 62 Coop. El Mebnia, Birkhadem, Algiers, Algeria (contact@univerweb.dz), is committed as the data controller to ensuring the protection, confidentiality, and security of your data.
 
-- **No forms** (contact, registration, or newsletter) are present on this site.
-- **No personal data** (name, email address, phone number) is directly collected from visitors during browsing.
+## Data Collected: The Bare Minimum
 
-For any inquiry or quote request, users are invited to use the official contact details provided on the **[contact](/en/contact)** page, in the **[footer](#footer)**, and in the **[legal notice](/en/legal-notice)**.
+The **univerweb.dz** website is a showcase site. No forms are present on this site.
 
-## Cookies and Third-Party Services
+The only data processed consists of:
 
-The **univerweb.dz** website uses **no advertising, targeting, or audience analytics cookies** (such as Google Analytics or equivalent).
+- Technical server logs: IP address, timestamps, and browser type recorded by the web server strictly for security and maintenance purposes (retained for a maximum period of 6 months).
+- Display preferences: Your theme choice (light/dark) via `useColorMode` is saved locally in your browser (`localStorage`) without tracking.
+- Direct communications: Information voluntarily provided by you during direct contact via email or phone.
 
-- No behavioral or advertising tracking cookies are stored on your device.
-- Technical third-party services may be queried solely for the proper display of the website: media optimization and delivery (Cloudinary CDN) and map display (Google Maps). These third-party services process only the technical requests necessary to render the content.
+## Cookies and Third-Party Providers
 
-## Technical and Security Data
+The **univerweb.dz** website uses **no advertising, targeting, or audience analytics cookies**.
 
-When connecting to our secure hosting infrastructure, standard technical data is temporarily logged by the web server exclusively for security and maintenance purposes:
+Technical third-party services may be queried solely for the proper display and operation of the website:
 
-- Technical IP address of the visitor.
-- Timestamp of the connection.
-- Page requested and user agent (browser / operating system).
-
-This information is never cross-referenced with personal data and serves solely to ensure server stability and security.
+- Cloudinary: Media optimization and delivery.
+- Google Maps: Map display (loaded upon explicit user consent/click to prevent unsolicited tracking).
 
 ## User Rights
 
-In accordance with applicable data protection regulations, every individual has the right to access, rectify, and object to the processing of their data, and may lodge a complaint with the **National Authority for the Protection of Personal Data (ANPDP)**.
+In accordance with the Algerian legal framework (Law No. 18-07 and Law No. 25-11), every individual has the right to access, rectify, and object to the processing of their data, and may lodge a complaint with the **National Authority for the Protection of Personal Data (ANPDP)**.
 
-Since no personal data is stored by the website itself, these requests apply exclusively to direct communication carried out via email or phone with the agency.
+These rights can be exercised directly by contacting the agency via email at contact@univerweb.dz.
 
 ## Contact
 
-For any questions regarding this privacy policy or Univerweb’s digital practices, you can contact us at: **contact@univerweb.dz**.
+For any questions regarding this privacy policy or Univerweb’s digital practices, you can contact us at: contact@univerweb.dz.
