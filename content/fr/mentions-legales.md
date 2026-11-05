@@ -19,8 +19,8 @@ Le site **[univerweb.dz](https://univerweb.dz)** est édité par :
 - **Gérant et directeur de la publication :** Hocem Nedjar
 - **Siège social :** 62 Coop. El Mebnia, Birkhadem, Alger, Algérie
 - **Registre du commerce (RC) :** 11 B 0987186 - 16/00
-- **Numéro d’identification fiscale (NIF) :** 0 011 16 0987186 77
-- **Article d’imposition (AI) :** 1612 1632406
+- **Numéro d’identification fiscale (NIF) :** 0011 16 0987186 77
+- **Article d’imposition (AI) :** 16 12 1632406
 - **Activité :** Agence digitale, conception de sites web sur mesure, hébergement et maintenance.
 
 ## Hébergement
