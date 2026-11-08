@@ -269,19 +269,18 @@ export default defineContentConfig({
 
     legal_fr: defineCollection({
       type: 'page',
-      source: 'fr/*.md',
       source: { include: 'fr/*.md', prefix: '/' },
-      schema: Article,
+      schema: Date,
     }),
     legal_en: defineCollection({
       type: 'page',
       source: 'en/*.md',
-      schema: Article,
+      schema: Date,
     }),
     legal_ar: defineCollection({
       type: 'page',
       source: 'ar/*.md',
-      schema: Article,
+      schema: Date,
     }),
 
     error_404_fr: defineCollection({
