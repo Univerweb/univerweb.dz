@@ -165,7 +165,10 @@ faq:
 
     - question: What is the cost of a website?
       answer:
-        The cost of a website varies depending on its complexity, the number of
-        pages, specific functionalities, the desired design, and necessary
-        integrations. Each project is unique, which is why we offer personalized
-        quotes after fully understanding your needs.
+        "Website creation projects start at 220,000\u00A0DA\u00A0excl.\u00A0VAT
+        for a showcase or custom website (Nuxt technology) and at
+        280,000\u00A0DA\u00A0excl.\u00A0VAT for a website whose content you
+        manage yourself (Drupal CMS). The final cost varies depending on
+        complexity, number of pages, number of languages, and specific features.
+        Each project is unique, which is why we provide a personalized quote
+        after analyzing your needs."
