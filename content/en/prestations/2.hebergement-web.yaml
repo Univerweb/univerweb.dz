@@ -132,7 +132,7 @@ faq:
 
     - question: What are the costs associated with web hosting?
       answer:
-        Our hosting solutions range from 5,000 to 58,000 DA per year. The price
-        varies mainly based on the selected disk storage capacity and required
-        resources, while including domain name, professional email, and SSL
-        certificate.
+        "Our hosting plans range from 5,000 to
+        58,000\u00A0DA\u00A0excl.\u00A0VAT per year. The price varies mainly
+        based on the selected disk storage capacity and the resources required.
+        Plans include the domain name, professional email, and SSL certificate."

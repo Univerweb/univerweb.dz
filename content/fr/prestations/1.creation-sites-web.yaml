@@ -174,9 +174,10 @@ faq:
 
     - question: Quel est le coût d’un site web ?
       answer:
-        Les projets de création de sites web débutent à partir de 220 000 DA
-        pour les solutions Nuxt (sites vitrines / sur mesure) et à partir de 280
-        000 DA pour les projets sous Drupal (CMS d’entreprise). Le coût final
-        varie selon la complexité, le nombre de pages, le nombre de langues à
-        intégrer et les fonctionnalités spécifiques. Chaque projet étant unique,
-        nous établissons un devis personnalisé après analyse de vos besoins.
+        "Les projets de création de sites web sont proposés à partir de
+        220\u00A0000\u00A0DA\u00A0HT pour un site vitrine ou sur mesure
+        (technologie Nuxt) et à partir de 280\u00A0000\u00A0DA\u00A0HT pour un
+        site dont vous gérez vous-même les contenus (CMS Drupal). Le coût final
+        varie selon la complexité, le nombre de pages, le nombre de langues et
+        les fonctionnalités spécifiques. Chaque projet étant unique, nous
+        établissons un devis personnalisé après analyse de vos besoins."
