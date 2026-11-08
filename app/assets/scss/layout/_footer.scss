@@ -48,11 +48,14 @@ footer {
 }
 
 .copy {
-  grid-column: span 3 / span 3;
   display: grid;
   gap: 8px;
   font-size: 12.5px;
   line-height: 16px;
+
+  @media (min-width: $lg) {
+    grid-column: span 3 / span 3;
+  }
 
   p {
     margin: 0;
