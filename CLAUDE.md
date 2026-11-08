@@ -22,6 +22,8 @@ Site vitrine d'Univerweb (agence web, Alger). Nuxt 4 + Vue 3 + TypeScript, conte
 ## Conventions générales
 
 - Style imposé par `@nuxt/eslint` avec `stylistic: true` : indentation de 2 espaces, guillemets simples, **pas de point-virgule**, virgules finales en multiligne.
+- Formatage : le dépôt n’a **pas de config Prettier** ; les réglages vivent dans les paramètres VS Code de l’utilisateur (Prettier `singleQuote`, `semi: false`, et `proseWrap: always` pour le YAML). Prettier formate à l’enregistrement, sauf les fichiers `.vue` (formatage automatique désactivé : s’en remettre à ESLint, `pnpm lint:fix`). Pour formater un fichier de contenu YAML en ligne de commande : `pnpm exec prettier --single-quote --no-semi --prose-wrap always --write <fichier>`. Le YAML est replié à 80 colonnes : ne pas laisser de ligne plus longue après une édition.
+- Espaces insécables dans le YAML : chaînes entre guillemets doubles, avec le caractère littéral ou l’échappement ` ` (équivalents). Ils évitent les retours à la ligne au milieu d’un prix (`220 000 DA HT`) ; en Markdown, utiliser `&nbsp;`.
 - Ne rien importer de ce que Nuxt auto-importe (`ref`, `computed`, `useRoute`, `useFetch`, `useI18n`, `useAsyncData`, `queryCollection`, composables et composants locaux…). On n'importe explicitement que les bibliothèques externes et les types : `import type { Collections } from '@nuxt/content'`.
 - Pas de type `any` explicite.
 - Commits en français au format Conventional Commits : `type(portée): description` (ex. `fix(blog): corriger la hauteur de police dans le contenu du blog`). Types : `feat`, `fix`, etc.
