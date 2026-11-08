@@ -1,8 +1,8 @@
 ---
 title: Legal Notice
 description: Legal notice and regulatory information for the Univerweb website, web agency and custom development in Algiers, Algeria.
-createdAt: 2026-11-05
-updatedAt: 2026-11-05
+createdAt: 2026-11-08
+updatedAt: 2026-11-08
 ---
 
 ::lead

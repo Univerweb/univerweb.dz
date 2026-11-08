@@ -1,8 +1,8 @@
 ---
 title: Mentions légales
 description: Mentions légales et informations réglementaires du site d’Univerweb, agence web et développement sur mesure à Alger, Algérie.
-createdAt: 2026-11-05
-updatedAt: 2026-11-05
+createdAt: 2026-11-08
+updatedAt: 2026-11-08
 ---
 
 ::lead

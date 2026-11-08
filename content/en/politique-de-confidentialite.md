@@ -1,8 +1,8 @@
 ---
 title: Privacy Policy
 description: Privacy policy and personal data protection on the Univerweb website, web agency and custom development based in Algiers, Algeria.
-createdAt: 2026-11-05
-updatedAt: 2026-11-05
+createdAt: 2026-11-08
+updatedAt: 2026-11-08
 ---
 
 ::lead
@@ -15,29 +15,37 @@ In accordance with **Law No. 18-07 of June 10, 2018, relating to the protection 
 
 ## Data Collected: The Bare Minimum
 
-The univerweb.dz website is a showcase site. No forms are present on this site.
+The univerweb.dz website is a showcase site. **No forms** collecting personal data are present on this site.
 
 The only data processed consists of:
 
-- Technical server logs: IP address, timestamps, and browser type recorded by the web server strictly for security and maintenance purposes (retained for a maximum period of 6 months).
-- Display preferences: Your theme choice (light/dark) via `useColorMode` is saved locally in your browser (`localStorage`) without tracking.
-- Direct communications: Information voluntarily provided by you during direct contact via email or phone.
+- **Technical server logs:** IP address, timestamp, and browser type, temporarily recorded strictly for security and maintenance purposes (retained for a maximum of 6 months).
+- **Display preference:** your theme choice (light or dark) is saved in your browser’s local storage, without any tracking.
+- **Direct communications:** information you voluntarily provide when contacting us by email or phone.
 
-## Cookies and Third-Party Providers
+## Hosting, Backups, and Third-Party Providers
 
-The univerweb.dz website uses **no advertising, targeting, or audience analytics cookies**.
+To operate, the website relies on the following providers, located or operating outside Algeria:
 
-Technical third-party services may be queried solely for the proper display and operation of the website:
+- **Contabo GmbH (Germany):** hosting of the website, email, and technical server logs (including your IP address).
+- **Amazon Web Services (Amazon S3):** storage of daily backups of our servers (website, databases, and email), encrypted at rest and kept for about a week. Technical logs are excluded.
+- **Cloudinary:** image optimization and delivery. Your browser loads them directly from its servers ([privacy policy](https://cloudinary.com/privacy)).
+- **Google Maps:** map on the Contact page, loaded automatically when the page opens. Google then receives your IP address and may set its own cookies ([privacy policy](https://policies.google.com/privacy)).
 
-- Cloudinary: Media optimization and delivery.
-- Google Maps: Map display.
+We make sure to entrust these providers only with what is necessary for the operation and security of the website.
+
+## Cookies and Trackers
+
+The univerweb.dz website uses **no advertising, targeting, or audience analytics cookies** (such as Google Analytics or equivalent).
+
+The third-party services listed above, in particular Google Maps, may set their own technical cookies, governed by their own privacy policies. You can block them in your browser settings.
 
 ## User Rights
 
 In accordance with the Algerian legal framework (Law No. 18-07 and Law No. 25-11), every individual has the right to access, rectify, and object to the processing of their data, and may lodge a complaint with the **National Authority for the Protection of Personal Data (ANPDP)**.
 
-These rights can be exercised directly by contacting the agency via email at contact@univerweb.dz.
+These rights can be exercised directly with the agency by email at contact@univerweb.dz. We commit to responding within 30 days.
 
 ## Contact
 
-For any questions regarding this privacy policy or Univerweb’s digital practices, you can contact us at: contact@univerweb.dz.
+For any questions regarding this privacy policy, you can contact us at: contact@univerweb.dz.
