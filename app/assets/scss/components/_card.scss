@@ -75,11 +75,11 @@
 
   h2,
   h3 {
-    @include typo(32);
+    @include typo(2rem);
 
     &.realisation {
       @media (min-width: $xl) {
-        @include typo(56);
+        @include typo(3.5rem);
       }
     }
   }
@@ -135,7 +135,7 @@
 
   h2,
   h3 {
-    @include typo(32);
+    @include typo(2rem);
     margin-block: calc(var(--padding-y) * 2) 24px;
   }
 

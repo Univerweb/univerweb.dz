@@ -15,7 +15,7 @@ body {
   transition: background-color var(--transition), color var(--transition);
   font-family: var(--font-family);
 
-  @include typo(16, $height: 1.6);
+  @include typo(1rem, $height: 1.6);
 
   .menu-open & {
     height: 100%;
@@ -26,58 +26,58 @@ body {
 h1,
 .h1 {
   @include typo(
-    44,
+    2.75rem,
     $weight: 700,
     $height: var(--line-height),
-    $spacing: -0.04,
+    $spacing: -0.04em,
     $mbs: 0,
-    $mbe: 24,
+    $mbe: 1.5rem,
   );
 
   @media (min-width: $md) {
-    @include typo(56, $mbe: 36);
+    @include typo(3.5rem, $mbe: 2.25rem);
   }
 
   @media (min-width: $lg) {
-    @include typo(80, $mbe: 48);
+    @include typo(5rem, $mbe: 3rem);
   }
 }
 
 h2,
 .h2 {
   @include typo(
-    32,
+    2rem,
     $weight: 500,
     $height: var(--line-height),
-    $spacing: -0.04,
+    $spacing: -0.04em,
     $mbs: 0,
-    $mbe: 24,
+    $mbe: 1.5rem,
   );
 
   @media (min-width: $md) {
-    @include typo(42);
+    @include typo(2.625rem);
   }
 
   @media (min-width: $lg) {
-    @include typo(56);
+    @include typo(3.5rem);
   }
 }
 
 h3,
 .h3 {
   @include typo(
-    20,
+    1.25rem,
     $weight: 500,
     $height: var(--line-height),
-    $spacing: -0.02,
+    $spacing: -0.02em,
     $mbs: 0,
-    $mbe: 12,
+    $mbe: 0.75rem,
   );
 }
 
 h6,
 .h6 {
-  @include typo(16, $weight: 500, $height: 1.5, $mbe: 6);
+  @include typo(1rem, $weight: 500, $height: 1.5, $mbe: 0.375rem);
 }
 
 a {
@@ -110,7 +110,7 @@ ol {
   }
 
   .big-count::before {
-    @include typo(56, $weight: 900, $height: var(--line-height));
+    @include typo(3.5rem, $weight: 900, $height: var(--line-height));
 
     color: var(--blue);
     margin-bottom: 12px;

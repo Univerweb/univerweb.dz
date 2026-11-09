@@ -1,14 +1,3 @@
-@use 'sass:math';
-
-// Convertit des px (sans unité) en rem, base 16px ; 0 reste sans unité.
-@function rem($px) {
-  @if $px == 0 {
-    @return 0;
-  }
-
-  @return math.div($px, 16) * 1rem;
-}
-
 @mixin typo(
   $size,
   $weight: null,
@@ -17,7 +6,7 @@
   $mbs: null,
   $mbe: null
 ) {
-  font-size: rem($size);
+  font-size: $size;
   @if $weight {
     font-weight: $weight;
   }
@@ -27,15 +16,15 @@
   }
 
   @if $spacing {
-    letter-spacing: $spacing + em;
+    letter-spacing: $spacing;
   }
 
   @if $mbs {
-    margin-block-start: rem($mbs);
+    margin-block-start: $mbs;
   }
 
   @if $mbe {
-    margin-block-end: rem($mbe);
+    margin-block-end: $mbe;
   }
 }
 

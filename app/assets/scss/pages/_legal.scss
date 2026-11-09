@@ -10,6 +10,6 @@
   }
 
   .content h2 {
-    @include typo(24, $spacing: 0, $mbs: 44, $mbe: 12);
+    @include typo(1.5rem, $spacing: 0, $mbs: 2.75rem, $mbe: 0.75rem);
   }
 }
