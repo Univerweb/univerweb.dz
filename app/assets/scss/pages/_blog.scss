@@ -15,7 +15,7 @@
     flex-wrap: wrap;
     color: var(--color-secondary);
     transition: color var(--transition);
-    @include typo(15, 500, $mbs: 0, $mbe: 0);
+    @include typo(15, $weight: 500, $mbs: 0, $mbe: 0);
 
     dd {
       margin: 0;

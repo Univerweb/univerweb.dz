@@ -25,7 +25,14 @@ body {
 
 h1,
 .h1 {
-  @include typo(44, 700, var(--line-height), -0.04, 0, 24);
+  @include typo(
+    44,
+    $weight: 700,
+    $height: var(--line-height),
+    $spacing: -0.04,
+    $mbs: 0,
+    $mbe: 24,
+  );
 
   @media (min-width: $md) {
     @include typo(56, $mbe: 36);
@@ -38,7 +45,14 @@ h1,
 
 h2,
 .h2 {
-  @include typo(32, 500, var(--line-height), -0.04, 0, 24);
+  @include typo(
+    32,
+    $weight: 500,
+    $height: var(--line-height),
+    $spacing: -0.04,
+    $mbs: 0,
+    $mbe: 24,
+  );
 
   @media (min-width: $md) {
     @include typo(42);
@@ -51,12 +65,19 @@ h2,
 
 h3,
 .h3 {
-  @include typo(20, 500, var(--line-height), -0.02, 0, 12);
+  @include typo(
+    20,
+    $weight: 500,
+    $height: var(--line-height),
+    $spacing: -0.02,
+    $mbs: 0,
+    $mbe: 12,
+  );
 }
 
 h6,
 .h6 {
-  @include typo(16, 500, 1.5, $mbe: 6);
+  @include typo(16, $weight: 500, $height: 1.5, $mbe: 6);
 }
 
 a {
@@ -89,7 +110,7 @@ ol {
   }
 
   .big-count::before {
-    @include typo(56, 900, var(--line-height));
+    @include typo(56, $weight: 900, $height: var(--line-height));
 
     color: var(--blue);
     margin-bottom: 12px;

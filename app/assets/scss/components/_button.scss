@@ -4,7 +4,7 @@
 .link {
   display: inline-block;
 
-  @include typo(20, 500);
+  @include typo(20, $weight: 500);
 
   @media (min-width: $md) {
     font-size: 28px;
@@ -110,7 +110,7 @@
   width: max-content;
   text-transform: uppercase;
 
-  @include typo(12.8, 500, var(--line-height), $mbe: 12);
+  @include typo(12.8, $weight: 500, $height: var(--line-height), $mbe: 12);
 
   &:hover {
     color: var(--blue);
