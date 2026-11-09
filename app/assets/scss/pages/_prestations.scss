@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 .prestations {
   :is(h1, .features h2, .tags-group h2) {
@@ -34,7 +35,8 @@
       text-align: start;
       column-gap: 24px;
       width: 100%;
-      font-weight: inherit;
+
+      @include typo($weight: inherit);
 
       .icon {
         position: relative;

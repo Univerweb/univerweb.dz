@@ -1,12 +1,15 @@
 @mixin typo(
-  $size,
+  $size: null,
   $weight: null,
   $line-height: null,
   $letter-spacing: null,
   $margin-top: null,
   $margin-bottom: null
 ) {
-  font-size: $size;
+  @if $size {
+    font-size: $size;
+  }
+
   @if $weight {
     font-weight: $weight;
   }

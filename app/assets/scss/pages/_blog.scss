@@ -58,8 +58,7 @@
     }
 
     .lead {
-      line-height: 1.6;
-      letter-spacing: normal;
+      @include typo($line-height: 1.6, $letter-spacing: normal);
     }
 
     h2 {
@@ -107,7 +106,8 @@
     }
 
     code {
-      font-size: 0.875em;
+      @include typo(0.875em);
+
       background-color: var(--background-secondary);
       padding: 0.15em 0.35em;
       border-radius: 4px;

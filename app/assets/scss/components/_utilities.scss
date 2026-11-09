@@ -24,7 +24,8 @@
   transition: color var(--transition);
 
   footer & {
-    font-weight: 300;
+    @include typo($weight: 300);
+
     color: var(--color);
     margin: 0;
     max-width: 400px;
@@ -35,7 +36,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 6px 12px;
-  font-weight: 500;
+
+  @include typo($weight: 500);
 
   li::before {
     content: '#';
