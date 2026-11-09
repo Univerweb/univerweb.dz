@@ -10,7 +10,7 @@
   --color: #111827;
   --color-secondary: rgba(17 24 39 / 73%);
   --font-family: 'Outfit', 'Outfit fallback';
-  --line-height: 1.1;
+  --line-height-heading: 1.1;
   --padding-x: 16px;
   --padding-y: 16px;
   --h-header: 72px;
@@ -32,7 +32,7 @@
 
   &[dir='rtl'] {
     --font-family: 'Alexandria', 'Alexandria fallback';
-    --line-height: 1.4;
+    --line-height-heading: 1.4;
     --origin: 100%;
   }
 

@@ -28,7 +28,7 @@ h1,
   @include typo(
     2.75rem,
     $weight: 700,
-    $line-height: var(--line-height),
+    $line-height: var(--line-height-heading),
     $letter-spacing: -0.04em,
     $margin-top: 0,
     $margin-bottom: 1.5rem,
@@ -48,7 +48,7 @@ h2,
   @include typo(
     2rem,
     $weight: 500,
-    $line-height: var(--line-height),
+    $line-height: var(--line-height-heading),
     $letter-spacing: -0.04em,
     $margin-top: 0,
     $margin-bottom: 1.5rem,
@@ -68,7 +68,7 @@ h3,
   @include typo(
     1.25rem,
     $weight: 500,
-    $line-height: var(--line-height),
+    $line-height: var(--line-height-heading),
     $letter-spacing: -0.02em,
     $margin-top: 0,
     $margin-bottom: 0.75rem,
@@ -128,7 +128,11 @@ ol {
   }
 
   .big-count::before {
-    @include typo(3.5rem, $weight: 900, $line-height: var(--line-height));
+    @include typo(
+      3.5rem,
+      $weight: 900,
+      $line-height: var(--line-height-heading),
+    );
 
     color: var(--blue);
     margin-bottom: 12px;

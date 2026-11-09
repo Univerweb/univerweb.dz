@@ -115,7 +115,7 @@
   @include typo(
     0.8rem,
     $weight: 500,
-    $line-height: var(--line-height),
+    $line-height: var(--line-height-heading),
     $margin-bottom: 0.75rem,
   );
 
