@@ -15,7 +15,7 @@ body {
   transition: background-color var(--transition), color var(--transition);
   font-family: var(--font-family);
 
-  @include font(16, $height: 1.6);
+  @include typo(16, $height: 1.6);
 
   .menu-open & {
     height: 100%;
@@ -25,38 +25,38 @@ body {
 
 h1,
 .h1 {
-  @include font(44, 700, var(--line-height), -0.04, 0, 24);
+  @include typo(44, 700, var(--line-height), -0.04, 0, 24);
 
   @media (min-width: $md) {
-    @include font(56, $mbe: 36);
+    @include typo(56, $mbe: 36);
   }
 
   @media (min-width: $lg) {
-    @include font(80, $mbe: 48);
+    @include typo(80, $mbe: 48);
   }
 }
 
 h2,
 .h2 {
-  @include font(32, 500, var(--line-height), -0.04, 0, 24);
+  @include typo(32, 500, var(--line-height), -0.04, 0, 24);
 
   @media (min-width: $md) {
-    @include font(42);
+    @include typo(42);
   }
 
   @media (min-width: $lg) {
-    @include font(56);
+    @include typo(56);
   }
 }
 
 h3,
 .h3 {
-  @include font(20, 500, var(--line-height), -0.02, 0, 12);
+  @include typo(20, 500, var(--line-height), -0.02, 0, 12);
 }
 
 h6,
 .h6 {
-  @include font(16, 500, 1.5, $mbe: 6);
+  @include typo(16, 500, 1.5, $mbe: 6);
 }
 
 a {
@@ -89,7 +89,7 @@ ol {
   }
 
   .big-count::before {
-    @include font(56, 900, var(--line-height));
+    @include typo(56, 900, var(--line-height));
 
     color: var(--blue);
     margin-bottom: 12px;

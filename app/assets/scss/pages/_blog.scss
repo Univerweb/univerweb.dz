@@ -7,7 +7,7 @@
   }
 
   .tags {
-    @include font(18, $mbs: 24);
+    @include typo(18, $mbs: 24);
   }
 
   .meta {
@@ -15,7 +15,7 @@
     flex-wrap: wrap;
     color: var(--color-secondary);
     transition: color var(--transition);
-    @include font(15, 500, $mbs: 0, $mbe: 0);
+    @include typo(15, 500, $mbs: 0, $mbe: 0);
 
     dd {
       margin: 0;
@@ -54,7 +54,7 @@
 
   .content {
     @media (min-width: $md) {
-      @include font(18);
+      @include typo(18);
     }
 
     .lead {
@@ -67,7 +67,7 @@
     }
 
     h3 {
-      @include font(24, $spacing: 0, $mbs: 44);
+      @include typo(24, $spacing: 0, $mbs: 44);
     }
 
     a {
@@ -130,10 +130,10 @@
       min-width: 560px;
       border-collapse: collapse;
 
-      @include font(14);
+      @include typo(14);
 
       @media (min-width: $md) {
-        @include font(16);
+        @include typo(16);
       }
 
       thead tr {
@@ -194,7 +194,7 @@
         position: absolute;
         inset-inline-end: 34px;
 
-        @include font(12.5, $height: 1.76);
+        @include typo(12.5, $height: 1.76);
 
         &-enter-active,
         &-leave-active {
