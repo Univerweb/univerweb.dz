@@ -10,3 +10,17 @@ main {
     opacity: 0;
   }
 }
+
+.hero {
+  --padding-y: 0;
+  display: grid;
+  grid-auto-rows: 1fr auto;
+  transition: min-height var(--transition);
+  min-height: calc(100svh - var(--h-header));
+}
+
+.error {
+  --h-header: 0;
+  --padding-y: 0;
+  min-height: 100svh;
+}

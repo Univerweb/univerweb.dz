@@ -79,11 +79,11 @@ Site vitrine d'Univerweb (agence web, Alger). Nuxt 4 + Vue 3 + TypeScript, conte
 
 - Architecture 7-1 simplifiée sous `app/assets/scss/`, point d'entrée unique `main.scss` (seul fichier déclaré dans `nuxt.config.ts > css`) :
   - `abstracts/` : `_variables.scss` (breakpoints), `_mixins.scss` — ne génèrent aucun CSS
-  - `base/` : reset, polices, thèmes, typographie, éléments HTML
-  - `layout/` : header, main, footer, grille
-  - `components/` : boutons, cartes, navigation, utilitaires
+  - `base/` : reset (avec les éléments HTML de base), polices, thèmes, typographie
+  - `layout/` : grille (`_grid`), `main` avec `.hero` et `.error` (`_main`), header, footer
+  - `components/` : un partiel par composant (`_card`, `_button`, `_slug-nav`, `_more`, `_request`…) et utilitaires
   - `pages/` : un partiel par section du site (`_blog.scss`, `_legal.scss`…)
-- Fichiers partiels préfixés `_`, ajoutés dans `main.scss` avec `@use` dans le bon groupe.
+- Fichiers partiels préfixés `_`, ajoutés dans `main.scss` avec `@use` dans le bon groupe (l'ordre compte pour la cascade).
 - **Module system Sass uniquement** : `@use` / `@forward`, jamais `@import`. Importer les abstracts en tête de chaque partiel qui en a besoin :
   ```scss
   @use '../abstracts/variables' as *;

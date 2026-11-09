@@ -10,20 +10,6 @@
   }
 }
 
-.hero {
-  --padding-y: 0;
-  display: grid;
-  grid-auto-rows: 1fr auto;
-  transition: min-height var(--transition);
-  min-height: calc(100svh - var(--h-header));
-}
-
-.error {
-  --h-header: 0;
-  --padding-y: 0;
-  min-height: 100svh;
-}
-
 .intro {
   @include grid(12, 1fr, $align: center);
 
@@ -144,28 +130,5 @@
         grid-row-start: 2;
       }
     }
-  }
-}
-
-.more {
-  display: grid;
-  padding-top: var(--padding-y);
-}
-
-.request {
-  background-color: var(--background-secondary);
-  transition: background-color var(--transition);
-
-  &:not(.other) {
-    text-align: center;
-  }
-
-  .h3 {
-    color: var(--color-secondary);
-    transition: color var(--transition);
-  }
-
-  a {
-    margin: 0;
   }
 }

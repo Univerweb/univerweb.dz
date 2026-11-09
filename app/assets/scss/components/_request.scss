@@ -1,0 +1,17 @@
+.request {
+  background-color: var(--background-secondary);
+  transition: background-color var(--transition);
+
+  &:not(.other) {
+    text-align: center;
+  }
+
+  .h3 {
+    color: var(--color-secondary);
+    transition: color var(--transition);
+  }
+
+  a {
+    margin: 0;
+  }
+}
