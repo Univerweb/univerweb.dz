@@ -51,7 +51,7 @@ footer {
   display: grid;
   gap: 8px;
   font-size: 0.78125rem;
-  line-height: 16px;
+  line-height: 1.28;
 
   @media (min-width: $lg) {
     grid-column: span 3 / span 3;
