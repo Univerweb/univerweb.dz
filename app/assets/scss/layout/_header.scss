@@ -109,7 +109,7 @@ header:has(nav) {
     position: relative;
     display: grid;
     width: fit-content;
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: 500;
     visibility: hidden;
     opacity: 0;
@@ -136,7 +136,7 @@ header:has(nav) {
     }
 
     @media (min-width: $md) {
-      font-size: 16px;
+      font-size: 1rem;
       line-height: 1.5;
       visibility: visible;
       opacity: 1;
@@ -209,7 +209,7 @@ header:has(nav) {
   position: absolute;
   inset-inline-end: calc(100% + 8px);
   width: max-content;
-  font-size: 12.5px;
+  font-size: 0.78125rem;
   opacity: 0;
   visibility: hidden;
 

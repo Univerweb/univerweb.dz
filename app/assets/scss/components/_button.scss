@@ -7,7 +7,7 @@
   @include typo(1.25rem, $weight: 500);
 
   @media (min-width: $md) {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
 
   &.outfit {
