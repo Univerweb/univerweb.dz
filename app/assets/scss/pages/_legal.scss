@@ -10,6 +10,11 @@
   }
 
   .content h2 {
-    @include typo(1.5rem, $spacing: 0, $mbs: 2.75rem, $mbe: 0.75rem);
+    @include typo(
+      1.5rem,
+      $letter-spacing: 0,
+      $margin-top: 2.75rem,
+      $margin-bottom: 0.75rem,
+    );
   }
 }

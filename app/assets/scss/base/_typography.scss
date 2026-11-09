@@ -15,7 +15,7 @@ body {
   transition: background-color var(--transition), color var(--transition);
   font-family: var(--font-family);
 
-  @include typo(1rem, $height: 1.6);
+  @include typo(1rem, $line-height: 1.6);
 
   .menu-open & {
     height: 100%;
@@ -28,18 +28,18 @@ h1,
   @include typo(
     2.75rem,
     $weight: 700,
-    $height: var(--line-height),
-    $spacing: -0.04em,
-    $mbs: 0,
-    $mbe: 1.5rem,
+    $line-height: var(--line-height),
+    $letter-spacing: -0.04em,
+    $margin-top: 0,
+    $margin-bottom: 1.5rem,
   );
 
   @media (min-width: $md) {
-    @include typo(3.5rem, $mbe: 2.25rem);
+    @include typo(3.5rem, $margin-bottom: 2.25rem);
   }
 
   @media (min-width: $lg) {
-    @include typo(5rem, $mbe: 3rem);
+    @include typo(5rem, $margin-bottom: 3rem);
   }
 }
 
@@ -48,10 +48,10 @@ h2,
   @include typo(
     2rem,
     $weight: 500,
-    $height: var(--line-height),
-    $spacing: -0.04em,
-    $mbs: 0,
-    $mbe: 1.5rem,
+    $line-height: var(--line-height),
+    $letter-spacing: -0.04em,
+    $margin-top: 0,
+    $margin-bottom: 1.5rem,
   );
 
   @media (min-width: $md) {
@@ -68,10 +68,10 @@ h3,
   @include typo(
     1.25rem,
     $weight: 500,
-    $height: var(--line-height),
-    $spacing: -0.02em,
-    $mbs: 0,
-    $mbe: 0.75rem,
+    $line-height: var(--line-height),
+    $letter-spacing: -0.02em,
+    $margin-top: 0,
+    $margin-bottom: 0.75rem,
   );
 }
 
@@ -90,7 +90,12 @@ h3,
 
 h6,
 .h6 {
-  @include typo(1rem, $weight: 500, $height: 1.5, $mbe: 0.375rem);
+  @include typo(
+    1rem,
+    $weight: 500,
+    $line-height: 1.5,
+    $margin-bottom: 0.375rem,
+  );
 }
 
 a {
@@ -123,7 +128,7 @@ ol {
   }
 
   .big-count::before {
-    @include typo(3.5rem, $weight: 900, $height: var(--line-height));
+    @include typo(3.5rem, $weight: 900, $line-height: var(--line-height));
 
     color: var(--blue);
     margin-bottom: 12px;

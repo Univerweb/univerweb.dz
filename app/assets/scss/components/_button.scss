@@ -113,8 +113,8 @@
   @include typo(
     0.8rem,
     $weight: 500,
-    $height: var(--line-height),
-    $mbe: 0.75rem,
+    $line-height: var(--line-height),
+    $margin-bottom: 0.75rem,
   );
 
   &:hover {

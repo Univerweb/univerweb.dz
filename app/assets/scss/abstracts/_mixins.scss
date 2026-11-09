@@ -1,30 +1,30 @@
 @mixin typo(
   $size,
   $weight: null,
-  $height: null,
-  $spacing: null,
-  $mbs: null,
-  $mbe: null
+  $line-height: null,
+  $letter-spacing: null,
+  $margin-top: null,
+  $margin-bottom: null
 ) {
   font-size: $size;
   @if $weight {
     font-weight: $weight;
   }
 
-  @if $height {
-    line-height: $height;
+  @if $line-height {
+    line-height: $line-height;
   }
 
-  @if $spacing {
-    letter-spacing: $spacing;
+  @if $letter-spacing {
+    letter-spacing: $letter-spacing;
   }
 
-  @if $mbs {
-    margin-block-start: $mbs;
+  @if $margin-top {
+    margin-top: $margin-top;
   }
 
-  @if $mbe {
-    margin-block-end: $mbe;
+  @if $margin-bottom {
+    margin-bottom: $margin-bottom;
   }
 }
 

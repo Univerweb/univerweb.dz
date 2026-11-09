@@ -7,7 +7,7 @@
   }
 
   .tags {
-    @include typo(1.125rem, $mbs: 1.5rem);
+    @include typo(1.125rem, $margin-top: 1.5rem);
   }
 
   .meta {
@@ -15,7 +15,7 @@
     flex-wrap: wrap;
     color: var(--color-secondary);
     transition: color var(--transition);
-    @include typo(0.9375rem, $weight: 500, $mbs: 0, $mbe: 0);
+    @include typo(0.9375rem, $weight: 500, $margin-top: 0, $margin-bottom: 0);
 
     dd {
       margin: 0;
@@ -67,7 +67,7 @@
     }
 
     h3 {
-      @include typo(1.5rem, $spacing: 0, $mbs: 2.75rem);
+      @include typo(1.5rem, $letter-spacing: 0, $margin-top: 2.75rem);
     }
 
     a {
@@ -194,7 +194,7 @@
         position: absolute;
         inset-inline-end: 34px;
 
-        @include typo(0.78125rem, $height: 1.76);
+        @include typo(0.78125rem, $line-height: 1.76);
 
         &-enter-active,
         &-leave-active {
