@@ -8,6 +8,12 @@
   &-no-pt {
     padding-top: 0;
   }
+
+  &-narrow {
+    @media (min-width: $lg) {
+      --padding-x: calc(50% - var(--container-narrow) / 2);
+    }
+  }
 }
 
 .intro {
@@ -41,10 +47,6 @@
   &-center {
     align-items: center;
   }
-
-  &-no-gap {
-    gap: 0;
-  }
 }
 
 .col {
@@ -59,13 +61,8 @@
   @media (min-width: $lg) {
     @include col(1, 4);
     @include col(1, 5);
-    @include col(2, 12);
     @include col(5, 13);
     @include col(6, 13);
-  }
-
-  @media (min-width: $xl) {
-    @include col(3, 11);
   }
 }
 

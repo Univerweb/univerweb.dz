@@ -28,6 +28,12 @@
   @media (min-width: $xl) {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  &-wide {
+    @media (min-width: $xxl) {
+      margin-inline: calc(50% - var(--container-wide) / 2);
+    }
+  }
 }
 
 .card {
