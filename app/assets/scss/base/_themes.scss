@@ -7,13 +7,13 @@
   --night: #28285a;
   --white: #fff;
   --success: #00d282;
-  --black: #111827;
+  --charcoal: #111827;
 
   --background: var(--white);
   --background-secondary: #f9fafb;
   --overlay: rgba(0 0 0 / 67%);
 
-  --color: var(--black);
+  --color: var(--charcoal);
   --color-secondary: rgba(17 24 39 / 73%);
 
   --border: #f2f2f2;
@@ -41,7 +41,7 @@
   &.dark {
     color-scheme: dark;
 
-    --background: var(--black);
+    --background: var(--charcoal);
     --background-secondary: #1f2937;
 
     --color: var(--white);
