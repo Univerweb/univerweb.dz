@@ -61,7 +61,7 @@ header:has(nav) {
   position: fixed;
   inset: 0;
   width: 100%;
-  height: var(--h-header);
+  height: var(--header-height);
   visibility: hidden;
   opacity: 0;
   background-color: transparent;
