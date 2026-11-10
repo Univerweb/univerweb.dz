@@ -7,12 +7,13 @@
   --night: #28285a;
   --white: #fff;
   --success: #00d282;
+  --black: #111827;
 
-  --background: #fff;
+  --background: var(--white);
   --background-secondary: #f9fafb;
   --overlay: rgba(0 0 0 / 67%);
 
-  --color: #111827;
+  --color: var(--black);
   --color-secondary: rgba(17 24 39 / 73%);
 
   --border: #f2f2f2;
@@ -40,10 +41,10 @@
   &.dark {
     color-scheme: dark;
 
-    --background: #111827;
+    --background: var(--black);
     --background-secondary: #1f2937;
 
-    --color: #fff;
+    --color: var(--white);
     --color-secondary: rgba(255 255 255 / 67%);
 
     --border: var(--background-secondary);
