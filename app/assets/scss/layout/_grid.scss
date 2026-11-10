@@ -8,6 +8,18 @@
   &-no-pt {
     padding-top: 0;
   }
+
+  &-narrow {
+    @media (min-width: $lg) {
+      --padding-x: calc(50% - var(--container-sm) / 2);
+    }
+  }
+
+  &-wide {
+    @media (min-width: $xxl) {
+      --padding-x: calc(50% - var(--container-xxl) / 2);
+    }
+  }
 }
 
 .intro {
