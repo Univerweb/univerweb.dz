@@ -3,7 +3,7 @@
 
 .blog {
   h1 {
-    margin-block-end: 24px;
+    margin-block-end: 1.5rem;
   }
 
   .tags {
@@ -63,7 +63,7 @@
     }
 
     h2 {
-      margin-block: 72px 32px;
+      margin-block: 4.5rem 2rem;
     }
 
     h3 {
@@ -80,7 +80,7 @@
 
     ul,
     ol {
-      margin-block: 0 12px;
+      margin-block: 0 0.75rem;
       padding-inline-start: 1rem;
 
       li {
@@ -116,7 +116,7 @@
     }
 
     .table-wrapper {
-      margin-block: 32px;
+      margin-block: 2rem;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
 
