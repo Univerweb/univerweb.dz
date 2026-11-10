@@ -241,7 +241,7 @@ header:has(nav) {
       visibility: visible;
       animation: tooltip-lang 2s var(--duration) ease-in-out;
 
-      [dir='rtl'] & {
+      :root[dir='rtl'] & {
         animation-direction: reverse;
       }
     }

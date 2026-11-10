@@ -95,7 +95,7 @@
       color var(--transition),
       transform var(--transition);
 
-    [dir='rtl'] &.next {
+    :root[dir='rtl'] &.next {
       transform: rotate(180deg);
     }
   }
@@ -109,7 +109,7 @@
       transform: translateY(24px);
     }
 
-    [dir='rtl'] &.next {
+    :root[dir='rtl'] &.next {
       transform: translateX(-5px) rotate(180deg);
     }
   }
@@ -133,7 +133,7 @@
   svg {
     margin-inline-end: 6px;
 
-    [dir='rtl'] & {
+    :root[dir='rtl'] & {
       transform: rotate(-180deg);
     }
   }
