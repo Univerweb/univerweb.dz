@@ -4,7 +4,7 @@
 .card-group {
   @include grid(
     1,
-    minmax(auto, var(--card-width)),
+    minmax(auto, var(--column-width)),
     var(--space),
     $justify: center
   );
@@ -22,7 +22,7 @@
   }
 
   @media (min-width: $md) {
-    grid-template-columns: repeat(2, minmax(var(--card-width), 460px));
+    grid-template-columns: repeat(2, minmax(var(--column-width), 460px));
   }
 
   @media (min-width: $xl) {

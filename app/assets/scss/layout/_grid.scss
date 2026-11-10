@@ -20,7 +20,7 @@
   @include grid(12, 1fr, $align: center);
 
   &-justify {
-    max-width: var(--card-width);
+    max-width: var(--column-width);
     margin: auto;
 
     @media (min-width: $md) {
