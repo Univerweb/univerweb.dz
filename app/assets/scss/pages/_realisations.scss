@@ -66,6 +66,6 @@
   }
 
   img {
-    box-shadow: 0 0 40px 0 rgba(var(--shadow));
+    box-shadow: 0 0 40px 0 var(--shadow);
   }
 }

@@ -16,7 +16,7 @@ header:has(nav) {
   z-index: 1;
 
   .scrolled & {
-    box-shadow: 0 0 10px rgba(var(--shadow));
+    box-shadow: 0 0 10px var(--shadow);
   }
 
   @media (min-width: $md) {

@@ -18,7 +18,7 @@
   --transition: var(--duration) linear;
   --animation: calc(var(--duration) * 2) forwards;
   --origin: 0%;
-  --shadow: 0 0 0 / 10%;
+  --shadow: rgba(0 0 0 / 10%);
 
   &.dark {
     color-scheme: dark;
@@ -27,7 +27,7 @@
     --background-secondary: #1f2937;
     --color: #fff;
     --color-secondary: rgba(255 255 255 / 67%);
-    --shadow: 255 255 255 / 10%;
+    --shadow: rgba(255 255 255 / 10%);
   }
 
   &[dir='rtl'] {
