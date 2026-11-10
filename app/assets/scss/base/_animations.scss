@@ -5,12 +5,12 @@
 
   25% {
     transform: scaleX(1);
-    transform-origin: var(--origin);
+    transform-origin: var(--origin-start);
   }
 
   26% {
     transform: scaleX(1);
-    transform-origin: calc(100% - var(--origin));
+    transform-origin: var(--origin-end);
   }
 
   60% {
@@ -19,12 +19,12 @@
 
   80% {
     transform: scaleX(0);
-    transform-origin: calc(100% - var(--origin));
+    transform-origin: var(--origin-end);
   }
 
   81% {
     transform: scaleX(0);
-    transform-origin: var(--origin);
+    transform-origin: var(--origin-start);
   }
 
   100% {
@@ -116,7 +116,7 @@
   75%,
   100% {
     transform: translateY(0) scaleX(0.75) rotate(0);
-    transform-origin: var(--origin);
+    transform-origin: var(--origin-start);
   }
 }
 
@@ -124,7 +124,7 @@
   0%,
   25% {
     transform: translateY(0) scaleX(0.75) rotate(0);
-    transform-origin: var(--origin);
+    transform-origin: var(--origin-start);
   }
 
   50% {

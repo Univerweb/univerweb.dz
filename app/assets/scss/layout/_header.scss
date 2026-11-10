@@ -152,7 +152,7 @@ header:has(nav) {
       height: 4px;
       border-radius: var(--radius-pill);
       transform: scaleX(0);
-      transform-origin: var(--origin);
+      transform-origin: var(--origin-start);
       @include transition(transform);
 
       @media (min-width: $md) {
@@ -264,7 +264,7 @@ header:has(nav) {
 
   .middle {
     animation: toggle-middle var(--duration-slow) forwards;
-    transform-origin: var(--origin);
+    transform-origin: var(--origin-start);
 
     .menu-open & {
       animation: toggle-middle-scale var(--duration-slow) forwards;
