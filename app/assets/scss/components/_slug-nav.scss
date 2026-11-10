@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 .slug-nav {
   display: grid;
@@ -15,8 +16,9 @@
 
   .link {
     position: relative;
-    line-height: 1;
     width: fit-content;
+
+    @include typo($line-height: 1);
 
     &:is(.prev) {
       padding-inline-start: 18px;
@@ -36,8 +38,9 @@
       transition: color var(--transition);
       inset-block-start: -18px;
       padding-bottom: 4px;
-      font-size: 0.8rem;
-      line-height: 0.9375;
+
+      @include typo(0.8rem, $line-height: 0.9375);
+
       width: max-content;
     }
 

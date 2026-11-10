@@ -15,7 +15,7 @@ body {
   transition: background-color var(--transition), color var(--transition);
   font-family: var(--font-family);
 
-  @include font(16, $height: 1.6);
+  @include typo(1rem, $line-height: 1.6);
 
   .menu-open & {
     height: 100%;
@@ -25,38 +25,77 @@ body {
 
 h1,
 .h1 {
-  @include font(44, 700, var(--line-height), -0.04, 0, 24);
+  @include typo(
+    2.75rem,
+    $weight: 700,
+    $line-height: var(--line-height-heading),
+    $letter-spacing: -0.04em,
+    $margin-top: 0,
+    $margin-bottom: 1.5rem,
+  );
 
   @media (min-width: $md) {
-    @include font(56, $mbe: 36);
+    @include typo(3.5rem, $margin-bottom: 2.25rem);
   }
 
   @media (min-width: $lg) {
-    @include font(80, $mbe: 48);
+    @include typo(5rem, $margin-bottom: 3rem);
   }
 }
 
 h2,
 .h2 {
-  @include font(32, 500, var(--line-height), -0.04, 0, 24);
+  @include typo(
+    2rem,
+    $weight: 500,
+    $line-height: var(--line-height-heading),
+    $letter-spacing: -0.04em,
+    $margin-top: 0,
+    $margin-bottom: 1.5rem,
+  );
 
   @media (min-width: $md) {
-    @include font(42);
+    @include typo(2.625rem);
   }
 
   @media (min-width: $lg) {
-    @include font(56);
+    @include typo(3.5rem);
   }
 }
 
 h3,
 .h3 {
-  @include font(20, 500, var(--line-height), -0.02, 0, 12);
+  @include typo(
+    1.25rem,
+    $weight: 500,
+    $line-height: var(--line-height-heading),
+    $letter-spacing: -0.02em,
+    $margin-top: 0,
+    $margin-bottom: 0.75rem,
+  );
+}
+
+// L’arabe est cursif : un letter-spacing non nul casse la liaison des lettres.
+:root[dir='rtl'] {
+  h1,
+  h2,
+  h3,
+  .h1,
+  .h2,
+  .h3,
+  .lead {
+    letter-spacing: normal;
+  }
 }
 
 h6,
 .h6 {
-  @include font(16, 500, 1.5, $mbe: 6);
+  @include typo(
+    1rem,
+    $weight: 500,
+    $line-height: 1.5,
+    $margin-bottom: 0.375rem,
+  );
 }
 
 a {
@@ -89,7 +128,11 @@ ol {
   }
 
   .big-count::before {
-    @include font(56, 900, var(--line-height));
+    @include typo(
+      3.5rem,
+      $weight: 900,
+      $line-height: var(--line-height-heading),
+    );
 
     color: var(--blue);
     margin-bottom: 12px;
@@ -98,7 +141,7 @@ ol {
 }
 
 strong {
-  font-weight: 600;
+  @include typo($weight: 600);
 }
 
 address {

@@ -1,30 +1,33 @@
-@mixin font(
-  $size,
+@mixin typo(
+  $size: null,
   $weight: null,
-  $height: null,
-  $spacing: null,
-  $mbs: null,
-  $mbe: null
+  $line-height: null,
+  $letter-spacing: null,
+  $margin-top: null,
+  $margin-bottom: null
 ) {
-  font-size: $size + px;
+  @if $size {
+    font-size: $size;
+  }
+
   @if $weight {
     font-weight: $weight;
   }
 
-  @if $height {
-    line-height: $height;
+  @if $line-height {
+    line-height: $line-height;
   }
 
-  @if $spacing {
-    letter-spacing: $spacing + em;
+  @if $letter-spacing {
+    letter-spacing: $letter-spacing;
   }
 
-  @if $mbs {
-    margin-block-start: $mbs + px;
+  @if $margin-top {
+    margin-top: $margin-top;
   }
 
-  @if $mbe {
-    margin-block-end: $mbe + px;
+  @if $margin-bottom {
+    margin-bottom: $margin-bottom;
   }
 }
 

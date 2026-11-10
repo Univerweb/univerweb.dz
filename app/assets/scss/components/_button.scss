@@ -4,10 +4,10 @@
 .link {
   display: inline-block;
 
-  @include font(20, 500);
+  @include typo(1.25rem, $weight: 500);
 
   @media (min-width: $md) {
-    font-size: 28px;
+    @include typo(1.75rem);
   }
 
   &.outfit {
@@ -30,8 +30,9 @@
   width: max-content;
   column-gap: 12px;
   background-color: var(--background-secondary);
-  font-weight: 500;
-  line-height: 2.875;
+
+  @include typo($weight: 500, $line-height: 2.875);
+
   padding-inline: 20px 10px;
   border-radius: 2em;
   transition: background-color var(--transition), color var(--transition),
@@ -65,7 +66,8 @@
   &:focus-visible {
     background-color: var(--blue);
     color: var(--night);
-    font-weight: 600;
+
+    @include typo($weight: 600);
   }
 
   &:focus-visible {
@@ -110,7 +112,12 @@
   width: max-content;
   text-transform: uppercase;
 
-  @include font(12.8, 500, var(--line-height), $mbe: 12);
+  @include typo(
+    0.8rem,
+    $weight: 500,
+    $line-height: var(--line-height-heading),
+    $margin-bottom: 0.75rem,
+  );
 
   &:hover {
     color: var(--blue);

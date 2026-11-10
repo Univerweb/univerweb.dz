@@ -4,7 +4,8 @@
 footer {
   --padding-y: 48px;
 
-  font-weight: 300;
+  @include typo($weight: 300);
+
   padding: var(--padding-y) var(--padding-x);
   display: grid;
   justify-content: center;
@@ -50,8 +51,8 @@ footer {
 .copy {
   display: grid;
   gap: 8px;
-  font-size: 12.5px;
-  line-height: 16px;
+
+  @include typo(0.78125rem, $line-height: 1.28);
 
   @media (min-width: $lg) {
     grid-column: span 3 / span 3;
