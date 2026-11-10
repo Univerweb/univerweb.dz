@@ -58,7 +58,7 @@
   @each $property in $properties {
     $transitions: list.append(
       $transitions,
-      #{$property} var(--duration) linear,
+      #{$property} var(--duration-base) linear,
       comma
     );
   }
