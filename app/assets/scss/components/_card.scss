@@ -2,7 +2,12 @@
 @use '../abstracts/mixins' as *;
 
 .card-group {
-  @include grid(1, minmax(auto, var(--card-width)), var(--padding-y), $justify: center);
+  @include grid(
+    1,
+    minmax(auto, var(--card-width)),
+    var(--padding-y),
+    $justify: center
+  );
 
   .intro + & {
     margin-top: 24px;
