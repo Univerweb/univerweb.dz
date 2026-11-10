@@ -45,8 +45,6 @@
   }
 }
 
-/// Anneau de focus visible, à appliquer sur `:focus-visible` ou
-/// `:focus-within`.
 @mixin focus-ring {
   outline: 3px solid var(--blue);
   outline-offset: 5px;
