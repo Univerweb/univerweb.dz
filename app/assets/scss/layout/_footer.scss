@@ -11,7 +11,7 @@ footer {
   justify-content: center;
   gap: var(--padding-y);
   transform: translateY(var(--h-header));
-  transition: transform var(--transition);
+  @include transition(transform);
 
   @media (min-width: $lg) {
     --padding-y: 144px;
@@ -61,7 +61,7 @@ footer {
   p {
     margin: 0;
     color: var(--color-secondary);
-    transition: color var(--transition);
+    @include transition(color);
   }
 
   ul {

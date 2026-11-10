@@ -34,10 +34,7 @@
   background-color: var(--background-secondary);
   padding-inline: 20px 10px;
   border-radius: var(--radius-pill);
-  transition:
-    background-color var(--transition),
-    color var(--transition),
-    font-weight var(--transition);
+  @include transition(background-color, color, font-weight);
 
   &.skip-link {
     position: absolute;
@@ -45,11 +42,7 @@
     inset-inline-start: 16px;
     padding-inline: 20px;
     transform: translateY(calc(-100% - 13px));
-    transition:
-      background-color var(--transition),
-      color var(--transition),
-      font-weight var(--transition),
-      transform var(--transition);
+    @include transition(background-color, color, font-weight, transform);
   }
 
   .hero & {
@@ -89,9 +82,7 @@
     padding: 10px;
     width: 32px;
     height: 32px;
-    transition:
-      color var(--transition),
-      transform var(--transition);
+    @include transition(color, transform);
 
     :root[dir='rtl'] &.next {
       transform: rotate(180deg);
@@ -150,7 +141,7 @@
     background-color: var(--blue);
     transform: scaleX(0.05);
     transform-origin: var(--origin);
-    transition: transform var(--transition);
+    @include transition(transform);
   }
 
   &:hover::before {

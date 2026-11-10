@@ -42,7 +42,7 @@
 
   img {
     aspect-ratio: 49 / 52;
-    transition: scale var(--transition);
+    @include transition(scale);
   }
 
   &:hover img {
@@ -96,10 +96,7 @@
       color: var(--white);
       opacity: 0;
       transform: translateY(20px);
-      transition:
-        opacity var(--transition),
-        transform var(--transition),
-        visibility var(--transition);
+      @include transition(opacity, transform, visibility);
     }
   }
 
@@ -119,16 +116,14 @@
   background-color: var(--background-secondary);
   padding: var(--padding-y);
   border-radius: var(--padding-y);
-  transition: background-color var(--transition);
+  @include transition(background-color);
 
   &:focus-within {
     @include focus-ring;
   }
 
   > svg {
-    transition:
-      fill var(--transition),
-      transform var(--transition);
+    @include transition(fill, transform);
   }
 
   &:is(:hover, :focus-within) > svg {

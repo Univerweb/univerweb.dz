@@ -16,7 +16,7 @@
     display: flex;
     flex-wrap: wrap;
     color: var(--color-secondary);
-    transition: color var(--transition);
+    @include transition(color);
 
     dd {
       margin: 0;
@@ -103,7 +103,7 @@
       background-color: var(--background-secondary);
       padding: 0.15em 0.35em;
       border-radius: var(--radius-sm);
-      transition: background-color var(--transition);
+      @include transition(background-color);
     }
 
     .table-wrapper {
@@ -130,7 +130,7 @@
       thead tr {
         background-color: var(--blue);
         color: var(--background);
-        transition: color var(--transition);
+        @include transition(color);
       }
 
       th,
@@ -150,7 +150,7 @@
 
       tbody tr:nth-of-type(even) {
         background-color: var(--background-secondary);
-        transition: background-color var(--transition);
+        @include transition(background-color);
       }
     }
   }
@@ -160,7 +160,7 @@
     justify-content: space-between;
     padding-block: 24px;
     border-block: 1px solid var(--background-secondary);
-    transition: border-color var(--transition);
+    @include transition(border-color);
 
     h2 {
       margin: 0;
@@ -189,7 +189,7 @@
 
         &-enter-active,
         &-leave-active {
-          transition: opacity var(--transition);
+          @include transition(opacity);
         }
 
         &-enter-from,
@@ -201,7 +201,7 @@
 
     a:hover,
     .tooltip-clipboard:hover {
-      transition: color var(--transition);
+      @include transition(color);
       color: var(--blue);
     }
   }

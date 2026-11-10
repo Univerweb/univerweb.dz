@@ -1,3 +1,5 @@
+@use '../abstracts/mixins' as *;
+
 *,
 *::before,
 *::after {
@@ -23,7 +25,7 @@ button {
 picture {
   display: grid;
   background-color: var(--background-secondary);
-  transition: background-color var(--transition);
+  @include transition(background-color);
 }
 
 img {

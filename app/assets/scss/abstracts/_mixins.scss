@@ -1,3 +1,5 @@
+@use 'sass:list';
+
 @mixin typo(
   $size: null,
   $weight: null,
@@ -48,4 +50,18 @@
 @mixin focus-ring {
   outline: 3px solid var(--blue);
   outline-offset: 5px;
+}
+
+@mixin transition($properties...) {
+  $transitions: ();
+
+  @each $property in $properties {
+    $transitions: list.append(
+      $transitions,
+      #{$property} var(--duration) linear,
+      comma
+    );
+  }
+
+  transition: $transitions;
 }

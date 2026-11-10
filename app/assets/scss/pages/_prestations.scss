@@ -17,7 +17,7 @@
   .faq .question {
     padding-block: 24px 12px;
     border-bottom: 1px solid var(--background-secondary);
-    transition: border-color var(--transition);
+    @include transition(border-color);
 
     button {
       @include typo($weight: inherit);
@@ -43,7 +43,7 @@
           height: 2px;
           border-radius: var(--radius-pill);
           transform: translate(-50%, -50%);
-          transition: transform var(--transition);
+          @include transition(transform);
 
           &.expanded {
             transform: translate(-50%, -50%) rotate(-90deg);
@@ -54,7 +54,7 @@
 
     .row {
       color: var(--color-secondary);
-      transition: height var(--transition);
+      @include transition(height);
 
       p {
         margin-bottom: 0.75rem;

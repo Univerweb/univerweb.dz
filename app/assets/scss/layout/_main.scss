@@ -1,6 +1,8 @@
+@use '../abstracts/mixins' as *;
+
 main {
   transform: translateY(var(--h-header));
-  transition: transform var(--transition);
+  @include transition(transform);
 
   &:is(.page-enter-active, .page-leave-active) {
     transition-property: opacity;
@@ -15,7 +17,7 @@ main {
   --padding-y: 0;
   display: grid;
   grid-auto-rows: 1fr auto;
-  transition: min-height var(--transition);
+  @include transition(min-height);
   min-height: calc(100svh - var(--h-header));
 }
 
