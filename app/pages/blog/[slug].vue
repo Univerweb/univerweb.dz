@@ -114,7 +114,6 @@ useSeo({
       <AppPicture
         :picture="article"
         type="banner"
-        sizes="100vw xxl:1400px"
         class="banner"
       />
 

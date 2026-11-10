@@ -97,7 +97,6 @@ const leave = (el: Element) => {
       <AppPicture
         :picture="service"
         type="banner"
-        sizes="100vw xxl:1400px"
         class="banner"
       />
 
