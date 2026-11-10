@@ -33,7 +33,7 @@
   column-gap: 12px;
   background-color: var(--background-secondary);
   padding-inline: 20px 10px;
-  border-radius: 2em;
+  border-radius: var(--radius-pill);
   transition:
     background-color var(--transition),
     color var(--transition),
@@ -85,7 +85,7 @@
   svg {
     background-color: var(--blue);
     color: var(--background-secondary);
-    border-radius: 2rem;
+    border-radius: var(--radius-pill);
     padding: 10px;
     width: 32px;
     height: 32px;

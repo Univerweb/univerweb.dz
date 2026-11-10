@@ -152,7 +152,7 @@ header:has(nav) {
       background-color: var(--blue);
       width: 100%;
       height: 4px;
-      border-radius: 2rem;
+      border-radius: var(--radius-pill);
       transform: scaleX(0);
       transform-origin: var(--origin);
       transition: transform var(--transition);
@@ -182,7 +182,7 @@ header:has(nav) {
     transition: color var(--transition);
     width: 20px;
     height: 20px;
-    border-radius: 2rem;
+    border-radius: var(--radius-pill);
 
     &:focus-visible {
       @include focus-ring;
@@ -253,7 +253,7 @@ header:has(nav) {
   span {
     background-color: currentcolor;
     height: 2px;
-    border-radius: 2em;
+    border-radius: var(--radius-pill);
   }
 
   .top {

@@ -18,6 +18,9 @@
   --transition: var(--duration) linear;
   --animation: calc(var(--duration) * 2) forwards;
   --origin: 0%;
+  --radius-pill: 100vmax;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
   --shadow: rgba(0 0 0 / 10%);
 
   &.dark {

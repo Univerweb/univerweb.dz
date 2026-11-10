@@ -50,7 +50,7 @@
           background-color: currentcolor;
           width: 16px;
           height: 2px;
-          border-radius: 2em;
+          border-radius: var(--radius-pill);
           transform: translate(-50%, -50%);
           transition: transform var(--transition);
 
