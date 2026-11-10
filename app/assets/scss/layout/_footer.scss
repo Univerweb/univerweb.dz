@@ -10,7 +10,7 @@ footer {
   display: grid;
   justify-content: center;
   gap: var(--space);
-  transform: translateY(var(--h-header));
+  transform: translateY(var(--header-height));
   @include transition(transform);
 
   @media (min-width: $lg) {

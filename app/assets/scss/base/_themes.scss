@@ -30,7 +30,7 @@
   --gutter: 16px;
   --space: 16px;
 
-  --h-header: 72px;
+  --header-height: 72px;
   --container-narrow: 720px;
   --container-wide: 1400px;
   --card-width: 348px;
@@ -70,7 +70,7 @@
     --space: 24px;
 
     &:not(.scrolled) {
-      --h-header: 88px;
+      --header-height: 88px;
     }
   }
 

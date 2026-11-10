@@ -1,7 +1,7 @@
 @use '../abstracts/mixins' as *;
 
 main {
-  transform: translateY(var(--h-header));
+  transform: translateY(var(--header-height));
   @include transition(transform);
 
   &:is(.page-enter-active, .page-leave-active) {
@@ -18,11 +18,11 @@ main {
   display: grid;
   grid-auto-rows: 1fr auto;
   @include transition(min-height);
-  min-height: calc(100svh - var(--h-header));
+  min-height: calc(100svh - var(--header-height));
 }
 
 .error {
-  --h-header: 0;
+  --header-height: 0;
   --space: 0;
   min-height: 100svh;
 }
