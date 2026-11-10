@@ -31,7 +31,7 @@ const { data: services } = await useAsyncData(
       </p>
     </div>
 
-    <div class="card-group">
+    <div class="card-group card-group-wide">
       <PrestationCard v-for="card in services" :key="card.path" :title-tag="titleTag || 'h2'" :card />
     </div>
   </section>

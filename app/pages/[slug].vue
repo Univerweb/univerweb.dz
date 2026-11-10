@@ -35,9 +35,9 @@ useSeo({
       vocab="https://schema.org/"
       typeof="Article"
       aria-labelledby="article-title"
-      class="container row row-no-gap"
+      class="container container-narrow"
     >
-      <header class="col col--2-12 col--3-11">
+      <header>
         <meta property="description" :content="legal.description">
         <meta property="image" :content="baseUrl(`/images/univerweb${locale === 'ar' ? '-ar' : ''}.jpg`)">
         <meta property="datePublished" :content="new Date(legal.createdAt).toISOString()">
@@ -80,7 +80,7 @@ useSeo({
         </dl>
       </header>
 
-      <ContentRenderer :value="legal" property="articleBody" class="col col--2-12 col--3-11 content" />
+      <ContentRenderer :value="legal" property="articleBody" class="content" />
     </article>
 
     <LazyAppRequest />

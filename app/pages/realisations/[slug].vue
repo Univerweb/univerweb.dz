@@ -158,7 +158,7 @@ const { data: surround } = await useAsyncData(
         </section>
       </div>
 
-      <div class="container container-no-pt row">
+      <div class="container no-pt row">
         <div class="col col--1-4">
           <section class="inner" aria-labelledby="about-company">
             <h2 id="about-company" class="h6">

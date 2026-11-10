@@ -117,9 +117,11 @@ useSeo({
         class="banner"
       />
 
-      <section class="container row row-no-gap">
-        <ContentRenderer :value="article" property="articleBody" class="col col--2-12 col--3-11 content" />
-      </section>
+      <ContentRenderer
+        :value="article"
+        property="articleBody"
+        class="container container-narrow content"
+      />
     </article>
 
     <LazyArticleShare :title="article.title" :path="baseUrl(path)" />
