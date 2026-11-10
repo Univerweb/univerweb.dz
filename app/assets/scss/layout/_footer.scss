@@ -2,19 +2,19 @@
 @use '../abstracts/mixins' as *;
 
 footer {
-  --padding-y: 48px;
+  --space: 48px;
 
   @include typo($weight: 300);
 
-  padding: var(--padding-y) var(--padding-x);
+  padding: var(--space) var(--gutter);
   display: grid;
   justify-content: center;
-  gap: var(--padding-y);
+  gap: var(--space);
   transform: translateY(var(--h-header));
   @include transition(transform);
 
   @media (min-width: $lg) {
-    --padding-y: 144px;
+    --space: 144px;
 
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(2, auto);

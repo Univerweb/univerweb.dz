@@ -5,7 +5,7 @@
   @include grid(
     1,
     minmax(auto, var(--card-width)),
-    var(--padding-y),
+    var(--space),
     $justify: center
   );
 
@@ -41,7 +41,7 @@
   display: grid;
   position: relative;
   overflow: hidden;
-  border-radius: var(--padding-y);
+  border-radius: var(--space);
 
   &:focus-visible {
     @include focus-ring;
@@ -73,7 +73,7 @@
     position: absolute;
     height: 100%;
     color: var(--white);
-    padding: var(--padding-y);
+    padding: var(--space);
   }
 
   .tags {
@@ -121,8 +121,8 @@
   display: grid;
   grid-auto-rows: auto auto 1fr;
   background-color: var(--background-secondary);
-  padding: var(--padding-y);
-  border-radius: var(--padding-y);
+  padding: var(--space);
+  border-radius: var(--space);
   @include transition(background-color);
 
   &:focus-within {
@@ -142,7 +142,7 @@
   h3 {
     @include typo(2rem);
 
-    margin-block: calc(var(--padding-y) * 2) 1.5rem;
+    margin-block: calc(var(--space) * 2) 1.5rem;
   }
 
   p {
