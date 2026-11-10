@@ -2,8 +2,8 @@
 @use '../abstracts/mixins' as *;
 
 .container {
-  padding-block: calc(var(--padding-y) * 3);
-  padding-inline: var(--padding-x);
+  padding-block: calc(var(--space) * 3);
+  padding-inline: var(--gutter);
 
   &-no-pt {
     padding-top: 0;
@@ -11,7 +11,7 @@
 
   &-narrow {
     @media (min-width: $lg) {
-      --padding-x: calc(50% - var(--container-narrow) / 2);
+      --gutter: calc(50% - var(--container-narrow) / 2);
     }
   }
 }

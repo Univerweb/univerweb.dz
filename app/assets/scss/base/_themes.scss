@@ -27,8 +27,8 @@
   --font-family: 'Outfit', 'Outfit fallback';
   --line-height-heading: 1.1;
 
-  --padding-x: 16px;
-  --padding-y: 16px;
+  --gutter: 16px;
+  --space: 16px;
 
   --h-header: 72px;
   --container-narrow: 720px;
@@ -64,8 +64,8 @@
   }
 
   @media (min-width: $md) {
-    --padding-x: 24px;
-    --padding-y: 24px;
+    --gutter: 24px;
+    --space: 24px;
 
     &:not(.scrolled) {
       --h-header: 88px;
@@ -73,8 +73,8 @@
   }
 
   @media (min-width: $lg) {
-    --padding-x: calc(50% - var(--container) / 2);
-    --padding-y: 32px;
+    --gutter: calc(50% - var(--container) / 2);
+    --space: 32px;
 
     --container: 952px;
   }
