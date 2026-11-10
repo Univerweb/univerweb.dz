@@ -11,11 +11,12 @@
   }
 
   .meta {
+    @include typo(0.9375rem, $weight: 500, $margin-top: 0, $margin-bottom: 0);
+
     display: flex;
     flex-wrap: wrap;
     color: var(--color-secondary);
     transition: color var(--transition);
-    @include typo(0.9375rem, $weight: 500, $margin-top: 0, $margin-bottom: 0);
 
     dd {
       margin: 0;
@@ -126,11 +127,11 @@
     }
 
     table {
+      @include typo(0.875rem);
+
       width: 100%;
       min-width: 560px;
       border-collapse: collapse;
-
-      @include typo(0.875rem);
 
       @media (min-width: $md) {
         @include typo(1rem);
@@ -186,6 +187,8 @@
       color: currentcolor;
 
       &-text {
+        @include typo(0.78125rem, $line-height: 1.76);
+
         width: max-content;
         color: #00d282;
         border: 1px solid;
@@ -193,8 +196,6 @@
         border-radius: 2em;
         position: absolute;
         inset-inline-end: 34px;
-
-        @include typo(0.78125rem, $line-height: 1.76);
 
         &-enter-active,
         &-leave-active {

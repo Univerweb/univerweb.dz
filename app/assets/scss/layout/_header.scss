@@ -108,11 +108,11 @@ header:has(nav) {
   }
 
   a {
+    @include typo(1.75rem, $weight: 500);
+
     position: relative;
     display: grid;
     width: fit-content;
-
-    @include typo(1.75rem, $weight: 500);
 
     visibility: hidden;
     opacity: 0;
@@ -209,11 +209,11 @@ header:has(nav) {
 }
 
 .tooltip-lang {
+  @include typo(0.78125rem);
+
   position: absolute;
   inset-inline-end: calc(100% + 8px);
   width: max-content;
-
-  @include typo(0.78125rem);
 
   opacity: 0;
   visibility: hidden;

@@ -49,10 +49,10 @@ footer {
 }
 
 .copy {
+  @include typo(0.78125rem, $line-height: 1.28);
+
   display: grid;
   gap: 8px;
-
-  @include typo(0.78125rem, $line-height: 1.28);
 
   @media (min-width: $lg) {
     grid-column: span 3 / span 3;

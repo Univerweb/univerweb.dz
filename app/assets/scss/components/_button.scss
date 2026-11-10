@@ -2,9 +2,9 @@
 @use '../abstracts/mixins' as *;
 
 .link {
-  display: inline-block;
-
   @include typo(1.25rem, $weight: 500);
+
+  display: inline-block;
 
   @media (min-width: $md) {
     @include typo(1.75rem);
@@ -24,14 +24,14 @@
 }
 
 .btn {
+  @include typo($weight: 500, $line-height: 2.875);
+
   display: flex;
   align-items: center;
   justify-content: center;
   width: max-content;
   column-gap: 12px;
   background-color: var(--background-secondary);
-
-  @include typo($weight: 500, $line-height: 2.875);
 
   padding-inline: 20px 10px;
   border-radius: 2em;
@@ -69,10 +69,10 @@
 
   &:hover,
   &:focus-visible {
+    @include typo($weight: 600);
+
     background-color: var(--blue);
     color: var(--night);
-
-    @include typo($weight: 600);
   }
 
   &:focus-visible {
@@ -116,15 +116,15 @@
 }
 
 .back {
-  width: max-content;
-  text-transform: uppercase;
-
   @include typo(
     0.8rem,
     $weight: 500,
     $line-height: var(--line-height-heading),
     $margin-bottom: 0.75rem
   );
+
+  width: max-content;
+  text-transform: uppercase;
 
   &:hover {
     color: var(--blue);

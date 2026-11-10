@@ -29,14 +29,14 @@
     transition: border-color var(--transition);
 
     button {
+      @include typo($weight: inherit);
+
       display: flex;
       justify-content: space-between;
       align-items: center;
       text-align: start;
       column-gap: 24px;
       width: 100%;
-
-      @include typo($weight: inherit);
 
       .icon {
         position: relative;

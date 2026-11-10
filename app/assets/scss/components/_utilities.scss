@@ -33,11 +33,11 @@
 }
 
 .tags {
+  @include typo($weight: 500);
+
   display: flex;
   flex-wrap: wrap;
   gap: 6px 12px;
-
-  @include typo($weight: 500);
 
   li::before {
     content: '#';
