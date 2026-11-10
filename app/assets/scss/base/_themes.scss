@@ -7,35 +7,45 @@
   --night: #28285a;
   --white: #fff;
   --success: #00d282;
+
   --background: #fff;
   --background-secondary: #f9fafb;
+  --overlay: rgba(0 0 0 / 67%);
+
   --color: #111827;
   --color-secondary: rgba(17 24 39 / 73%);
+
   --border: #f2f2f2;
-  --overlay: rgba(0 0 0 / 67%);
+  --shadow: rgba(0 0 0 / 10%);
+
   --font-family: 'Outfit', 'Outfit fallback';
   --line-height-heading: 1.1;
+
   --padding-x: 16px;
   --padding-y: 16px;
+
   --h-header: 72px;
   --container-narrow: 720px;
   --container-wide: 1400px;
   --card-width: 348px;
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-pill: 100vmax;
+
   --duration: 0.24s;
   --animation: calc(var(--duration) * 2) forwards;
   --origin: 0%;
-  --radius-pill: 100vmax;
-  --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
-  --shadow: rgba(0 0 0 / 10%);
 
   &.dark {
     color-scheme: dark;
 
     --background: #111827;
     --background-secondary: #1f2937;
+
     --color: #fff;
     --color-secondary: rgba(255 255 255 / 67%);
+
     --border: var(--background-secondary);
     --shadow: rgba(255 255 255 / 10%);
   }
@@ -43,6 +53,7 @@
   &[dir='rtl'] {
     --font-family: 'Alexandria', 'Alexandria fallback';
     --line-height-heading: 1.4;
+
     --origin: 100%;
   }
 
@@ -56,9 +67,10 @@
   }
 
   @media (min-width: $lg) {
-    --container: 952px;
     --padding-x: calc(50% - var(--container) / 2);
     --padding-y: 32px;
+
+    --container: 952px;
   }
 
   @media (min-width: $xl) {
