@@ -1,22 +1,3 @@
-/// Style de texte complet : taille, graisse, interligne, espacement des lettres
-/// et marges verticales. Tous les paramètres sont optionnels : seuls ceux qui
-/// sont fournis produisent une déclaration.
-///
-/// Les valeurs se passent avec leur unité (le mixin ne convertit rien). À
-/// placer en premier dans le bloc, avec des arguments nommés au-delà de
-/// `$size`.
-///
-/// @param {Number} $size [null] - `font-size`, en rem
-/// @param {Number | String} $weight [null] - `font-weight`
-/// @param {Number | String} $line-height [null] - `line-height` (sans unité
-///   ou `var(--…)`)
-/// @param {Number} $letter-spacing [null] - `letter-spacing`, en em
-/// @param {Number} $margin-top [null] - `margin-top`, en rem
-/// @param {Number} $margin-bottom [null] - `margin-bottom`, en rem
-///
-/// @example scss
-///   @include typo(2rem, $weight: 500, $margin-bottom: 1.5rem);
-///   @include typo($weight: 600);
 @mixin typo(
   $size: null,
   $weight: null,
