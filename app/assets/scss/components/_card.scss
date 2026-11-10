@@ -2,7 +2,7 @@
 @use '../abstracts/mixins' as *;
 
 .card-group {
-  @include grid(1, minmax(auto, 348px), var(--padding-y), $justify: center);
+  @include grid(1, minmax(auto, var(--card-width)), var(--padding-y), $justify: center);
 
   .intro + & {
     margin-top: 24px;
@@ -17,7 +17,7 @@
   }
 
   @media (min-width: $md) {
-    grid-template-columns: repeat(2, minmax(348px, 460px));
+    grid-template-columns: repeat(2, minmax(var(--card-width), 460px));
   }
 
   @media (min-width: $xl) {

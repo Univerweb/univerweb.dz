@@ -18,6 +18,9 @@
   --padding-x: 16px;
   --padding-y: 16px;
   --h-header: 72px;
+  --container-lg: 952px;
+  --container-xl: 1200px;
+  --card-width: 348px;
   --duration: 0.24s;
   --transition: var(--duration) linear;
   --animation: calc(var(--duration) * 2) forwards;
@@ -54,11 +57,11 @@
   }
 
   @media (min-width: $lg) {
-    --padding-x: calc(50% - 952px / 2);
+    --padding-x: calc(50% - var(--container-lg) / 2);
     --padding-y: 32px;
   }
 
   @media (min-width: $xl) {
-    --padding-x: calc(50% - 1200px / 2);
+    --padding-x: calc(50% - var(--container-xl) / 2);
   }
 }
