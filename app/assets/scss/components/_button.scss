@@ -154,40 +154,6 @@
     transition: transform var(--transition);
   }
 
-  @keyframes move {
-    0% {
-      transform: scaleX(0.05);
-    }
-
-    25% {
-      transform: scaleX(1);
-      transform-origin: var(--origin);
-    }
-
-    26% {
-      transform: scaleX(1);
-      transform-origin: calc(100% - var(--origin));
-    }
-
-    60% {
-      transform: scaleX(0.05);
-    }
-
-    80% {
-      transform: scaleX(0);
-      transform-origin: calc(100% - var(--origin));
-    }
-
-    81% {
-      transform: scaleX(0);
-      transform-origin: var(--origin);
-    }
-
-    100% {
-      transform: scaleX(0.05);
-    }
-  }
-
   &:hover::before {
     animation: move var(--animation);
   }
