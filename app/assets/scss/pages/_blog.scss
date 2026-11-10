@@ -44,15 +44,6 @@
     }
   }
 
-  .banner {
-    max-width: var(--container-xl);
-    margin: 0 auto;
-
-    img {
-      aspect-ratio: 16 / 9;
-    }
-  }
-
   .content {
     @media (min-width: $md) {
       @include typo(1.125rem);
