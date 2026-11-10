@@ -12,7 +12,9 @@ body {
   padding: 0;
   background-color: var(--background);
   color: var(--color);
-  transition: background-color var(--transition), color var(--transition);
+  transition:
+    background-color var(--transition),
+    color var(--transition);
   font-family: var(--font-family);
 
   @include typo(1rem, $line-height: 1.6);

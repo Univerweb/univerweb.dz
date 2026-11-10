@@ -8,7 +8,9 @@ header:has(nav) {
   width: 100%;
   padding: var(--padding-y) var(--padding-x);
   background-color: var(--background);
-  transition: background-color var(--transition), padding var(--transition);
+  transition:
+    background-color var(--transition),
+    padding var(--transition);
   z-index: 1;
 
   @include grid(2, auto, $justify: space-between);

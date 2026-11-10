@@ -35,7 +35,9 @@
 
   padding-inline: 20px 10px;
   border-radius: 2em;
-  transition: background-color var(--transition), color var(--transition),
+  transition:
+    background-color var(--transition),
+    color var(--transition),
     font-weight var(--transition);
 
   &.skip-link {
@@ -44,8 +46,11 @@
     inset-inline-start: 16px;
     padding-inline: 20px;
     transform: translateY(calc(-100% - 13px));
-    transition: background-color var(--transition), color var(--transition),
-      font-weight var(--transition), transform var(--transition);
+    transition:
+      background-color var(--transition),
+      color var(--transition),
+      font-weight var(--transition),
+      transform var(--transition);
   }
 
   .hero & {
@@ -86,7 +91,9 @@
     padding: 10px;
     width: 32px;
     height: 32px;
-    transition: color var(--transition), transform var(--transition);
+    transition:
+      color var(--transition),
+      transform var(--transition);
 
     [dir='rtl'] &.next {
       transform: rotate(180deg);
