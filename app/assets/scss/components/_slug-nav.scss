@@ -47,9 +47,5 @@
     &.next::before {
       inset-inline-end: 18px;
     }
-
-    &:hover::before {
-      color: var(--color-primary);
-    }
   }
 }
