@@ -148,6 +148,6 @@
   }
 
   &:hover::before {
-    animation: move var(--animation);
+    animation: move var(--duration-slow) forwards;
   }
 }

@@ -39,8 +39,8 @@
   --radius-md: 0.5rem;
   --radius-pill: 100vmax;
 
-  --duration: 0.24s;
-  --animation: calc(var(--duration) * 2) forwards;
+  --duration-base: 0.24s;
+  --duration-slow: calc(var(--duration-base) * 2);
   --origin: 0%;
 
   &.dark {

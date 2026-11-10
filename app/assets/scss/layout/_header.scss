@@ -38,7 +38,7 @@ header:has(nav) {
   }
 
   .menu-closing & {
-    transition-delay: var(--duration);
+    transition-delay: var(--duration-base);
   }
 }
 
@@ -69,7 +69,7 @@ header:has(nav) {
   .menu-open &,
   .menu-closing & {
     transition-property: height, visibility, opacity, background-color;
-    transition-duration: var(--duration);
+    transition-duration: var(--duration-base);
   }
 
   .menu-open & {
@@ -82,7 +82,7 @@ header:has(nav) {
   }
 
   .menu-closing & {
-    transition-delay: var(--duration);
+    transition-delay: var(--duration-base);
     transition-timing-function: cubic-bezier(0.46, 0.03, 0.52, 0.96);
   }
 
@@ -124,7 +124,7 @@ header:has(nav) {
       visibility: visible;
       opacity: 1;
       transform: translateY(0);
-      transition-delay: calc(var(--duration) + var(--item-number) * 20ms);
+      transition-delay: calc(var(--duration-base) + var(--item-number) * 20ms);
       transition-timing-function: cubic-bezier(0.55, 0.09, 0.68, 0.53);
     }
 
@@ -199,7 +199,7 @@ header:has(nav) {
     }
 
     .menu-closing & {
-      transition-delay: var(--duration);
+      transition-delay: var(--duration-base);
     }
   }
 }
@@ -216,7 +216,7 @@ header:has(nav) {
   @media (min-width: $lg) {
     &.active {
       visibility: visible;
-      animation: tooltip-lang 2s var(--duration) ease-in-out;
+      animation: tooltip-lang 2s var(--duration-base) ease-in-out;
 
       :root[dir='rtl'] & {
         animation-direction: reverse;
@@ -229,7 +229,7 @@ header:has(nav) {
   &-enter-active,
   &-leave-active {
     transition-property: transform, opacity;
-    transition-duration: calc(var(--duration) / 2);
+    transition-duration: calc(var(--duration-base) / 2);
   }
 
   &-enter-from,
@@ -255,27 +255,27 @@ header:has(nav) {
   }
 
   .top {
-    animation: toggle-top var(--animation);
+    animation: toggle-top var(--duration-slow) forwards;
 
     .menu-open & {
-      animation: toggle-top-scale var(--animation);
+      animation: toggle-top-scale var(--duration-slow) forwards;
     }
   }
 
   .middle {
-    animation: toggle-middle var(--animation);
+    animation: toggle-middle var(--duration-slow) forwards;
     transform-origin: var(--origin);
 
     .menu-open & {
-      animation: toggle-middle-scale var(--animation);
+      animation: toggle-middle-scale var(--duration-slow) forwards;
     }
   }
 
   .bottom {
-    animation: toggle-bottom var(--animation);
+    animation: toggle-bottom var(--duration-slow) forwards;
 
     .menu-open & {
-      animation: toggle-bottom-scale var(--animation);
+      animation: toggle-bottom-scale var(--duration-slow) forwards;
     }
   }
 }
