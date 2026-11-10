@@ -13,15 +13,16 @@
   --pearl: #9ca3af;
   --green: #00d282;
 
+  // Hors charte
+  --border: #f2f2f2;
+  --overlay: rgba(0 0 0 / 67%);
+  --shadow: rgba(0 0 0 / 10%);
+
   --background: var(--white);
   --background-secondary: var(--ivory);
-  --overlay: rgba(0 0 0 / 67%);
 
   --color: var(--charcoal);
   --color-secondary: var(--slate);
-
-  --border: #f2f2f2;
-  --shadow: rgba(0 0 0 / 10%);
 
   --font-family: 'Outfit', 'Outfit fallback';
   --line-height-heading: 1.1;
