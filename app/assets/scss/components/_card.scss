@@ -31,6 +31,7 @@
 
   &-wide {
     @media (min-width: $xxl) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       margin-inline: calc(50% - var(--container-wide) / 2);
     }
   }

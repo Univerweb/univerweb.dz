@@ -24,12 +24,14 @@
 }
 
 .btn {
-  @include typo($weight: 500, $line-height: 2.875);
+  @include typo($weight: 500, $line-height: 1.3);
 
   display: flex;
   align-items: center;
   justify-content: center;
-  width: max-content;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 2.875em;
   column-gap: 12px;
   background-color: var(--background-secondary);
   padding-inline: 20px 10px;
@@ -82,6 +84,7 @@
     padding: 10px;
     width: 32px;
     height: 32px;
+    flex-shrink: 0;
     @include transition(color, transform);
 
     :root[dir='rtl'] &.next {
