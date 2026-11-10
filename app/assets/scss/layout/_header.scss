@@ -4,6 +4,8 @@
 header:has(nav) {
   --padding-y: 24px;
 
+  @include grid(2, auto, $justify: space-between);
+
   position: fixed;
   width: 100%;
   padding: var(--padding-y) var(--padding-x);
@@ -12,8 +14,6 @@ header:has(nav) {
     background-color var(--transition),
     padding var(--transition);
   z-index: 1;
-
-  @include grid(2, auto, $justify: space-between);
 
   .scrolled & {
     box-shadow: 0 0 10px rgba(var(--shadow));

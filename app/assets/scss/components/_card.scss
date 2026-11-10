@@ -136,6 +136,7 @@
   h2,
   h3 {
     @include typo(2rem);
+
     margin-block: calc(var(--padding-y) * 2) 1.5rem;
   }
 
