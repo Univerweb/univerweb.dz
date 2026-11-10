@@ -110,8 +110,8 @@ const { data: surround } = await useAsyncData(
         :picture="project"
         type="banner"
         :alt="t('alt.banner', { client: project.title })"
-        sizes="342px xs:392px sm:735px md:975px lg:1183px xl:1280px"
-        class="banner"
+        sizes="342px xs:392px sm:735px md:975px lg:1183px xl:1343px xxl:1400px"
+        class="banner-realisations"
       />
 
       <div class="container row items-2">

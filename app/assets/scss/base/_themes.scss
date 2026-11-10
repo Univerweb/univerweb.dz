@@ -5,20 +5,31 @@
 
   --blue: #50c8f0;
   --night: #28285a;
+  --white: #fff;
+  --success: #00d282;
   --background: #fff;
   --background-secondary: #f9fafb;
   --color: #111827;
   --color-secondary: rgba(17 24 39 / 73%);
+  --border: #f2f2f2;
+  --overlay: rgba(0 0 0 / 67%);
   --font-family: 'Outfit', 'Outfit fallback';
   --line-height-heading: 1.1;
   --padding-x: 16px;
   --padding-y: 16px;
   --h-header: 72px;
+  --container-lg: 952px;
+  --container-xl: 1200px;
+  --container-xxl: 1400px;
+  --card-width: 348px;
   --duration: 0.24s;
   --transition: var(--duration) linear;
   --animation: calc(var(--duration) * 2) forwards;
   --origin: 0%;
-  --shadow: 0 0 0 / 10%;
+  --radius-pill: 100vmax;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --shadow: rgba(0 0 0 / 10%);
 
   &.dark {
     color-scheme: dark;
@@ -27,7 +38,8 @@
     --background-secondary: #1f2937;
     --color: #fff;
     --color-secondary: rgba(255 255 255 / 67%);
-    --shadow: 255 255 255 / 10%;
+    --border: var(--background-secondary);
+    --shadow: rgba(255 255 255 / 10%);
   }
 
   &[dir='rtl'] {
@@ -46,11 +58,11 @@
   }
 
   @media (min-width: $lg) {
-    --padding-x: calc(50% - 952px / 2);
+    --padding-x: calc(50% - var(--container-lg) / 2);
     --padding-y: 32px;
   }
 
   @media (min-width: $xl) {
-    --padding-x: calc(50% - 1200px / 2);
+    --padding-x: calc(50% - var(--container-xl) / 2);
   }
 }

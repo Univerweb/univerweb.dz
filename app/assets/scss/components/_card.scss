@@ -2,7 +2,12 @@
 @use '../abstracts/mixins' as *;
 
 .card-group {
-  @include grid(1, minmax(auto, 348px), var(--padding-y), $justify: center);
+  @include grid(
+    1,
+    minmax(auto, var(--card-width)),
+    var(--padding-y),
+    $justify: center
+  );
 
   .intro + & {
     margin-top: 24px;
@@ -17,7 +22,7 @@
   }
 
   @media (min-width: $md) {
-    grid-template-columns: repeat(2, minmax(348px, 460px));
+    grid-template-columns: repeat(2, minmax(var(--card-width), 460px));
   }
 
   @media (min-width: $xl) {
@@ -32,8 +37,7 @@
   border-radius: var(--padding-y);
 
   &:focus-visible {
-    outline: 3px solid var(--blue);
-    outline-offset: 5px;
+    @include focus-ring;
   }
 
   img {
@@ -49,7 +53,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0 0 0 / 67%);
+    background-color: var(--overlay);
   }
 
   &:focus-visible .overlay {
@@ -61,12 +65,12 @@
     grid-auto-rows: auto 1fr auto;
     position: absolute;
     height: 100%;
-    color: #fff;
+    color: var(--white);
     padding: var(--padding-y);
   }
 
   .tags {
-    margin-block-end: 12px;
+    margin-block-end: 0.75rem;
 
     li::before {
       color: currentcolor;
@@ -89,7 +93,7 @@
 
     @media (min-width: $md) {
       visibility: visible;
-      color: #fff;
+      color: var(--white);
       opacity: 0;
       transform: translateY(20px);
       transition:
@@ -118,8 +122,7 @@
   transition: background-color var(--transition);
 
   &:focus-within {
-    outline: 3px solid var(--blue);
-    outline-offset: 5px;
+    @include focus-ring;
   }
 
   > svg {
@@ -136,7 +139,8 @@
   h2,
   h3 {
     @include typo(2rem);
-    margin-block: calc(var(--padding-y) * 2) 24px;
+
+    margin-block: calc(var(--padding-y) * 2) 1.5rem;
   }
 
   p {

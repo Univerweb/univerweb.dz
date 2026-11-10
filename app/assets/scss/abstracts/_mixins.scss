@@ -44,3 +44,8 @@
     grid-column: #{$start} / #{$end};
   }
 }
+
+@mixin focus-ring {
+  outline: 3px solid var(--blue);
+  outline-offset: 5px;
+}

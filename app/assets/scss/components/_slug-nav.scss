@@ -15,16 +15,16 @@
   }
 
   .link {
+    @include typo($line-height: 1);
+
     position: relative;
     width: fit-content;
 
-    @include typo($line-height: 1);
-
-    &:is(.prev) {
+    &.prev {
       padding-inline-start: 18px;
     }
 
-    &:is(.next) {
+    &.next {
       padding-inline-end: 18px;
       text-align: end;
       justify-self: end;
@@ -32,24 +32,19 @@
     }
 
     &::before {
+      @include typo(0.8rem, $line-height: 0.9375);
+
       content: attr(data-text);
       position: absolute;
       color: var(--color-secondary);
       transition: color var(--transition);
       inset-block-start: -18px;
       padding-bottom: 4px;
-
-      @include typo(0.8rem, $line-height: 0.9375);
-
       width: max-content;
     }
 
     &.next::before {
       inset-inline-end: 18px;
-    }
-
-    &:hover::before {
-      color: var(--color-primary);
     }
   }
 }

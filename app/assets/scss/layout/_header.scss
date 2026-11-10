@@ -4,17 +4,19 @@
 header:has(nav) {
   --padding-y: 24px;
 
+  @include grid(2, auto, $justify: space-between);
+
   position: fixed;
   width: 100%;
   padding: var(--padding-y) var(--padding-x);
   background-color: var(--background);
-  transition: background-color var(--transition), padding var(--transition);
+  transition:
+    background-color var(--transition),
+    padding var(--transition);
   z-index: 1;
 
-  @include grid(2, auto, $justify: space-between);
-
   .scrolled & {
-    box-shadow: 0 0 10px rgba(var(--shadow));
+    box-shadow: 0 0 10px var(--shadow);
   }
 
   @media (min-width: $md) {
@@ -52,7 +54,7 @@ header:has(nav) {
     transition: fill var(--transition);
 
     .dark .logo & {
-      fill: #fff;
+      fill: var(--color);
     }
   }
 }
@@ -106,12 +108,11 @@ header:has(nav) {
   }
 
   a {
+    @include typo(1.75rem, $weight: 500);
+
     position: relative;
     display: grid;
     width: fit-content;
-
-    @include typo(1.75rem, $weight: 500);
-
     visibility: hidden;
     opacity: 0;
     transform: translateY(-8px);
@@ -151,7 +152,7 @@ header:has(nav) {
       background-color: var(--blue);
       width: 100%;
       height: 4px;
-      border-radius: 2rem;
+      border-radius: var(--radius-pill);
       transform: scaleX(0);
       transform-origin: var(--origin);
       transition: transform var(--transition);
@@ -181,11 +182,10 @@ header:has(nav) {
     transition: color var(--transition);
     width: 20px;
     height: 20px;
-    border-radius: 2rem;
+    border-radius: var(--radius-pill);
 
     &:focus-visible {
-      outline: 3px solid var(--blue);
-      outline-offset: 5px;
+      @include focus-ring;
     }
   }
 
@@ -207,39 +207,20 @@ header:has(nav) {
 }
 
 .tooltip-lang {
+  @include typo(0.78125rem);
+
   position: absolute;
   inset-inline-end: calc(100% + 8px);
   width: max-content;
-
-  @include typo(0.78125rem);
-
   opacity: 0;
   visibility: hidden;
-
-  @keyframes tooltip-lang {
-    0% {
-      opacity: 0;
-      transform: translateX(20%);
-    }
-
-    30%,
-    70% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
-    100% {
-      opacity: 0;
-      transform: translateX(-20%);
-    }
-  }
 
   @media (min-width: $lg) {
     &.active {
       visibility: visible;
       animation: tooltip-lang 2s var(--duration) ease-in-out;
 
-      [dir='rtl'] & {
+      :root[dir='rtl'] & {
         animation-direction: reverse;
       }
     }
@@ -272,35 +253,7 @@ header:has(nav) {
   span {
     background-color: currentcolor;
     height: 2px;
-    border-radius: 2em;
-  }
-
-  @keyframes toggle-top {
-    0% {
-      transform: translateY(7px) scaleX(1) rotate(-45deg);
-    }
-
-    25% {
-      transform: translateY(7px) scaleX(1) rotate(0);
-    }
-
-    50% {
-      transform: translateY(0) scaleX(1) rotate(0);
-    }
-  }
-
-  @keyframes toggle-top-scale {
-    50% {
-      transform: translateY(0) scaleX(1) rotate(0);
-    }
-
-    75% {
-      transform: translateY(7px) scaleX(1) rotate(0);
-    }
-
-    100% {
-      transform: translateY(7px) scaleX(1) rotate(-45deg);
-    }
+    border-radius: var(--radius-pill);
   }
 
   .top {
@@ -311,74 +264,12 @@ header:has(nav) {
     }
   }
 
-  @keyframes toggle-middle {
-    0%,
-    75% {
-      transform: scaleX(0);
-    }
-
-    100% {
-      transform: scaleX(0.5);
-    }
-  }
-
-  @keyframes toggle-middle-scale {
-    0% {
-      transform: scaleX(0.5);
-    }
-
-    25%,
-    100% {
-      transform: scaleX(0);
-    }
-  }
-
   .middle {
     animation: toggle-middle var(--animation);
     transform-origin: var(--origin);
 
     .menu-open & {
       animation: toggle-middle-scale var(--animation);
-    }
-  }
-
-  @keyframes toggle-bottom {
-    0% {
-      transform: translateY(-7px) scaleX(1) rotate(45deg);
-    }
-
-    25% {
-      transform: translateY(-7px) scaleX(1) rotate(0);
-    }
-
-    50% {
-      transform: translateY(0) scaleX(1) rotate(0);
-    }
-
-    75%,
-    100% {
-      transform: translateY(0) scaleX(0.75) rotate(0);
-      transform-origin: var(--origin);
-    }
-  }
-
-  @keyframes toggle-bottom-scale {
-    0%,
-    25% {
-      transform: translateY(0) scaleX(0.75) rotate(0);
-      transform-origin: var(--origin);
-    }
-
-    50% {
-      transform: translateY(0) scaleX(1) rotate(0);
-    }
-
-    75% {
-      transform: translateY(-7px) scaleX(1) rotate(0);
-    }
-
-    100% {
-      transform: translateY(-7px) scaleX(1) rotate(45deg);
     }
   }
 

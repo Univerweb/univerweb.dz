@@ -2,9 +2,9 @@
 @use '../abstracts/mixins' as *;
 
 .link {
-  display: inline-block;
-
   @include typo(1.25rem, $weight: 500);
+
+  display: inline-block;
 
   @media (min-width: $md) {
     @include typo(1.75rem);
@@ -24,18 +24,19 @@
 }
 
 .btn {
+  @include typo($weight: 500, $line-height: 2.875);
+
   display: flex;
   align-items: center;
   justify-content: center;
   width: max-content;
   column-gap: 12px;
   background-color: var(--background-secondary);
-
-  @include typo($weight: 500, $line-height: 2.875);
-
   padding-inline: 20px 10px;
-  border-radius: 2em;
-  transition: background-color var(--transition), color var(--transition),
+  border-radius: var(--radius-pill);
+  transition:
+    background-color var(--transition),
+    color var(--transition),
     font-weight var(--transition);
 
   &.skip-link {
@@ -44,8 +45,11 @@
     inset-inline-start: 16px;
     padding-inline: 20px;
     transform: translateY(calc(-100% - 13px));
-    transition: background-color var(--transition), color var(--transition),
-      font-weight var(--transition), transform var(--transition);
+    transition:
+      background-color var(--transition),
+      color var(--transition),
+      font-weight var(--transition),
+      transform var(--transition);
   }
 
   .hero & {
@@ -64,15 +68,14 @@
 
   &:hover,
   &:focus-visible {
+    @include typo($weight: 600);
+
     background-color: var(--blue);
     color: var(--night);
-
-    @include typo($weight: 600);
   }
 
   &:focus-visible {
-    outline: 3px solid var(--blue);
-    outline-offset: 5px;
+    @include focus-ring;
 
     &.skip-link {
       transform: translateY(0);
@@ -82,13 +85,15 @@
   svg {
     background-color: var(--blue);
     color: var(--background-secondary);
-    border-radius: 2rem;
+    border-radius: var(--radius-pill);
     padding: 10px;
     width: 32px;
     height: 32px;
-    transition: color var(--transition), transform var(--transition);
+    transition:
+      color var(--transition),
+      transform var(--transition);
 
-    [dir='rtl'] &.next {
+    :root[dir='rtl'] &.next {
       transform: rotate(180deg);
     }
   }
@@ -102,22 +107,22 @@
       transform: translateY(24px);
     }
 
-    [dir='rtl'] &.next {
+    :root[dir='rtl'] &.next {
       transform: translateX(-5px) rotate(180deg);
     }
   }
 }
 
 .back {
-  width: max-content;
-  text-transform: uppercase;
-
   @include typo(
     0.8rem,
     $weight: 500,
     $line-height: var(--line-height-heading),
-    $margin-bottom: 0.75rem,
+    $margin-bottom: 0.75rem
   );
+
+  width: max-content;
+  text-transform: uppercase;
 
   &:hover {
     color: var(--blue);
@@ -126,7 +131,7 @@
   svg {
     margin-inline-end: 6px;
 
-    [dir='rtl'] & {
+    :root[dir='rtl'] & {
       transform: rotate(-180deg);
     }
   }
@@ -139,48 +144,13 @@
   &::before {
     content: '';
     position: absolute;
-    left: 0;
-    right: 0;
+    inset-inline: 0;
     bottom: -2px;
     height: 3px;
     background-color: var(--blue);
     transform: scaleX(0.05);
     transform-origin: var(--origin);
     transition: transform var(--transition);
-  }
-
-  @keyframes move {
-    0% {
-      transform: scaleX(0.05);
-    }
-
-    25% {
-      transform: scaleX(1);
-      transform-origin: var(--origin);
-    }
-
-    26% {
-      transform: scaleX(1);
-      transform-origin: calc(100% - var(--origin));
-    }
-
-    60% {
-      transform: scaleX(0.05);
-    }
-
-    80% {
-      transform: scaleX(0);
-      transform-origin: calc(100% - var(--origin));
-    }
-
-    81% {
-      transform: scaleX(0);
-      transform-origin: var(--origin);
-    }
-
-    100% {
-      transform: scaleX(0.05);
-    }
   }
 
   &:hover::before {

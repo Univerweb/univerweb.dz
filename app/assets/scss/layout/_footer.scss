@@ -34,10 +34,10 @@ footer {
 }
 
 .socials {
+  @include grid(4, auto, $justify: space-between);
+
   margin-top: 12px;
   max-width: 200px;
-
-  @include grid(4, auto, $justify: space-between);
 
   @media (min-width: $md) {
     max-width: 280px;
@@ -49,10 +49,10 @@ footer {
 }
 
 .copy {
+  @include typo(0.78125rem, $line-height: 1.28);
+
   display: grid;
   gap: 8px;
-
-  @include typo(0.78125rem, $line-height: 1.28);
 
   @media (min-width: $lg) {
     grid-column: span 3 / span 3;

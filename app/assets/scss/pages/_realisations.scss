@@ -1,12 +1,11 @@
 @use '../abstracts/variables' as *;
-@use '../abstracts/mixins' as *;
 
 .realisations {
   h1 {
     margin-block-end: 0;
   }
 
-  .banner {
+  .banner-realisations {
     overflow: hidden;
     justify-items: center;
     padding: var(--padding-y) var(--padding-y) 0;
@@ -17,8 +16,8 @@
 
     img {
       aspect-ratio: 2 / 1;
-      max-width: $xl;
-      border-radius: 0.5rem 0.5rem 0 0;
+      max-width: var(--container-xxl);
+      border-radius: var(--radius-md) var(--radius-md) 0 0;
     }
   }
 
@@ -41,7 +40,7 @@
   }
 
   .inner .lead {
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
   }
 
   .preview {
@@ -50,7 +49,7 @@
     overflow-y: scroll;
 
     img {
-      border-radius: 0.25rem;
+      border-radius: var(--radius-sm);
     }
 
     &::-webkit-scrollbar {
@@ -67,6 +66,6 @@
   }
 
   img {
-    box-shadow: 0 0 40px 0 rgba(var(--shadow));
+    box-shadow: 0 0 40px 0 var(--shadow);
   }
 }
