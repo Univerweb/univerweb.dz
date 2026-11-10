@@ -76,8 +76,7 @@
   }
 
   &:focus-visible {
-    outline: 3px solid var(--blue);
-    outline-offset: 5px;
+    @include focus-ring;
 
     &.skip-link {
       transform: translateY(0);

@@ -186,8 +186,7 @@ header:has(nav) {
     border-radius: 2rem;
 
     &:focus-visible {
-      outline: 3px solid var(--blue);
-      outline-offset: 5px;
+      @include focus-ring;
     }
   }
 
