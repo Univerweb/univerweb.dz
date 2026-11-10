@@ -54,7 +54,7 @@ header:has(nav) {
     transition: fill var(--transition);
 
     .dark .logo & {
-      fill: #fff;
+      fill: var(--color);
     }
   }
 }

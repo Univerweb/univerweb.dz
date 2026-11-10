@@ -154,7 +154,7 @@
       }
 
       tbody tr {
-        border-bottom: 1px solid #f2f2f2;
+        border-bottom: 1px solid var(--border);
       }
 
       tbody tr:nth-of-type(even) {
@@ -189,7 +189,7 @@
         @include typo(0.78125rem, $line-height: 1.76);
 
         width: max-content;
-        color: #00d282;
+        color: var(--success);
         border: 1px solid;
         padding: 0 6px;
         border-radius: var(--radius-pill);
