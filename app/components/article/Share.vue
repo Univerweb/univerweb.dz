@@ -9,7 +9,7 @@ const { copy, copied } = useClipboard()
 </script>
 
 <template>
-  <aside class="container container-narrow no-pt" aria-labelledby="share-title">
+  <aside class="container container-narrow container-no-pt" aria-labelledby="share-title">
     <div class="share">
       <h2 id="share-title" class="h3">
         {{ t('headings.shareArticle') }}
