@@ -20,11 +20,11 @@
 
     @include typo($line-height: 1);
 
-    &:is(.prev) {
+    &.prev {
       padding-inline-start: 18px;
     }
 
-    &:is(.next) {
+    &.next {
       padding-inline-end: 18px;
       text-align: end;
       justify-self: end;
