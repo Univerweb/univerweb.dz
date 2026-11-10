@@ -6,11 +6,13 @@
   --blue: #50c8f0;
   --night: #28285a;
   --white: #fff;
-  --success: #00d282;
+  --ivory: #f9fafb;
+  --anthracite: #1f2937;
   --charcoal: #111827;
+  --success: #00d282;
 
   --background: var(--white);
-  --background-secondary: #f9fafb;
+  --background-secondary: var(--ivory);
   --overlay: rgba(0 0 0 / 67%);
 
   --color: var(--charcoal);
@@ -42,7 +44,7 @@
     color-scheme: dark;
 
     --background: var(--charcoal);
-    --background-secondary: #1f2937;
+    --background-secondary: var(--anthracite);
 
     --color: var(--white);
     --color-secondary: rgba(255 255 255 / 67%);
