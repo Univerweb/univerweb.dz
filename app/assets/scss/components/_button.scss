@@ -79,13 +79,13 @@
 
   svg {
     background-color: var(--blue);
-    color: var(--surface-color);
+    color: var(--night);
     border-radius: var(--radius-pill);
     padding: 10px;
     width: 32px;
     height: 32px;
     flex-shrink: 0;
-    @include transition(color, transform);
+    @include transition(transform);
 
     :root[dir='rtl'] &.next {
       transform: rotate(180deg);
@@ -94,7 +94,6 @@
 
   &:hover svg,
   &:focus-visible svg {
-    color: var(--night);
     transform: translateX(5px);
 
     .hero & {
