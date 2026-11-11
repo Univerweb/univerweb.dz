@@ -14,20 +14,16 @@
   --blue: oklch(66% 0.185 250);
   --green: oklch(76% 0.18 157);
 
-  --night-67: oklch(from var(--night) l c h / 67%);
-  --night-10: oklch(from var(--night) l c h / 10%);
-  --white-10: oklch(from var(--white) l c h / 10%);
-
   --bg-color: var(--white);
 
   --surface-color: var(--ivory);
-  --surface-color-overlay: var(--night-67);
+  --surface-color-overlay: oklch(from var(--night) l c h / 67%);
 
   --text-color-heading: var(--night);
   --text-color: var(--slate);
   --text-color-muted: var(--steel);
 
-  --shadow-color: var(--night-10);
+  --shadow-color: oklch(from var(--night) l c h / 10%);
 
   --font-family: 'Outfit', 'Outfit fallback';
   --line-height-heading: 1.1;
@@ -60,7 +56,7 @@
     --text-color: var(--mist);
     --text-color-muted: var(--pearl);
 
-    --shadow-color: var(--white-10);
+    --shadow-color: oklch(from var(--white) l c h / 10%);
   }
 
   &[dir='rtl'] {
