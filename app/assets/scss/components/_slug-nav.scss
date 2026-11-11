@@ -10,7 +10,7 @@
   background-color: var(--surface-color);
   @include transition(background-color);
 
-  @media (min-width: $md) {
+  @media (min-width: $bp-md) {
     grid-template-columns: repeat(2, 1fr);
   }
 

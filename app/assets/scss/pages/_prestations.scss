@@ -63,7 +63,7 @@
   }
 
   .card-group {
-    @media (min-width: $xl) {
+    @media (min-width: $bp-xl) {
       grid-template-columns: repeat(3, 1fr);
     }
   }

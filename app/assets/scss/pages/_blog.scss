@@ -45,7 +45,7 @@
   }
 
   .content {
-    @media (min-width: $md) {
+    @media (min-width: $bp-md) {
       @include typo(1.125rem);
     }
 
@@ -123,7 +123,7 @@
       min-width: 560px;
       border-collapse: collapse;
 
-      @media (min-width: $md) {
+      @media (min-width: $bp-md) {
         @include typo(1rem);
       }
 
@@ -139,7 +139,7 @@
         text-align: start;
         vertical-align: top;
 
-        @media (min-width: $md) {
+        @media (min-width: $bp-md) {
           padding: 24px 16px;
         }
       }

@@ -12,25 +12,25 @@
   .intro + & {
     margin-top: 24px;
 
-    @media (min-width: $md) {
+    @media (min-width: $bp-md) {
       margin-top: 36px;
     }
 
-    @media (min-width: $lg) {
+    @media (min-width: $bp-lg) {
       margin-top: 48px;
     }
   }
 
-  @media (min-width: $md) {
+  @media (min-width: $bp-md) {
     grid-template-columns: repeat(2, minmax(var(--column-width), 460px));
   }
 
-  @media (min-width: $xl) {
+  @media (min-width: $bp-xl) {
     grid-template-columns: repeat(2, 1fr);
   }
 
   &-wide {
-    @media (min-width: $xxl) {
+    @media (min-width: $bp-xxl) {
       grid-template-columns: repeat(4, minmax(0, 1fr));
       margin-inline: calc(50% - var(--container-wide) / 2);
     }
@@ -89,7 +89,7 @@
     @include typo(2rem);
 
     &.realisation {
-      @media (min-width: $xl) {
+      @media (min-width: $bp-xl) {
         @include typo(3.5rem);
       }
     }
@@ -98,7 +98,7 @@
   .lead {
     visibility: hidden;
 
-    @media (min-width: $md) {
+    @media (min-width: $bp-md) {
       visibility: visible;
       color: var(--white);
       opacity: 0;
@@ -107,7 +107,7 @@
     }
   }
 
-  @media (min-width: $md) {
+  @media (min-width: $bp-md) {
     &:hover .lead,
     &:focus-visible .lead {
       opacity: 0.8;

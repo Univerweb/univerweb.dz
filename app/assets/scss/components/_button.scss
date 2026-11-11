@@ -6,7 +6,7 @@
 
   display: inline-block;
 
-  @media (min-width: $md) {
+  @media (min-width: $bp-md) {
     @include typo(1.75rem);
   }
 

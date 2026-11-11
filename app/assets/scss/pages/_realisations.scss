@@ -10,7 +10,7 @@
     justify-items: center;
     padding: var(--space) var(--space) 0;
 
-    @media (min-width: $lg) {
+    @media (min-width: $bp-lg) {
       --space: 48px;
     }
 
@@ -32,7 +32,7 @@
     }
   }
 
-  @media (min-width: $md) {
+  @media (min-width: $bp-md) {
     article .inner {
       position: sticky;
       top: var(--space);

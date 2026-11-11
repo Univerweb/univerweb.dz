@@ -34,11 +34,11 @@ h1,
     $margin-bottom: 1.5rem
   );
 
-  @media (min-width: $md) {
+  @media (min-width: $bp-md) {
     @include typo(3.5rem, $margin-bottom: 2.25rem);
   }
 
-  @media (min-width: $lg) {
+  @media (min-width: $bp-lg) {
     @include typo(5rem, $margin-bottom: 3rem);
   }
 }
@@ -54,11 +54,11 @@ h2,
     $margin-bottom: 1.5rem
   );
 
-  @media (min-width: $md) {
+  @media (min-width: $bp-md) {
     @include typo(2.625rem);
   }
 
-  @media (min-width: $lg) {
+  @media (min-width: $bp-lg) {
     @include typo(3.5rem);
   }
 }
