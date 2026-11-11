@@ -1,7 +1,7 @@
 @use '../abstracts/mixins' as *;
 
 .request {
-  background-color: var(--background-secondary);
+  background-color: var(--surface-color);
   @include transition(background-color);
 
   &:not(.other) {

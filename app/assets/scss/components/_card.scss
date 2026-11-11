@@ -120,7 +120,7 @@
   position: relative;
   display: grid;
   grid-auto-rows: auto auto 1fr;
-  background-color: var(--background-secondary);
+  background-color: var(--surface-color);
   padding: var(--space);
   border-radius: var(--space);
   @include transition(background-color);

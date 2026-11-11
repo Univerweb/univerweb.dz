@@ -33,7 +33,7 @@
   max-width: 100%;
   min-height: 2.875em;
   column-gap: 12px;
-  background-color: var(--background-secondary);
+  background-color: var(--surface-color);
   padding-inline: 20px 10px;
   border-radius: var(--radius-pill);
   @include transition(background-color, color, font-weight);
@@ -79,7 +79,7 @@
 
   svg {
     background-color: var(--blue);
-    color: var(--background-secondary);
+    color: var(--surface-color);
     border-radius: var(--radius-pill);
     padding: 10px;
     width: 32px;

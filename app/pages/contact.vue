@@ -65,7 +65,7 @@ function zoom() {
           :center="position"
           :zoom="14"
           :street-view-control="false"
-          background-color="var(--background-secondary)"
+          background-color="var(--surface-color)"
         >
           <CustomMarker :options="{ position }" @click="zoom">
             <AppLogo />

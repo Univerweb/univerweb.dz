@@ -7,7 +7,7 @@
   gap: 48px;
   padding-block: 72px 48px;
   margin-bottom: 4px;
-  background-color: var(--background-secondary);
+  background-color: var(--surface-color);
   @include transition(background-color);
 
   @media (min-width: $md) {
