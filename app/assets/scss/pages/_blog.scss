@@ -100,7 +100,7 @@
     code {
       @include typo(0.875em);
 
-      background-color: var(--background-secondary);
+      background-color: var(--surface-color);
       padding: 0.15em 0.35em;
       border-radius: var(--radius-sm);
       @include transition(background-color);
@@ -129,7 +129,7 @@
 
       thead tr {
         background-color: var(--blue);
-        color: var(--background);
+        color: var(--bg-color);
         @include transition(color);
       }
 
@@ -149,7 +149,7 @@
       }
 
       tbody tr:nth-of-type(even) {
-        background-color: var(--background-secondary);
+        background-color: var(--surface-color);
         @include transition(background-color);
       }
     }
@@ -159,7 +159,7 @@
     display: flex;
     justify-content: space-between;
     padding-block: 24px;
-    border-block: 1px solid var(--background-secondary);
+    border-block: 1px solid var(--surface-color);
     @include transition(border-color);
 
     h2 {

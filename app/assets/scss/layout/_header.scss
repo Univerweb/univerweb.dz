@@ -9,7 +9,7 @@ header:has(nav) {
   position: fixed;
   width: 100%;
   padding: var(--space) var(--gutter);
-  background-color: var(--background);
+  background-color: var(--bg-color);
   @include transition(background-color, padding);
   z-index: 1;
 
@@ -76,7 +76,7 @@ header:has(nav) {
     height: 100%;
     visibility: visible;
     opacity: 1;
-    background-color: var(--background-secondary);
+    background-color: var(--surface-color);
     overflow-y: auto;
     transition-timing-function: cubic-bezier(0.55, 0.09, 0.68, 0.53);
   }

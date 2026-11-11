@@ -17,8 +17,8 @@
   --overlay: rgba(0 0 0 / 67%);
   --shadow: rgba(0 0 0 / 10%);
 
-  --background: var(--white);
-  --background-secondary: var(--ivory);
+  --bg-color: var(--white);
+  --surface-color: var(--ivory);
 
   --text-color: var(--charcoal);
   --text-color-muted: var(--slate);
@@ -46,8 +46,8 @@
   &.dark {
     color-scheme: dark;
 
-    --background: var(--charcoal);
-    --background-secondary: var(--anthracite);
+    --bg-color: var(--charcoal);
+    --surface-color: var(--anthracite);
 
     --text-color: var(--white);
     --text-color-muted: var(--pearl);
