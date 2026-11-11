@@ -60,7 +60,7 @@ footer {
 
   p {
     margin: 0;
-    color: var(--color-secondary);
+    color: var(--text-color-muted);
     @include transition(color);
   }
 
@@ -77,7 +77,7 @@ footer {
         inset-inline-start: -8px;
         height: 10px;
         width: 1px;
-        background-color: var(--color-secondary);
+        background-color: var(--text-color-muted);
         margin: 3px 0;
       }
     }

@@ -36,7 +36,7 @@
 
       content: attr(data-text);
       position: absolute;
-      color: var(--color-secondary);
+      color: var(--text-color-muted);
       @include transition(color);
       inset-block-start: -18px;
       padding-bottom: 4px;
