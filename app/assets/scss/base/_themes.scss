@@ -25,7 +25,7 @@
 
   --border-color: oklch(from var(--night) l c h / 12%);
 
-  --shadow-color: oklch(from var(--night) l c h / 10%);
+  --shadow-color: var(--border-color);
 
   --font-family: 'Outfit', 'Outfit fallback';
   --line-height-heading: 1.1;
@@ -59,8 +59,6 @@
     --text-color-muted: var(--pearl);
 
     --border-color: oklch(from var(--white) l c h / 12%);
-
-    --shadow-color: oklch(from var(--white) l c h / 10%);
   }
 
   &[dir='rtl'] {
