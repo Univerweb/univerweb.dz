@@ -13,9 +13,12 @@
   --pearl: #9ca3af;
   --green: #00d282;
 
-  // Hors charte
-  --surface-color-overlay: rgba(0 0 0 / 67%);
-  --shadow-color: rgba(0 0 0 / 10%);
+  --black-67: rgba(0 0 0 / 67%);
+  --black-10: rgba(0 0 0 / 10%);
+  --white-10: rgba(255 255 255 / 10%);
+
+  --surface-color-overlay: var(--black-67);
+  --shadow-color: var(--black-10);
 
   --bg-color: var(--white);
   --surface-color: var(--ivory);
@@ -52,7 +55,7 @@
     --text-color: var(--white);
     --text-color-muted: var(--pearl);
 
-    --shadow-color: rgba(255 255 255 / 10%);
+    --shadow-color: var(--white-10);
   }
 
   &[dir='rtl'] {
