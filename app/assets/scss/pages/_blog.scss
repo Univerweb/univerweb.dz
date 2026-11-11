@@ -179,8 +179,8 @@
         @include typo(0.78125rem, $line-height: 1.76);
 
         width: max-content;
-        color: var(--green);
-        border: 1px solid;
+        color: var(--night);
+        background-color: var(--green);
         padding: 0 6px;
         border-radius: var(--radius-pill);
         position: absolute;
