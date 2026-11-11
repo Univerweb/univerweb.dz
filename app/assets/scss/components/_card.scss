@@ -74,6 +74,10 @@
     height: 100%;
     color: var(--white);
     padding: var(--space);
+
+    :is(h2, h3, .h3) {
+      color: inherit;
+    }
   }
 
   .tags {
