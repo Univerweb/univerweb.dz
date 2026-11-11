@@ -20,13 +20,12 @@
     $letter-spacing: -0.02em
   );
 
-  color: var(--text-color-muted);
+  color: var(--text-color);
   @include transition(color);
 
   footer & {
     @include typo($weight: 300);
 
-    color: var(--text-color);
     margin: 0;
     max-width: 400px;
   }
