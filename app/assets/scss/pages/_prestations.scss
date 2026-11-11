@@ -16,7 +16,7 @@
 
   .faq .question {
     padding-block: 24px 12px;
-    border-bottom: 1px solid var(--surface-color);
+    border-bottom: 1px solid var(--border-color);
     @include transition(border-color);
 
     button {
