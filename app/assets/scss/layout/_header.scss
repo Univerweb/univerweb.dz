@@ -52,7 +52,7 @@ header:has(nav) {
     @include transition(fill);
 
     .dark .logo & {
-      fill: var(--color);
+      fill: var(--text-color);
     }
   }
 }

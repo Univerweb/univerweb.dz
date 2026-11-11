@@ -20,8 +20,8 @@
   --background: var(--white);
   --background-secondary: var(--ivory);
 
-  --color: var(--charcoal);
-  --color-secondary: var(--slate);
+  --text-color: var(--charcoal);
+  --text-color-muted: var(--slate);
 
   --font-family: 'Outfit', 'Outfit fallback';
   --line-height-heading: 1.1;
@@ -49,8 +49,8 @@
     --background: var(--charcoal);
     --background-secondary: var(--anthracite);
 
-    --color: var(--white);
-    --color-secondary: var(--pearl);
+    --text-color: var(--white);
+    --text-color-muted: var(--pearl);
 
     --shadow: rgba(255 255 255 / 10%);
   }
