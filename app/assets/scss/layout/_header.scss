@@ -17,7 +17,7 @@ header:has(nav) {
     box-shadow: 0 0 10px var(--shadow-color);
   }
 
-  @media (min-width: $md) {
+  @media (min-width: $bp-md) {
     grid-template-columns: repeat(3, auto);
 
     html:not(.scrolled) & {
@@ -86,7 +86,7 @@ header:has(nav) {
     transition-timing-function: cubic-bezier(0.46, 0.03, 0.52, 0.96);
   }
 
-  @media (min-width: $md) {
+  @media (min-width: $bp-md) {
     position: relative;
     height: auto;
     visibility: visible;
@@ -100,7 +100,7 @@ header:has(nav) {
   padding: 10%;
   visibility: hidden;
 
-  @media (min-width: $md) {
+  @media (min-width: $bp-md) {
     grid-template-columns: repeat(var(--item-total), auto);
     padding: 0;
   }
@@ -135,7 +135,7 @@ header:has(nav) {
       transition-timing-function: cubic-bezier(0.46, 0.03, 0.52, 0.96);
     }
 
-    @media (min-width: $md) {
+    @media (min-width: $bp-md) {
       @include typo(1rem, $line-height: 1.5);
 
       visibility: visible;
@@ -155,7 +155,7 @@ header:has(nav) {
       transform-origin: var(--origin-start);
       @include transition(transform);
 
-      @media (min-width: $md) {
+      @media (min-width: $bp-md) {
         height: 3px;
       }
     }
@@ -213,7 +213,7 @@ header:has(nav) {
   opacity: 0;
   visibility: hidden;
 
-  @media (min-width: $lg) {
+  @media (min-width: $bp-lg) {
     &.active {
       visibility: visible;
       animation: tooltip-lang 2s var(--duration-base) ease-in-out;
@@ -244,7 +244,7 @@ header:has(nav) {
   align-content: space-between;
   padding: 2px;
 
-  @media (min-width: $md) {
+  @media (min-width: $bp-md) {
     display: none;
   }
 

@@ -63,7 +63,7 @@
     --origin-end: 0%;
   }
 
-  @media (min-width: $md) {
+  @media (min-width: $bp-md) {
     --gutter: 24px;
     --space: 24px;
 
@@ -72,14 +72,14 @@
     }
   }
 
-  @media (min-width: $lg) {
+  @media (min-width: $bp-lg) {
     --gutter: calc(50% - var(--container) / 2);
     --space: 32px;
 
     --container: 952px;
   }
 
-  @media (min-width: $xl) {
+  @media (min-width: $bp-xl) {
     --container: 1200px;
   }
 }

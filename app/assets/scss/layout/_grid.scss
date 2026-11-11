@@ -10,7 +10,7 @@
   }
 
   &-narrow {
-    @media (min-width: $lg) {
+    @media (min-width: $bp-lg) {
       --gutter: calc(50% - var(--container-narrow) / 2);
     }
   }
@@ -23,7 +23,7 @@
     max-width: var(--column-width);
     margin: auto;
 
-    @media (min-width: $md) {
+    @media (min-width: $bp-md) {
       max-width: 100%;
     }
   }
@@ -31,11 +31,11 @@
   * {
     grid-column: 1 / 13;
 
-    @media (min-width: $md) {
+    @media (min-width: $bp-md) {
       grid-column: 1 / 10;
     }
 
-    @media (min-width: $xl) {
+    @media (min-width: $bp-xl) {
       grid-column: 1 / 8;
     }
   }
@@ -52,13 +52,13 @@
 .col {
   grid-column: 1 / 13;
 
-  @media (min-width: $md) {
+  @media (min-width: $bp-md) {
     @include col(1, 6);
     @include col(1, 9);
     @include col(7, 12);
   }
 
-  @media (min-width: $lg) {
+  @media (min-width: $bp-lg) {
     @include col(1, 4);
     @include col(1, 5);
     @include col(5, 13);
@@ -73,7 +73,7 @@
     grid-column: span 11 / span 11;
   }
 
-  @media (min-width: $md) {
+  @media (min-width: $bp-md) {
     &.items-2 .item {
       grid-column: span 5 / span 5;
 

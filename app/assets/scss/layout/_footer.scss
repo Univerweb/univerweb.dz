@@ -13,7 +13,7 @@ footer {
   transform: translateY(var(--header-height));
   @include transition(transform);
 
-  @media (min-width: $lg) {
+  @media (min-width: $bp-lg) {
     --space: 144px;
 
     grid-template-columns: repeat(3, auto);
@@ -39,7 +39,7 @@ footer {
   margin-top: 12px;
   max-width: 200px;
 
-  @media (min-width: $md) {
+  @media (min-width: $bp-md) {
     max-width: 280px;
   }
 
@@ -54,7 +54,7 @@ footer {
   display: grid;
   gap: 8px;
 
-  @media (min-width: $lg) {
+  @media (min-width: $bp-lg) {
     grid-column: span 3 / span 3;
   }
 
