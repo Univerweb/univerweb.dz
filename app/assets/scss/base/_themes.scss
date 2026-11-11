@@ -17,14 +17,15 @@
   --black-10: rgba(0 0 0 / 10%);
   --white-10: rgba(255 255 255 / 10%);
 
-  --surface-color-overlay: var(--black-67);
-  --shadow-color: var(--black-10);
-
   --bg-color: var(--white);
+
   --surface-color: var(--ivory);
+  --surface-color-overlay: var(--black-67);
 
   --text-color: var(--charcoal);
   --text-color-muted: var(--slate);
+
+  --shadow-color: var(--black-10);
 
   --font-family: 'Outfit', 'Outfit fallback';
   --line-height-heading: 1.1;
@@ -50,6 +51,7 @@
     color-scheme: dark;
 
     --bg-color: var(--charcoal);
+
     --surface-color: var(--anthracite);
 
     --text-color: var(--white);
