@@ -3,29 +3,31 @@
 :root {
   color-scheme: light;
 
-  --blue: #50c8f0;
-  --night: #28285a;
-  --charcoal: #111827;
-  --white: #fff;
-  --ivory: #f9fafb;
-  --anthracite: #1f2937;
-  --slate: #4b5563;
-  --pearl: #9ca3af;
-  --green: #00d282;
+  --night: oklch(18% 0.05 250);
+  --slate: oklch(38% 0.04 250);
+  --steel: oklch(52% 0.03 250);
+  --ivory: oklch(98% 0.004 250);
+  --white: oklch(100% 0 250);
+  --anthracite: oklch(23% 0.045 250);
+  --mist: oklch(87% 0.015 250);
+  --pearl: oklch(70% 0.03 250);
+  --blue: oklch(66% 0.185 250);
+  --green: oklch(76% 0.18 157);
 
-  --black-67: rgba(0 0 0 / 67%);
-  --black-10: rgba(0 0 0 / 10%);
-  --white-10: rgba(255 255 255 / 10%);
+  --night-67: oklch(from var(--night) l c h / 67%);
+  --night-10: oklch(from var(--night) l c h / 10%);
+  --white-10: oklch(from var(--white) l c h / 10%);
 
   --bg-color: var(--white);
 
   --surface-color: var(--ivory);
-  --surface-color-overlay: var(--black-67);
+  --surface-color-overlay: var(--night-67);
 
-  --text-color: var(--charcoal);
-  --text-color-muted: var(--slate);
+  --text-color-heading: var(--night);
+  --text-color: var(--slate);
+  --text-color-muted: var(--steel);
 
-  --shadow-color: var(--black-10);
+  --shadow-color: var(--night-10);
 
   --font-family: 'Outfit', 'Outfit fallback';
   --line-height-heading: 1.1;
@@ -50,11 +52,12 @@
   &.dark {
     color-scheme: dark;
 
-    --bg-color: var(--charcoal);
+    --bg-color: var(--night);
 
     --surface-color: var(--anthracite);
 
-    --text-color: var(--white);
+    --text-color-heading: var(--white);
+    --text-color: var(--mist);
     --text-color-muted: var(--pearl);
 
     --shadow-color: var(--white-10);
