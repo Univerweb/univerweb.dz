@@ -9,7 +9,7 @@
   }
 
   .h3 {
-    color: var(--text-color-muted);
+    color: var(--text-color);
     @include transition(color);
   }
 
