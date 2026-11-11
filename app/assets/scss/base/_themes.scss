@@ -14,8 +14,8 @@
   --green: #00d282;
 
   // Hors charte
-  --overlay: rgba(0 0 0 / 67%);
-  --shadow: rgba(0 0 0 / 10%);
+  --surface-color-overlay: rgba(0 0 0 / 67%);
+  --shadow-color: rgba(0 0 0 / 10%);
 
   --bg-color: var(--white);
   --surface-color: var(--ivory);
@@ -52,7 +52,7 @@
     --text-color: var(--white);
     --text-color-muted: var(--pearl);
 
-    --shadow: rgba(255 255 255 / 10%);
+    --shadow-color: rgba(255 255 255 / 10%);
   }
 
   &[dir='rtl'] {
