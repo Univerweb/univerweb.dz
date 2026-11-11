@@ -86,13 +86,9 @@
       &:is(ul) li::before {
         content: '';
         top: 13px;
-        background-color: var(--blue);
+        background-color: currentcolor;
         height: 2px;
         width: 0.75rem;
-      }
-
-      &:is(ol) li::before {
-        color: var(--blue);
       }
     }
 
