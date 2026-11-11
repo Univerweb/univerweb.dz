@@ -23,6 +23,8 @@
   --text-color: var(--slate);
   --text-color-muted: var(--steel);
 
+  --border-color: oklch(from var(--night) l c h / 12%);
+
   --shadow-color: oklch(from var(--night) l c h / 10%);
 
   --font-family: 'Outfit', 'Outfit fallback';
@@ -55,6 +57,8 @@
     --text-color-heading: var(--white);
     --text-color: var(--mist);
     --text-color-muted: var(--pearl);
+
+    --border-color: oklch(from var(--white) l c h / 12%);
 
     --shadow-color: oklch(from var(--white) l c h / 10%);
   }
