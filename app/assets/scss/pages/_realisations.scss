@@ -24,8 +24,8 @@
   .technos {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 12px;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
 
     li {
       display: flex;
@@ -53,7 +53,7 @@
     }
 
     &::-webkit-scrollbar {
-      width: 6px;
+      width: 0.375rem;
 
       &-thumb {
         background-color: var(--blue);
@@ -66,6 +66,6 @@
   }
 
   img {
-    box-shadow: 0 0 40px 0 var(--shadow-color);
+    box-shadow: 0 0 2.5rem 0 var(--shadow-color);
   }
 }

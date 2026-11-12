@@ -29,18 +29,18 @@ footer {
 .mobile {
   display: flex;
   align-items: center;
-  column-gap: 6px;
+  column-gap: 0.375rem;
   width: fit-content;
 }
 
 .socials {
   @include grid(4, auto, $justify: space-between);
 
-  margin-top: 12px;
-  max-width: 200px;
+  margin-top: 0.75rem;
+  max-width: 12.5rem;
 
   @media (min-width: $bp-md) {
-    max-width: 280px;
+    max-width: 17.5rem;
   }
 
   a {
@@ -52,7 +52,7 @@ footer {
   @include typo(0.78125rem, $line-height: 1.28);
 
   display: grid;
-  gap: 8px;
+  gap: 0.5rem;
 
   @media (min-width: $bp-lg) {
     grid-column: span 3 / span 3;
@@ -66,7 +66,7 @@ footer {
 
   ul {
     display: flex;
-    gap: 17px;
+    gap: 1.0625rem;
 
     li:not(:first-child) {
       position: relative;
@@ -74,11 +74,11 @@ footer {
       &::before {
         content: '';
         position: absolute;
-        inset-inline-start: -8px;
-        height: 10px;
-        width: 1px;
+        inset-inline-start: -0.5rem;
+        height: 0.625rem;
+        width: 0.0625rem;
         background-color: var(--border-color);
-        margin: 3px 0;
+        margin: 0.1875rem 0;
       }
     }
   }

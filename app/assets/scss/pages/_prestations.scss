@@ -15,8 +15,8 @@
   }
 
   .faq .question {
-    padding-block: 24px 12px;
-    border-bottom: 1px solid var(--border-color);
+    padding-block: 1.5rem 0.75rem;
+    border-bottom: 0.0625rem solid var(--border-color);
     @include transition(border-color);
 
     button {
@@ -26,21 +26,21 @@
       justify-content: space-between;
       align-items: center;
       text-align: start;
-      column-gap: 24px;
+      column-gap: 1.5rem;
       width: 100%;
 
       .icon {
         position: relative;
-        width: 20px;
-        height: 20px;
+        width: 1.25rem;
+        height: 1.25rem;
 
         span {
           position: absolute;
           left: 50%;
           top: 50%;
           background-color: currentcolor;
-          width: 16px;
-          height: 2px;
+          width: 1rem;
+          height: 0.125rem;
           border-radius: var(--radius-pill);
           transform: translate(-50%, -50%);
           @include transition(transform);
