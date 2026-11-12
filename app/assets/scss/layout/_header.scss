@@ -10,8 +10,8 @@ header:has(nav) {
   width: 100%;
   padding: var(--space) var(--gutter);
   background-color: var(--background-color);
-  @include transition(background-color, padding);
   z-index: 1;
+  @include transition(background-color, padding);
 
   .scrolled & {
     box-shadow: 0 0 0.625rem var(--shadow-color);
@@ -177,10 +177,10 @@ header:has(nav) {
   column-gap: 1rem;
 
   > * {
-    @include transition(color);
     width: 1.25rem;
     height: 1.25rem;
     border-radius: var(--radius-pill);
+    @include transition(color);
 
     &:focus-visible {
       @include focus-ring;

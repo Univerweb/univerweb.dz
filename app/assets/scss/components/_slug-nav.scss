@@ -37,10 +37,10 @@
       content: attr(data-text);
       position: absolute;
       color: var(--text-color-muted);
-      @include transition(color);
       inset-block-start: -1.125rem;
       padding-bottom: 0.25rem;
       width: max-content;
+      @include transition(color);
     }
 
     &.next::before {
