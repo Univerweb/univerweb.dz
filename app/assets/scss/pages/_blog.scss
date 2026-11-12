@@ -123,8 +123,9 @@
       }
 
       thead tr {
-        background-color: var(--blue);
-        color: var(--night);
+        background-color: var(--surface-color);
+        color: var(--text-color-heading);
+        @include transition(background-color, color);
       }
 
       th,
