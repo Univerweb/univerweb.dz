@@ -29,7 +29,7 @@ footer {
 .mobile {
   display: flex;
   align-items: center;
-  column-gap: 0.5rem;
+  column-gap: var(--gap-8);
   width: fit-content;
 }
 
@@ -52,7 +52,7 @@ footer {
   @include typo(0.7813rem, $line-height: 1.28);
 
   display: grid;
-  gap: 0.5rem;
+  gap: var(--gap-8);
 
   @media (min-width: $bp-lg) {
     grid-column: span 3 / span 3;
@@ -67,7 +67,7 @@ footer {
 
   ul {
     display: flex;
-    column-gap: 1rem;
+    column-gap: var(--gap-16);
 
     li:not(:first-child) {
       position: relative;

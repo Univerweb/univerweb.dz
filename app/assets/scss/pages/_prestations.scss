@@ -27,7 +27,7 @@
       justify-content: space-between;
       align-items: center;
       text-align: start;
-      column-gap: 1.5rem;
+      column-gap: var(--gap-24);
       width: 100%;
 
       .icon {

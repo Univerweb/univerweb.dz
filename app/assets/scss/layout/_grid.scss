@@ -42,7 +42,7 @@
 }
 
 .row {
-  @include grid(12, 1fr, 1.5rem 0);
+  @include grid(12, 1fr, var(--gap-24) 0);
 
   &-center {
     align-items: center;
@@ -67,7 +67,7 @@
 }
 
 [class*='items-'] {
-  row-gap: 3rem;
+  row-gap: var(--gap-48);
 
   .item {
     grid-column: span 11 / span 11;

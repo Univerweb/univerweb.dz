@@ -6,7 +6,7 @@
 
   display: grid;
   align-items: start;
-  gap: 3rem;
+  gap: var(--gap-48);
   padding-block: 4.5rem 3rem;
   margin-bottom: 0.25rem;
   background-color: var(--surface-color);
