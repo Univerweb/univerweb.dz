@@ -13,7 +13,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--background-color);
-  color: var(--text-color);
+  color: var(--text-color-body);
   font-family: var(--font-family);
   @include transition(background-color, color);
 
@@ -113,7 +113,7 @@ h6,
 }
 
 a {
-  color: var(--text-color);
+  color: var(--text-color-body);
   text-decoration: none;
   @include transition(color);
 }

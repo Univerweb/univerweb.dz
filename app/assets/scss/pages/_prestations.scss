@@ -53,7 +53,7 @@
     }
 
     .row {
-      color: var(--text-color);
+      color: var(--text-color-body);
       @include transition(height);
 
       p {
