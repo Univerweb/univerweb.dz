@@ -17,7 +17,8 @@
   --background-color: var(--white);
 
   --surface-color: var(--ivory);
-  --surface-color-overlay: oklch(from var(--night) l c h / 67%);
+
+  --overlay-color: oklch(from var(--night) l c h / 67%);
 
   --text-color-heading: var(--night);
   --text-color: var(--slate);
