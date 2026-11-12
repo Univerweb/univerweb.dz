@@ -50,8 +50,8 @@
 
   .hero & {
     justify-self: center;
-    margin-bottom: 1.5rem;
-    padding: 0 0 1.5rem;
+    margin-bottom: var(--spacing-24);
+    padding: 0 0 var(--spacing-24);
   }
 
   .more & {
@@ -59,7 +59,7 @@
   }
 
   .error & {
-    margin-top: 3rem;
+    margin-top: var(--spacing-48);
   }
 
   &:hover,

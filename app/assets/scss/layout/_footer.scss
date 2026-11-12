@@ -37,7 +37,7 @@ footer {
 .socials {
   @include grid(4, auto, $justify: space-between);
 
-  margin-top: 0.75rem;
+  margin-top: var(--spacing-12);
   max-width: 12.5rem;
 
   @media (min-width: $bp-md) {

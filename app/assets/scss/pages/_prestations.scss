@@ -7,7 +7,7 @@
   }
 
   .features p {
-    margin-block-end: 2rem;
+    margin-block-end: var(--spacing-32);
   }
 
   .tags-group .tags {
@@ -17,7 +17,7 @@
   .faq .question {
     @include transition(border-color);
 
-    padding-block: 1.5rem 0.75rem;
+    padding-block: var(--spacing-24) var(--spacing-12);
     border-bottom: 0.0625rem solid var(--border-color);
 
     button {
@@ -60,7 +60,7 @@
       color: var(--text-color-body);
 
       p {
-        margin-bottom: 0.75rem;
+        margin-bottom: var(--spacing-12);
       }
     }
   }

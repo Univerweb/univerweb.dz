@@ -25,7 +25,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: var(--spacing-12);
-    margin-top: 0.75rem;
+    margin-top: var(--spacing-12);
 
     li {
       display: flex;
@@ -40,7 +40,7 @@
   }
 
   .inner .lead {
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-16);
   }
 
   .preview {
