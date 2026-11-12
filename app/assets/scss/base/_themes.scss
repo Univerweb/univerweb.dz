@@ -41,8 +41,9 @@
   --space: 1rem;
 
   --header-height: 4.5rem;
-  --container-narrow: 45rem;
-  --container-wide: 87.5rem;
+  --container-width: 100%;
+  --container-width-narrow: 45rem;
+  --container-width-wide: 87.5rem;
   --column-width: 21.75rem;
 
   --radius-sm: 0.25rem;
@@ -87,13 +88,13 @@
   }
 
   @media (min-width: $bp-lg) {
-    --gutter: calc(50% - var(--container) / 2);
+    --gutter: calc(50% - var(--container-width) / 2);
     --space: 2rem;
 
-    --container: 59.5rem;
+    --container-width: 59.5rem;
   }
 
   @media (min-width: $bp-xl) {
-    --container: 75rem;
+    --container-width: 75rem;
   }
 }

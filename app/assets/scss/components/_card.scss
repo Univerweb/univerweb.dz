@@ -32,7 +32,7 @@
   &-wide {
     @media (min-width: $bp-xxl) {
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      margin-inline: calc(50% - var(--container-wide) / 2);
+      margin-inline: calc(50% - var(--container-width-wide) / 2);
     }
   }
 }

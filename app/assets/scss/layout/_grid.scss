@@ -11,7 +11,7 @@
 
   &-narrow {
     @media (min-width: $bp-lg) {
-      --gutter: calc(50% - var(--container-narrow) / 2);
+      --gutter: calc(50% - var(--container-width-narrow) / 2);
     }
   }
 }
