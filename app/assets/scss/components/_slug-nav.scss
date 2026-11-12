@@ -2,14 +2,14 @@
 @use '../abstracts/mixins' as *;
 
 .slug-nav {
+  @include transition(background-color);
+
   display: grid;
   align-items: start;
   gap: 3rem;
   padding-block: 4.5rem 3rem;
   margin-bottom: 0.25rem;
   background-color: var(--surface-color);
-
-  @include transition(background-color);
 
   @media (min-width: $bp-md) {
     grid-template-columns: repeat(2, 1fr);
@@ -34,6 +34,7 @@
 
     &::before {
       @include typo(0.8rem, $line-height: 0.9375);
+      @include transition(color);
 
       content: attr(data-text);
       position: absolute;
@@ -41,8 +42,6 @@
       inset-block-start: -1.125rem;
       padding-bottom: 0.25rem;
       width: max-content;
-
-      @include transition(color);
     }
 
     &.next::before {

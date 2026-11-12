@@ -9,14 +9,13 @@ html {
 
 body {
   @include typo(1rem, $line-height: 1.6);
+  @include transition(background-color, color);
 
   margin: 0;
   padding: 0;
   background-color: var(--background-color);
   color: var(--text-color-body);
   font-family: var(--font-family);
-
-  @include transition(background-color, color);
 
   .menu-open & {
     height: 100%;
@@ -114,10 +113,10 @@ h6,
 }
 
 a {
+  @include transition(color);
+
   color: var(--text-color-body);
   text-decoration: none;
-
-  @include transition(color);
 }
 
 p {

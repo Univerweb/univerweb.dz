@@ -1,9 +1,9 @@
 @use '../abstracts/mixins' as *;
 
 main {
-  transform: translateY(var(--header-height));
-
   @include transition(transform);
+
+  transform: translateY(var(--header-height));
 
   &:is(.page-enter-active, .page-leave-active) {
     transition-property: opacity;
@@ -17,11 +17,11 @@ main {
 .hero {
   --space: 0;
 
+  @include transition(min-height);
+
   display: grid;
   grid-auto-rows: 1fr auto;
   min-height: calc(100svh - var(--header-height));
-
-  @include transition(min-height);
 }
 
 .error {

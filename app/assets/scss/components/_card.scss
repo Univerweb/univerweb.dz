@@ -48,9 +48,9 @@
   }
 
   img {
-    aspect-ratio: 49 / 52;
-
     @include transition(scale);
+
+    aspect-ratio: 49 / 52;
   }
 
   &:hover img {
@@ -104,12 +104,12 @@
     visibility: hidden;
 
     @media (min-width: $bp-md) {
+      @include transition(opacity, transform, visibility);
+
       visibility: visible;
       color: var(--text-color-on-overlay);
       opacity: 0;
       transform: translateY(1.25rem);
-
-      @include transition(opacity, transform, visibility);
     }
   }
 
@@ -123,14 +123,14 @@
 }
 
 .card-prestation {
+  @include transition(background-color);
+
   position: relative;
   display: grid;
   grid-auto-rows: auto auto 1fr;
   background-color: var(--surface-color);
   padding: var(--space);
   border-radius: var(--radius-lg);
-
-  @include transition(background-color);
 
   &:focus-within {
     @include focus-ring;

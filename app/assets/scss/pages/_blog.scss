@@ -12,12 +12,11 @@
 
   .meta {
     @include typo(0.9375rem, $weight: 500, $margin-top: 0, $margin-bottom: 0);
+    @include transition(color);
 
     display: flex;
     flex-wrap: wrap;
     color: var(--text-color-muted);
-
-    @include transition(color);
 
     dd {
       margin: 0;
@@ -95,12 +94,11 @@
 
     code {
       @include typo(0.875em);
+      @include transition(background-color);
 
       background-color: var(--surface-color);
       padding: 0.15em 0.35em;
       border-radius: var(--radius-sm);
-
-      @include transition(background-color);
     }
 
     .table-wrapper {
@@ -125,11 +123,11 @@
       }
 
       thead tr {
+        @include transition(background-color, color, border-color);
+
         background-color: var(--surface-color);
         color: var(--text-color-heading);
         border-bottom: 0.0625rem solid var(--border-color);
-
-        @include transition(background-color, color, border-color);
       }
 
       th,
@@ -150,12 +148,12 @@
   }
 
   .share {
+    @include transition(border-color);
+
     display: flex;
     justify-content: space-between;
     padding-block: 1.5rem;
     border-block: 0.0625rem solid var(--border-color);
-
-    @include transition(border-color);
 
     h2 {
       margin: 0;
@@ -196,9 +194,9 @@
 
     a:hover,
     .tooltip-clipboard:hover {
-      color: var(--accent-color);
-
       @include transition(color);
+
+      color: var(--accent-color);
     }
   }
 }

@@ -23,10 +23,10 @@ button {
 }
 
 picture {
+  @include transition(background-color);
+
   display: grid;
   background-color: var(--surface-color);
-
-  @include transition(background-color);
 }
 
 img {
