@@ -10,12 +10,13 @@ footer {
   padding: var(--space) var(--gutter);
   display: grid;
   justify-content: center;
-  gap: var(--space);
+  gap: var(--gap-48);
   transform: translateY(var(--header-height));
 
   @media (min-width: $bp-lg) {
     --space: 9rem;
 
+    gap: var(--gap-96);
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(2, auto);
     justify-content: space-between;
