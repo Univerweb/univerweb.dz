@@ -13,7 +13,7 @@
     margin-top: var(--spacing-24);
 
     @media (min-width: $bp-md) {
-      margin-top: 2.25rem;
+      margin-top: var(--spacing-32);
     }
 
     @media (min-width: $bp-lg) {
