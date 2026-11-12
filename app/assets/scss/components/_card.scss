@@ -72,7 +72,7 @@
     grid-auto-rows: auto 1fr auto;
     position: absolute;
     height: 100%;
-    color: var(--white);
+    color: var(--snow);
     padding: var(--space);
 
     :is(h2, h3, .h3) {
@@ -104,7 +104,7 @@
 
     @media (min-width: $bp-md) {
       visibility: visible;
-      color: var(--white);
+      color: var(--snow);
       opacity: 0;
       transform: translateY(20px);
       @include transition(opacity, transform, visibility);
