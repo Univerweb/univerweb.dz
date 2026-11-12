@@ -67,7 +67,7 @@ footer {
 
   ul {
     display: flex;
-    gap: 1.0625rem;
+    column-gap: 1rem;
 
     li:not(:first-child) {
       position: relative;
