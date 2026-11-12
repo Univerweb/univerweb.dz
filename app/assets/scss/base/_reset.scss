@@ -25,6 +25,7 @@ button {
 picture {
   display: grid;
   background-color: var(--surface-color);
+
   @include transition(background-color);
 }
 

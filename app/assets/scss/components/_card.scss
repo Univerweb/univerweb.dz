@@ -49,6 +49,7 @@
 
   img {
     aspect-ratio: 49 / 52;
+
     @include transition(scale);
   }
 
@@ -107,6 +108,7 @@
       color: var(--text-color-on-overlay);
       opacity: 0;
       transform: translateY(1.25rem);
+
       @include transition(opacity, transform, visibility);
     }
   }
@@ -127,6 +129,7 @@
   background-color: var(--surface-color);
   padding: var(--space);
   border-radius: var(--radius-lg);
+
   @include transition(background-color);
 
   &:focus-within {

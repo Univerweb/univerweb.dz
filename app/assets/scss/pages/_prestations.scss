@@ -17,6 +17,7 @@
   .faq .question {
     padding-block: 1.5rem 0.75rem;
     border-bottom: 0.0625rem solid var(--border-color);
+
     @include transition(border-color);
 
     button {
@@ -43,6 +44,7 @@
           height: 0.125rem;
           border-radius: var(--radius-pill);
           transform: translate(-50%, -50%);
+
           @include transition(transform);
 
           &.expanded {
@@ -54,6 +56,7 @@
 
     .row {
       color: var(--text-color-body);
+
       @include transition(height);
 
       p {

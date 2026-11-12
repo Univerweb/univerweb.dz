@@ -37,6 +37,7 @@
   display: grid;
   grid-template-columns: repeat($number, $value);
   gap: $gap;
+  // stylelint-disable-next-line declaration-block-no-redundant-longhand-properties -- $align et $justify sont optionnels (null)
   align-content: $align;
   justify-content: $justify;
 }
