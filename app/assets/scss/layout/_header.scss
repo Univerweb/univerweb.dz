@@ -97,7 +97,7 @@ header:has(nav) {
 
 .menu {
   display: grid;
-  gap: var(--gap-24);
+  gap: var(--spacing-24);
   padding: 10%;
   visibility: hidden;
 
@@ -176,7 +176,7 @@ header:has(nav) {
   position: relative;
   display: flex;
   align-items: center;
-  column-gap: var(--gap-16);
+  column-gap: var(--spacing-16);
 
   > * {
     @include transition(color);

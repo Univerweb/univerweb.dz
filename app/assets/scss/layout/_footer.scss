@@ -10,13 +10,13 @@ footer {
   padding: var(--space) var(--gutter);
   display: grid;
   justify-content: center;
-  gap: var(--gap-48);
+  gap: var(--spacing-48);
   transform: translateY(var(--header-height));
 
   @media (min-width: $bp-lg) {
     --space: 9rem;
 
-    gap: var(--gap-96);
+    gap: var(--spacing-96);
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(2, auto);
     justify-content: space-between;
@@ -30,7 +30,7 @@ footer {
 .mobile {
   display: flex;
   align-items: center;
-  column-gap: var(--gap-8);
+  column-gap: var(--spacing-8);
   width: fit-content;
 }
 
@@ -53,7 +53,7 @@ footer {
   @include typo(0.7813rem, $line-height: 1.28);
 
   display: grid;
-  gap: var(--gap-8);
+  gap: var(--spacing-8);
 
   @media (min-width: $bp-lg) {
     grid-column: span 3 / span 3;
@@ -68,7 +68,7 @@ footer {
 
   ul {
     display: flex;
-    column-gap: var(--gap-16);
+    column-gap: var(--spacing-16);
 
     li:not(:first-child) {
       position: relative;
