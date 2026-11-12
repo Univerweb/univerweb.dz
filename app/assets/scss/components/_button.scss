@@ -142,7 +142,7 @@
     height: 3px;
     background-color: var(--blue);
     transform: scaleX(0.05);
-    transform-origin: var(--origin-start);
+    transform-origin: var(--transform-origin-start);
     @include transition(transform);
   }
 
