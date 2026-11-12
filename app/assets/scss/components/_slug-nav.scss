@@ -4,9 +4,9 @@
 .slug-nav {
   display: grid;
   align-items: start;
-  gap: 48px;
-  padding-block: 72px 48px;
-  margin-bottom: 4px;
+  gap: 3rem;
+  padding-block: 4.5rem 3rem;
+  margin-bottom: 0.25rem;
   background-color: var(--surface-color);
   @include transition(background-color);
 
@@ -21,11 +21,11 @@
     width: fit-content;
 
     &.prev {
-      padding-inline-start: 18px;
+      padding-inline-start: 1.125rem;
     }
 
     &.next {
-      padding-inline-end: 18px;
+      padding-inline-end: 1.125rem;
       text-align: end;
       justify-self: end;
       grid-column: 2;
@@ -38,13 +38,13 @@
       position: absolute;
       color: var(--text-color-muted);
       @include transition(color);
-      inset-block-start: -18px;
-      padding-bottom: 4px;
+      inset-block-start: -1.125rem;
+      padding-bottom: 0.25rem;
       width: max-content;
     }
 
     &.next::before {
-      inset-inline-end: 18px;
+      inset-inline-end: 1.125rem;
     }
   }
 }
