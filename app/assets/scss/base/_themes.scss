@@ -10,11 +10,11 @@
   --pearl: oklch(70% 0.03 250);
   --mist: oklch(87% 0.015 250);
   --ivory: oklch(98% 0.004 250);
-  --white: oklch(100% 0 250);
+  --snow: oklch(100% 0 250);
   --blue: oklch(66% 0.185 250);
   --green: oklch(76% 0.18 157);
 
-  --background-color: var(--white);
+  --background-color: var(--snow);
 
   --surface-color: var(--ivory);
 
@@ -55,11 +55,11 @@
 
     --surface-color: var(--anthracite);
 
-    --text-color-heading: var(--white);
+    --text-color-heading: var(--snow);
     --text-color: var(--mist);
     --text-color-muted: var(--pearl);
 
-    --border-color: oklch(from var(--white) l c h / 12%);
+    --border-color: oklch(from var(--snow) l c h / 12%);
   }
 
   &[dir='rtl'] {
