@@ -15,10 +15,10 @@
   }
 
   .faq .question {
+    @include transition(border-color);
+
     padding-block: 1.5rem 0.75rem;
     border-bottom: 0.0625rem solid var(--border-color);
-
-    @include transition(border-color);
 
     button {
       @include typo($weight: inherit);
@@ -36,6 +36,8 @@
         height: 1.25rem;
 
         span {
+          @include transition(transform);
+
           position: absolute;
           left: 50%;
           top: 50%;
@@ -45,8 +47,6 @@
           border-radius: var(--radius-pill);
           transform: translate(-50%, -50%);
 
-          @include transition(transform);
-
           &.expanded {
             transform: translate(-50%, -50%) rotate(-90deg);
           }
@@ -55,9 +55,9 @@
     }
 
     .row {
-      color: var(--text-color-body);
-
       @include transition(height);
+
+      color: var(--text-color-body);
 
       p {
         margin-bottom: 0.75rem;

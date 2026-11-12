@@ -19,10 +19,9 @@
     $line-height: 1.3,
     $letter-spacing: -0.02em
   );
+  @include transition(color);
 
   color: var(--text-color-body);
-
-  @include transition(color);
 
   footer & {
     @include typo($weight: 300);

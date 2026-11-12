@@ -1,8 +1,6 @@
 @use '../abstracts/variables' as *;
 
 :root {
-  color-scheme: light;
-
   --night: oklch(18% 0.05 250deg);
   --anthracite: oklch(23% 0.045 250deg);
   --slate: oklch(38% 0.04 250deg);
@@ -57,9 +55,9 @@
   --transform-origin-start: 0%;
   --transform-origin-end: 100%;
 
-  &.dark {
-    color-scheme: dark;
+  color-scheme: light;
 
+  &.dark {
     --background-color: var(--night);
 
     --surface-color: var(--anthracite);
@@ -69,6 +67,8 @@
     --text-color-muted: var(--pearl);
 
     --border-color: oklch(from var(--snow) l c h / 12%);
+
+    color-scheme: dark;
   }
 
   &[dir='rtl'] {

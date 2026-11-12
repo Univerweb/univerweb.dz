@@ -5,14 +5,13 @@ header:has(nav) {
   --space: 1.5rem;
 
   @include grid(2, auto, $justify: space-between);
+  @include transition(background-color, padding);
 
   position: fixed;
   width: 100%;
   padding: var(--space) var(--gutter);
   background-color: var(--background-color);
   z-index: 1;
-
-  @include transition(background-color, padding);
 
   .scrolled & {
     box-shadow: 0 0 0.625rem var(--shadow-color);
@@ -49,9 +48,9 @@ header:has(nav) {
   }
 
   &:last-child {
-    fill: var(--night);
-
     @include transition(fill);
+
+    fill: var(--night);
 
     .dark .logo & {
       fill: var(--text-color-heading);
@@ -146,6 +145,8 @@ header:has(nav) {
     }
 
     &::after {
+      @include transition(transform);
+
       content: '';
       position: absolute;
       bottom: -0.125rem;
@@ -155,8 +156,6 @@ header:has(nav) {
       border-radius: var(--radius-pill);
       transform: scaleX(0);
       transform-origin: var(--transform-origin-start);
-
-      @include transition(transform);
 
       @media (min-width: $bp-md) {
         height: 0.1875rem;
@@ -180,11 +179,11 @@ header:has(nav) {
   column-gap: 1rem;
 
   > * {
+    @include transition(color);
+
     width: 1.25rem;
     height: 1.25rem;
     border-radius: var(--radius-pill);
-
-    @include transition(color);
 
     &:focus-visible {
       @include focus-ring;

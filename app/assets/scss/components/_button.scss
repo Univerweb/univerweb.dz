@@ -25,6 +25,7 @@
 
 .btn {
   @include typo($weight: 500, $line-height: 1.3);
+  @include transition(background-color, color, font-weight);
 
   display: flex;
   align-items: center;
@@ -37,16 +38,14 @@
   padding-inline: 1.25rem 0.625rem;
   border-radius: var(--radius-pill);
 
-  @include transition(background-color, color, font-weight);
-
   &.skip-link {
+    @include transition(background-color, color, font-weight, transform);
+
     position: absolute;
     inset-block-start: 0.8125rem;
     inset-inline-start: 1rem;
     padding-inline: 1.25rem;
     transform: translateY(calc(-100% - 0.8125rem));
-
-    @include transition(background-color, color, font-weight, transform);
   }
 
   .hero & {
@@ -80,6 +79,8 @@
   }
 
   svg {
+    @include transition(transform);
+
     background-color: var(--accent-color);
     color: var(--text-color-on-accent);
     border-radius: var(--radius-pill);
@@ -87,8 +88,6 @@
     width: 2rem;
     height: 2rem;
     flex-shrink: 0;
-
-    @include transition(transform);
 
     :root[dir='rtl'] &.next {
       transform: rotate(180deg);
@@ -138,6 +137,8 @@
   display: inline-block;
 
   &::before {
+    @include transition(transform);
+
     content: '';
     position: absolute;
     inset-inline: 0;
@@ -146,8 +147,6 @@
     background-color: var(--accent-color);
     transform: scaleX(0.05);
     transform-origin: var(--transform-origin-start);
-
-    @include transition(transform);
   }
 
   &:hover::before {
