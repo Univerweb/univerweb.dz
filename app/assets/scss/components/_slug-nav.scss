@@ -7,8 +7,8 @@
   display: grid;
   align-items: start;
   gap: var(--spacing-48);
-  padding-block: 4.5rem 3rem;
-  margin-bottom: 0.25rem;
+  padding-block: var(--spacing-72) var(--spacing-48);
+  margin-bottom: var(--spacing-4);
   background-color: var(--surface-color);
 
   @media (min-width: $bp-md) {
@@ -40,7 +40,7 @@
       position: absolute;
       color: var(--text-color-muted);
       inset-block-start: -1.125rem;
-      padding-bottom: 0.25rem;
+      padding-bottom: var(--spacing-4);
       width: max-content;
     }
 

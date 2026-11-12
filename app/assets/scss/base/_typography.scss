@@ -120,7 +120,7 @@ a {
 }
 
 p {
-  margin-block: 0 0.75rem;
+  margin-block: 0 var(--spacing-12);
 
   &:last-child {
     margin-block-end: 0;
@@ -150,7 +150,7 @@ ol {
     );
 
     color: var(--text-color-muted);
-    margin-bottom: 0.75rem;
+    margin-bottom: var(--spacing-12);
     display: block;
   }
 }
@@ -161,5 +161,5 @@ strong {
 
 address {
   font-style: normal;
-  margin-bottom: 0.75rem;
+  margin-bottom: var(--spacing-12);
 }
