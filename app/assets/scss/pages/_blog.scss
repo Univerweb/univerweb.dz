@@ -137,7 +137,7 @@
         vertical-align: top;
 
         @media (min-width: $bp-md) {
-          padding: 1.25rem var(--spacing-16);
+          padding: var(--spacing-16);
         }
       }
 
