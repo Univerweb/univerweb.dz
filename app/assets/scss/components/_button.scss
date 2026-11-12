@@ -124,7 +124,7 @@
   }
 
   svg {
-    margin-inline-end: 0.375rem;
+    margin-inline-end: var(--spacing-8);
 
     :root[dir='rtl'] & {
       transform: rotate(-180deg);
