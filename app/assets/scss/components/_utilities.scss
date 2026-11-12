@@ -40,7 +40,7 @@
 
   li::before {
     content: '#';
-    color: var(--blue);
+    color: var(--text-color-muted);
     margin-inline-end: 3px;
   }
 }
