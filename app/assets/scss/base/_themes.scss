@@ -21,7 +21,7 @@
   --overlay-color: oklch(from var(--night) l c h / 67%);
 
   --text-color-heading: var(--night);
-  --text-color: var(--slate);
+  --text-color-body: var(--slate);
   --text-color-muted: var(--steel);
 
   --border-color: oklch(from var(--night) l c h / 12%);
@@ -57,7 +57,7 @@
     --surface-color: var(--anthracite);
 
     --text-color-heading: var(--snow);
-    --text-color: var(--mist);
+    --text-color-body: var(--mist);
     --text-color-muted: var(--pearl);
 
     --border-color: oklch(from var(--snow) l c h / 12%);

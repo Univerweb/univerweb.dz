@@ -20,7 +20,7 @@
     $letter-spacing: -0.02em
   );
 
-  color: var(--text-color);
+  color: var(--text-color-body);
   @include transition(color);
 
   footer & {
