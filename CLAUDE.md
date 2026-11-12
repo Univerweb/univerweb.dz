@@ -12,7 +12,7 @@ Site vitrine d'Univerweb (agence web, Alger). Nuxt 4 + Vue 3 + TypeScript, conte
 
 ## Structure
 
-- `app/` : code Nuxt 4 (`pages/`, `components/`, `composables/`, `assets/scss/`)
+- `app/` : code Nuxt 4 (`pages/`, `components/`, `composables/`, `utils/`, `assets/scss/`)
 - `content/` : contenu en YAML/Markdown, un dossier par langue (`fr/`, `en/`, `ar/`) + `content/realisations/` pour les données communes aux langues
 - `content.config.ts` : collections et schémas Zod
 - `i18n/locales/*.yaml` : traductions de l'interface (`fr-FR`, `en-US`, `ar-DZ`)
