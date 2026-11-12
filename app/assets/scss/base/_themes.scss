@@ -13,9 +13,7 @@
   --green: oklch(76% 0.18 157deg);
 
   --background-color: var(--snow);
-
   --surface-color: var(--ivory);
-
   --overlay-color: oklch(from var(--night) l c h / 67%);
 
   --text-color-heading: var(--night);
@@ -25,11 +23,9 @@
   --text-color-on-overlay: var(--snow);
 
   --border-color: oklch(from var(--night) l c h / 12%);
-
   --shadow-color: var(--border-color);
 
   --accent-color: var(--blue);
-
   --success-color: var(--green);
 
   --font-family: 'Outfit', 'Outfit fallback';
@@ -66,7 +62,6 @@
 
   &.dark {
     --background-color: var(--night);
-
     --surface-color: var(--anthracite);
 
     --text-color-heading: var(--snow);
