@@ -9,6 +9,7 @@ Site vitrine d'Univerweb (agence web, Alger). Nuxt 4 + Vue 3 + TypeScript, conte
 - `pnpm build` : build Nuxt standard (la production utilise `generate`)
 - `pnpm generate` : build statique (cible de production)
 - `pnpm lint` / `pnpm lint:fix` : ESLint (lancer `pnpm lint` avant chaque commit)
+- `pnpm lint:css` / `pnpm lint:css:fix` : Stylelint sur le SCSS, configuration `stylelint-config-standard-scss` (`stylelint.config.mjs`) ; à lancer aussi avant chaque commit qui touche au SCSS
 
 ## Structure
 
@@ -97,7 +98,7 @@ Site vitrine d'Univerweb (agence web, Alger). Nuxt 4 + Vue 3 + TypeScript, conte
 - **Thème sombre** : surcharger les custom properties sous `:root.dark` (classe posée par `useColorMode`), jamais en dupliquant les règles dans les composants.
 - **RTL** : préférer les propriétés logiques (`margin-block-end`, `padding-inline-start`, `inset-inline-start`…) à `left`/`right` (bannis à cause de l’arabe), pour que l'arabe fonctionne sans surcharge. Les ajustements spécifiques passent par `:root[dir='rtl']`.
 - Typographie via le mixin `@include typo($size, $weight: …, $line-height: …, $letter-spacing: …, $margin-top: …, $margin-bottom: …)` (seul `$size` est positionnel ; valeurs avec leur unité : `rem` pour la taille et les marges, `em` pour `$letter-spacing`) ; grilles via `@include grid(...)` et `@include col(...)`.
-- Position des `@include` : les mixins de mise en forme (`typo`, `grid`, `focus-ring`) ouvrent le bloc, juste après les éventuelles custom properties locales, et sont suivis d'une ligne vide ; `@include transition(…)` ferme les déclarations, après les propriétés qu'il anime et avant les blocs imbriqués (séparés par une ligne vide).
+- Position des `@include` : les mixins de mise en forme (`typo`, `grid`, `focus-ring`) ouvrent le bloc, juste après les éventuelles custom properties locales, et sont suivis d'une ligne vide ; `@include transition(…)` ferme les déclarations, après les propriétés qu'il anime, précédé d'une ligne vide (règle Stylelint `at-rule-empty-line-before`) et suivi d'une ligne vide avant les blocs imbriqués.
 - Imbrication BEM légère : `&--modificateur`, `&:hover`, `.parent + &`. Limiter la profondeur à 3 niveaux. Classes en kebab-case (`.card-group`, `.card-prestation`).
 - Notation de couleur moderne : `oklch(from var(--night) l c h / 67%)` (couleurs en OKLCH, séparateurs espaces, alpha en %), `currentcolor` en minuscules.
 - Transitions : `@include transition(color, transform);` (mixin qui applique `var(--duration-base) linear` à chaque propriété listée ; jamais `transition: all`).
