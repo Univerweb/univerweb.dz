@@ -161,7 +161,7 @@
 
     ul {
       display: flex;
-      column-gap: 1rem;
+      column-gap: var(--gap-16);
       height: 1.5rem;
     }
 

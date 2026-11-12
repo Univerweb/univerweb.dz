@@ -24,7 +24,7 @@
   .technos {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.75rem;
+    gap: var(--gap-12);
     margin-top: 0.75rem;
 
     li {
