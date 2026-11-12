@@ -22,11 +22,11 @@
     width: fit-content;
 
     &.prev {
-      padding-inline-start: 1.125rem;
+      padding-inline-start: var(--spacing-16);
     }
 
     &.next {
-      padding-inline-end: 1.125rem;
+      padding-inline-end: var(--spacing-16);
       text-align: end;
       justify-self: end;
       grid-column: 2;
@@ -45,7 +45,7 @@
     }
 
     &.next::before {
-      inset-inline-end: 1.125rem;
+      inset-inline-end: var(--spacing-16);
     }
   }
 }
