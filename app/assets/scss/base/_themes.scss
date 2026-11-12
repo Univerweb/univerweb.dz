@@ -14,7 +14,7 @@
   --blue: oklch(66% 0.185 250);
   --green: oklch(76% 0.18 157);
 
-  --bg-color: var(--white);
+  --background-color: var(--white);
 
   --surface-color: var(--ivory);
   --surface-color-overlay: oklch(from var(--night) l c h / 67%);
@@ -50,7 +50,7 @@
   &.dark {
     color-scheme: dark;
 
-    --bg-color: var(--night);
+    --background-color: var(--night);
 
     --surface-color: var(--anthracite);
 
