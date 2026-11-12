@@ -2,6 +2,7 @@
 
 main {
   transform: translateY(var(--header-height));
+
   @include transition(transform);
 
   &:is(.page-enter-active, .page-leave-active) {
@@ -15,14 +16,17 @@ main {
 
 .hero {
   --space: 0;
+
   display: grid;
   grid-auto-rows: 1fr auto;
   min-height: calc(100svh - var(--header-height));
+
   @include transition(min-height);
 }
 
 .error {
   --header-height: 0;
   --space: 0;
+
   min-height: 100svh;
 }

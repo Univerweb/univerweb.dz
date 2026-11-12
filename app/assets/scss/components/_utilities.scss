@@ -7,7 +7,7 @@
   padding: 0;
   margin: -0.0625rem;
   overflow: hidden;
-  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
   border: 0;
   white-space: nowrap;
 }
@@ -21,6 +21,7 @@
   );
 
   color: var(--text-color-body);
+
   @include transition(color);
 
   footer & {

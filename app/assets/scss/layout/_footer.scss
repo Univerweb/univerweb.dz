@@ -11,6 +11,7 @@ footer {
   justify-content: center;
   gap: var(--space);
   transform: translateY(var(--header-height));
+
   @include transition(transform);
 
   @media (min-width: $bp-lg) {
@@ -49,7 +50,7 @@ footer {
 }
 
 .copy {
-  @include typo(0.78125rem, $line-height: 1.28);
+  @include typo(0.7813rem, $line-height: 1.28);
 
   display: grid;
   gap: 0.5rem;
@@ -61,6 +62,7 @@ footer {
   p {
     margin: 0;
     color: var(--text-color-muted);
+
     @include transition(color);
   }
 

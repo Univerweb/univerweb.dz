@@ -15,6 +15,7 @@ body {
   background-color: var(--background-color);
   color: var(--text-color-body);
   font-family: var(--font-family);
+
   @include transition(background-color, color);
 
   .menu-open & {
@@ -115,6 +116,7 @@ h6,
 a {
   color: var(--text-color-body);
   text-decoration: none;
+
   @include transition(color);
 }
 

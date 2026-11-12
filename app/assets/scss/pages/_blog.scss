@@ -16,6 +16,7 @@
     display: flex;
     flex-wrap: wrap;
     color: var(--text-color-muted);
+
     @include transition(color);
 
     dd {
@@ -98,6 +99,7 @@
       background-color: var(--surface-color);
       padding: 0.15em 0.35em;
       border-radius: var(--radius-sm);
+
       @include transition(background-color);
     }
 
@@ -126,6 +128,7 @@
         background-color: var(--surface-color);
         color: var(--text-color-heading);
         border-bottom: 0.0625rem solid var(--border-color);
+
         @include transition(background-color, color, border-color);
       }
 
@@ -151,6 +154,7 @@
     justify-content: space-between;
     padding-block: 1.5rem;
     border-block: 0.0625rem solid var(--border-color);
+
     @include transition(border-color);
 
     h2 {
@@ -168,7 +172,7 @@
       color: currentcolor;
 
       &-text {
-        @include typo(0.78125rem, $line-height: 1.76);
+        @include typo(0.7813rem, $line-height: 1.76);
 
         width: max-content;
         color: var(--text-color-on-accent);
@@ -193,6 +197,7 @@
     a:hover,
     .tooltip-clipboard:hover {
       color: var(--accent-color);
+
       @include transition(color);
     }
   }

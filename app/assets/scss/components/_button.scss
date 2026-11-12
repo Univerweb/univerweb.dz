@@ -11,7 +11,7 @@
   }
 
   &.outfit {
-    font-family: 'Outfit', 'Outfit fallback';
+    font-family: Outfit, 'Outfit fallback', sans-serif;
   }
 
   &:hover {
@@ -36,6 +36,7 @@
   background-color: var(--surface-color);
   padding-inline: 1.25rem 0.625rem;
   border-radius: var(--radius-pill);
+
   @include transition(background-color, color, font-weight);
 
   &.skip-link {
@@ -44,6 +45,7 @@
     inset-inline-start: 1rem;
     padding-inline: 1.25rem;
     transform: translateY(calc(-100% - 0.8125rem));
+
     @include transition(background-color, color, font-weight, transform);
   }
 
@@ -85,6 +87,7 @@
     width: 2rem;
     height: 2rem;
     flex-shrink: 0;
+
     @include transition(transform);
 
     :root[dir='rtl'] &.next {
@@ -143,6 +146,7 @@
     background-color: var(--accent-color);
     transform: scaleX(0.05);
     transform-origin: var(--transform-origin-start);
+
     @include transition(transform);
   }
 

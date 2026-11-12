@@ -8,6 +8,7 @@
   padding-block: 4.5rem 3rem;
   margin-bottom: 0.25rem;
   background-color: var(--surface-color);
+
   @include transition(background-color);
 
   @media (min-width: $bp-md) {
@@ -40,6 +41,7 @@
       inset-block-start: -1.125rem;
       padding-bottom: 0.25rem;
       width: max-content;
+
       @include transition(color);
     }
 

@@ -2,6 +2,7 @@
 
 .request {
   background-color: var(--surface-color);
+
   @include transition(background-color);
 
   &:not(.other) {
@@ -10,6 +11,7 @@
 
   .h3 {
     color: var(--text-color-body);
+
     @include transition(color);
   }
 
