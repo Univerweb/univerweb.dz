@@ -12,7 +12,7 @@ body {
 
   margin: 0;
   padding: 0;
-  background-color: var(--bg-color);
+  background-color: var(--background-color);
   color: var(--text-color);
   @include transition(background-color, color);
   font-family: var(--font-family);
