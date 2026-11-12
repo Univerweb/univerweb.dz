@@ -2,7 +2,7 @@
 @use '../abstracts/mixins' as *;
 
 header:has(nav) {
-  --space: 24px;
+  --space: 1.5rem;
 
   @include grid(2, auto, $justify: space-between);
 
@@ -21,7 +21,7 @@ header:has(nav) {
     grid-template-columns: repeat(3, auto);
 
     html:not(.scrolled) & {
-      --space: 32px;
+      --space: 2rem;
     }
   }
 }

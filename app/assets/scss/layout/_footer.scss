@@ -2,7 +2,7 @@
 @use '../abstracts/mixins' as *;
 
 footer {
-  --space: 48px;
+  --space: 3rem;
 
   @include typo($weight: 300);
 
@@ -14,7 +14,7 @@ footer {
   @include transition(transform);
 
   @media (min-width: $bp-lg) {
-    --space: 144px;
+    --space: 9rem;
 
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(2, auto);

@@ -31,13 +31,13 @@
   --font-family: 'Outfit', 'Outfit fallback';
   --line-height-heading: 1.1;
 
-  --gutter: 16px;
-  --space: 16px;
+  --gutter: 1rem;
+  --space: 1rem;
 
-  --header-height: 72px;
-  --container-narrow: 720px;
-  --container-wide: 1400px;
-  --column-width: 348px;
+  --header-height: 4.5rem;
+  --container-narrow: 45rem;
+  --container-wide: 87.5rem;
+  --column-width: 21.75rem;
 
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
@@ -71,22 +71,22 @@
   }
 
   @media (min-width: $bp-md) {
-    --gutter: 24px;
-    --space: 24px;
+    --gutter: 1.5rem;
+    --space: 1.5rem;
 
     &:not(.scrolled) {
-      --header-height: 88px;
+      --header-height: 5.5rem;
     }
   }
 
   @media (min-width: $bp-lg) {
     --gutter: calc(50% - var(--container) / 2);
-    --space: 32px;
+    --space: 2rem;
 
-    --container: 952px;
+    --container: 59.5rem;
   }
 
   @media (min-width: $bp-xl) {
-    --container: 1200px;
+    --container: 75rem;
   }
 }
