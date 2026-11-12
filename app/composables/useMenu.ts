@@ -13,7 +13,7 @@ export default function useMenu() {
 
     setTimeout(() => {
       document.documentElement.classList.remove('menu-closing')
-    }, 480)
+    }, cssDuration('--duration-slow'))
   }
 
   function closeMenuOnResize() {
