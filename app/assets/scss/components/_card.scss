@@ -5,7 +5,7 @@
   @include grid(
     1,
     minmax(auto, var(--column-width)),
-    var(--gap-24),
+    var(--spacing-24),
     $justify: center
   );
 
