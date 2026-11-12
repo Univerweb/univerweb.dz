@@ -10,7 +10,9 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "lint:css": "stylelint \"app/assets/scss/**/*.scss\"",
+    "lint:css:fix": "stylelint \"app/assets/scss/**/*.scss\" --fix"
   },
   "devDependencies": {
     "@nuxt/content": "^3.16.2",
@@ -25,6 +27,8 @@
     "eslint": "^10.14.0",
     "nuxt": "^4.6.4",
     "sass": "^1.108.1",
+    "stylelint": "^18.0.0",
+    "stylelint-config-standard-scss": "^18.0.0",
     "typescript": "^6.0.3",
     "vue": "^3.5.45",
     "vue3-google-map": "^0.27.2"
