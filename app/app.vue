@@ -7,7 +7,7 @@ useHead({
   htmlAttrs: {
     lang: () => head.value.htmlAttrs!.lang,
     dir: () => head.value.htmlAttrs!.dir as 'ltr' | 'rtl',
-    class: { scrolled: y },
+    class: { scrolled: () => y.value > 0 },
   },
 })
 
