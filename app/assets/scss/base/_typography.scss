@@ -14,8 +14,8 @@ body {
   padding: 0;
   background-color: var(--background-color);
   color: var(--text-color);
-  @include transition(background-color, color);
   font-family: var(--font-family);
+  @include transition(background-color, color);
 
   .menu-open & {
     height: 100%;

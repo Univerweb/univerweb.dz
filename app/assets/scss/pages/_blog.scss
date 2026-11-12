@@ -192,8 +192,8 @@
 
     a:hover,
     .tooltip-clipboard:hover {
-      @include transition(color);
       color: var(--blue);
+      @include transition(color);
     }
   }
 }

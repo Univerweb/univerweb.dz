@@ -17,8 +17,8 @@ main {
   --space: 0;
   display: grid;
   grid-auto-rows: 1fr auto;
-  @include transition(min-height);
   min-height: calc(100svh - var(--header-height));
+  @include transition(min-height);
 }
 
 .error {
