@@ -125,27 +125,23 @@
       thead tr {
         background-color: var(--surface-color);
         color: var(--text-color-heading);
-        @include transition(background-color, color);
+        border-bottom: 0.0625rem solid var(--border-color);
+        @include transition(background-color, color, border-color);
       }
 
       th,
       td {
-        padding: 0.75rem;
+        padding: 0.75rem 0.5rem;
         text-align: start;
         vertical-align: top;
 
         @media (min-width: $bp-md) {
-          padding: 1.5rem 1rem;
+          padding: 1.25rem 1rem;
         }
       }
 
       tbody tr {
         border-bottom: 0.0625rem solid var(--border-color);
-      }
-
-      tbody tr:nth-of-type(even) {
-        background-color: var(--surface-color);
-        @include transition(background-color);
       }
     }
   }
