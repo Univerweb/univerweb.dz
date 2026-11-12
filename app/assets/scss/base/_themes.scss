@@ -45,8 +45,8 @@
 
   --duration-base: 0.24s;
   --duration-slow: 0.48s;
-  --origin-start: 0%;
-  --origin-end: 100%;
+  --transform-origin-start: 0%;
+  --transform-origin-end: 100%;
 
   &.dark {
     color-scheme: dark;
@@ -66,8 +66,8 @@
     --font-family: 'Alexandria', 'Alexandria fallback';
     --line-height-heading: 1.4;
 
-    --origin-start: 100%;
-    --origin-end: 0%;
+    --transform-origin-start: 100%;
+    --transform-origin-end: 0%;
   }
 
   @media (min-width: $bp-md) {
