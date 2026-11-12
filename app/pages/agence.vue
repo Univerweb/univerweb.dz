@@ -48,7 +48,7 @@ useSeo({
       </h2>
       <div class="col row items-2">
         <div v-for="(choose, index) in agence.choose.list" :key="index" :class="`item item-${index + 1}`">
-          <component :is="choose.icon" fill="var(--blue)" />
+          <component :is="choose.icon" fill="var(--text-color-muted)" />
           <h3>{{ choose.title }}</h3>
           <p class="lead">
             {{ withYears(choose.description) }}
