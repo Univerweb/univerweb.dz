@@ -216,7 +216,8 @@ header:has(nav) {
   @media (min-width: $bp-lg) {
     &.active {
       visibility: visible;
-      animation: tooltip-lang 2s var(--duration-base) ease-in-out;
+      animation: tooltip-lang calc(var(--duration-base) * 10) var(--duration-base)
+        ease-in-out;
 
       :root[dir='rtl'] & {
         animation-direction: reverse;
