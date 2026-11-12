@@ -15,7 +15,7 @@
   }
 
   &:hover {
-    color: var(--blue);
+    color: var(--accent-color);
   }
 
   &.move:hover {
@@ -65,8 +65,8 @@
   &:focus-visible {
     @include typo($weight: 600);
 
-    background-color: var(--blue);
-    color: var(--night);
+    background-color: var(--accent-color);
+    color: var(--text-color-on-accent);
   }
 
   &:focus-visible {
@@ -78,8 +78,8 @@
   }
 
   svg {
-    background-color: var(--blue);
-    color: var(--night);
+    background-color: var(--accent-color);
+    color: var(--text-color-on-accent);
     border-radius: var(--radius-pill);
     padding: 0.625rem;
     width: 2rem;
@@ -118,7 +118,7 @@
   text-transform: uppercase;
 
   &:hover {
-    color: var(--blue);
+    color: var(--accent-color);
   }
 
   svg {
@@ -140,7 +140,7 @@
     inset-inline: 0;
     bottom: -0.125rem;
     height: 0.1875rem;
-    background-color: var(--blue);
+    background-color: var(--accent-color);
     transform: scaleX(0.05);
     transform-origin: var(--transform-origin-start);
     @include transition(transform);

@@ -64,7 +64,7 @@
   }
 
   &:focus-visible .overlay {
-    background-color: var(--blue);
+    background-color: var(--accent-color);
   }
 
   .inner {
@@ -72,7 +72,7 @@
     grid-auto-rows: auto 1fr auto;
     position: absolute;
     height: 100%;
-    color: var(--snow);
+    color: var(--text-color-on-overlay);
     padding: var(--space);
 
     :is(h2, h3, .h3) {
@@ -104,7 +104,7 @@
 
     @media (min-width: $bp-md) {
       visibility: visible;
-      color: var(--snow);
+      color: var(--text-color-on-overlay);
       opacity: 0;
       transform: translateY(1.25rem);
       @include transition(opacity, transform, visibility);
@@ -138,7 +138,7 @@
   }
 
   &:is(:hover, :focus-within) > svg {
-    fill: var(--blue) !important;
+    fill: var(--accent-color) !important;
     transform: scale(1.05);
   }
 

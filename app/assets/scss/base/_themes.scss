@@ -23,10 +23,16 @@
   --text-color-heading: var(--night);
   --text-color-body: var(--slate);
   --text-color-muted: var(--steel);
+  --text-color-on-accent: var(--night);
+  --text-color-on-overlay: var(--snow);
 
   --border-color: oklch(from var(--night) l c h / 12%);
 
   --shadow-color: var(--border-color);
+
+  --accent-color: var(--blue);
+
+  --success-color: var(--green);
 
   --font-family: 'Outfit', 'Outfit fallback';
   --line-height-heading: 1.1;
