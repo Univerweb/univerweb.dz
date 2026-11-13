@@ -11,7 +11,7 @@
     padding: var(--space) var(--space) 0;
 
     @media (min-width: $bp-lg) {
-      --space: 3rem;
+      padding: var(--spacing-48) var(--spacing-48) 0;
     }
 
     img {

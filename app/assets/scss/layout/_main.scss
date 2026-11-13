@@ -15,10 +15,9 @@ main {
 }
 
 .hero {
-  --space: 0;
-
   @include transition(min-height);
 
+  padding-block: 0;
   display: grid;
   grid-auto-rows: 1fr auto;
   min-height: calc(100svh - var(--header-height));
@@ -26,7 +25,7 @@ main {
 
 .error {
   --header-height: 0;
-  --space: 0;
 
+  padding-block: 0;
   min-height: 100svh;
 }
