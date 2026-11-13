@@ -31,7 +31,7 @@
   --font-family: 'Outfit', 'Outfit fallback';
   --line-height-heading: 1.1;
 
-  --gutter: 1rem;
+  --gutter: var(--spacing-responsive);
   --spacing-responsive: 1rem;
 
   --spacing-4: 0.25rem;
@@ -86,7 +86,6 @@
   }
 
   @media (min-width: $bp-md) {
-    --gutter: 1.5rem;
     --spacing-responsive: 1.5rem;
 
     &:not(.scrolled) {
