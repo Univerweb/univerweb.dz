@@ -32,7 +32,7 @@
   --line-height-heading: 1.1;
 
   --gutter: 1rem;
-  --space: 1rem;
+  --spacing-responsive: 1rem;
 
   --spacing-4: 0.25rem;
   --spacing-8: 0.5rem;
@@ -87,7 +87,7 @@
 
   @media (min-width: $bp-md) {
     --gutter: 1.5rem;
-    --space: 1.5rem;
+    --spacing-responsive: 1.5rem;
 
     &:not(.scrolled) {
       --header-height: 5.5rem;
@@ -96,7 +96,7 @@
 
   @media (min-width: $bp-lg) {
     --gutter: calc(50% - var(--container-width) / 2);
-    --space: 2rem;
+    --spacing-responsive: 2rem;
 
     --container-width: 59.5rem;
   }

@@ -74,7 +74,7 @@
     position: absolute;
     height: 100%;
     color: var(--text-color-on-overlay);
-    padding: var(--space);
+    padding: var(--spacing-responsive);
 
     :is(h2, h3, .h3) {
       color: inherit;
@@ -129,7 +129,7 @@
   display: grid;
   grid-auto-rows: auto auto 1fr;
   background-color: var(--surface-color);
-  padding: var(--space);
+  padding: var(--spacing-responsive);
   border-radius: var(--radius-32);
 
   &:focus-within {
@@ -149,7 +149,7 @@
   h3 {
     @include typo(2rem);
 
-    margin-block: calc(var(--space) * 2) var(--spacing-24);
+    margin-block: calc(var(--spacing-responsive) * 2) var(--spacing-24);
   }
 
   p {
