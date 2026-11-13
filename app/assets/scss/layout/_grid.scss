@@ -2,7 +2,7 @@
 @use '../abstracts/mixins' as *;
 
 .container {
-  padding-block: calc(var(--space) * 3);
+  padding-block: calc(var(--spacing-responsive) * 3);
   padding-inline: var(--gutter);
 
   &-no-pt {

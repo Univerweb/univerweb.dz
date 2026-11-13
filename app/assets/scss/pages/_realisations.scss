@@ -8,7 +8,7 @@
   .banner-realisations {
     overflow: hidden;
     justify-items: center;
-    padding: var(--space) var(--space) 0;
+    padding: var(--spacing-responsive) var(--spacing-responsive) 0;
 
     @media (min-width: $bp-lg) {
       padding: var(--spacing-48) var(--spacing-48) 0;
@@ -35,7 +35,7 @@
   @media (min-width: $bp-md) {
     article .inner {
       position: sticky;
-      top: var(--space);
+      top: var(--spacing-responsive);
     }
   }
 
@@ -45,7 +45,7 @@
 
   .preview {
     aspect-ratio: 1 / 1;
-    padding: var(--space);
+    padding: var(--spacing-responsive);
     overflow-y: scroll;
 
     img {
