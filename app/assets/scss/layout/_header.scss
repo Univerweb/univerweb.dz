@@ -2,14 +2,12 @@
 @use '../abstracts/mixins' as *;
 
 header:has(nav) {
-  --space: 1.5rem;
-
   @include grid(2, auto, $justify: space-between);
   @include transition(background-color, padding);
 
   position: fixed;
   width: 100%;
-  padding: var(--space) var(--gutter);
+  padding: var(--spacing-24) var(--gutter);
   background-color: var(--background-color);
   z-index: 1;
 
@@ -21,7 +19,7 @@ header:has(nav) {
     grid-template-columns: repeat(3, auto);
 
     html:not(.scrolled) & {
-      --space: 2rem;
+      padding-block: var(--spacing-32);
     }
   }
 }
