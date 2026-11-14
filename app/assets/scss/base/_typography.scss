@@ -117,7 +117,7 @@ h6,
 a {
   @include transition(color);
 
-  color: var(--text-color-body);
+  color: var(--text-color-heading);
   text-decoration: none;
 }
 
