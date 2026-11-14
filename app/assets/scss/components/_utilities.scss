@@ -29,6 +29,13 @@
 }
 
 .label {
+  @include typo(
+    1rem,
+    $weight: 500,
+    $line-height: 1.5,
+    $letter-spacing: normal,
+    $margin-bottom: 0.375rem
+  );
   @include transition(color);
 
   color: var(--text-color-muted);

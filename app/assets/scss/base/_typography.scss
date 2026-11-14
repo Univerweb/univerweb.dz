@@ -33,8 +33,7 @@ h6,
 .h2,
 .h3,
 .h4,
-.h5,
-.h6 {
+.h5 {
   @include transition(color);
 
   color: var(--text-color-heading);
@@ -104,8 +103,7 @@ h3,
   }
 }
 
-h6,
-.h6 {
+h6 {
   @include typo(
     1rem,
     $weight: 500,
