@@ -160,7 +160,10 @@
     border-block: 0.0625rem solid var(--border-color);
 
     h2 {
+      @include transition(color);
+
       margin: 0;
+      color: var(--text-color-body);
     }
 
     ul {
@@ -170,8 +173,10 @@
     }
 
     .tooltip-clipboard {
+      @include transition(color);
+
       position: relative;
-      color: currentcolor;
+      color: var(--text-color-heading);
 
       &-text {
         @include typo(0.7813rem, $line-height: 1.76);
@@ -198,8 +203,6 @@
 
     a:hover,
     .tooltip-clipboard:hover {
-      @include transition(color);
-
       color: var(--accent-color);
     }
   }
