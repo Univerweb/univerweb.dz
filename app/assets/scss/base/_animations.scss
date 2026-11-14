@@ -5,12 +5,12 @@
 
   25% {
     transform: scaleX(1);
-    transform-origin: var(--origin);
+    transform-origin: var(--transform-origin-start);
   }
 
   26% {
     transform: scaleX(1);
-    transform-origin: calc(100% - var(--origin));
+    transform-origin: var(--transform-origin-end);
   }
 
   60% {
@@ -19,12 +19,12 @@
 
   80% {
     transform: scaleX(0);
-    transform-origin: calc(100% - var(--origin));
+    transform-origin: var(--transform-origin-end);
   }
 
   81% {
     transform: scaleX(0);
-    transform-origin: var(--origin);
+    transform-origin: var(--transform-origin-start);
   }
 
   100% {
@@ -52,11 +52,11 @@
 
 @keyframes toggle-top {
   0% {
-    transform: translateY(7px) scaleX(1) rotate(-45deg);
+    transform: translateY(0.4375rem) scaleX(1) rotate(-45deg);
   }
 
   25% {
-    transform: translateY(7px) scaleX(1) rotate(0);
+    transform: translateY(0.4375rem) scaleX(1) rotate(0);
   }
 
   50% {
@@ -70,11 +70,11 @@
   }
 
   75% {
-    transform: translateY(7px) scaleX(1) rotate(0);
+    transform: translateY(0.4375rem) scaleX(1) rotate(0);
   }
 
   100% {
-    transform: translateY(7px) scaleX(1) rotate(-45deg);
+    transform: translateY(0.4375rem) scaleX(1) rotate(-45deg);
   }
 }
 
@@ -102,11 +102,11 @@
 
 @keyframes toggle-bottom {
   0% {
-    transform: translateY(-7px) scaleX(1) rotate(45deg);
+    transform: translateY(-0.4375rem) scaleX(1) rotate(45deg);
   }
 
   25% {
-    transform: translateY(-7px) scaleX(1) rotate(0);
+    transform: translateY(-0.4375rem) scaleX(1) rotate(0);
   }
 
   50% {
@@ -116,7 +116,7 @@
   75%,
   100% {
     transform: translateY(0) scaleX(0.75) rotate(0);
-    transform-origin: var(--origin);
+    transform-origin: var(--transform-origin-start);
   }
 }
 
@@ -124,7 +124,7 @@
   0%,
   25% {
     transform: translateY(0) scaleX(0.75) rotate(0);
-    transform-origin: var(--origin);
+    transform-origin: var(--transform-origin-start);
   }
 
   50% {
@@ -132,10 +132,10 @@
   }
 
   75% {
-    transform: translateY(-7px) scaleX(1) rotate(0);
+    transform: translateY(-0.4375rem) scaleX(1) rotate(0);
   }
 
   100% {
-    transform: translateY(-7px) scaleX(1) rotate(45deg);
+    transform: translateY(-0.4375rem) scaleX(1) rotate(45deg);
   }
 }

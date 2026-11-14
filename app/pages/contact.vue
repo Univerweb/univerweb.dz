@@ -65,7 +65,7 @@ function zoom() {
           :center="position"
           :zoom="14"
           :street-view-control="false"
-          background-color="var(--background-secondary)"
+          background-color="var(--surface-color)"
         >
           <CustomMarker :options="{ position }" @click="zoom">
             <AppLogo />
@@ -82,7 +82,7 @@ function zoom() {
       </div>
       <div class="row items-2">
         <div class="item">
-          <h3 class="h6">
+          <h3 class="h6 label">
             {{ t('headings.manager') }}
           </h3>
           <a :href="`mailto:${config.public.managerEmail}`" class="link outfit move">
@@ -90,7 +90,7 @@ function zoom() {
           </a>
         </div>
         <div class="item item-2">
-          <h3 class="h6">
+          <h3 class="h6 label">
             {{ t('headings.support') }}
           </h3>
           <a :href="`mailto:${config.public.supportEmail}`" class="link outfit move">

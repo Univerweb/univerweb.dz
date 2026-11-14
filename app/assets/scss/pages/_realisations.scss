@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 .realisations {
   h1 {
@@ -8,64 +9,68 @@
   .banner-realisations {
     overflow: hidden;
     justify-items: center;
-    padding: var(--padding-y) var(--padding-y) 0;
+    padding: var(--spacing-responsive) var(--spacing-responsive) 0;
 
-    @media (min-width: $lg) {
-      --padding-y: 48px;
+    @media (min-width: $bp-lg) {
+      padding: var(--spacing-48) var(--spacing-48) 0;
     }
 
     img {
       aspect-ratio: 2 / 1;
-      max-width: var(--container-wide);
-      border-radius: var(--radius-md) var(--radius-md) 0 0;
+      max-width: var(--container-width-wide);
+      border-radius: var(--radius-8) var(--radius-8) 0 0;
     }
   }
 
   .technos {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 12px;
+    gap: var(--spacing-12);
+    margin-top: var(--spacing-12);
 
     li {
       display: flex;
     }
   }
 
-  @media (min-width: $md) {
+  @media (min-width: $bp-md) {
     article .inner {
       position: sticky;
-      top: var(--padding-y);
+      top: var(--spacing-responsive);
     }
   }
 
   .inner .lead {
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-16);
   }
 
   .preview {
     aspect-ratio: 1 / 1;
-    padding: var(--padding-y);
+    padding: var(--spacing-responsive);
     overflow-y: scroll;
 
     img {
-      border-radius: var(--radius-sm);
+      border-radius: var(--radius-4);
     }
 
     &::-webkit-scrollbar {
-      width: 6px;
+      width: 0.375rem;
 
       &-thumb {
-        background-color: var(--blue);
+        background-color: var(--accent-color);
       }
 
       &-track {
-        background-color: var(--color-secondary);
+        @include transition(background-color);
+
+        background-color: var(--border-color);
       }
     }
   }
 
   img {
-    box-shadow: 0 0 40px 0 var(--shadow);
+    @include transition(box-shadow);
+
+    box-shadow: 0 0 2.5rem 0 var(--shadow-color);
   }
 }

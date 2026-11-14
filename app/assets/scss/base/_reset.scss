@@ -7,8 +7,8 @@
 }
 
 ::selection {
-  color: var(--night);
-  background-color: var(--blue);
+  color: var(--text-color-on-accent);
+  background-color: var(--accent-color);
 }
 
 button {
@@ -23,9 +23,10 @@ button {
 }
 
 picture {
-  display: grid;
-  background-color: var(--background-secondary);
   @include transition(background-color);
+
+  display: grid;
+  background-color: var(--surface-color);
 }
 
 img {

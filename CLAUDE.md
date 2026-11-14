@@ -9,10 +9,11 @@ Site vitrine d'Univerweb (agence web, Alger). Nuxt 4 + Vue 3 + TypeScript, conte
 - `pnpm build` : build Nuxt standard (la production utilise `generate`)
 - `pnpm generate` : build statique (cible de production)
 - `pnpm lint` / `pnpm lint:fix` : ESLint (lancer `pnpm lint` avant chaque commit)
+- `pnpm lint:css` / `pnpm lint:css:fix` : Stylelint sur le SCSS, configuration `stylelint-config-standard-scss` (`stylelint.config.mjs`) ; à lancer aussi avant chaque commit qui touche au SCSS
 
 ## Structure
 
-- `app/` : code Nuxt 4 (`pages/`, `components/`, `composables/`, `assets/scss/`)
+- `app/` : code Nuxt 4 (`pages/`, `components/`, `composables/`, `utils/`, `assets/scss/`)
 - `content/` : contenu en YAML/Markdown, un dossier par langue (`fr/`, `en/`, `ar/`) + `content/realisations/` pour les données communes aux langues
 - `content.config.ts` : collections et schémas Zod
 - `i18n/locales/*.yaml` : traductions de l'interface (`fr-FR`, `en-US`, `ar-DZ`)
@@ -90,13 +91,17 @@ Site vitrine d'Univerweb (agence web, Alger). Nuxt 4 + Vue 3 + TypeScript, conte
   @use '../abstracts/variables' as *;
   @use '../abstracts/mixins' as *;
   ```
-- **Mobile-first** : styles de base pour mobile, puis `@media (min-width: $md)`, `$lg`, `$xl`… Utiliser les variables de breakpoint (`$xs`, `$sm`, `$md`, `$lg`, `$xl`, `$xxl`), jamais de valeurs en dur. Les media queries sont imbriquées dans le sélecteur concerné.
-- **Variables Sass** pour ce qui est connu à la compilation (breakpoints) ; **custom properties CSS** pour tout le reste (couleurs, espacements, durées). Utiliser les tokens de `base/_themes.scss` : `--blue`, `--night`, `--white`, `--success`, `--background`, `--background-secondary`, `--color`, `--color-secondary`, `--border`, `--overlay`, `--shadow`, `--padding-x`, `--padding-y`, `--h-header`, `--line-height-heading`, `--radius-pill`, `--radius-sm`, `--radius-md`, `--duration`. Pas de nouvelle couleur en dur : ajouter un token.
+- **Mobile-first** : styles de base pour mobile, puis `@media (min-width: $bp-md)`, `$bp-lg`, `$bp-xl`… Utiliser les variables de breakpoint (`$bp-xs`, `$bp-sm`, `$bp-md`, `$bp-lg`, `$bp-xl`, `$bp-xxl`), jamais de valeurs en dur. Les media queries sont imbriquées dans le sélecteur concerné.
+- **Variables Sass** pour ce qui est connu à la compilation (breakpoints) ; **custom properties CSS** pour tout le reste (couleurs, espacements, durées). Utiliser les tokens de `base/_themes.scss` : `--blue`, `--green`, `--night`, `--anthracite`, `--slate`, `--steel`, `--pearl`, `--mist`, `--ivory`, `--snow`, `--background-color`, `--surface-color`, `--overlay-color`, `--text-color-heading`, `--text-color-body`, `--text-color-muted`, `--text-color-on-accent`, `--text-color-on-overlay`, `--border-color`, `--shadow-color`, `--accent-color`, `--success-color`, `--gutter`, `--spacing-responsive`, `--spacing-4`, `--spacing-8`, `--spacing-12`, `--spacing-16`, `--spacing-24`, `--spacing-32`, `--spacing-48`, `--spacing-72`, `--spacing-96`, `--spacing-144`, `--header-height`, `--container-width`, `--container-width-narrow`, `--container-width-wide`, `--column-width`, `--line-height-heading`, `--radius-4`, `--radius-8`, `--radius-32`, `--radius-pill`, `--duration-base`, `--duration-slow`, `--duration-stagger`, `--transform-origin-start`, `--transform-origin-end`. Pas de nouvelle couleur en dur : ajouter un token.
+- **Palette et rôles** : les couleurs de la palette (`--night`, `--blue`, `--green`…) ne s'utilisent que dans `base/_themes.scss`, pour définir les rôles. Les composants n'utilisent que les rôles (`--background-color`, `--text-color-body`, `--accent-color`…), dont les noms suivent ceux des variables Figma (`Background`, `Text/Body`, `Accent`…). Seules exceptions : le logo et la barre de chargement, en couleurs de marque.
+- **Espacements** : les `gap`, `margin` et `padding` utilisent l'échelle fixe `--spacing-4` … `--spacing-144` (le nombre est la valeur en pixels à la taille de police par défaut : `--spacing-16` = `1rem` ; même logique pour les rayons `--radius-4`, `--radius-8`, `--radius-32`), ou `var(--spacing-responsive)` quand l'espacement doit grandir avec l'écran. Pas de valeur en dur, sauf les réglages d'icône (taille d'une flèche dans un rond, padding du burger) et de positionnement (marges négatives, centrage d'un séparateur) ; ajouter un échelon à l'échelle si besoin.
+- **`--spacing-responsive`** : seul espacement qui varie selon l'écran (1rem, 1.5rem dès `md`, 2rem dès `lg`, dans `base/_themes.scss`). À utiliser quand un espacement doit grandir avec l'écran (padding des cartes, `.container` en `calc(var(--spacing-responsive) * 3)`…). Ne jamais le redéfinir localement : une zone qui a besoin d'autres valeurs les écrit avec l'échelle `--spacing-*`.
 - **Thème sombre** : surcharger les custom properties sous `:root.dark` (classe posée par `useColorMode`), jamais en dupliquant les règles dans les composants.
 - **RTL** : préférer les propriétés logiques (`margin-block-end`, `padding-inline-start`, `inset-inline-start`…) à `left`/`right` (bannis à cause de l’arabe), pour que l'arabe fonctionne sans surcharge. Les ajustements spécifiques passent par `:root[dir='rtl']`.
 - Typographie via le mixin `@include typo($size, $weight: …, $line-height: …, $letter-spacing: …, $margin-top: …, $margin-bottom: …)` (seul `$size` est positionnel ; valeurs avec leur unité : `rem` pour la taille et les marges, `em` pour `$letter-spacing`) ; grilles via `@include grid(...)` et `@include col(...)`.
+- Ordre dans un bloc (règle Stylelint `order/order`, plugin `stylelint-order`) : custom properties locales, puis tous les `@include` (`typo`, `grid`, `transition`, `focus-ring`…), puis les déclarations, puis les blocs imbriqués ; une ligne vide entre chaque groupe.
 - Imbrication BEM légère : `&--modificateur`, `&:hover`, `.parent + &`. Limiter la profondeur à 3 niveaux. Classes en kebab-case (`.card-group`, `.card-prestation`).
-- Notation de couleur moderne : `rgba(17 24 39 / 73%)` (séparateurs espaces, alpha en %), `currentcolor` en minuscules.
-- Transitions : `@include transition(color, transform);` (mixin qui applique `var(--duration) linear` à chaque propriété listée ; jamais `transition: all`).
-- Focus visible systématique sur les éléments interactifs : `outline: 3px solid var(--blue); outline-offset: 5px;`.
+- Notation de couleur moderne : `oklch(from var(--night) l c h / 67%)` (couleurs en OKLCH, séparateurs espaces, alpha en %), `currentcolor` en minuscules.
+- Transitions : `@include transition(color, transform);` (mixin qui applique `var(--duration-base) linear` à chaque propriété listée ; jamais `transition: all`).
+- Focus visible systématique sur les éléments interactifs : `outline: 0.1875rem solid var(--accent-color); outline-offset: 0.3125rem;`.
 - `!important` à éviter (réservé à la surcharge d'attributs inline comme le `fill` des SVG).

@@ -2,26 +2,24 @@
 @use '../abstracts/mixins' as *;
 
 header:has(nav) {
-  --padding-y: 24px;
-
   @include grid(2, auto, $justify: space-between);
+  @include transition(background-color, padding, box-shadow);
 
   position: fixed;
   width: 100%;
-  padding: var(--padding-y) var(--padding-x);
-  background-color: var(--background);
-  @include transition(background-color, padding);
+  padding: var(--spacing-24) var(--gutter);
+  background-color: var(--background-color);
   z-index: 1;
 
   .scrolled & {
-    box-shadow: 0 0 10px var(--shadow);
+    box-shadow: 0 0 0.625rem var(--shadow-color);
   }
 
-  @media (min-width: $md) {
+  @media (min-width: $bp-md) {
     grid-template-columns: repeat(3, auto);
 
     html:not(.scrolled) & {
-      --padding-y: 32px;
+      padding-block: var(--spacing-32);
     }
   }
 }
@@ -38,7 +36,7 @@ header:has(nav) {
   }
 
   .menu-closing & {
-    transition-delay: var(--duration);
+    transition-delay: var(--duration-base);
   }
 }
 
@@ -48,12 +46,9 @@ header:has(nav) {
   }
 
   &:last-child {
-    fill: var(--night);
     @include transition(fill);
 
-    .dark .logo & {
-      fill: var(--color);
-    }
+    fill: var(--text-color-heading);
   }
 }
 
@@ -61,7 +56,7 @@ header:has(nav) {
   position: fixed;
   inset: 0;
   width: 100%;
-  height: var(--h-header);
+  height: var(--header-height);
   visibility: hidden;
   opacity: 0;
   background-color: transparent;
@@ -69,24 +64,24 @@ header:has(nav) {
   .menu-open &,
   .menu-closing & {
     transition-property: height, visibility, opacity, background-color;
-    transition-duration: var(--duration);
+    transition-duration: var(--duration-base);
   }
 
   .menu-open & {
     height: 100%;
     visibility: visible;
     opacity: 1;
-    background-color: var(--background-secondary);
+    background-color: var(--surface-color);
     overflow-y: auto;
     transition-timing-function: cubic-bezier(0.55, 0.09, 0.68, 0.53);
   }
 
   .menu-closing & {
-    transition-delay: var(--duration);
+    transition-delay: var(--duration-base);
     transition-timing-function: cubic-bezier(0.46, 0.03, 0.52, 0.96);
   }
 
-  @media (min-width: $md) {
+  @media (min-width: $bp-md) {
     position: relative;
     height: auto;
     visibility: visible;
@@ -96,11 +91,11 @@ header:has(nav) {
 
 .menu {
   display: grid;
-  gap: 24px;
+  gap: var(--spacing-24);
   padding: 10%;
   visibility: hidden;
 
-  @media (min-width: $md) {
+  @media (min-width: $bp-md) {
     grid-template-columns: repeat(var(--item-total), auto);
     padding: 0;
   }
@@ -113,7 +108,7 @@ header:has(nav) {
     width: fit-content;
     visibility: hidden;
     opacity: 0;
-    transform: translateY(-8px);
+    transform: translateY(-0.5rem);
 
     .menu-open &,
     .menu-closing & {
@@ -124,18 +119,18 @@ header:has(nav) {
       visibility: visible;
       opacity: 1;
       transform: translateY(0);
-      transition-delay: calc(var(--duration) + var(--item-number) * 20ms);
+      transition-delay: calc(var(--duration-base) + var(--item-number) * var(--duration-stagger));
       transition-timing-function: cubic-bezier(0.55, 0.09, 0.68, 0.53);
     }
 
     .menu-closing & {
       transition-delay: calc(
-        -20ms + 20ms * calc(var(--item-total) - var(--item-number))
+        var(--duration-stagger) * (var(--item-total) - var(--item-number) - 1)
       );
       transition-timing-function: cubic-bezier(0.46, 0.03, 0.52, 0.96);
     }
 
-    @media (min-width: $md) {
+    @media (min-width: $bp-md) {
       @include typo(1rem, $line-height: 1.5);
 
       visibility: visible;
@@ -144,19 +139,20 @@ header:has(nav) {
     }
 
     &::after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      background-color: var(--blue);
-      width: 100%;
-      height: 4px;
-      border-radius: var(--radius-pill);
-      transform: scaleX(0);
-      transform-origin: var(--origin);
       @include transition(transform);
 
-      @media (min-width: $md) {
-        height: 3px;
+      content: '';
+      position: absolute;
+      bottom: -0.125rem;
+      background-color: var(--accent-color);
+      width: 100%;
+      height: 0.25rem;
+      border-radius: var(--radius-pill);
+      transform: scaleX(0);
+      transform-origin: var(--transform-origin-start);
+
+      @media (min-width: $bp-md) {
+        height: 0.1875rem;
       }
     }
 
@@ -174,12 +170,14 @@ header:has(nav) {
   position: relative;
   display: flex;
   align-items: center;
-  column-gap: 16px;
+  column-gap: var(--spacing-16);
 
   > * {
     @include transition(color);
-    width: 20px;
-    height: 20px;
+
+    color: var(--text-color-heading);
+    width: 1.25rem;
+    height: 1.25rem;
     border-radius: var(--radius-pill);
 
     &:focus-visible {
@@ -199,24 +197,25 @@ header:has(nav) {
     }
 
     .menu-closing & {
-      transition-delay: var(--duration);
+      transition-delay: var(--duration-base);
     }
   }
 }
 
 .tooltip-lang {
-  @include typo(0.78125rem);
+  @include typo(0.7813rem);
 
   position: absolute;
-  inset-inline-end: calc(100% + 8px);
+  inset-inline-end: calc(100% + 0.5rem);
   width: max-content;
   opacity: 0;
   visibility: hidden;
 
-  @media (min-width: $lg) {
+  @media (min-width: $bp-lg) {
     &.active {
       visibility: visible;
-      animation: tooltip-lang 2s var(--duration) ease-in-out;
+      animation: tooltip-lang calc(var(--duration-base) * 10) var(--duration-base)
+        ease-in-out;
 
       :root[dir='rtl'] & {
         animation-direction: reverse;
@@ -229,7 +228,7 @@ header:has(nav) {
   &-enter-active,
   &-leave-active {
     transition-property: transform, opacity;
-    transition-duration: calc(var(--duration) / 2);
+    transition-duration: calc(var(--duration-base) / 2);
   }
 
   &-enter-from,
@@ -242,40 +241,40 @@ header:has(nav) {
 .toggle-menu {
   display: grid;
   align-content: space-between;
-  padding: 2px;
+  padding: 0.125rem;
 
-  @media (min-width: $md) {
+  @media (min-width: $bp-md) {
     display: none;
   }
 
   span {
     background-color: currentcolor;
-    height: 2px;
+    height: 0.125rem;
     border-radius: var(--radius-pill);
   }
 
   .top {
-    animation: toggle-top var(--animation);
+    animation: toggle-top var(--duration-slow) forwards;
 
     .menu-open & {
-      animation: toggle-top-scale var(--animation);
+      animation: toggle-top-scale var(--duration-slow) forwards;
     }
   }
 
   .middle {
-    animation: toggle-middle var(--animation);
-    transform-origin: var(--origin);
+    animation: toggle-middle var(--duration-slow) forwards;
+    transform-origin: var(--transform-origin-start);
 
     .menu-open & {
-      animation: toggle-middle-scale var(--animation);
+      animation: toggle-middle-scale var(--duration-slow) forwards;
     }
   }
 
   .bottom {
-    animation: toggle-bottom var(--animation);
+    animation: toggle-bottom var(--duration-slow) forwards;
 
     .menu-open & {
-      animation: toggle-bottom-scale var(--animation);
+      animation: toggle-bottom-scale var(--duration-slow) forwards;
     }
   }
 }

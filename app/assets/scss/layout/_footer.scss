@@ -2,45 +2,43 @@
 @use '../abstracts/mixins' as *;
 
 footer {
-  --padding-y: 48px;
-
   @include typo($weight: 300);
-
-  padding: var(--padding-y) var(--padding-x);
-  display: grid;
-  justify-content: center;
-  gap: var(--padding-y);
-  transform: translateY(var(--h-header));
   @include transition(transform);
 
-  @media (min-width: $lg) {
-    --padding-y: 144px;
+  padding: var(--spacing-48) var(--gutter);
+  display: grid;
+  justify-content: center;
+  gap: var(--spacing-48);
+  transform: translateY(var(--header-height));
 
+  @media (min-width: $bp-lg) {
+    padding-block: var(--spacing-144);
+    gap: var(--spacing-96);
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(2, auto);
     justify-content: space-between;
   }
 
   a:hover {
-    color: var(--blue);
+    color: var(--accent-color);
   }
 }
 
 .mobile {
   display: flex;
   align-items: center;
-  column-gap: 6px;
+  column-gap: var(--spacing-8);
   width: fit-content;
 }
 
 .socials {
   @include grid(4, auto, $justify: space-between);
 
-  margin-top: 12px;
-  max-width: 200px;
+  margin-top: var(--spacing-12);
+  max-width: 12.5rem;
 
-  @media (min-width: $md) {
-    max-width: 280px;
+  @media (min-width: $bp-md) {
+    max-width: 17.5rem;
   }
 
   a {
@@ -49,36 +47,39 @@ footer {
 }
 
 .copy {
-  @include typo(0.78125rem, $line-height: 1.28);
+  @include typo(0.7813rem, $line-height: 1.28);
 
   display: grid;
-  gap: 8px;
+  gap: var(--spacing-8);
 
-  @media (min-width: $lg) {
+  @media (min-width: $bp-lg) {
     grid-column: span 3 / span 3;
   }
 
   p {
-    margin: 0;
-    color: var(--color-secondary);
     @include transition(color);
+
+    margin: 0;
+    color: var(--text-color-muted);
   }
 
   ul {
     display: flex;
-    gap: 17px;
+    column-gap: var(--spacing-16);
 
     li:not(:first-child) {
       position: relative;
 
       &::before {
+        @include transition(background-color);
+
         content: '';
         position: absolute;
-        inset-inline-start: -8px;
-        height: 10px;
-        width: 1px;
-        background-color: var(--color-secondary);
-        margin: 3px 0;
+        inset-inline-start: -0.5rem;
+        height: 0.625rem;
+        width: 0.0625rem;
+        background-color: var(--border-color);
+        margin: 0.1875rem 0;
       }
     }
   }

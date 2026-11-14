@@ -1,16 +1,18 @@
 @use '../abstracts/mixins' as *;
 
 .request {
-  background-color: var(--background-secondary);
   @include transition(background-color);
+
+  background-color: var(--surface-color);
 
   &:not(.other) {
     text-align: center;
   }
 
   .h3 {
-    color: var(--color-secondary);
     @include transition(color);
+
+    color: var(--text-color-body);
   }
 
   a {

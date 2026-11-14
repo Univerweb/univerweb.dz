@@ -4,35 +4,35 @@
 .card-group {
   @include grid(
     1,
-    minmax(auto, var(--card-width)),
-    var(--padding-y),
+    minmax(auto, var(--column-width)),
+    var(--spacing-24),
     $justify: center
   );
 
   .intro + & {
-    margin-top: 24px;
+    margin-top: var(--spacing-24);
 
-    @media (min-width: $md) {
-      margin-top: 36px;
+    @media (min-width: $bp-md) {
+      margin-top: var(--spacing-32);
     }
 
-    @media (min-width: $lg) {
-      margin-top: 48px;
+    @media (min-width: $bp-lg) {
+      margin-top: var(--spacing-48);
     }
   }
 
-  @media (min-width: $md) {
-    grid-template-columns: repeat(2, minmax(var(--card-width), 460px));
+  @media (min-width: $bp-md) {
+    grid-template-columns: repeat(2, minmax(var(--column-width), 28.75rem));
   }
 
-  @media (min-width: $xl) {
+  @media (min-width: $bp-xl) {
     grid-template-columns: repeat(2, 1fr);
   }
 
   &-wide {
-    @media (min-width: $xxl) {
+    @media (min-width: $bp-xxl) {
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      margin-inline: calc(50% - var(--container-wide) / 2);
+      margin-inline: calc(50% - var(--container-width-wide) / 2);
     }
   }
 }
@@ -41,15 +41,16 @@
   display: grid;
   position: relative;
   overflow: hidden;
-  border-radius: var(--padding-y);
+  border-radius: var(--radius-32);
 
   &:focus-visible {
     @include focus-ring;
   }
 
   img {
-    aspect-ratio: 49 / 52;
     @include transition(scale);
+
+    aspect-ratio: 49 / 52;
   }
 
   &:hover img {
@@ -57,14 +58,16 @@
   }
 
   .overlay {
+    @include transition(background-color);
+
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: var(--overlay);
+    background-color: var(--overlay-color);
   }
 
   &:focus-visible .overlay {
-    background-color: var(--blue);
+    background-color: var(--accent-color);
   }
 
   .inner {
@@ -72,12 +75,16 @@
     grid-auto-rows: auto 1fr auto;
     position: absolute;
     height: 100%;
-    color: var(--white);
-    padding: var(--padding-y);
+    color: var(--text-color-on-overlay);
+    padding: var(--spacing-responsive);
+
+    :is(h2, h3, .h3) {
+      color: inherit;
+    }
   }
 
   .tags {
-    margin-block-end: 0.75rem;
+    margin-block-end: var(--spacing-12);
 
     li::before {
       color: currentcolor;
@@ -89,7 +96,7 @@
     @include typo(2rem);
 
     &.realisation {
-      @media (min-width: $xl) {
+      @media (min-width: $bp-xl) {
         @include typo(3.5rem);
       }
     }
@@ -98,16 +105,17 @@
   .lead {
     visibility: hidden;
 
-    @media (min-width: $md) {
-      visibility: visible;
-      color: var(--white);
-      opacity: 0;
-      transform: translateY(20px);
+    @media (min-width: $bp-md) {
       @include transition(opacity, transform, visibility);
+
+      visibility: visible;
+      color: var(--text-color-on-overlay);
+      opacity: 0;
+      transform: translateY(1.25rem);
     }
   }
 
-  @media (min-width: $md) {
+  @media (min-width: $bp-md) {
     &:hover .lead,
     &:focus-visible .lead {
       opacity: 0.8;
@@ -117,13 +125,14 @@
 }
 
 .card-prestation {
+  @include transition(background-color);
+
   position: relative;
   display: grid;
   grid-auto-rows: auto auto 1fr;
-  background-color: var(--background-secondary);
-  padding: var(--padding-y);
-  border-radius: var(--padding-y);
-  @include transition(background-color);
+  background-color: var(--surface-color);
+  padding: var(--spacing-responsive);
+  border-radius: var(--radius-32);
 
   &:focus-within {
     @include focus-ring;
@@ -134,7 +143,7 @@
   }
 
   &:is(:hover, :focus-within) > svg {
-    fill: var(--blue) !important;
+    fill: var(--accent-color) !important;
     transform: scale(1.05);
   }
 
@@ -142,7 +151,7 @@
   h3 {
     @include typo(2rem);
 
-    margin-block: calc(var(--padding-y) * 2) 1.5rem;
+    margin-block: calc(var(--spacing-responsive) * 2) var(--spacing-24);
   }
 
   p {

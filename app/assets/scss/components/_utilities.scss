@@ -2,12 +2,12 @@
 
 .visually-hidden {
   position: absolute;
-  width: 1px;
-  height: 1px;
+  width: 0.0625rem;
+  height: 0.0625rem;
   padding: 0;
-  margin: -1px;
+  margin: -0.0625rem;
   overflow: hidden;
-  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
   border: 0;
   white-space: nowrap;
 }
@@ -20,16 +20,18 @@
     $letter-spacing: -0.02em
   );
 
-  color: var(--color-secondary);
-  @include transition(color);
-
   footer & {
     @include typo($weight: 300);
 
-    color: var(--color);
     margin: 0;
-    max-width: 400px;
+    max-width: 25rem;
   }
+}
+
+.label {
+  @include transition(color);
+
+  color: var(--text-color-muted);
 }
 
 .tags {
@@ -37,11 +39,12 @@
 
   display: flex;
   flex-wrap: wrap;
-  gap: 6px 12px;
+  column-gap: var(--spacing-12);
 
   li::before {
+    @include transition(color);
+
     content: '#';
-    color: var(--blue);
-    margin-inline-end: 3px;
+    color: var(--text-color-muted);
   }
 }

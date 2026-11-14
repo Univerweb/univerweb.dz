@@ -1,67 +1,106 @@
 @use '../abstracts/variables' as *;
 
 :root {
-  color-scheme: light;
+  --night: oklch(18% 0.05 250deg);
+  --anthracite: oklch(23% 0.045 250deg);
+  --slate: oklch(38% 0.04 250deg);
+  --steel: oklch(52% 0.03 250deg);
+  --pearl: oklch(70% 0.03 250deg);
+  --mist: oklch(87% 0.015 250deg);
+  --ivory: oklch(98% 0.004 250deg);
+  --snow: oklch(100% 0 250deg);
+  --blue: oklch(66% 0.185 250deg);
+  --green: oklch(76% 0.18 157deg);
 
-  --blue: #50c8f0;
-  --night: #28285a;
-  --white: #fff;
-  --success: #00d282;
-  --background: #fff;
-  --background-secondary: #f9fafb;
-  --color: #111827;
-  --color-secondary: rgba(17 24 39 / 73%);
-  --border: #f2f2f2;
-  --overlay: rgba(0 0 0 / 67%);
+  --background-color: var(--snow);
+  --surface-color: var(--ivory);
+  --overlay-color: oklch(from var(--night) l c h / 67%);
+
+  --text-color-heading: var(--night);
+  --text-color-body: var(--slate);
+  --text-color-muted: var(--steel);
+  --text-color-on-accent: var(--night);
+  --text-color-on-overlay: var(--snow);
+
+  --border-color: oklch(from var(--night) l c h / 12%);
+  --shadow-color: var(--border-color);
+
+  --accent-color: var(--blue);
+  --success-color: var(--green);
+
   --font-family: 'Outfit', 'Outfit fallback';
   --line-height-heading: 1.1;
-  --padding-x: 16px;
-  --padding-y: 16px;
-  --h-header: 72px;
-  --container-narrow: 720px;
-  --container-wide: 1400px;
-  --card-width: 348px;
-  --duration: 0.24s;
-  --animation: calc(var(--duration) * 2) forwards;
-  --origin: 0%;
+
+  --gutter: var(--spacing-responsive);
+  --spacing-responsive: 1rem;
+
+  --spacing-4: 0.25rem;
+  --spacing-8: 0.5rem;
+  --spacing-12: 0.75rem;
+  --spacing-16: 1rem;
+  --spacing-24: 1.5rem;
+  --spacing-32: 2rem;
+  --spacing-48: 3rem;
+  --spacing-72: 4.5rem;
+  --spacing-96: 6rem;
+  --spacing-144: 9rem;
+
+  --header-height: 4.5rem;
+  --container-width: 100%;
+  --container-width-narrow: 45rem;
+  --container-width-wide: 87.5rem;
+  --column-width: 21.75rem;
+
+  --radius-4: 0.25rem;
+  --radius-8: 0.5rem;
+  --radius-32: 2rem;
   --radius-pill: 100vmax;
-  --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
-  --shadow: rgba(0 0 0 / 10%);
+
+  --duration-base: 0.24s;
+  --duration-slow: 0.48s;
+  --duration-stagger: 0.02s;
+  --transform-origin-start: 0%;
+  --transform-origin-end: 100%;
+
+  color-scheme: light;
 
   &.dark {
-    color-scheme: dark;
+    --background-color: var(--night);
+    --surface-color: var(--anthracite);
 
-    --background: #111827;
-    --background-secondary: #1f2937;
-    --color: #fff;
-    --color-secondary: rgba(255 255 255 / 67%);
-    --border: var(--background-secondary);
-    --shadow: rgba(255 255 255 / 10%);
+    --text-color-heading: var(--snow);
+    --text-color-body: var(--mist);
+    --text-color-muted: var(--pearl);
+
+    --border-color: oklch(from var(--snow) l c h / 12%);
+
+    color-scheme: dark;
   }
 
   &[dir='rtl'] {
     --font-family: 'Alexandria', 'Alexandria fallback';
     --line-height-heading: 1.4;
-    --origin: 100%;
+
+    --transform-origin-start: 100%;
+    --transform-origin-end: 0%;
   }
 
-  @media (min-width: $md) {
-    --padding-x: 24px;
-    --padding-y: 24px;
+  @media (min-width: $bp-md) {
+    --spacing-responsive: 1.5rem;
 
     &:not(.scrolled) {
-      --h-header: 88px;
+      --header-height: 5.5rem;
     }
   }
 
-  @media (min-width: $lg) {
-    --container: 952px;
-    --padding-x: calc(50% - var(--container) / 2);
-    --padding-y: 32px;
+  @media (min-width: $bp-lg) {
+    --gutter: calc(50% - var(--container-width) / 2);
+    --spacing-responsive: 2rem;
+
+    --container-width: 59.5rem;
   }
 
-  @media (min-width: $xl) {
-    --container: 1200px;
+  @media (min-width: $bp-xl) {
+    --container-width: 75rem;
   }
 }

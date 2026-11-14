@@ -2,16 +2,16 @@
 @use '../abstracts/mixins' as *;
 
 .container {
-  padding-block: calc(var(--padding-y) * 3);
-  padding-inline: var(--padding-x);
+  padding-block: calc(var(--spacing-responsive) * 3);
+  padding-inline: var(--gutter);
 
   &-no-pt {
     padding-top: 0;
   }
 
   &-narrow {
-    @media (min-width: $lg) {
-      --padding-x: calc(50% - var(--container-narrow) / 2);
+    @media (min-width: $bp-lg) {
+      --gutter: calc(50% - var(--container-width-narrow) / 2);
     }
   }
 }
@@ -20,10 +20,10 @@
   @include grid(12, 1fr, $align: center);
 
   &-justify {
-    max-width: var(--card-width);
+    max-width: var(--column-width);
     margin: auto;
 
-    @media (min-width: $md) {
+    @media (min-width: $bp-md) {
       max-width: 100%;
     }
   }
@@ -31,18 +31,18 @@
   * {
     grid-column: 1 / 13;
 
-    @media (min-width: $md) {
+    @media (min-width: $bp-md) {
       grid-column: 1 / 10;
     }
 
-    @media (min-width: $xl) {
+    @media (min-width: $bp-xl) {
       grid-column: 1 / 8;
     }
   }
 }
 
 .row {
-  @include grid(12, 1fr, 24px 0);
+  @include grid(12, 1fr, var(--spacing-24) 0);
 
   &-center {
     align-items: center;
@@ -52,13 +52,13 @@
 .col {
   grid-column: 1 / 13;
 
-  @media (min-width: $md) {
+  @media (min-width: $bp-md) {
     @include col(1, 6);
     @include col(1, 9);
     @include col(7, 12);
   }
 
-  @media (min-width: $lg) {
+  @media (min-width: $bp-lg) {
     @include col(1, 4);
     @include col(1, 5);
     @include col(5, 13);
@@ -67,13 +67,13 @@
 }
 
 [class*='items-'] {
-  row-gap: 48px;
+  row-gap: var(--spacing-48);
 
   .item {
     grid-column: span 11 / span 11;
   }
 
-  @media (min-width: $md) {
+  @media (min-width: $bp-md) {
     &.items-2 .item {
       grid-column: span 5 / span 5;
 

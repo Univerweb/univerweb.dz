@@ -9,18 +9,35 @@ html {
 
 body {
   @include typo(1rem, $line-height: 1.6);
+  @include transition(background-color, color);
 
   margin: 0;
   padding: 0;
-  background-color: var(--background);
-  color: var(--color);
-  @include transition(background-color, color);
+  background-color: var(--background-color);
+  color: var(--text-color-body);
   font-family: var(--font-family);
 
   .menu-open & {
     height: 100%;
     overflow: hidden;
   }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  @include transition(color);
+
+  color: var(--text-color-heading);
 }
 
 h1,
@@ -34,11 +51,11 @@ h1,
     $margin-bottom: 1.5rem
   );
 
-  @media (min-width: $md) {
+  @media (min-width: $bp-md) {
     @include typo(3.5rem, $margin-bottom: 2.25rem);
   }
 
-  @media (min-width: $lg) {
+  @media (min-width: $bp-lg) {
     @include typo(5rem, $margin-bottom: 3rem);
   }
 }
@@ -54,11 +71,11 @@ h2,
     $margin-bottom: 1.5rem
   );
 
-  @media (min-width: $md) {
+  @media (min-width: $bp-md) {
     @include typo(2.625rem);
   }
 
-  @media (min-width: $lg) {
+  @media (min-width: $bp-lg) {
     @include typo(3.5rem);
   }
 }
@@ -98,13 +115,14 @@ h6,
 }
 
 a {
-  color: var(--color);
-  text-decoration: none;
   @include transition(color);
+
+  color: var(--text-color-heading);
+  text-decoration: none;
 }
 
 p {
-  margin-block: 0 0.75rem;
+  margin-block: 0 var(--spacing-12);
 
   &:last-child {
     margin-block-end: 0;
@@ -132,18 +150,22 @@ ol {
       $weight: 900,
       $line-height: var(--line-height-heading)
     );
+    @include transition(color);
 
-    color: var(--blue);
-    margin-bottom: 0.75rem;
+    color: var(--text-color-muted);
+    margin-bottom: var(--spacing-12);
     display: block;
   }
 }
 
 strong {
   @include typo($weight: 600);
+  @include transition(color);
+
+  color: var(--text-color-heading);
 }
 
 address {
   font-style: normal;
-  margin-bottom: 0.75rem;
+  margin-bottom: var(--spacing-12);
 }
