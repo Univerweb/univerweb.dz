@@ -107,5 +107,7 @@ Site vitrine d'Univerweb (agence web, Alger). Nuxt 4 + Vue 3 + TypeScript, conte
 - Imbrication BEM légère : `&--modificateur`, `&:hover`, `.parent + &`. Limiter la profondeur à 3 niveaux. Classes en kebab-case (`.card-group`, `.card-prestation`).
 - Notation de couleur moderne : `oklch(from var(--night) l c h / 67%)` (couleurs en OKLCH, séparateurs espaces, alpha en %), `currentcolor` en minuscules.
 - Transitions : `@include transition(color, transform);` (mixin qui applique `var(--duration-base) linear` à chaque propriété listée ; jamais `transition: all`).
+- Tout élément dont une couleur change (thème clair/sombre, `:hover`, `:focus`, `.scrolled`…) a une transition sur la propriété concernée (`color`, `background-color`, `border-color`, `fill`, `box-shadow`). Un élément qui hérite sa couleur suit la transition de son parent ; un élément qui redéclare sa couleur (`color: var(--…)`) a besoin de sa propre transition, déclarée sur l'état de repos et non sur `:hover`.
+- Exception volontaire : les contours de focus (`outline`) apparaissent sans transition, pour que le focus clavier soit visible immédiatement.
 - Focus visible systématique sur les éléments interactifs : `outline: 0.1875rem solid var(--accent-color); outline-offset: 0.3125rem;`.
 - `!important` à éviter (réservé à la surcharge d'attributs inline comme le `fill` des SVG).
