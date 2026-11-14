@@ -182,7 +182,7 @@ header:has(nav) {
     height: 1.25rem;
     border-radius: var(--radius-pill);
 
-    &:hover {
+    &:not(.toggle-menu):hover {
       color: var(--accent-color);
     }
 
@@ -251,6 +251,12 @@ header:has(nav) {
 
   @media (min-width: $bp-md) {
     display: none;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: var(--accent-color);
+    }
   }
 
   span {
