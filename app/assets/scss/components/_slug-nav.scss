@@ -29,7 +29,10 @@
       padding-inline-end: var(--spacing-16);
       text-align: end;
       justify-self: end;
-      grid-column: 2;
+
+      @media (min-width: $bp-md) {
+        grid-column: 2;
+      }
     }
 
     &::before {
