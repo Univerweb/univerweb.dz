@@ -104,7 +104,6 @@ header:has(nav) {
     @include typo(1.75rem, $weight: 500);
 
     position: relative;
-    color: var(--text-color-heading);
     display: grid;
     width: fit-content;
     visibility: hidden;
