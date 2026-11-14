@@ -20,7 +20,7 @@ footer {
   }
 
   a:not(.link):hover {
-    color: var(--accent-color);
+    text-decoration: underline;
   }
 }
 
@@ -43,6 +43,10 @@ footer {
 
   a {
     display: grid;
+
+    &:hover {
+      color: var(--accent-color);
+    }
   }
 }
 
