@@ -2,14 +2,22 @@
 @use '../abstracts/mixins' as *;
 
 .link {
-  @include typo(1.25rem, $weight: 500);
+  @include link-line;
 
-  @media (min-width: $bp-md) {
-    @include typo(1.75rem);
+  :where(&) {
+    @include typo(1.25rem, $weight: 500);
+
+    @media (min-width: $bp-md) {
+      @include typo(1.75rem);
+    }
   }
 
   &.outfit {
     font-family: Outfit, 'Outfit fallback', sans-serif;
+  }
+
+  &:hover {
+    animation: move var(--duration-slow) forwards;
   }
 }
 
@@ -123,15 +131,3 @@
   }
 }
 
-.move {
-  padding-bottom: 0.125rem;
-  background-image: linear-gradient(var(--accent-color), var(--accent-color));
-  background-repeat: no-repeat;
-  background-position: var(--transform-origin-start) 100%;
-  background-size: 5% 0.1875rem;
-
-  &:hover,
-  :hover > & {
-    animation: move var(--duration-slow) forwards;
-  }
-}

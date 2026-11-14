@@ -66,3 +66,11 @@
 
   transition: $transitions;
 }
+
+@mixin link-line {
+  padding-bottom: 0.125rem;
+  background-image: linear-gradient(var(--accent-color), var(--accent-color));
+  background-repeat: no-repeat;
+  background-position: var(--transform-origin-start) 100%;
+  background-size: 5% 0.1875rem;
+}

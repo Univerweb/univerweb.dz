@@ -35,7 +35,7 @@ const { data: footer } = await useAsyncData(
     </p>
 
     <div>
-      <a :href="`mailto:${config.public.baseEmail}`" :aria-label="t('ariaLabels.email')" class="link outfit move">
+      <a :href="`mailto:${config.public.baseEmail}`" :aria-label="t('ariaLabels.email')" class="link outfit">
         {{ config.public.baseEmail }}
       </a>
 

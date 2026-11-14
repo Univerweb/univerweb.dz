@@ -20,6 +20,20 @@
 
     position: relative;
     width: fit-content;
+    padding-bottom: 0;
+    background-image: none;
+
+    > span {
+      @include link-line;
+    }
+
+    &:hover {
+      animation: none;
+    }
+
+    &:hover > span {
+      animation: move var(--duration-slow) forwards;
+    }
 
     &.prev {
       padding-inline-start: var(--spacing-16);
