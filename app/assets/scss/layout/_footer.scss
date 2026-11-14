@@ -19,7 +19,7 @@ footer {
     justify-content: space-between;
   }
 
-  a:hover {
+  a:not(.move):hover {
     color: var(--accent-color);
   }
 }

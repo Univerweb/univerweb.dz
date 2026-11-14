@@ -16,10 +16,10 @@ const { t } = useI18n()
 <template>
   <nav class="container slug-nav" :aria-label>
     <NuxtLink v-if="prev" :to="prev.path" class="link prev" :data-text="t('navigation.previous')">
-      {{ prev.title }}
+      <span class="move">{{ prev.title }}</span>
     </NuxtLink>
     <NuxtLink v-if="next" :to="next.path" class="link next" :data-text="t('navigation.next')">
-      {{ next.title }}
+      <span class="move">{{ next.title }}</span>
     </NuxtLink>
   </nav>
 </template>

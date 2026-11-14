@@ -4,18 +4,12 @@
 .link {
   @include typo(1.25rem, $weight: 500);
 
-  display: inline-block;
-
   @media (min-width: $bp-md) {
     @include typo(1.75rem);
   }
 
   &.outfit {
     font-family: Outfit, 'Outfit fallback', sans-serif;
-  }
-
-  &:not(.move):hover {
-    color: var(--accent-color);
   }
 }
 
@@ -130,23 +124,14 @@
 }
 
 .move {
-  position: relative;
-  display: inline-block;
+  padding-bottom: 0.125rem;
+  background-image: linear-gradient(var(--accent-color), var(--accent-color));
+  background-repeat: no-repeat;
+  background-position: var(--transform-origin-start) 100%;
+  background-size: 5% 0.1875rem;
 
-  &::before {
-    @include transition(transform);
-
-    content: '';
-    position: absolute;
-    inset-inline: 0;
-    bottom: -0.125rem;
-    height: 0.1875rem;
-    background-color: var(--accent-color);
-    transform: scaleX(0.05);
-    transform-origin: var(--transform-origin-start);
-  }
-
-  &:hover::before {
+  &:hover,
+  :hover > & {
     animation: move var(--duration-slow) forwards;
   }
 }

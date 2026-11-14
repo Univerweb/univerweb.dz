@@ -167,7 +167,7 @@ const { data: surround } = await useAsyncData(
             <p property="about" class="lead">
               {{ project.about }}
             </p>
-            <a v-if="project.website" :href="project.website" class="link">
+            <a v-if="project.website" :href="project.website" class="link move">
               {{ t('actions.visit') }}
             </a>
           </section>

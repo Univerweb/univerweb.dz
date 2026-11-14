@@ -16,7 +16,7 @@
   }
 
   .link {
-    @include typo($line-height: 1);
+    @include typo($line-height: 1.3);
 
     position: relative;
     width: fit-content;
