@@ -76,6 +76,10 @@ Site vitrine d'Univerweb (agence web, Alger). Nuxt 4 + Vue 3 + TypeScript, conte
 - Un nouveau contenu se crée dans les trois langues, avec les mêmes noms de fichiers (préfixe numérique d'ordre : `01.slug.yaml`). Chaque nouvelle collection se déclare en `_fr`, `_en`, `_ar` dans `content.config.ts`, avec un schéma Zod partagé.
 - Frontmatter des pages datées : `createdAt` / `updatedAt` au format `AAAA-MM-JJ` ; mettre à jour `updatedAt` à chaque modification de fond.
 - Typographie française : apostrophe typographique `’` dans le contenu.
+- Ton des articles du blog : neutre et universel, sans promotion de l’agence dans le corps de l’article.
+- Prix : toujours hors taxes, avec la mention « HT » (`220 000 DA HT`), dans les trois langues.
+- Arabe : tanwin écrit « ـًا » (`دعمًا`) ; envelopper dans `<bdi>` les éléments LTR insérés dans un texte RTL (`<bdi><code>.dz</code></bdi>`) ; respecter la hamzat wasl (`امتلاك`, `استفد`).
+- Ancienneté de l’agence : ne jamais l’écrire en dur. Utiliser le marqueur `{years}` dans le contenu (`content/{fr,en,ar}/agence.yaml`), remplacé par `withYears()` du composable `useYears` ; un workflow planifié régénère le site chaque année le lendemain de l’anniversaire (22 février).
 
 ## SCSS
 
