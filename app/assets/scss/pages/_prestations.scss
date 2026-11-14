@@ -57,8 +57,6 @@
     .row {
       @include transition(height);
 
-      color: var(--text-color-body);
-
       p {
         margin-bottom: var(--spacing-12);
       }

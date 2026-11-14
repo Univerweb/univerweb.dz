@@ -71,6 +71,8 @@ footer {
       position: relative;
 
       &::before {
+        @include transition(background-color);
+
         content: '';
         position: absolute;
         inset-inline-start: -0.5rem;
