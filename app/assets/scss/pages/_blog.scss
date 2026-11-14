@@ -26,6 +26,8 @@
         padding-inline-end: var(--spacing-16);
 
         &::after {
+          @include transition(background-color);
+
           content: '';
           position: absolute;
           inset-inline-end: 0.5rem;
@@ -142,6 +144,8 @@
       }
 
       tbody tr {
+        @include transition(border-color);
+
         border-bottom: 0.0625rem solid var(--border-color);
       }
     }

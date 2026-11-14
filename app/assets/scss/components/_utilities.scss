@@ -39,6 +39,8 @@
   column-gap: var(--spacing-12);
 
   li::before {
+    @include transition(color);
+
     content: '#';
     color: var(--text-color-muted);
   }

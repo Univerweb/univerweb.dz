@@ -3,7 +3,7 @@
 
 header:has(nav) {
   @include grid(2, auto, $justify: space-between);
-  @include transition(background-color, padding);
+  @include transition(background-color, padding, box-shadow);
 
   position: fixed;
   width: 100%;

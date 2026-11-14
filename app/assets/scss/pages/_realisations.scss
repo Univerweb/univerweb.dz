@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 .realisations {
   h1 {
@@ -60,12 +61,16 @@
       }
 
       &-track {
+        @include transition(background-color);
+
         background-color: var(--border-color);
       }
     }
   }
 
   img {
+    @include transition(box-shadow);
+
     box-shadow: 0 0 2.5rem 0 var(--shadow-color);
   }
 }

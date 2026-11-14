@@ -35,6 +35,8 @@ h6,
 .h4,
 .h5,
 .h6 {
+  @include transition(color);
+
   color: var(--text-color-heading);
 }
 
@@ -148,6 +150,7 @@ ol {
       $weight: 900,
       $line-height: var(--line-height-heading)
     );
+    @include transition(color);
 
     color: var(--text-color-muted);
     margin-bottom: var(--spacing-12);
