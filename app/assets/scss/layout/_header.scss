@@ -185,10 +185,6 @@ header:has(nav) {
     &:not(.toggle-menu):hover {
       color: var(--accent-color);
     }
-
-    &:focus-visible {
-      @include focus-ring;
-    }
   }
 
   .toggle-lang,

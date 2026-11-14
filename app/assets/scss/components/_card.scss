@@ -43,10 +43,6 @@
   overflow: hidden;
   border-radius: var(--radius-32);
 
-  &:focus-visible {
-    @include focus-ring;
-  }
-
   img {
     @include transition(scale);
 
@@ -134,8 +130,10 @@
   padding: var(--spacing-responsive);
   border-radius: var(--radius-32);
 
-  &:focus-within {
+  &:has(a:focus-visible) {
     @include focus-ring;
+
+    outline-color: var(--text-color-heading);
   }
 
   > svg {
@@ -162,5 +160,9 @@
     position: absolute;
     inset: 0;
     content: '';
+  }
+
+  a:focus-visible {
+    outline: none;
   }
 }

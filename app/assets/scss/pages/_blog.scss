@@ -103,10 +103,6 @@
       margin-block: var(--spacing-32);
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
-
-      &:focus-visible {
-        @include focus-ring;
-      }
     }
 
     table {

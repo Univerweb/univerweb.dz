@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+:focus-visible {
+  @include focus-ring;
+}
+
 ::selection {
   color: var(--text-color-on-accent);
   background-color: var(--accent-color);
