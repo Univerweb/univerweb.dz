@@ -41,11 +41,7 @@
     }
 
     a {
-      text-decoration: underline;
-
-      &:hover {
-        color: var(--accent-color);
-      }
+      @include text-link;
     }
   }
 
@@ -67,11 +63,7 @@
     }
 
     a {
-      text-decoration: underline;
-
-      &:hover {
-        color: var(--accent-color);
-      }
+      @include text-link;
     }
 
     ul,
