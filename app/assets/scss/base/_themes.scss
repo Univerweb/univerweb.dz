@@ -64,6 +64,10 @@
 
   color-scheme: light;
 
+  &.scrolled {
+    --header-height: 3.5rem;
+  }
+
   &.dark {
     --background-color: var(--night);
     --surface-color: var(--anthracite);
@@ -88,8 +92,10 @@
   @media (min-width: $bp-md) {
     --spacing-responsive: 1.5rem;
 
-    &:not(.scrolled) {
-      --header-height: 5.5rem;
+    --header-height: 5.5rem;
+
+    &.scrolled {
+      --header-height: 4.5rem;
     }
   }
 

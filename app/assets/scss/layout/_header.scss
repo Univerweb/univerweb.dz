@@ -12,14 +12,16 @@ header:has(nav) {
   z-index: 1;
 
   .scrolled & {
+    padding-block: var(--spacing-16);
     box-shadow: 0 0 0.625rem var(--shadow-color);
   }
 
   @media (min-width: $bp-md) {
     grid-template-columns: repeat(3, auto);
+    padding-block: var(--spacing-32);
 
-    html:not(.scrolled) & {
-      padding-block: var(--spacing-32);
+    .scrolled & {
+      padding-block: var(--spacing-24);
     }
   }
 }
