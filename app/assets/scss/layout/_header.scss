@@ -182,6 +182,10 @@ header:has(nav) {
     height: 1.25rem;
     border-radius: var(--radius-pill);
 
+    &:hover {
+      color: var(--accent-color);
+    }
+
     &:focus-visible {
       @include focus-ring;
     }
