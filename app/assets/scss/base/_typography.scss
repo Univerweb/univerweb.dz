@@ -160,6 +160,9 @@ ol {
 
 strong {
   @include typo($weight: 600);
+  @include transition(color);
+
+  color: var(--text-color-heading);
 }
 
 address {
