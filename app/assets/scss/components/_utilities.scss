@@ -28,6 +28,12 @@
   }
 }
 
+.label {
+  @include transition(color);
+
+  color: var(--text-color-muted);
+}
+
 .tags {
   @include typo($weight: 500);
 
