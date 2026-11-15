@@ -132,7 +132,7 @@ header:has(nav) {
     }
 
     @media (min-width: $bp-md) {
-      @include typo(1rem, $line-height: 1.5);
+      @include typo(var(--font-size-16), $line-height: 1.5);
 
       visibility: visible;
       opacity: 1;

@@ -30,7 +30,7 @@
 
 .label {
   @include typo(
-    1rem,
+    var(--font-size-16),
     $weight: 500,
     $line-height: 1.5,
     $letter-spacing: normal,

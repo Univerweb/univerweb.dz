@@ -113,7 +113,7 @@
       border-collapse: collapse;
 
       @media (min-width: $bp-md) {
-        @include typo(1rem);
+        @include typo(var(--font-size-16));
       }
 
       thead tr {

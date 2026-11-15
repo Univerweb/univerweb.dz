@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  @include typo(1rem, $line-height: 1.6);
+  @include typo(var(--font-size-16), $line-height: 1.6);
   @include transition(background-color, color);
 
   margin: 0;
