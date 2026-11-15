@@ -164,7 +164,7 @@ const { data: surround } = await useAsyncData(
             <h2 id="about-company" class="label">
               {{ t('headings.about', { client: project.title }) }}
             </h2>
-            <p property="about" class="lead">
+            <p property="about">
               {{ project.about }}
             </p>
             <a v-if="project.website" :href="project.website" class="link">

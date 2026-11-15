@@ -15,7 +15,7 @@ defineProps<{
       {{ card.title }}
     </component>
 
-    <p class="lead" property="description">
+    <p property="description">
       {{ card.description }}
     </p>
 
