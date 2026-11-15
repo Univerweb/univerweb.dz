@@ -164,6 +164,11 @@
       height: 1.5rem;
     }
 
+    ul > li > :is(a, button) {
+      display: grid;
+      border-radius: var(--radius-pill);
+    }
+
     .tooltip-clipboard {
       @include transition(color);
 

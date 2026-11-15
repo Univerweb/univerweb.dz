@@ -43,6 +43,7 @@ footer {
 
   a {
     display: grid;
+    border-radius: var(--radius-pill);
 
     &:hover {
       color: var(--accent-color);
