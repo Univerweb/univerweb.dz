@@ -9,12 +9,6 @@
     text-align: center;
   }
 
-  .h3 {
-    @include transition(color);
-
-    color: var(--text-color-body);
-  }
-
   a {
     margin: 0;
   }

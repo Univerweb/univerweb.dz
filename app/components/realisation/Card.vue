@@ -33,7 +33,7 @@ const localePath = useLocalePath()
     <div class="overlay" />
 
     <div class="inner">
-      <span class="h3">
+      <span class="label">
         {{ t(`category.${card.common.category}`) }}
       </span>
       <component :is="titleTag" property="name" class="work">

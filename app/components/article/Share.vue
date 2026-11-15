@@ -11,7 +11,7 @@ const { copy, copied } = useClipboard()
 <template>
   <aside class="container container-narrow container-no-pt" aria-labelledby="share-title">
     <div class="share">
-      <h2 id="share-title" class="h3">
+      <h2 id="share-title" class="label">
         {{ t('headings.shareArticle') }}
       </h2>
 
