@@ -45,7 +45,7 @@ function zoom() {
         <p class="lead">
           {{ contact.lead }}
         </p>
-        <a :href="`mailto:${config.public.baseEmail}`" class="link outfit">
+        <a :href="`mailto:${config.public.baseEmail}`" class="link outfit" dir="ltr">
           {{ config.public.baseEmail }}
         </a>
       </div>
@@ -85,7 +85,7 @@ function zoom() {
           <h3 class="label">
             {{ t('headings.manager') }}
           </h3>
-          <a :href="`mailto:${config.public.managerEmail}`" class="link outfit">
+          <a :href="`mailto:${config.public.managerEmail}`" class="link outfit" dir="ltr">
             {{ config.public.managerEmail }}
           </a>
         </div>
@@ -93,7 +93,7 @@ function zoom() {
           <h3 class="label">
             {{ t('headings.support') }}
           </h3>
-          <a :href="`mailto:${config.public.supportEmail}`" class="link outfit">
+          <a :href="`mailto:${config.public.supportEmail}`" class="link outfit" dir="ltr">
             {{ config.public.supportEmail }}
           </a>
         </div>
