@@ -14,7 +14,7 @@
 
 .lead {
   @include typo(
-    1.25rem,
+    var(--font-size-20),
     $weight: 500,
     $line-height: var(--line-height-snug),
     $letter-spacing: var(--letter-spacing-snug)

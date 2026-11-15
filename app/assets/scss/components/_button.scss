@@ -5,7 +5,7 @@
   @include link-line;
 
   :where(&) {
-    @include typo(1.25rem, $weight: 500);
+    @include typo(var(--font-size-20), $weight: 500);
 
     @media (min-width: $bp-md) {
       @include typo(var(--font-size-24));
