@@ -49,6 +49,11 @@
     padding: var(--spacing-responsive);
     overflow-y: scroll;
 
+    @supports not selector(::-webkit-scrollbar) {
+      scrollbar-color: var(--accent-color) transparent;
+      scrollbar-width: thin;
+    }
+
     img {
       border-radius: var(--radius-4);
     }
@@ -58,12 +63,6 @@
 
       &-thumb {
         background-color: var(--accent-color);
-      }
-
-      &-track {
-        @include transition(background-color);
-
-        background-color: var(--border-color);
       }
     }
   }
