@@ -27,11 +27,11 @@
       @include link-line;
     }
 
-    &:hover {
+    &:is(:hover, :focus-visible) {
       animation: none;
     }
 
-    &:hover > span {
+    &:is(:hover, :focus-visible) > span {
       animation: move calc(var(--duration-slow) * 2) forwards;
     }
 

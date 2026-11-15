@@ -19,7 +19,7 @@
     font-family: Outfit, 'Outfit fallback', sans-serif;
   }
 
-  &:hover {
+  &:is(:hover, :focus-visible) {
     animation: move calc(var(--duration-slow) * 2) forwards;
   }
 }
@@ -91,8 +91,6 @@
   }
 
   &:focus-visible {
-    outline-color: var(--text-color-heading);
-
     &.skip-link {
       transform: translateY(0);
     }

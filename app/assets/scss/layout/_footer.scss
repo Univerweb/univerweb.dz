@@ -19,7 +19,7 @@ footer {
     justify-content: space-between;
   }
 
-  a:not(.link):hover {
+  a:not(.link):is(:hover, :focus-visible) {
     text-decoration: underline;
   }
 }
@@ -45,7 +45,7 @@ footer {
     display: grid;
     border-radius: var(--radius-pill);
 
-    &:hover {
+    &:is(:hover, :focus-visible) {
       color: var(--accent-color);
     }
   }

@@ -49,7 +49,7 @@
 }
 
 @mixin focus-ring {
-  outline: 0.1875rem solid currentcolor;
+  outline: 0.1875rem solid var(--text-color-heading);
   outline-offset: 0.3125rem;
 }
 
@@ -89,7 +89,7 @@
     0% 100%,
     100% 0.0625rem;
 
-  &:hover {
+  &:is(:hover, :focus-visible) {
     color: var(--text-color-on-accent);
     background-size:
       100% 100%,

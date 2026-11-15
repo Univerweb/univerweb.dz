@@ -156,7 +156,7 @@ header:has(nav) {
       }
     }
 
-    &:hover::after {
+    &:is(:hover, :focus-visible)::after {
       transform: scaleX(0.5);
     }
 
@@ -184,6 +184,10 @@ header:has(nav) {
       &:hover {
         color: var(--accent-color);
       }
+    }
+
+    &:focus-visible {
+      color: var(--accent-color);
     }
   }
 

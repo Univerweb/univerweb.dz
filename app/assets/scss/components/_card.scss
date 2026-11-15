@@ -49,7 +49,7 @@
     aspect-ratio: 49 / 52;
   }
 
-  &:hover img {
+  &:is(:hover, :focus-visible) img {
     scale: 1.1;
   }
 
@@ -132,15 +132,13 @@
 
   &:has(a:focus-visible) {
     @include focus-ring;
-
-    outline-color: var(--text-color-heading);
   }
 
   > svg {
     @include transition(fill, transform);
   }
 
-  &:is(:hover, :focus-within) > svg {
+  &:is(:hover, :has(a:focus-visible)) > svg {
     fill: var(--accent-color) !important;
     transform: scale(1.05);
   }

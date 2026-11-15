@@ -198,8 +198,8 @@
       }
     }
 
-    a:hover,
-    .tooltip-clipboard:hover {
+    a:is(:hover, :focus-visible),
+    .tooltip-clipboard:is(:hover, :focus-visible) {
       color: var(--accent-color);
     }
   }
