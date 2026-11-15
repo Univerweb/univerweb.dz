@@ -20,7 +20,7 @@
   }
 
   &:is(:hover, :focus-visible) {
-    animation: move calc(var(--duration-slow) * 2) forwards;
+    @include link-line-hover;
   }
 }
 

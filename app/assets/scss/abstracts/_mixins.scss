@@ -68,11 +68,18 @@
 }
 
 @mixin link-line {
+  @include transition(background-size);
+
   padding-bottom: 0.125rem;
   background-image: linear-gradient(var(--accent-color), var(--accent-color));
   background-repeat: no-repeat;
   background-position: var(--transform-origin-start) 100%;
+  background-size: 0% 0.1875rem;
+}
+
+@mixin link-line-hover {
   background-size: 5% 0.1875rem;
+  animation: move calc(var(--duration-slow) * 2);
 }
 
 @mixin text-link {

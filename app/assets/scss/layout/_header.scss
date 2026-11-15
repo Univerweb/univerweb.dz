@@ -102,6 +102,7 @@ header:has(nav) {
 
   a {
     @include typo(1.75rem, $weight: 500);
+    @include link-line;
 
     position: relative;
     display: grid;
@@ -112,7 +113,7 @@ header:has(nav) {
 
     .menu-open &,
     .menu-closing & {
-      transition-property: visibility, opacity, transform;
+      transition-property: visibility, opacity, transform, background-size;
     }
 
     .menu-open & {
@@ -138,30 +139,13 @@ header:has(nav) {
       transform: none;
     }
 
-    &::after {
-      @include transition(transform);
-
-      content: '';
-      position: absolute;
-      bottom: -0.125rem;
-      background-color: var(--accent-color);
-      width: 100%;
-      height: 0.25rem;
-      border-radius: var(--radius-pill);
-      transform: scaleX(0);
-      transform-origin: var(--transform-origin-start);
-
-      @media (min-width: $bp-md) {
-        height: 0.1875rem;
-      }
+    &:is(:hover, :focus-visible) {
+      @include link-line-hover;
     }
 
-    &:is(:hover, :focus-visible)::after {
-      transform: scaleX(0.5);
-    }
-
-    &.active::after {
-      transform: scaleX(1);
+    &.active {
+      background-size: 100% 0.1875rem;
+      animation: none;
     }
   }
 }

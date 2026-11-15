@@ -32,7 +32,7 @@
     }
 
     &:is(:hover, :focus-visible) > span {
-      animation: move calc(var(--duration-slow) * 2) forwards;
+      @include link-line-hover;
     }
 
     &.prev {
