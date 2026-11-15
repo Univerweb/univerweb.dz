@@ -11,7 +11,7 @@
   }
 
   .meta {
-    @include typo(0.9375rem, $weight: 500, $margin-top: 0, $margin-bottom: 0);
+    @include typo(var(--font-size-14), $weight: 500, $margin-top: 0, $margin-bottom: 0);
     @include transition(color);
 
     display: flex;
@@ -106,7 +106,7 @@
     }
 
     table {
-      @include typo(0.875rem);
+      @include typo(var(--font-size-14));
 
       width: 100%;
       min-width: 35rem;
@@ -176,7 +176,7 @@
       color: var(--text-color-heading);
 
       &-text {
-        @include typo(0.7813rem, $line-height: 1.76);
+        @include typo(var(--font-size-12), $line-height: 1.76);
 
         width: max-content;
         color: var(--text-color-on-accent);

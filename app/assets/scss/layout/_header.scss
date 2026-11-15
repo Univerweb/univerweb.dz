@@ -193,7 +193,7 @@ header:has(nav) {
 }
 
 .tooltip-lang {
-  @include typo(0.7813rem);
+  @include typo(var(--font-size-12));
 
   position: absolute;
   inset-inline-end: calc(100% + 0.5rem);

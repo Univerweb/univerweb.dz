@@ -50,7 +50,7 @@
     }
 
     &::before {
-      @include typo(0.8rem, $line-height: 0.9375);
+      @include typo(var(--font-size-12), $line-height: 0.9375);
       @include transition(color);
 
       content: attr(data-text);
