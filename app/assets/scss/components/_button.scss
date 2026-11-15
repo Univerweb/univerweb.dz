@@ -17,7 +17,7 @@
   }
 
   &:hover {
-    animation: move var(--duration-slow) forwards;
+    animation: move calc(var(--duration-slow) * 2) forwards;
   }
 }
 
