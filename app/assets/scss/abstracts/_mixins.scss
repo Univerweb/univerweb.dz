@@ -82,11 +82,9 @@
     linear-gradient(var(--accent-color), var(--accent-color)),
     linear-gradient(currentcolor, currentcolor);
   background-repeat: no-repeat;
-  background-position:
-    var(--transform-origin-start) 100%,
-    var(--transform-origin-start) 100%;
+  background-position: 0 100%;
   background-size:
-    0% 100%,
+    100% 0%,
     100% 0.0625rem;
 
   &:is(:hover, :focus-visible) {
