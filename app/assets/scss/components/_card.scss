@@ -89,11 +89,11 @@
 
   h2,
   h3 {
-    @include typo(2rem);
+    @include typo(var(--font-size-32));
 
     &.realisation {
       @media (min-width: $bp-xl) {
-        @include typo(3.5rem);
+        @include typo(var(--font-size-56));
       }
     }
   }
@@ -145,7 +145,7 @@
 
   h2,
   h3 {
-    @include typo(2rem);
+    @include typo(var(--font-size-32));
 
     margin-block: calc(var(--spacing-responsive) * 2) var(--spacing-24);
   }

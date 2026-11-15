@@ -59,7 +59,7 @@
     }
 
     h3 {
-      @include typo(1.5rem, $letter-spacing: 0, $margin-top: 2.75rem);
+      @include typo(var(--font-size-24), $letter-spacing: 0, $margin-top: 2.75rem);
     }
 
     a {

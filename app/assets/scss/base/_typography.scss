@@ -37,7 +37,7 @@ h3,
 h1,
 .h1 {
   @include typo(
-    2.75rem,
+    var(--font-size-40),
     $weight: 700,
     $line-height: var(--line-height-heading),
     $letter-spacing: -0.04em,
@@ -46,18 +46,18 @@ h1,
   );
 
   @media (min-width: $bp-md) {
-    @include typo(3.5rem, $margin-bottom: 2.25rem);
+    @include typo(var(--font-size-56), $margin-bottom: 2.25rem);
   }
 
   @media (min-width: $bp-lg) {
-    @include typo(5rem, $margin-bottom: 3rem);
+    @include typo(var(--font-size-80), $margin-bottom: 3rem);
   }
 }
 
 h2,
 .h2 {
   @include typo(
-    2rem,
+    var(--font-size-32),
     $weight: 500,
     $line-height: var(--line-height-heading),
     $letter-spacing: -0.04em,
@@ -66,18 +66,18 @@ h2,
   );
 
   @media (min-width: $bp-md) {
-    @include typo(2.625rem);
+    @include typo(var(--font-size-40));
   }
 
   @media (min-width: $bp-lg) {
-    @include typo(3.5rem);
+    @include typo(var(--font-size-56));
   }
 }
 
 h3,
 .h3 {
   @include typo(
-    1.25rem,
+    var(--font-size-24),
     $weight: 500,
     $line-height: var(--line-height-heading),
     $letter-spacing: -0.02em,
@@ -130,7 +130,7 @@ ol {
 
   .big-count::before {
     @include typo(
-      3.5rem,
+      var(--font-size-56),
       $weight: 900,
       $line-height: var(--line-height-heading)
     );
