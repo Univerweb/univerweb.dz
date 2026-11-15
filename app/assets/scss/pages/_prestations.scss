@@ -6,7 +6,7 @@
     margin-block-end: 0;
   }
 
-  .features p {
+  .features p:not(:last-child) {
     margin-block-end: var(--spacing-32);
   }
 
