@@ -26,9 +26,6 @@ header:has(nav) {
 
 .logo {
   display: grid;
-  align-items: center;
-  height: 1.5rem;
-  margin-inline-start: var(--spacing-4);
   visibility: visible;
   opacity: 1;
   transition-property: visibility, opacity;
@@ -40,19 +37,6 @@ header:has(nav) {
 
   .menu-closing & {
     transition-delay: var(--duration-base);
-  }
-
-  @media (min-width: $bp-md) {
-    margin-inline-start: 0;
-  }
-
-  .univerweb-logo {
-    width: auto;
-    height: 1.25rem;
-
-    @media (min-width: $bp-md) {
-      height: 1.5rem;
-    }
   }
 }
 
