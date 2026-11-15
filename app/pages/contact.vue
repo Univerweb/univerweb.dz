@@ -3,6 +3,7 @@ import { GoogleMap, CustomMarker } from 'vue3-google-map'
 
 const { locale, t } = useI18n()
 const config = useRuntimeConfig()
+const mode = useColorMode({ disableTransition: false })
 
 const { data: contact } = await useAsyncData(
   () => `contact-${locale.value}`,
@@ -59,9 +60,11 @@ function zoom() {
         <GoogleMap
           id="map"
           ref="mapRef"
+          :key="mode"
           dir="auto"
           :api-key="config.public.gmapsKey"
           :map-id="config.public.gmapsId"
+          :color-scheme="mode === 'dark' ? 'DARK' : 'LIGHT'"
           :center="position"
           :zoom="14"
           :street-view-control="false"
