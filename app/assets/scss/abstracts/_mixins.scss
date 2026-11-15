@@ -78,7 +78,7 @@
 }
 
 @mixin link-line-hover {
-  background-size: 5% 0.1875rem;
+  background-size: clamp(1rem, 25%, 2rem) 0.1875rem;
   animation: move calc(var(--duration-slow) * 2);
 }
 

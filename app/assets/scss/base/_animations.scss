@@ -4,34 +4,29 @@
     background-size: 0% 0.1875rem;
   }
 
-  25% {
+  30% {
     background-position-x: var(--transform-origin-start);
     background-size: 100% 0.1875rem;
   }
 
-  26% {
+  31% {
     background-position-x: var(--transform-origin-end);
     background-size: 100% 0.1875rem;
   }
 
   60% {
     background-position-x: var(--transform-origin-end);
-    background-size: 5% 0.1875rem;
-  }
-
-  80% {
-    background-position-x: var(--transform-origin-end);
     background-size: 0% 0.1875rem;
   }
 
-  81% {
+  61% {
     background-position-x: var(--transform-origin-start);
     background-size: 0% 0.1875rem;
   }
 
   100% {
     background-position-x: var(--transform-origin-start);
-    background-size: 5% 0.1875rem;
+    background-size: clamp(1rem, 25%, 2rem) 0.1875rem;
   }
 }
 
