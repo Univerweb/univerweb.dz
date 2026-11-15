@@ -8,7 +8,7 @@
     @include typo(1.25rem, $weight: 500);
 
     @media (min-width: $bp-md) {
-      @include typo(1.75rem);
+      @include typo(var(--font-size-24));
     }
   }
 

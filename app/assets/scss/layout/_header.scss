@@ -101,7 +101,7 @@ header:has(nav) {
   }
 
   a {
-    @include typo(1.75rem, $weight: 500);
+    @include typo(var(--font-size-32), $weight: 500);
     @include link-line;
 
     position: relative;
