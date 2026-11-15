@@ -131,7 +131,7 @@ ol {
   .big-count::before {
     @include typo(
       var(--font-size-56),
-      $weight: 900,
+      $weight: 600,
       $line-height: var(--line-height-heading)
     );
     @include transition(color);
