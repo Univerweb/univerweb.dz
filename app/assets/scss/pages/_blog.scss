@@ -68,9 +68,14 @@
 
     ul,
     ol {
-      margin-block: 0 var(--spacing-12);
+      margin-block: 0 var(--spacing-16);
       padding-inline-start: var(--spacing-24);
       list-style: revert;
+    }
+
+    li + li,
+    li > :is(ul, ol) {
+      margin-block-start: var(--spacing-8);
     }
 
     ol li::before {
