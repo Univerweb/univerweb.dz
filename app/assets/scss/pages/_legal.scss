@@ -12,7 +12,7 @@
   .content h2 {
     @include typo(
       var(--font-size-24),
-      $letter-spacing: 0,
+      $letter-spacing: var(--letter-spacing-snug),
       $margin-top: 2.75rem,
       $margin-bottom: 0.75rem
     );

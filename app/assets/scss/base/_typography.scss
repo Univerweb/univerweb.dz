@@ -40,7 +40,7 @@ h1,
     var(--font-size-40),
     $weight: 600,
     $line-height: var(--line-height-heading),
-    $letter-spacing: -0.04em,
+    $letter-spacing: var(--letter-spacing-tight),
     $margin-top: 0,
     $margin-bottom: 1.5rem
   );
@@ -60,7 +60,7 @@ h2,
     var(--font-size-32),
     $weight: 600,
     $line-height: var(--line-height-heading),
-    $letter-spacing: -0.04em,
+    $letter-spacing: var(--letter-spacing-tight),
     $margin-top: 0,
     $margin-bottom: 1.5rem
   );
@@ -80,22 +80,10 @@ h3,
     var(--font-size-24),
     $weight: 600,
     $line-height: var(--line-height-snug),
-    $letter-spacing: -0.02em,
+    $letter-spacing: var(--letter-spacing-snug),
     $margin-top: 0,
     $margin-bottom: 0.75rem
   );
-}
-
-:root[dir='rtl'] {
-  h1,
-  h2,
-  h3,
-  .h1,
-  .h2,
-  .h3,
-  .lead {
-    letter-spacing: normal;
-  }
 }
 
 a {
@@ -132,7 +120,8 @@ ol {
     @include typo(
       var(--font-size-56),
       $weight: 600,
-      $line-height: var(--line-height-heading)
+      $line-height: var(--line-height-heading),
+      $letter-spacing: var(--letter-spacing-tight)
     );
     @include transition(color);
 

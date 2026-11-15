@@ -17,7 +17,7 @@
     1.25rem,
     $weight: 500,
     $line-height: var(--line-height-snug),
-    $letter-spacing: -0.02em
+    $letter-spacing: var(--letter-spacing-snug)
   );
 
   footer & {
