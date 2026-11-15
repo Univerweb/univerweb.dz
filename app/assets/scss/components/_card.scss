@@ -89,7 +89,7 @@
 
   h2,
   h3 {
-    @include typo(var(--font-size-32));
+    @include typo(var(--font-size-32), $line-height: var(--line-height-heading));
 
     &.realisation {
       @media (min-width: $bp-xl) {
@@ -145,7 +145,7 @@
 
   h2,
   h3 {
-    @include typo(var(--font-size-32));
+    @include typo(var(--font-size-32), $line-height: var(--line-height-heading));
 
     margin-block: calc(var(--spacing-responsive) * 2) var(--spacing-24);
   }

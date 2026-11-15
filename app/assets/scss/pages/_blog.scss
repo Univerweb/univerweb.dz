@@ -51,7 +51,7 @@
     }
 
     .lead {
-      @include typo($line-height: 1.6, $letter-spacing: normal);
+      @include typo($line-height: var(--line-height-body), $letter-spacing: normal);
     }
 
     h2 {
@@ -176,7 +176,7 @@
       color: var(--text-color-heading);
 
       &-text {
-        @include typo(var(--font-size-12), $line-height: 1.76);
+        @include typo(var(--font-size-12), $line-height: var(--line-height-snug));
 
         width: max-content;
         color: var(--text-color-on-accent);

@@ -132,7 +132,7 @@ header:has(nav) {
     }
 
     @media (min-width: $bp-md) {
-      @include typo(var(--font-size-16), $line-height: 1.5);
+      @include typo(var(--font-size-16), $line-height: var(--line-height-snug));
 
       visibility: visible;
       opacity: 1;
@@ -193,7 +193,7 @@ header:has(nav) {
 }
 
 .tooltip-lang {
-  @include typo(var(--font-size-12));
+  @include typo(var(--font-size-12), $line-height: var(--line-height-snug));
 
   position: absolute;
   inset-inline-end: calc(100% + 0.5rem);

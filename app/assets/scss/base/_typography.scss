@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  @include typo(var(--font-size-16), $line-height: 1.6);
+  @include typo(var(--font-size-16), $line-height: var(--line-height-body));
   @include transition(background-color, color);
 
   margin: 0;
@@ -79,7 +79,7 @@ h3,
   @include typo(
     var(--font-size-24),
     $weight: 600,
-    $line-height: var(--line-height-heading),
+    $line-height: var(--line-height-snug),
     $letter-spacing: -0.02em,
     $margin-top: 0,
     $margin-bottom: 0.75rem

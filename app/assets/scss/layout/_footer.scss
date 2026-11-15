@@ -52,7 +52,7 @@ footer {
 }
 
 .copy {
-  @include typo(var(--font-size-12), $line-height: 1.28);
+  @include typo(var(--font-size-12), $line-height: var(--line-height-snug));
 
   display: grid;
   gap: var(--spacing-8);
