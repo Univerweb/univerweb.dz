@@ -94,12 +94,6 @@
       $line-height: var(--line-height-heading),
       $letter-spacing: var(--letter-spacing-tight)
     );
-
-    &.realisation {
-      @media (min-width: $bp-xl) {
-        @include typo(var(--font-size-56));
-      }
-    }
   }
 
   .inner > p {
