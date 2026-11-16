@@ -119,7 +119,7 @@ const { data: surround } = await useAsyncData(
           <h2 id="client" class="label">
             {{ t('headings.client') }}
           </h2>
-          <p class="lead">
+          <p>
             {{ project.title }}
           </p>
         </section>
@@ -128,7 +128,7 @@ const { data: surround } = await useAsyncData(
           <h2 id="category" class="label">
             {{ t('headings.category') }}
           </h2>
-          <p class="lead">
+          <p>
             {{ t(`category.${project.category}`) }}
           </p>
         </section>
@@ -137,7 +137,7 @@ const { data: surround } = await useAsyncData(
           <h2 id="services" class="label">
             {{ t('headings.completedServices') }}
           </h2>
-          <ul class="lead tags">
+          <ul class="tags">
             <li v-for="tag in project.tags" :key="tag">
               {{ t(`services.${tag}.name`) }}
             </li>
