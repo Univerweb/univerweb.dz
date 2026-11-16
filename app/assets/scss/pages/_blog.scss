@@ -98,7 +98,7 @@
       @include typo(var(--font-size-14));
 
       width: 100%;
-      min-width: 35rem;
+      min-width: var(--container-width-narrow);
       border-collapse: collapse;
 
       @media (min-width: $bp-md) {

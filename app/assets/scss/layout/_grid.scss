@@ -10,7 +10,7 @@
   }
 
   &-narrow {
-    @media (min-width: $bp-lg) {
+    @media (min-width: $bp-md) {
       --gutter: calc(50% - var(--container-width-narrow) / 2);
     }
   }
