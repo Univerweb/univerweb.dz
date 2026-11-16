@@ -71,7 +71,10 @@
     @include transition(color);
 
     color: var(--text-color-muted);
-    margin-block-end: var(--spacing-12);
+
+    &:not(:last-child) {
+      margin-block-end: var(--spacing-12);
+    }
   }
 
   h2,

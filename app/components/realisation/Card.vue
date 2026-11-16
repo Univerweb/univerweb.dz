@@ -3,8 +3,8 @@ import type { Collections } from '@nuxt/content'
 
 defineProps<{
   card: {
-    translated: Pick<Collections['project_fr' | 'project_en' | 'project_ar'], 'path' | 'title' | 'description' | 'createdAt' | 'updatedAt' | 'about'>
-    common: Pick<Collections['project'], 'category'>
+    translated: Pick<Collections['project_fr' | 'project_en' | 'project_ar'], 'path' | 'title' | 'description' | 'createdAt' | 'updatedAt'>
+    common: Pick<Collections['project'], 'category' | 'tags'>
   }
   titleTag: string
 }>()
@@ -37,9 +37,11 @@ const localePath = useLocalePath()
       <component :is="titleTag" property="name">
         {{ card.translated.title }}
       </component>
-      <p property="about">
-        {{ card.translated.about }}
-      </p>
+      <ul class="tags">
+        <li v-for="tag in card.common.tags" :key="tag" property="keywords">
+          {{ t(`services.${tag}.name`) }}
+        </li>
+      </ul>
     </div>
   </NuxtLink>
 </template>

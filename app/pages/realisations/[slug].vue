@@ -49,11 +49,11 @@ const { data: related } = await useAsyncData(
   async () => {
     const [translated, common] = await Promise.all([
       queryCollection(`project_${locale.value}`)
-        .select('path', 'title', 'description', 'createdAt', 'updatedAt', 'about')
+        .select('path', 'title', 'description', 'createdAt', 'updatedAt')
         .where('path', '<>', path)
         .all(),
       queryCollection('project')
-        .select('path', 'category')
+        .select('path', 'category', 'tags')
         .where('category', '=', project.value!.category)
         .all(),
     ])

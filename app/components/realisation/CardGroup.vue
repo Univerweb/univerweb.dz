@@ -23,12 +23,12 @@ const { data: projects } = await useAsyncData(
   async () => {
     const [translated, common] = await Promise.all([
       queryCollection(`project_${locale.value}`)
-        .select('path', 'stem', 'title', 'description', 'createdAt', 'updatedAt', 'about')
+        .select('path', 'stem', 'title', 'description', 'createdAt', 'updatedAt')
         .order('stem', 'DESC')
         .limit(props.limit || 0)
         .all(),
       queryCollection('project')
-        .select('path', 'category')
+        .select('path', 'category', 'tags')
         .all(),
     ])
 
