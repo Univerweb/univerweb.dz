@@ -51,10 +51,6 @@
   }
 
   .content {
-    @media (min-width: $bp-md) {
-      @include typo(var(--font-size-18));
-    }
-
     h2 {
       margin-top: 2.5em;
     }
