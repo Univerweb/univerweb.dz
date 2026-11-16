@@ -36,7 +36,7 @@ const localePath = useLocalePath()
     <AppPicture :picture="card" />
 
     <div class="inner">
-      <ul class="tags">
+      <ul class="label tags">
         <li v-for="tag in card.tags" :key="tag" property="keywords">
           {{ tag }}
         </li>

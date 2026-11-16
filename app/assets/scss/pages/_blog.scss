@@ -7,11 +7,16 @@
   }
 
   .tags {
-    margin-top: var(--spacing-24);
+    @include typo($weight: 500, $margin-top: var(--spacing-24));
   }
 
   .meta {
-    @include typo(var(--font-size-14), $weight: 500, $margin-top: 0, $margin-bottom: 0);
+    @include typo(
+      var(--font-size-14),
+      $weight: 500,
+      $margin-top: 0,
+      $margin-bottom: 0
+    );
     @include transition(color);
 
     display: flex;
@@ -161,7 +166,10 @@
       color: var(--text-color-heading);
 
       &-text {
-        @include typo(var(--font-size-12), $line-height: var(--line-height-snug));
+        @include typo(
+          var(--font-size-12),
+          $line-height: var(--line-height-snug)
+        );
 
         width: max-content;
         color: var(--text-color-on-accent);

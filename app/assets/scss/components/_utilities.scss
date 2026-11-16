@@ -53,8 +53,6 @@
 }
 
 .tags {
-  @include typo($weight: 500);
-
   li::before {
     @include transition(color);
 
