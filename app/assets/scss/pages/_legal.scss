@@ -1,4 +1,3 @@
-@use '../abstracts/mixins' as *;
 
 .legal {
   h1 {
@@ -7,14 +6,5 @@
 
   .meta {
     margin-bottom: calc(var(--spacing-responsive) * 2);
-  }
-
-  .content h2 {
-    @include typo(
-      var(--font-size-24),
-      $letter-spacing: var(--letter-spacing-snug),
-      $margin-top: 1.75em,
-      $margin-bottom: 0.5em
-    );
   }
 }
