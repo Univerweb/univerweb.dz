@@ -97,10 +97,10 @@
   }
 
   svg {
-    @include transition(transform);
+    @include transition(color, transform);
 
     background-color: var(--accent-color);
-    color: var(--text-color-on-accent);
+    color: var(--background-color);
     border-radius: var(--radius-pill);
     padding: 0.625rem;
     width: 2rem;
@@ -115,6 +115,7 @@
   &:hover svg,
   &:focus-visible svg {
     transform: translateX(0.3125rem);
+    color: var(--text-color-on-accent);
 
     .hero & {
       transform: translateY(1.5rem);
