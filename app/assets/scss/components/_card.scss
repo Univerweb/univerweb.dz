@@ -96,7 +96,7 @@
   display: grid;
   grid-auto-rows: auto auto 1fr;
   background-color: var(--surface-color);
-  padding: var(--spacing-responsive);
+  padding: var(--spacing-24);
   border-radius: var(--radius-32);
 
   &:has(a:focus-visible) {
@@ -115,15 +115,17 @@
   h2,
   h3 {
     @include typo(
-      var(--font-size-32),
-      $line-height: var(--line-height-heading),
-      $letter-spacing: var(--letter-spacing-tight)
+      var(--font-size-24),
+      $line-height: var(--line-height-snug),
+      $letter-spacing: var(--letter-spacing-snug),
+      $margin-top: var(--spacing-24),
+      $margin-bottom: 0.5em
     );
-
-    margin-block: calc(var(--spacing-responsive) * 2) var(--spacing-24);
   }
 
   p {
+    @include typo(var(--font-size-14), $line-height: var(--line-height-body));
+
     margin-block-end: 0;
   }
 
