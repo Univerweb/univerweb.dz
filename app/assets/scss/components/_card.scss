@@ -38,10 +38,19 @@
 }
 
 .card {
+  @include transition(background-color);
+
   display: grid;
   position: relative;
   overflow: hidden;
+  background-color: var(--surface-color);
+  padding: var(--spacing-8);
   border-radius: var(--radius-32);
+
+  picture {
+    overflow: hidden;
+    border-radius: calc(var(--radius-32) - var(--spacing-8));
+  }
 
   img {
     @include transition(scale);
@@ -51,19 +60,6 @@
 
   &:is(:hover, :focus-visible) img {
     scale: 1.1;
-  }
-
-  .overlay {
-    @include transition(background-color);
-
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: var(--overlay-color);
-  }
-
-  &:focus-visible .overlay {
-    background-color: var(--accent-color);
   }
 
   .inner {

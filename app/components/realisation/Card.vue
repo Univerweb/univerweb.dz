@@ -30,8 +30,6 @@ const localePath = useLocalePath()
 
     <AppPicture :picture="card.translated" alt="" />
 
-    <div class="overlay" />
-
     <div class="inner">
       <span class="label">
         {{ t(`category.${card.common.category}`) }}
