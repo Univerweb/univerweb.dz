@@ -32,11 +32,11 @@
     grid-column: 1 / 13;
 
     @media (min-width: $bp-md) {
-      grid-column: 1 / 10;
+      grid-column: 1 / 11;
     }
 
     @media (min-width: $bp-xl) {
-      grid-column: 1 / 8;
+      grid-column: 1 / 9;
     }
   }
 }
