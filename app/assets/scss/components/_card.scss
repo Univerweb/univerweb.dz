@@ -56,7 +56,7 @@
   img {
     @include transition(scale);
 
-    aspect-ratio: 49 / 52;
+    aspect-ratio: 4 / 3;
   }
 
   &:is(:hover, :focus-visible) img {
