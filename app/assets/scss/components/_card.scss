@@ -41,6 +41,7 @@
   @include transition(background-color);
 
   display: grid;
+  align-content: start;
   position: relative;
   overflow: hidden;
   background-color: var(--surface-color);
@@ -63,24 +64,12 @@
   }
 
   .inner {
-    display: grid;
-    grid-auto-rows: auto 1fr auto;
-    position: absolute;
-    height: 100%;
-    color: var(--text-color-on-overlay);
-    padding: var(--spacing-responsive);
-
-    :is(h2, h3, .label) {
-      color: inherit;
-    }
+    padding-block: var(--spacing-16) var(--spacing-12);
+    padding-inline: var(--spacing-16);
   }
 
   .tags {
     margin-block-end: var(--spacing-12);
-
-    li::before {
-      color: currentcolor;
-    }
   }
 
   h2,
@@ -90,27 +79,6 @@
       $line-height: var(--line-height-heading),
       $letter-spacing: var(--letter-spacing-tight)
     );
-  }
-
-  .inner > p {
-    visibility: hidden;
-
-    @media (min-width: $bp-md) {
-      @include transition(opacity, transform, visibility);
-
-      visibility: visible;
-      color: var(--text-color-on-overlay);
-      opacity: 0;
-      transform: translateY(1.25rem);
-    }
-  }
-
-  @media (min-width: $bp-md) {
-    &:hover .inner > p,
-    &:focus-visible .inner > p {
-      opacity: 0.8;
-      transform: translateY(0);
-    }
   }
 }
 
