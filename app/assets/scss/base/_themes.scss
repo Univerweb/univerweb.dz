@@ -43,7 +43,9 @@
   --letter-spacing-tight: -0.04em;
   --letter-spacing-snug: -0.02em;
 
-  --gutter: var(--spacing-responsive);
+  // Marge de page et marges intérieures du header = hauteur du logo (espace libre de la charte)
+  --logo-height: 1rem;
+  --gutter: var(--logo-height);
   --spacing-responsive: 1rem;
 
   --spacing-4: 0.25rem;
@@ -57,7 +59,7 @@
   --spacing-96: 6rem;
   --spacing-144: 9rem;
 
-  --header-height: 4.5rem;
+  --header-height: calc(var(--logo-height) * 3);
   --container-width: 100%;
   --container-width-narrow: 34rem;
   --container-width-wide: 87.5rem;
@@ -102,7 +104,12 @@
     --transform-origin-end: 0%;
   }
 
+  @media (min-width: $bp-sm) {
+    --logo-height: 1.25rem;
+  }
+
   @media (min-width: $bp-md) {
+    --logo-height: 1.5rem;
     --spacing-responsive: 1.5rem;
 
     &:not(.scrolled) {

@@ -2,12 +2,14 @@
 @use '../abstracts/mixins' as *;
 
 header:has(nav) {
-  @include grid(2, auto, $justify: space-between);
-  @include transition(background-color, padding, box-shadow);
+  @include grid(2, auto, $align: center, $justify: space-between);
+  @include transition(background-color, height, box-shadow);
 
   position: fixed;
+  align-items: center;
   width: 100%;
-  padding: var(--spacing-24) var(--gutter);
+  height: var(--header-height);
+  padding-inline: var(--gutter);
   background-color: var(--background-color);
   z-index: 1;
 
@@ -17,10 +19,6 @@ header:has(nav) {
 
   @media (min-width: $bp-md) {
     grid-template-columns: repeat(3, auto);
-
-    html:not(.scrolled) & {
-      padding-block: var(--spacing-32);
-    }
   }
 }
 
@@ -38,6 +36,11 @@ header:has(nav) {
   .menu-closing & {
     transition-delay: var(--duration-base);
   }
+}
+
+.univerweb-logo {
+  width: auto;
+  height: var(--logo-height);
 }
 
 .univerweb-logo path {
