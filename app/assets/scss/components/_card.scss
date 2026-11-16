@@ -69,16 +69,25 @@
   }
 
   .tags {
+    @include typo(var(--font-size-12));
+    @include transition(color);
+
+    color: var(--text-color-muted);
     margin-block-end: var(--spacing-12);
   }
 
   h2,
   h3 {
     @include typo(
-      var(--font-size-32),
-      $line-height: var(--line-height-heading),
-      $letter-spacing: var(--letter-spacing-tight)
+      var(--font-size-24),
+      $line-height: var(--line-height-snug),
+      $letter-spacing: var(--letter-spacing-snug),
+      $margin-bottom: 0.5em
     );
+  }
+
+  .inner > p {
+    @include typo(var(--font-size-14), $line-height: var(--line-height-body));
   }
 }
 
