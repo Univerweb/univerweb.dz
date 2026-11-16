@@ -21,7 +21,7 @@
   }
 
   footer & {
-    @include typo(var(--font-size-20), $weight: 300);
+    @include typo(var(--font-size-20));
 
     margin: 0;
     max-width: 25rem;

@@ -55,7 +55,7 @@
     }
 
     h3 {
-      @include typo(var(--font-size-24), $margin-top: 2.75rem);
+      @include typo($margin-top: 2.75rem);
     }
 
     a {
@@ -140,10 +140,7 @@
     border-block: 0.0625rem solid var(--border-color);
 
     h2 {
-      @include transition(color);
-
       margin: 0;
-      color: var(--text-color-body);
     }
 
     ul {
