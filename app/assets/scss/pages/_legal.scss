@@ -13,8 +13,8 @@
     @include typo(
       var(--font-size-24),
       $letter-spacing: var(--letter-spacing-snug),
-      $margin-top: 2.75rem,
-      $margin-bottom: 0.75rem
+      $margin-top: 1.75em,
+      $margin-bottom: 0.5em
     );
   }
 }

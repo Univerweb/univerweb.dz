@@ -51,11 +51,11 @@
     }
 
     h2 {
-      margin-block: var(--spacing-72) var(--spacing-32);
+      margin-top: 2.25em;
     }
 
     h3 {
-      @include typo($margin-top: 2.75rem);
+      margin-top: 1.75em;
     }
 
     a {

@@ -41,15 +41,15 @@ h1,
     $line-height: var(--line-height-heading),
     $letter-spacing: var(--letter-spacing-tight),
     $margin-top: 0,
-    $margin-bottom: 1.5rem
+    $margin-bottom: 0.6em
   );
 
   @media (min-width: $bp-md) {
-    @include typo(var(--font-size-56), $margin-bottom: 2.25rem);
+    @include typo(var(--font-size-56));
   }
 
   @media (min-width: $bp-lg) {
-    @include typo(var(--font-size-80), $margin-bottom: 3rem);
+    @include typo(var(--font-size-80));
   }
 }
 
@@ -61,7 +61,7 @@ h2,
     $line-height: var(--line-height-heading),
     $letter-spacing: var(--letter-spacing-tight),
     $margin-top: 0,
-    $margin-bottom: 1.5rem
+    $margin-bottom: 0.6em
   );
 
   @media (min-width: $bp-md) {
@@ -80,7 +80,7 @@ h3 {
     $line-height: var(--line-height-snug),
     $letter-spacing: var(--letter-spacing-snug),
     $margin-top: 0,
-    $margin-bottom: 0.75rem
+    $margin-bottom: 0.5em
   );
 }
 
