@@ -64,6 +64,12 @@
   .inner {
     padding-block: var(--spacing-24) var(--spacing-16);
     padding-inline: var(--spacing-16);
+
+    & > :is(p, ul.services) {
+      @include transition(color);
+
+      color: var(--text-color-body);
+    }
   }
 }
 
