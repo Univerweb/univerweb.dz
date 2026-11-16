@@ -34,7 +34,7 @@
     $weight: 500,
     $line-height: var(--line-height-snug),
     $letter-spacing: normal,
-    $margin-bottom: 0.375rem
+    $margin-bottom: var(--spacing-4)
   );
   @include transition(color);
 
