@@ -147,7 +147,7 @@ ol {
       @include typo(var(--font-size-80));
     }
 
-    color: var(--text-color-muted);
+    color: var(--accent-color);
     margin-bottom: var(--spacing-12);
     display: block;
   }

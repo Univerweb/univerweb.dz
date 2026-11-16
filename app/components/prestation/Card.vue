@@ -9,7 +9,7 @@ defineProps<{
 
 <template>
   <div class="card-prestation" vocab="https://schema.org/" typeof="Service">
-    <component :is="card.icon" fill="var(--text-color-muted)" />
+    <component :is="card.icon" fill="var(--accent-color)" />
 
     <component :is="titleTag" property="name serviceType" class="h3">
       {{ card.title }}
