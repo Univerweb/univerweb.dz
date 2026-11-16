@@ -80,7 +80,7 @@
     }
 
     code {
-      @include typo(0.875em);
+      @include typo(var(--font-size-14));
       @include transition(background-color);
 
       background-color: var(--surface-color);
