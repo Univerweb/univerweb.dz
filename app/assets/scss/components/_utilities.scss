@@ -1,3 +1,4 @@
+@use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
 .visually-hidden {
@@ -13,15 +14,14 @@
 }
 
 .lead {
-  @include typo(
-    var(--font-size-20),
-    $weight: 500,
-    $line-height: var(--line-height-snug),
-    $letter-spacing: var(--letter-spacing-snug)
-  );
+  @include typo(var(--font-size-20), $line-height: var(--line-height-lead), $letter-spacing: var(--letter-spacing-snug));
+
+  @media (min-width: $bp-md) {
+    @include typo(var(--font-size-24));
+  }
 
   footer & {
-    @include typo($weight: 300);
+    @include typo(var(--font-size-20), $weight: 300);
 
     margin: 0;
     max-width: 25rem;

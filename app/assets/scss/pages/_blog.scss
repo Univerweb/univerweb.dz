@@ -50,10 +50,6 @@
       @include typo(var(--font-size-18));
     }
 
-    .lead {
-      @include typo($line-height: var(--line-height-body));
-    }
-
     h2 {
       margin-block: var(--spacing-72) var(--spacing-32);
     }
