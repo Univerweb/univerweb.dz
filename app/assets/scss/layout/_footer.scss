@@ -2,7 +2,6 @@
 @use '../abstracts/mixins' as *;
 
 footer {
-  @include typo($weight: 300);
   @include transition(transform);
 
   padding: var(--spacing-48) var(--gutter);
