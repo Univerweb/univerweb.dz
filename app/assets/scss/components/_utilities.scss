@@ -14,7 +14,11 @@
 }
 
 .lead {
-  @include typo(var(--font-size-20), $line-height: var(--line-height-lead), $letter-spacing: var(--letter-spacing-snug));
+  @include typo(
+    var(--font-size-20),
+    $line-height: var(--line-height-lead),
+    $letter-spacing: var(--letter-spacing-snug)
+  );
 
   @media (min-width: $bp-md) {
     @include typo(var(--font-size-24));
@@ -41,17 +45,30 @@
   color: var(--text-color-muted);
 }
 
-.tags {
-  @include typo($weight: 500);
-
+.tags,
+.services {
   display: flex;
   flex-wrap: wrap;
-  column-gap: var(--spacing-12);
+  column-gap: var(--spacing-8);
+}
+
+.tags {
+  @include typo($weight: 500);
 
   li::before {
     @include transition(color);
 
-    content: '#';
     color: var(--text-color-muted);
+    content: '#';
+  }
+}
+
+.services {
+  li:not(:last-child)::after {
+    @include transition(color);
+
+    color: var(--text-color-muted);
+    content: '·';
+    margin-inline-start: var(--spacing-8);
   }
 }

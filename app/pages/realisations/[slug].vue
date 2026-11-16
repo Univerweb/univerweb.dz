@@ -137,7 +137,7 @@ const { data: surround } = await useAsyncData(
           <h2 id="services" class="label">
             {{ t('headings.completedServices') }}
           </h2>
-          <ul class="tags">
+          <ul class="services">
             <li v-for="tag in project.tags" :key="tag">
               {{ t(`services.${tag}.name`) }}
             </li>

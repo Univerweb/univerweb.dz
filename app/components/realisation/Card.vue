@@ -37,7 +37,7 @@ const localePath = useLocalePath()
       <component :is="titleTag" property="name">
         {{ card.translated.title }}
       </component>
-      <ul class="tags">
+      <ul class="services">
         <li v-for="tag in card.common.tags" :key="tag" property="keywords">
           {{ t(`services.${tag}.name`) }}
         </li>
