@@ -61,7 +61,7 @@ h2,
 .h2 {
   @include typo(
     var(--font-size-32),
-    $weight: 500,
+    $weight: 600,
     $line-height: var(--line-height-heading),
     $letter-spacing: var(--letter-spacing-tight),
     $margin-top: 0,
@@ -81,7 +81,7 @@ h3,
 .h3 {
   @include typo(
     var(--font-size-24),
-    $weight: 500,
+    $weight: 600,
     $line-height: var(--line-height-snug),
     $letter-spacing: var(--letter-spacing-snug),
     $margin-top: 0,
@@ -92,7 +92,7 @@ h3,
 .h4 {
   @include typo(
     var(--font-size-20),
-    $weight: 500,
+    $weight: 600,
     $line-height: var(--line-height-snug),
     $letter-spacing: var(--letter-spacing-snug),
     $margin-top: 0,
