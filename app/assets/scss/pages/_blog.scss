@@ -8,6 +8,10 @@
     margin-bottom: var(--spacing-4);
   }
 
+  .content.container {
+    padding-bottom: calc(var(--spacing-responsive) * 2);
+  }
+
   .meta {
     @include typo(
       var(--font-size-14),
