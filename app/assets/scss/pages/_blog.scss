@@ -3,7 +3,13 @@
 
 .blog {
   .tags {
-    @include typo($weight: 500, $margin-top: var(--spacing-24));
+    @include typo($weight: 500);
+
+    margin-bottom: var(--spacing-4);
+  }
+
+  article > header.intro {
+    padding-bottom: calc(var(--spacing-responsive) * 2);
   }
 
   .meta {
