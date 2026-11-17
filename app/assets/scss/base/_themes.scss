@@ -43,8 +43,6 @@
   --letter-spacing-tight: -0.04em;
   --letter-spacing-snug: -0.02em;
 
-  // Espace libre du logo (charte) : marges intérieures du header au moins égales à sa hauteur
-  --logo-height: 1.5rem;
   --gutter: var(--spacing-responsive);
   --spacing-responsive: 1rem;
 
@@ -59,7 +57,7 @@
   --spacing-96: 6rem;
   --spacing-144: 9rem;
 
-  --header-height: calc(var(--logo-height) * 3);
+  --header-height: 4.5rem;
   --container-width: 100%;
   --container-width-narrow: 34rem;
   --container-width-wide: 87.5rem;

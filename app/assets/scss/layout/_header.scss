@@ -9,7 +9,7 @@ header:has(nav) {
   align-items: center;
   width: 100%;
   height: var(--header-height);
-  padding-inline: max(var(--logo-height), var(--gutter));
+  padding-inline: max(var(--spacing-24), var(--gutter)); // espace libre du logo (24px) respecté sur mobile
   background-color: var(--background-color);
   z-index: 1;
 
@@ -36,11 +36,6 @@ header:has(nav) {
   .menu-closing & {
     transition-delay: var(--duration-base);
   }
-}
-
-.univerweb-logo {
-  width: auto;
-  height: var(--logo-height);
 }
 
 .univerweb-logo path {
