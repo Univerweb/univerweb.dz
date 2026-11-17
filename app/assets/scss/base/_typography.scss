@@ -41,7 +41,7 @@ h1,
 .h1 {
   @include typo(
     var(--font-size-40),
-    $weight: 500,
+    $weight: 600,
     $line-height: var(--line-height-heading),
     $letter-spacing: var(--letter-spacing-tight),
     $margin-top: 0,
@@ -133,7 +133,7 @@ ol {
   .big-count::before {
     @include typo(
       var(--font-size-40),
-      $weight: 500,
+      $weight: 600,
       $line-height: var(--line-height-heading),
       $letter-spacing: var(--letter-spacing-tight)
     );
