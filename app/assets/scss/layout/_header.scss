@@ -9,7 +9,9 @@ header:has(nav) {
   align-items: center;
   width: 100%;
   height: var(--header-height);
-  padding-inline: max(var(--spacing-24), var(--gutter)); // espace libre du logo (24px) respecté sur mobile
+
+  // espace libre du logo (24px) respecté sur mobile
+  padding-inline: max(var(--spacing-24), var(--gutter));
   background-color: var(--background-color);
   z-index: 1;
 
@@ -118,7 +120,9 @@ header:has(nav) {
       visibility: visible;
       opacity: 1;
       transform: translateY(0);
-      transition-delay: calc(var(--duration-base) + var(--item-number) * var(--duration-stagger));
+      transition-delay: calc(
+        var(--duration-base) + var(--item-number) * var(--duration-stagger)
+      );
       transition-timing-function: cubic-bezier(0.55, 0.09, 0.68, 0.53);
     }
 
@@ -202,8 +206,8 @@ header:has(nav) {
   @media (min-width: $bp-lg) {
     &.active {
       visibility: visible;
-      animation: tooltip-lang calc(var(--duration-base) * 10) var(--duration-base)
-        ease-in-out;
+      animation: tooltip-lang calc(var(--duration-base) * 10)
+        var(--duration-base) ease-in-out;
 
       :root[dir='rtl'] & {
         animation-direction: reverse;
