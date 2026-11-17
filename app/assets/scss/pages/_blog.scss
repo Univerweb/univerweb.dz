@@ -120,7 +120,6 @@
       border-radius: var(--radius-8);
       overflow-x: auto;
 
-      // Le code d'un bloc n'a pas le fond ni les marges du code en ligne
       code {
         font-size: inherit;
         background-color: transparent;
@@ -171,7 +170,6 @@
       border-radius: var(--radius-4);
     }
 
-    // Exposant et indice sans décaler l'interligne
     sup,
     sub {
       position: relative;

@@ -9,8 +9,6 @@ header:has(nav) {
   align-items: center;
   width: 100%;
   height: var(--header-height);
-
-  // espace libre du logo (24px) respecté sur mobile
   padding-inline: max(var(--spacing-24), var(--gutter));
   background-color: var(--background-color);
   z-index: 1;
