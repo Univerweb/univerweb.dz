@@ -6,3 +6,7 @@
     aspect-ratio: 16 / 9;
   }
 }
+
+.container:has(+ :is(.banner, .banner-realisations)) {
+  padding-bottom: calc(var(--spacing-responsive) * 2);
+}
