@@ -2,10 +2,6 @@
 @use '../abstracts/mixins' as *;
 
 .blog {
-  h1 {
-    margin-block-end: var(--spacing-24);
-  }
-
   .tags {
     @include typo($weight: 500, $margin-top: var(--spacing-24));
   }
