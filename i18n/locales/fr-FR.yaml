@@ -35,10 +35,10 @@ actions:
     main: Aller au contenu principal
     footer: Aller au pied de page
   requestMeeting:
-    headline: Convaincu ? Prenons un café ensemble.
+    headline: Convaincu ? Prenons un café ensemble.
     text: Contactez-nous
   visit: Visiter le site web
-  copy: Copié !
+  copy: Copié !
 
 headings:
   client: Client
