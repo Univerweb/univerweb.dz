@@ -9,7 +9,7 @@ header:has(nav) {
   align-items: center;
   width: 100%;
   height: var(--header-height);
-  padding-inline: var(--gutter);
+  padding-inline: max(var(--logo-height), var(--gutter));
   background-color: var(--background-color);
   z-index: 1;
 

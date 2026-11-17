@@ -43,9 +43,9 @@
   --letter-spacing-tight: -0.04em;
   --letter-spacing-snug: -0.02em;
 
-  // Marge de page et marges intérieures du header = hauteur du logo (espace libre de la charte)
-  --logo-height: 1rem;
-  --gutter: var(--logo-height);
+  // Espace libre du logo (charte) : marges intérieures du header au moins égales à sa hauteur
+  --logo-height: 1.5rem;
+  --gutter: var(--spacing-responsive);
   --spacing-responsive: 1rem;
 
   --spacing-4: 0.25rem;
@@ -104,12 +104,7 @@
     --transform-origin-end: 0%;
   }
 
-  @media (min-width: $bp-sm) {
-    --logo-height: 1.25rem;
-  }
-
   @media (min-width: $bp-md) {
-    --logo-height: 1.5rem;
     --spacing-responsive: 1.5rem;
 
     &:not(.scrolled) {

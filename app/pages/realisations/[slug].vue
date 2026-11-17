@@ -110,7 +110,7 @@ const { data: surround } = await useAsyncData(
         :picture="project"
         type="banner"
         :alt="t('alt.banner', { client: project.title })"
-        sizes="342px xs:392px sm:727px md:975px lg:1183px xl:1343px xxl:1400px"
+        sizes="342px xs:392px sm:735px md:975px lg:1183px xl:1343px xxl:1400px"
         class="banner-realisations"
       />
 
@@ -176,7 +176,7 @@ const { data: surround } = await useAsyncData(
           :picture="project"
           type="preview"
           :alt="t('alt.preview', { client: project.title })"
-          sizes="304px xs:354px sm:689px md:921px lg:565px xl:730px"
+          sizes="304px xs:354px sm:697px md:921px lg:565px xl:730px"
           class="col col--5-13 preview"
           :img-attrs="null"
         />
