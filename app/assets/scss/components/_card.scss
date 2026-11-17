@@ -5,20 +5,12 @@
   @include grid(
     1,
     minmax(auto, var(--column-width)),
-    var(--spacing-24),
+    var(--spacing-16),
     $justify: center
   );
 
   .intro + & {
-    margin-top: var(--spacing-24);
-
-    @media (min-width: $bp-md) {
-      margin-top: var(--spacing-32);
-    }
-
-    @media (min-width: $bp-lg) {
-      margin-top: var(--spacing-48);
-    }
+    margin-top: calc(var(--spacing-responsive) * 2);
   }
 
   @media (min-width: $bp-md) {
@@ -62,8 +54,7 @@
   }
 
   .inner {
-    padding-block: var(--spacing-24) var(--spacing-16);
-    padding-inline: var(--spacing-16);
+    padding: var(--spacing-24);
 
     & > :is(p, ul.services) {
       @include transition(color);
