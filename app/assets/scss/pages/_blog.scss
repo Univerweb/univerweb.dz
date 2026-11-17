@@ -88,6 +88,111 @@
       border-radius: var(--radius-4);
     }
 
+
+    blockquote {
+      @include typo(
+        var(--font-size-20),
+        $line-height: var(--line-height-lead),
+        $letter-spacing: var(--letter-spacing-snug)
+      );
+      @include transition(color, border-color);
+
+      margin: var(--spacing-32) 0;
+      padding-inline-start: var(--spacing-24);
+      border-inline-start: 0.1875rem solid var(--accent-color);
+      color: var(--text-color-heading);
+
+      p {
+        margin-bottom: var(--spacing-12);
+      }
+
+      cite {
+        @include typo(var(--font-size-14));
+
+        display: block;
+        font-style: normal;
+        color: var(--text-color-muted);
+      }
+    }
+
+    pre {
+      @include typo(var(--font-size-14), $line-height: var(--line-height-body));
+      @include transition(background-color);
+
+      margin-block: var(--spacing-24);
+      padding: var(--spacing-16);
+      background-color: var(--surface-color);
+      border-radius: var(--radius-8);
+      overflow-x: auto;
+
+      // Le code d'un bloc n'a pas le fond ni les marges du code en ligne
+      code {
+        font-size: inherit;
+        background-color: transparent;
+        padding: 0;
+        border-radius: 0;
+      }
+    }
+
+    hr {
+      @include transition(border-color);
+
+      margin-block: var(--spacing-48);
+      border: 0;
+      border-top: 1px solid var(--border-color);
+    }
+
+    figure {
+      margin: var(--spacing-32) 0;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: var(--radius-8);
+      }
+    }
+
+    figcaption,
+    small {
+      @include typo(var(--font-size-14), $line-height: var(--line-height-body));
+      @include transition(color);
+
+      color: var(--text-color-muted);
+    }
+
+    figcaption {
+      margin-top: var(--spacing-8);
+    }
+
+    kbd {
+      @include transition(background-color, border-color);
+
+      font-size: 0.875em;
+      padding: 0.1em 0.4em;
+      background-color: var(--surface-color);
+      border: 1px solid var(--border-color);
+      border-bottom-width: 2px;
+      border-radius: var(--radius-4);
+    }
+
+    // Exposant et indice sans décaler l'interligne
+    sup,
+    sub {
+      position: relative;
+      font-size: 0.75em;
+      line-height: 0;
+      vertical-align: baseline;
+    }
+
+    sup {
+      top: -0.5em;
+    }
+
+    sub {
+      bottom: -0.25em;
+    }
+
     .table-wrapper {
       margin-block: var(--spacing-32);
       overflow-x: auto;
