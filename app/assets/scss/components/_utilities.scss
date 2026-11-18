@@ -53,10 +53,11 @@
 }
 
 .tags {
-  li::before {
-    @include transition(color);
+  @include transition(color);
 
-    color: var(--text-color-muted);
+  color: var(--text-color-muted);
+
+  li::before {
     content: '#';
   }
 }
