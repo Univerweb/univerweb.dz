@@ -25,8 +25,8 @@
     flex-wrap: wrap;
     color: var(--text-color-muted);
 
-    dd {
-      margin: 0;
+    div {
+      display: flex;
 
       &:not(:last-child) {
         position: relative;
@@ -38,6 +38,10 @@
           inset-inline-end: var(--spacing-8);
         }
       }
+    }
+
+    dd {
+      margin: 0;
     }
 
     a {

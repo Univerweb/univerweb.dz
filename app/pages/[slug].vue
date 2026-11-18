@@ -56,7 +56,7 @@ useSeo({
         </h1>
 
         <dl class="meta">
-          <template v-if="legal.createdAt === legal.updatedAt">
+          <div v-if="legal.createdAt === legal.updatedAt">
             <dt>{{ t('blog.createdAt') }}&nbsp;</dt>
             <dd>
               <NuxtTime
@@ -65,9 +65,9 @@ useSeo({
                 :date-style="locale === 'ar' ? 'long' : 'medium'"
               />
             </dd>
-          </template>
+          </div>
 
-          <template v-else>
+          <div v-else>
             <dt>{{ t('blog.updatedAt') }}&nbsp;</dt>
             <dd>
               <NuxtTime
@@ -76,7 +76,7 @@ useSeo({
                 :date-style="locale === 'ar' ? 'long' : 'medium'"
               />
             </dd>
-          </template>
+          </div>
         </dl>
       </header>
 
