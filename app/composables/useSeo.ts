@@ -25,7 +25,7 @@ export function useSeo(options: Options) {
 
   const locales = { fr: 'fr_FR', en: 'en_US', ar: 'ar_DZ' }
 
-  const defaultOgImage = computed(() => baseUrl(`/images/univerweb${locale.value === 'ar' ? '-ar' : ''}.jpg`))
+  const defaultOgImage = computed(() => baseUrl(`/images/univerweb${locale.value === 'ar' ? '-ar' : ''}.png`))
   const defaultOgImageWidth = 2400
   const defaultOgImageHeight = 1256
 
@@ -45,9 +45,11 @@ export function useSeo(options: Options) {
   )
 
   const ogImage: ComputedRef<string | undefined> = computed(() => options.ogImageAlt
-    ? img(localePath(`${path}_banner`, 'fr'), { format: 'webp', width: options.ogImageWidth || defaultOgImageWidth, height: options.ogImageHeight || defaultOgImageHeight })
+    ? img(localePath(`${path}_banner`, 'fr'), { format: 'jpg', width: options.ogImageWidth || defaultOgImageWidth, height: options.ogImageHeight || defaultOgImageHeight })
     : defaultOgImage.value,
   )
+
+  const ogImageType = computed(() => options.ogImageAlt ? 'image/jpeg' as const : 'image/png' as const)
 
   const ogImageAlt: () => string = options.ogImageAlt || (() => t('site.logo'))
 
@@ -79,7 +81,7 @@ export function useSeo(options: Options) {
     ogImageAlt,
     ogImageWidth: options.ogImageWidth || defaultOgImageWidth,
     ogImageHeight: options.ogImageHeight || defaultOgImageHeight,
-    ogImageType: 'image/jpeg',
+    ogImageType,
     twitterCard: 'summary_large_image',
     twitterSite: '@Univerweb',
     twitterTitle: ogTitle,
@@ -88,7 +90,7 @@ export function useSeo(options: Options) {
     twitterImageAlt: ogImageAlt,
     twitterImageWidth: options.ogImageWidth || defaultOgImageWidth,
     twitterImageHeight: options.ogImageHeight || defaultOgImageHeight,
-    twitterImageType: 'image/jpeg',
+    twitterImageType: ogImageType,
     colorScheme: 'light dark',
     themeColor: computed(() => mode.value === 'dark' ? '#001226' : '#fff'),
     appleMobileWebAppTitle: ogSiteName,
