@@ -28,7 +28,7 @@
     }
   }
 
-  * {
+  > * {
     grid-column: 1 / 13;
 
     @media (min-width: $bp-md) {

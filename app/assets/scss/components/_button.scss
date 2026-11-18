@@ -72,8 +72,7 @@
       transform: rotate(180deg);
     }
 
-    &:hover svg,
-    &:focus-visible svg {
+    &:is(:hover, :focus-visible) svg {
       transform: translateX(-0.3125rem);
 
       :root[dir='rtl'] & {
@@ -82,18 +81,15 @@
     }
   }
 
-  &:hover,
-  &:focus-visible {
+  &:is(:hover, :focus-visible) {
     @include typo($weight: 600);
 
     background-color: var(--accent-color);
     color: var(--text-color-on-accent);
   }
 
-  &:focus-visible {
-    &.skip-link {
-      transform: translateY(0);
-    }
+  &.skip-link:focus-visible {
+    transform: translateY(0);
   }
 
   svg {
@@ -112,8 +108,7 @@
     }
   }
 
-  &:hover svg,
-  &:focus-visible svg {
+  &:is(:hover, :focus-visible) svg {
     transform: translateX(0.3125rem);
     color: var(--text-color-on-accent);
 

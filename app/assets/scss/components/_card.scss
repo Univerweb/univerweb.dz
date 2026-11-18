@@ -29,14 +29,18 @@
   }
 }
 
-.card {
+.card,
+.card-prestation {
   @include transition(background-color);
 
   display: grid;
-  align-content: start;
   background-color: var(--surface-color);
-  padding: var(--spacing-16);
   border-radius: var(--radius-32);
+}
+
+.card {
+  align-content: start;
+  padding: var(--spacing-16);
 
   picture {
     overflow: hidden;
@@ -65,26 +69,20 @@
 }
 
 .card-prestation {
-  @include transition(background-color);
-
   position: relative;
-  display: grid;
   grid-auto-rows: auto auto 1fr;
-  background-color: var(--surface-color);
   padding: var(--spacing-32);
-  border-radius: var(--radius-32);
 
   &:has(a:focus-visible) {
     @include focus-ring;
   }
 
   > svg {
-    @include transition(fill, transform);
+    @include transition(scale);
   }
 
   &:is(:hover, :has(a:focus-visible)) > svg {
-    fill: var(--accent-color) !important;
-    transform: scale(1.05);
+    scale: 1.05;
   }
 
   .h3 {

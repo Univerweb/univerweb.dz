@@ -75,15 +75,9 @@ footer {
       position: relative;
 
       &::before {
-        @include transition(background-color);
+        @include vertical-rule;
 
-        content: '';
-        position: absolute;
-        inset-inline-start: -0.5rem;
-        height: 0.625rem;
-        width: 0.0625rem;
-        background-color: var(--border-color);
-        margin: 0.1875rem 0;
+        inset-inline-start: calc(var(--spacing-8) * -1);
       }
     }
   }

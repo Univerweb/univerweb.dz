@@ -82,6 +82,18 @@
   animation: move calc(var(--duration-slow) * 2);
 }
 
+@mixin vertical-rule {
+  @include transition(background-color);
+
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 0.0625rem;
+  height: 0.625rem;
+  background-color: var(--border-color);
+  translate: 0 -50%;
+}
+
 @mixin text-link {
   @include transition(color, background-size);
 

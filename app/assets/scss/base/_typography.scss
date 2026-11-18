@@ -16,7 +16,6 @@ body {
   @include transition(background-color, color);
 
   margin: 0;
-  padding: 0;
   background-color: var(--background-color);
   color: var(--text-color-body);
   font-family: var(--font-family);
@@ -31,21 +30,23 @@ h1,
 h2,
 h3,
 .h1,
-.h2 {
+.h2,
+.h3,
+.h4 {
+  @include typo($weight: 600, $margin-top: 0);
   @include transition(color);
 
   color: var(--text-color-heading);
 }
 
 h1,
-.h1 {
+.h1,
+ol .big-count::before {
   @include typo(
     var(--font-size-40),
     $weight: 600,
     $line-height: var(--line-height-heading),
-    $letter-spacing: var(--letter-spacing-tight),
-    $margin-top: 0,
-    $margin-bottom: 0.3em
+    $letter-spacing: var(--letter-spacing-tight)
   );
 
   @media (min-width: $bp-md) {
@@ -57,6 +58,15 @@ h1,
   }
 }
 
+h1,
+.h1 {
+  margin-block-end: 0.3em;
+}
+
+h1:last-child {
+  margin-block-end: 0;
+}
+
 h1.h2 {
   margin-block-end: 0.3em;
 }
@@ -65,10 +75,8 @@ h2,
 .h2 {
   @include typo(
     var(--font-size-32),
-    $weight: 600,
     $line-height: var(--line-height-heading),
     $letter-spacing: var(--letter-spacing-tight),
-    $margin-top: 0,
     $margin-bottom: 0.6em
   );
 
@@ -85,10 +93,8 @@ h3,
 .h3 {
   @include typo(
     var(--font-size-24),
-    $weight: 600,
     $line-height: var(--line-height-snug),
     $letter-spacing: var(--letter-spacing-snug),
-    $margin-top: 0,
     $margin-bottom: 0.5em
   );
 }
@@ -96,10 +102,8 @@ h3,
 .h4 {
   @include typo(
     var(--font-size-20),
-    $weight: 600,
     $line-height: var(--line-height-snug),
     $letter-spacing: var(--letter-spacing-snug),
-    $margin-top: 0,
     $margin-bottom: 0.5em
   );
 }
@@ -135,21 +139,7 @@ ol {
   }
 
   .big-count::before {
-    @include typo(
-      var(--font-size-40),
-      $weight: 600,
-      $line-height: var(--line-height-heading),
-      $letter-spacing: var(--letter-spacing-tight)
-    );
     @include transition(color);
-
-    @media (min-width: $bp-md) {
-      @include typo(var(--font-size-56));
-    }
-
-    @media (min-width: $bp-lg) {
-      @include typo(var(--font-size-80));
-    }
 
     color: var(--accent-color);
     margin-bottom: var(--spacing-12);
