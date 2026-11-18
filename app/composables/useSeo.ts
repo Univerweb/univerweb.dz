@@ -90,7 +90,7 @@ export function useSeo(options: Options) {
     twitterImageHeight: options.ogImageHeight || defaultOgImageHeight,
     twitterImageType: 'image/jpeg',
     colorScheme: 'light dark',
-    themeColor: computed(() => mode.value === 'dark' ? '#111827' : '#fff'),
+    themeColor: computed(() => mode.value === 'dark' ? '#001226' : '#fff'),
     appleMobileWebAppTitle: ogSiteName,
   })
 
