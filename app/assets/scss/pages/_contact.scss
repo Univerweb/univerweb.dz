@@ -1,22 +1,9 @@
-@use '../abstracts/mixins' as *;
-
 #map {
-  @include transition(background-color);
-
   width: 100%;
   height: 45rem;
-  background-color: var(--surface-color);
 }
 
 .map-consent {
   display: flex;
   align-items: center;
-
-  &-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-24);
-    align-items: center;
-    margin-block-start: var(--spacing-24);
-  }
 }

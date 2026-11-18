@@ -92,7 +92,6 @@ const Contact = z.object({
     headline: z.string(),
     text: z.string(),
     cta: z.string(),
-    link: z.string(),
   }),
   platforms: z.array(
     z.object({

@@ -13,13 +13,12 @@ address:
   addressLocality: Algiers
 
 map:
-  headline:
-    Google would love to know where you are. We’d rather tell you where we are.
+  headline: This Isn’t the Map You’re Looking For…
   text:
-    To display the map, your browser has to contact Google, which will receive
-    your IP address and may set its own cookies.
+    To display it, your browser has to contact Google, which will receive your
+    IP address and may set its own cookies. We won’t do that without your
+    consent.
   cta: Show the Map
-  link: Open in Google Maps
 
 platforms:
   - icon: IconX
