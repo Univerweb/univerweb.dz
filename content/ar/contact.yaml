@@ -12,6 +12,14 @@ address:
   postalCode: 16 029
   addressLocality: الجزائر العاصمة
 
+map:
+  headline: Google تودّ أن تعرف أين أنتم. أمّا نحن، فنفضّل أن نخبركم أين نحن.
+  text:
+    لعرض الخريطة، يجب أن يتصل متصفحكم بـ Google، التي ستتلقى عنوان IP الخاص بكم
+    وقد تضع ملفات تعريف ارتباط خاصة بها.
+  cta: عرض الخريطة
+  link: فتح في Google Maps
+
 platforms:
   - icon: IconX
     name: X

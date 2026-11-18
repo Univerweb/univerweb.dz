@@ -14,6 +14,16 @@ address:
   postalCode: 16 029
   addressLocality: Alger
 
+map:
+  headline:
+    Google aimerait savoir où vous êtes. Nous, on préfère vous dire où nous
+    sommes.
+  text:
+    Pour afficher la carte, votre navigateur doit contacter Google, qui recevra
+    votre adresse IP et pourra déposer ses propres cookies.
+  cta: Afficher la carte
+  link: Ouvrir dans Google Maps
+
 platforms:
   - icon: IconX
     name: X

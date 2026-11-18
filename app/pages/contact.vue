@@ -8,7 +8,7 @@ const mode = useColorMode({ disableTransition: false })
 const { data: contact } = await useAsyncData(
   () => `contact-${locale.value}`,
   () => queryCollection(`contact_${locale.value}`)
-    .select('title', 'description', 'lead')
+    .select('title', 'description', 'lead', 'address', 'map')
     .first(),
   { watch: [locale] },
 )
@@ -23,6 +23,9 @@ const position = {
   lat: 36.720937,
   lng: 3.047607,
 }
+
+const mapUrl = `https://www.google.com/maps/search/?api=1&query=${position.lat},${position.lng}`
+const showMap = ref(false)
 
 const mapRef = ref<InstanceType<typeof GoogleMap> | null>(null)
 
@@ -52,11 +55,11 @@ function zoom() {
       </div>
     </section>
 
-    <ClientOnly>
-      <section aria-labelledby="map-title">
-        <h2 id="map-title" class="visually-hidden">
-          {{ t('headings.mapLocation') }}
-        </h2>
+    <section aria-labelledby="map-title">
+      <h2 id="map-title" class="visually-hidden">
+        {{ t('headings.mapLocation') }}
+      </h2>
+      <ClientOnly v-if="showMap">
         <GoogleMap
           id="map"
           ref="mapRef"
@@ -74,8 +77,31 @@ function zoom() {
             <AppLogo />
           </CustomMarker>
         </GoogleMap>
-      </section>
-    </ClientOnly>
+      </ClientOnly>
+      <div v-else id="map" class="map-consent">
+        <div class="container intro intro-justify">
+          <p class="h3">
+            {{ contact.map.headline }}
+          </p>
+          <address>
+            {{ contact.address.streetAddress }}<br>
+            <span dir="ltr">{{ contact.address.postalCode }}</span> {{ contact.address.addressLocality }}
+          </address>
+          <p>
+            {{ contact.map.text }}
+          </p>
+          <div class="map-consent-actions">
+            <button type="button" class="btn" @click="showMap = true">
+              {{ contact.map.cta }}
+              <IconNext />
+            </button>
+            <a :href="mapUrl" target="_blank" rel="noopener" class="link">
+              {{ contact.map.link }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="container request other" aria-labelledby="other-title">
       <div class="intro">
