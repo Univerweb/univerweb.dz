@@ -14,9 +14,10 @@ export default function useTooltip() {
   function langTooltip() {
     isLangNext.value = true
 
+    // Délai (--duration-base × 1) + animation tooltip-lang (× 10), cf. _header.scss
     setTimeout(() => {
       isLangNext.value = false
-    }, 2240)
+    }, cssDuration('--duration-base') * 11)
   }
 
   return {

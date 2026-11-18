@@ -1,0 +1,6 @@
+singleQuote: true
+semi: false
+overrides:
+  - files: '*.{yaml,yml}'
+    options:
+      proseWrap: always

@@ -2,165 +2,141 @@
 @use '../abstracts/mixins' as *;
 
 .blog {
-  h1 {
-    margin-block-end: 1.5rem;
+  .tags {
+    @include typo($weight: 500);
+
+    margin-bottom: var(--spacing-4);
   }
 
-  .tags {
-    @include typo(1.125rem, $margin-top: 1.5rem);
+  .content.container {
+    padding-bottom: calc(var(--spacing-responsive) * 2);
   }
 
   .meta {
-    @include typo(0.9375rem, $weight: 500, $margin-top: 0, $margin-bottom: 0);
+    @include typo(
+      var(--font-size-14),
+      $weight: 500,
+      $margin-top: 0,
+      $margin-bottom: 0
+    );
+    @include transition(color);
 
     display: flex;
     flex-wrap: wrap;
-    color: var(--color-secondary);
-    @include transition(color);
+    color: var(--text-color-muted);
 
-    dd {
-      margin: 0;
+    div {
+      display: flex;
 
       &:not(:last-child) {
         position: relative;
-        padding-inline-end: 17px;
+        padding-inline-end: var(--spacing-16);
 
         &::after {
-          content: '';
-          position: absolute;
-          inset-inline-end: 8px;
-          top: 50%;
-          width: 1px;
-          height: 10px;
-          margin-top: -5px;
-          background-color: var(--color-secondary);
-          opacity: 0.2;
+          @include vertical-rule;
+
+          inset-inline-end: var(--spacing-8);
         }
       }
     }
 
+    dd {
+      margin: 0;
+    }
+
     a {
-      text-decoration: underline;
+      @include text-link;
     }
   }
 
   .content {
-    @media (min-width: $md) {
-      @include typo(1.125rem);
-    }
-
-    .lead {
-      @include typo($line-height: 1.6, $letter-spacing: normal);
-    }
-
     h2 {
-      margin-block: 4.5rem 2rem;
+      margin-block: 3em 0.5em;
     }
 
     h3 {
-      @include typo(1.5rem, $letter-spacing: 0, $margin-top: 2.75rem);
+      margin-block: 1.6em 0.4em;
     }
 
     a {
-      text-decoration: underline;
-
-      &:hover {
-        color: var(--blue);
-      }
+      @include text-link;
     }
 
     ul,
     ol {
-      margin-block: 0 0.75rem;
-      padding-inline-start: 1rem;
+      margin-block: 0 var(--spacing-16);
+      padding-inline-start: var(--spacing-24);
+      list-style: revert;
+    }
 
-      li {
-        position: relative;
-        padding-inline-start: 0.5rem;
+    li + li,
+    li > :is(ul, ol) {
+      margin-block-start: var(--spacing-8);
+    }
 
-        &::before {
-          position: absolute;
-          inset-inline-start: -1rem;
-        }
-      }
-
-      &:is(ul) li::before {
-        content: '';
-        top: 13px;
-        background-color: var(--blue);
-        height: 2px;
-        width: 0.75rem;
-      }
-
-      &:is(ol) li::before {
-        color: var(--blue);
-      }
+    ol li::before {
+      content: none;
     }
 
     code {
-      @include typo(0.875em);
-
-      background-color: var(--background-secondary);
-      padding: 0.15em 0.35em;
-      border-radius: var(--radius-sm);
+      @include typo(var(--font-size-14));
       @include transition(background-color);
+
+      background-color: var(--surface-color);
+      padding: 0.15em 0.35em;
+      border-radius: var(--radius-4);
     }
 
     .table-wrapper {
-      margin-block: 2rem;
+      margin-block: var(--spacing-32);
       overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-
-      &:focus-visible {
-        @include focus-ring;
-      }
     }
 
     table {
-      @include typo(0.875rem);
+      @include typo(var(--font-size-14));
 
       width: 100%;
-      min-width: 560px;
+      min-width: var(--container-width-narrow);
       border-collapse: collapse;
 
-      @media (min-width: $md) {
-        @include typo(1rem);
+      @media (min-width: $bp-md) {
+        @include typo(var(--font-size-16));
       }
 
       thead tr {
-        background-color: var(--blue);
-        color: var(--background);
-        @include transition(color);
+        @include transition(background-color, color, border-color);
+
+        background-color: var(--surface-color);
+        color: var(--text-color-heading);
+        border-bottom: 0.0625rem solid var(--border-color);
       }
 
       th,
       td {
-        padding: 12px;
+        padding: var(--spacing-12) var(--spacing-8);
         text-align: start;
         vertical-align: top;
 
-        @media (min-width: $md) {
-          padding: 24px 16px;
+        @media (min-width: $bp-md) {
+          padding: var(--spacing-16);
         }
       }
 
       tbody tr {
-        border-bottom: 1px solid var(--border);
-      }
+        @include transition(border-color);
 
-      tbody tr:nth-of-type(even) {
-        background-color: var(--background-secondary);
-        @include transition(background-color);
+        border-bottom: 0.0625rem solid var(--border-color);
       }
     }
   }
 
   .share {
+    @include transition(border-color);
+
     display: flex;
     justify-content: space-between;
-    padding-block: 24px;
-    border-block: 1px solid var(--background-secondary);
-    @include transition(border-color);
+    padding-block: var(--spacing-24);
+    border-block: 0.0625rem solid var(--border-color);
 
     h2 {
       margin: 0;
@@ -168,24 +144,34 @@
 
     ul {
       display: flex;
-      column-gap: 24px;
-      height: 24px;
+      column-gap: var(--spacing-16);
+      height: 1.5rem;
+    }
+
+    ul > li > :is(a, button) {
+      display: grid;
+      border-radius: var(--radius-pill);
     }
 
     .tooltip-clipboard {
+      @include transition(color);
+
       position: relative;
-      color: currentcolor;
+      color: var(--text-color-heading);
 
       &-text {
-        @include typo(0.78125rem, $line-height: 1.76);
+        @include typo(
+          var(--font-size-12),
+          $line-height: var(--line-height-snug)
+        );
 
         width: max-content;
-        color: var(--success);
-        border: 1px solid;
-        padding: 0 6px;
+        color: var(--text-color-on-accent);
+        background-color: var(--success-color);
+        padding: 0 var(--spacing-8);
         border-radius: var(--radius-pill);
         position: absolute;
-        inset-inline-end: 34px;
+        inset-inline-end: 2.125rem;
 
         &-enter-active,
         &-leave-active {
@@ -199,10 +185,9 @@
       }
     }
 
-    a:hover,
-    .tooltip-clipboard:hover {
-      @include transition(color);
-      color: var(--blue);
+    a:is(:hover, :focus-visible),
+    .tooltip-clipboard:is(:hover, :focus-visible) {
+      color: var(--accent-color);
     }
   }
 }

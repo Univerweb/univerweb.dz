@@ -3,6 +3,7 @@ import { GoogleMap, CustomMarker } from 'vue3-google-map'
 
 const { locale, t } = useI18n()
 const config = useRuntimeConfig()
+const mode = useColorMode({ disableTransition: false })
 
 const { data: contact } = await useAsyncData(
   () => `contact-${locale.value}`,
@@ -45,7 +46,7 @@ function zoom() {
         <p class="lead">
           {{ contact.lead }}
         </p>
-        <a :href="`mailto:${config.public.baseEmail}`" class="link outfit move">
+        <a :href="`mailto:${config.public.baseEmail}`" class="link outfit" dir="ltr">
           {{ config.public.baseEmail }}
         </a>
       </div>
@@ -59,13 +60,15 @@ function zoom() {
         <GoogleMap
           id="map"
           ref="mapRef"
+          :key="mode"
           dir="auto"
           :api-key="config.public.gmapsKey"
           :map-id="config.public.gmapsId"
+          :color-scheme="mode === 'dark' ? 'DARK' : 'LIGHT'"
           :center="position"
           :zoom="14"
           :street-view-control="false"
-          background-color="var(--background-secondary)"
+          background-color="var(--surface-color)"
         >
           <CustomMarker :options="{ position }" @click="zoom">
             <AppLogo />
@@ -82,18 +85,18 @@ function zoom() {
       </div>
       <div class="row items-2">
         <div class="item">
-          <h3 class="h6">
+          <h3 class="label">
             {{ t('headings.manager') }}
           </h3>
-          <a :href="`mailto:${config.public.managerEmail}`" class="link outfit move">
+          <a :href="`mailto:${config.public.managerEmail}`" class="link outfit" dir="ltr">
             {{ config.public.managerEmail }}
           </a>
         </div>
         <div class="item item-2">
-          <h3 class="h6">
+          <h3 class="label">
             {{ t('headings.support') }}
           </h3>
-          <a :href="`mailto:${config.public.supportEmail}`" class="link outfit move">
+          <a :href="`mailto:${config.public.supportEmail}`" class="link outfit" dir="ltr">
             {{ config.public.supportEmail }}
           </a>
         </div>

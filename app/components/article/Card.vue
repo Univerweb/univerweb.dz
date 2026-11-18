@@ -9,10 +9,18 @@ defineProps<{
 const { t } = useI18n()
 const { localeBaseUrl, baseUrl } = useUrl()
 const localePath = useLocalePath()
+const titleId = useId()
 </script>
 
 <template>
-  <NuxtLink :to="card.path" class="card" vocab="https://schema.org/" typeof="Article" property="hasPart">
+  <NuxtLink
+    :to="card.path"
+    class="card"
+    :aria-labelledby="titleId"
+    vocab="https://schema.org/"
+    typeof="Article"
+    property="hasPart"
+  >
     <meta property="articleSection" :content="t('navigation.menu.blog')">
     <meta property="dateCreated datePublished" :content="new Date(card.createdAt).toISOString()">
     <meta property="dateModified" :content="new Date(card.updatedAt).toISOString()">
@@ -35,18 +43,16 @@ const localePath = useLocalePath()
 
     <AppPicture :picture="card" />
 
-    <div class="overlay" />
-
     <div class="inner">
-      <ul class="tags">
+      <ul class="label tags">
         <li v-for="tag in card.tags" :key="tag" property="keywords">
           {{ tag }}
         </li>
       </ul>
-      <component :is="titleTag" property="headline">
+      <component :is="titleTag" :id="titleId" property="headline" class="h3">
         {{ card.title }}
       </component>
-      <p property="description" class="lead">
+      <p property="description">
         {{ card.description }}
       </p>
     </div>

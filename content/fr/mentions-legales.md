@@ -11,18 +11,18 @@ Conformément aux dispositions de la législation en vigueur, voici les informat
 
 ## Éditeur du site
 
-Le site [univerweb.dz](https://univerweb.dz) est édité par :
+Le site [univerweb.dz](https://univerweb.dz) est édité par :
 
-- Raison sociale : Univerweb
-- Statut juridique : Entreprise unipersonnelle à responsabilité limitée (EURL)
-- Capital social : 400 000 DA
-- Gérant et directeur de la publication : Hocem Nedjar
-- Siège social : 62 Coop. El Mebnia, Birkhadem, Alger, Algérie
-- Registre du commerce (RC) : 11 B 0987186 - 16/00
-- Numéro d’identification fiscale (NIF) : 0011 16 0987186 77
-- Article d’imposition (AI) : 16 12 1632406
-- Contact : contact@univerweb.dz
-- Activité : Agence digitale, conception de sites web sur mesure, hébergement et maintenance.
+- Raison sociale : Univerweb
+- Statut juridique : Entreprise unipersonnelle à responsabilité limitée (EURL)
+- Capital social : 400 000 DA
+- Gérant et directeur de la publication : Hocem Nedjar
+- Siège social : 62 Coop. El Mebnia, Birkhadem, Alger, Algérie
+- Registre du commerce (RC) : 11 B 0987186 - 16/00
+- Numéro d’identification fiscale (NIF) : 0011 16 0987186 77
+- Article d’imposition (AI) : 16 12 1632406
+- Contact : contact@univerweb.dz
+- Activité : Agence digitale, conception de sites web sur mesure, hébergement et maintenance.
 
 ## Hébergement et infrastructure
 

@@ -69,17 +69,19 @@ useSeo({
         </h1>
 
         <dl class="meta">
-          <dt>{{ t('blog.createdAt') }}&nbsp;</dt>
-          <dd>
-            <NuxtTime
-              property="dateCreated datePublished"
-              :datetime="article.createdAt"
-              :locale="head.htmlAttrs.lang"
-              :date-style="locale === 'ar' ? 'long' : 'medium'"
-            />
-          </dd>
+          <div>
+            <dt>{{ t('blog.createdAt') }}&nbsp;</dt>
+            <dd>
+              <NuxtTime
+                property="dateCreated datePublished"
+                :datetime="article.createdAt"
+                :locale="head.htmlAttrs.lang"
+                :date-style="locale === 'ar' ? 'long' : 'medium'"
+              />
+            </dd>
+          </div>
 
-          <template v-if="article.createdAt !== article.updatedAt">
+          <div v-if="article.createdAt !== article.updatedAt">
             <dt>{{ t('blog.updatedAt') }}&nbsp;</dt>
             <dd>
               <NuxtTime
@@ -89,25 +91,27 @@ useSeo({
                 :date-style="locale === 'ar' ? 'long' : 'medium'"
               />
             </dd>
-          </template>
+          </div>
 
-          <dt>{{ t('blog.author') }}&nbsp;</dt>
-          <dd>
-            <a
-              v-if="article.author && article.author.name && article.author.url"
-              :href="article.author.url"
-              target="_blank"
-              property="author"
-              typeof="Person"
-            >
-              <span property="name">@{{ article.author.name }}</span>
-              <link property="url" :href="article.author.url">
-            </a>
-            <span v-else property="author" typeof="Organization">
-              <span property="name">@{{ t('site.name') }}</span>
-              <link property="url" :href="localeBaseUrl">
-            </span>
-          </dd>
+          <div>
+            <dt>{{ t('blog.author') }}&nbsp;</dt>
+            <dd>
+              <a
+                v-if="article.author && article.author.name && article.author.url"
+                :href="article.author.url"
+                target="_blank"
+                property="author"
+                typeof="Person"
+              >
+                <span property="name">@{{ article.author.name }}</span>
+                <link property="url" :href="article.author.url">
+              </a>
+              <span v-else property="author" typeof="Organization">
+                <span property="name">@{{ t('site.name') }}</span>
+                <link property="url" :href="localeBaseUrl">
+              </span>
+            </dd>
+          </div>
         </dl>
       </header>
 

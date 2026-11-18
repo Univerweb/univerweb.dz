@@ -1,34 +1,32 @@
 @keyframes move {
   0% {
-    transform: scaleX(0.05);
+    background-position-x: var(--transform-origin-start);
+    background-size: 0% 0.1875rem;
   }
 
-  25% {
-    transform: scaleX(1);
-    transform-origin: var(--origin);
+  30% {
+    background-position-x: var(--transform-origin-start);
+    background-size: 100% 0.1875rem;
   }
 
-  26% {
-    transform: scaleX(1);
-    transform-origin: calc(100% - var(--origin));
+  31% {
+    background-position-x: var(--transform-origin-end);
+    background-size: 100% 0.1875rem;
   }
 
   60% {
-    transform: scaleX(0.05);
+    background-position-x: var(--transform-origin-end);
+    background-size: 0% 0.1875rem;
   }
 
-  80% {
-    transform: scaleX(0);
-    transform-origin: calc(100% - var(--origin));
-  }
-
-  81% {
-    transform: scaleX(0);
-    transform-origin: var(--origin);
+  61% {
+    background-position-x: var(--transform-origin-start);
+    background-size: 0% 0.1875rem;
   }
 
   100% {
-    transform: scaleX(0.05);
+    background-position-x: var(--transform-origin-start);
+    background-size: clamp(1rem, 25%, 2rem) 0.1875rem;
   }
 }
 
@@ -52,11 +50,11 @@
 
 @keyframes toggle-top {
   0% {
-    transform: translateY(7px) scaleX(1) rotate(-45deg);
+    transform: translateY(0.4375rem) scaleX(1) rotate(-45deg);
   }
 
   25% {
-    transform: translateY(7px) scaleX(1) rotate(0);
+    transform: translateY(0.4375rem) scaleX(1) rotate(0);
   }
 
   50% {
@@ -70,11 +68,11 @@
   }
 
   75% {
-    transform: translateY(7px) scaleX(1) rotate(0);
+    transform: translateY(0.4375rem) scaleX(1) rotate(0);
   }
 
   100% {
-    transform: translateY(7px) scaleX(1) rotate(-45deg);
+    transform: translateY(0.4375rem) scaleX(1) rotate(-45deg);
   }
 }
 
@@ -102,11 +100,11 @@
 
 @keyframes toggle-bottom {
   0% {
-    transform: translateY(-7px) scaleX(1) rotate(45deg);
+    transform: translateY(-0.4375rem) scaleX(1) rotate(45deg);
   }
 
   25% {
-    transform: translateY(-7px) scaleX(1) rotate(0);
+    transform: translateY(-0.4375rem) scaleX(1) rotate(0);
   }
 
   50% {
@@ -116,7 +114,7 @@
   75%,
   100% {
     transform: translateY(0) scaleX(0.75) rotate(0);
-    transform-origin: var(--origin);
+    transform-origin: var(--transform-origin-start);
   }
 }
 
@@ -124,7 +122,7 @@
   0%,
   25% {
     transform: translateY(0) scaleX(0.75) rotate(0);
-    transform-origin: var(--origin);
+    transform-origin: var(--transform-origin-start);
   }
 
   50% {
@@ -132,10 +130,10 @@
   }
 
   75% {
-    transform: translateY(-7px) scaleX(1) rotate(0);
+    transform: translateY(-0.4375rem) scaleX(1) rotate(0);
   }
 
   100% {
-    transform: translateY(-7px) scaleX(1) rotate(45deg);
+    transform: translateY(-0.4375rem) scaleX(1) rotate(45deg);
   }
 }

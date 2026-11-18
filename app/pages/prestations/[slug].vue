@@ -100,16 +100,16 @@ const leave = (el: Element) => {
         class="banner"
       />
 
-      <section class="container row" aria-labelledby="description">
-        <h2 id="description" class="col" property="description">
-          {{ service.description }}
-        </h2>
-        <div class="col col--1-9 lead">
+      <div class="container row">
+        <div class="col col--1-9">
+          <p class="lead" property="description">
+            {{ service.description }}
+          </p>
           <p v-for="(paragraph, index) in service.intro" :key="index">
             {{ paragraph }}
           </p>
         </div>
-      </section>
+      </div>
 
       <section class="container row features" aria-labelledby="solutions">
         <h2 id="solutions" class="col col--1-5">

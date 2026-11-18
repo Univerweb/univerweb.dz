@@ -1,8 +1,12 @@
 .banner {
-  max-width: var(--container-wide);
+  max-width: var(--container-width-wide);
   margin: 0 auto;
 
   img {
     aspect-ratio: 16 / 9;
   }
+}
+
+.container:has(+ :is(.banner, .banner-realisations)) {
+  padding-bottom: calc(var(--spacing-responsive) * 2);
 }

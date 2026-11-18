@@ -2,49 +2,67 @@
 @use '../abstracts/mixins' as *;
 
 .slug-nav {
-  display: grid;
-  align-items: start;
-  gap: 48px;
-  padding-block: 72px 48px;
-  margin-bottom: 4px;
-  background-color: var(--background-secondary);
   @include transition(background-color);
 
-  @media (min-width: $md) {
+  display: grid;
+  align-items: start;
+  gap: var(--spacing-48);
+  padding-block: var(--spacing-72) var(--spacing-48);
+  margin-bottom: var(--spacing-4);
+  background-color: var(--surface-color);
+
+  @media (min-width: $bp-md) {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .link {
-    @include typo($line-height: 1);
+    @include typo($line-height: var(--line-height-snug));
 
     position: relative;
     width: fit-content;
+    padding-bottom: 0;
+    background-image: none;
+
+    > span {
+      @include link-line;
+    }
+
+    &:is(:hover, :focus-visible) {
+      animation: none;
+    }
+
+    &:is(:hover, :focus-visible) > span {
+      @include link-line-hover;
+    }
 
     &.prev {
-      padding-inline-start: 18px;
+      padding-inline-start: var(--spacing-16);
     }
 
     &.next {
-      padding-inline-end: 18px;
+      padding-inline-end: var(--spacing-16);
       text-align: end;
       justify-self: end;
-      grid-column: 2;
+
+      @media (min-width: $bp-md) {
+        grid-column: 2;
+      }
     }
 
     &::before {
-      @include typo(0.8rem, $line-height: 0.9375);
+      @include typo(var(--font-size-12), $line-height: var(--line-height-snug));
+      @include transition(color);
 
       content: attr(data-text);
       position: absolute;
-      color: var(--color-secondary);
-      @include transition(color);
-      inset-block-start: -18px;
-      padding-bottom: 4px;
+      color: var(--text-color-muted);
+      inset-block-start: -1.125rem;
+      padding-bottom: var(--spacing-4);
       width: max-content;
     }
 
     &.next::before {
-      inset-inline-end: 18px;
+      inset-inline-end: var(--spacing-16);
     }
   }
 }

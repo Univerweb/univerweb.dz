@@ -1,20 +1,5 @@
-@use '../abstracts/mixins' as *;
-
 .legal {
-  h1 {
-    margin-block-end: 0.75rem;
-  }
-
   .meta {
-    margin-bottom: calc(var(--padding-y) * 2);
-  }
-
-  .content h2 {
-    @include typo(
-      1.5rem,
-      $letter-spacing: 0,
-      $margin-top: 2.75rem,
-      $margin-bottom: 0.75rem
-    );
+    margin-bottom: calc(var(--spacing-responsive) * 2);
   }
 }

@@ -1,5 +1,5 @@
 seo:
-  title: 'Hébergement : Nom de domaine, messagerie et certificat SSL'
+  title: 'Hébergement : Nom de domaine, messagerie et certificat SSL'
   description:
     Optez pour un hébergement web performant avec Univerweb et assurez une
     présence en ligne fiable et sécurisée grâce à un nom de domaine
@@ -8,12 +8,12 @@ title: Hébergement web
 description:
   Votre hébergement est le cœur qui fait battre votre site web. Nous le rendons
   rapide comme l’éclair… et toujours prêt à accueillir des visiteurs sans
-  trembler !
+  trembler !
 
 icon: IconWebHosting
 cta: Héberger votre site
 alt:
-  'Illustration par icônes des solutions d’hébergement web : nom de domaine .dz,
+  'Illustration par icônes des solutions d’hébergement web : nom de domaine .dz,
   plateforme d’hébergement, messagerie professionnelle et sécurité SSL.'
 
 intro:
@@ -27,7 +27,7 @@ intro:
   - 'Chez Univerweb, la création de sites web est notre métier principal. Pour
     vous offrir une expérience simplifiée et une solution parfaitement
     cohérente, nous proposons une offre intégrée qui couple la création de votre
-    site avec tous les services nécessaires : hébergement performant,
+    site avec tous les services nécessaires : hébergement performant,
     enregistrement/transfert de domaine, certificat SSL et messagerie
     professionnelle. Cette approche garantit une synergie technique, une mise en
     place optimisée et un point de contact unique pour l’ensemble de votre
@@ -101,45 +101,44 @@ process:
 faq:
   title: Questions fréquentes sur l’hébergement web
   questions:
-    - question: Pourquoi choisir notre offre intégrée pour votre site web ?
+    - question: Pourquoi choisir notre offre intégrée pour votre site web ?
       answer:
         En choisissant notre offre intégrée en complément de la création de
         votre site, vous bénéficiez d’une synergie parfaite entre le
         développement et l’infrastructure, d’un point de contact unique, et de
         services optimisés pour les sites que nous concevons.
 
-    - question: Hébergez-vous uniquement les sites que vous créez ?
+    - question: Hébergez-vous uniquement les sites que vous créez ?
       answer:
         Non, nous proposons l’hébergement pour les sites que nous créons, mais
         aussi si vous avez déjà un site existant (créé par une autre agence).
 
-    - question: Mon site et mes e-mails seront-ils sécurisés avec votre offre ?
+    - question: Mon site et mes e-mails seront-ils sécurisés avec votre offre ?
       answer:
         Oui. Notre offre intègre des mesures de sécurité complètes. Le
         certificat SSL sécurise la connexion de votre site web ainsi que celle
         de votre messagerie professionnelle associée à votre nom de domaine.
 
-    - question: Est-ce que le certificat SSL est inclus dans l’offre ?
+    - question: Est-ce que le certificat SSL est inclus dans l’offre ?
       answer:
         Oui, un certificat SSL gratuit est inclus dans notre offre intégrée pour
         sécuriser votre site web.
 
-    - question: Puis-je facilement gérer mon hébergement ?
+    - question: Puis-je facilement gérer mon hébergement ?
       answer:
-        Absolument ! Nous vous fournissons un panneau de contrôle intuitif pour
+        Absolument ! Nous vous fournissons un panneau de contrôle intuitif pour
         gérer vos fichiers, vos bases de données et vos paramètres d’hébergement
         en toute simplicité.
 
-    - question: Que couvre le support technique ?
+    - question: Que couvre le support technique ?
       answer:
         Notre support couvre les problèmes liés à votre compte d’hébergement, à
         la gestion de votre nom de domaine, à l’activation de votre certificat
         SSL et au fonctionnement de vos comptes e-mail professionnels.
 
-    - question: Quels sont les coûts associés à l’hébergement web ?
+    - question: Quels sont les coûts associés à l’hébergement web ?
       answer:
-        "Nos offres d’hébergement vont de 5\u00A0000 à
-        58\u00A0000\u00A0DA\u00A0HT par an. Le tarif varie principalement selon
-        la capacité de stockage choisie et les ressources nécessaires. Les
-        offres incluent le nom de domaine, la messagerie professionnelle et le
-        certificat SSL."
+        'Nos offres d’hébergement vont de 5 000 à 58 000 DA HT par an. Le tarif
+        varie principalement selon la capacité de stockage choisie et les
+        ressources nécessaires. Les offres incluent le nom de domaine, la
+        messagerie professionnelle et le certificat SSL.'

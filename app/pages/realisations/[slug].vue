@@ -49,11 +49,11 @@ const { data: related } = await useAsyncData(
   async () => {
     const [translated, common] = await Promise.all([
       queryCollection(`project_${locale.value}`)
-        .select('path', 'title', 'description', 'createdAt', 'updatedAt', 'about')
+        .select('path', 'title', 'description', 'createdAt', 'updatedAt')
         .where('path', '<>', path)
         .all(),
       queryCollection('project')
-        .select('path', 'category')
+        .select('path', 'category', 'tags')
         .where('category', '=', project.value!.category)
         .all(),
     ])
@@ -116,28 +116,28 @@ const { data: surround } = await useAsyncData(
 
       <div class="container row items-2">
         <section class="item item-1" aria-labelledby="client">
-          <h2 id="client" class="h6">
+          <h2 id="client" class="label">
             {{ t('headings.client') }}
           </h2>
-          <p class="lead">
+          <p>
             {{ project.title }}
           </p>
         </section>
 
         <section class="item item-2" aria-labelledby="category">
-          <h2 id="category" class="h6">
+          <h2 id="category" class="label">
             {{ t('headings.category') }}
           </h2>
-          <p class="lead">
+          <p>
             {{ t(`category.${project.category}`) }}
           </p>
         </section>
 
         <section class="item item-3" aria-labelledby="services">
-          <h2 id="services" class="h6">
+          <h2 id="services" class="label">
             {{ t('headings.completedServices') }}
           </h2>
-          <ul class="lead tags">
+          <ul class="services">
             <li v-for="tag in project.tags" :key="tag">
               {{ t(`services.${tag}.name`) }}
             </li>
@@ -145,7 +145,7 @@ const { data: surround } = await useAsyncData(
         </section>
 
         <section class="item item-4" aria-labelledby="technologies">
-          <h2 id="technologies" class="h6">
+          <h2 id="technologies" class="label">
             {{ t('headings.technologiesUsed') }}
           </h2>
           <ul class="technos">
@@ -161,10 +161,10 @@ const { data: surround } = await useAsyncData(
       <div class="container container-no-pt row">
         <div class="col col--1-4">
           <section class="inner" aria-labelledby="about-company">
-            <h2 id="about-company" class="h6">
+            <h2 id="about-company" class="label">
               {{ t('headings.about', { client: project.title }) }}
             </h2>
-            <p property="about" class="lead">
+            <p property="about">
               {{ project.about }}
             </p>
             <a v-if="project.website" :href="project.website" class="link">

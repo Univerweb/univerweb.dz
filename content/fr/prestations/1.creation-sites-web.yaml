@@ -1,5 +1,5 @@
 seo:
-  title: 'Création de sites web : Sur mesure, UX fluide et SEO'
+  title: 'Création de sites web : Sur mesure, UX fluide et SEO'
   description:
     Créez votre site web sur mesure avec Univerweb et captez l’attention de vos
     visiteurs grâce à un design moderne, une expérience fluide, un développement
@@ -7,7 +7,7 @@ seo:
 title: Création de sites web
 description:
   Votre site web est un employé qui travaille 24h/24. Nous le concevons pour
-  qu’il convertisse vos visiteurs en clients… même quand vous dormez !
+  qu’il convertisse vos visiteurs en clients… même quand vous dormez !
 
 icon: IconWebsiteCreation
 cta: Créer votre site web
@@ -121,7 +121,7 @@ process:
 faq:
   title: Questions fréquentes sur la création de sites web
   questions:
-    - question: Avez-vous besoin de mon contenu pour créer mon site ?
+    - question: Avez-vous besoin de mon contenu pour créer mon site ?
       answer:
         Oui, le contenu (textes, images, vidéos) est un élément crucial pour la
         création de votre site web. Idéalement, nous devons avoir le contenu
@@ -129,33 +129,33 @@ faq:
         manière efficace et optimisée. Nous pouvons vous accompagner dans la
         structuration de votre contenu.
 
-    - question: Offrez-vous de l’aide pour la rédaction du contenu de mon site ?
+    - question: Offrez-vous de l’aide pour la rédaction du contenu de mon site ?
       answer:
         Oui, en complément de la création de votre site, nous pouvons vous
         offrir une aide à la rédaction de vos textes ou vous orienter vers des
         partenaires spécialisés pour créer des contenus percutants et optimisés
         pour le web.
 
-    - question: Combien de temps faut-il pour créer un site web ?
+    - question: Combien de temps faut-il pour créer un site web ?
       answer:
         La durée dépend de la complexité du projet. En général, un site vitrine
         simple peut être réalisé en 2 à 4 semaines, tandis qu’un projet sur
         mesure peut prendre 4 à 8 semaines.
 
-    - question: Est-ce que mon site sera adapté aux mobiles et tablettes ?
+    - question: Est-ce que mon site sera adapté aux mobiles et tablettes ?
       answer:
-        Absolument ! La conception responsive (adaptation à tous les types
+        Absolument ! La conception responsive (adaptation à tous les types
         d’écrans) est aujourd’hui indispensable. Tous les sites que nous créons
         sont nativement conçus pour offrir une expérience utilisateur optimale
         sur les smartphones, tablettes et ordinateurs de bureau.
 
-    - question: Mon site sera-t-il optimisé pour le référencement (SEO) ?
+    - question: Mon site sera-t-il optimisé pour le référencement (SEO) ?
       answer:
         Oui, tous nos sites sont optimisés pour le SEO. Nous veillons à ce que
         votre site ait une structure adaptée, des temps de chargement rapides et
         un contenu optimisé pour améliorer votre visibilité en ligne.
 
-    - question: Pourrai-je gérer mon site moi-même après sa création ?
+    - question: Pourrai-je gérer mon site moi-même après sa création ?
       answer:
         Oui, si votre site est développé sur un CMS comme Drupal, vous aurez un
         accès complet à l’interface d’administration pour gérer et mettre à jour
@@ -165,19 +165,19 @@ faq:
 
     - question:
         Proposez-vous des services de maintenance pour le site après son
-        lancement ?
+        lancement ?
       answer:
         Oui, nous proposons des forfaits de maintenance pour assurer la
         sécurité, les mises à jour régulières (CMS, plugins) et la performance
         continue de votre site après son lancement, vous permettant ainsi de
         vous concentrer sur votre activité principale.
 
-    - question: Quel est le coût d’un site web ?
+    - question: Quel est le coût d’un site web ?
       answer:
-        "Les projets de création de sites web sont proposés à partir de
-        220\u00A0000\u00A0DA\u00A0HT pour un site vitrine ou sur mesure
-        (technologie Nuxt) et à partir de 280\u00A0000\u00A0DA\u00A0HT pour un
-        site dont vous gérez vous-même les contenus (CMS Drupal). Le coût final
-        varie selon la complexité, le nombre de pages, le nombre de langues et
-        les fonctionnalités spécifiques. Chaque projet étant unique, nous
-        établissons un devis personnalisé après analyse de vos besoins."
+        'Les projets de création de sites web sont proposés à partir de
+        220 000 DA HT pour un site vitrine ou sur mesure (technologie Nuxt) et à
+        partir de 280 000 DA HT pour un site dont vous gérez vous-même les
+        contenus (CMS Drupal). Le coût final varie selon la complexité, le
+        nombre de pages, le nombre de langues et les fonctionnalités
+        spécifiques. Chaque projet étant unique, nous établissons un devis
+        personnalisé après analyse de vos besoins.'
