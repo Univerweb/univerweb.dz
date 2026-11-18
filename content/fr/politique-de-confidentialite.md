@@ -19,7 +19,7 @@ Le site univerweb.dz est un site vitrine. **Aucun formulaire** de collecte de do
 
 Les seules données traitées sont :
 
-- **Journaux techniques du serveur :** adresse IP, horodatage et type de navigateur, enregistrés temporairement à des fins exclusives de sécurité et de maintenance (conservés pour une durée maximale de 6 mois).
+- **Journaux techniques du serveur :** adresse IP, horodatage et type de navigateur, enregistrés temporairement à des fins exclusives de sécurité et de maintenance (conservés pour une durée maximale d’un mois).
 - **Préférence d’affichage :** votre choix de thème (clair ou sombre) est mémorisé dans le stockage local de votre navigateur, sans aucun suivi.
 - **Échanges directs :** les informations que vous transmettez volontairement lors d’une prise de contact par e-mail ou par téléphone.
 

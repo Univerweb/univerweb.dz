@@ -19,7 +19,7 @@ The univerweb.dz website is a showcase site. **No forms** collecting personal da
 
 The only data processed consists of:
 
-- **Technical server logs:** IP address, timestamp, and browser type, temporarily recorded strictly for security and maintenance purposes (retained for a maximum of 6 months).
+- **Technical server logs:** IP address, timestamp, and browser type, temporarily recorded strictly for security and maintenance purposes (retained for a maximum of one month).
 - **Display preference:** your theme choice (light or dark) is saved in your browser’s local storage, without any tracking.
 - **Direct communications:** information you voluntarily provide when contacting us by email or phone.
 
