@@ -35,12 +35,12 @@
   display: grid;
   align-content: start;
   background-color: var(--surface-color);
-  padding: var(--spacing-8);
+  padding: var(--spacing-16);
   border-radius: var(--radius-32);
 
   picture {
     overflow: hidden;
-    border-radius: calc(var(--radius-32) - var(--spacing-8));
+    border-radius: calc(var(--radius-32) - var(--spacing-16));
   }
 
   img {
@@ -54,7 +54,7 @@
   }
 
   .inner {
-    padding: var(--spacing-24);
+    padding: var(--spacing-32) var(--spacing-16) var(--spacing-16);
 
     & > :is(p, ul.services) {
       @include transition(color);
@@ -71,7 +71,7 @@
   display: grid;
   grid-auto-rows: auto auto 1fr;
   background-color: var(--surface-color);
-  padding: var(--spacing-24);
+  padding: var(--spacing-32);
   border-radius: var(--radius-32);
 
   &:has(a:focus-visible) {
@@ -93,6 +93,10 @@
 
   p {
     margin-block-end: 0;
+  }
+
+  .more {
+    padding-top: var(--spacing-32);
   }
 
   a::before {

@@ -13,7 +13,7 @@ const localePath = useLocalePath()
     provider="cloudinary"
     :src="`${localePath(picture.path, 'fr')}_${type || 'thumbnail'}.webp`"
     :alt="picture.alt"
-    :sizes="sizes || (type === 'banner' ? '100vw xxl:1400px' : '326px xs:332px md:444px xl:576px')"
+    :sizes="sizes || (type === 'banner' ? '100vw xxl:1400px' : '310px xs:316px md:428px xl:560px')"
     format="avif,webp"
     loading="lazy"
     :img-attrs="{ property: 'image' }"
