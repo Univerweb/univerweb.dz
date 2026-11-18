@@ -31,6 +31,7 @@ Site vitrine d'Univerweb (agence web, Alger). Nuxt 4 + Vue 3 + TypeScript, conte
 - Ne rien importer de ce que Nuxt auto-importe (`ref`, `computed`, `useRoute`, `useFetch`, `useI18n`, `useAsyncData`, `queryCollection`, composables et composants locaux…). On n'importe explicitement que les bibliothèques externes et les types : `import type { Collections } from '@nuxt/content'`.
 - Pas de type `any` explicite.
 - Commits en français au format Conventional Commits : `type(portée): description` (ex. `fix(blog): corriger la hauteur de police dans le contenu du blog`). Types : `feat`, `fix`, etc.
+- **Versions** : `"version"` de `package.json` toujours en semver complet (`6.0.0`, `6.2.0`, `6.4.5`) ; le tag Git retire les zéros de fin (`v6`, `v6.2`, `v6.4.5`). Le changement de version se fait dans un commit `chore(release): passer la version à …` sur `main` (par PR), puis le tag et la release GitHub sont posés sur ce commit.
 
 ## Vue 3
 
