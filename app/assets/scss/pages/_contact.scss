@@ -1,9 +1,36 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
 #map {
-  width: 100%;
-  height: 45rem;
+  @include transition(background-color);
+
+  height: 30rem;
+  overflow: hidden;
+  border-radius: var(--radius-32);
+  background-color: var(--surface-color);
+
+  @media (min-width: $bp-lg) {
+    height: 45rem;
+  }
 }
 
 .map-consent {
-  display: flex;
-  align-items: center;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  padding: var(--spacing-responsive);
+  text-align: center;
+
+  > svg {
+    @include transition(fill);
+
+    width: 1.5rem;
+    height: 2rem;
+    margin-bottom: var(--spacing-24);
+    fill: var(--accent-color);
+  }
+
+  p {
+    max-width: var(--container-width-narrow);
+  }
 }

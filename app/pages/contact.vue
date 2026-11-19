@@ -54,7 +54,7 @@ function zoom() {
       </div>
     </section>
 
-    <section aria-labelledby="map-title">
+    <section class="container" aria-labelledby="map-title">
       <ClientOnly v-if="showMap">
         <h2 id="map-title" class="visually-hidden">
           {{ t('headings.mapLocation') }}
@@ -78,18 +78,17 @@ function zoom() {
         </GoogleMap>
       </ClientOnly>
       <div v-else id="map" class="map-consent">
-        <div class="container intro">
-          <h2 id="map-title">
-            {{ contact.map.headline }}
-          </h2>
-          <p>
-            {{ contact.map.text }}
-          </p>
-          <button type="button" class="btn" @click="showMap = true">
-            {{ contact.map.cta }}
-            <IconNext />
-          </button>
-        </div>
+        <IconPin />
+        <h2 id="map-title" class="h3">
+          {{ contact.map.headline }}
+        </h2>
+        <p>
+          {{ contact.map.text }}
+        </p>
+        <button type="button" class="btn" @click="showMap = true">
+          {{ contact.map.cta }}
+          <IconNext />
+        </button>
       </div>
     </section>
 
