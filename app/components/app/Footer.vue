@@ -17,14 +17,16 @@ const { data: footer } = await useAsyncData(
       <address class="address" :title="t('footer.address')">
         <strong>{{ t('site.name') }}</strong><br>
         {{ footer.address.streetAddress }}<br>
-        <span dir="ltr">{{ footer.address.postalCode }}</span> {{ footer.address.addressLocality }}
-      </address>
-
-      <p>
-        <a href="https://www.google.com/maps/dir/?api=1&destination=36.720937,3.047607" target="_blank" rel="noopener">
+        <span dir="ltr">{{ footer.address.postalCode }}</span> {{ footer.address.addressLocality }}<br>
+        <a
+          href="https://www.google.com/maps/dir/?api=1&destination=36.720937,3.047607"
+          target="_blank"
+          rel="noopener"
+          class="directions"
+        >
           {{ t('actions.directions') }}
         </a>
-      </p>
+      </address>
 
       <p>
         <a :href="`tel:${config.public.baseMobile.replace(/\s/g, '')}`" :aria-label="t('ariaLabels.mobile')" class="mobile">
