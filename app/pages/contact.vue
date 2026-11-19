@@ -54,7 +54,7 @@ function zoom() {
       </div>
     </section>
 
-    <section class="container" aria-labelledby="map-title">
+    <section class="container container-no-pt" aria-labelledby="map-title">
       <ClientOnly v-if="showMap">
         <h2 id="map-title" class="visually-hidden">
           {{ t('headings.mapLocation') }}

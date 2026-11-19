@@ -24,8 +24,6 @@
   > svg {
     @include transition(fill);
 
-    width: 1.5rem;
-    height: 2rem;
     margin-bottom: var(--spacing-24);
     fill: var(--accent-color);
   }
