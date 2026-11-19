@@ -2,7 +2,7 @@
 title: Politique de confidentialité
 description: Politique de confidentialité et respect de la vie privée sur le site d’Univerweb, agence web et développement sur mesure à Alger, Algérie.
 createdAt: 2026-11-08
-updatedAt: 2026-11-08
+updatedAt: 2026-11-19
 ---
 
 ::lead

@@ -2,7 +2,7 @@
 title: Privacy Policy
 description: Privacy policy and personal data protection on the Univerweb website, web agency and custom development based in Algiers, Algeria.
 createdAt: 2026-11-08
-updatedAt: 2026-11-08
+updatedAt: 2026-11-19
 ---
 
 ::lead
