@@ -88,6 +88,11 @@ const Contact = z.object({
     postalCode: z.string(),
     addressLocality: z.string(),
   }),
+  map: z.object({
+    headline: z.string(),
+    text: z.string(),
+    cta: z.string(),
+  }),
   platforms: z.array(
     z.object({
       icon: z.string(),

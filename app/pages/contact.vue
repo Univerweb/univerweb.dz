@@ -8,7 +8,7 @@ const mode = useColorMode({ disableTransition: false })
 const { data: contact } = await useAsyncData(
   () => `contact-${locale.value}`,
   () => queryCollection(`contact_${locale.value}`)
-    .select('title', 'description', 'lead')
+    .select('title', 'description', 'lead', 'map')
     .first(),
   { watch: [locale] },
 )
@@ -22,6 +22,14 @@ useSeo({
 const position = {
   lat: 36.720937,
   lng: 3.047607,
+}
+
+const showMap = ref(false)
+
+async function loadMap() {
+  showMap.value = true
+  await nextTick()
+  document.getElementById('map')?.focus()
 }
 
 const mapRef = ref<InstanceType<typeof GoogleMap> | null>(null)
@@ -40,7 +48,7 @@ function zoom() {
   <main v-if="contact">
     <section class="container row" aria-labelledby="intro-title">
       <div class="col col--1-6">
-        <h1 id="intro-title" class="h2">
+        <h1 id="intro-title">
           {{ contact.title }}
         </h1>
         <p class="lead">
@@ -52,8 +60,8 @@ function zoom() {
       </div>
     </section>
 
-    <ClientOnly>
-      <section aria-labelledby="map-title">
+    <section class="container container-no-pt" aria-labelledby="map-title">
+      <ClientOnly v-if="showMap">
         <h2 id="map-title" class="visually-hidden">
           {{ t('headings.mapLocation') }}
         </h2>
@@ -61,6 +69,7 @@ function zoom() {
           id="map"
           ref="mapRef"
           :key="mode"
+          tabindex="-1"
           dir="auto"
           :api-key="config.public.gmapsKey"
           :map-id="config.public.gmapsId"
@@ -74,8 +83,21 @@ function zoom() {
             <AppLogo />
           </CustomMarker>
         </GoogleMap>
-      </section>
-    </ClientOnly>
+      </ClientOnly>
+      <div v-else id="map" class="map-consent">
+        <IconExperience />
+        <h2 id="map-title" class="h3">
+          {{ contact.map.headline }}
+        </h2>
+        <p>
+          {{ contact.map.text }}
+        </p>
+        <button type="button" class="btn" @click="loadMap">
+          {{ contact.map.cta }}
+          <IconNext />
+        </button>
+      </div>
+    </section>
 
     <section class="container request other" aria-labelledby="other-title">
       <div class="intro">

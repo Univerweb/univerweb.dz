@@ -28,6 +28,7 @@ ariaLabels:
   copy: نسخ رابط المقال
   x: مشاركة هذا المقال على X
   linkedIn: مشاركة هذا المقال على لينكد إن
+  directions: الحصول على الاتجاهات (علامة تبويب جديدة)
 
 actions:
   skipLink:
@@ -39,6 +40,7 @@ actions:
     text: اتصل بنا
   visit: زيارة الموقع
   copy: نسخ!
+  directions: الحصول على الاتجاهات
 
 headings:
   client: الزبون
@@ -114,5 +116,6 @@ blog:
 
 footer:
   copy: حقوق النشر © {year} @:site.name{'.'} جميع الحقوق محفوظة.
+  address: العنوان البريدي
   legal: المعلومات القانونية
   privacy: سياسة الخصوصية

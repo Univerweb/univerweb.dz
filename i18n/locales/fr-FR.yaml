@@ -28,6 +28,7 @@ ariaLabels:
   copy: Copier le lien de l’article
   x: Partager cet article sur X
   linkedIn: Partager cet article sur LinkedIn
+  directions: Obtenir l’itinéraire (nouvel onglet)
 
 actions:
   skipLink:
@@ -39,6 +40,7 @@ actions:
     text: Contactez-nous
   visit: Visiter le site web
   copy: Copié !
+  directions: Obtenir l’itinéraire
 
 headings:
   client: Client
@@ -118,5 +120,6 @@ blog:
 
 footer:
   copy: Copyright © {year} @:site.name{'.'} Tous droits réservés.
+  address: Adresse postale
   legal: Mentions légales
   privacy: Politique de confidentialité

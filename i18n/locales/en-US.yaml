@@ -28,6 +28,7 @@ ariaLabels:
   copy: Copy Article Link
   x: Share This Article on X
   linkedIn: Share This Article on LinkedIn
+  directions: Get Directions (opens in a new tab)
 
 actions:
   skipLink:
@@ -39,6 +40,7 @@ actions:
     text: Get in Touch
   visit: Visit Website
   copy: Copied!
+  directions: Get Directions
 
 headings:
   client: Client
@@ -117,5 +119,6 @@ blog:
 
 footer:
   copy: Copyright © {year} @:site.name{'.'} All rights reserved.
+  address: Postal Address
   legal: Legal Notice
   privacy: Privacy Policy

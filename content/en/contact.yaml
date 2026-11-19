@@ -12,6 +12,14 @@ address:
   postalCode: 16 029
   addressLocality: Algiers
 
+map:
+  headline: This Isn’t the Map You’re Looking For…
+  text:
+    To display it, your browser has to contact Google, which will receive your
+    IP address and may set its own cookies. We won’t do that without your
+    consent.
+  cta: Show the Map
+
 platforms:
   - icon: IconX
     name: X

@@ -14,11 +14,17 @@ const { data: footer } = await useAsyncData(
 <template>
   <footer v-if="footer" id="footer">
     <div>
-      <address class="address" title="Adresse postale">
+      <address class="address" :title="t('footer.address')">
         <strong>{{ t('site.name') }}</strong><br>
-        <a href="https://goo.gl/maps/MmadgQgZRBv" target="_blank" rel="noopener">
-          {{ footer.address.streetAddress }}<br>
-          <span dir="ltr">{{ footer.address.postalCode }}</span> {{ footer.address.addressLocality }}
+        {{ footer.address.streetAddress }}<br>
+        <span dir="ltr">{{ footer.address.postalCode }}</span> {{ footer.address.addressLocality }}<br>
+        <a
+          href="https://www.google.com/maps/dir/?api=1&destination=36.720937,3.047607"
+          target="_blank"
+          rel="noopener noreferrer"
+          :aria-label="t('ariaLabels.directions')"
+        >
+          {{ t('actions.directions') }}
         </a>
       </address>
 
