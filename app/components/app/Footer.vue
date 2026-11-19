@@ -14,7 +14,7 @@ const { data: footer } = await useAsyncData(
 <template>
   <footer v-if="footer" id="footer">
     <div>
-      <address class="address" title="Adresse postale">
+      <address class="address" :title="t('footer.address')">
         <strong>{{ t('site.name') }}</strong><br>
         {{ footer.address.streetAddress }}<br>
         <span dir="ltr">{{ footer.address.postalCode }}</span> {{ footer.address.addressLocality }}

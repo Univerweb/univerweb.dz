@@ -119,5 +119,6 @@ blog:
 
 footer:
   copy: Copyright © {year} @:site.name{'.'} Tous droits réservés.
+  address: Adresse postale
   legal: Mentions légales
   privacy: Politique de confidentialité

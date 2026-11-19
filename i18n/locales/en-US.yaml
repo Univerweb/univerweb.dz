@@ -118,5 +118,6 @@ blog:
 
 footer:
   copy: Copyright © {year} @:site.name{'.'} All rights reserved.
+  address: Postal Address
   legal: Legal Notice
   privacy: Privacy Policy
