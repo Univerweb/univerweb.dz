@@ -160,8 +160,8 @@ header:has(nav) {
     @include transition(color);
 
     color: var(--text-color-heading);
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: var(--radius-pill);
 
     @media (hover: hover) {
@@ -196,8 +196,10 @@ header:has(nav) {
   @include typo(var(--font-size-12), $line-height: var(--line-height-snug));
 
   position: absolute;
+  inset-block-start: 50%;
   inset-inline-end: calc(100% + var(--spacing-8));
   width: max-content;
+  translate: 0 -50%;
   opacity: 0;
   visibility: hidden;
 
@@ -231,7 +233,7 @@ header:has(nav) {
 .toggle-menu {
   display: grid;
   align-content: space-between;
-  padding: 0.125rem;
+  padding: 0.1875rem;
 
   @media (min-width: $bp-md) {
     display: none;
