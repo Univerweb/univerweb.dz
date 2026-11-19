@@ -78,7 +78,7 @@ function zoom() {
         </GoogleMap>
       </ClientOnly>
       <div v-else id="map" class="map-consent">
-        <IconPin />
+        <IconExperience />
         <h2 id="map-title" class="h3">
           {{ contact.map.headline }}
         </h2>
