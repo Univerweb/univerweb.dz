@@ -30,7 +30,7 @@ Pour fonctionner, le site s’appuie sur les prestataires suivants, situés ou o
 - **Contabo GmbH (Allemagne) :** hébergement du site, de la messagerie et des journaux techniques du serveur (dont votre adresse IP).
 - **Amazon Web Services (Amazon S3) :** stockage des sauvegardes quotidiennes de nos serveurs (site, bases de données et messagerie), chiffrées au repos et conservées environ une semaine. Les journaux techniques en sont exclus.
 - **Cloudinary :** optimisation et livraison des images. Votre navigateur les charge directement depuis ses serveurs ([politique de confidentialité](https://cloudinary.com/privacy)).
-- **Google Maps :** carte de la page Contact, chargée automatiquement à l’ouverture de cette page. Google reçoit alors votre adresse IP et peut déposer ses propres cookies ([politique de confidentialité](https://policies.google.com/privacy)).
+- **Google Maps :** carte de la page Contact, chargée seulement si vous cliquez sur « Afficher la carte ». Google reçoit alors votre adresse IP et peut déposer ses propres cookies ([politique de confidentialité](https://policies.google.com/privacy)).
 
 Nous veillons à ne confier à ces prestataires que ce qui est nécessaire au fonctionnement et à la sécurité du site.
 
