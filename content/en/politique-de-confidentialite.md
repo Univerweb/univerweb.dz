@@ -21,7 +21,7 @@ The only data processed consists of:
 
 - **Technical server logs:** IP address, timestamp, and browser type, temporarily recorded strictly for security and maintenance purposes (retained for a maximum of one month).
 - **Display preference:** your theme choice (light or dark) is saved in your browser’s local storage, without any tracking.
-- **Direct communications:** information you voluntarily provide when contacting us by email or phone.
+- **Direct communications:** information you voluntarily provide when contacting us by email or phone, processed solely to respond to your request or fulfil our commitments to you.
 
 ## Hosting, Backups, and Third-Party Providers
 
@@ -30,7 +30,7 @@ To operate, the website relies on the following providers, located or operating 
 - **Contabo GmbH (Germany):** hosting of the website, email, and technical server logs (including your IP address).
 - **Amazon Web Services (Amazon S3):** storage of daily backups of our servers (website, databases, and email), encrypted at rest and kept for about a week. Technical logs are excluded.
 - **Cloudinary:** image optimization and delivery. Your browser loads them directly from its servers ([privacy policy](https://cloudinary.com/privacy)).
-- **Google Maps:** map on the Contact page, loaded only if you click “Show the Map”. Google then receives your IP address and may set its own cookies ([privacy policy](https://policies.google.com/privacy)).
+- **Google Maps:** map on the Contact page, loaded only if you click “Show the Map”. This click constitutes your express consent to the transfer: Google then receives your IP address and may set its own cookies ([privacy policy](https://policies.google.com/privacy)).
 
 We make sure to entrust these providers only with what is necessary for the operation and security of the website.
 
