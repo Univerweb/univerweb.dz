@@ -1,6 +1,10 @@
+nuxtSiteConfig:
+  name: Univerweb
+
 site:
   name: Univerweb
   logo: Univerweb’s logo
+  founderJobTitle: Founder and Manager
 
 navigation:
   menu:

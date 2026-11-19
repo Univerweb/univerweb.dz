@@ -1,6 +1,10 @@
+nuxtSiteConfig:
+  name: يونيفارواب
+
 site:
   name: يونيفارواب
   logo: شعار يونيفارواب
+  founderJobTitle: المؤسس والمدير
 
 navigation:
   menu:

@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/image',
     '@vueuse/nuxt',
+    'nuxt-schema-org',
   ],
 
   app: { rootId: 'app' },
@@ -19,6 +20,8 @@ export default defineNuxtConfig({
       scrollBehaviorType: 'smooth',
     },
   },
+
+  site: { url: process.env.BASE_URL },
 
   content: { renderer: { anchorLinks: false } },
 
