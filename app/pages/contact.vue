@@ -26,6 +26,12 @@ const position = {
 
 const showMap = ref(false)
 
+async function loadMap() {
+  showMap.value = true
+  await nextTick()
+  document.getElementById('map')?.focus()
+}
+
 const mapRef = ref<InstanceType<typeof GoogleMap> | null>(null)
 
 function zoom() {
@@ -63,6 +69,7 @@ function zoom() {
           id="map"
           ref="mapRef"
           :key="mode"
+          tabindex="-1"
           dir="auto"
           :api-key="config.public.gmapsKey"
           :map-id="config.public.gmapsId"
@@ -85,7 +92,7 @@ function zoom() {
         <p>
           {{ contact.map.text }}
         </p>
-        <button type="button" class="btn" @click="showMap = true">
+        <button type="button" class="btn" @click="loadMap">
           {{ contact.map.cta }}
           <IconNext />
         </button>
