@@ -39,6 +39,7 @@ actions:
     text: Contactez-nous
   visit: Visiter le site web
   copy: Copié !
+  directions: Obtenir l’itinéraire
 
 headings:
   client: Client

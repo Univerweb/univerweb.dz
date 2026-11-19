@@ -39,6 +39,7 @@ actions:
     text: اتصل بنا
   visit: زيارة الموقع
   copy: نسخ!
+  directions: الحصول على الاتجاهات
 
 headings:
   client: الزبون

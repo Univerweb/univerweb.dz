@@ -39,6 +39,7 @@ actions:
     text: Get in Touch
   visit: Visit Website
   copy: Copied!
+  directions: Get Directions
 
 headings:
   client: Client
