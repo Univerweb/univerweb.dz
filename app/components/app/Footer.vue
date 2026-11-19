@@ -18,12 +18,7 @@ const { data: footer } = await useAsyncData(
         <strong>{{ t('site.name') }}</strong><br>
         {{ footer.address.streetAddress }}<br>
         <span dir="ltr">{{ footer.address.postalCode }}</span> {{ footer.address.addressLocality }}<br>
-        <a
-          href="https://www.google.com/maps/dir/?api=1&destination=36.720937,3.047607"
-          target="_blank"
-          rel="noopener"
-          class="directions"
-        >
+        <a href="https://www.google.com/maps/dir/?api=1&destination=36.720937,3.047607" target="_blank" rel="noopener">
           {{ t('actions.directions') }}
         </a>
       </address>

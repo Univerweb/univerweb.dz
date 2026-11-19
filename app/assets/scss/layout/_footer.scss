@@ -23,18 +23,6 @@ footer {
   }
 }
 
-.directions {
-  @include transition(text-decoration-color);
-
-  text-decoration: underline;
-  text-decoration-color: var(--text-color-muted);
-  text-underline-offset: 0.2em;
-
-  &:is(:hover, :focus-visible) {
-    text-decoration-color: currentcolor;
-  }
-}
-
 .mobile {
   display: flex;
   align-items: center;
