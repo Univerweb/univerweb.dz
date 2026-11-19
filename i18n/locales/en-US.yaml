@@ -28,6 +28,7 @@ ariaLabels:
   copy: Copy Article Link
   x: Share This Article on X
   linkedIn: Share This Article on LinkedIn
+  directions: Get Directions (opens in a new tab)
 
 actions:
   skipLink:
