@@ -18,7 +18,6 @@ export function useSeo(options: Options) {
   const { t, locale } = useI18n()
   const { baseUrl, localeBaseUrl } = useUrl()
   const mode = useColorMode({ disableTransition: false })
-  const config = useRuntimeConfig()
 
   const pageName = typeof options.page === 'string' ? options.page : options.page.name
   const pageSlug = typeof options.page === 'object' && options.page.slug === true
@@ -56,14 +55,6 @@ export function useSeo(options: Options) {
   const linkAltFr = baseUrl(localePath(path, 'fr'))
   const linkAltEn = baseUrl(localePath(path, 'en'))
   const linkAltAr = baseUrl(localePath(path, 'ar'))
-
-  const { data: organization } = useAsyncData(
-    () => `seo-${locale.value}`,
-    () => queryCollection(`contact_${locale.value}`)
-      .select('address', 'platforms')
-      .first(),
-    { watch: [locale] },
-  )
 
   useSeoMeta({
     titleTemplate: computed(() => `%s | ${ogSiteName.value}`),
@@ -111,81 +102,27 @@ export function useSeo(options: Options) {
       { rel: 'alternate', href: linkAltAr, hreflang: 'ar' },
       { rel: 'alternate', href: linkAltAr, hreflang: 'ar-DZ' },
     ],
-
-    script: [
-      {
-        type: 'application/ld+json',
-        innerHTML: computed(() => {
-          const listItem = (position: number, name: string, item?: string) => ({
-            '@type': 'ListItem',
-            position,
-            name,
-            ...(item ? { item } : {}),
-          })
-
-          if (pageName === 'home') {
-            return JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'BreadcrumbList',
-              'itemListElement': [listItem(1, ogSiteName.value, localeBaseUrl.value)],
-            })
-          }
-
-          if (pageName === 'legal') {
-            return JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'BreadcrumbList',
-              'itemListElement': [
-                listItem(1, ogSiteName.value, localeBaseUrl.value),
-                listItem(2, title(), ogUrl),
-              ],
-            })
-          }
-
-          const items = [
-            listItem(1, ogSiteName.value, localeBaseUrl.value),
-            listItem(2, t(`navigation.menu.${pageName}`), baseUrl(localePath(pageName))),
-            ...(pageSlug
-              ? [listItem(3, breadcrumbTitle(), ogUrl)]
-              : []),
-          ]
-
-          return JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            'itemListElement': items,
-          })
-        }),
-      },
-
-      {
-        type: 'application/ld+json',
-        innerHTML: computed(() => JSON.stringify({
-          '@context': 'https://schema.org',
-          '@type': 'Organization',
-          'name': ogSiteName.value,
-          'url': localeBaseUrl.value,
-          'image': {
-            '@type': 'ImageObject',
-            'url': defaultOgImage.value,
-            'width': `${defaultOgImageWidth}px`,
-            'height': `${defaultOgImageHeight}px`,
-          },
-          'logo': {
-            '@type': 'ImageObject',
-            'url': baseUrl('/favicon.svg'),
-            'width': '256px',
-            'height': '256px',
-          },
-          'email': config.public.baseEmail,
-          'telephone': config.public.baseMobile,
-          'sameAs': organization.value?.platforms?.map(p => p.url) ?? [],
-          'address':
-            organization.value?.address
-              ? { '@type': 'PostalAddress', 'streetAddress': organization.value.address.streetAddress, 'postalCode': organization.value.address.postalCode, 'addressLocality': organization.value.address.addressLocality, 'addressRegion': organization.value.address.addressLocality, 'addressCountry': 'DZ' }
-              : undefined,
-        })),
-      },
-    ],
   })
+
+  useSchemaOrg([
+    defineBreadcrumb({
+      itemListElement: computed(() => {
+        const home = { name: ogSiteName.value, item: localeBaseUrl.value }
+
+        if (pageName === 'home') {
+          return [home]
+        }
+
+        if (pageName === 'legal') {
+          return [home, { name: title(), item: ogUrl }]
+        }
+
+        return [
+          home,
+          { name: t(`navigation.menu.${pageName}`), item: baseUrl(localePath(pageName)) },
+          ...(pageSlug ? [{ name: breadcrumbTitle(), item: ogUrl }] : []),
+        ]
+      }),
+    }),
+  ])
 }
