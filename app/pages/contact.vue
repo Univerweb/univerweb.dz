@@ -42,7 +42,7 @@ function zoom() {
   <main v-if="contact">
     <section class="container row" aria-labelledby="intro-title">
       <div class="col col--1-6">
-        <h1 id="intro-title" class="h2">
+        <h1 id="intro-title">
           {{ contact.title }}
         </h1>
         <p class="lead">
@@ -78,11 +78,11 @@ function zoom() {
         </GoogleMap>
       </ClientOnly>
       <div v-else id="map" class="map-consent">
-        <div class="container intro intro-justify">
+        <div class="container intro">
           <h2 id="map-title">
             {{ contact.map.headline }}
           </h2>
-          <p class="lead">
+          <p>
             {{ contact.map.text }}
           </p>
           <button type="button" class="btn" @click="showMap = true">
