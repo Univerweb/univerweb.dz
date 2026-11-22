@@ -2,8 +2,8 @@ nuxtSiteConfig:
   name: يونيفارواب
 
 site:
-  name: يونيفارواب
-  logo: شعار يونيفارواب
+  name: '@:nuxtSiteConfig.name'
+  logo: 'شعار @:nuxtSiteConfig.name'
   founderJobTitle: المؤسس والمدير
 
 navigation:

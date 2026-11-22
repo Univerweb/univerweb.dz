@@ -2,8 +2,8 @@ nuxtSiteConfig:
   name: Univerweb
 
 site:
-  name: Univerweb
-  logo: Logo d’Univerweb
+  name: '@:nuxtSiteConfig.name'
+  logo: 'Logo d’@:nuxtSiteConfig.name'
   founderJobTitle: Fondateur et gérant
 
 navigation:
