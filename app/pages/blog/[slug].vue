@@ -46,8 +46,8 @@ useSchemaOrg([
     '@type': 'BlogPosting',
     'headline': () => article.value!.title,
     'description': () => article.value!.description,
-    'datePublished': () => article.value!.createdAt,
-    'dateModified': () => article.value!.updatedAt,
+    'datePublished': () => schemaDate(article.value!.createdAt),
+    'dateModified': () => schemaDate(article.value!.updatedAt),
     'keywords': () => article.value!.tags,
     'articleSection': () => t('navigation.menu.blog'),
     'author': authorIsFounder
