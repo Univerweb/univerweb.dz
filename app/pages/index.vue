@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { locale } = useI18n()
+const { baseUrl } = useUrl()
 
 const { data: home } = await useAsyncData(
   () => `home-${locale.value}`,
@@ -14,6 +15,12 @@ useSeo({
   title: () => home.value!.title,
   description: () => home.value!.description,
 })
+
+useSchemaOrg([
+  defineWebPage({
+    about: { '@id': baseUrl('/#identity') },
+  }),
+])
 </script>
 
 <template>
