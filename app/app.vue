@@ -34,10 +34,10 @@ useSchemaOrg([
     founder: {
       '@type': 'Person',
       '@id': baseUrl('/#founder'),
-      'name': 'Houssem Nedjar',
-      'alternateName': 'Hocem Nedjar',
+      'name': founder.name,
+      'alternateName': founder.alternateName,
       'jobTitle': () => t('site.founderJobTitle'),
-      'sameAs': ['https://x.com/HoussemNedjar'],
+      'sameAs': founder.sameAs,
     },
   }),
 ])

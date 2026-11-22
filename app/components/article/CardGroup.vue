@@ -14,9 +14,7 @@ const props = defineProps<{
 }>()
 
 const { path } = useRoute()
-const { locale, t } = useI18n()
-const { baseUrl } = useUrl()
-const localePath = useLocalePath()
+const { locale } = useI18n()
 
 const { data: articles } = await useAsyncData(
   `articles-${path}`,
@@ -30,10 +28,7 @@ const { data: articles } = await useAsyncData(
 </script>
 
 <template>
-  <section id="blog" class="container" vocab="https://schema.org/" typeof="CollectionPage" aria-labelledby="blog-title">
-    <meta property="name" :content="t('navigation.menu.blog')">
-    <link property="url" :href="baseUrl(localePath('blog'))">
-
+  <section id="blog" class="container" aria-labelledby="blog-title">
     <div class="intro intro-justify">
       <component :is="headlineTag || 'h1'" id="blog-title" class="h1">
         {{ blog.headline }}
