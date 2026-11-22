@@ -8,14 +8,14 @@ defineProps<{
 </script>
 
 <template>
-  <div class="card-prestation" vocab="https://schema.org/" typeof="Service">
+  <div class="card-prestation">
     <component :is="card.icon" fill="var(--accent-color)" />
 
-    <component :is="titleTag" property="name serviceType" class="h3">
+    <component :is="titleTag" class="h3">
       {{ card.title }}
     </component>
 
-    <p property="description">
+    <p>
       {{ card.description }}
     </p>
 

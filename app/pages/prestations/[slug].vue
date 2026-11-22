@@ -43,6 +43,21 @@ useSeo({
   ogImageHeight: 1575,
 })
 
+useSchemaOrg([
+  defineWebPage({ '@type': ['WebPage', 'FAQPage'] }),
+  defineService({
+    name: () => service.value!.title,
+    serviceType: () => service.value!.title,
+    description: () => service.value!.description,
+    provider: { '@id': baseUrl('/#identity') },
+    areaServed: 'DZ',
+  }),
+  ...service.value.faq.questions.map(faq => defineQuestion({
+    name: faq.question,
+    acceptedAnswer: faq.answer,
+  })),
+])
+
 const activeIndex = ref<number | null>(null)
 
 const toggle = (index: number) => {
@@ -82,14 +97,10 @@ const leave = (el: Element) => {
 
 <template>
   <main v-if="service" class="prestations">
-    <article vocab="https://schema.org/" typeof="Service" aria-labelledby="service-title">
+    <article aria-labelledby="service-title">
       <header class="container intro">
-        <span property="mainEntityOfPage" typeof="WebPage">
-          <link property="url" :href="baseUrl(path)">
-        </span>
-
         <AppBack path="prestations" :label="t('navigation.menu.prestations')" />
-        <h1 id="service-title" property="name serviceType">
+        <h1 id="service-title">
           {{ service.title }}
         </h1>
       </header>
@@ -102,7 +113,7 @@ const leave = (el: Element) => {
 
       <div class="container row">
         <div class="col col--1-9">
-          <p class="lead" property="description">
+          <p class="lead">
             {{ service.description }}
           </p>
           <p v-for="(paragraph, index) in service.intro" :key="index">
@@ -146,15 +157,15 @@ const leave = (el: Element) => {
         </ol>
       </section>
 
-      <section class="container row faq" vocab="https://schema.org/" typeof="FAQPage" aria-labelledby="faq">
+      <section class="container row faq" aria-labelledby="faq">
         <h2 id="faq" class="col col--1-5">
           {{ service.faq.title }}
         </h2>
         <div class="col">
-          <div v-for="(faq, index) in service.faq.questions" :key="index" class="question" property="mainEntity" typeof="Question">
+          <div v-for="(faq, index) in service.faq.questions" :key="index" class="question">
             <h3>
               <button :id="`faq-header-${index + 1}`" :aria-expanded="activeIndex === index" :aria-controls="`faq-panel-${index + 1}`" @click="toggle(index)">
-                <span property="name">
+                <span>
                   {{ faq.question }}
                 </span>
                 <span class="icon" aria-hidden="true">
@@ -170,10 +181,8 @@ const leave = (el: Element) => {
                 :aria-labelledby="`faq-header-${index + 1}`"
                 :aria-hidden="activeIndex !== index"
                 class="row"
-                property="acceptedAnswer"
-                typeof="Answer"
               >
-                <p class="col col--1-9" property="text">
+                <p class="col col--1-9">
                   {{ faq.answer }}
                 </p>
               </div>
