@@ -8,7 +8,7 @@ const [{ data: service }, { data: related }] = await Promise.all([
   useAsyncData(
     () => `service-${locale.value}-${slug}`,
     () => queryCollection(`service_${locale.value}`)
-      .select('path', 'seo', 'title', 'description', 'alt', 'intro', 'solutions', 'features', 'process', 'faq')
+      .select('path', 'seo', 'title', 'description', 'alt', 'createdAt', 'updatedAt', 'intro', 'solutions', 'features', 'process', 'faq')
       .path(localePath(path))
       .first(),
     { watch: [locale] },
@@ -44,7 +44,11 @@ useSeo({
 })
 
 useSchemaOrg([
-  defineWebPage({ '@type': ['WebPage', 'FAQPage'] }),
+  defineWebPage({
+    '@type': ['WebPage', 'FAQPage'],
+    'datePublished': () => schemaDate(service.value!.createdAt),
+    'dateModified': () => schemaDate(service.value!.updatedAt),
+  }),
   defineService({
     name: () => service.value!.title,
     serviceType: () => service.value!.title,

@@ -40,7 +40,7 @@ const Project = Date.extend({
   about: z.string(),
 })
 
-const Service = z.object({
+const Service = Date.extend({
   icon: z.string(),
   cta: z.string(),
   alt: z.string(),
