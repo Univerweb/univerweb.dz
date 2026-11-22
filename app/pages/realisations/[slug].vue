@@ -2,7 +2,7 @@
 const { path, params: { slug } } = useRoute()
 const { locale, defaultLocale, t, tm, rt } = useI18n()
 const localePath = useLocalePath()
-const { localeBaseUrl, baseUrl } = useUrl()
+const { baseUrl } = useUrl()
 
 const { data: project } = await useAsyncData(
   () => `project-${locale.value}-${slug}`,
@@ -44,6 +44,28 @@ useSeo({
   ogImageAlt: () => t('alt.banner', { client: project.value!.title }),
 })
 
+useSchemaOrg([
+  {
+    '@type': 'CreativeWork',
+    '@id': `${baseUrl(path)}#work`,
+    'name': () => project.value!.title,
+    'description': () => project.value!.description,
+    'genre': () => t(`category.${project.value!.category}`),
+    'keywords': () => project.value!.tags.map(tag => t(`services.${tag}.name`)),
+    'datePublished': () => schemaDate(project.value!.createdAt),
+    'dateModified': () => schemaDate(project.value!.updatedAt),
+    'creator': { '@id': baseUrl('/#identity') },
+    'publisher': { '@id': baseUrl('/#identity') },
+    'about': {
+      '@type': 'Organization',
+      'name': () => project.value!.title,
+      'description': () => project.value!.about,
+      'url': () => project.value!.website,
+    },
+    'mainEntityOfPage': { '@id': `${baseUrl(path)}#webpage` },
+  },
+])
+
 const { data: related } = await useAsyncData(
   () => `project-related-${locale.value}-${slug}`,
   async () => {
@@ -83,25 +105,10 @@ const { data: surround } = await useAsyncData(
 
 <template>
   <main v-if="project" class="realisations">
-    <article vocab="https://schema.org/" typeof="CreativeWork" aria-labelledby="project-title">
+    <article aria-labelledby="project-title">
       <header class="container intro">
-        <meta property="description" :content="project.description">
-        <meta property="dateCreated datePublished" :content="new Date(project.createdAt).toISOString()">
-        <meta property="dateModified" :content="new Date(project.updatedAt).toISOString()">
-        <span property="author publisher" typeof="Organization">
-          <meta property="name" :content="t('site.name')">
-          <link property="url" :href="localeBaseUrl">
-        </span>
-        <span property="isPartOf" typeof="CollectionPage">
-          <meta property="name" :content="t('navigation.menu.realisations')">
-          <link property="url" :href="baseUrl(localePath('realisations'))">
-        </span>
-        <span property="mainEntityOfPage" typeof="WebPage">
-          <link property="url" :href="baseUrl(path)">
-        </span>
-
         <AppBack path="realisations" :label="t('navigation.menu.realisations')" />
-        <h1 id="project-title" property="name">
+        <h1 id="project-title">
           {{ project.title }}
         </h1>
       </header>
@@ -164,7 +171,7 @@ const { data: surround } = await useAsyncData(
             <h2 id="about-company" class="label">
               {{ t('headings.about', { client: project.title }) }}
             </h2>
-            <p property="about">
+            <p>
               {{ project.about }}
             </p>
             <a v-if="project.website" :href="project.website" class="link">
