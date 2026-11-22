@@ -2,7 +2,6 @@
 const { path, params: { slug } } = useRoute()
 const { locale, t } = useI18n()
 const localePath = useLocalePath()
-const { localeBaseUrl, baseUrl } = useUrl()
 const head = useLocaleHead()
 
 const { data: legal } = await useAsyncData(
@@ -27,31 +26,23 @@ useSeo({
   title: () => legal.value!.title,
   description: () => legal.value!.description,
 })
+
+useSchemaOrg([
+  defineWebPage({
+    datePublished: () => schemaDate(legal.value!.createdAt),
+    dateModified: () => schemaDate(legal.value!.updatedAt),
+  }),
+])
 </script>
 
 <template>
   <main v-if="legal" class="legal blog">
     <article
-      vocab="https://schema.org/"
-      typeof="Article"
       aria-labelledby="article-title"
       class="container container-narrow"
     >
       <header>
-        <meta property="description" :content="legal.description">
-        <meta property="image" :content="baseUrl(`/images/univerweb${locale === 'ar' ? '-ar' : ''}.jpg`)">
-        <meta property="datePublished" :content="new Date(legal.createdAt).toISOString()">
-        <meta property="dateCreated" :content="new Date(legal.createdAt).toISOString()">
-        <meta property="dateModified" :content="new Date(legal.updatedAt).toISOString()">
-        <span property="publisher author" typeof="Organization">
-          <meta property="name" :content="t('site.name')">
-          <link property="url" :href="localeBaseUrl">
-        </span>
-        <span property="mainEntityOfPage" typeof="WebPage">
-          <link property="url" :href="baseUrl(path)">
-        </span>
-
-        <h1 id="article-title" class="h2" property="headline">
+        <h1 id="article-title" class="h2">
           {{ legal.title }}
         </h1>
 
@@ -80,7 +71,7 @@ useSeo({
         </dl>
       </header>
 
-      <ContentRenderer :value="legal" property="articleBody" class="content" />
+      <ContentRenderer :value="legal" class="content" />
     </article>
 
     <LazyAppRequest />
