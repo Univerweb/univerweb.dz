@@ -48,7 +48,7 @@ jobs:
             exit 1
           fi
 
-      - name: 🧹 Nettoyage du dossier distant
+      - name: 🧹 Préparation du dossier de transit
         uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.PROD_HOST }}
@@ -56,10 +56,10 @@ jobs:
           key: ${{ secrets.PROD_SSH_KEY }}
           port: 22
           script: |
-            echo "🧹 Suppression du contenu distant..."
-            rm -rf /var/www/vhosts/univerweb.dz/httpdocs/*
+            rm -rf /var/www/vhosts/univerweb.dz/deploy-staging
+            mkdir -p /var/www/vhosts/univerweb.dz/deploy-staging
 
-      - name: 📤 Déploiement des fichiers sur le serveur
+      - name: 📤 Envoi des fichiers dans le dossier de transit
         uses: appleboy/scp-action@v1
         with:
           host: ${{ secrets.PROD_HOST }}
@@ -67,8 +67,33 @@ jobs:
           key: ${{ secrets.PROD_SSH_KEY }}
           port: 22
           source: .output/public/
-          target: /var/www/vhosts/univerweb.dz/httpdocs
+          target: /var/www/vhosts/univerweb.dz/deploy-staging
           strip_components: 2
+
+      - name: 🔄 Mise en ligne sans coupure
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.PROD_HOST }}
+          username: ${{ secrets.PROD_USER }}
+          key: ${{ secrets.PROD_SSH_KEY }}
+          port: 22
+          script: |
+            set -e
+            STAGING=/var/www/vhosts/univerweb.dz/deploy-staging
+            WEBROOT=/var/www/vhosts/univerweb.dz/httpdocs
+            if [ -z "$(ls -A "$STAGING")" ]; then
+              echo "❌ Le dossier de transit est vide. Mise en ligne annulée."
+              exit 1
+            fi
+            if command -v rsync > /dev/null; then
+              rsync -a --exclude='*.html' "$STAGING/" "$WEBROOT/"
+              rsync -a --delete-after --filter='P /.*' "$STAGING/" "$WEBROOT/"
+            else
+              echo "⚠️ rsync absent : remplacement par copie locale."
+              rm -rf "$WEBROOT"/*
+              cp -a "$STAGING/." "$WEBROOT/"
+            fi
+            rm -rf "$STAGING"
 
       - name: ✅ Déploiement terminé avec succès
         run: echo "🚀 Le site a été déployé avec succès sur univerweb.dz"
