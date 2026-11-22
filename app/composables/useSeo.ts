@@ -105,6 +105,10 @@ export function useSeo(options: Options) {
   })
 
   useSchemaOrg([
+    defineWebPage({
+      primaryImageOfPage: ogImage,
+    }),
+
     defineBreadcrumb({
       itemListElement: computed(() => {
         const home = { name: ogSiteName.value, item: localeBaseUrl.value }

@@ -2,7 +2,7 @@
 const head = useLocaleHead()
 const { y } = useWindowScroll()
 const { t, locale, finalizePendingLocaleChange } = useI18n()
-const { baseUrl, localeBaseUrl } = useUrl()
+const { baseUrl } = useUrl()
 const config = useRuntimeConfig()
 
 const { data: contact } = useAsyncData(
@@ -16,7 +16,7 @@ const { data: contact } = useAsyncData(
 useSchemaOrg([
   defineOrganization({
     name: () => t('site.name'),
-    url: () => localeBaseUrl.value,
+    url: baseUrl('/'),
     logo: baseUrl('/favicon.svg'),
     image: () => baseUrl(`/images/univerweb${locale.value === 'ar' ? '-ar' : ''}.png`),
     email: config.public.baseEmail,
