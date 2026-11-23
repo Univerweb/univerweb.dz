@@ -8,7 +8,10 @@
   gap: var(--spacing-16);
 
   @media (min-width: $bp-md) {
-    grid-template-columns: repeat(2, minmax(var(--column-width), 28.75rem));
+    grid-template-columns: repeat(
+      2,
+      minmax(var(--column-width), var(--column-width-max))
+    );
   }
 
   @media (min-width: $bp-xl) {
