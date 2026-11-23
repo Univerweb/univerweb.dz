@@ -27,7 +27,7 @@ useSchemaOrg([
 
 <template>
   <main v-if="agence">
-    <section class="container intro" aria-labelledby="intro-title">
+    <section class="container columns-1" aria-labelledby="intro-title">
       <h1 id="intro-title">
         {{ agence.headline }}
       </h1>
@@ -37,12 +37,12 @@ useSchemaOrg([
     </section>
 
     <section class="container" aria-labelledby="method-title">
-      <div class="intro">
+      <div class="columns-1">
         <h2 id="method-title">
           {{ agence.method.headline }}
         </h2>
       </div>
-      <ol class="steps">
+      <ol class="columns-4">
         <li v-for="(method, index) in agence.method.list" :key="index" class="big-count">
           <h3>{{ method.title }}</h3>
           <p>
@@ -53,12 +53,12 @@ useSchemaOrg([
     </section>
 
     <section class="container" aria-labelledby="choose-title">
-      <div class="intro">
+      <div class="columns-1">
         <h2 id="choose-title">
           {{ agence.choose.headline }}
         </h2>
       </div>
-      <div class="pair">
+      <div class="columns-2">
         <div v-for="(choose, index) in agence.choose.list" :key="index">
           <component :is="choose.icon" fill="var(--accent-color)" />
           <h3>{{ choose.title }}</h3>

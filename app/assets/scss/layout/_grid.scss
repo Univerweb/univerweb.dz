@@ -16,7 +16,7 @@
   }
 }
 
-.intro {
+.columns-1 {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   align-content: center;
@@ -45,7 +45,7 @@
   }
 }
 
-.split {
+.columns-split {
   display: grid;
   gap: var(--spacing-24) var(--grid-gap);
 
@@ -54,8 +54,8 @@
   }
 }
 
-.steps,
-.pair {
+.columns-4,
+.columns-2 {
   display: grid;
   gap: var(--spacing-48) var(--grid-gap);
 
@@ -64,7 +64,7 @@
   }
 }
 
-.steps {
+.columns-4 {
   @media (min-width: $bp-lg) {
     grid-template-columns: repeat(3, 1fr);
 

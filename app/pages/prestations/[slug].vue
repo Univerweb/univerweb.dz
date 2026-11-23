@@ -102,7 +102,7 @@ const leave = (el: Element) => {
 <template>
   <main v-if="service" class="prestations">
     <article aria-labelledby="service-title">
-      <header class="container intro">
+      <header class="container columns-1">
         <AppBack path="prestations" :label="t('navigation.menu.prestations')" />
         <h1 id="service-title">
           {{ service.title }}
@@ -115,7 +115,7 @@ const leave = (el: Element) => {
         class="banner"
       />
 
-      <div class="container intro">
+      <div class="container columns-1">
         <p class="lead">
           {{ service.description }}
         </p>
@@ -124,7 +124,7 @@ const leave = (el: Element) => {
         </p>
       </div>
 
-      <section class="container split features" aria-labelledby="solutions">
+      <section class="container columns-split features" aria-labelledby="solutions">
         <h2 id="solutions">
           {{ service.solutions.title }}
         </h2>
@@ -136,7 +136,7 @@ const leave = (el: Element) => {
         </div>
       </section>
 
-      <section class="container split tags-group" aria-labelledby="features">
+      <section class="container columns-split tags-group" aria-labelledby="features">
         <h2 id="features">
           {{ service.features.title }}
         </h2>
@@ -148,12 +148,12 @@ const leave = (el: Element) => {
       </section>
 
       <section class="container" aria-labelledby="process">
-        <div class="intro">
+        <div class="columns-1">
           <h2 id="process">
             {{ service.process.title }}
           </h2>
         </div>
-        <ol class="steps">
+        <ol class="columns-4">
           <li v-for="process in service.process.steps" :key="process.title" class="big-count">
             <h3>{{ process.title }}</h3>
             <p>{{ process.description }}</p>
@@ -162,7 +162,7 @@ const leave = (el: Element) => {
       </section>
 
       <section class="container faq" aria-labelledby="faq">
-        <div class="intro">
+        <div class="columns-1">
           <h2 id="faq">
             {{ service.faq.title }}
           </h2>
@@ -185,7 +185,7 @@ const leave = (el: Element) => {
               :id="`faq-panel-${index + 1}`"
               :aria-labelledby="`faq-header-${index + 1}`"
               :aria-hidden="activeIndex !== index"
-              class="intro"
+              class="columns-1"
             >
               <p>
                 {{ faq.answer }}
@@ -197,7 +197,7 @@ const leave = (el: Element) => {
     </article>
 
     <aside class="container" aria-labelledby="other">
-      <div class="intro">
+      <div class="columns-1">
         <h2 id="other">
           {{ t('headings.otherTurnkey') }}
         </h2>

@@ -26,7 +26,7 @@ useSchemaOrg([
 <template>
   <main v-if="home">
     <section class="container hero" aria-labelledby="intro-title">
-      <div class="intro">
+      <div class="columns-1">
         <h1 id="intro-title">
           {{ home.hero.headline }}
         </h1>

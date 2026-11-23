@@ -46,7 +46,7 @@ function zoom() {
 
 <template>
   <main v-if="contact">
-    <section class="container intro" aria-labelledby="intro-title">
+    <section class="container columns-1" aria-labelledby="intro-title">
       <h1 id="intro-title">
         {{ contact.title }}
       </h1>
@@ -98,12 +98,12 @@ function zoom() {
     </section>
 
     <section class="container request other" aria-labelledby="other-title">
-      <div class="intro">
+      <div class="columns-1">
         <h2 id="other-title">
           {{ t('headings.otherContact') }}
         </h2>
       </div>
-      <div class="pair">
+      <div class="columns-2">
         <div>
           <h3 class="label">
             {{ t('headings.manager') }}

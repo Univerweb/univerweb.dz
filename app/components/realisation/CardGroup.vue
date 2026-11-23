@@ -50,7 +50,7 @@ const { data: projects } = await useAsyncData(
 
 <template>
   <section id="realisations" class="container" aria-labelledby="realisations-title">
-    <div class="intro">
+    <div class="columns-1">
       <component :is="headlineTag || 'h1'" id="realisations-title" class="h1">
         {{ realisations.headline }}
       </component>

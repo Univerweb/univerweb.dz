@@ -29,7 +29,7 @@ const { data: articles } = await useAsyncData(
 
 <template>
   <section id="blog" class="container" aria-labelledby="blog-title">
-    <div class="intro">
+    <div class="columns-1">
       <component :is="headlineTag || 'h1'" id="blog-title" class="h1">
         {{ blog.headline }}
       </component>

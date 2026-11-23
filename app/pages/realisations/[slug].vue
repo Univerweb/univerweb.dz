@@ -106,7 +106,7 @@ const { data: surround } = await useAsyncData(
 <template>
   <main v-if="project" class="realisations">
     <article aria-labelledby="project-title">
-      <header class="container intro">
+      <header class="container columns-1">
         <AppBack path="realisations" :label="t('navigation.menu.realisations')" />
         <h1 id="project-title">
           {{ project.title }}
@@ -121,7 +121,7 @@ const { data: surround } = await useAsyncData(
         class="banner-framed"
       />
 
-      <div class="container pair">
+      <div class="container columns-2">
         <section aria-labelledby="client">
           <h2 id="client" class="label">
             {{ t('headings.client') }}
@@ -165,7 +165,7 @@ const { data: surround } = await useAsyncData(
         </section>
       </div>
 
-      <div class="container container-flush-top split">
+      <div class="container container-flush-top columns-split">
         <div>
           <section class="inner" aria-labelledby="about-company">
             <h2 id="about-company" class="label">
@@ -191,7 +191,7 @@ const { data: surround } = await useAsyncData(
     </article>
 
     <aside v-if="related && related.length" class="container" aria-labelledby="related">
-      <div class="intro">
+      <div class="columns-1">
         <h2 id="related">
           {{ t('headings.otherSimilar') }}
         </h2>

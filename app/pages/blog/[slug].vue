@@ -63,7 +63,7 @@ useSchemaOrg([
 <template>
   <main v-if="article" class="blog">
     <article aria-labelledby="article-title">
-      <header class="container intro">
+      <header class="container columns-1">
         <AppBack path="blog" :label="t('navigation.menu.blog')" />
         <ul class="tags">
           <li v-for="tag in article.tags" :key="tag">
