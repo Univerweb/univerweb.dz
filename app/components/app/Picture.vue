@@ -16,6 +16,5 @@ const localePath = useLocalePath()
     :sizes="sizes || (type === 'banner' ? '100vw xxl:1400px' : '310px xs:360px sm:495px md:448px xl:560px')"
     format="avif,webp"
     loading="lazy"
-    :img-attrs="{ property: 'image' }"
   />
 </template>
