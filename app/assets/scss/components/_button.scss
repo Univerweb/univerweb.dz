@@ -48,20 +48,13 @@
     border: 0.0625rem solid var(--border-color);
   }
 
-  &.skip-link {
-    @include transition(background-color, color, transform);
-
-    position: absolute;
-    inset-block-start: 0.8125rem;
-    inset-inline-start: 1rem;
-    padding-inline: var(--spacing-24);
-    transform: translateY(calc(-100% - 0.8125rem));
+  &-back {
+    margin-block-end: var(--spacing-24);
+    padding-inline: var(--spacing-8) var(--spacing-24);
   }
 
-  .hero > & {
-    justify-self: center;
+  &-icon {
     width: 2.875em;
-    margin-block-end: var(--spacing-24);
     padding: var(--spacing-8);
     padding-block-end: var(--spacing-48);
   }
@@ -78,23 +71,6 @@
     margin-top: var(--spacing-32);
   }
 
-  &.back {
-    margin-bottom: var(--spacing-24);
-    padding-inline: var(--spacing-8) var(--spacing-24);
-
-    :root[dir='rtl'] & svg {
-      transform: rotate(180deg);
-    }
-
-    &:is(:hover, :focus-visible) svg {
-      transform: translateX(-0.3125rem);
-
-      :root[dir='rtl'] & {
-        transform: translateX(0.3125rem) rotate(180deg);
-      }
-    }
-  }
-
   &:is(:hover, :focus-visible) {
     background-color: var(--accent-color);
     color: var(--text-color-on-accent);
@@ -104,10 +80,6 @@
     background-color: transparent;
     color: var(--text-color-heading);
     border-color: var(--text-color-heading);
-  }
-
-  &.skip-link:focus-visible {
-    transform: translateY(0);
   }
 
   svg {
@@ -131,13 +103,13 @@
     color: var(--text-color-heading);
   }
 
+  :root[dir='rtl'] &-back svg {
+    transform: rotate(180deg);
+  }
+
   &:is(:hover, :focus-visible) svg {
     transform: translateX(0.5rem);
     color: var(--text-color-on-accent);
-
-    .hero > & {
-      transform: translateY(2.5rem);
-    }
 
     :root[dir='rtl'] &.next {
       transform: translateX(-0.5rem) rotate(180deg);
@@ -146,5 +118,31 @@
 
   &-outline:is(:hover, :focus-visible) svg {
     color: var(--text-color-heading);
+  }
+
+  &-back:is(:hover, :focus-visible) svg {
+    transform: translateX(-0.5rem);
+
+    :root[dir='rtl'] & {
+      transform: translateX(0.5rem) rotate(180deg);
+    }
+  }
+
+  &-icon:is(:hover, :focus-visible) svg {
+    transform: translateY(2.5rem);
+  }
+}
+
+.skip-link {
+  @include transition(background-color, color, transform);
+
+  position: absolute;
+  inset-block-start: 0.8125rem;
+  inset-inline-start: 1rem;
+  padding-inline: var(--spacing-24);
+  transform: translateY(calc(-100% - 0.8125rem));
+
+  &:focus-visible {
+    transform: translateY(0);
   }
 }

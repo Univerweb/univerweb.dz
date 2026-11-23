@@ -44,7 +44,7 @@ useSchemaOrg([
           </NuxtLinkLocale>
         </div>
       </div>
-      <NuxtLinkLocale to="/#realisations" :aria-label="t('ariaLabels.scrollToProjects')" class="btn">
+      <NuxtLinkLocale to="/#realisations" :aria-label="t('ariaLabels.scrollToProjects')" class="btn btn-icon">
         <IconArrow />
       </NuxtLinkLocale>
     </section>

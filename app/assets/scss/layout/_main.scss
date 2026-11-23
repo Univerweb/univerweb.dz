@@ -22,6 +22,11 @@ main {
   grid-auto-rows: 1fr auto;
   align-items: center;
   min-height: calc(100svh - var(--header-height));
+
+  > .btn-icon {
+    justify-self: center;
+    margin-block-end: var(--spacing-24);
+  }
 }
 
 .hero-actions {

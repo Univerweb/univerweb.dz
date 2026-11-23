@@ -6,7 +6,7 @@ defineProps<{
 </script>
 
 <template>
-  <NuxtLinkLocale :to="path" class="btn back">
+  <NuxtLinkLocale :to="path" class="btn btn-back">
     <IconBack />
     {{ label }}
   </NuxtLinkLocale>
