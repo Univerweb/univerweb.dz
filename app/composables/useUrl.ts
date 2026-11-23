@@ -1,7 +1,7 @@
 export function useUrl() {
   const { locale, defaultLocale } = useI18n()
   const config = useRuntimeConfig()
-  const baseUrl = (path: string) => `${config.public.baseURL}${path}`
+  const baseUrl = (path: string) => `${config.public.baseURL.replace(/\/+$/, '')}${path}`
 
   return {
     baseUrl,
