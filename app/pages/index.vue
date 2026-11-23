@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { locale } = useI18n()
+const { locale, t } = useI18n()
 const { baseUrl } = useUrl()
 
 const { data: home } = await useAsyncData(
@@ -33,8 +33,18 @@ useSchemaOrg([
         <p class="lead">
           {{ home.hero.lead }}
         </p>
+        <div class="hero-actions">
+          <NuxtLinkLocale :to="home.hero.cta.path" class="btn">
+            {{ home.hero.cta.label }}
+            <IconNext />
+          </NuxtLinkLocale>
+          <NuxtLinkLocale :to="home.hero.link.path" class="btn btn-outline">
+            {{ home.hero.link.label }}
+            <IconNext />
+          </NuxtLinkLocale>
+        </div>
       </div>
-      <NuxtLinkLocale :to="home.hero.cta.path" :aria-label="home.hero.cta.label" class="btn">
+      <NuxtLinkLocale to="/#realisations" :aria-label="t('ariaLabels.scrollToProjects')" class="btn btn-icon">
         <IconArrow />
       </NuxtLinkLocale>
     </section>

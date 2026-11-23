@@ -12,8 +12,11 @@ hero:
     identity, reliable hosting, and results-driven digital marketing. Let’s
     build your growth together.
   cta:
-    label: Go to the projects section
-    path: /#realisations
+    label: Let’s Talk about Your Project
+    path: /contact
+  link:
+    label: Discover the Agency
+    path: /agence
 
 sectionRealisation:
   headline: Projects That Transform Ideas into Digital Success.
