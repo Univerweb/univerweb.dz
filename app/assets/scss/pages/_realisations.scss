@@ -29,7 +29,7 @@
     }
   }
 
-  @media (min-width: $bp-md) {
+  @media (min-width: $bp-lg) {
     article .inner {
       position: sticky;
       top: var(--spacing-responsive);

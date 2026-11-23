@@ -45,6 +45,7 @@
 
   --gutter: var(--spacing-responsive);
   --spacing-responsive: 1rem;
+  --grid-gap: calc(var(--spacing-responsive) * 2);
 
   --spacing-4: 0.25rem;
   --spacing-8: 0.5rem;

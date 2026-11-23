@@ -165,8 +165,8 @@ const { data: surround } = await useAsyncData(
         </section>
       </div>
 
-      <div class="container container-no-pt row">
-        <div class="col col--1-4">
+      <div class="container container-no-pt split">
+        <div>
           <section class="inner" aria-labelledby="about-company">
             <h2 id="about-company" class="label">
               {{ t('headings.about', { client: project.title }) }}
@@ -184,7 +184,7 @@ const { data: surround } = await useAsyncData(
           type="preview"
           :alt="t('alt.preview', { client: project.title })"
           sizes="304px xs:354px sm:697px md:921px lg:565px xl:730px"
-          class="col col--5-13 preview"
+          class="preview"
           :img-attrs="null"
         />
       </div>

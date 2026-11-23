@@ -126,11 +126,11 @@ const leave = (el: Element) => {
         </div>
       </div>
 
-      <section class="container row features" aria-labelledby="solutions">
-        <h2 id="solutions" class="col col--1-5">
+      <section class="container split features" aria-labelledby="solutions">
+        <h2 id="solutions">
           {{ service.solutions.title }}
         </h2>
-        <div class="col col--6-13">
+        <div>
           <template v-for="solution in service.solutions.list" :key="solution.title">
             <h3>{{ solution.title }}</h3>
             <p>{{ solution.description }}</p>
@@ -138,11 +138,11 @@ const leave = (el: Element) => {
         </div>
       </section>
 
-      <section class="container row tags-group" aria-labelledby="features">
-        <h2 id="features" class="col col--1-6">
+      <section class="container split tags-group" aria-labelledby="features">
+        <h2 id="features">
           {{ service.features.title }}
         </h2>
-        <ul class="col col--7-12 tags">
+        <ul class="tags">
           <li v-for="tag in service.features.tags" :key="tag">
             {{ tag }}
           </li>

@@ -41,6 +41,15 @@
   }
 }
 
+.split {
+  display: grid;
+  gap: var(--spacing-24) var(--grid-gap);
+
+  @media (min-width: $bp-lg) {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
 .row {
   @include grid(12, 1fr, var(--spacing-24) 0);
 
@@ -55,14 +64,10 @@
   @media (min-width: $bp-md) {
     @include col(1, 6);
     @include col(1, 9);
-    @include col(7, 12);
   }
 
   @media (min-width: $bp-lg) {
-    @include col(1, 4);
     @include col(1, 5);
-    @include col(5, 13);
-    @include col(6, 13);
   }
 }
 
