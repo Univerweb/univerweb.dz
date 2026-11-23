@@ -33,15 +33,6 @@
   }
 }
 
-@mixin grid($number, $value, $gap: null, $align: null, $justify: null) {
-  display: grid;
-  grid-template-columns: repeat($number, $value);
-  gap: $gap;
-  // stylelint-disable-next-line declaration-block-no-redundant-longhand-properties -- $align et $justify sont optionnels (null)
-  align-content: $align;
-  justify-content: $justify;
-}
-
 @mixin focus-ring {
   outline: 0.1875rem solid var(--text-color-heading);
   outline-offset: var(--spacing-4);
