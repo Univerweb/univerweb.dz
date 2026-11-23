@@ -5,8 +5,8 @@
   padding-block: calc(var(--spacing-responsive) * 3);
   padding-inline: var(--gutter);
 
-  &-no-pt {
-    padding-top: 0;
+  &-flush-top {
+    padding-block-start: 0;
   }
 
   &-narrow {
@@ -31,15 +31,6 @@
     }
   }
 
-  &-justify {
-    max-width: var(--column-width);
-    margin: auto;
-
-    @media (min-width: $bp-md) {
-      max-width: 100%;
-    }
-  }
-
   > * {
     grid-column: 1 / 13;
 
@@ -50,6 +41,15 @@
     @media (min-width: $bp-xl) {
       grid-column: 1 / 9;
     }
+  }
+}
+
+.column-center {
+  max-width: var(--column-width);
+  margin: auto;
+
+  @media (min-width: $bp-md) {
+    max-width: 100%;
   }
 }
 

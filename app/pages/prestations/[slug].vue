@@ -197,7 +197,7 @@ const leave = (el: Element) => {
     </article>
 
     <aside class="container" aria-labelledby="other">
-      <div class="intro intro-justify">
+      <div class="intro column-center">
         <h2 id="other">
           {{ t('headings.otherTurnkey') }}
         </h2>

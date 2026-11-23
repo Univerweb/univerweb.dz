@@ -165,7 +165,7 @@ const { data: surround } = await useAsyncData(
         </section>
       </div>
 
-      <div class="container container-no-pt split">
+      <div class="container container-flush-top split">
         <div>
           <section class="inner" aria-labelledby="about-company">
             <h2 id="about-company" class="label">
@@ -191,7 +191,7 @@ const { data: surround } = await useAsyncData(
     </article>
 
     <aside v-if="related && related.length" class="container" aria-labelledby="related">
-      <div class="intro intro-justify">
+      <div class="intro column-center">
         <h2 id="related">
           {{ t('headings.otherSimilar') }}
         </h2>
