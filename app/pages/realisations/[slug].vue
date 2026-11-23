@@ -190,11 +190,13 @@ const { data: surround } = await useAsyncData(
       </div>
     </article>
 
-    <aside v-if="related && related.length" class="container row" aria-labelledby="related">
-      <h2 id="related" class="col col--1-5">
-        {{ t('headings.otherSimilar') }}
-      </h2>
-      <div class="col card-group">
+    <aside v-if="related && related.length" class="container" aria-labelledby="related">
+      <div class="intro intro-justify">
+        <h2 id="related">
+          {{ t('headings.otherSimilar') }}
+        </h2>
+      </div>
+      <div class="card-group">
         <RealisationCard v-for="card in related" :key="card.translated.path" :card title-tag="h3" />
       </div>
     </aside>

@@ -21,6 +21,16 @@
 
   justify-items: start;
 
+  &:not(.container) {
+    > :last-child {
+      margin-block-end: 0;
+    }
+
+    + * {
+      margin-block-start: var(--grid-gap);
+    }
+  }
+
   &-justify {
     max-width: var(--column-width);
     margin: auto;
@@ -49,22 +59,6 @@
 
   @media (min-width: $bp-lg) {
     grid-template-columns: 1fr 2fr;
-  }
-}
-
-.row {
-  @include grid(12, 1fr, var(--spacing-24) 0);
-
-  &-center {
-    align-items: center;
-  }
-}
-
-.col {
-  grid-column: 1 / 13;
-
-  @media (min-width: $bp-lg) {
-    @include col(1, 5);
   }
 }
 

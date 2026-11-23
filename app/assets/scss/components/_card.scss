@@ -9,10 +9,6 @@
     $justify: center
   );
 
-  .intro + & {
-    margin-top: calc(var(--spacing-responsive) * 2);
-  }
-
   @media (min-width: $bp-md) {
     grid-template-columns: repeat(2, minmax(var(--column-width), 28.75rem));
   }

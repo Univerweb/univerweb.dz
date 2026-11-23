@@ -147,11 +147,13 @@ const leave = (el: Element) => {
         </ul>
       </section>
 
-      <section class="container row" aria-labelledby="process">
-        <h2 id="process" class="col col--1-5">
-          {{ service.process.title }}
-        </h2>
-        <ol class="col steps">
+      <section class="container" aria-labelledby="process">
+        <div class="intro">
+          <h2 id="process">
+            {{ service.process.title }}
+          </h2>
+        </div>
+        <ol class="steps">
           <li v-for="process in service.process.steps" :key="process.title" class="big-count">
             <h3>{{ process.title }}</h3>
             <p>{{ process.description }}</p>
@@ -159,46 +161,48 @@ const leave = (el: Element) => {
         </ol>
       </section>
 
-      <section class="container row faq" aria-labelledby="faq">
-        <h2 id="faq" class="col col--1-5">
-          {{ service.faq.title }}
-        </h2>
-        <div class="col">
-          <div v-for="(faq, index) in service.faq.questions" :key="index" class="question">
-            <h3>
-              <button :id="`faq-header-${index + 1}`" :aria-expanded="activeIndex === index" :aria-controls="`faq-panel-${index + 1}`" @click="toggle(index)">
-                <span>
-                  {{ faq.question }}
-                </span>
-                <span class="icon" aria-hidden="true">
-                  <span :class="{ expanded: activeIndex === index }" />
-                  <span />
-                </span>
-              </button>
-            </h3>
-            <Transition @before-enter="beforeEnter" @enter="enter" @after-enter="afterEnter" @before-leave="beforeLeave" @leave="leave">
-              <div
-                v-show="activeIndex === index"
-                :id="`faq-panel-${index + 1}`"
-                :aria-labelledby="`faq-header-${index + 1}`"
-                :aria-hidden="activeIndex !== index"
-                class="intro"
-              >
-                <p>
-                  {{ faq.answer }}
-                </p>
-              </div>
-            </Transition>
-          </div>
+      <section class="container faq" aria-labelledby="faq">
+        <div class="intro">
+          <h2 id="faq">
+            {{ service.faq.title }}
+          </h2>
+        </div>
+        <div v-for="(faq, index) in service.faq.questions" :key="index" class="question">
+          <h3>
+            <button :id="`faq-header-${index + 1}`" :aria-expanded="activeIndex === index" :aria-controls="`faq-panel-${index + 1}`" @click="toggle(index)">
+              <span>
+                {{ faq.question }}
+              </span>
+              <span class="icon" aria-hidden="true">
+                <span :class="{ expanded: activeIndex === index }" />
+                <span />
+              </span>
+            </button>
+          </h3>
+          <Transition @before-enter="beforeEnter" @enter="enter" @after-enter="afterEnter" @before-leave="beforeLeave" @leave="leave">
+            <div
+              v-show="activeIndex === index"
+              :id="`faq-panel-${index + 1}`"
+              :aria-labelledby="`faq-header-${index + 1}`"
+              :aria-hidden="activeIndex !== index"
+              class="intro"
+            >
+              <p>
+                {{ faq.answer }}
+              </p>
+            </div>
+          </Transition>
         </div>
       </section>
     </article>
 
-    <aside class="container row" aria-labelledby="other">
-      <h2 id="other" class="col col--1-5">
-        {{ t('headings.otherTurnkey') }}
-      </h2>
-      <div class="col card-group">
+    <aside class="container" aria-labelledby="other">
+      <div class="intro intro-justify">
+        <h2 id="other">
+          {{ t('headings.otherTurnkey') }}
+        </h2>
+      </div>
+      <div class="card-group">
         <PrestationCard v-for="card in related" :key="card.path" title-tag="h3" :card />
       </div>
     </aside>
