@@ -44,7 +44,6 @@
     @include transition(background-color, color, border-color);
 
     background-color: transparent;
-    color: var(--text-color-heading);
     border: 0.0625rem solid var(--border-color);
   }
 
