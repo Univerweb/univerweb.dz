@@ -10,8 +10,6 @@ defineProps<{
 }>()
 
 const { t } = useI18n()
-const { localeBaseUrl, baseUrl } = useUrl()
-const localePath = useLocalePath()
 const titleId = useId()
 </script>
 
@@ -20,29 +18,14 @@ const titleId = useId()
     :to="card.translated.path"
     class="card"
     :aria-labelledby="titleId"
-    vocab="https://schema.org/"
-    typeof="CreativeWork"
-    property="hasPart"
   >
-    <meta property="description" :content="card.translated.description">
-    <meta property="dateCreated datePublished" :content="new Date(card.translated.createdAt).toISOString()">
-    <meta property="dateModified" :content="new Date(card.translated.updatedAt).toISOString()">
-    <span property="author publisher" typeof="Organization">
-      <meta property="name" :content="t('site.name')">
-      <link property="url" :href="localeBaseUrl">
-    </span>
-    <span property="isPartOf" typeof="CollectionPage">
-      <meta property="name" :content="t('navigation.menu.realisations')">
-      <link property="url" :href="baseUrl(localePath('realisations'))">
-    </span>
-
     <AppPicture :picture="card.translated" alt="" />
 
     <div class="inner">
       <span class="label">
         {{ t(`category.${card.common.category}`) }}
       </span>
-      <component :is="titleTag" :id="titleId" property="name" class="h3">
+      <component :is="titleTag" :id="titleId" class="h3">
         {{ card.translated.title }}
       </component>
       <ul class="services">

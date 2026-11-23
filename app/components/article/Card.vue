@@ -6,9 +6,6 @@ defineProps<{
   titleTag: string
 }>()
 
-const { t } = useI18n()
-const { localeBaseUrl, baseUrl } = useUrl()
-const localePath = useLocalePath()
 const titleId = useId()
 </script>
 
@@ -17,42 +14,19 @@ const titleId = useId()
     :to="card.path"
     class="card"
     :aria-labelledby="titleId"
-    vocab="https://schema.org/"
-    typeof="Article"
-    property="hasPart"
   >
-    <meta property="articleSection" :content="t('navigation.menu.blog')">
-    <meta property="dateCreated datePublished" :content="new Date(card.createdAt).toISOString()">
-    <meta property="dateModified" :content="new Date(card.updatedAt).toISOString()">
-    <span property="publisher" typeof="Organization">
-      <meta property="name" :content="t('site.name')">
-      <link property="url" :href="localeBaseUrl">
-    </span>
-    <span v-if="card.author && card.author.name && card.author.url" property="author" typeof="Person">
-      <meta property="name" :content="card.author.name">
-      <link property="url" :href="card.author.url">
-    </span>
-    <span v-else property="author" typeof="Organization">
-      <meta property="name" :content="t('site.name')">
-      <link property="url" :href="localeBaseUrl">
-    </span>
-    <span property="isPartOf" typeof="CollectionPage">
-      <meta property="name" :content="t('navigation.menu.blog')">
-      <link property="url" :href="baseUrl(localePath('blog'))">
-    </span>
-
     <AppPicture :picture="card" />
 
     <div class="inner">
       <ul class="label tags">
-        <li v-for="tag in card.tags" :key="tag" property="keywords">
+        <li v-for="tag in card.tags" :key="tag">
           {{ tag }}
         </li>
       </ul>
-      <component :is="titleTag" :id="titleId" property="headline" class="h3">
+      <component :is="titleTag" :id="titleId" class="h3">
         {{ card.title }}
       </component>
-      <p property="description">
+      <p>
         {{ card.description }}
       </p>
     </div>

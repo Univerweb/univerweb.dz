@@ -31,7 +31,7 @@ Site vitrine d'Univerweb (agence web, Alger). Nuxt 4 + Vue 3 + TypeScript, conte
 - Ne rien importer de ce que Nuxt auto-importe (`ref`, `computed`, `useRoute`, `useFetch`, `useI18n`, `useAsyncData`, `queryCollection`, composables et composants locaux…). On n'importe explicitement que les bibliothèques externes et les types : `import type { Collections } from '@nuxt/content'`.
 - Pas de type `any` explicite.
 - Commits en français au format Conventional Commits : `type(portée): description` (ex. `fix(blog): corriger la hauteur de police dans le contenu du blog`). Types : `feat`, `fix`, etc.
-- **Versions** : `"version"` de `package.json` toujours en semver complet (`6.0.0`, `6.2.0`, `6.4.5`) ; le tag Git retire les zéros de fin (`v6`, `v6.2`, `v6.4.5`). Le changement de version se fait dans un commit `chore(release): passer la version à …` sur `main` (par PR), puis le tag et la release GitHub sont posés sur ce commit.
+- **Versions** : `"version"` de `package.json` toujours en semver complet (`6.0.0`, `6.2.0`, `6.4.5`) ; le tag Git retire les zéros de fin (`v6`, `v6.2`, `v6.4.5`). Une release accompagne chaque mise en ligne, pas chaque PR : mineure (`6.x.0`) si une fonctionnalité ou un changement visible a été fusionné depuis la dernière, correctif sinon ; un correctif urgent peut partir seul. Pas de PR de release à part : le commit `chore(release): passer la version à …` va dans la dernière PR fusionnée avant la mise en ligne (une PR `chore/release-…` seulement si aucune PR n’est en attente), puis le tag et la release GitHub sont posés sur le commit de fusion. Titres de PR au format Conventional Commits, comme les commits.
 
 ## Vue 3
 
@@ -43,7 +43,7 @@ Site vitrine d'Univerweb (agence web, Alger). Nuxt 4 + Vue 3 + TypeScript, conte
 - Règle `vue/singleline-html-element-content-newline` : le contenu d'un élément sur une seule ligne va à la ligne (`<h2>` / texte / `</h2>`), sauf pour les éléments exemptés par la config ESLint.
 - Titres dynamiques via une prop `titleTag` / `headlineTag` + `<component :is="titleTag">`.
 - Accessibilité : `aria-labelledby` reliant les `<section>`/`<article>` à leur titre (avec `id`), `aria-label` traduits via `t('ariaLabels.…')`.
-- Données structurées en RDFa (`vocab="https://schema.org/"`, `typeof`, `property`) directement dans le markup, comme dans les pages et cartes existantes.
+- Données structurées en JSON-LD uniquement, via `nuxt-schema-org` (`useSchemaOrg([...])` dans le `<script setup>` de la page), jamais en RDFa ni en microdonnées dans le markup. Un seul graphe par page : l’Organization `#identity` et son fondateur `#founder` (données dans `utils/founder.ts`) sont déclarés dans `app.vue`, la WebPage et le BreadcrumbList dans `useSeo` ; chaque page ajoute son entité (`defineService`, `defineArticle`, CreativeWork, ItemList…) et la relie par `@id` (`{ '@id': baseUrl('/#identity') }`). Dates au format ISO 8601 avec fuseau via `schemaDate()`. Vérifier avec le test des résultats enrichis de Google une fois en ligne.
 
 ### Composants
 

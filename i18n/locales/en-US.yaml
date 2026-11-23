@@ -1,6 +1,10 @@
-site:
+nuxtSiteConfig:
   name: Univerweb
-  logo: Univerweb’s logo
+
+site:
+  name: '@:nuxtSiteConfig.name'
+  logo: "@:{'nuxtSiteConfig.name'}’s logo"
+  founderJobTitle: Founder and Manager
 
 navigation:
   menu:

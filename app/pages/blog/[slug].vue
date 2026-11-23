@@ -2,7 +2,7 @@
 const { path, params: { slug } } = useRoute()
 const { locale, t } = useI18n()
 const localePath = useLocalePath()
-const { localeBaseUrl, baseUrl } = useUrl()
+const { baseUrl } = useUrl()
 const head = useLocaleHead()
 
 const [{ data: article }, { data: surround }] = await Promise.all([
@@ -37,34 +37,41 @@ useSeo({
   ogTitle: () => article.value!.title,
   ogImageAlt: () => article.value!.alt,
 })
+
+const author = article.value.author
+const authorIsFounder = !!author && founder.sameAs.includes(author.url)
+
+useSchemaOrg([
+  defineArticle({
+    '@type': 'BlogPosting',
+    'headline': () => article.value!.title,
+    'description': () => article.value!.description,
+    'datePublished': () => schemaDate(article.value!.createdAt),
+    'dateModified': () => schemaDate(article.value!.updatedAt),
+    'keywords': () => article.value!.tags,
+    'articleSection': () => t('navigation.menu.blog'),
+    'author': authorIsFounder
+      ? { '@id': baseUrl('/#founder') }
+      : author
+        ? { '@type': 'Person', 'name': author.name, 'url': author.url }
+        : { '@id': baseUrl('/#identity') },
+    'publisher': { '@id': baseUrl('/#identity') },
+  }),
+])
 </script>
 
 <template>
   <main v-if="article" class="blog">
-    <article vocab="https://schema.org/" typeof="Article" aria-labelledby="article-title">
+    <article aria-labelledby="article-title">
       <header class="container intro">
-        <meta property="description" :content="article.description">
-        <meta property="articleSection" :content="t('navigation.menu.blog')">
-        <span property="publisher" typeof="Organization">
-          <meta property="name" :content="t('site.name')">
-          <link property="url" :href="localeBaseUrl">
-        </span>
-        <span property="isPartOf" typeof="CollectionPage">
-          <meta property="name" :content="t('navigation.menu.blog')">
-          <link property="url" :href="baseUrl(localePath('blog'))">
-        </span>
-        <span property="mainEntityOfPage" typeof="WebPage">
-          <link property="url" :href="baseUrl(path)">
-        </span>
-
         <AppBack path="blog" :label="t('navigation.menu.blog')" />
         <ul class="tags">
-          <li v-for="tag in article.tags" :key="tag" property="keywords">
+          <li v-for="tag in article.tags" :key="tag">
             {{ tag }}
           </li>
         </ul>
 
-        <h1 id="article-title" property="headline">
+        <h1 id="article-title">
           {{ article.title }}
         </h1>
 
@@ -73,7 +80,6 @@ useSeo({
             <dt>{{ t('blog.createdAt') }}&nbsp;</dt>
             <dd>
               <NuxtTime
-                property="dateCreated datePublished"
                 :datetime="article.createdAt"
                 :locale="head.htmlAttrs.lang"
                 :date-style="locale === 'ar' ? 'long' : 'medium'"
@@ -85,7 +91,6 @@ useSeo({
             <dt>{{ t('blog.updatedAt') }}&nbsp;</dt>
             <dd>
               <NuxtTime
-                property="dateModified"
                 :datetime="article.updatedAt"
                 :locale="head.htmlAttrs.lang"
                 :date-style="locale === 'ar' ? 'long' : 'medium'"
@@ -100,15 +105,11 @@ useSeo({
                 v-if="article.author && article.author.name && article.author.url"
                 :href="article.author.url"
                 target="_blank"
-                property="author"
-                typeof="Person"
               >
-                <span property="name">@{{ article.author.name }}</span>
-                <link property="url" :href="article.author.url">
+                @{{ article.author.name }}
               </a>
-              <span v-else property="author" typeof="Organization">
-                <span property="name">@{{ t('site.name') }}</span>
-                <link property="url" :href="localeBaseUrl">
+              <span v-else>
+                @{{ t('site.name') }}
               </span>
             </dd>
           </div>
@@ -123,7 +124,6 @@ useSeo({
 
       <ContentRenderer
         :value="article"
-        property="articleBody"
         class="container container-narrow content"
       />
     </article>

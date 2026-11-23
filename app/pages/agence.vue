@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { locale } = useI18n()
+const { baseUrl } = useUrl()
 const { withYears } = useYears()
 
 const { data: agence } = await useAsyncData(
@@ -15,6 +16,13 @@ useSeo({
   title: () => agence.value!.title,
   description: () => agence.value!.description,
 })
+
+useSchemaOrg([
+  defineWebPage({
+    '@type': 'AboutPage',
+    'about': { '@id': baseUrl('/#identity') },
+  }),
+])
 </script>
 
 <template>
