@@ -29,7 +29,7 @@ const { data: articles } = await useAsyncData(
 
 <template>
   <section id="blog" class="container" aria-labelledby="blog-title">
-    <div class="intro column-center">
+    <div class="intro">
       <component :is="headlineTag || 'h1'" id="blog-title" class="h1">
         {{ blog.headline }}
       </component>
@@ -42,6 +42,6 @@ const { data: articles } = await useAsyncData(
       <ArticleCard v-for="card in articles" :key="card.path" :card :title-tag="titleTag || 'h2'" />
     </div>
 
-    <LazyAppMore v-if="blog.cta" :path="blog.cta.path" :label="blog.cta.label" class="column-center" />
+    <LazyAppMore v-if="blog.cta" :path="blog.cta.path" :label="blog.cta.label" />
   </section>
 </template>

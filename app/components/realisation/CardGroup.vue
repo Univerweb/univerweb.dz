@@ -50,7 +50,7 @@ const { data: projects } = await useAsyncData(
 
 <template>
   <section id="realisations" class="container" aria-labelledby="realisations-title">
-    <div class="intro column-center">
+    <div class="intro">
       <component :is="headlineTag || 'h1'" id="realisations-title" class="h1">
         {{ realisations.headline }}
       </component>
@@ -63,6 +63,6 @@ const { data: projects } = await useAsyncData(
       <RealisationCard v-for="card in projects" :key="card.translated.path" :card :title-tag="titleTag || 'h2'" />
     </div>
 
-    <LazyAppMore v-if="realisations.cta" :path="realisations.cta.path" :label="realisations.cta.label" class="column-center" />
+    <LazyAppMore v-if="realisations.cta" :path="realisations.cta.path" :label="realisations.cta.label" />
   </section>
 </template>

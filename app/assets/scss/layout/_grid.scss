@@ -45,15 +45,6 @@
   }
 }
 
-.column-center {
-  max-width: var(--column-width);
-  margin: auto;
-
-  @media (min-width: $bp-md) {
-    max-width: 100%;
-  }
-}
-
 .split {
   display: grid;
   gap: var(--spacing-24) var(--grid-gap);

@@ -3,20 +3,11 @@
 
 .card-group {
   display: grid;
-  grid-template-columns: minmax(auto, var(--column-width));
-  justify-content: center;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(max(16rem, (100% - var(--spacing-16)) / 2), 1fr)
+  );
   gap: var(--spacing-16);
-
-  @media (min-width: $bp-md) {
-    grid-template-columns: repeat(
-      2,
-      minmax(var(--column-width), var(--column-width-max))
-    );
-  }
-
-  @media (min-width: $bp-xl) {
-    grid-template-columns: repeat(2, 1fr);
-  }
 
   &-wide {
     @media (min-width: $bp-xxl) {

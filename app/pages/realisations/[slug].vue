@@ -191,7 +191,7 @@ const { data: surround } = await useAsyncData(
     </article>
 
     <aside v-if="related && related.length" class="container" aria-labelledby="related">
-      <div class="intro column-center">
+      <div class="intro">
         <h2 id="related">
           {{ t('headings.otherSimilar') }}
         </h2>
