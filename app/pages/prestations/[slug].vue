@@ -153,8 +153,8 @@ const leave = (el: Element) => {
         <h2 id="process" class="col col--1-5">
           {{ service.process.title }}
         </h2>
-        <ol :class="`col row items-${service.process.steps.length}`">
-          <li v-for="(process, index) in service.process.steps" :key="process.title" :class="`big-count item item-${index + 1}`">
+        <ol class="col steps">
+          <li v-for="process in service.process.steps" :key="process.title" class="big-count">
             <h3>{{ process.title }}</h3>
             <p>{{ process.description }}</p>
           </li>

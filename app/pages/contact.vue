@@ -105,8 +105,8 @@ function zoom() {
           {{ t('headings.otherContact') }}
         </h2>
       </div>
-      <div class="row items-2">
-        <div class="item">
+      <div class="pair">
+        <div>
           <h3 class="label">
             {{ t('headings.manager') }}
           </h3>
@@ -114,7 +114,7 @@ function zoom() {
             {{ config.public.managerEmail }}
           </a>
         </div>
-        <div class="item item-2">
+        <div>
           <h3 class="label">
             {{ t('headings.support') }}
           </h3>

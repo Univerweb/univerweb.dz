@@ -121,8 +121,8 @@ const { data: surround } = await useAsyncData(
         class="banner-realisations"
       />
 
-      <div class="container row items-2">
-        <section class="item item-1" aria-labelledby="client">
+      <div class="container pair">
+        <section aria-labelledby="client">
           <h2 id="client" class="label">
             {{ t('headings.client') }}
           </h2>
@@ -131,7 +131,7 @@ const { data: surround } = await useAsyncData(
           </p>
         </section>
 
-        <section class="item item-2" aria-labelledby="category">
+        <section aria-labelledby="category">
           <h2 id="category" class="label">
             {{ t('headings.category') }}
           </h2>
@@ -140,7 +140,7 @@ const { data: surround } = await useAsyncData(
           </p>
         </section>
 
-        <section class="item item-3" aria-labelledby="services">
+        <section aria-labelledby="services">
           <h2 id="services" class="label">
             {{ t('headings.completedServices') }}
           </h2>
@@ -151,7 +151,7 @@ const { data: surround } = await useAsyncData(
           </ul>
         </section>
 
-        <section class="item item-4" aria-labelledby="technologies">
+        <section aria-labelledby="technologies">
           <h2 id="technologies" class="label">
             {{ t('headings.technologiesUsed') }}
           </h2>
