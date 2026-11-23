@@ -24,6 +24,14 @@ main {
   min-height: calc(100svh - var(--header-height));
 }
 
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-24) var(--spacing-32);
+  margin-block-start: var(--spacing-48);
+}
+
 .error {
   --header-height: 0;
 

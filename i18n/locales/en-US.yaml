@@ -18,6 +18,7 @@ navigation:
 
 ariaLabels:
   langSwitch: اختر اللغة العربية
+  scrollToProjects: Go to the projects section
   theme:
     light: Switch to light mode
     dark: Switch to dark mode

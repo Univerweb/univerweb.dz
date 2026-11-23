@@ -18,6 +18,7 @@ navigation:
 
 ariaLabels:
   langSwitch: Choisir le français
+  scrollToProjects: الانتقال إلى قسم المشاريع
   theme:
     light: تفعيل الوضع الفاتح
     dark: تفعيل الوضع الداكن

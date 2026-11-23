@@ -18,6 +18,7 @@ navigation:
 
 ariaLabels:
   langSwitch: Switch to English
+  scrollToProjects: Aller à la section des projets
   theme:
     light: Passer au mode clair
     dark: Passer au mode sombre

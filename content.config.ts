@@ -24,8 +24,12 @@ const Teaser = z.object({
   cta: Link,
 })
 
+const Hero = Teaser.extend({
+  link: Link,
+})
+
 const Home = z.object({
-  hero: Teaser,
+  hero: Hero,
   sectionRealisation: Teaser,
   sectionPrestations: Teaser,
   sectionBlog: Teaser,

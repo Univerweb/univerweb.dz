@@ -12,8 +12,11 @@ hero:
     de marque forte, hébergement fiable et marketing digital axé résultats.
     Bâtissons ensemble votre croissance.
   cta:
-    label: Aller à la section des projets
-    path: /#realisations
+    label: Parlons de votre projet
+    path: /contact
+  link:
+    label: Découvrir l’agence
+    path: /agence
 
 sectionRealisation:
   headline: Des projets qui transforment des idées en succès digitaux.

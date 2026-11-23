@@ -50,7 +50,7 @@
     transform: translateY(calc(-100% - 0.8125rem));
   }
 
-  .hero & {
+  .hero > & {
     justify-self: center;
     margin-bottom: var(--spacing-24);
     padding: 0 0 var(--spacing-24);
@@ -116,7 +116,7 @@
     transform: translateX(0.3125rem);
     color: var(--text-color-on-accent);
 
-    .hero & {
+    .hero > & {
       transform: translateY(1.5rem);
     }
 
