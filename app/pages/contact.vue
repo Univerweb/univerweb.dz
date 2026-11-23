@@ -46,21 +46,19 @@ function zoom() {
 
 <template>
   <main v-if="contact">
-    <section class="container row" aria-labelledby="intro-title">
-      <div class="col col--1-6">
-        <h1 id="intro-title">
-          {{ contact.title }}
-        </h1>
-        <p class="lead">
-          {{ contact.lead }}
-        </p>
-        <a :href="`mailto:${config.public.baseEmail}`" class="link outfit" dir="ltr">
-          {{ config.public.baseEmail }}
-        </a>
-      </div>
+    <section class="container columns-1" aria-labelledby="intro-title">
+      <h1 id="intro-title">
+        {{ contact.title }}
+      </h1>
+      <p class="lead">
+        {{ contact.lead }}
+      </p>
+      <a :href="`mailto:${config.public.baseEmail}`" class="link outfit" dir="ltr">
+        {{ config.public.baseEmail }}
+      </a>
     </section>
 
-    <section class="container container-no-pt" aria-labelledby="map-title">
+    <section class="container container-flush-top" aria-labelledby="map-title">
       <ClientOnly v-if="showMap">
         <h2 id="map-title" class="visually-hidden">
           {{ t('headings.mapLocation') }}
@@ -100,13 +98,13 @@ function zoom() {
     </section>
 
     <section class="container request other" aria-labelledby="other-title">
-      <div class="intro">
+      <div class="columns-1">
         <h2 id="other-title">
           {{ t('headings.otherContact') }}
         </h2>
       </div>
-      <div class="row items-2">
-        <div class="item">
+      <div class="columns-2">
+        <div>
           <h3 class="label">
             {{ t('headings.manager') }}
           </h3>
@@ -114,7 +112,7 @@ function zoom() {
             {{ config.public.managerEmail }}
           </a>
         </div>
-        <div class="item item-2">
+        <div>
           <h3 class="label">
             {{ t('headings.support') }}
           </h3>

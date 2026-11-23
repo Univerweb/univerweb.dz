@@ -102,7 +102,7 @@ const leave = (el: Element) => {
 <template>
   <main v-if="service" class="prestations">
     <article aria-labelledby="service-title">
-      <header class="container intro">
+      <header class="container columns-1">
         <AppBack path="prestations" :label="t('navigation.menu.prestations')" />
         <h1 id="service-title">
           {{ service.title }}
@@ -115,22 +115,20 @@ const leave = (el: Element) => {
         class="banner"
       />
 
-      <div class="container row">
-        <div class="col col--1-9">
-          <p class="lead">
-            {{ service.description }}
-          </p>
-          <p v-for="(paragraph, index) in service.intro" :key="index">
-            {{ paragraph }}
-          </p>
-        </div>
+      <div class="container columns-1">
+        <p class="lead">
+          {{ service.description }}
+        </p>
+        <p v-for="(paragraph, index) in service.intro" :key="index">
+          {{ paragraph }}
+        </p>
       </div>
 
-      <section class="container row features" aria-labelledby="solutions">
-        <h2 id="solutions" class="col col--1-5">
+      <section class="container columns-split features" aria-labelledby="solutions">
+        <h2 id="solutions">
           {{ service.solutions.title }}
         </h2>
-        <div class="col col--6-13">
+        <div>
           <template v-for="solution in service.solutions.list" :key="solution.title">
             <h3>{{ solution.title }}</h3>
             <p>{{ solution.description }}</p>
@@ -138,69 +136,73 @@ const leave = (el: Element) => {
         </div>
       </section>
 
-      <section class="container row tags-group" aria-labelledby="features">
-        <h2 id="features" class="col col--1-6">
+      <section class="container columns-split tags-group" aria-labelledby="features">
+        <h2 id="features">
           {{ service.features.title }}
         </h2>
-        <ul class="col col--7-12 tags">
+        <ul class="tags">
           <li v-for="tag in service.features.tags" :key="tag">
             {{ tag }}
           </li>
         </ul>
       </section>
 
-      <section class="container row" aria-labelledby="process">
-        <h2 id="process" class="col col--1-5">
-          {{ service.process.title }}
-        </h2>
-        <ol :class="`col row items-${service.process.steps.length}`">
-          <li v-for="(process, index) in service.process.steps" :key="process.title" :class="`big-count item item-${index + 1}`">
+      <section class="container" aria-labelledby="process">
+        <div class="columns-1">
+          <h2 id="process">
+            {{ service.process.title }}
+          </h2>
+        </div>
+        <ol class="columns-4">
+          <li v-for="process in service.process.steps" :key="process.title" class="big-count">
             <h3>{{ process.title }}</h3>
             <p>{{ process.description }}</p>
           </li>
         </ol>
       </section>
 
-      <section class="container row faq" aria-labelledby="faq">
-        <h2 id="faq" class="col col--1-5">
-          {{ service.faq.title }}
-        </h2>
-        <div class="col">
-          <div v-for="(faq, index) in service.faq.questions" :key="index" class="question">
-            <h3>
-              <button :id="`faq-header-${index + 1}`" :aria-expanded="activeIndex === index" :aria-controls="`faq-panel-${index + 1}`" @click="toggle(index)">
-                <span>
-                  {{ faq.question }}
-                </span>
-                <span class="icon" aria-hidden="true">
-                  <span :class="{ expanded: activeIndex === index }" />
-                  <span />
-                </span>
-              </button>
-            </h3>
-            <Transition @before-enter="beforeEnter" @enter="enter" @after-enter="afterEnter" @before-leave="beforeLeave" @leave="leave">
-              <div
-                v-show="activeIndex === index"
-                :id="`faq-panel-${index + 1}`"
-                :aria-labelledby="`faq-header-${index + 1}`"
-                :aria-hidden="activeIndex !== index"
-                class="row"
-              >
-                <p class="col col--1-9">
-                  {{ faq.answer }}
-                </p>
-              </div>
-            </Transition>
-          </div>
+      <section class="container faq" aria-labelledby="faq">
+        <div class="columns-1">
+          <h2 id="faq">
+            {{ service.faq.title }}
+          </h2>
+        </div>
+        <div v-for="(faq, index) in service.faq.questions" :key="index" class="question">
+          <h3>
+            <button :id="`faq-header-${index + 1}`" :aria-expanded="activeIndex === index" :aria-controls="`faq-panel-${index + 1}`" @click="toggle(index)">
+              <span>
+                {{ faq.question }}
+              </span>
+              <span class="icon" aria-hidden="true">
+                <span :class="{ expanded: activeIndex === index }" />
+                <span />
+              </span>
+            </button>
+          </h3>
+          <Transition @before-enter="beforeEnter" @enter="enter" @after-enter="afterEnter" @before-leave="beforeLeave" @leave="leave">
+            <div
+              v-show="activeIndex === index"
+              :id="`faq-panel-${index + 1}`"
+              :aria-labelledby="`faq-header-${index + 1}`"
+              :aria-hidden="activeIndex !== index"
+              class="columns-1"
+            >
+              <p>
+                {{ faq.answer }}
+              </p>
+            </div>
+          </Transition>
         </div>
       </section>
     </article>
 
-    <aside class="container row" aria-labelledby="other">
-      <h2 id="other" class="col col--1-5">
-        {{ t('headings.otherTurnkey') }}
-      </h2>
-      <div class="col card-group">
+    <aside class="container" aria-labelledby="other">
+      <div class="columns-1">
+        <h2 id="other">
+          {{ t('headings.otherTurnkey') }}
+        </h2>
+      </div>
+      <div class="card-group">
         <PrestationCard v-for="card in related" :key="card.path" title-tag="h3" :card />
       </div>
     </aside>

@@ -106,7 +106,7 @@ const { data: surround } = await useAsyncData(
 <template>
   <main v-if="project" class="realisations">
     <article aria-labelledby="project-title">
-      <header class="container intro">
+      <header class="container columns-1">
         <AppBack path="realisations" :label="t('navigation.menu.realisations')" />
         <h1 id="project-title">
           {{ project.title }}
@@ -118,11 +118,11 @@ const { data: surround } = await useAsyncData(
         type="banner"
         :alt="t('alt.banner', { client: project.title })"
         sizes="342px xs:392px sm:735px md:975px lg:1183px xl:1343px xxl:1400px"
-        class="banner-realisations"
+        class="banner-framed"
       />
 
-      <div class="container row items-2">
-        <section class="item item-1" aria-labelledby="client">
+      <div class="container columns-2">
+        <section aria-labelledby="client">
           <h2 id="client" class="label">
             {{ t('headings.client') }}
           </h2>
@@ -131,7 +131,7 @@ const { data: surround } = await useAsyncData(
           </p>
         </section>
 
-        <section class="item item-2" aria-labelledby="category">
+        <section aria-labelledby="category">
           <h2 id="category" class="label">
             {{ t('headings.category') }}
           </h2>
@@ -140,7 +140,7 @@ const { data: surround } = await useAsyncData(
           </p>
         </section>
 
-        <section class="item item-3" aria-labelledby="services">
+        <section aria-labelledby="services">
           <h2 id="services" class="label">
             {{ t('headings.completedServices') }}
           </h2>
@@ -151,7 +151,7 @@ const { data: surround } = await useAsyncData(
           </ul>
         </section>
 
-        <section class="item item-4" aria-labelledby="technologies">
+        <section aria-labelledby="technologies">
           <h2 id="technologies" class="label">
             {{ t('headings.technologiesUsed') }}
           </h2>
@@ -165,8 +165,8 @@ const { data: surround } = await useAsyncData(
         </section>
       </div>
 
-      <div class="container container-no-pt row">
-        <div class="col col--1-4">
+      <div class="container container-flush-top columns-split">
+        <div>
           <section class="inner" aria-labelledby="about-company">
             <h2 id="about-company" class="label">
               {{ t('headings.about', { client: project.title }) }}
@@ -183,18 +183,20 @@ const { data: surround } = await useAsyncData(
           :picture="project"
           type="preview"
           :alt="t('alt.preview', { client: project.title })"
-          sizes="304px xs:354px sm:697px md:921px lg:565px xl:730px"
-          class="col col--5-13 preview"
+          sizes="304px xs:354px sm:697px md:921px lg:522px xl:687px"
+          class="preview"
           :img-attrs="null"
         />
       </div>
     </article>
 
-    <aside v-if="related && related.length" class="container row" aria-labelledby="related">
-      <h2 id="related" class="col col--1-5">
-        {{ t('headings.otherSimilar') }}
-      </h2>
-      <div class="col card-group">
+    <aside v-if="related && related.length" class="container" aria-labelledby="related">
+      <div class="columns-1">
+        <h2 id="related">
+          {{ t('headings.otherSimilar') }}
+        </h2>
+      </div>
+      <div class="card-group">
         <RealisationCard v-for="card in related" :key="card.translated.path" :card title-tag="h3" />
       </div>
     </aside>

@@ -2,10 +2,12 @@
 @use '../abstracts/mixins' as *;
 
 header:has(nav) {
-  @include grid(2, auto, $align: center, $justify: space-between);
   @include transition(background-color, height, box-shadow);
 
   position: fixed;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: var(--header-height);

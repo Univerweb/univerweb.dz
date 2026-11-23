@@ -5,8 +5,8 @@
   padding-block: calc(var(--spacing-responsive) * 3);
   padding-inline: var(--gutter);
 
-  &-no-pt {
-    padding-top: 0;
+  &-flush-top {
+    padding-block-start: 0;
   }
 
   &-narrow {
@@ -16,15 +16,19 @@
   }
 }
 
-.intro {
-  @include grid(12, 1fr, $align: center);
+.columns-1 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-content: center;
+  justify-items: start;
 
-  &-justify {
-    max-width: var(--column-width);
-    margin: auto;
+  &:not(.container) {
+    > :last-child {
+      margin-block-end: 0;
+    }
 
-    @media (min-width: $bp-md) {
-      max-width: 100%;
+    + * {
+      margin-block-start: var(--grid-gap);
     }
   }
 
@@ -41,91 +45,31 @@
   }
 }
 
-.row {
-  @include grid(12, 1fr, var(--spacing-24) 0);
-
-  &-center {
-    align-items: center;
-  }
-}
-
-.col {
-  grid-column: 1 / 13;
-
-  @media (min-width: $bp-md) {
-    @include col(1, 6);
-    @include col(1, 9);
-    @include col(7, 12);
-  }
+.columns-split {
+  display: grid;
+  gap: var(--spacing-24) var(--grid-gap);
 
   @media (min-width: $bp-lg) {
-    @include col(1, 4);
-    @include col(1, 5);
-    @include col(5, 13);
-    @include col(6, 13);
+    grid-template-columns: 1fr 2fr;
   }
 }
 
-[class*='items-'] {
-  row-gap: var(--spacing-48);
-
-  .item {
-    grid-column: span 11 / span 11;
-  }
+.columns-4,
+.columns-2 {
+  display: grid;
+  gap: var(--spacing-48) var(--grid-gap);
 
   @media (min-width: $bp-md) {
-    &.items-2 .item {
-      grid-column: span 5 / span 5;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
-      &-2 {
-        grid-column-start: 7;
-      }
+.columns-4 {
+  @media (min-width: $bp-lg) {
+    grid-template-columns: repeat(3, 1fr);
 
-      &-3 {
-        grid-row-start: 2;
-      }
-
-      &-4 {
-        grid-column-start: 7;
-        grid-row-start: 2;
-      }
-    }
-
-    &.items-4 .item {
-      grid-column: span 2 / span 2;
-
-      &-2 {
-        grid-column-start: 4;
-      }
-
-      &-3 {
-        grid-column-start: 7;
-      }
-
-      &-4 {
-        grid-column-start: 10;
-      }
-    }
-
-    &.items-5 .item {
-      grid-column: span 3 / span 3;
-
-      &-2 {
-        grid-column-start: 5;
-      }
-
-      &-3 {
-        grid-column-start: 9;
-      }
-
-      &-4 {
-        grid-row-start: 2;
-      }
-
-      &-5 {
-        grid-column-start: 5;
-        grid-row-start: 2;
-      }
+    &:has(> :last-child:nth-child(4)) {
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 }

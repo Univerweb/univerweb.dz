@@ -31,8 +31,9 @@ footer {
 }
 
 .socials {
-  @include grid(4, auto, $justify: space-between);
-
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: space-between;
   margin-top: var(--spacing-12);
   max-width: 12.5rem;
 

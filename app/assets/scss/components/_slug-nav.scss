@@ -8,7 +8,7 @@
   align-items: start;
   gap: var(--spacing-48);
   padding-block: var(--spacing-72) var(--spacing-48);
-  margin-bottom: var(--spacing-4);
+  margin-block-end: var(--spacing-4);
   background-color: var(--surface-color);
 
   @media (min-width: $bp-md) {

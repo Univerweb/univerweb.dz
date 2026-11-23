@@ -2,24 +2,12 @@
 @use '../abstracts/mixins' as *;
 
 .card-group {
-  @include grid(
-    1,
-    minmax(auto, var(--column-width)),
-    var(--spacing-16),
-    $justify: center
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(max(16rem, (100% - var(--spacing-16)) / 2), 1fr)
   );
-
-  .intro + & {
-    margin-top: calc(var(--spacing-responsive) * 2);
-  }
-
-  @media (min-width: $bp-md) {
-    grid-template-columns: repeat(2, minmax(var(--column-width), 28.75rem));
-  }
-
-  @media (min-width: $bp-xl) {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  gap: var(--spacing-16);
 
   &-wide {
     @media (min-width: $bp-xxl) {

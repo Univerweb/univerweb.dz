@@ -27,7 +27,7 @@ useSchemaOrg([
 
 <template>
   <main v-if="agence">
-    <section class="container intro" aria-labelledby="intro-title">
+    <section class="container columns-1" aria-labelledby="intro-title">
       <h1 id="intro-title">
         {{ agence.headline }}
       </h1>
@@ -36,12 +36,14 @@ useSchemaOrg([
       </p>
     </section>
 
-    <section class="container row" aria-labelledby="method-title">
-      <h2 id="method-title" class="col col--1-5">
-        {{ agence.method.headline }}
-      </h2>
-      <ol class="col row items-5">
-        <li v-for="(method, index) in agence.method.list" :key="index" :class="`big-count item item-${index + 1}`">
+    <section class="container" aria-labelledby="method-title">
+      <div class="columns-1">
+        <h2 id="method-title">
+          {{ agence.method.headline }}
+        </h2>
+      </div>
+      <ol class="columns-4">
+        <li v-for="(method, index) in agence.method.list" :key="index" class="big-count">
           <h3>{{ method.title }}</h3>
           <p>
             {{ method.description }}
@@ -50,12 +52,14 @@ useSchemaOrg([
       </ol>
     </section>
 
-    <section class="container row" aria-labelledby="choose-title">
-      <h2 id="choose-title" class="col col--1-5">
-        {{ agence.choose.headline }}
-      </h2>
-      <div class="col row items-2">
-        <div v-for="(choose, index) in agence.choose.list" :key="index" :class="`item item-${index + 1}`">
+    <section class="container" aria-labelledby="choose-title">
+      <div class="columns-1">
+        <h2 id="choose-title">
+          {{ agence.choose.headline }}
+        </h2>
+      </div>
+      <div class="columns-2">
+        <div v-for="(choose, index) in agence.choose.list" :key="index">
           <component :is="choose.icon" fill="var(--accent-color)" />
           <h3>{{ choose.title }}</h3>
           <p>

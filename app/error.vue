@@ -40,7 +40,7 @@ const handleError = () => clearError({ redirect: localePath('/') })
 
 <template>
   <NuxtLayout>
-    <main v-if="errorPage" class="container error intro intro-justify">
+    <main v-if="errorPage" class="container error columns-1">
       <h1>
         {{ errorPage.headline }}
       </h1>
