@@ -46,18 +46,16 @@ function zoom() {
 
 <template>
   <main v-if="contact">
-    <section class="container row" aria-labelledby="intro-title">
-      <div class="col col--1-6">
-        <h1 id="intro-title">
-          {{ contact.title }}
-        </h1>
-        <p class="lead">
-          {{ contact.lead }}
-        </p>
-        <a :href="`mailto:${config.public.baseEmail}`" class="link outfit" dir="ltr">
-          {{ config.public.baseEmail }}
-        </a>
-      </div>
+    <section class="container intro" aria-labelledby="intro-title">
+      <h1 id="intro-title">
+        {{ contact.title }}
+      </h1>
+      <p class="lead">
+        {{ contact.lead }}
+      </p>
+      <a :href="`mailto:${config.public.baseEmail}`" class="link outfit" dir="ltr">
+        {{ config.public.baseEmail }}
+      </a>
     </section>
 
     <section class="container container-no-pt" aria-labelledby="map-title">

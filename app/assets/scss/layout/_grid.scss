@@ -19,6 +19,8 @@
 .intro {
   @include grid(12, 1fr, $align: center);
 
+  justify-items: start;
+
   &-justify {
     max-width: var(--column-width);
     margin: auto;
@@ -60,11 +62,6 @@
 
 .col {
   grid-column: 1 / 13;
-
-  @media (min-width: $bp-md) {
-    @include col(1, 6);
-    @include col(1, 9);
-  }
 
   @media (min-width: $bp-lg) {
     @include col(1, 5);

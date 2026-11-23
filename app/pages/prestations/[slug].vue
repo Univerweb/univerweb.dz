@@ -115,15 +115,13 @@ const leave = (el: Element) => {
         class="banner"
       />
 
-      <div class="container row">
-        <div class="col col--1-9">
-          <p class="lead">
-            {{ service.description }}
-          </p>
-          <p v-for="(paragraph, index) in service.intro" :key="index">
-            {{ paragraph }}
-          </p>
-        </div>
+      <div class="container intro">
+        <p class="lead">
+          {{ service.description }}
+        </p>
+        <p v-for="(paragraph, index) in service.intro" :key="index">
+          {{ paragraph }}
+        </p>
       </div>
 
       <section class="container split features" aria-labelledby="solutions">
@@ -184,9 +182,9 @@ const leave = (el: Element) => {
                 :id="`faq-panel-${index + 1}`"
                 :aria-labelledby="`faq-header-${index + 1}`"
                 :aria-hidden="activeIndex !== index"
-                class="row"
+                class="intro"
               >
-                <p class="col col--1-9">
+                <p>
                   {{ faq.answer }}
                 </p>
               </div>
