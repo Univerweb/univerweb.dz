@@ -1,3 +1,5 @@
+@use '../abstracts/variables' as *;
+
 .banner {
   max-width: var(--container-width-wide);
   margin: 0 auto;
@@ -7,6 +9,22 @@
   }
 }
 
-.container:has(+ :is(.banner, .banner-realisations)) {
-  padding-bottom: calc(var(--spacing-responsive) * 2);
+.banner-framed {
+  overflow: hidden;
+  justify-items: center;
+  padding: var(--spacing-responsive) var(--spacing-responsive) 0;
+
+  @media (min-width: $bp-lg) {
+    padding: var(--spacing-48) var(--spacing-48) 0;
+  }
+
+  img {
+    aspect-ratio: 2 / 1;
+    max-width: var(--container-width-wide);
+    border-radius: var(--radius-8) var(--radius-8) 0 0;
+  }
+}
+
+.container:has(+ :is(.banner, .banner-framed)) {
+  padding-block-end: calc(var(--spacing-responsive) * 2);
 }
