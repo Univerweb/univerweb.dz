@@ -38,8 +38,9 @@ useSchemaOrg([
             {{ home.hero.cta.label }}
             <IconNext />
           </NuxtLinkLocale>
-          <NuxtLinkLocale :to="home.hero.link.path" class="link">
+          <NuxtLinkLocale :to="home.hero.link.path" class="btn btn-outline">
             {{ home.hero.link.label }}
+            <IconNext />
           </NuxtLinkLocale>
         </div>
       </div>

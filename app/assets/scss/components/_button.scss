@@ -26,7 +26,7 @@
 
 .btn {
   @include typo($weight: 500, $line-height: var(--line-height-snug));
-  @include transition(background-color, color, font-weight);
+  @include transition(background-color, color);
 
   display: flex;
   align-items: center;
@@ -40,8 +40,16 @@
   padding-inline: var(--spacing-24) var(--spacing-8);
   border-radius: var(--radius-pill);
 
+  &-outline {
+    @include transition(background-color, color, border-color);
+
+    background-color: transparent;
+    color: var(--text-color-heading);
+    border: 0.0625rem solid var(--border-color);
+  }
+
   &.skip-link {
-    @include transition(background-color, color, font-weight, transform);
+    @include transition(background-color, color, transform);
 
     position: absolute;
     inset-block-start: 0.8125rem;
@@ -52,8 +60,10 @@
 
   .hero > & {
     justify-self: center;
-    margin-bottom: var(--spacing-24);
-    padding: 0 0 var(--spacing-24);
+    width: 2.875em;
+    margin-block-end: var(--spacing-24);
+    padding: var(--spacing-8);
+    padding-block-end: var(--spacing-48);
   }
 
   .more & {
@@ -86,10 +96,14 @@
   }
 
   &:is(:hover, :focus-visible) {
-    @include typo($weight: 600);
-
     background-color: var(--accent-color);
     color: var(--text-color-on-accent);
+  }
+
+  &-outline:is(:hover, :focus-visible) {
+    background-color: transparent;
+    color: var(--text-color-heading);
+    border-color: var(--text-color-heading);
   }
 
   &.skip-link:focus-visible {
@@ -112,16 +126,25 @@
     }
   }
 
+  &-outline svg {
+    background-color: transparent;
+    color: var(--text-color-heading);
+  }
+
   &:is(:hover, :focus-visible) svg {
-    transform: translateX(0.3125rem);
+    transform: translateX(0.5rem);
     color: var(--text-color-on-accent);
 
     .hero > & {
-      transform: translateY(1.5rem);
+      transform: translateY(2.5rem);
     }
 
     :root[dir='rtl'] &.next {
-      transform: translateX(-0.3125rem) rotate(180deg);
+      transform: translateX(-0.5rem) rotate(180deg);
     }
+  }
+
+  &-outline:is(:hover, :focus-visible) svg {
+    color: var(--text-color-heading);
   }
 }
