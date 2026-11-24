@@ -1,3 +1,4 @@
+@use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
 main {
@@ -17,15 +18,24 @@ main {
 .hero {
   @include transition(min-height);
 
-  padding-block: 0;
+  padding-block-end: 0;
   display: grid;
   grid-auto-rows: 1fr auto;
   align-items: center;
-  min-height: calc(100svh - var(--header-height));
+
+  @media (min-width: $bp-md) {
+    padding-block-start: 0;
+    min-height: calc(100svh - var(--header-height));
+  }
 
   > .btn-icon {
+    display: none;
     justify-self: center;
     margin-block-end: var(--spacing-24);
+
+    @media (min-width: $bp-md) {
+      display: flex;
+    }
   }
 }
 
@@ -33,8 +43,8 @@ main {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: var(--spacing-24) var(--spacing-16);
-  margin-block-start: var(--spacing-48);
+  gap: var(--spacing-16);
+  margin-block-start: var(--spacing-32);
 }
 
 .error {
