@@ -8,6 +8,7 @@ on:
 jobs:
   generate-and-deploy:
     runs-on: ubuntu-latest
+    environment: production
 
     steps:
       - name: 📦 Récupération du dépôt
