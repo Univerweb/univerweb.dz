@@ -151,7 +151,7 @@ header:has(nav) {
     }
 
     &.active {
-      background-size: 100% 0.1875rem;
+      background-size: 100% var(--link-line-thickness);
       animation: none;
     }
   }

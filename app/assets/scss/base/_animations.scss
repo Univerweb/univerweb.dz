@@ -1,32 +1,32 @@
 @keyframes move {
   0% {
     background-position-x: var(--transform-origin-start);
-    background-size: 0% 0.1875rem;
+    background-size: 0% var(--link-line-thickness);
   }
 
   30% {
     background-position-x: var(--transform-origin-start);
-    background-size: 100% 0.1875rem;
+    background-size: 100% var(--link-line-thickness);
   }
 
   31% {
     background-position-x: var(--transform-origin-end);
-    background-size: 100% 0.1875rem;
+    background-size: 100% var(--link-line-thickness);
   }
 
   60% {
     background-position-x: var(--transform-origin-end);
-    background-size: 0% 0.1875rem;
+    background-size: 0% var(--link-line-thickness);
   }
 
   61% {
     background-position-x: var(--transform-origin-start);
-    background-size: 0% 0.1875rem;
+    background-size: 0% var(--link-line-thickness);
   }
 
   100% {
     background-position-x: var(--transform-origin-start);
-    background-size: clamp(1rem, 25%, 2rem) 0.1875rem;
+    background-size: clamp(1em, 25%, 2em) var(--link-line-thickness);
   }
 }
 
