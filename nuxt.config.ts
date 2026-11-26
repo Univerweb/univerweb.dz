@@ -23,7 +23,10 @@ export default defineNuxtConfig({
 
   site: { url: process.env.BASE_URL },
 
-  content: { renderer: { anchorLinks: false } },
+  content: {
+    renderer: { anchorLinks: false },
+    experimental: { sqliteConnector: 'native' },
+  },
 
   runtimeConfig: {
     public: {
