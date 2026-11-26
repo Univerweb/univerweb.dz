@@ -97,11 +97,16 @@ header:has(nav) {
 
   @media (min-width: $bp-md) {
     grid-template-columns: repeat(var(--item-total), auto);
+    gap: var(--spacing-16);
     padding: 0;
   }
 
+  @media (min-width: $bp-lg) {
+    gap: var(--spacing-32);
+  }
+
   a {
-    @include typo(var(--font-size-32), $weight: 500);
+    @include typo(var(--font-size-32), $line-height: var(--line-height-lead));
     @include link-line;
 
     position: relative;
@@ -134,7 +139,7 @@ header:has(nav) {
     }
 
     @media (min-width: $bp-md) {
-      @include typo(var(--font-size-16), $line-height: var(--line-height-snug));
+      @include typo(var(--font-size-18), $line-height: var(--line-height-snug));
 
       visibility: visible;
       opacity: 1;
@@ -146,7 +151,7 @@ header:has(nav) {
     }
 
     &.active {
-      background-size: 100% 0.1875rem;
+      background-size: 100% var(--link-line-thickness);
       animation: none;
     }
   }
@@ -243,8 +248,7 @@ header:has(nav) {
 
   span {
     background-color: currentcolor;
-    height: 0.125rem;
-    border-radius: var(--radius-pill);
+    height: 0.0938rem;
   }
 
   .top {

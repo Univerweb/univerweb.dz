@@ -55,15 +55,15 @@
 @mixin link-line {
   @include transition(background-size);
 
-  padding-bottom: 0.125rem;
+  padding-bottom: var(--link-line-thickness);
   background-image: linear-gradient(var(--accent-color), var(--accent-color));
   background-repeat: no-repeat;
   background-position: var(--transform-origin-start) 100%;
-  background-size: 0% 0.1875rem;
+  background-size: 0% var(--link-line-thickness);
 }
 
 @mixin link-line-hover {
-  background-size: clamp(1rem, 25%, 2rem) 0.1875rem;
+  background-size: clamp(1em, 25%, 2em) var(--link-line-thickness);
   animation: move calc(var(--duration-slow) * 2);
 }
 
