@@ -239,7 +239,8 @@ header:has(nav) {
 
 .toggle-menu {
   display: grid;
-  align-content: space-between;
+  row-gap: 0.4063rem;
+  align-content: center;
   padding: 0.1875rem;
 
   @media (min-width: $bp-md) {
